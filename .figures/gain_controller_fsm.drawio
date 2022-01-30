@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-01-30T12:56:59.291Z" agent="5.0 (X11)" etag="5oocX0nYYnUFM7sR0Ubv" version="16.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-30T15:53:38.373Z" agent="5.0 (X11)" etag="ZN0L-I874bRb_IL5K7BH" version="16.5.2" type="github">
   <diagram id="6Zs5SEfr_Cn3Au8WpPoG" name="Page-1">
-    <mxGraphModel dx="2881" dy="2271" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1831" dy="1666" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,8 +13,8 @@
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-4" value="&lt;b&gt;Increment Procedure&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-570" y="220" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-7" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Ports:&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;adc_UnD (input)&lt;/li&gt;&lt;li&gt;adc_UnD_ref (output, assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;adc_nCS (input)&lt;br&gt;&lt;/li&gt;&lt;li&gt;adc_nCS_ref (output, assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain (output, assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref (input)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Signals:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;is_reset&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref_int&lt;/li&gt;&lt;li&gt;gain_int&lt;/li&gt;&lt;li&gt;adc_UnD_ref_int&lt;/li&gt;&lt;li&gt;adc_nCS_ref_int&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Concurrent statements:&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;gain_ref_int &amp;lt;= &quot;0&quot; when is_reset=&#39;0&#39; else gain_ref&lt;/li&gt;&lt;li&gt;&lt;div&gt;gain &amp;lt;= gain_int&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div&gt;adc_UnD_ref &amp;lt;= adc_UnD_ref_int&lt;/div&gt;&lt;/li&gt;&lt;li&gt;adc_nCS_ref &amp;lt;= adc_nCS_ref_int&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-710" y="-560" width="390" height="390" as="geometry" />
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-7" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Ports:&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;adc_UnD (input)&lt;/li&gt;&lt;li&gt;adc_UnD_ref (output, assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;adc_nCS (input)&lt;br&gt;&lt;/li&gt;&lt;li&gt;adc_nCS_ref (output, assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain (output, assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref (input)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Signals:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;is_reset&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref_int&lt;/li&gt;&lt;li&gt;gain_int&lt;/li&gt;&lt;li&gt;adc_UnD_ref_int&lt;/li&gt;&lt;li&gt;adc_nCS_ref_int&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Concurrent statements:&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;gain_ref_int &amp;lt;= &quot;0&quot; when is_reset=&#39;0&#39; else gain_ref&lt;/li&gt;&lt;li&gt;&lt;div&gt;gain &amp;lt;= gain_int&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div&gt;adc_UnD_ref &amp;lt;= adc_UnD_ref_int&lt;/div&gt;&lt;/li&gt;&lt;li&gt;adc_nCS_ref &amp;lt;= adc_nCS_ref_int&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;Auxiliary processes:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;is_reset set to &#39;1&#39; when gain_int reaches &quot;0&quot;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="-560" width="390" height="500" as="geometry" />
         </mxCell>
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-8" value="s_idle" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="-70" y="30" width="80" height="80" as="geometry" />
@@ -43,7 +43,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-17" value="&lt;div&gt;if (gain_ref_int &amp;lt; gain_int) /&lt;/div&gt;&lt;div&gt;adc_UnD_ref_int &amp;lt;= &#39;1&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-17" value="&lt;div&gt;if (gain_int &amp;lt; gain_ref_int) /&lt;/div&gt;&lt;div&gt;adc_UnD_ref_int &amp;lt;= &#39;1&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
           <mxGeometry x="-235" y="10" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-36" value="s_incr_1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
@@ -88,8 +88,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-45" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int) /&lt;/div&gt;&lt;div&gt;adc_UnD_ref_int &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;gain_int &amp;lt;= MAX(gain_int+1, 63)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=30;" vertex="1" parent="1">
-          <mxGeometry x="-745" y="375" width="210" height="60" as="geometry" />
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-45" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int) /&lt;/div&gt;&lt;div&gt;adc_UnD_ref_int &amp;lt;= &#39;1&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=30;" vertex="1" parent="1">
+          <mxGeometry x="-745" y="380" width="210" height="50" as="geometry" />
         </mxCell>
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-46" value="s_incr_4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="-355" y="260" width="80" height="80" as="geometry" />
@@ -103,8 +103,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-48" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int and&lt;/div&gt;&lt;div&gt;gain_int &amp;gt;= gain_ref) /&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS_ref_int &amp;lt;= &#39;1&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-30;" vertex="1" parent="1">
-          <mxGeometry x="-460" y="395" width="210" height="60" as="geometry" />
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-48" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int and&lt;/div&gt;&lt;div&gt;gain_int+1 &amp;gt;= gain_ref_int) /&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS_ref_int &amp;lt;= &#39;1&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;gain_int &amp;lt;= gain_int+1&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-30;" vertex="1" parent="1">
+          <mxGeometry x="-444" y="380" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-49" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2N9pf7iAkv3mwg5pbSK0-46" target="2N9pf7iAkv3mwg5pbSK0-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -133,8 +133,8 @@
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-54" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-460" y="405" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-55" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int) /&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS_ref_int &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=30;" vertex="1" parent="1">
-          <mxGeometry x="-655" y="280" width="210" height="50" as="geometry" />
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-55" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int) /&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS_ref_int &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;gain_int &amp;lt;= gain_int+1&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=30;" vertex="1" parent="1">
+          <mxGeometry x="-655" y="260" width="210" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-57" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="200" width="520" height="500" as="geometry" />
@@ -187,8 +187,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-71" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int&lt;/div&gt;&lt;div&gt;MAX(gain_int+1, 63) &amp;gt;= gain_ref) /&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS_ref_int &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;gain_int &amp;lt;= MAX(gain_int+1, 63)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=15;" vertex="1" parent="1">
-          <mxGeometry x="410" y="30" width="210" height="80" as="geometry" />
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-71" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int&lt;/div&gt;&lt;div&gt;gain_int-1 &amp;lt;= gain_ref_int) /&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS_ref_int &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;gain_int &amp;lt;= gain_int-1&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=15;" vertex="1" parent="1">
+          <mxGeometry x="409" y="30" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-72" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2N9pf7iAkv3mwg5pbSK0-66" target="2N9pf7iAkv3mwg5pbSK0-63">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -205,7 +205,7 @@
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-74" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="607.5" y="130" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-75" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int) /&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS_ref_int &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;gain_int &amp;lt;= MAX(gain_int+1, 63)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-65;" vertex="1" parent="1">
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-75" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int) /&lt;br&gt;&lt;/div&gt;&lt;div&gt;adc_UnD_ref_int &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;gain_int &amp;lt;= gain_int-1&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-65;" vertex="1" parent="1">
           <mxGeometry x="550" y="305" width="210" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-77" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2N9pf7iAkv3mwg5pbSK0-8" target="2N9pf7iAkv3mwg5pbSK0-60">
@@ -217,7 +217,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-78" value="&lt;div&gt;if (gain_ref_int &amp;gt; gain_int) /&lt;/div&gt;&lt;div&gt;adc_UnD_ref_int &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=39;" vertex="1" parent="1">
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-78" value="&lt;div&gt;if (gain_int &amp;gt; gain_ref_int) /&lt;/div&gt;&lt;div&gt;adc_UnD_ref_int &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=39;" vertex="1" parent="1">
           <mxGeometry x="20" y="240" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="2N9pf7iAkv3mwg5pbSK0-79" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2N9pf7iAkv3mwg5pbSK0-69" target="2N9pf7iAkv3mwg5pbSK0-8">
@@ -229,8 +229,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2N9pf7iAkv3mwg5pbSK0-81" value="if (adc_nCS = adc_nCS_ref_int) /" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-6.3;" vertex="1" parent="1">
-          <mxGeometry x="20" y="10" width="190" height="20" as="geometry" />
+        <mxCell id="2N9pf7iAkv3mwg5pbSK0-81" value="&lt;div&gt;if (adc_UnD = adc_UnD_ref_int and&lt;/div&gt;&lt;div&gt;adc_nCS = adc_nCS_ref_int) /&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-6.3;" vertex="1" parent="1">
+          <mxGeometry x="10" y="5" width="210" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
