@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-31T12:38:08.339Z" agent="5.0 (X11)" etag="ybxCIc7ypG6fm7GnhfQ4" version="16.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-31T12:38:21.166Z" agent="5.0 (X11)" etag="pNRM6WJz-zdLC9qVUcx7" version="16.5.2" type="github">
   <diagram id="c6SIEI6ALqYYKnOjhYvD" name="Page-1">
     <mxGraphModel dx="1422" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -38,7 +38,7 @@
         <mxCell id="OWAue3CLm3Fr0hzVqL13-5" value="SignalPeriodTimer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="160" y="380" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-6" value="MagSamplePingPongBuffer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-6" value="PingPongBuffer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="335" y="440" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="OWAue3CLm3Fr0hzVqL13-11" value="x12" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
