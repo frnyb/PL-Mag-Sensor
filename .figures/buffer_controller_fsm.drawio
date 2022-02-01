@@ -1,13 +1,13 @@
-<mxfile host="app.diagrams.net" modified="2022-02-01T12:39:41.150Z" agent="5.0 (X11)" etag="MKWeZLyovt2UqKJdpxv_" version="16.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-01T13:53:30.704Z" agent="5.0 (X11)" etag="bQtuRwMAOYsnKBHRwUu8" version="16.5.2" type="github">
   <diagram id="vcOmwt670LHLFmOHfxU6" name="Page-1">
-    <mxGraphModel dx="1589" dy="1963" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1831" dy="1666" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="8YBCCptctLdzBx9tajcS-1" value="s_rst" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="345" y="50" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="8YBCCptctLdzBx9tajcS-2" value="&lt;div&gt;&lt;b&gt;Ports&lt;/b&gt;:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;t_sample_en : out std_logic (assigned output)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_sample_rest : out std_logic (assigned transition)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_sample_irq : in std_logic&lt;/li&gt;&lt;li&gt;t_sample_cnt : in std_logic_vector&lt;/li&gt;&lt;li&gt;t_period_en : out std_logic (assigned output)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_period_rest : out std_logic (assigned transition)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_period_irq : in std_logic&lt;/li&gt;&lt;li&gt;t_period_cnt : in std_logic_vector&lt;/li&gt;&lt;li&gt;adc_din : in std_logic_vector&lt;/li&gt;&lt;li&gt;adc_ch : in std_logic_vector&lt;/li&gt;&lt;li&gt;adc_irq : in std_logic&lt;/li&gt;&lt;li&gt;bf_wr_addr : out std_logic_vector (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_wr_data : out std_logic_vector (assigned concurrently)&lt;/li&gt;&lt;li&gt;bf_wr : out std_logic_vector (assigned concurrently)&lt;/li&gt;&lt;li&gt;bf_shift : out std_logic_vector (assigned transition)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_irq : in std_logic_vector&lt;/li&gt;&lt;li&gt;lut_n_over: out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_top_val : out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_gain_UnD : out std_logic&lt;/li&gt;&lt;li&gt;lut_curr_gain : out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_new_gain : in std_logic_vector&lt;/li&gt;&lt;li&gt;lut_irq: in std_logic&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_curr : in std_logic_vector&lt;/li&gt;&lt;li&gt;gain_ref : out std_logic_vector (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;n_samples_out : std_logic_vector (assigned transition)&lt;/li&gt;&lt;li&gt;irq_out : out std_logic_vector (assigned transition)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Signals:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;next_ch : unsigned &amp;lt;= 0&lt;/li&gt;&lt;li&gt;sampling : std_logic &amp;lt;= &#39;0&#39;&lt;/li&gt;&lt;li&gt;wr_addr_cnt : std_logic_vector&lt;/li&gt;&lt;li&gt;sample_start: std_logic&lt;/li&gt;&lt;li&gt;sample_stop: std_logic&lt;/li&gt;&lt;li&gt;period_done: std_logic&lt;br&gt;&lt;/li&gt;&lt;li&gt;shifted_hold: std_logic_vector&lt;/li&gt;&lt;li&gt;accept_mask: std_logic_vector&lt;/li&gt;&lt;li&gt;top_values: array of std_logic_vector&lt;/li&gt;&lt;li&gt;n_over array of unsigned&lt;/li&gt;&lt;li&gt;top_mags: array of std_logic_vector&lt;/li&gt;&lt;li&gt;n_over_mags: array of unsigned&lt;/li&gt;&lt;li&gt;gain_UnD: std_logic_vector&lt;/li&gt;&lt;li&gt;gain_mon_rdy : std_logic&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_curr_int: array of std_logic_vector&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref_int: array of std_logic_vector&lt;/li&gt;&lt;li&gt;gain_settled : std_logic&lt;/li&gt;&lt;li&gt;mag_cnt: unsigned&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Generic:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;GAIN_HYST_MAX_THRESH&lt;/li&gt;&lt;li&gt;GAIN_HYST_MIN_THRESH&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Concurrent statements:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;bf_wr &amp;lt;= &lt;span&gt; &lt;/span&gt;adc_irq when sampling=&#39;1&#39; and adc_ch=next_ch else&lt;br&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&#39;0&#39;; (using generate statement)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_wr_addr &amp;lt;= wr_addr_cnt;&lt;/li&gt;&lt;li&gt;bf_wr_data&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; t_sample_cnt &amp;amp; adc_din;&lt;/li&gt;&lt;li&gt;gain_curr_int(3) &amp;lt;= gain_curr(23 downto 18)&lt;/li&gt;&lt;li&gt;gain_curr_int(2) &amp;lt;= gain_curr(17 downto 12)&lt;/li&gt;&lt;li&gt;gain_curr_int(1) &amp;lt;= gain_curr(11 downto 6)&lt;/li&gt;&lt;li&gt;gain_curr_int(0) &amp;lt;= gain_curr(5 downto 0)&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref(23 downto 18) &amp;lt;= gain_ref_int(3)&lt;/li&gt;&lt;li&gt;gain_ref(19 downto 12) &amp;lt;= gain_ref_int(2)&lt;/li&gt;&lt;li&gt;gain_ref(11 downto 6) &amp;lt;= gain_ref_int(1)&lt;/li&gt;&lt;li&gt;gain_ref(5 downto 0) &amp;lt;= gain_ref_int(0)&lt;/li&gt;&lt;li&gt;gain_settled &amp;lt;= &#39;1&#39; when gain_curr = gain_ref else &#39;0&#39;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Auxiliary processes:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Process to set sample_start upon sample timer irq and clear on rising edge of sampling&lt;br&gt;&lt;/li&gt;&lt;li&gt;Process to set sample_stop upon period timer irq and clear upon rising edge of bf_shift&lt;/li&gt;&lt;li&gt;Process asserting shifted hold upon bf_irq, and clear when last one clears&lt;/li&gt;&lt;li&gt;Process monitoring the input signals when sampling, evaluate gain change when period is done, and resets signals when period starts again&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+        <mxCell id="8YBCCptctLdzBx9tajcS-2" value="&lt;div&gt;&lt;b&gt;Ports&lt;/b&gt;:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;t_sample_en : out std_logic (assigned output)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_sample_rest : out std_logic (assigned transition)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_sample_irq : in std_logic&lt;/li&gt;&lt;li&gt;t_sample_cnt : in std_logic_vector&lt;/li&gt;&lt;li&gt;t_period_en : out std_logic (assigned output)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_period_rest : out std_logic (assigned transition)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_period_irq : in std_logic&lt;/li&gt;&lt;li&gt;t_period_cnt : in std_logic_vector&lt;/li&gt;&lt;li&gt;adc_din : in std_logic_vector&lt;/li&gt;&lt;li&gt;adc_ch : in std_logic_vector&lt;/li&gt;&lt;li&gt;adc_irq : in std_logic&lt;/li&gt;&lt;li&gt;bf_wr_addr : out std_logic_vector (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_wr_data : out std_logic_vector (assigned concurrently)&lt;/li&gt;&lt;li&gt;bf_wr : out std_logic_vector (assigned concurrently)&lt;/li&gt;&lt;li&gt;bf_shift : out std_logic_vector (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_irq : in std_logic_vector&lt;/li&gt;&lt;li&gt;lut_n_over: out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_top_val : out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_gain_UnD : out std_logic&lt;/li&gt;&lt;li&gt;lut_curr_gain : out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_new_gain : in std_logic_vector&lt;/li&gt;&lt;li&gt;lut_irq: in std_logic&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_curr : in std_logic_vector&lt;/li&gt;&lt;li&gt;gain_ref : out std_logic_vector (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;n_samples_out : std_logic_vector (assigned transition)&lt;/li&gt;&lt;li&gt;irq_out : out std_logic_vector (assigned transition)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Signals:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;next_ch : unsigned &amp;lt;= 0&lt;/li&gt;&lt;li&gt;sampling : std_logic &amp;lt;= &#39;0&#39;&lt;/li&gt;&lt;li&gt;wr_addr_cnt : std_logic_vector&lt;/li&gt;&lt;li&gt;sample_start: std_logic&lt;/li&gt;&lt;li&gt;sample_stop: std_logic&lt;/li&gt;&lt;li&gt;period_done: std_logic&lt;br&gt;&lt;/li&gt;&lt;li&gt;shifted_hold: std_logic_vector&lt;/li&gt;&lt;li&gt;accept_mask: std_logic_vector&lt;/li&gt;&lt;li&gt;top_values: array of std_logic_vector&lt;/li&gt;&lt;li&gt;n_over array of unsigned&lt;/li&gt;&lt;li&gt;top_mags: array of std_logic_vector&lt;/li&gt;&lt;li&gt;n_over_mags: array of unsigned&lt;/li&gt;&lt;li&gt;gain_UnD: std_logic_vector&lt;/li&gt;&lt;li&gt;gain_mon_rdy : std_logic&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_curr_int: array of std_logic_vector&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref_int: array of std_logic_vector&lt;/li&gt;&lt;li&gt;gain_settled : std_logic&lt;/li&gt;&lt;li&gt;mag_cnt: unsigned&lt;/li&gt;&lt;li&gt;bf_shift_int: std_logic_vector&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Generic:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;GAIN_HYST_MAX_THRESH&lt;/li&gt;&lt;li&gt;GAIN_HYST_MIN_THRESH&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Concurrent statements:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;bf_wr &amp;lt;= &lt;span&gt; &lt;/span&gt;adc_irq when sampling=&#39;1&#39; and adc_ch=next_ch else&lt;br&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&#39;0&#39;; (using generate statement)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_wr_addr &amp;lt;= wr_addr_cnt;&lt;/li&gt;&lt;li&gt;bf_wr_data&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; t_sample_cnt &amp;amp; adc_din;&lt;/li&gt;&lt;li&gt;gain_curr_int(3) &amp;lt;= gain_curr(23 downto 18)&lt;/li&gt;&lt;li&gt;gain_curr_int(2) &amp;lt;= gain_curr(17 downto 12)&lt;/li&gt;&lt;li&gt;gain_curr_int(1) &amp;lt;= gain_curr(11 downto 6)&lt;/li&gt;&lt;li&gt;gain_curr_int(0) &amp;lt;= gain_curr(5 downto 0)&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref(23 downto 18) &amp;lt;= gain_ref_int(3)&lt;/li&gt;&lt;li&gt;gain_ref(19 downto 12) &amp;lt;= gain_ref_int(2)&lt;/li&gt;&lt;li&gt;gain_ref(11 downto 6) &amp;lt;= gain_ref_int(1)&lt;/li&gt;&lt;li&gt;gain_ref(5 downto 0) &amp;lt;= gain_ref_int(0)&lt;/li&gt;&lt;li&gt;gain_settled &amp;lt;= &#39;1&#39; when gain_curr = gain_ref else &#39;0&#39;&lt;/li&gt;&lt;li&gt;bf_shift &amp;lt;= bf_shift_int&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Auxiliary processes:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Process to set sample_start upon sample timer irq and clear on rising edge of sampling&lt;br&gt;&lt;/li&gt;&lt;li&gt;Process to set sample_stop upon period timer irq and clear upon rising edge of bf_shift&lt;/li&gt;&lt;li&gt;Process asserting shifted hold upon bf_irq, and clear when last one clears&lt;/li&gt;&lt;li&gt;Process monitoring the input signals when sampling, evaluate gain change when period is done, and resets signals when period starts again&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="1400" y="-190" width="410" height="1360" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-3" value="&lt;div&gt;s_sample&lt;/div&gt;&lt;div&gt;_first&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
@@ -22,7 +22,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8YBCCptctLdzBx9tajcS-7" value="&lt;div&gt;/ next_ch &amp;lt;= 0&lt;/div&gt;&lt;div&gt;sampling &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;wr_addr_cnt &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;bf_shift &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;t_sample_rest &amp;lt;= &#39;0&#39;&lt;/div&gt;&lt;div&gt;t_period_rest &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;n_samples_out &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;&lt;div&gt;irq_out &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;period_done &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-35;" parent="1" vertex="1">
+        <mxCell id="8YBCCptctLdzBx9tajcS-7" value="&lt;div&gt;/ next_ch &amp;lt;= 0&lt;/div&gt;&lt;div&gt;sampling &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;wr_addr_cnt &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;bf_shift_int &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;t_sample_rest &amp;lt;= &#39;0&#39;&lt;/div&gt;&lt;div&gt;t_period_rest &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;n_samples_out &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;&lt;div&gt;irq_out &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;period_done &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-35;" parent="1" vertex="1">
           <mxGeometry x="90" y="25" width="190" height="130" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-8" value="s_sample" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
@@ -128,7 +128,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8YBCCptctLdzBx9tajcS-34" value="&lt;div&gt;if (gain_mon_rdy = &#39;1&#39;) /&lt;/div&gt;&lt;div&gt;n_samples_out &amp;lt;= wr_addr_cnt+1&lt;br&gt;&lt;/div&gt;&lt;div&gt;bf_shift &amp;lt;= accept_mask&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=30;" parent="1" vertex="1">
+        <mxCell id="8YBCCptctLdzBx9tajcS-34" value="&lt;div&gt;if (gain_mon_rdy = &#39;1&#39;) /&lt;/div&gt;&lt;div&gt;n_samples_out &amp;lt;= wr_addr_cnt+1&lt;br&gt;&lt;/div&gt;&lt;div&gt;bf_shift_int &amp;lt;= accept_mask&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=30;" parent="1" vertex="1">
           <mxGeometry x="610" y="485" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-35" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="8YBCCptctLdzBx9tajcS-32" target="yGk2pAN8WluMj7sl2VAn-6" edge="1">
@@ -143,8 +143,8 @@
         <mxCell id="8YBCCptctLdzBx9tajcS-36" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="655" y="685" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="8YBCCptctLdzBx9tajcS-37" value="&lt;div&gt;/ bf_shift &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;mag_cnt &amp;lt;= 0&lt;/div&gt;&lt;div&gt;bf_shift &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="693" y="310" width="150" height="50" as="geometry" />
+        <mxCell id="8YBCCptctLdzBx9tajcS-37" value="&lt;div&gt;/ bf_shift &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;mag_cnt &amp;lt;= 0&lt;/div&gt;&lt;div&gt;bf_shift_int &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="683" y="310" width="170" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-39" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-10" target="8YBCCptctLdzBx9tajcS-40" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -185,10 +185,10 @@
         <mxCell id="8YBCCptctLdzBx9tajcS-49" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="890" y="540" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-2" value="&lt;div&gt;s_period&lt;/div&gt;&lt;div&gt;_done&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-2" value="&lt;div&gt;s_period&lt;/div&gt;&lt;div&gt;_done&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="810" y="510" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-3" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="8YBCCptctLdzBx9tajcS-18" target="yGk2pAN8WluMj7sl2VAn-2">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-3" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="8YBCCptctLdzBx9tajcS-18" target="yGk2pAN8WluMj7sl2VAn-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="810" y="700" as="sourcePoint" />
             <mxPoint x="860" y="650" as="targetPoint" />
@@ -197,19 +197,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-4" value="&lt;div&gt;if (sample_stop = &#39;1&#39;) /&lt;/div&gt;&lt;div&gt;period_done &amp;lt;= &#39;1&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-35;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-4" value="&lt;div&gt;if (sample_stop = &#39;1&#39;) /&lt;/div&gt;&lt;div&gt;period_done &amp;lt;= &#39;1&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-35;" parent="1" vertex="1">
           <mxGeometry x="735" y="675" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-5" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-5" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="510" y="375" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-6" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_eval&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-6" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_eval&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="850" y="340" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-7" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_fetch&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-7" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_fetch&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="1090" y="255" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-8" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="yGk2pAN8WluMj7sl2VAn-6" target="yGk2pAN8WluMj7sl2VAn-7">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-8" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-6" target="yGk2pAN8WluMj7sl2VAn-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1080" y="450" as="sourcePoint" />
             <mxPoint x="1130" y="400" as="targetPoint" />
@@ -218,13 +218,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-9" value="&lt;div&gt;if (accept_mask(mag_cnt*3+2 downto mag_cnt*3) != &quot;111&quot;) /&lt;/div&gt;&lt;div&gt;lut_n_over &amp;lt;= n_over_mags(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_top_val &amp;lt;= top_mags(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_gain_UnD &amp;lt;= gain_UnD(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_curr_gain &amp;lt;= gain_curr_int(mag_cnt)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-20.3;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-9" value="&lt;div&gt;if (accept_mask(mag_cnt*3+2 downto mag_cnt*3) != &quot;111&quot;) /&lt;/div&gt;&lt;div&gt;lut_n_over &amp;lt;= n_over_mags(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_top_val &amp;lt;= top_mags(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_gain_UnD &amp;lt;= gain_UnD(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_curr_gain &amp;lt;= gain_curr_int(mag_cnt)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-20.3;" parent="1" vertex="1">
           <mxGeometry x="900" y="390" width="340" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-10" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_done&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-10" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_done&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="930" y="170" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="yGk2pAN8WluMj7sl2VAn-7" target="yGk2pAN8WluMj7sl2VAn-10">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-7" target="yGk2pAN8WluMj7sl2VAn-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1040" y="180" as="sourcePoint" />
             <mxPoint x="1090" y="130" as="targetPoint" />
@@ -233,10 +233,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-16" value="&lt;div&gt;if (rising_edge(lut_irq)) /&lt;/div&gt;&lt;div&gt;gain_ref_int(mag_cnt) &amp;lt;= lut_new_gain&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-35;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-16" value="&lt;div&gt;if (rising_edge(lut_irq)) /&lt;/div&gt;&lt;div&gt;gain_ref_int(mag_cnt) &amp;lt;= lut_new_gain&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-35;" parent="1" vertex="1">
           <mxGeometry x="1060" y="140" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-17" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="yGk2pAN8WluMj7sl2VAn-10" target="yGk2pAN8WluMj7sl2VAn-6">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-17" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-10" target="yGk2pAN8WluMj7sl2VAn-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="830" y="280" as="sourcePoint" />
             <mxPoint x="880" y="230" as="targetPoint" />
@@ -245,10 +245,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-18" value="&lt;div&gt;if (mag_cnt &amp;lt; 3) /&lt;/div&gt;&lt;div&gt;mag_cnt &amp;lt;= mag_cnt + 1&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-56;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-18" value="&lt;div&gt;if (mag_cnt &amp;lt; 3) /&lt;/div&gt;&lt;div&gt;mag_cnt &amp;lt;= mag_cnt + 1&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-56;" parent="1" vertex="1">
           <mxGeometry x="790" y="233" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-20" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="yGk2pAN8WluMj7sl2VAn-6" target="yGk2pAN8WluMj7sl2VAn-10">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-20" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-6" target="yGk2pAN8WluMj7sl2VAn-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="950" y="330" as="sourcePoint" />
             <mxPoint x="1000" y="280" as="targetPoint" />
@@ -257,19 +257,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-21" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-21" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="920" y="400" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-22" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-22" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="930" y="350" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-23" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_wait&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-23" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_wait&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="425" y="170" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-24" value="&lt;div&gt;/ t_sample_rest &amp;lt;= &#39;0&#39;&lt;/div&gt;&lt;div&gt;t_period_rest &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;irq_out &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-30;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-24" value="&lt;div&gt;/ t_sample_rest &amp;lt;= &#39;0&#39;&lt;/div&gt;&lt;div&gt;t_period_rest &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;irq_out &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-30;" parent="1" vertex="1">
           <mxGeometry x="555" y="185" width="150" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-25" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="yGk2pAN8WluMj7sl2VAn-23" target="8YBCCptctLdzBx9tajcS-3">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-25" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-23" target="8YBCCptctLdzBx9tajcS-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="260" y="260" as="sourcePoint" />
             <mxPoint x="310" y="210" as="targetPoint" />
@@ -278,22 +278,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-27" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-27" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="910" y="210" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-29" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-29" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="930" y="160" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-30" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-30" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="805" y="420" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-31" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-31" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="1170" y="280" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-32" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-32" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="960" y="140" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-33" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-33" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="405" y="140" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
