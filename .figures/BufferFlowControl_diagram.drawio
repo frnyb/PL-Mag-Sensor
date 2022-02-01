@@ -1,47 +1,36 @@
-<mxfile host="app.diagrams.net" modified="2022-01-31T12:38:21.166Z" agent="5.0 (X11)" etag="pNRM6WJz-zdLC9qVUcx7" version="16.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-01T07:00:03.094Z" agent="5.0 (X11)" etag="_qkTtqRXU6LXMD-pAesm" version="16.5.2" type="github">
   <diagram id="c6SIEI6ALqYYKnOjhYvD" name="Page-1">
     <mxGraphModel dx="1422" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OWAue3CLm3Fr0hzVqL13-1" target="OWAue3CLm3Fr0hzVqL13-6">
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="OWAue3CLm3Fr0hzVqL13-1" target="OWAue3CLm3Fr0hzVqL13-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-1" value="BufferController" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-1" value="BufferController" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="360" y="315" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OWAue3CLm3Fr0hzVqL13-2" target="OWAue3CLm3Fr0hzVqL13-1">
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="OWAue3CLm3Fr0hzVqL13-2" target="OWAue3CLm3Fr0hzVqL13-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-2" value="SampleAxisDelayTimer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="330" width="140" height="30" as="geometry" />
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-2" value="sample_interval_timer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="350" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OWAue3CLm3Fr0hzVqL13-3" target="OWAue3CLm3Fr0hzVqL13-1">
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="OWAue3CLm3Fr0hzVqL13-3" target="OWAue3CLm3Fr0hzVqL13-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="330" y="295" />
+              <mxPoint x="330" y="315" />
               <mxPoint x="330" y="345" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-3" value="SampleMagIntervalTimer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="280" width="140" height="30" as="geometry" />
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-3" value="signal_period_timer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="300" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OWAue3CLm3Fr0hzVqL13-5" target="OWAue3CLm3Fr0hzVqL13-1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="330" y="395" />
-              <mxPoint x="330" y="345" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-5" value="SignalPeriodTimer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="380" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-6" value="PingPongBuffer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-6" value="PingPongBuffer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="335" y="440" width="170" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OWAue3CLm3Fr0hzVqL13-11" value="x12" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="OWAue3CLm3Fr0hzVqL13-11" value="x12" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="405" y="470" width="30" height="20" as="geometry" />
         </mxCell>
       </root>
