@@ -1,0 +1,18 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/vol/Workspace/Projects/PL-Mag-Sensor/src/SPI_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'spi_master'
+INFO: [VRFC 10-163] Analyzing VHDL file "/vol/Workspace/Projects/PL-Mag-Sensor/src/gain_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'gain_controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ADC_controller'
+ERROR: [VRFC 10-2989] 'gain_change_int' is not declared [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:129]
+ERROR: [VRFC 10-2123] 0 definitions of operator "and" match here [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:129]
+ERROR: [VRFC 10-2989] 'gain_change_int' is not declared [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:132]
+ERROR: [VRFC 10-2123] 0 definitions of operator "and" match here [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:132]
+ERROR: [VRFC 10-2989] 'gain_change_int' is not declared [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:135]
+ERROR: [VRFC 10-2123] 0 definitions of operator "and" match here [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:135]
+ERROR: [VRFC 10-2989] 'gain_change_int' is not declared [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:138]
+ERROR: [VRFC 10-2123] 0 definitions of operator "and" match here [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:138]
+ERROR: [VRFC 10-2989] 'gain_ch_int' is not declared [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:141]
+ERROR: [VRFC 10-2123] 0 definitions of operator "and" match here [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:141]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd:67]
+INFO: [VRFC 10-3070] VHDL file '/vol/Workspace/Projects/PL-Mag-Sensor/src/ADC_controller.vhd' ignored due to errors

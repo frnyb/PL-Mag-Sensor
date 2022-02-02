@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-i" LaunchTime="1643721618">
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="MagController_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="MagController_wrapper.sysdef"/>
+  <File Type="BITSTR-MMI" Name="MagController_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="MagController_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="MagController_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="MagController_wrapper.rbt"/>
+  <File Type="REPORTS-TCL" Name="MagController_wrapper_reports.tcl"/>
+  <File Type="CFI_FILE" Name="MagController_wrapper.cfi"/>
+  <File Type="OPT-HWDEF" Name="MagController_wrapper.hwdef"/>
+  <File Type="BITSTR-MSK" Name="MagController_wrapper.msk"/>
+  <File Type="PA-TCL" Name="MagController_wrapper.tcl"/>
+  <File Type="ROUTE-TIMING-PB" Name="MagController_wrapper_timing_summary_routed.pb"/>
+  <File Type="RCFI_FILE" Name="MagController_wrapper.rcfi"/>
+  <File Type="RBD_FILE" Name="MagController_wrapper.rbd"/>
+  <File Type="BG-BIN" Name="MagController_wrapper.bin"/>
+  <File Type="NPI_FILE" Name="MagController_wrapper.npi"/>
+  <File Type="BG-BGN" Name="MagController_wrapper.bgn"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="MagController_wrapper_routed_bb.dcp"/>
+  <File Type="PDI-FILE" Name="MagController_wrapper.pdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="MagController_wrapper_postplace_pwropt.dcp"/>
+  <File Type="RDI-RDI" Name="MagController_wrapper.vdi"/>
+  <File Type="RNPI_FILE" Name="MagController_wrapper.rnpi"/>
+  <File Type="BG-DRC" Name="MagController_wrapper.drc"/>
+  <File Type="ROUTE-ERROR-DCP" Name="MagController_wrapper_routed_error.dcp"/>
+  <File Type="BG-BIT" Name="MagController_wrapper.bit"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="MagController_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="MagController_wrapper_routed.dcp"/>
+  <File Type="OPT-DCP" Name="MagController_wrapper_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="MagController_wrapper_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="MagController_wrapper_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="MagController_wrapper_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="MagController_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="MagController_wrapper_postroute_physopt_bb.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../src/SPI_master.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/gain_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/ADC_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/buffer_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/gain_lut.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/slice_1x4.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/MagController/MagController.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/MagController/hdl/MagController_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/pingpong_buffer.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/SineReconstructor/SineReconstructor.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/MagPingPongBuffers/MagPingPongBuffers.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/slicer_1x12.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../src/slicer_1x12.vhd"/>
+        <Attr Name="ImportTime" Val="1643633744"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/slice_1x12.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/multiplexer_4x16.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="MagController_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_shift_slice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_9_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_spi_master_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_slice_1x4_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_11_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_6_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_gain_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_gain_controller_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_gain_lut_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_ADC_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_gain_controller_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_8_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_wr_slice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_buffer_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_gain_controller_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_hold_slice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_rd_mux_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagPingPongBuffers_inst_0_mag_pingpong_buffer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MagController_sample_mag_interval_timer_0"/>
+</GenRun>
