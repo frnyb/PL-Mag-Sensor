@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-08T07:06:39.563Z" agent="5.0 (X11)" etag="ptxSiqi-dy0b3p64clLZ" version="16.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-09T08:16:03.080Z" agent="5.0 (X11)" etag="9Z6J74O49SGqMcICFIt2" version="16.5.3" type="github">
   <diagram id="aBNTrtRrgTnvcZmH2X1p" name="Page-1">
-    <mxGraphModel dx="2568" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2568" dy="961" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -11,7 +11,7 @@
           <mxGeometry x="400" y="360" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="z0jYmmz8D5tQBdlxhoIj-3" value="&lt;div&gt;&lt;b&gt;Ports:&lt;/b&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;spi_rw: in std_logic&lt;/li&gt;&lt;li&gt;spi_cs: in std_logic&lt;/li&gt;&lt;li&gt;spi_addr: in std_logic_vector&lt;/li&gt;&lt;li&gt;spi_din: in std_logic_vector&lt;/li&gt;&lt;li&gt;spi_dout: out std_logic_vector&lt;/li&gt;&lt;li&gt;spi_irq: out std_logic (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Types:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;AXIS_SHIFT_REG_TYPE&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Constant:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;b&gt;&lt;/b&gt;&lt;li&gt;TRANSMIT_CNT_MAX&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Signals&lt;/b&gt;:&lt;br&gt;&lt;ul&gt;&lt;li&gt;data_low_int: std_logic_vector&lt;/li&gt;&lt;li&gt;data_high_int: std_logic_vector&lt;/li&gt;&lt;li&gt;cmd_int : std_logic_vector&lt;/li&gt;&lt;li&gt;cfg_int: std_logic_vector&lt;/li&gt;&lt;li&gt;curr_mag: unsigned&lt;/li&gt;&lt;li&gt;curr_axis_wr: unsigned&lt;/li&gt;&lt;li&gt;start: std_logic&lt;/li&gt;&lt;li&gt;spi_irq_int: std_logic&lt;/li&gt;&lt;li&gt;axis_shift_reg: AXIS_SHIFT_REG_TYPE&lt;/li&gt;&lt;li&gt;rnd_cnt : unsigned&lt;/li&gt;&lt;li&gt;transmit_cnt: unsigned&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Concurrent statements:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;b&gt;&lt;/b&gt;&lt;li&gt;spi_irq &amp;lt;= spi_irq_int&lt;/li&gt;&lt;li&gt;curr_mag &amp;lt;= cmd_int(6 downto 5)&lt;/li&gt;&lt;li&gt;curr_axis_wr &amp;lt;= data_high_int(0) &amp;amp; data_low_int(7)&lt;/li&gt;&lt;li&gt;start &amp;lt;= cmd_int&lt;/li&gt;&lt;li&gt;statement to set spi_dout&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Auxiliary processes:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Process to update internal registers when module is written to based on addresses&lt;/li&gt;&lt;li&gt;Process to count up random counter&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="910" y="215" width="350" height="610" as="geometry" />
+          <mxGeometry x="910" y="215" width="350" height="725" as="geometry" />
         </mxCell>
         <mxCell id="z0jYmmz8D5tQBdlxhoIj-4" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="z0jYmmz8D5tQBdlxhoIj-1" target="z0jYmmz8D5tQBdlxhoIj-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
