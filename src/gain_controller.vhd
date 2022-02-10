@@ -54,10 +54,10 @@ entity gain_controller is
 end gain_controller;
 
 architecture Behavioral of gain_controller is
-    signal      is_reset        :   STD_LOGIC;
+    signal      is_reset        :   STD_LOGIC                       :=  '0';
 
     signal      gain_ref_int    :   UNSIGNED(5 downto 0);
-    signal      gain_int        :   UNSIGNED(5 downto 0);
+    signal      gain_int        :   UNSIGNED(5 downto 0)            :=  (others => '1');
     
     signal      adc_UnD_ref_int :   STD_LOGIC                       :=  '1';
     signal      adc_nCS_ref_int :   STD_LOGIC                       :=  '1';
@@ -146,7 +146,7 @@ begin
                 when s_incr_3 =>
                     case next_state is
                         when s_incr_2 =>
-                            adc_nCS_ref_int         <=  '0';
+                            adc_UnD_ref_int         <=  '0';
                             case gain_int is
                                 when "111111" => null;
                                 when others =>
@@ -210,7 +210,8 @@ begin
     ------------------------------------------------------------------------------
 
     ------------------------------------------------------------------------------
-    next_state_logic:       process(current_state)
+    next_state_logic:       process(current_state, adc_UnD, adc_nCS, adc_UnD_ref_int, adc_nCS_ref_int, 
+                                        gain_int, gain_ref_int)
     ------------------------------------------------------------------------------
 	-- Next state logic process for gain FSM. 
     ------------------------------------------------------------------------------

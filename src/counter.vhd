@@ -34,7 +34,6 @@ use IEEE.NUMERIC_STD.ALL;
 entity counter is
     generic (
         n_bits          :   POSITIVE                    :=  8;
-        target          :   POSITIVE                    :=  10; -- will count target number, rst at target-1
         auto_rst        :   STD_LOGIC                   :=  '1'   -- 0 no rst, 1 rst at target
     );
     port(
@@ -42,6 +41,7 @@ entity counter is
         rst_n   :   in  STD_LOGIC;
         en      :   in  STD_LOGIC;
         restart :   in  STD_LOGIC;
+		target	:	in	STD_LOGIC_VECTOR(n_bits-1 downto 0);
         cnt     :   out STD_LOGIC_VECTOR(n_bits-1 downto 0);
         irq     :   out STD_LOGIC
     );
@@ -51,13 +51,16 @@ architecture Behavioral of counter is
     signal      cnt_int     :   UNSIGNED(n_bits-1 downto 0) :=  (others => '0');
     signal      prev_cnt_int:   UNSIGNED(n_bits-1 downto 0) :=  (others => '0');
     constant    CNT_MAX     :   UNSIGNED(n_bits-1 downto 0) :=  (others => '1');
-    signal      last_val    :   UNSIGNED(n_bits-1 downto 0) :=  (others => '0');
+	signal		target_int	:	UNSIGNED(n_bits-1 downto 0);
     signal      irq_int     :   STD_LOGIC                   :=  '0';
     signal      prev_restart:   STD_LOGIC                   :=  '0';
-    constant    target_int  :   UNSIGNED(n_bits-1 downto 0) :=  to_unsigned(target, n_bits);
 begin
-    cnt     <=  STD_LOGIC_VECTOR(cnt_int);
-    irq     <=  irq_int;
+    cnt     	<=  STD_LOGIC_VECTOR(cnt_int);
+	target_int	<=	UNSIGNED(target);
+    irq     	<=  irq_int;
+
+	irq_int		<=	'1'		when cnt_int >= target_int else
+					'0';
 
     prev_proc:      process(rst_n, clk, restart, cnt_int)
     begin
@@ -65,7 +68,7 @@ begin
             prev_restart    <=  '0';
             prev_cnt_int    <=  (others => '0');
 
-        elsif(rising_edge(clk)) then
+		else
             prev_restart    <=  restart;
             prev_cnt_int    <=  cnt_int;
         end if;
@@ -75,14 +78,11 @@ begin
     begin
         if (rst_n = '0') then
             cnt_int     <=  (others => '0');
-            pre_restart <=  '0';
 
         elsif (prev_restart = '0' and restart = '1') then
             cnt_int     <=  (others => '0');
 
         elsif(en = '1' and rising_edge(clk)) then
-            prev_restart<=  restart;
-
             case auto_rst is
                 when '0' =>
                     case cnt_int is
@@ -91,32 +91,28 @@ begin
                             cnt_int <=  cnt_int + "1";
                     end case;
                 when '1' =>
-                    case cnt_int is
-                        when target_int-"00000001" =>
-                            cnt_int <=  (others => '0');
-                        when others => 
-                            cnt_int <=  cnt_int + "1";
-                    end case;
+					if (cnt_int >= target_int) then
+						cnt_int <=  (others => '0');
+					else
+						cnt_int <=  cnt_int + "1";
+					end if;
                 when others => null;
             end case;
         end if;
     end process;
 
-    irq_proc:       process(rst_n, restart, cnt_int)
-    begin
-        if (rst_n = '0' or (prev_restart='0' and restart = '1')) then
-            irq_int         <=  '0';
+    --irq_proc:       process(rst_n, restart, prev_restart, cnt_int)
+    --begin
+    --    if (rst_n = '0' or (prev_restart='0' and restart = '1')) then
+    --        irq_int         <=  '0';
 
-        elsif(cnt_int /= prev_cnt_int) then
-            case last_val is
-                when (target_int-"00000001") =>
-                    irq_int <=  '1';
-                when others =>
-                    irq_int <=  '0';
-            end case;
-            
-            last_val        <=  cnt_int;
-        end if;
-    end process;
+    --    elsif(cnt_int /= prev_cnt_int) then
+	--		if (prev_cnt_int >= target_int-"1") then
+	--			irq_int <=  '1';
+	--		else
+	--			irq_int <=  '0';
+	--		end if;
+    --    end if;
+    --end process;
 
 end Behavioral;

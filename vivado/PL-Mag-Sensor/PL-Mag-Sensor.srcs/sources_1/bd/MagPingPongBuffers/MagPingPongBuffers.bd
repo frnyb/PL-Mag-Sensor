@@ -13,7 +13,6 @@
     "design_tree": {
       "hold_slice": "",
       "shift_slice": "",
-      "rd_mux": "",
       "xlconstant_0": "",
       "busy_concat": "",
       "irq_concat": "",
@@ -29,7 +28,8 @@
       "mag_pingpong_buffer_7": "",
       "mag_pingpong_buffer_8": "",
       "mag_pingpong_buffer_9": "",
-      "wr_slice": ""
+      "wr_slice": "",
+      "rd_mux": ""
     },
     "ports": {
       "clk": {
@@ -241,114 +241,6 @@
           },
           "ch11": {
             "direction": "O"
-          }
-        }
-      },
-      "rd_mux": {
-        "vlnv": "xilinx.com:module_ref:mux_4x16:1.0",
-        "xci_name": "MagPingPongBuffers_mux_4x16_0_0",
-        "xci_path": "ip/MagPingPongBuffers_mux_4x16_0_0/MagPingPongBuffers_mux_4x16_0_0.xci",
-        "inst_hier_path": "rd_mux",
-        "parameters": {
-          "n_bits": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "mux_4x16",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "sel": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "inp0": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp1": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp2": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp3": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp4": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp5": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp6": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp7": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp8": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp9": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp10": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp11": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp12": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp13": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp14": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inp15": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "outp": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
           }
         }
       },
@@ -1423,6 +1315,114 @@
           },
           "ch11": {
             "direction": "O"
+          }
+        }
+      },
+      "rd_mux": {
+        "vlnv": "xilinx.com:module_ref:mux_4x16:1.0",
+        "xci_name": "MagPingPongBuffers_mux_4x16_0_0",
+        "xci_path": "ip/MagPingPongBuffers_mux_4x16_0_0/MagPingPongBuffers_mux_4x16_0_0.xci",
+        "inst_hier_path": "rd_mux",
+        "parameters": {
+          "n_bits": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux_4x16",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "inp0": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp3": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp4": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp5": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp6": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp7": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp8": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp9": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp10": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp11": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp12": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp13": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp14": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inp15": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "outp": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         }
       }

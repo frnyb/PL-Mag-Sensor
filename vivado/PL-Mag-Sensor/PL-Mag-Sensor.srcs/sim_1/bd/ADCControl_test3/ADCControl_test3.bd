@@ -1,0 +1,180 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE6E1CA0D10B707CC",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../PL-Mag-Sensor.gen/sim_1/bd/ADCControl_test3",
+      "name": "ADCControl_test3",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "xlslice_0": "",
+      "sample_time_counter": ""
+    },
+    "ports": {
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "irq": {
+        "direction": "O"
+      },
+      "cnt": {
+        "direction": "O",
+        "left": "19",
+        "right": "0"
+      },
+      "restart": {
+        "direction": "I"
+      },
+      "en": {
+        "direction": "I"
+      },
+      "target": {
+        "direction": "I",
+        "left": "19",
+        "right": "0"
+      },
+      "State": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "ADCControl_test3_xlslice_0_0",
+        "xci_path": "ip/ADCControl_test3_xlslice_0_0/ADCControl_test3_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "sample_time_counter": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "ADCControl_test3_counter_0_0",
+        "xci_path": "ip/ADCControl_test3_counter_0_0/ADCControl_test3_counter_0_0.xci",
+        "inst_hier_path": "sample_time_counter",
+        "parameters": {
+          "auto_rst": {
+            "value": "\"0\""
+          },
+          "n_bits": {
+            "value": "20"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "user_MAG_BF_CNT_INTERFACE": {
+            "mode": "Slave",
+            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+            "port_maps": {
+              "en": {
+                "physical_name": "en",
+                "direction": "I"
+              },
+              "restart": {
+                "physical_name": "restart",
+                "direction": "I"
+              },
+              "cnt": {
+                "physical_name": "cnt",
+                "direction": "O",
+                "left": "19",
+                "right": "0"
+              },
+              "irq": {
+                "physical_name": "irq",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "target": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "sample_time_counter/rst_n"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "sample_time_counter/clk"
+        ]
+      },
+      "sample_time_counter_irq": {
+        "ports": [
+          "sample_time_counter/irq",
+          "irq"
+        ]
+      },
+      "sample_time_counter_cnt": {
+        "ports": [
+          "sample_time_counter/cnt",
+          "cnt"
+        ]
+      },
+      "restart_0_1": {
+        "ports": [
+          "restart",
+          "sample_time_counter/restart"
+        ]
+      },
+      "en_0_1": {
+        "ports": [
+          "en",
+          "sample_time_counter/en"
+        ]
+      },
+      "target_0_1": {
+        "ports": [
+          "target",
+          "sample_time_counter/target"
+        ]
+      },
+      "Din_0_1": {
+        "ports": [
+          "State",
+          "xlslice_0/Din"
+        ]
+      }
+    }
+  }
+}

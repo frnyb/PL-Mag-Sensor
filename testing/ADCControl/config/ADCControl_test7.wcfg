@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ADC_controller_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ADC_controller" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="82580000fs"></ZoomStartTime>
+      <ZoomEndTime time="104860001fs"></ZoomEndTime>
+      <Cursor1Time time="91700000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="205"></NameColumnWidth>
+      <ValueColumnWidth column_width="83"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject type="logic" fp_name="/ADC_controller/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ADC_controller/spi_irq">
+      <obj_property name="ElementShortName">spi_irq</obj_property>
+      <obj_property name="ObjectShortName">spi_irq</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ADC_controller/spi_addr">
+      <obj_property name="ElementShortName">spi_addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">spi_addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ADC_controller/spi_dout">
+      <obj_property name="ElementShortName">spi_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">spi_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ADC_controller/adc_dout">
+      <obj_property name="ElementShortName">adc_dout[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">adc_dout[0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ADC_controller/t_sample_en">
+      <obj_property name="ElementShortName">t_sample_en</obj_property>
+      <obj_property name="ObjectShortName">t_sample_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ADC_controller/t_sample_irq">
+      <obj_property name="ElementShortName">t_sample_irq</obj_property>
+      <obj_property name="ObjectShortName">t_sample_irq</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ADC_controller/t_sample_irq_prev">
+      <obj_property name="ElementShortName">t_sample_irq_prev</obj_property>
+      <obj_property name="ObjectShortName">t_sample_irq_prev</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ADC_controller/irq_int">
+      <obj_property name="ElementShortName">irq_int</obj_property>
+      <obj_property name="ObjectShortName">irq_int</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ADC_controller/irq_int_prev">
+      <obj_property name="ElementShortName">irq_int_prev</obj_property>
+      <obj_property name="ObjectShortName">irq_int_prev</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ADC_controller/sampling">
+      <obj_property name="ElementShortName">sampling</obj_property>
+      <obj_property name="ObjectShortName">sampling</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ADC_controller/curr_mag">
+      <obj_property name="ElementShortName">curr_mag[1:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_mag[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ADC_controller/next_mag">
+      <obj_property name="ElementShortName">next_mag[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_mag[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ADC_controller/axis_rd">
+      <obj_property name="ElementShortName">axis_rd[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axis_rd[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ADC_controller/curr_axis">
+      <obj_property name="ElementShortName">curr_axis[1:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_axis[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ADC_controller/next_axis">
+      <obj_property name="ElementShortName">next_axis[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_axis[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/ADC_controller/current_state">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/ADC_controller/next_state">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/ADC_controller/t_current_state">
+      <obj_property name="ElementShortName">t_current_state</obj_property>
+      <obj_property name="ObjectShortName">t_current_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/ADC_controller/t_next_state">
+      <obj_property name="ElementShortName">t_next_state</obj_property>
+      <obj_property name="ObjectShortName">t_next_state</obj_property>
+   </wvobject>
+
+</wave_config>

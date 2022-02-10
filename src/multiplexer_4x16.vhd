@@ -78,6 +78,6 @@ begin
     in_data(14) <=  inp14;
     in_data(15) <=  inp15;
 
-    outp        <=  in_data(to_unsigned(sel));
+    outp        <=  in_data(UNSIGNED(sel));
 
 end Behavioral;

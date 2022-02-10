@@ -1,0 +1,478 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x65B84156D8BC7AFE",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../PL-Mag-Sensor.gen/sim_1/bd/ADCControl_test10",
+      "name": "ADCControl_test10",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "blk_mem_gen_0": "",
+      "counter_0": "",
+      "ADC_controller_0": ""
+    },
+    "ports": {
+      "gain": {
+        "direction": "I",
+        "left": "5",
+        "right": "0"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "spi_rw": {
+        "direction": "O"
+      },
+      "spi_dout": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "spi_addr": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "spi_cs": {
+        "direction": "O"
+      },
+      "gpio_UnD": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "gpio_nCS": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "spi_din": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "ch_out": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "data_out": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "gpio_nCS_ref": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "gpio_UnD_ref": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "irq_out": {
+        "direction": "O"
+      },
+      "sample_time": {
+        "direction": "O",
+        "left": "19",
+        "right": "0"
+      },
+      "t_cnt": {
+        "direction": "O",
+        "left": "19",
+        "right": "0"
+      },
+      "t_irq": {
+        "direction": "O"
+      },
+      "t_en": {
+        "direction": "O"
+      },
+      "spi_irq": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "ADCControl_test10_blk_mem_gen_0_0",
+        "xci_path": "ip/ADCControl_test10_blk_mem_gen_0_0/ADCControl_test10_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../src/sample_time_lut_data.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "false"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Core": {
+            "value": "false"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "20"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "counter_0": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "ADCControl_test10_counter_0_0",
+        "xci_path": "ip/ADCControl_test10_counter_0_0/ADCControl_test10_counter_0_0.xci",
+        "inst_hier_path": "counter_0",
+        "parameters": {
+          "auto_rst": {
+            "value": "\"1\""
+          },
+          "n_bits": {
+            "value": "20"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "user_MAG_BF_CNT_INTERFACE": {
+            "mode": "Slave",
+            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+            "port_maps": {
+              "en": {
+                "physical_name": "en",
+                "direction": "I"
+              },
+              "restart": {
+                "physical_name": "restart",
+                "direction": "I"
+              },
+              "cnt": {
+                "physical_name": "cnt",
+                "direction": "O",
+                "left": "19",
+                "right": "0"
+              },
+              "irq": {
+                "physical_name": "irq",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "ADCControl_test10_clka_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "target": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          }
+        }
+      },
+      "ADC_controller_0": {
+        "vlnv": "xilinx.com:module_ref:ADC_controller:1.0",
+        "xci_name": "ADCControl_test10_ADC_controller_0_0",
+        "xci_path": "ip/ADCControl_test10_ADC_controller_0_0/ADCControl_test10_ADC_controller_0_0.xci",
+        "inst_hier_path": "ADC_controller_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ADC_controller",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "spi": {
+            "mode": "Slave",
+            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+            "port_maps": {
+              "irq": {
+                "physical_name": "spi_irq",
+                "direction": "I"
+              }
+            }
+          },
+          "t_sample": {
+            "mode": "Slave",
+            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+            "port_maps": {
+              "en": {
+                "physical_name": "t_sample_en",
+                "direction": "O"
+              },
+              "cnt": {
+                "physical_name": "t_sample_cnt",
+                "direction": "I",
+                "left": "19",
+                "right": "0"
+              },
+              "irq": {
+                "physical_name": "t_sample_irq",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "spi_cs": {
+            "direction": "O"
+          },
+          "spi_rw": {
+            "direction": "O"
+          },
+          "spi_addr": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_dout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_din": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "gpio_UnD": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_UnD_ref": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_nCS": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_nCS_ref": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "t_sample_rest": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "ch_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "irq_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "addra_0_1": {
+        "ports": [
+          "gain",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "clka_0_1": {
+        "ports": [
+          "clk",
+          "blk_mem_gen_0/clka",
+          "counter_0/clk",
+          "ADC_controller_0/clk"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "sample_time",
+          "counter_0/target"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "counter_0/rst_n",
+          "ADC_controller_0/rst_n"
+        ]
+      },
+      "ADC_controller_0_spi_rw": {
+        "ports": [
+          "ADC_controller_0/spi_rw",
+          "spi_rw"
+        ]
+      },
+      "ADC_controller_0_spi_dout": {
+        "ports": [
+          "ADC_controller_0/spi_dout",
+          "spi_dout"
+        ]
+      },
+      "ADC_controller_0_spi_addr": {
+        "ports": [
+          "ADC_controller_0/spi_addr",
+          "spi_addr"
+        ]
+      },
+      "ADC_controller_0_spi_cs": {
+        "ports": [
+          "ADC_controller_0/spi_cs",
+          "spi_cs"
+        ]
+      },
+      "ADC_controller_0_gpio_UnD": {
+        "ports": [
+          "ADC_controller_0/gpio_UnD",
+          "gpio_UnD"
+        ]
+      },
+      "ADC_controller_0_gpio_nCS": {
+        "ports": [
+          "ADC_controller_0/gpio_nCS",
+          "gpio_nCS"
+        ]
+      },
+      "ADC_controller_0_t_sample_rest": {
+        "ports": [
+          "ADC_controller_0/t_sample_rest",
+          "counter_0/restart"
+        ]
+      },
+      "ADC_controller_0_t_sample_en": {
+        "ports": [
+          "ADC_controller_0/t_sample_en",
+          "t_en",
+          "counter_0/en"
+        ]
+      },
+      "counter_0_cnt": {
+        "ports": [
+          "counter_0/cnt",
+          "t_cnt",
+          "ADC_controller_0/t_sample_cnt"
+        ]
+      },
+      "counter_0_irq": {
+        "ports": [
+          "counter_0/irq",
+          "t_irq",
+          "ADC_controller_0/t_sample_irq"
+        ]
+      },
+      "spi_din_0_1": {
+        "ports": [
+          "spi_din",
+          "ADC_controller_0/spi_din"
+        ]
+      },
+      "ADC_controller_0_ch_out": {
+        "ports": [
+          "ADC_controller_0/ch_out",
+          "ch_out"
+        ]
+      },
+      "ADC_controller_0_data_out": {
+        "ports": [
+          "ADC_controller_0/data_out",
+          "data_out"
+        ]
+      },
+      "gpio_nCS_ref_0_1": {
+        "ports": [
+          "gpio_nCS_ref",
+          "ADC_controller_0/gpio_nCS_ref"
+        ]
+      },
+      "gpio_UnD_ref_0_1": {
+        "ports": [
+          "gpio_UnD_ref",
+          "ADC_controller_0/gpio_UnD_ref"
+        ]
+      },
+      "ADC_controller_0_irq_out": {
+        "ports": [
+          "ADC_controller_0/irq_out",
+          "irq_out"
+        ]
+      },
+      "spi_irq_0_1": {
+        "ports": [
+          "spi_irq",
+          "ADC_controller_0/spi_irq"
+        ]
+      }
+    }
+  }
+}

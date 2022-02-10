@@ -34,7 +34,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity buffer_controller is
     generic(
         t_sample_n_bits         :   POSITIVE        :=  20;
+		t_sample_target_val		:	POSITIVE		:=	10;
         t_period_n_bits         :   POSITIVE        :=  21;
+		t_period_target_val		:	POSITIVE		:=	10;
         bf_addr_n_bits          :   POSITIVE        :=  8;
         GAIN_HYST_MAX_THRESH    :   UNSIGNED(11 downto 0)   :=  X"FF0";
         GAIN_HYST_MIN_THRESH    :   UNSIGNED(11 downto 0)   :=  X"F10"
@@ -49,11 +51,13 @@ entity buffer_controller is
         t_sample_rest   :   out STD_LOGIC;
         t_sample_irq    :   in  STD_LOGIC;
         t_sample_cnt    :   in  STD_LOGIC_VECTOR(t_sample_n_bits-1 downto 0);
+		t_sample_target	:	out	STD_LOGIC_VECTOR(t_sample_n_bits-1 downto 0);
 
         t_period_en     :   out STD_LOGIC;
         t_period_rest   :   out STD_LOGIC;
         t_period_irq    :   in  STD_LOGIC;
         t_period_cnt    :   in  STD_LOGIC_VECTOR(t_period_n_bits-1 downto 0);
+		t_period_target	:	out	STD_LOGIC_VECTOR(t_period_n_bits-1 downto 0);
 
         -- ADC ports:
         adc_din         :   in  STD_LOGIC_VECTOR(11 downto 0);
@@ -120,6 +124,8 @@ architecture Behavioral of buffer_controller is
 
     signal  mag_cnt     :   UNSIGNED(1 downto 0)                :=  (others => '0');
 
+	signal	bf_shift_int:	STD_LOGIC_VECTOR(11 downto 0)		:=	(others => '0');
+
     signal  prev_t_sample_irq   :   STD_LOGIC                   :=  '0';
     signal  prev_t_period_irq   :   STD_LOGIC                   :=  '0';
     signal  prev_sampling       :   STD_LOGIC                   :=  '0';
@@ -140,6 +146,9 @@ begin
     ------------------------------------------------------------------------------
     --  Concurrent statements
     ------------------------------------------------------------------------------
+	t_sample_target <=	STD_LOGIC_VECTOR(to_unsigned(t_sample_target_val, t_sample_n_bits));
+	t_period_target	<=	STD_LOGIC_VECTOR(to_unsigned(t_period_target_val, t_period_n_bits));
+
     GENERATE_bf_wr: for i in 0 to 11 generate
         bf_wr(i)    <=  adc_irq     when sampling = '1' and adc_ch = STD_LOGIC_VECTOR(next_ch) 
                                         and i = next_ch else
@@ -224,21 +233,20 @@ begin
 
     shifted_hold_proc:      process(bf_irq)
     begin
-        case shifted_hold is
-            when accept_mask =>
-                for i in 0 to 11 loop
-                    if (prev_bf_irq(i)='1' and bf_irq(i) = '0') then
-                        shifted_hold    <=  X"000";
-                        exit;
-                    end if;
-                end loop;
-            when others =>
-                for i in 0 to 11 loop
-                    if (prev_bf_irq(i)='0' and bf_irq(i) = '1') then
-                        shifted_hold(i) <=  '1';
-                    end if;
-                end loop;
-        end case;
+		if (shifted_hold = accept_mask) then
+			for i in 0 to 11 loop
+				if (prev_bf_irq(i)='1' and bf_irq(i) = '0') then
+					shifted_hold    <=  X"000";
+					exit;
+				end if;
+			end loop;
+		else
+			for i in 0 to 11 loop
+				if (prev_bf_irq(i)='0' and bf_irq(i) = '1') then
+					shifted_hold(i) <=  '1';
+				end if;
+			end loop;
+		end if;
     end process;
 
     gain_mon_proc:          process(rst_n, adc_din, adc_ch, adc_irq, sampling, period_done)
@@ -261,10 +269,10 @@ begin
             for i in 0 to 3 loop
                 for j in 0 to 2 loop
                     if (n_over(i*3+j) > n_over_mag_v(i)) then
-                        n_over_mag_v(i)     <=  n_over(i*3+j);
+                        n_over_mag_v(i)     :=  n_over(i*3+j);
                     end if;
                     if (top_values(i*3+j) > top_mag_v(i)) then
-                        top_mag_v(i)        <=  top_values(i*3+j);
+                        top_mag_v(i)        :=  top_values(i*3+j);
                     end if;
                 end loop;
 
@@ -283,12 +291,12 @@ begin
             gain_mon_rdy                    <=  '1';
 
         elsif (sampling = '1' and prev_adc_irq='0' and adc_irq = '1') then
-            if (UNSIGNED(adc_din) > UNSIGNED(GAIN_HYST_MAX_THRESH)) then
-                n_over(UNSIGNED(adc_ch))    <=  n_over(UNSIGNED(adc_ch)) + "1";
+            if (UNSIGNED(adc_din) > GAIN_HYST_MAX_THRESH) then
+                n_over(to_integer(UNSIGNED(adc_ch)))    <=  n_over(to_integer(UNSIGNED(adc_ch))) + "1";
             end if;
 
-            if (UNSIGNED(adc_din) > UNSIGNED(top_values(UNSIGNED(adc_ch)))) then
-                top_values(UNSIGNED(adc_ch))<=  adc_din;
+            if (UNSIGNED(adc_din) > UNSIGNED(top_values(to_integer(UNSIGNED(adc_ch))))) then
+                top_values(to_integer(UNSIGNED(adc_ch)))<=  adc_din;
             end if;
         end if;
     end process; 
@@ -373,17 +381,17 @@ begin
                 when s_gain_eval =>
                     case next_state is
                         when s_gain_fetch =>
-                            lut_n_over              <=  STD_LOGIC_VECTOR(n_over_mags(mag_cnt));
-                            lut_top_val             <=  top_mags(mag_cnt);
-                            lut_gain_UnD            <=  gain_UnD(mag_cnt);
-                            lut_curr_gain           <=  gain_curr_int(mag_cnt);
+                            lut_n_over              <=  STD_LOGIC_VECTOR(n_over_mags(to_integer(mag_cnt)));
+                            lut_top_val             <=  top_mags(to_integer(mag_cnt));
+                            lut_gain_UnD            <=  gain_UnD(to_integer(mag_cnt));
+                            lut_curr_gain           <=  gain_curr_int(to_integer(mag_cnt));
                         when s_gain_done => null;
                         when others => null;
                     end case;
                 when s_gain_fetch =>
                     case next_state is
                         when s_gain_done =>
-                            gain_ref_int(mag_cnt)   <=  lut_new_gain;
+                            gain_ref_int(to_integer(mag_cnt))	<=  lut_new_gain;
                         when others => null;
                     end case;
                 when s_gain_done =>
@@ -469,7 +477,7 @@ begin
             when s_shift =>
                 next_state              <=  s_gain_eval;
             when s_gain_eval =>
-                if (not (accept_mask(mag_cnt*3+2 downto mag_cnt*3) = "111")) then
+                if (not (accept_mask(to_integer(mag_cnt)*3+2 downto to_integer(mag_cnt)*3) = "111")) then
                     next_state          <=  s_gain_fetch;
                 else 
                     next_state          <=  s_gain_done;

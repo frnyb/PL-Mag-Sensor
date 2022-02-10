@@ -1,0 +1,8 @@
+*.log
+*.jou
+PL-Mag-Sensor.sim
+PL-Mag-Sensor.runs
+PL-Mag-Sensor.ip_user_files
+PL-Mag-Sensor.gen
+PL-Mag-Sensor.cache
+

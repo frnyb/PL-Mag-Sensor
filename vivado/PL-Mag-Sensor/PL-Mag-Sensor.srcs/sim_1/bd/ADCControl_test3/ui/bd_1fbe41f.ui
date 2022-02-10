@@ -1,0 +1,30 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-747,-189",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -20 -y 180 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -20 -y 160 -defaultsOSRD
+preplace port irq -pg 1 -lvl 2 -x 380 -y 140 -defaultsOSRD
+preplace port restart -pg 1 -lvl 0 -x -20 -y 100 -defaultsOSRD
+preplace port en -pg 1 -lvl 0 -x -20 -y 80 -defaultsOSRD
+preplace portBus cnt -pg 1 -lvl 2 -x 380 -y 120 -defaultsOSRD
+preplace portBus target -pg 1 -lvl 0 -x -20 -y 200 -defaultsOSRD
+preplace portBus State -pg 1 -lvl 0 -x -20 -y 450 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 1 -x 180 -y 450 -defaultsOSRD
+preplace inst sample_time_counter -pg 1 -lvl 1 -x 180 -y 130 -defaultsOSRD
+preplace netloc rst_n_0_1 1 0 1 NJ 180
+preplace netloc clk_0_1 1 0 1 NJ 160
+preplace netloc sample_time_counter_irq 1 0 2 0 -10 360J
+preplace netloc sample_time_counter_cnt 1 0 2 10 0 350J
+preplace netloc restart_0_1 1 0 1 NJ 100
+preplace netloc en_0_1 1 0 1 NJ 80
+preplace netloc target_0_1 1 0 1 NJ 200
+preplace netloc Din_0_1 1 0 1 N 450
+levelinfo -pg 1 -20 180 380
+pagesize -pg 1 -db -bbox -sgen -160 -40 500 550
+"
+}
+0

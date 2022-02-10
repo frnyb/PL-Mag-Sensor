@@ -27,21 +27,21 @@
           "UnD_slice_0": "",
           "nCS_slice_0": ""
         },
+        "gain_concat": "",
+        "slice_1x4_0": "",
         "gain_controller_0": "",
         "gain_controller_1": "",
         "gain_controller_2": "",
-        "gain_controller_3": "",
-        "gain_concat": "",
-        "slice_1x4_0": ""
+        "gain_controller_3": ""
       },
       "BufferFlowControl": {
         "MagPingPongBuffers": "",
-        "sample_interval_timer": "",
-        "signal_period_timer": "",
         "gain_LUT": "",
-        "buffer_controller": ""
+        "buffer_controller": "",
+        "sample_interval_timer": "",
+        "signal_period_timer": ""
       },
-      "ADC_controller": ""
+      "ADCControl": ""
     },
     "ports": {
       "clk": {
@@ -128,6 +128,10 @@
               "SENSITIVITY": {
                 "value": "LEVEL_HIGH",
                 "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
               }
             }
           },
@@ -613,226 +617,6 @@
               }
             }
           },
-          "gain_controller_0": {
-            "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
-            "xci_name": "MagController_gain_controller_0_0",
-            "xci_path": "ip/MagController_gain_controller_0_0/MagController_gain_controller_0_0.xci",
-            "inst_hier_path": "GainControl/gain_controller_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "gain_controller",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "MagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "adc_UnD": {
-                "direction": "I"
-              },
-              "adc_UnD_ref": {
-                "direction": "O"
-              },
-              "adc_nCS": {
-                "direction": "I"
-              },
-              "adc_nCS_ref": {
-                "direction": "O"
-              },
-              "gain": {
-                "direction": "O",
-                "left": "5",
-                "right": "0"
-              },
-              "gain_ref": {
-                "direction": "I",
-                "left": "5",
-                "right": "0"
-              }
-            }
-          },
-          "gain_controller_1": {
-            "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
-            "xci_name": "MagController_gain_controller_0_1",
-            "xci_path": "ip/MagController_gain_controller_0_1/MagController_gain_controller_0_1.xci",
-            "inst_hier_path": "GainControl/gain_controller_1",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "gain_controller",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "MagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "adc_UnD": {
-                "direction": "I"
-              },
-              "adc_UnD_ref": {
-                "direction": "O"
-              },
-              "adc_nCS": {
-                "direction": "I"
-              },
-              "adc_nCS_ref": {
-                "direction": "O"
-              },
-              "gain": {
-                "direction": "O",
-                "left": "5",
-                "right": "0"
-              },
-              "gain_ref": {
-                "direction": "I",
-                "left": "5",
-                "right": "0"
-              }
-            }
-          },
-          "gain_controller_2": {
-            "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
-            "xci_name": "MagController_gain_controller_1_0",
-            "xci_path": "ip/MagController_gain_controller_1_0/MagController_gain_controller_1_0.xci",
-            "inst_hier_path": "GainControl/gain_controller_2",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "gain_controller",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "MagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "adc_UnD": {
-                "direction": "I"
-              },
-              "adc_UnD_ref": {
-                "direction": "O"
-              },
-              "adc_nCS": {
-                "direction": "I"
-              },
-              "adc_nCS_ref": {
-                "direction": "O"
-              },
-              "gain": {
-                "direction": "O",
-                "left": "5",
-                "right": "0"
-              },
-              "gain_ref": {
-                "direction": "I",
-                "left": "5",
-                "right": "0"
-              }
-            }
-          },
-          "gain_controller_3": {
-            "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
-            "xci_name": "MagController_gain_controller_2_0",
-            "xci_path": "ip/MagController_gain_controller_2_0/MagController_gain_controller_2_0.xci",
-            "inst_hier_path": "GainControl/gain_controller_3",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "gain_controller",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "MagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "adc_UnD": {
-                "direction": "I"
-              },
-              "adc_UnD_ref": {
-                "direction": "O"
-              },
-              "adc_nCS": {
-                "direction": "I"
-              },
-              "adc_nCS_ref": {
-                "direction": "O"
-              },
-              "gain": {
-                "direction": "O",
-                "left": "5",
-                "right": "0"
-              },
-              "gain_ref": {
-                "direction": "I",
-                "left": "5",
-                "right": "0"
-              }
-            }
-          },
           "gain_concat": {
             "vlnv": "xilinx.com:ip:xlconcat:2.1",
             "xci_name": "MagController_xlconcat_0_2",
@@ -889,6 +673,202 @@
               },
               "ch3": {
                 "direction": "O",
+                "left": "5",
+                "right": "0"
+              }
+            }
+          },
+          "gain_controller_0": {
+            "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
+            "xci_name": "MagController_gain_controller_0_0",
+            "xci_path": "ip/MagController_gain_controller_0_0/MagController_gain_controller_0_0.xci",
+            "inst_hier_path": "GainControl/gain_controller_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gain_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "adc_UnD": {
+                "direction": "I"
+              },
+              "adc_UnD_ref": {
+                "direction": "O"
+              },
+              "adc_nCS": {
+                "direction": "I"
+              },
+              "adc_nCS_ref": {
+                "direction": "O"
+              },
+              "gain": {
+                "direction": "O",
+                "left": "5",
+                "right": "0"
+              },
+              "gain_ref": {
+                "direction": "I",
+                "left": "5",
+                "right": "0"
+              }
+            }
+          },
+          "gain_controller_1": {
+            "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
+            "xci_name": "MagController_gain_controller_0_1",
+            "xci_path": "ip/MagController_gain_controller_0_1/MagController_gain_controller_0_1.xci",
+            "inst_hier_path": "GainControl/gain_controller_1",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gain_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "adc_UnD": {
+                "direction": "I"
+              },
+              "adc_UnD_ref": {
+                "direction": "O"
+              },
+              "adc_nCS": {
+                "direction": "I"
+              },
+              "adc_nCS_ref": {
+                "direction": "O"
+              },
+              "gain": {
+                "direction": "O",
+                "left": "5",
+                "right": "0"
+              },
+              "gain_ref": {
+                "direction": "I",
+                "left": "5",
+                "right": "0"
+              }
+            }
+          },
+          "gain_controller_2": {
+            "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
+            "xci_name": "MagController_gain_controller_1_0",
+            "xci_path": "ip/MagController_gain_controller_1_0/MagController_gain_controller_1_0.xci",
+            "inst_hier_path": "GainControl/gain_controller_2",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gain_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "adc_UnD": {
+                "direction": "I"
+              },
+              "adc_UnD_ref": {
+                "direction": "O"
+              },
+              "adc_nCS": {
+                "direction": "I"
+              },
+              "adc_nCS_ref": {
+                "direction": "O"
+              },
+              "gain": {
+                "direction": "O",
+                "left": "5",
+                "right": "0"
+              },
+              "gain_ref": {
+                "direction": "I",
+                "left": "5",
+                "right": "0"
+              }
+            }
+          },
+          "gain_controller_3": {
+            "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
+            "xci_name": "MagController_gain_controller_2_0",
+            "xci_path": "ip/MagController_gain_controller_2_0/MagController_gain_controller_2_0.xci",
+            "inst_hier_path": "GainControl/gain_controller_3",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gain_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "adc_UnD": {
+                "direction": "I"
+              },
+              "adc_UnD_ref": {
+                "direction": "O"
+              },
+              "adc_nCS": {
+                "direction": "I"
+              },
+              "adc_nCS_ref": {
+                "direction": "O"
+              },
+              "gain": {
+                "direction": "O",
+                "left": "5",
+                "right": "0"
+              },
+              "gain_ref": {
+                "direction": "I",
                 "left": "5",
                 "right": "0"
               }
@@ -1151,6 +1131,9 @@
               },
               "LOCK_PROPAGATE": {
                 "value": "0"
+              },
+              "TRAINING_MODULE": {
+                "value": "MagPingPongBuffers.bd"
               }
             },
             "ports": {
@@ -1218,138 +1201,12 @@
             "variant_info": {
               "MagPingPongBuffers.bd": {
                 "scoped_diagram": "MagPingPongBuffers_inst_0.bd",
-                "design_checksum": "0xEC4D7A59",
+                "design_checksum": "0x480587B6",
                 "ref_name": "MagPingPongBuffers",
                 "ref_subinst_path": "MagController_MagPingPongBuffers_0",
                 "ref_type": "Block Design",
                 "source_type": "all",
                 "active": "all"
-              }
-            }
-          },
-          "sample_interval_timer": {
-            "vlnv": "xilinx.com:module_ref:counter:1.0",
-            "xci_name": "MagController_counter_0_0",
-            "xci_path": "ip/MagController_counter_0_0/MagController_counter_0_0.xci",
-            "inst_hier_path": "BufferFlowControl/sample_interval_timer",
-            "parameters": {
-              "n_bits": {
-                "value": "20"
-              }
-            },
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "counter",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "MagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "en": {
-                "direction": "I"
-              },
-              "restart": {
-                "direction": "I"
-              },
-              "cnt": {
-                "direction": "O",
-                "left": "19",
-                "right": "0"
-              },
-              "irq": {
-                "type": "intr",
-                "direction": "O",
-                "parameters": {
-                  "SENSITIVITY": {
-                    "value": "LEVEL_HIGH",
-                    "value_src": "constant"
-                  },
-                  "PortWidth": {
-                    "value": "1",
-                    "value_src": "default_prop"
-                  }
-                }
-              }
-            }
-          },
-          "signal_period_timer": {
-            "vlnv": "xilinx.com:module_ref:counter:1.0",
-            "xci_name": "MagController_sample_mag_interval_timer_0",
-            "xci_path": "ip/MagController_sample_mag_interval_timer_0/MagController_sample_mag_interval_timer_0.xci",
-            "inst_hier_path": "BufferFlowControl/signal_period_timer",
-            "parameters": {
-              "n_bits": {
-                "value": "21"
-              }
-            },
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "counter",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "MagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "en": {
-                "direction": "I"
-              },
-              "restart": {
-                "direction": "I"
-              },
-              "cnt": {
-                "direction": "O",
-                "left": "20",
-                "right": "0"
-              },
-              "irq": {
-                "type": "intr",
-                "direction": "O",
-                "parameters": {
-                  "SENSITIVITY": {
-                    "value": "LEVEL_HIGH",
-                    "value_src": "constant"
-                  },
-                  "PortWidth": {
-                    "value": "1",
-                    "value_src": "default_prop"
-                  }
-                }
               }
             }
           },
@@ -1513,8 +1370,18 @@
               "t_sample_rest": {
                 "direction": "O"
               },
+              "t_sample_target": {
+                "direction": "O",
+                "left": "19",
+                "right": "0"
+              },
               "t_period_rest": {
                 "direction": "O"
+              },
+              "t_period_target": {
+                "direction": "O",
+                "left": "20",
+                "right": "0"
               },
               "adc_din": {
                 "direction": "I",
@@ -1590,6 +1457,138 @@
                 "right": "0"
               }
             }
+          },
+          "sample_interval_timer": {
+            "vlnv": "xilinx.com:module_ref:counter:1.0",
+            "xci_name": "MagController_counter_0_0",
+            "xci_path": "ip/MagController_counter_0_0/MagController_counter_0_0.xci",
+            "inst_hier_path": "BufferFlowControl/sample_interval_timer",
+            "parameters": {
+              "auto_rst": {
+                "value": "\"0\""
+              },
+              "n_bits": {
+                "value": "20"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "counter",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "user_MAG_BF_CNT_INTERFACE": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "en": {
+                    "physical_name": "en",
+                    "direction": "I"
+                  },
+                  "restart": {
+                    "physical_name": "restart",
+                    "direction": "I"
+                  },
+                  "cnt": {
+                    "physical_name": "cnt",
+                    "direction": "O",
+                    "left": "19",
+                    "right": "0"
+                  },
+                  "irq": {
+                    "physical_name": "irq",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "target": {
+                "direction": "I",
+                "left": "19",
+                "right": "0"
+              }
+            }
+          },
+          "signal_period_timer": {
+            "vlnv": "xilinx.com:module_ref:counter:1.0",
+            "xci_name": "MagController_sample_mag_interval_timer_0",
+            "xci_path": "ip/MagController_sample_mag_interval_timer_0/MagController_sample_mag_interval_timer_0.xci",
+            "inst_hier_path": "BufferFlowControl/signal_period_timer",
+            "parameters": {
+              "auto_rst": {
+                "value": "\"0\""
+              },
+              "n_bits": {
+                "value": "21"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "counter",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "user_MAG_BF_CNT_INTERFACE": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "en": {
+                    "physical_name": "en",
+                    "direction": "I"
+                  },
+                  "restart": {
+                    "physical_name": "restart",
+                    "direction": "I"
+                  },
+                  "cnt": {
+                    "physical_name": "cnt",
+                    "direction": "O",
+                    "left": "20",
+                    "right": "0"
+                  },
+                  "irq": {
+                    "physical_name": "irq",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "target": {
+                "direction": "I",
+                "left": "20",
+                "right": "0"
+              }
+            }
           }
         },
         "nets": {
@@ -1597,19 +1596,19 @@
             "ports": [
               "clk",
               "MagPingPongBuffers/clk",
-              "sample_interval_timer/clk",
-              "signal_period_timer/clk",
               "gain_LUT/clk",
-              "buffer_controller/clk"
+              "buffer_controller/clk",
+              "sample_interval_timer/clk",
+              "signal_period_timer/clk"
             ]
           },
           "rst_n_1": {
             "ports": [
               "rst_n",
-              "sample_interval_timer/rst_n",
               "MagPingPongBuffers/rst_n",
-              "signal_period_timer/rst_n",
-              "buffer_controller/rst_n"
+              "buffer_controller/rst_n",
+              "sample_interval_timer/rst_n",
+              "signal_period_timer/rst_n"
             ]
           },
           "sample_mag_interval_timer_irq": {
@@ -1768,62 +1767,48 @@
           }
         }
       },
-      "ADC_controller": {
-        "vlnv": "xilinx.com:module_ref:ADC_controller:1.0",
-        "xci_name": "MagController_ADC_controller_0_0",
-        "xci_path": "ip/MagController_ADC_controller_0_0/MagController_ADC_controller_0_0.xci",
-        "inst_hier_path": "ADC_controller",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ADC_controller",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "spi": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "spi_irq",
-                "direction": "I"
-              }
-            }
+      "ADCControl": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "ADCControl.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "ADCControl.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "ADCControl.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "ADCControl.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "ADCControl.bd"
           }
         },
         "ports": {
+          "ch_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
           "clk": {
             "type": "clk",
             "direction": "I"
           },
-          "rst_n": {
-            "type": "rst",
+          "curr_gain": {
             "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "spi_cs": {
-            "direction": "O"
-          },
-          "spi_rw": {
-            "direction": "O"
-          },
-          "spi_addr": {
-            "direction": "O",
-            "left": "1",
+            "left": "23",
             "right": "0"
           },
-          "spi_dout": {
+          "data_out": {
             "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "spi_din": {
-            "direction": "I",
-            "left": "7",
+            "left": "11",
             "right": "0"
           },
           "gpio_UnD": {
@@ -1846,18 +1831,49 @@
             "left": "3",
             "right": "0"
           },
-          "data_out": {
-            "direction": "O",
-            "left": "11",
-            "right": "0"
-          },
-          "ch_out": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
           "irq_out": {
             "direction": "O"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "spi_addr": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_cs": {
+            "direction": "O"
+          },
+          "spi_din": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_dout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_irq": {
+            "direction": "I"
+          },
+          "spi_rw": {
+            "direction": "O"
+          }
+        },
+        "post_compiled_compname": "ADCControl_inst_0",
+        "architecture": "zynquplus",
+        "variant_info": {
+          "ADCControl.bd": {
+            "scoped_diagram": "ADCControl_inst_0.bd",
+            "design_checksum": "0xE99A11E",
+            "ref_name": "ADCControl",
+            "ref_subinst_path": "MagController_ADCControl_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
           }
         }
       }
@@ -1869,7 +1885,7 @@
           "SPI_master/clk",
           "GainControl/clk",
           "BufferFlowControl/clk",
-          "ADC_controller/clk"
+          "ADCControl/clk"
         ]
       },
       "rst_n_0_1": {
@@ -1878,7 +1894,7 @@
           "SPI_master/rst_n",
           "GainControl/rst_n",
           "BufferFlowControl/rst_n",
-          "ADC_controller/rst_n"
+          "ADCControl/rst_n"
         ]
       },
       "spi_master_0_spi_clk": {
@@ -1913,80 +1929,81 @@
       },
       "ADC_controller_0_spi_cs": {
         "ports": [
-          "ADC_controller/spi_cs",
+          "ADCControl/spi_cs",
           "SPI_master/cs"
         ]
       },
       "ADC_controller_0_spi_rw": {
         "ports": [
-          "ADC_controller/spi_rw",
+          "ADCControl/spi_rw",
           "SPI_master/rw"
         ]
       },
       "SPI_master_data_out": {
         "ports": [
           "SPI_master/data_out",
-          "ADC_controller/spi_din"
+          "ADCControl/spi_din"
         ]
       },
       "SPI_master_irq": {
         "ports": [
           "SPI_master/irq",
-          "ADC_controller/spi_irq"
+          "ADCControl/spi_irq"
         ]
       },
       "ADC_controller_0_spi_addr": {
         "ports": [
-          "ADC_controller/spi_addr",
+          "ADCControl/spi_addr",
           "SPI_master/addr"
         ]
       },
       "ADC_controller_0_spi_dout": {
         "ports": [
-          "ADC_controller/spi_dout",
+          "ADCControl/spi_dout",
           "SPI_master/data_in"
         ]
       },
       "GainControl_dout": {
         "ports": [
           "GainControl/UnD_ref",
-          "ADC_controller/gpio_UnD_ref"
+          "ADCControl/gpio_UnD_ref"
         ]
       },
       "GainControl_dout1": {
         "ports": [
           "GainControl/nCS_ref",
-          "ADC_controller/gpio_nCS_ref"
+          "ADCControl/gpio_nCS_ref"
         ]
       },
       "ADC_controller_gpio_UnD": {
         "ports": [
-          "ADC_controller/gpio_UnD",
+          "ADCControl/gpio_UnD",
           "GainControl/UnD"
         ]
       },
       "ADC_controller_gpio_nCS": {
         "ports": [
-          "ADC_controller/gpio_nCS",
+          "ADCControl/gpio_nCS",
           "GainControl/nCS"
         ]
       },
       "ADC_controller_irq_out": {
         "ports": [
-          "ADC_controller/irq_out",
+          "ADCControl/irq_out",
           "BufferFlowControl/adc_irq"
         ]
       },
       "ADC_controller_data_out": {
         "ports": [
-          "ADC_controller/data_out",
+          "ADCControl/data_out",
           "BufferFlowControl/adc_din"
         ]
       },
       "GainControl_dout2": {
         "ports": [
           "GainControl/gain_out",
-          "BufferFlowControl/gain_curr"
+          "BufferFlowControl/gain_curr",
+          "ADCControl/curr_gain"
         ]
       },
       "inp_1": {
@@ -1997,7 +2014,7 @@
       },
       "ADC_controller_ch_out": {
         "ports": [
-          "ADC_controller/ch_out",
+          "ADCControl/ch_out",
           "BufferFlowControl/adc_ch"
         ]
       }

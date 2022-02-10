@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="GainControl_test2_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="GainControl_test2_wrapper" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="998033fs"></ZoomStartTime>
+      <ZoomEndTime time="1007349fs"></ZoomEndTime>
+      <Cursor1Time time="999585fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="186"></NameColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject type="logic" fp_name="/GainControl_test2_wrapper/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/GainControl_test2_wrapper/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/GainControl_test2_wrapper/spi_rw">
+      <obj_property name="ElementShortName">spi_rw</obj_property>
+      <obj_property name="ObjectShortName">spi_rw</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/GainControl_test2_wrapper/spi_cs">
+      <obj_property name="ElementShortName">spi_cs</obj_property>
+      <obj_property name="ObjectShortName">spi_cs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/spi_addr">
+      <obj_property name="ElementShortName">spi_addr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">spi_addr[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/spi_dout">
+      <obj_property name="ElementShortName">spi_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">spi_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/spi_din">
+      <obj_property name="ElementShortName">spi_din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">spi_din[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/GainControl_test2_wrapper/spi_irq">
+      <obj_property name="ElementShortName">spi_irq</obj_property>
+      <obj_property name="ObjectShortName">spi_irq</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/GainControl_test2_wrapper/irq_out">
+      <obj_property name="ElementShortName">irq_out</obj_property>
+      <obj_property name="ObjectShortName">irq_out</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/ch_out">
+      <obj_property name="ElementShortName">ch_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_out[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/data_out">
+      <obj_property name="ElementShortName">data_out[11:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/gain">
+      <obj_property name="ElementShortName">gain[5:0]</obj_property>
+      <obj_property name="ObjectShortName">gain[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/gain_ref">
+      <obj_property name="ElementShortName">gain_ref_0[5:0]</obj_property>
+      <obj_property name="ObjectShortName">gain_ref_0[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/gpio_UnD">
+      <obj_property name="ElementShortName">gpio_UnD[0:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_UnD[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/GainControl_test2_wrapper/gpio_nCS">
+      <obj_property name="ElementShortName">gpio_nCS[0:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_nCS[0:0]</obj_property>
+   </wvobject>
+</wave_config>
