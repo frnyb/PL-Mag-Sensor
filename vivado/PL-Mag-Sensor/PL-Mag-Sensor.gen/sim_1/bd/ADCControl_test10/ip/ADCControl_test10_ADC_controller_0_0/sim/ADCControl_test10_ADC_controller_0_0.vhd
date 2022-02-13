@@ -73,7 +73,8 @@ ENTITY ADCControl_test10_ADC_controller_0_0 IS
     t_sample_irq : IN STD_LOGIC;
     data_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     ch_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    irq_out : OUT STD_LOGIC
+    irq_out : OUT STD_LOGIC;
+    curr_state_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
   );
 END ADCControl_test10_ADC_controller_0_0;
 
@@ -103,7 +104,8 @@ ARCHITECTURE ADCControl_test10_ADC_controller_0_0_arch OF ADCControl_test10_ADC_
       t_sample_irq : IN STD_LOGIC;
       data_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       ch_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      irq_out : OUT STD_LOGIC
+      irq_out : OUT STD_LOGIC;
+      curr_state_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
     );
   END COMPONENT ADC_controller;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -116,7 +118,7 @@ ARCHITECTURE ADCControl_test10_ADC_controller_0_0_arch OF ADCControl_test10_ADC_
   ATTRIBUTE X_INTERFACE_INFO OF spi_irq: SIGNAL IS "DIII:user:MAG_BF_CNT_INTERFACE:1.0 spi irq";
   ATTRIBUTE X_INTERFACE_PARAMETER OF rst_n: SIGNAL IS "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 rst_n RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN ADCControl_test10_clka_0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN ADCControl_test10_clk, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : ADC_controller
@@ -142,6 +144,7 @@ BEGIN
       t_sample_irq => t_sample_irq,
       data_out => data_out,
       ch_out => ch_out,
-      irq_out => irq_out
+      irq_out => irq_out,
+      curr_state_out => curr_state_out
     );
 END ADCControl_test10_ADC_controller_0_0_arch;

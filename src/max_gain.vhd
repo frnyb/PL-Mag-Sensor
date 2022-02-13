@@ -49,22 +49,15 @@ begin
     gain2_int   <=  UNSIGNED(gains(17 downto 12));
     gain3_int   <=  UNSIGNED(gains(23 downto 18));
 
-    process(gain0_int, gain1_int, gain2_int, gain3_int)
-        variable    max_gain_v  :   UNSIGNED(5 downto 0)    :=  "000000";
-    begin
-        if (gain0_int > max_gain_v) then
-            max_gain_v  :=  gain0_int;
-        end if;
-        if (gain1_int > max_gain_v) then
-            max_gain_v  :=  gain1_int;
-        end if;
-        if (gain2_int > max_gain_v) then
-            max_gain_v  :=  gain2_int;
-        end if;
-        if (gain3_int > max_gain_v) then
-            max_gain_v  :=  gain3_int;
-        end if;
+    max_gain_out<=  STD_LOGIC_VECTOR(gain0_int) when    gain0_int > gain1_int and 
+                                                        gain0_int > gain2_int and
+                                                        gain0_int > gain3_int else
+                    STD_LOGIC_VECTOR(gain1_int) when    gain1_int > gain0_int and 
+                                                        gain1_int > gain2_int and
+                                                        gain1_int > gain3_int else
+                    STD_LOGIC_VECTOR(gain2_int) when    gain2_int > gain0_int and 
+                                                        gain2_int > gain1_int and
+                                                        gain2_int > gain3_int else
+                    STD_LOGIC_VECTOR(gain3_int);
 
-        max_gain_out <=  STD_LOGIC_VECTOR(max_gain_v);
-    end process;
 end Behavioral;

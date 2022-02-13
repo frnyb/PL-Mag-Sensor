@@ -200,7 +200,7 @@
             "direction": "I",
             "parameters": {
               "CLK_DOMAIN": {
-                "value": "ADCControl_test10_clka_0",
+                "value": "ADCControl_test10_clk",
                 "value_src": "default_prop"
               }
             }

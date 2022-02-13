@@ -40,16 +40,9 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# gain_controller
+# ADC_controller, ADC_simulator, gain_controller, max_gain, counter
 
 # Please add the sources of those modules before sourcing this Tcl script.
-
-
-# The design that will be created by this Tcl script contains the following 
-# block design container source references:
-# ADCControl
-
-# Please add the sources before sourcing this Tcl script.
 
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
@@ -173,30 +166,68 @@ proc create_root_design { parentCell } {
   # Create ports
   set ch_out [ create_bd_port -dir O -from 3 -to 0 ch_out ]
   set clk [ create_bd_port -dir I -type clk clk ]
-  set data_out [ create_bd_port -dir O -from 11 -to 0 data_out ]
   set gain [ create_bd_port -dir O -from 5 -to 0 gain ]
   set gain_ref [ create_bd_port -dir I -from 5 -to 0 gain_ref ]
-  set gpio_UnD [ create_bd_port -dir O -from 0 -to 0 gpio_UnD ]
-  set gpio_nCS [ create_bd_port -dir O -from 0 -to 0 gpio_nCS ]
+  set gpio_UnD [ create_bd_port -dir O -from 3 -to 0 gpio_UnD ]
+  set gpio_UnD_ref [ create_bd_port -dir O -from 3 -to 0 gpio_UnD_ref ]
+  set gpio_nCS [ create_bd_port -dir O -from 3 -to 0 gpio_nCS ]
+  set gpio_nCS_ref [ create_bd_port -dir O -from 3 -to 0 gpio_nCS_ref ]
   set irq_out [ create_bd_port -dir O irq_out ]
   set rst_n [ create_bd_port -dir I -type rst rst_n ]
+  set sample_time [ create_bd_port -dir O -from 19 -to 0 sample_time ]
   set spi_addr [ create_bd_port -dir O -from 1 -to 0 spi_addr ]
   set spi_cs [ create_bd_port -dir O spi_cs ]
-  set spi_din [ create_bd_port -dir I -from 7 -to 0 spi_din ]
-  set spi_dout [ create_bd_port -dir O -from 7 -to 0 spi_dout ]
-  set spi_irq [ create_bd_port -dir I spi_irq ]
-  set spi_rw [ create_bd_port -dir O spi_rw ]
+  set spi_irq [ create_bd_port -dir O spi_irq ]
+  set spi_miso [ create_bd_port -dir O -from 7 -to 0 spi_miso ]
+  set spi_mosi [ create_bd_port -dir O -from 7 -to 0 -type data spi_mosi ]
+  set t_sample_en [ create_bd_port -dir O t_sample_en ]
+  set t_sample_irq [ create_bd_port -dir O t_sample_irq ]
 
-  # Create instance: ADCControl_0, and set properties
-  set ADCControl_0 [ create_bd_cell -type container -reference ADCControl ADCControl_0 ]
+  # Create instance: ADC_controller, and set properties
+  set block_name ADC_controller
+  set block_cell_name ADC_controller
+  if { [catch {set ADC_controller [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ADC_controller eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: ADC_simulator, and set properties
+  set block_name ADC_simulator
+  set block_cell_name ADC_simulator
+  if { [catch {set ADC_simulator [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ADC_simulator eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: SampleTimeLUT, and set properties
+  set SampleTimeLUT [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 SampleTimeLUT ]
   set_property -dict [ list \
-   CONFIG.ACTIVE_SIM_BD {ADCControl.bd} \
-   CONFIG.ACTIVE_SYNTH_BD {ADCControl.bd} \
-   CONFIG.ENABLE_DFX {0} \
-   CONFIG.LIST_SIM_BD {ADCControl.bd} \
-   CONFIG.LIST_SYNTH_BD {ADCControl.bd} \
-   CONFIG.LOCK_PROPAGATE {0} \
- ] $ADCControl_0
+   CONFIG.Byte_Size {9} \
+   CONFIG.Coe_File {../../../../../../../../src/sample_time_lut_data.coe} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Enable_A {Always_Enabled} \
+   CONFIG.Fill_Remaining_Memory_Locations {true} \
+   CONFIG.Load_Init_File {true} \
+   CONFIG.Memory_Type {Single_Port_ROM} \
+   CONFIG.Port_A_Write_Rate {0} \
+   CONFIG.Read_Width_A {20} \
+   CONFIG.Read_Width_B {20} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {true} \
+   CONFIG.Remaining_Memory_Locations {F} \
+   CONFIG.Use_Byte_Write_Enable {false} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Write_Depth_A {64} \
+   CONFIG.Write_Width_A {20} \
+   CONFIG.Write_Width_B {20} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $SampleTimeLUT
 
   # Create instance: UnD_concat, and set properties
   set UnD_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 UnD_concat ]
@@ -219,13 +250,38 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_PORTS {2} \
  ] $gain_concat
 
-  # Create instance: gain_controller_0, and set properties
+  # Create instance: gain_const, and set properties
+  set gain_const [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 gain_const ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_WIDTH {18} \
+ ] $gain_const
+
+  # Create instance: gain_controller, and set properties
   set block_name gain_controller
-  set block_cell_name gain_controller_0
-  if { [catch {set gain_controller_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  set block_cell_name gain_controller
+  if { [catch {set gain_controller [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $gain_controller_0 eq "" } {
+   } elseif { $gain_controller eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: gpio_const, and set properties
+  set gpio_const [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 gpio_const ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_WIDTH {3} \
+ ] $gpio_const
+
+  # Create instance: max_gain, and set properties
+  set block_name max_gain
+  set block_cell_name max_gain
+  if { [catch {set max_gain [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $max_gain eq "" } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -243,45 +299,50 @@ proc create_root_design { parentCell } {
    CONFIG.DIN_WIDTH {4} \
  ] $nCS_slice
 
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {3} \
- ] $xlconstant_0
-
-  # Create instance: xlconstant_1, and set properties
-  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {18} \
- ] $xlconstant_1
+  # Create instance: sample_time_counter, and set properties
+  set block_name counter
+  set block_cell_name sample_time_counter
+  if { [catch {set sample_time_counter [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $sample_time_counter eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+    set_property -dict [ list \
+   CONFIG.n_bits {20} \
+ ] $sample_time_counter
 
   # Create port connections
-  connect_bd_net -net ADCControl_0_ch_out [get_bd_ports ch_out] [get_bd_pins ADCControl_0/ch_out]
-  connect_bd_net -net ADCControl_0_data_out [get_bd_ports data_out] [get_bd_pins ADCControl_0/data_out]
-  connect_bd_net -net ADCControl_0_gpio_UnD [get_bd_pins ADCControl_0/gpio_UnD] [get_bd_pins UnD_slice/Din]
-  connect_bd_net -net ADCControl_0_gpio_nCS [get_bd_pins ADCControl_0/gpio_nCS] [get_bd_pins nCS_slice/Din]
-  connect_bd_net -net ADCControl_0_irq_out [get_bd_ports irq_out] [get_bd_pins ADCControl_0/irq_out]
-  connect_bd_net -net ADCControl_0_spi_addr [get_bd_ports spi_addr] [get_bd_pins ADCControl_0/spi_addr]
-  connect_bd_net -net ADCControl_0_spi_cs [get_bd_ports spi_cs] [get_bd_pins ADCControl_0/spi_cs]
-  connect_bd_net -net ADCControl_0_spi_dout [get_bd_ports spi_dout] [get_bd_pins ADCControl_0/spi_dout]
-  connect_bd_net -net ADCControl_0_spi_rw [get_bd_ports spi_rw] [get_bd_pins ADCControl_0/spi_rw]
-  connect_bd_net -net UnD_slice_Dout [get_bd_ports gpio_UnD] [get_bd_pins UnD_slice/Dout] [get_bd_pins gain_controller_0/adc_UnD]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins ADCControl_0/clk] [get_bd_pins gain_controller_0/clk]
-  connect_bd_net -net curr_gain_1 [get_bd_pins ADCControl_0/curr_gain] [get_bd_pins gain_concat/dout]
-  connect_bd_net -net gain_controller_0_adc_UnD_ref [get_bd_pins UnD_concat/In0] [get_bd_pins gain_controller_0/adc_UnD_ref]
-  connect_bd_net -net gain_controller_0_adc_nCS_ref [get_bd_pins gain_controller_0/adc_nCS_ref] [get_bd_pins nCS_concat/In0]
-  connect_bd_net -net gain_controller_0_gain [get_bd_ports gain] [get_bd_pins gain_concat/In0] [get_bd_pins gain_controller_0/gain]
-  connect_bd_net -net gain_ref_0_1 [get_bd_ports gain_ref] [get_bd_pins gain_controller_0/gain_ref]
-  connect_bd_net -net gpio_UnD_ref_1 [get_bd_pins ADCControl_0/gpio_UnD_ref] [get_bd_pins UnD_concat/dout]
-  connect_bd_net -net gpio_nCS_ref_1 [get_bd_pins ADCControl_0/gpio_nCS_ref] [get_bd_pins nCS_concat/dout]
-  connect_bd_net -net nCS_slice_Dout [get_bd_ports gpio_nCS] [get_bd_pins gain_controller_0/adc_nCS] [get_bd_pins nCS_slice/Dout]
-  connect_bd_net -net rst_n_0_1 [get_bd_ports rst_n] [get_bd_pins ADCControl_0/rst_n] [get_bd_pins gain_controller_0/rst_n]
-  connect_bd_net -net spi_din_1 [get_bd_ports spi_din] [get_bd_pins ADCControl_0/spi_din]
-  connect_bd_net -net spi_irq_1 [get_bd_ports spi_irq] [get_bd_pins ADCControl_0/spi_irq]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins UnD_concat/In1] [get_bd_pins nCS_concat/In1] [get_bd_pins xlconstant_0/dout]
-  connect_bd_net -net xlconstant_1_dout [get_bd_pins gain_concat/In1] [get_bd_pins xlconstant_1/dout]
+  connect_bd_net -net ADC_controller_0_ch_out [get_bd_ports ch_out] [get_bd_pins ADC_controller/ch_out]
+  connect_bd_net -net ADC_controller_0_gpio_UnD [get_bd_ports gpio_UnD] [get_bd_pins ADC_controller/gpio_UnD] [get_bd_pins UnD_slice/Din]
+  connect_bd_net -net ADC_controller_0_gpio_nCS [get_bd_ports gpio_nCS] [get_bd_pins ADC_controller/gpio_nCS] [get_bd_pins nCS_slice/Din]
+  connect_bd_net -net ADC_controller_0_irq_out [get_bd_ports irq_out] [get_bd_pins ADC_controller/irq_out]
+  connect_bd_net -net ADC_controller_0_spi_addr [get_bd_ports spi_addr] [get_bd_pins ADC_controller/spi_addr] [get_bd_pins ADC_simulator/spi_addr]
+  connect_bd_net -net ADC_controller_0_spi_cs [get_bd_ports spi_cs] [get_bd_pins ADC_controller/spi_cs] [get_bd_pins ADC_simulator/spi_cs]
+  connect_bd_net -net ADC_controller_0_spi_dout [get_bd_ports spi_mosi] [get_bd_pins ADC_controller/spi_dout] [get_bd_pins ADC_simulator/spi_din]
+  connect_bd_net -net ADC_controller_0_spi_rw [get_bd_pins ADC_controller/spi_rw] [get_bd_pins ADC_simulator/spi_rw]
+  connect_bd_net -net ADC_controller_t_sample_en [get_bd_ports t_sample_en] [get_bd_pins ADC_controller/t_sample_en] [get_bd_pins sample_time_counter/en]
+  connect_bd_net -net ADC_controller_t_sample_rest [get_bd_pins ADC_controller/t_sample_rest] [get_bd_pins sample_time_counter/restart]
+  connect_bd_net -net ADC_simulator_0_spi_dout1 [get_bd_ports spi_miso] [get_bd_pins ADC_controller/spi_din] [get_bd_pins ADC_simulator/spi_dout]
+  connect_bd_net -net ADC_simulator_0_spi_irq1 [get_bd_ports spi_irq] [get_bd_pins ADC_controller/spi_irq] [get_bd_pins ADC_simulator/spi_irq]
+  connect_bd_net -net SampleTimeLUT_douta [get_bd_ports sample_time] [get_bd_pins SampleTimeLUT/douta] [get_bd_pins sample_time_counter/target]
+  connect_bd_net -net UnD_slice_Dout [get_bd_pins UnD_slice/Dout] [get_bd_pins gain_controller/adc_UnD]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins ADC_controller/clk] [get_bd_pins ADC_simulator/clk] [get_bd_pins SampleTimeLUT/clka] [get_bd_pins gain_controller/clk] [get_bd_pins sample_time_counter/clk]
+  connect_bd_net -net curr_gain_1 [get_bd_pins gain_concat/dout] [get_bd_pins max_gain/gains]
+  connect_bd_net -net gain_controller_0_adc_UnD_ref [get_bd_pins UnD_concat/In0] [get_bd_pins gain_controller/adc_UnD_ref]
+  connect_bd_net -net gain_controller_0_adc_nCS_ref [get_bd_pins gain_controller/adc_nCS_ref] [get_bd_pins nCS_concat/In0]
+  connect_bd_net -net gain_controller_0_gain [get_bd_ports gain] [get_bd_pins gain_concat/In0] [get_bd_pins gain_controller/gain]
+  connect_bd_net -net gain_ref_0_1 [get_bd_ports gain_ref] [get_bd_pins gain_controller/gain_ref]
+  connect_bd_net -net gpio_UnD_ref_1 [get_bd_ports gpio_UnD_ref] [get_bd_pins ADC_controller/gpio_UnD_ref] [get_bd_pins UnD_concat/dout]
+  connect_bd_net -net gpio_nCS_ref_1 [get_bd_ports gpio_nCS_ref] [get_bd_pins ADC_controller/gpio_nCS_ref] [get_bd_pins nCS_concat/dout]
+  connect_bd_net -net max_gain_0_max_gain_out [get_bd_pins SampleTimeLUT/addra] [get_bd_pins max_gain/max_gain_out]
+  connect_bd_net -net nCS_slice_Dout [get_bd_pins gain_controller/adc_nCS] [get_bd_pins nCS_slice/Dout]
+  connect_bd_net -net rst_n_0_1 [get_bd_ports rst_n] [get_bd_pins ADC_controller/rst_n] [get_bd_pins ADC_simulator/rst_n] [get_bd_pins gain_controller/rst_n] [get_bd_pins sample_time_counter/rst_n]
+  connect_bd_net -net sample_time_counter_cnt [get_bd_pins ADC_controller/t_sample_cnt] [get_bd_pins sample_time_counter/cnt]
+  connect_bd_net -net sample_time_counter_irq [get_bd_ports t_sample_irq] [get_bd_pins ADC_controller/t_sample_irq] [get_bd_pins sample_time_counter/irq]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins UnD_concat/In1] [get_bd_pins gpio_const/dout] [get_bd_pins nCS_concat/In1]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins gain_concat/In1] [get_bd_pins gain_const/dout]
 
   # Create address segments
 

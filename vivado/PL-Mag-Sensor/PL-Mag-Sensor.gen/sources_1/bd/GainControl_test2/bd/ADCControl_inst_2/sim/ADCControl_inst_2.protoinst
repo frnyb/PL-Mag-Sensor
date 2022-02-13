@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"ADCControl_inst_2": {
-			"proto_instances": {
-			}
-		}
-	}
-}

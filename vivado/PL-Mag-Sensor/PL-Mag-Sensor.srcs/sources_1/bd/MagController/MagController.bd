@@ -79,6 +79,27 @@
           "ref_name": "spi_master",
           "boundary_crc": "0x0"
         },
+        "interface_ports": {
+          "user_MAG_BF_CNT_INTERFACE": {
+            "mode": "Slave",
+            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+            "port_maps": {
+              "irq": {
+                "physical_name": "irq",
+                "direction": "O"
+              }
+            }
+          },
+          "IRQ": {
+            "mode": "Slave",
+            "parameters": {
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        },
         "ports": {
           "clk": {
             "type": "clk",
@@ -120,20 +141,6 @@
             "direction": "O",
             "left": "7",
             "right": "0"
-          },
-          "irq": {
-            "type": "intr",
-            "direction": "O",
-            "parameters": {
-              "SENSITIVITY": {
-                "value": "LEVEL_HIGH",
-                "value_src": "constant"
-              },
-              "PortWidth": {
-                "value": "1",
-                "value_src": "default_prop"
-              }
-            }
           },
           "spi_miso": {
             "direction": "I"
@@ -1136,66 +1143,6 @@
                 "value": "MagPingPongBuffers.bd"
               }
             },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I"
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I"
-              },
-              "rd_addr": {
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "wr_addr": {
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "wr_din": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "wr": {
-                "direction": "I",
-                "left": "11",
-                "right": "0"
-              },
-              "hold": {
-                "direction": "I",
-                "left": "11",
-                "right": "0"
-              },
-              "shift": {
-                "direction": "I",
-                "left": "11",
-                "right": "0"
-              },
-              "rd_ch": {
-                "direction": "I",
-                "left": "3",
-                "right": "0"
-              },
-              "busy": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "irq": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "rd_out": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              }
-            },
             "post_compiled_compname": "MagPingPongBuffers_inst_0",
             "architecture": "zynquplus",
             "variant_info": {
@@ -1595,7 +1542,6 @@
           "clk_1": {
             "ports": [
               "clk",
-              "MagPingPongBuffers/clk",
               "gain_LUT/clk",
               "buffer_controller/clk",
               "sample_interval_timer/clk",
@@ -1605,7 +1551,6 @@
           "rst_n_1": {
             "ports": [
               "rst_n",
-              "MagPingPongBuffers/rst_n",
               "buffer_controller/rst_n",
               "sample_interval_timer/rst_n",
               "signal_period_timer/rst_n"
@@ -1635,44 +1580,29 @@
               "sample_interval_timer/restart"
             ]
           },
-          "MagPingPongBuffers_busy": {
-            "ports": [
-              "MagPingPongBuffers/busy"
-            ]
-          },
           "MagPingPongBuffers_irq": {
             "ports": [
-              "MagPingPongBuffers/irq",
               "buffer_controller/bf_irq"
             ]
           },
           "buffer_controller_bf_wr_addr": {
             "ports": [
-              "buffer_controller/bf_wr_addr",
-              "MagPingPongBuffers/wr_addr"
+              "buffer_controller/bf_wr_addr"
             ]
           },
           "wr_din_1": {
             "ports": [
-              "buffer_controller/bf_wr_data",
-              "MagPingPongBuffers/wr_din"
+              "buffer_controller/bf_wr_data"
             ]
           },
           "buffer_controller_bf_wr": {
             "ports": [
-              "buffer_controller/bf_wr",
-              "MagPingPongBuffers/wr"
+              "buffer_controller/bf_wr"
             ]
           },
           "buffer_controller_bf_shift": {
             "ports": [
-              "buffer_controller/bf_shift",
-              "MagPingPongBuffers/shift"
-            ]
-          },
-          "buffer_controller_ch_out": {
-            "ports": [
-              "MagPingPongBuffers/rd_ch"
+              "buffer_controller/bf_shift"
             ]
           },
           "adc_irq_1": {
@@ -1868,7 +1798,7 @@
         "variant_info": {
           "ADCControl.bd": {
             "scoped_diagram": "ADCControl_inst_0.bd",
-            "design_checksum": "0xE99A11E",
+            "design_checksum": "0xA5BE414F",
             "ref_name": "ADCControl",
             "ref_subinst_path": "MagController_ADCControl_0",
             "ref_type": "Block Design",

@@ -12,9 +12,9 @@
     },
     "design_tree": {
       "SampleTimeLUT": "",
-      "ADC_controller": "",
+      "sample_time_counter": "",
       "max_gain_0": "",
-      "sample_time_counter": ""
+      "ADC_controller": ""
     },
     "ports": {
       "ch_out": {
@@ -162,6 +162,98 @@
           }
         }
       },
+      "sample_time_counter": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "ADCControl_counter_0_0",
+        "xci_path": "ip/ADCControl_counter_0_0/ADCControl_counter_0_0.xci",
+        "inst_hier_path": "sample_time_counter",
+        "parameters": {
+          "n_bits": {
+            "value": "20"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "user_MAG_BF_CNT_INTERFACE": {
+            "mode": "Slave",
+            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+            "port_maps": {
+              "en": {
+                "physical_name": "en",
+                "direction": "I"
+              },
+              "restart": {
+                "physical_name": "restart",
+                "direction": "I"
+              },
+              "cnt": {
+                "physical_name": "cnt",
+                "direction": "O",
+                "left": "19",
+                "right": "0"
+              },
+              "irq": {
+                "physical_name": "irq",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "ADCControl_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "target": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          }
+        }
+      },
+      "max_gain_0": {
+        "vlnv": "xilinx.com:module_ref:max_gain:1.0",
+        "xci_name": "ADCControl_max_gain_0_1",
+        "xci_path": "ip/ADCControl_max_gain_0_1/ADCControl_max_gain_0_1.xci",
+        "inst_hier_path": "max_gain_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "max_gain",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "gains": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "max_gain_out": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          }
+        }
+      },
       "ADC_controller": {
         "vlnv": "xilinx.com:module_ref:ADC_controller:1.0",
         "xci_name": "ADCControl_ADC_controller_0_0",
@@ -283,98 +375,6 @@
             "direction": "O"
           }
         }
-      },
-      "max_gain_0": {
-        "vlnv": "xilinx.com:module_ref:max_gain:1.0",
-        "xci_name": "ADCControl_max_gain_0_1",
-        "xci_path": "ip/ADCControl_max_gain_0_1/ADCControl_max_gain_0_1.xci",
-        "inst_hier_path": "max_gain_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "max_gain",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "gains": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "max_gain_out": {
-            "direction": "O",
-            "left": "5",
-            "right": "0"
-          }
-        }
-      },
-      "sample_time_counter": {
-        "vlnv": "xilinx.com:module_ref:counter:1.0",
-        "xci_name": "ADCControl_counter_0_0",
-        "xci_path": "ip/ADCControl_counter_0_0/ADCControl_counter_0_0.xci",
-        "inst_hier_path": "sample_time_counter",
-        "parameters": {
-          "n_bits": {
-            "value": "20"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "counter",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "en": {
-                "physical_name": "en",
-                "direction": "I"
-              },
-              "restart": {
-                "physical_name": "restart",
-                "direction": "I"
-              },
-              "cnt": {
-                "physical_name": "cnt",
-                "direction": "O",
-                "left": "19",
-                "right": "0"
-              },
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "ADCControl_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "target": {
-            "direction": "I",
-            "left": "19",
-            "right": "0"
-          }
-        }
       }
     },
     "nets": {
@@ -382,15 +382,15 @@
         "ports": [
           "clk",
           "SampleTimeLUT/clka",
-          "ADC_controller/clk",
-          "sample_time_counter/clk"
+          "sample_time_counter/clk",
+          "ADC_controller/clk"
         ]
       },
       "rst_n_0_1": {
         "ports": [
           "rst_n",
-          "ADC_controller/rst_n",
-          "sample_time_counter/rst_n"
+          "sample_time_counter/rst_n",
+          "ADC_controller/rst_n"
         ]
       },
       "spi_irq_1": {

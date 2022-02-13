@@ -107,10 +107,10 @@ begin
                     cfg_int         <=  spi_din;
                 when others => null;
             end case;
-		elsif(spi_irq_int'EVENT and spi_irq_int = '1') then
-			data_low_int			<=	(others => '0');
-			data_high_int			<=	(others => '0');
-			cmd_int					<=	(others => '0');
+		--elsif(spi_irq_int = '1') then
+		--	data_low_int			<=	(others => '0');
+		--	data_high_int			<=	(others => '0');
+		--	cmd_int					<=	(others => '0');
         end if;
 	end process;
 

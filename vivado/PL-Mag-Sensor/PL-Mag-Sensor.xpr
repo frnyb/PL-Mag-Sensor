@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.xpr">
+<Project Version="7" Minor="54" Path="/vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="d6bbfb6d794548b584bf857392b0f490"/>
@@ -47,20 +47,20 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="176"/>
+    <Option Name="WTXSimLaunchSim" Val="267"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="24"/>
-    <Option Name="WTModelSimExportSim" Val="23"/>
-    <Option Name="WTQuestaExportSim" Val="23"/>
-    <Option Name="WTIesExportSim" Val="23"/>
-    <Option Name="WTVcsExportSim" Val="23"/>
-    <Option Name="WTRivieraExportSim" Val="23"/>
-    <Option Name="WTActivehdlExportSim" Val="23"/>
+    <Option Name="WTXSimExportSim" Val="51"/>
+    <Option Name="WTModelSimExportSim" Val="50"/>
+    <Option Name="WTQuestaExportSim" Val="50"/>
+    <Option Name="WTIesExportSim" Val="50"/>
+    <Option Name="WTVcsExportSim" Val="50"/>
+    <Option Name="WTRivieraExportSim" Val="50"/>
+    <Option Name="WTActivehdlExportSim" Val="50"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -76,7 +76,31 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/../../src/ADC_simulator.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../src/gain_controller.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../src/max_gain.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../src/counter.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../src/ADC_controller.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -88,8 +112,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="GainControl_test2.bd" FileRelPathName="ip/GainControl_test2_gain_controller_0_0/GainControl_test2_gain_controller_0_0.xci">
-          <Proxy FileSetName="GainControl_test2_gain_controller_0_0"/>
+        <CompFileExtendedInfo CompFileName="GainControl_test2.bd" FileRelPathName="ip/GainControl_test2_ADC_simulator_0/GainControl_test2_ADC_simulator_0.xci">
+          <Proxy FileSetName="GainControl_test2_ADC_simulator_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="GainControl_test2.bd" FileRelPathName="ip/GainControl_test2_gain_controller_0/GainControl_test2_gain_controller_0.xci">
+          <Proxy FileSetName="GainControl_test2_gain_controller_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="GainControl_test2.bd" FileRelPathName="ip/GainControl_test2_max_gain_0/GainControl_test2_max_gain_0.xci">
+          <Proxy FileSetName="GainControl_test2_max_gain_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="GainControl_test2.bd" FileRelPathName="ip/GainControl_test2_sample_time_counter_0/GainControl_test2_sample_time_counter_0.xci">
+          <Proxy FileSetName="GainControl_test2_sample_time_counter_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="GainControl_test2.bd" FileRelPathName="ip/GainControl_test2_ADC_controller_0/GainControl_test2_ADC_controller_0.xci">
+          <Proxy FileSetName="GainControl_test2_ADC_controller_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/GainControl_test2/hdl/GainControl_test2_wrapper.vhd">
@@ -98,48 +134,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../src/ADC_controller.vhd">
+      <File Path="$PPRDIR/../../src/slice_1x12.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../src/max_gain.vhd">
+      <File Path="$PPRDIR/../../src/pingpong_buffer.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../src/counter.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/ADCControl/ADCControl.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="ADCControl.bd" FileRelPathName="ip/ADCControl_SampleTimeLUT_0/ADCControl_SampleTimeLUT_0.xci">
-          <Proxy FileSetName="ADCControl_SampleTimeLUT_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ADCControl.bd" FileRelPathName="ip/ADCControl_ADC_controller_0_0/ADCControl_ADC_controller_0_0.xci">
-          <Proxy FileSetName="ADCControl_ADC_controller_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ADCControl.bd" FileRelPathName="ip/ADCControl_max_gain_0_1/ADCControl_max_gain_0_1.xci">
-          <Proxy FileSetName="ADCControl_max_gain_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ADCControl.bd" FileRelPathName="ip/ADCControl_counter_0_0/ADCControl_counter_0_0.xci">
-          <Proxy FileSetName="ADCControl_counter_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PGENDIR/sources_1/bd/ADCControl/hdl/ADCControl_wrapper.vhd">
+      <File Path="$PPRDIR/../../src/multiplexer_4x16.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -174,6 +183,22 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/SineReconstructor/SineReconstructor.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/MagPingPongBuffers/MagPingPongBuffers.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/MagController/MagController.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -191,56 +216,6 @@
           <Proxy FileSetName="MagController_gain_lut_0_0"/>
         </CompFileExtendedInfo>
       </File>
-      <File Path="$PGENDIR/sources_1/bd/MagController/hdl/MagController_wrapper.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../src/slice_1x12.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../src/pingpong_buffer.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../src/multiplexer_4x16.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/SineReconstructor/SineReconstructor.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/MagPingPongBuffers/MagPingPongBuffers.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../src/sample_time_lut_data.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/bd/ADC_controller_testbench/ADC_controller_testbench.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -249,9 +224,62 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../src/ADC_simulator.vhd">
+      <File Path="$PSRCDIR/sources_1/bd/ADCSimulator_test1/ADCSimulator_test1.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/ADCControl/ADCControl.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="ADCControl.bd" FileRelPathName="ip/ADCControl_SampleTimeLUT_0/ADCControl_SampleTimeLUT_0.xci">
+          <Proxy FileSetName="ADCControl_SampleTimeLUT_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ADCControl.bd" FileRelPathName="ip/ADCControl_counter_0_0/ADCControl_counter_0_0.xci">
+          <Proxy FileSetName="ADCControl_counter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ADCControl.bd" FileRelPathName="ip/ADCControl_max_gain_0_1/ADCControl_max_gain_0_1.xci">
+          <Proxy FileSetName="ADCControl_max_gain_0_1"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/ADCControl_sim/ADCControl_sim.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/ADCControl/hdl/ADCControl_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/ADCSimulator_test1/hdl/ADCSimulator_test1_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/ADC_controller_testbench/hdl/ADC_controller_testbench_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../src/sample_time_lut_data.coe">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -269,6 +297,14 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/bd/ADCControl_test3/ADCControl_test3.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/bd/ADCControl_test10/ADCControl_test10.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -284,14 +320,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/bd/ADCControl_test3/ADCControl_test3.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PGENDIR/sim_1/bd/ADCControl_test3/hdl/ADCControl_test3_wrapper.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -301,11 +329,11 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="ADC_simulator"/>
-        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopModule" Val="GainControl_test2_wrapper"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="PamDesignTestbench" Val=""/>
         <Option Name="PamDutBypassFile" Val="xil_dut_bypass"/>
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
@@ -313,6 +341,9 @@
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/../../testing/sim_config/ADCControl_test3.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/../../testing/ADCControl/config/ADCControl_test10.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../testing/ADCSimulator/config/ADCSimulator_test1.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../testing/GainControl/config/GainControl_test2.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../testing/GainControl/config/GainControl_test2.wcfg"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
@@ -368,34 +399,8 @@
       </Config>
     </FileSet>
     <FileSet Name="ADCControl_inst_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_inst_1" RelGenDir="$PGENDIR/ADCControl_inst_1">
-      <File Path="$PGENDIR/sources_1/bd/GainControl_test2/bd/ADCControl_inst_1/ADCControl_inst_1.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="ADCControl_inst_1.bd" FileRelPathName="ip/ADCControl_inst_1_SampleTimeLUT_0/ADCControl_inst_1_SampleTimeLUT_0.xci">
-          <Proxy FileSetName="ADCControl_inst_1_SampleTimeLUT_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ADCControl_inst_1.bd" FileRelPathName="ip/ADCControl_inst_1_ADC_controller_0/ADCControl_inst_1_ADC_controller_0.xci">
-          <Proxy FileSetName="ADCControl_inst_1_ADC_controller_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ADCControl_inst_1.bd" FileRelPathName="ip/ADCControl_inst_1_max_gain_0_0/ADCControl_inst_1_max_gain_0_0.xci">
-          <Proxy FileSetName="ADCControl_inst_1_max_gain_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ADCControl_inst_1.bd" FileRelPathName="ip/ADCControl_inst_1_sample_time_counter_0/ADCControl_inst_1_sample_time_counter_0.xci">
-          <Proxy FileSetName="ADCControl_inst_1_sample_time_counter_0"/>
-        </CompFileExtendedInfo>
-      </File>
       <Config>
         <Option Name="TopModule" Val="ADCControl_inst_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="GainControl_test2_gain_controller_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/GainControl_test2_gain_controller_0_0" RelGenDir="$PGENDIR/GainControl_test2_gain_controller_0_0">
-      <Config>
-        <Option Name="TopModule" Val="GainControl_test2_gain_controller_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -405,9 +410,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ADCControl_ADC_controller_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_ADC_controller_0_0" RelGenDir="$PGENDIR/ADCControl_ADC_controller_0_0">
+    <FileSet Name="ADCControl_counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_counter_0_0" RelGenDir="$PGENDIR/ADCControl_counter_0_0">
       <Config>
-        <Option Name="TopModule" Val="ADCControl_ADC_controller_0_0"/>
+        <Option Name="TopModule" Val="ADCControl_counter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ADCControl_sim_inst_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_sim_inst_1" RelGenDir="$PGENDIR/ADCControl_sim_inst_1">
+      <Config>
+        <Option Name="TopModule" Val="ADCControl_sim_inst_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -417,46 +428,33 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ADCControl_counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_counter_0_0" RelGenDir="$PGENDIR/ADCControl_counter_0_0">
+    <FileSet Name="GainControl_test2_sample_time_counter_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/GainControl_test2_sample_time_counter_0" RelGenDir="$PGENDIR/GainControl_test2_sample_time_counter_0">
       <Config>
-        <Option Name="TopModule" Val="ADCControl_counter_0_0"/>
+        <Option Name="TopModule" Val="GainControl_test2_sample_time_counter_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ADCControl_inst_1_SampleTimeLUT_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_inst_1_SampleTimeLUT_0" RelGenDir="$PGENDIR/ADCControl_inst_1_SampleTimeLUT_0">
+    <FileSet Name="GainControl_test2_gain_controller_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/GainControl_test2_gain_controller_0" RelGenDir="$PGENDIR/GainControl_test2_gain_controller_0">
       <Config>
-        <Option Name="TopModule" Val="ADCControl_inst_1_SampleTimeLUT_0"/>
+        <Option Name="TopModule" Val="GainControl_test2_gain_controller_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ADCControl_inst_1_sample_time_counter_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_inst_1_sample_time_counter_0" RelGenDir="$PGENDIR/ADCControl_inst_1_sample_time_counter_0">
+    <FileSet Name="GainControl_test2_max_gain_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/GainControl_test2_max_gain_0" RelGenDir="$PGENDIR/GainControl_test2_max_gain_0">
       <Config>
-        <Option Name="TopModule" Val="ADCControl_inst_1_sample_time_counter_0"/>
+        <Option Name="TopModule" Val="GainControl_test2_max_gain_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ADCControl_inst_1_ADC_controller_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_inst_1_ADC_controller_0" RelGenDir="$PGENDIR/ADCControl_inst_1_ADC_controller_0">
+    <FileSet Name="GainControl_test2_ADC_controller_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/GainControl_test2_ADC_controller_0" RelGenDir="$PGENDIR/GainControl_test2_ADC_controller_0">
       <Config>
-        <Option Name="TopModule" Val="ADCControl_inst_1_ADC_controller_0"/>
+        <Option Name="TopModule" Val="GainControl_test2_ADC_controller_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ADCControl_inst_1_max_gain_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_inst_1_max_gain_0_0" RelGenDir="$PGENDIR/ADCControl_inst_1_max_gain_0_0">
+    <FileSet Name="GainControl_test2_ADC_simulator_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/GainControl_test2_ADC_simulator_0" RelGenDir="$PGENDIR/GainControl_test2_ADC_simulator_0">
       <Config>
-        <Option Name="TopModule" Val="ADCControl_inst_1_max_gain_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ADCControl_inst_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ADCControl_inst_2" RelGenDir="$PGENDIR/ADCControl_inst_2">
-      <File Path="$PGENDIR/sources_1/bd/GainControl_test2/bd/ADCControl_inst_2/ADCControl_inst_2.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="ADCControl_inst_2"/>
+        <Option Name="TopModule" Val="GainControl_test2_ADC_simulator_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -486,7 +484,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -496,7 +494,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="MagController_spi_master_0_0_synth_1" Type="Ft3:Synth" SrcSet="MagController_spi_master_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_spi_master_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/MagController_spi_master_0_0_synth_1">
+    <Run Id="MagController_spi_master_0_0_synth_1" Type="Ft3:Synth" SrcSet="MagController_spi_master_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_spi_master_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/MagController_spi_master_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -505,7 +503,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="MagController_gain_lut_0_0_synth_1" Type="Ft3:Synth" SrcSet="MagController_gain_lut_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_gain_lut_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/MagController_gain_lut_0_0_synth_1">
+    <Run Id="MagController_gain_lut_0_0_synth_1" Type="Ft3:Synth" SrcSet="MagController_gain_lut_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_gain_lut_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/MagController_gain_lut_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -514,7 +512,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="MagController_slice_1x4_0_0_synth_1" Type="Ft3:Synth" SrcSet="MagController_slice_1x4_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_slice_1x4_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/MagController_slice_1x4_0_0_synth_1">
+    <Run Id="MagController_slice_1x4_0_0_synth_1" Type="Ft3:Synth" SrcSet="MagController_slice_1x4_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_slice_1x4_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/MagController_slice_1x4_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -523,17 +521,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="GainControl_test2_gain_controller_0_0_synth_1" Type="Ft3:Synth" SrcSet="GainControl_test2_gain_controller_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_gain_controller_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/GainControl_test2_gain_controller_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_gain_controller_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="ADCControl_SampleTimeLUT_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_SampleTimeLUT_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_SampleTimeLUT_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_SampleTimeLUT_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_SampleTimeLUT_0_synth_1">
+    <Run Id="ADCControl_SampleTimeLUT_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_SampleTimeLUT_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_SampleTimeLUT_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_SampleTimeLUT_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/ADCControl_SampleTimeLUT_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -543,7 +531,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_ADC_controller_0_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_ADC_controller_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_ADC_controller_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_ADC_controller_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_ADC_controller_0_0_synth_1">
+    <Run Id="ADCControl_counter_0_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_counter_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_counter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_counter_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/ADCControl_counter_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -563,7 +551,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_counter_0_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_counter_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_counter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_counter_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_counter_0_0_synth_1">
+    <Run Id="GainControl_test2_sample_time_counter_0_synth_1" Type="Ft3:Synth" SrcSet="GainControl_test2_sample_time_counter_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_sample_time_counter_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/GainControl_test2_sample_time_counter_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_sample_time_counter_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -573,7 +561,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_inst_1_SampleTimeLUT_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_inst_1_SampleTimeLUT_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_inst_1_SampleTimeLUT_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_inst_1_SampleTimeLUT_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_inst_1_SampleTimeLUT_0_synth_1">
+    <Run Id="GainControl_test2_gain_controller_0_synth_1" Type="Ft3:Synth" SrcSet="GainControl_test2_gain_controller_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_gain_controller_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/GainControl_test2_gain_controller_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_gain_controller_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -583,7 +571,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_inst_1_sample_time_counter_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_inst_1_sample_time_counter_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_inst_1_sample_time_counter_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_inst_1_sample_time_counter_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_inst_1_sample_time_counter_0_synth_1">
+    <Run Id="GainControl_test2_max_gain_0_synth_1" Type="Ft3:Synth" SrcSet="GainControl_test2_max_gain_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_max_gain_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/GainControl_test2_max_gain_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_max_gain_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -593,9 +581,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_inst_1_ADC_controller_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_inst_1_ADC_controller_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_inst_1_ADC_controller_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_inst_1_ADC_controller_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_inst_1_ADC_controller_0_synth_1">
+    <Run Id="GainControl_test2_ADC_controller_0_synth_1" Type="Ft3:Synth" SrcSet="GainControl_test2_ADC_controller_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_ADC_controller_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/GainControl_test2_ADC_controller_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_ADC_controller_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -603,9 +593,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_inst_1_max_gain_0_0_synth_1" Type="Ft3:Synth" SrcSet="ADCControl_inst_1_max_gain_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_inst_1_max_gain_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ADCControl_inst_1_max_gain_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_inst_1_max_gain_0_0_synth_1">
+    <Run Id="GainControl_test2_ADC_simulator_0_synth_1" Type="Ft3:Synth" SrcSet="GainControl_test2_ADC_simulator_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_ADC_simulator_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/GainControl_test2_ADC_simulator_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_ADC_simulator_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -613,7 +605,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -630,7 +622,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="MagController_spi_master_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_spi_master_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="MagController_spi_master_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/MagController_spi_master_0_0_impl_1">
+    <Run Id="MagController_spi_master_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_spi_master_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="MagController_spi_master_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/MagController_spi_master_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -647,7 +639,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="MagController_gain_lut_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_gain_lut_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="MagController_gain_lut_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/MagController_gain_lut_0_0_impl_1">
+    <Run Id="MagController_gain_lut_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_gain_lut_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="MagController_gain_lut_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/MagController_gain_lut_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -664,7 +656,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="MagController_slice_1x4_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_slice_1x4_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="MagController_slice_1x4_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/MagController_slice_1x4_0_0_impl_1">
+    <Run Id="MagController_slice_1x4_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="MagController_slice_1x4_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="MagController_slice_1x4_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/MagController_slice_1x4_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -681,7 +673,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="GainControl_test2_gain_controller_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_gain_controller_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="GainControl_test2_gain_controller_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_gain_controller_0_0_impl_1">
+    <Run Id="ADCControl_SampleTimeLUT_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_SampleTimeLUT_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_SampleTimeLUT_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/ADCControl_SampleTimeLUT_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -698,24 +690,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_SampleTimeLUT_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_SampleTimeLUT_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_SampleTimeLUT_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_SampleTimeLUT_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="ADCControl_ADC_controller_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_ADC_controller_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_ADC_controller_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_ADC_controller_0_0_impl_1">
+    <Run Id="ADCControl_counter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_counter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_counter_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.srcs/utils_1/imports/ADCControl_counter_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -749,7 +724,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_counter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_counter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_counter_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_counter_0_0_impl_1">
+    <Run Id="GainControl_test2_sample_time_counter_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_sample_time_counter_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="GainControl_test2_sample_time_counter_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_sample_time_counter_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -766,7 +741,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_inst_1_SampleTimeLUT_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_inst_1_SampleTimeLUT_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_inst_1_SampleTimeLUT_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_inst_1_SampleTimeLUT_0_impl_1">
+    <Run Id="GainControl_test2_gain_controller_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_gain_controller_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="GainControl_test2_gain_controller_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_gain_controller_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -783,7 +758,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_inst_1_sample_time_counter_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_inst_1_sample_time_counter_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_inst_1_sample_time_counter_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_inst_1_sample_time_counter_0_impl_1">
+    <Run Id="GainControl_test2_max_gain_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_max_gain_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="GainControl_test2_max_gain_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_max_gain_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -800,9 +775,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_inst_1_ADC_controller_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_inst_1_ADC_controller_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_inst_1_ADC_controller_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_inst_1_ADC_controller_0_impl_1">
+    <Run Id="GainControl_test2_ADC_controller_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_ADC_controller_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="GainControl_test2_ADC_controller_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_ADC_controller_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -817,9 +794,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ADCControl_inst_1_max_gain_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="ADCControl_inst_1_max_gain_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ADCControl_inst_1_max_gain_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ADCControl_inst_1_max_gain_0_0_impl_1">
+    <Run Id="GainControl_test2_ADC_simulator_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="GainControl_test2_ADC_simulator_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="GainControl_test2_ADC_simulator_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/GainControl_test2_ADC_simulator_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

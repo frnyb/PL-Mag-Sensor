@@ -400,3 +400,5 @@ for {set i 0} {$i < $config_phase_n_cycles} {incr i} {
 	run [expr {$clk_ns*4}] ns 								; # Get data low from SPI module
 	add_force {/ADC_controller/spi_din} -radix hex {2C 0ns}	; # SPI data high recv, wrong ch 1 != axis 0
 	run [expr {$clk_ns*4}] ns 								; # Get data from SPI module, generate irq_int
+
+

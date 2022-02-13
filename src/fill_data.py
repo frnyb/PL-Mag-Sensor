@@ -4,7 +4,7 @@ mem_radix = 10
 
 n = 64
 val_n_1 = 30000
-val_0 = 1024
+val_0 = 3000
 
 
 diff = val_n_1 - val_0

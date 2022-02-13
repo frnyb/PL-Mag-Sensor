@@ -130,7 +130,7 @@ architecture Behavioral of ADC_controller is
 	--signal		irq_int_falling_edge_dl_prev:	STD_LOGIC	:=	'0';
 
 	--	Main state machine signals:
-    type        STATE_TYPE      is  (s_rst, s_wr, s_wr_finished, s_sample, s_rd, s_irq);
+    type        STATE_TYPE      is  (s_rst, s_wr, s_wr_finished, s_sample, s_rd, s_irq, s_settle);
     signal      current_state   :   STATE_TYPE                      :=  s_rst;
     signal      next_state      :   STATE_TYPE                      :=  s_wr;
 
@@ -154,7 +154,7 @@ begin
                         (others => '0');
     ch_out          <=  STD_LOGIC_VECTOR(ch_int)    when sampling = '1' and curr_mag = next_mag else
                         (others => '0');
-    irq_out         <=  irq_int                     when sampling = '1' and curr_mag = next_mag else
+    irq_out         <=  irq_int                     when sampling = '1' and curr_mag = next_mag and axis_rd = curr_axis else
                         '0';
 
     ch_int          <=  curr_mag * 3 + curr_axis;
@@ -227,18 +227,6 @@ begin
         end if;
     end process;
 
-    prev_proc:              process(rst_n, clk)
-    begin
-        if (rst_n = '0') then
-            t_sample_irq_prev   <=  '0';
-            irq_int_prev        <=  '0';
-
-        elsif(rising_edge(clk)) then
-            t_sample_irq_prev   <=  t_sample_irq;
-            irq_int_prev        <=  irq_int;
-        end if;
-    end process;
-
     ------------------------------------------------------------------------------
 	-- ADC operation state machine:
     ------------------------------------------------------------------------------
@@ -262,11 +250,11 @@ begin
                             spi_addr_int    <=  SPI_ADDR_CONFIG;
                             data_int        <=  (others => '0');
                             axis_rd         <=  (others => '0');
-                            irq_int         <=  '0';
                             config_ptrs     <=  (others => 0);
                             curr_mag        <=  (others => '0');
                             spi_cs          <=  '0';
                             spi_rw          <=  '1';
+                            irq_int         <=  '0';
                         when others => null;
                     end case;
                 when s_wr =>
@@ -274,6 +262,7 @@ begin
                         when s_wr_finished => 
                             spi_cs          <=  '1';
                             spi_rw          <=  '0';
+                            irq_int         <=  '0';
                         when others => null;
                     end case;
                 when s_wr_finished =>
@@ -282,6 +271,7 @@ begin
                             spi_addr_int    <=  spi_addr_int + 1;
                             spi_cs          <=  '0';
                             spi_rw          <=  '1';
+                            irq_int         <=  '0';
                         when s_sample =>
                             spi_addr_int    <=  SPI_ADDR_DL;
                             spi_cs          <=  '0';
@@ -290,20 +280,20 @@ begin
                                                                 & gpio_UnD_ref(to_integer(curr_mag));
                             gpio_nCS_shift(to_integer(curr_mag))    <=  gpio_nCS_shift(to_integer(curr_mag))(1 downto 0) 
                                                                 & gpio_nCS_ref(to_integer(curr_mag));
+                            irq_int         <=  '0';
                         when others => null;
                     end case;
                 when s_sample =>
                     case next_state is 
                         when s_rd =>
                             rd_cnt          <=  (others => '0');
+                            irq_int         <=  '0';
                         when others => null;
                     end case;
                 when s_rd =>
                     case next_state is
                         when s_irq =>
-                            if (axis_rd = curr_axis) then
-                                irq_int     <=  '1';
-                            end if;
+                            irq_int         <=  '1';
                         when s_rd =>
                             case rd_cnt is
                                 when "0100" =>
@@ -318,21 +308,28 @@ begin
                             end case;
 
                             rd_cnt  	    <=  rd_cnt + 1;
+                            irq_int         <=  '0';
                         when others => null;
                     end case;
                 when s_irq =>
                     case next_state is
-                        when s_wr =>
+                        when s_settle =>
                             if (config_ptrs(to_integer(curr_mag)) < CONFIG_MAX) then
                                 config_ptrs(to_integer(curr_mag))   <=  config_ptrs(to_integer(curr_mag)) + 1;
                             else
                                 config_ptrs(to_integer(curr_mag))   <=  CONFIG_MAX;
                             end if;
 
-							curr_mag        <=	to_unsigned((to_integer(curr_mag) + 1) MOD 4, 2);
                             irq_int         <=  '0';
                         when others => null;
 					end case;
+                when s_settle => 
+                    case next_state is
+                        when s_wr =>
+                            curr_mag        <=	to_unsigned((to_integer(curr_mag) + 1) MOD 4, 2);
+                            irq_int         <=  '0';
+                        when others => null;
+                    end case;
                 when others => null;
             end case;
         end if;
@@ -372,12 +369,41 @@ begin
                     next_state  <=  s_rd;
                 end if;
             when s_irq =>
+                next_state      <=  s_settle;
+            when s_settle =>
                 next_state      <=  s_wr;
             when others => null;
         end case;
     ------------------------------------------------------------------------------
     end process next_state_logic;
     ------------------------------------------------------------------------------
+
+    --------------------------------------------------------------------------------
+    --output_logic        :   process (current_state)
+    --------------------------------------------------------------------------------
+    ---- Output logic process
+    --------------------------------------------------------------------------------
+    --begin
+    --    case current_state is
+    --        when s_rst =>
+    --            irq_int <= '0';
+    --        when s_wr =>
+    --            irq_int <= '0';
+    --        when s_wr_finished =>
+    --            irq_int <= '0';
+    --        when s_sample =>
+    --            irq_int <= '0';
+    --        when s_rd =>
+    --            irq_int <= '0';
+    --        when s_irq =>
+    --            irq_int <= '1';
+    --        when s_settle =>
+    --            irq_int <= '0';
+    --        when others => null;
+    --    end case;
+    --------------------------------------------------------------------------------
+    --end process;
+    --------------------------------------------------------------------------------
 
     ------------------------------------------------------------------------------
 	-- Timer sample control state machine:

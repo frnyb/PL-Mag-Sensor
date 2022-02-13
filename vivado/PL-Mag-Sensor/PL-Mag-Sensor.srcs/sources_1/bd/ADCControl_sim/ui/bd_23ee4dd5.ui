@@ -1,0 +1,59 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.609091",
+   "Default View_TopLeft":"-410,-213",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -90 -y 260 -defaultsOSRD
+preplace port irq_out -pg 1 -lvl 2 -x 940 -y 610 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -90 -y 180 -defaultsOSRD
+preplace port spi_cs -pg 1 -lvl 2 -x 940 -y 430 -defaultsOSRD
+preplace port spi_irq -pg 1 -lvl 0 -x -90 -y 440 -defaultsOSRD
+preplace port spi_rw -pg 1 -lvl 2 -x 940 -y 450 -defaultsOSRD
+preplace port t_sample_en -pg 1 -lvl 2 -x 940 -y 230 -defaultsOSRD
+preplace port t_sample_irq -pg 1 -lvl 2 -x 940 -y 180 -defaultsOSRD
+preplace portBus ch_out -pg 1 -lvl 2 -x 940 -y 590 -defaultsOSRD
+preplace portBus curr_gain -pg 1 -lvl 0 -x -90 -y 320 -defaultsOSRD
+preplace portBus data_out -pg 1 -lvl 2 -x 940 -y 570 -defaultsOSRD
+preplace portBus gpio_UnD -pg 1 -lvl 2 -x 940 -y 510 -defaultsOSRD
+preplace portBus gpio_UnD_ref -pg 1 -lvl 0 -x -90 -y 600 -defaultsOSRD
+preplace portBus gpio_nCS -pg 1 -lvl 2 -x 940 -y 530 -defaultsOSRD
+preplace portBus gpio_nCS_ref -pg 1 -lvl 0 -x -90 -y 620 -defaultsOSRD
+preplace portBus spi_addr -pg 1 -lvl 2 -x 940 -y 470 -defaultsOSRD
+preplace portBus spi_din -pg 1 -lvl 0 -x -90 -y 580 -defaultsOSRD
+preplace portBus spi_dout -pg 1 -lvl 2 -x 940 -y 490 -defaultsOSRD
+preplace portBus sample_time -pg 1 -lvl 2 -x 940 -y 310 -defaultsOSRD
+preplace portBus t_sample_cnt -pg 1 -lvl 2 -x 940 -y 110 -defaultsOSRD
+preplace portBus curr_max_gain -pg 1 -lvl 2 -x 940 -y -200 -defaultsOSRD
+preplace inst SampleTimeLUT -pg 1 -lvl 1 -x 240 -y 170 -defaultsOSRD
+preplace inst sample_time_counter -pg 1 -lvl 1 -x 240 -y 370 -defaultsOSRD
+preplace inst max_gain_0 -pg 1 -lvl 1 -x 240 -y 540 -defaultsOSRD
+preplace inst ADC_controller -pg 1 -lvl 1 -x 240 -y -60 -defaultsOSRD
+preplace netloc ADC_controller_0_ch_out 1 1 1 440J 10n
+preplace netloc ADC_controller_0_data_out 1 1 1 450J -10n
+preplace netloc ADC_controller_0_gpio_UnD 1 1 1 490J -70n
+preplace netloc ADC_controller_0_gpio_nCS 1 1 1 460J -50n
+preplace netloc ADC_controller_0_irq_out 1 1 1 430J 30n
+preplace netloc ADC_controller_0_spi_addr 1 1 1 540J -110n
+preplace netloc ADC_controller_0_spi_cs 1 1 1 560J -150n
+preplace netloc ADC_controller_0_spi_dout 1 1 1 530J -90n
+preplace netloc ADC_controller_0_spi_rw 1 1 1 550J -130n
+preplace netloc ADC_controller_t_sample_en 1 0 2 30 600 480
+preplace netloc ADC_controller_t_sample_rest 1 0 2 50 610 420
+preplace netloc SampleTimeLUT_douta 1 0 2 40 620 520
+preplace netloc clk_0_1 1 0 1 -20 -40n
+preplace netloc curr_gain_1 1 0 1 -60J 320n
+preplace netloc gpio_UnD_ref_1 1 0 1 -40J 20n
+preplace netloc gpio_nCS_ref_1 1 0 1 -10J 40n
+preplace netloc max_gain_0_max_gain_out 1 0 2 20 650 500J
+preplace netloc rst_n_0_1 1 0 1 -30 -20n
+preplace netloc sample_time_counter_cnt 1 0 2 0 630 470
+preplace netloc sample_time_counter_irq 1 0 2 10 640 510
+preplace netloc spi_din_1 1 0 1 -50J 0n
+preplace netloc spi_irq_1 1 0 1 -70J -140n
+levelinfo -pg 1 -90 240 940
+pagesize -pg 1 -db -bbox -sgen -270 -220 1130 680
+"
+}
+0
