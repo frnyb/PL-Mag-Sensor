@@ -1,0 +1,43 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.814545",
+   "Default View_TopLeft":"-638,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
+preplace port bfr_wr -pg 1 -lvl 3 -x 890 -y 530 -defaultsOSRD
+preplace port bfr_shift -pg 1 -lvl 3 -x 890 -y 550 -defaultsOSRD
+preplace port bfr_busy -pg 1 -lvl 3 -x 890 -y 350 -defaultsOSRD
+preplace port bfr_hold -pg 1 -lvl 3 -x 890 -y 80 -defaultsOSRD
+preplace port shifted_irq -pg 1 -lvl 3 -x 890 -y 610 -defaultsOSRD
+preplace portBus din_0 -pg 1 -lvl 3 -x 890 -y 750 -defaultsOSRD
+preplace portBus din_1 -pg 1 -lvl 3 -x 890 -y 770 -defaultsOSRD
+preplace portBus bfr_dout_wr -pg 1 -lvl 3 -x 890 -y 570 -defaultsOSRD
+preplace portBus bfr_addr_wr -pg 1 -lvl 3 -x 890 -y 590 -defaultsOSRD
+preplace portBus bfr_addr_rd -pg 1 -lvl 3 -x 890 -y 100 -defaultsOSRD
+preplace portBus bfr_dout_rd -pg 1 -lvl 3 -x 890 -y 180 -defaultsOSRD
+preplace inst pingpong_buffer -pg 1 -lvl 1 -x 300 -y 340 -defaultsOSRD
+preplace inst sine_generator -pg 1 -lvl 1 -x 300 -y 930 -defaultsOSRD
+preplace inst pingpong_sim_writer -pg 1 -lvl 1 -x 300 -y 640 -defaultsOSRD
+preplace inst pingpong_sim_reader_0 -pg 1 -lvl 2 -x 700 -y 90 -defaultsOSRD
+preplace netloc clk_0_1 1 0 2 20 60 NJ
+preplace netloc rst_n_0_1 1 0 2 10 80 NJ
+preplace netloc pingpong_buffer_irq 1 0 1 30 270n
+preplace netloc sine_generator_sine_100_pi_3 1 0 3 80 750 540 750 NJ
+preplace netloc sine_generator_sine_400_0 1 0 3 90 760 520 770 NJ
+preplace netloc pingpong_sim_writer_bfr_wr 1 0 3 60 520 510 530 NJ
+preplace netloc pingpong_sim_writer_bfr_shift 1 0 3 90 510 520 550 NJ
+preplace netloc pingpong_sim_writer_bfr_dout 1 0 3 80 500 530 570 NJ
+preplace netloc pingpong_sim_writer_bfr_addr 1 0 3 70 490 540 590 NJ
+preplace netloc pingpong_buffer_rd_dout 1 1 2 510 200 870J
+preplace netloc pingpong_sim_writer_irq_out 1 1 2 550 610 NJ
+preplace netloc pingpong_sim_reader_0_bfr_hold 1 0 3 50 190 NJ 190 860
+preplace netloc pingpong_sim_reader_0_bfr_addr 1 0 3 40 180 NJ 180 850
+preplace netloc pingpong_buffer_busy 1 1 2 NJ 350 NJ
+levelinfo -pg 1 -10 300 700 890
+pagesize -pg 1 -db -bbox -sgen -100 0 1070 1100
+"
+}
+0

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="BufferFlowControl_test1_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="BufferFlowControl_test1_wrapper" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="104550001fs"></ZoomEndTime>
+      <Cursor1Time time="10010000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="313"></NameColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject type="logic" fp_name="/BufferFlowControl_test1_wrapper/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BufferFlowControl_test1_wrapper/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group41">
+      <obj_property name="label">bfr</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/bfr_addr_rd">
+         <obj_property name="ElementShortName">bfr_addr_rd[9:0]</obj_property>
+         <obj_property name="ObjectShortName">bfr_addr_rd[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/bfr_addr_wr">
+         <obj_property name="ElementShortName">bfr_addr_wr[9:0]</obj_property>
+         <obj_property name="ObjectShortName">bfr_addr_wr[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/BufferFlowControl_test1_wrapper/bfr_busy">
+         <obj_property name="ElementShortName">bfr_busy</obj_property>
+         <obj_property name="ObjectShortName">bfr_busy</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/bfr_dout_rd">
+         <obj_property name="ElementShortName">bfr_dout_rd[11:0]</obj_property>
+         <obj_property name="ObjectShortName">bfr_dout_rd[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/bfr_dout_wr">
+         <obj_property name="ElementShortName">bfr_dout_wr[11:0]</obj_property>
+         <obj_property name="ObjectShortName">bfr_dout_wr[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/BufferFlowControl_test1_wrapper/bfr_hold">
+         <obj_property name="ElementShortName">bfr_hold</obj_property>
+         <obj_property name="ObjectShortName">bfr_hold</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/BufferFlowControl_test1_wrapper/bfr_shift">
+         <obj_property name="ElementShortName">bfr_shift</obj_property>
+         <obj_property name="ObjectShortName">bfr_shift</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/BufferFlowControl_test1_wrapper/bfr_wr">
+         <obj_property name="ElementShortName">bfr_wr</obj_property>
+         <obj_property name="ObjectShortName">bfr_wr</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group42">
+      <obj_property name="label">data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/din_0">
+         <obj_property name="ElementShortName">din_0[11:0]</obj_property>
+         <obj_property name="ObjectShortName">din_0[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/din_1">
+         <obj_property name="ElementShortName">din_1[11:0]</obj_property>
+         <obj_property name="ObjectShortName">din_1[11:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BufferFlowControl_test1_wrapper/shifted_irq">
+      <obj_property name="ElementShortName">shifted_irq</obj_property>
+      <obj_property name="ObjectShortName">shifted_irq</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group46">
+      <obj_property name="label">pingpong_reader</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/BufferFlowControl_test1_i/pingpong_sim_reader_0/U0/cnt">
+         <obj_property name="ElementShortName">cnt[10:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt[10:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/BufferFlowControl_test1_i/pingpong_sim_reader_0/U0/wait_cnt">
+         <obj_property name="ElementShortName">wait_cnt[16:0]</obj_property>
+         <obj_property name="ObjectShortName">wait_cnt[16:0]</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/BufferFlowControl_test1_wrapper/BufferFlowControl_test1_i/pingpong_sim_reader_0/U0/current_state">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group51">
+      <obj_property name="label">pingpong_writer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/BufferFlowControl_test1_i/pingpong_sim_writer/U0/cnt">
+         <obj_property name="ElementShortName">cnt[10:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt[10:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/BufferFlowControl_test1_wrapper/BufferFlowControl_test1_i/pingpong_sim_writer/U0/wait_cnt">
+         <obj_property name="ElementShortName">wait_cnt[16:0]</obj_property>
+         <obj_property name="ObjectShortName">wait_cnt[16:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/BufferFlowControl_test1_wrapper/BufferFlowControl_test1_i/pingpong_sim_writer/U0/selector">
+         <obj_property name="ElementShortName">selector</obj_property>
+         <obj_property name="ObjectShortName">selector</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/BufferFlowControl_test1_wrapper/BufferFlowControl_test1_i/pingpong_sim_writer/U0/current_state">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Feb 13 13:44:44 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb 14 08:39:20 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="GainControl_test3" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -11,19 +11,21 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="gain_controller" PORT="clk"/>
         <CONNECTION INSTANCE="ADCControl_sample_time_counter" PORT="clk"/>
         <CONNECTION INSTANCE="ADCControl_SampleTimeLUT" PORT="clka"/>
         <CONNECTION INSTANCE="ADCControl_ADC_simulator" PORT="clk"/>
         <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="clk"/>
-        <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="clk"/>
-        <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="clk"/>
-        <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="clk"/>
-        <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="5" NAME="gain_ref_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref_0">
+    <PORT DIR="O" LEFT="5" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="gain_controller_gain">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="gain_ref"/>
+        <CONNECTION INSTANCE="gain_controller" PORT="gain"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="5" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="gain_controller" PORT="gain_ref"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="3" NAME="gpio_UnD" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_UnD">
@@ -31,9 +33,9 @@
         <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_UnD"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="gpio_UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_UnD_ref_concat_dout">
+    <PORT DIR="O" LEFT="3" NAME="gpio_UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="UnD_ref_concat_dout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_UnD_ref_concat" PORT="dout"/>
+        <CONNECTION INSTANCE="UnD_ref_concat" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="3" NAME="gpio_nCS" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_nCS">
@@ -41,9 +43,9 @@
         <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_nCS"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="gpio_nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_nCS_ref_concat_dout">
+    <PORT DIR="O" LEFT="3" NAME="gpio_nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="nCS_ref_concat_dout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_nCS_ref_concat" PORT="dout"/>
+        <CONNECTION INSTANCE="nCS_ref_concat" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_irq_out">
@@ -53,13 +55,10 @@
     </PORT>
     <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="gain_controller" PORT="rst_n"/>
         <CONNECTION INSTANCE="ADCControl_sample_time_counter" PORT="rst_n"/>
         <CONNECTION INSTANCE="ADCControl_ADC_simulator" PORT="rst_n"/>
         <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="rst_n"/>
-        <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="rst_n"/>
-        <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="rst_n"/>
-        <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="rst_n"/>
-        <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="rst_n"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="19" NAME="sample_time" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_SampleTimeLUT_douta">
@@ -102,41 +101,6 @@
         <CONNECTION INSTANCE="ADCControl_sample_time_counter" PORT="irq"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="5" NAME="gain_0" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_0_gain_controller_0_gain">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="gain"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="5" NAME="gain_1" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_1_gain_controller_0_gain">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="gain"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="5" NAME="gain_2" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_2_gain_controller_0_gain">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="gain"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="5" NAME="gain_3" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_3_gain_controller_0_gain">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="gain"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="5" NAME="gain_ref_1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref_1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="gain_ref"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="5" NAME="gain_ref_2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref_2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="gain_ref"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="5" NAME="gain_ref_3" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref_3">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="gain_ref"/>
-      </CONNECTIONS>
-    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
@@ -146,7 +110,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="t_sample_n_bits" VALUE="20"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_ADC_controller_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_ADC_controller_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -195,30 +159,24 @@
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="gpio_UnD" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_UnD">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="UnD_slice" PORT="Din"/>
             <CONNECTION INSTANCE="External_Ports" PORT="gpio_UnD"/>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_UnD_slice_0" PORT="Din"/>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_UnD_slice_0" PORT="Din"/>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_UnD_slice_0" PORT="Din"/>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_UnD_slice_0" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="gpio_UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_UnD_ref_concat_dout">
+        <PORT DIR="I" LEFT="3" NAME="gpio_UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="UnD_ref_concat_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_UnD_ref_concat" PORT="dout"/>
+            <CONNECTION INSTANCE="UnD_ref_concat" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="gpio_nCS" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_nCS">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="nCS_slice" PORT="Din"/>
             <CONNECTION INSTANCE="External_Ports" PORT="gpio_nCS"/>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_nCS_slice_0" PORT="Din"/>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_nCS_slice_0" PORT="Din"/>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_nCS_slice_0" PORT="Din"/>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_nCS_slice_0" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="gpio_nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_nCS_ref_concat_dout">
+        <PORT DIR="I" LEFT="3" NAME="gpio_nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="nCS_ref_concat_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_nCS_ref_concat" PORT="dout"/>
+            <CONNECTION INSTANCE="nCS_ref_concat" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="t_sample_en" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_t_sample_en">
@@ -272,7 +230,7 @@
     <MODULE COREREVISION="1" FULLNAME="/ADCControl/ADC_simulator" HWVERSION="1.0" INSTANCE="ADCControl_ADC_simulator" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_simulator" VLNV="xilinx.com:module_ref:ADC_simulator:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_ADC_simulator_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_ADC_simulator_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -348,7 +306,7 @@
         <PARAMETER NAME="C_ALGORITHM" VALUE="1"/>
         <PARAMETER NAME="C_PRIM_TYPE" VALUE="1"/>
         <PARAMETER NAME="C_LOAD_INIT_FILE" VALUE="1"/>
-        <PARAMETER NAME="C_INIT_FILE_NAME" VALUE="GainControl_test3_SampleTimeLUT_0.mif"/>
+        <PARAMETER NAME="C_INIT_FILE_NAME" VALUE="GainControl_test3_SampleTimeLUT_1.mif"/>
         <PARAMETER NAME="C_INIT_FILE" VALUE="NONE"/>
         <PARAMETER NAME="C_USE_DEFAULT_DATA" VALUE="1"/>
         <PARAMETER NAME="C_DEFAULT_DATA" VALUE="F"/>
@@ -407,7 +365,7 @@
         <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="0"/>
         <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="1"/>
         <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     2.356523 mW"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_SampleTimeLUT_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_SampleTimeLUT_1"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
         <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
         <PARAMETER NAME="AXI_Slave_Type" VALUE="Memory_Slave"/>
@@ -518,13 +476,13 @@
     <MODULE COREREVISION="1" FULLNAME="/ADCControl/max_gain" HWVERSION="1.0" INSTANCE="ADCControl_max_gain" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="max_gain" VLNV="xilinx.com:module_ref:max_gain:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_max_gain_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_max_gain_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="23" NAME="gains" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_gain_concat_dout">
+        <PORT DIR="I" LEFT="23" NAME="gains" RIGHT="0" SIGIS="undef" SIGNAME="gain_concat_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_gain_concat" PORT="dout"/>
+            <CONNECTION INSTANCE="gain_concat" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="5" NAME="max_gain_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_max_gain_max_gain_out">
@@ -540,7 +498,7 @@
       <PARAMETERS>
         <PARAMETER NAME="n_bits" VALUE="20"/>
         <PARAMETER NAME="auto_rst" VALUE="&quot;1&quot;"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_sample_time_counter_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_sample_time_counter_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -592,403 +550,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/GainControl/GainControl_0/UnD_slice_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_0_UnD_slice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_UnD_slice_0"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_UnD">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_UnD"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_0_UnD_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="adc_UnD"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/GainControl/GainControl_0/gain_controller_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_0_gain_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gain_controller" VLNV="xilinx.com:module_ref:gain_controller:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_controller_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="adc_UnD" SIGIS="undef" SIGNAME="GainControl_GainControl_0_UnD_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_UnD_slice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="adc_UnD_ref" SIGIS="undef" SIGNAME="GainControl_GainControl_0_gain_controller_0_adc_UnD_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_UnD_ref_concat" PORT="In0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="adc_nCS" SIGIS="undef" SIGNAME="GainControl_GainControl_0_nCS_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_nCS_slice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="adc_nCS_ref" SIGIS="undef" SIGNAME="GainControl_GainControl_0_gain_controller_0_adc_nCS_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_nCS_ref_concat" PORT="In0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_0_gain_controller_0_gain">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_0"/>
-            <CONNECTION INSTANCE="GainControl_gain_concat" PORT="In0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref_0"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/GainControl/GainControl_0/nCS_slice_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_0_nCS_slice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_nCS_slice_0"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_nCS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_nCS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_0_nCS_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="adc_nCS"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/GainControl/GainControl_1/UnD_slice_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_1_UnD_slice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_UnD_slice_0_0"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_UnD">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_UnD"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_1_UnD_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="adc_UnD"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/GainControl/GainControl_1/gain_controller_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_1_gain_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gain_controller" VLNV="xilinx.com:module_ref:gain_controller:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_controller_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="adc_UnD" SIGIS="undef" SIGNAME="GainControl_GainControl_1_UnD_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_UnD_slice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="adc_UnD_ref" SIGIS="undef" SIGNAME="GainControl_GainControl_1_gain_controller_0_adc_UnD_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_UnD_ref_concat" PORT="In1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="adc_nCS" SIGIS="undef" SIGNAME="GainControl_GainControl_1_nCS_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_nCS_slice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="adc_nCS_ref" SIGIS="undef" SIGNAME="GainControl_GainControl_1_gain_controller_0_adc_nCS_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_nCS_ref_concat" PORT="In1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_1_gain_controller_0_gain">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_1"/>
-            <CONNECTION INSTANCE="GainControl_gain_concat" PORT="In1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref_1"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/GainControl/GainControl_1/nCS_slice_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_1_nCS_slice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_nCS_slice_0_0"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_nCS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_nCS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_1_nCS_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="adc_nCS"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/GainControl/GainControl_2/UnD_slice_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_2_UnD_slice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_UnD_slice_0_1"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_UnD">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_UnD"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_2_UnD_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="adc_UnD"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/GainControl/GainControl_2/gain_controller_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_2_gain_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gain_controller" VLNV="xilinx.com:module_ref:gain_controller:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_controller_0_1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="adc_UnD" SIGIS="undef" SIGNAME="GainControl_GainControl_2_UnD_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_UnD_slice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="adc_UnD_ref" SIGIS="undef" SIGNAME="GainControl_GainControl_2_gain_controller_0_adc_UnD_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_UnD_ref_concat" PORT="In2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="adc_nCS" SIGIS="undef" SIGNAME="GainControl_GainControl_2_nCS_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_nCS_slice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="adc_nCS_ref" SIGIS="undef" SIGNAME="GainControl_GainControl_2_gain_controller_0_adc_nCS_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_nCS_ref_concat" PORT="In2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_2_gain_controller_0_gain">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_2"/>
-            <CONNECTION INSTANCE="GainControl_gain_concat" PORT="In2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref_2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref_2"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/GainControl/GainControl_2/nCS_slice_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_2_nCS_slice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_nCS_slice_0_1"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_nCS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_nCS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_2_nCS_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="adc_nCS"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/GainControl/GainControl_3/UnD_slice_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_3_UnD_slice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_UnD_slice_0_2"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_UnD">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_UnD"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_3_UnD_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="adc_UnD"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/GainControl/GainControl_3/gain_controller_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_3_gain_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gain_controller" VLNV="xilinx.com:module_ref:gain_controller:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_controller_0_2"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="adc_UnD" SIGIS="undef" SIGNAME="GainControl_GainControl_3_UnD_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_UnD_slice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="adc_UnD_ref" SIGIS="undef" SIGNAME="GainControl_GainControl_3_gain_controller_0_adc_UnD_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_UnD_ref_concat" PORT="In3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="adc_nCS" SIGIS="undef" SIGNAME="GainControl_GainControl_3_nCS_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_nCS_slice_0" PORT="Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="adc_nCS_ref" SIGIS="undef" SIGNAME="GainControl_GainControl_3_gain_controller_0_adc_nCS_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_nCS_ref_concat" PORT="In3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_3_gain_controller_0_gain">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_3"/>
-            <CONNECTION INSTANCE="GainControl_gain_concat" PORT="In3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref_3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref_3"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/GainControl/GainControl_3/nCS_slice_0" HWVERSION="1.0" INSTANCE="GainControl_GainControl_3_nCS_slice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_nCS_slice_0_2"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_nCS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_nCS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_3_nCS_slice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="adc_nCS"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/GainControl/UnD_ref_concat" HWVERSION="2.1" INSTANCE="GainControl_UnD_ref_concat" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+    <MODULE COREREVISION="4" FULLNAME="/UnD_ref_concat" HWVERSION="2.1" INSTANCE="UnD_ref_concat" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
@@ -1121,31 +683,31 @@
         <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
         <PARAMETER NAME="dout_width" VALUE="4"/>
         <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_concat_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_UnD_concat_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_0_gain_controller_0_adc_UnD_ref">
+        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="gpio_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="adc_UnD_ref"/>
+            <CONNECTION INSTANCE="gpio_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_1_gain_controller_0_adc_UnD_ref">
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="gain_controller_adc_UnD_ref">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="adc_UnD_ref"/>
+            <CONNECTION INSTANCE="gain_controller" PORT="adc_UnD_ref"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_2_gain_controller_0_adc_UnD_ref">
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="gpio_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="adc_UnD_ref"/>
+            <CONNECTION INSTANCE="gpio_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_3_gain_controller_0_adc_UnD_ref">
+        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="gpio_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="adc_UnD_ref"/>
+            <CONNECTION INSTANCE="gpio_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_UnD_ref_concat_dout">
+        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="UnD_ref_concat_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="gpio_UnD_ref"/>
             <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_UnD_ref"/>
@@ -1154,7 +716,31 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/GainControl/gain_concat" HWVERSION="2.1" INSTANCE="GainControl_gain_concat" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+    <MODULE COREREVISION="2" FULLNAME="/UnD_slice" HWVERSION="1.0" INSTANCE="UnD_slice" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="1"/>
+        <PARAMETER NAME="DIN_TO" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_UnD_slice_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_UnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="UnD_slice_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gain_controller" PORT="adc_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/gain_concat" HWVERSION="2.1" INSTANCE="gain_concat" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="IN0_WIDTH" VALUE="6"/>
@@ -1287,31 +873,31 @@
         <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
         <PARAMETER NAME="dout_width" VALUE="24"/>
         <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_concat_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_concat_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="5" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_0_gain_controller_0_gain">
+        <PORT DIR="I" LEFT="5" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="gain_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="gain"/>
+            <CONNECTION INSTANCE="gain_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="5" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_1_gain_controller_0_gain">
+        <PORT DIR="I" LEFT="5" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="gain_controller_gain">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="gain"/>
+            <CONNECTION INSTANCE="gain_controller" PORT="gain"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="5" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_2_gain_controller_0_gain">
+        <PORT DIR="I" LEFT="5" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="gain_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="gain"/>
+            <CONNECTION INSTANCE="gain_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="5" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_3_gain_controller_0_gain">
+        <PORT DIR="I" LEFT="5" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="gain_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="gain"/>
+            <CONNECTION INSTANCE="gain_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="23" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_gain_concat_dout">
+        <PORT DIR="O" LEFT="23" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="gain_concat_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADCControl_max_gain" PORT="gains"/>
           </CONNECTIONS>
@@ -1319,7 +905,99 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/GainControl/nCS_ref_concat" HWVERSION="2.1" INSTANCE="GainControl_nCS_ref_concat" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+    <MODULE COREREVISION="7" FULLNAME="/gain_const" HWVERSION="1.1" INSTANCE="gain_const" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x00"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_const_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="5" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="gain_const_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gain_concat" PORT="In0"/>
+            <CONNECTION INSTANCE="gain_concat" PORT="In2"/>
+            <CONNECTION INSTANCE="gain_concat" PORT="In3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/gain_controller" HWVERSION="1.0" INSTANCE="gain_controller" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gain_controller" VLNV="xilinx.com:module_ref:gain_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gain_controller_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="adc_UnD" SIGIS="undef" SIGNAME="UnD_slice_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UnD_slice" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="adc_UnD_ref" SIGIS="undef" SIGNAME="gain_controller_adc_UnD_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UnD_ref_concat" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="adc_nCS" SIGIS="undef" SIGNAME="nCS_slice_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="nCS_slice" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="adc_nCS_ref" SIGIS="undef" SIGNAME="gain_controller_adc_nCS_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="nCS_ref_concat" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="gain_controller_gain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gain"/>
+            <CONNECTION INSTANCE="gain_concat" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/gpio_const" HWVERSION="1.1" INSTANCE="gpio_const" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_gpio_const_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="gpio_const_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UnD_ref_concat" PORT="In0"/>
+            <CONNECTION INSTANCE="UnD_ref_concat" PORT="In2"/>
+            <CONNECTION INSTANCE="UnD_ref_concat" PORT="In3"/>
+            <CONNECTION INSTANCE="nCS_ref_concat" PORT="In0"/>
+            <CONNECTION INSTANCE="nCS_ref_concat" PORT="In2"/>
+            <CONNECTION INSTANCE="nCS_ref_concat" PORT="In3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/nCS_ref_concat" HWVERSION="2.1" INSTANCE="nCS_ref_concat" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
@@ -1452,34 +1130,58 @@
         <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
         <PARAMETER NAME="dout_width" VALUE="4"/>
         <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_UnD_ref_concat_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_nCS_concat_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_0_gain_controller_0_adc_nCS_ref">
+        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="gpio_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_0_gain_controller_0" PORT="adc_nCS_ref"/>
+            <CONNECTION INSTANCE="gpio_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_1_gain_controller_0_adc_nCS_ref">
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="gain_controller_adc_nCS_ref">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_1_gain_controller_0" PORT="adc_nCS_ref"/>
+            <CONNECTION INSTANCE="gain_controller" PORT="adc_nCS_ref"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_2_gain_controller_0_adc_nCS_ref">
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="gpio_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_2_gain_controller_0" PORT="adc_nCS_ref"/>
+            <CONNECTION INSTANCE="gpio_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_GainControl_3_gain_controller_0_adc_nCS_ref">
+        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="gpio_const_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GainControl_GainControl_3_gain_controller_0" PORT="adc_nCS_ref"/>
+            <CONNECTION INSTANCE="gpio_const" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_nCS_ref_concat_dout">
+        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="nCS_ref_concat_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="gpio_nCS_ref"/>
             <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_nCS_ref"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/nCS_slice" HWVERSION="1.0" INSTANCE="nCS_slice" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="1"/>
+        <PARAMETER NAME="DIN_TO" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="GainControl_test3_nCS_slice_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_ADC_controller_gpio_nCS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_ADC_controller" PORT="gpio_nCS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="nCS_slice_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gain_controller" PORT="adc_nCS"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

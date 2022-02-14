@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Sun Feb 13 13:44:44 2022
---Host        : ffn-X299 running 64-bit Ubuntu 20.04.3 LTS
+--Date        : Mon Feb 14 08:39:20 2022
+--Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target GainControl_test3_wrapper.bd
 --Design      : GainControl_test3_wrapper
 --Purpose     : IP block netlist
@@ -15,14 +15,8 @@ entity GainControl_test3_wrapper is
   port (
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    gain_0 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_1 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_2 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_3 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_ref_0 : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_ref_1 : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_ref_2 : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_ref_3 : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    gain : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    gain_ref : in STD_LOGIC_VECTOR ( 5 downto 0 );
     gpio_UnD : out STD_LOGIC_VECTOR ( 3 downto 0 );
     gpio_UnD_ref : out STD_LOGIC_VECTOR ( 3 downto 0 );
     gpio_nCS : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -45,7 +39,8 @@ architecture STRUCTURE of GainControl_test3_wrapper is
   port (
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    gain_ref_0 : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    gain : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    gain_ref : in STD_LOGIC_VECTOR ( 5 downto 0 );
     gpio_UnD : out STD_LOGIC_VECTOR ( 3 downto 0 );
     gpio_UnD_ref : out STD_LOGIC_VECTOR ( 3 downto 0 );
     gpio_nCS : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -59,14 +54,7 @@ architecture STRUCTURE of GainControl_test3_wrapper is
     spi_miso : out STD_LOGIC_VECTOR ( 7 downto 0 );
     spi_mosi : out STD_LOGIC_VECTOR ( 7 downto 0 );
     t_sample_en : out STD_LOGIC;
-    t_sample_irq : out STD_LOGIC;
-    gain_0 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_1 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_2 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_3 : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_ref_1 : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_ref_2 : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    gain_ref_3 : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    t_sample_irq : out STD_LOGIC
   );
   end component GainControl_test3;
 begin
@@ -74,14 +62,8 @@ GainControl_test3_i: component GainControl_test3
      port map (
       ch_out(3 downto 0) => ch_out(3 downto 0),
       clk => clk,
-      gain_0(5 downto 0) => gain_0(5 downto 0),
-      gain_1(5 downto 0) => gain_1(5 downto 0),
-      gain_2(5 downto 0) => gain_2(5 downto 0),
-      gain_3(5 downto 0) => gain_3(5 downto 0),
-      gain_ref_0(5 downto 0) => gain_ref_0(5 downto 0),
-      gain_ref_1(5 downto 0) => gain_ref_1(5 downto 0),
-      gain_ref_2(5 downto 0) => gain_ref_2(5 downto 0),
-      gain_ref_3(5 downto 0) => gain_ref_3(5 downto 0),
+      gain(5 downto 0) => gain(5 downto 0),
+      gain_ref(5 downto 0) => gain_ref(5 downto 0),
       gpio_UnD(3 downto 0) => gpio_UnD(3 downto 0),
       gpio_UnD_ref(3 downto 0) => gpio_UnD_ref(3 downto 0),
       gpio_nCS(3 downto 0) => gpio_nCS(3 downto 0),

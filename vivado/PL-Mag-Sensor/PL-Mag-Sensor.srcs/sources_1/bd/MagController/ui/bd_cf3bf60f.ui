@@ -1,45 +1,45 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.254362",
-   "Default View_TopLeft":"-1317,-818",
+   "Default View_ScaleFactor":"1.77147",
+   "Default View_TopLeft":"21,-927",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port clk -pg 1 -lvl 0 -x -110 -y 123 -defaultsOSRD
-preplace port rst_n -pg 1 -lvl 0 -x -110 -y 150 -defaultsOSRD
-preplace port SPI_SCLK -pg 1 -lvl 6 -x 2020 -y 480 -defaultsOSRD
-preplace port SPI_MOSI -pg 1 -lvl 6 -x 2020 -y 460 -defaultsOSRD
-preplace port SPI_MISO -pg 1 -lvl 0 -x -110 -y 520 -defaultsOSRD
-preplace portBus SPI_nCS -pg 1 -lvl 6 -x 2020 -y 540 -defaultsOSRD
-preplace inst SPI_master -pg 1 -lvl 4 -x 1590 -y 460 -defaultsOSRD
-preplace inst SPI_nCS_slice -pg 1 -lvl 5 -x 1900 -y 540 -defaultsOSRD
-preplace inst GainControl -pg 1 -lvl 2 -x 622 -y 150 -defaultsOSRD -resize 205 156
-preplace inst BufferFlowControl -pg 1 -lvl 1 -x 199 -y 160 -defaultsOSRD -resize 218 152
-preplace inst ADCControl -pg 1 -lvl 3 -x 1106 -y 150 -defaultsOSRD
-preplace netloc clk_0_1 1 0 4 -90 60 330 50 760 430 NJ
-preplace netloc rst_n_0_1 1 0 4 -90 250 340 240 770 450 NJ
-preplace netloc spi_master_0_spi_clk 1 4 2 1800J 480 NJ
-preplace netloc spi_master_0_spi_mosi 1 4 2 NJ 450 2000J
-preplace netloc spi_miso_0_1 1 0 4 NJ 520 NJ 520 NJ 520 1290J
-preplace netloc spi_master_0_spi_cs_n 1 4 1 1800J 490n
+preplace port clk -pg 1 -lvl 0 -x -130 -y 123 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -130 -y 150 -defaultsOSRD
+preplace port SPI_SCLK -pg 1 -lvl 6 -x 2050 -y 480 -defaultsOSRD
+preplace port SPI_MOSI -pg 1 -lvl 6 -x 2050 -y 460 -defaultsOSRD
+preplace port SPI_MISO -pg 1 -lvl 0 -x -130 -y 520 -defaultsOSRD
+preplace portBus SPI_nCS -pg 1 -lvl 6 -x 2050 -y 540 -defaultsOSRD
+preplace inst SPI_master -pg 1 -lvl 4 -x 1579 -y 460 -defaultsOSRD
+preplace inst SPI_nCS_slice -pg 1 -lvl 5 -x 1930 -y 540 -defaultsOSRD
+preplace inst GainControl -pg 1 -lvl 2 -x 611 -y 150 -defaultsOSRD -resize 205 156
+preplace inst BufferFlowControl -pg 1 -lvl 1 -x 198 -y -724 -defaultsOSRD -resize 218 152
+preplace inst ADCControl -pg 1 -lvl 3 -x 1095 -y 150 -defaultsOSRD
+preplace netloc clk_0_1 1 0 4 -110 50 340 50 750 0 1330J
+preplace netloc rst_n_0_1 1 0 4 -100 40 350 40 760 10 1320J
+preplace netloc spi_master_0_spi_clk 1 4 2 1790J 480 NJ
+preplace netloc spi_master_0_spi_mosi 1 4 2 1790J 460 NJ
+preplace netloc spi_miso_0_1 1 0 4 NJ 520 NJ 520 NJ 520 1270J
+preplace netloc spi_master_0_spi_cs_n 1 4 1 1790J 490n
 preplace netloc xlslice_0_Dout 1 5 1 NJ 540
-preplace netloc ADC_controller_0_spi_cs 1 3 1 1360 190n
-preplace netloc ADC_controller_0_spi_rw 1 3 1 1340 230n
-preplace netloc SPI_master_data_out 1 2 3 780 310 NJ 310 1800
-preplace netloc SPI_master_irq 1 2 2 790 390 NJ
-preplace netloc ADC_controller_0_spi_addr 1 3 1 1350 170n
-preplace netloc ADC_controller_0_spi_dout 1 3 1 1330 210n
+preplace netloc ADC_controller_0_spi_cs 1 3 1 1310 190n
+preplace netloc ADC_controller_0_spi_rw 1 3 1 1290 230n
+preplace netloc SPI_master_data_out 1 2 3 740 290 NJ 290 1790
+preplace netloc SPI_master_irq 1 2 2 750 390 NJ
+preplace netloc ADC_controller_0_spi_addr 1 3 1 1300 170n
+preplace netloc ADC_controller_0_spi_dout 1 3 1 1280 210n
 preplace netloc GainControl_dout 1 2 1 N 130
 preplace netloc GainControl_dout1 1 2 1 N 150
-preplace netloc ADC_controller_gpio_UnD 1 1 3 360 330 NJ 330 1310
-preplace netloc ADC_controller_gpio_nCS 1 1 3 350 10 NJ 10 1300
-preplace netloc ADC_controller_irq_out 1 0 4 -80 300 NJ 300 NJ 300 1280
-preplace netloc ADC_controller_data_out 1 0 4 -70 320 NJ 320 NJ 320 1320
-preplace netloc GainControl_dout2 1 0 3 -60 40 NJ 40 750
-preplace netloc inp_1 1 1 1 330 160n
-preplace netloc ADC_controller_ch_out 1 0 4 -60 290 NJ 290 NJ 290 1290
-levelinfo -pg 1 -110 199 622 1106 1590 1900 2020
-pagesize -pg 1 -db -bbox -sgen -230 0 2160 2060
+preplace netloc ADC_controller_gpio_UnD 1 1 3 360 -20 NJ -20 1290
+preplace netloc ADC_controller_gpio_nCS 1 1 3 370 -10 NJ -10 1280
+preplace netloc ADC_controller_irq_out 1 0 4 -80 -824 NJ -824 NJ -824 1310
+preplace netloc ADC_controller_data_out 1 0 4 -90 -834 NJ -834 NJ -834 1300
+preplace netloc GainControl_dout2 1 0 3 -90 0 NJ 0 740
+preplace netloc inp_1 1 1 1 330 -724n
+preplace netloc ADC_controller_ch_out 1 0 4 -80 -40 NJ -40 NJ -40 1270
+levelinfo -pg 1 -130 198 611 1095 1579 1930 2050
+pagesize -pg 1 -db -bbox -sgen -250 -890 2190 2060
 "
 }
 {

@@ -1,0 +1,681 @@
+<profile>
+    <ReportVersion>
+        <Version>2020.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynquplus</ProductFamily>
+        <Part>xczu3eg-sbva484-1-i</Part>
+        <TopModelName>SineParamFinder</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>none</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>3.329</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>2</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>65537</Worst-caseLatency>
+            <Best-caseRealTimeLatency>20.000 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.655 ms</Worst-caseRealTimeLatency>
+            <Interval-min>3</Interval-min>
+            <Interval-max>65538</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <loop>
+                <TripCount>
+                    <range>
+                        <min>0</min>
+                        <max>65535</max>
+                    </range>
+                </TripCount>
+                <Latency>
+                    <range>
+                        <min>0</min>
+                        <max>65535</max>
+                    </range>
+                </Latency>
+                <AbsoluteTimeLatency>
+                    <range>
+                        <min>0</min>
+                        <max>655350</max>
+                    </range>
+                </AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>2</PipelineDepth>
+            </loop>
+        </SummaryOfLoopLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>66</FF>
+            <LUT>261</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>432</BRAM_18K>
+            <DSP>360</DSP>
+            <FF>141120</FF>
+            <LUT>70560</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>SineParamFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>SineParamFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>SineParamFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>SineParamFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>SineParamFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>SineParamFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>n_samples</name>
+            <Object>n_samples</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>uint</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>samples_address0</name>
+            <Object>samples</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>samples_ce0</name>
+            <Object>samples</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>samples_q0</name>
+            <Object>samples</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>channel</name>
+            <Object>channel</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitude</name>
+            <Object>amplitude</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>12</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitude_ap_vld</name>
+            <Object>amplitude</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>offset</name>
+            <Object>offset</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>20</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>offset_ap_vld</name>
+            <Object>offset</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule>
+            <ModuleName>SineParamFinder</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>SineParamFinder</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.329</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>65537</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>20.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.655 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 65538</PipelineInitiationInterval>
+                    <PipelineType>none</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loop>
+                        <Name>loop</Name>
+                        <TripCount>
+                            <range>
+                                <min>0</min>
+                                <max>65535</max>
+                            </range>
+                        </TripCount>
+                        <Latency>0 ~ 65535</Latency>
+                        <AbsoluteTimeLatency>0 ns ~ 0.655 ms</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                    </loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>66</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>261</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>432</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>360</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <InterfaceSummary>
+                <RtlPorts>
+                    <name>ap_clk</name>
+                    <Object>SineParamFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_rst</name>
+                    <Object>SineParamFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_start</name>
+                    <Object>SineParamFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_done</name>
+                    <Object>SineParamFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_idle</name>
+                    <Object>SineParamFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_ready</name>
+                    <Object>SineParamFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>n_samples</name>
+                    <Object>n_samples</Object>
+                    <Type>scalar</Type>
+                    <Scope/>
+                    <IOProtocol>ap_none</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>16</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>uint</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>samples_address0</name>
+                    <Object>samples</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>10</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>samples_ce0</name>
+                    <Object>samples</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>samples_q0</name>
+                    <Object>samples</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>channel</name>
+                    <Object>channel</Object>
+                    <Type>scalar</Type>
+                    <Scope/>
+                    <IOProtocol>ap_none</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitude</name>
+                    <Object>amplitude</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>ap_vld</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>12</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitude_ap_vld</name>
+                    <Object>amplitude</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>ap_vld</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>offset</name>
+                    <Object>offset</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>ap_vld</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>20</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>offset_ap_vld</name>
+                    <Object>offset</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>ap_vld</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+            </InterfaceSummary>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <Args>
+        <Arg ArgName="n_samples" index="0" direction="in" srcType="unsigned short" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="n_samples" name="n_samples" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="samples" index="1" direction="in" srcType="unsigned int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="samples_address0" name="samples_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="samples_ce0" name="samples_ce0" usage="control" direction="in"/>
+                <hwRef type="port" interface="samples_q0" name="samples_q0" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="channel" index="2" direction="in" srcType="ap_uint&lt;4&gt;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="channel" name="channel" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="amplitude" index="3" direction="out" srcType="ap_uint&lt;12&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="amplitude" name="amplitude" usage="data" direction="out"/>
+                <hwRef type="port" interface="amplitude_ap_vld" name="amplitude_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="offset" index="4" direction="out" srcType="ap_uint&lt;20&gt;*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="offset" name="offset" usage="data" direction="out"/>
+                <hwRef type="port" interface="offset_ap_vld" name="offset_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="amplitude" type="data" busTypeName="data" mode="master" dataWidth="12">
+            <portMaps>
+                <portMap portMapName="amplitude">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>amplitude</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="amplitude"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="channel" type="data" busTypeName="data" mode="slave" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="channel">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>channel</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="channel"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="n_samples" type="data" busTypeName="data" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="n_samples">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>n_samples</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="n_samples"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="offset" type="data" busTypeName="data" mode="master" dataWidth="20">
+            <portMaps>
+                <portMap portMapName="offset">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>offset</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="offset"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="samples_address0" type="data" busTypeName="data" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="samples_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>samples_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="samples"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="samples_q0" type="data" busTypeName="data" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="samples_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>samples_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="samples"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_MEMORY">
+                <table>
+                    <keys size="2">Interface, Bitwidth</keys>
+                    <column name="samples_address0">10</column>
+                    <column name="samples_q0">32</column>
+                </table>
+            </item>
+            <item name="REGISTER">
+                <table>
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="amplitude">ap_none, 12</column>
+                    <column name="channel">ap_none, 4</column>
+                    <column name="n_samples">ap_none, 16</column>
+                    <column name="offset">ap_none, 20</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="n_samples">in, unsigned short</column>
+                    <column name="samples">in, unsigned int*</column>
+                    <column name="channel">in, ap_uint&lt;4&gt;</column>
+                    <column name="amplitude">out, ap_uint&lt;12&gt;*</column>
+                    <column name="offset">out, ap_uint&lt;20&gt;*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Name, HW Type, HW Usage</keys>
+                    <column name="n_samples">n_samples, port, </column>
+                    <column name="samples">samples_address0, port, offset</column>
+                    <column name="samples">samples_ce0, port, </column>
+                    <column name="samples">samples_q0, port, </column>
+                    <column name="channel">channel, port, </column>
+                    <column name="amplitude">amplitude, port, </column>
+                    <column name="amplitude">amplitude_ap_vld, port, </column>
+                    <column name="offset">offset, port, </column>
+                    <column name="offset">offset_ap_vld, port, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0"/>
+    </ReportBurst>
+</profile>
+

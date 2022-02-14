@@ -204,7 +204,6 @@ begin
         end if;
     end process;
 
-
     sample_start_proc:      process(rst_n, t_sample_irq, sampling)
     begin
         if (rst_n = '0') then

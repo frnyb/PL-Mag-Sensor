@@ -35,11 +35,10 @@
         "gain_controller_3": ""
       },
       "BufferFlowControl": {
-        "MagPingPongBuffers": "",
         "gain_LUT": "",
-        "buffer_controller": "",
         "sample_interval_timer": "",
-        "signal_period_timer": ""
+        "signal_period_timer": "",
+        "buffer_controller": ""
       },
       "ADCControl": ""
     },
@@ -698,7 +697,13 @@
             "ports": {
               "clk": {
                 "type": "clk",
-                "direction": "I"
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "MagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
               },
               "rst_n": {
                 "type": "rst",
@@ -747,7 +752,13 @@
             "ports": {
               "clk": {
                 "type": "clk",
-                "direction": "I"
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "MagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
               },
               "rst_n": {
                 "type": "rst",
@@ -796,7 +807,13 @@
             "ports": {
               "clk": {
                 "type": "clk",
-                "direction": "I"
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "MagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
               },
               "rst_n": {
                 "type": "rst",
@@ -845,7 +862,13 @@
             "ports": {
               "clk": {
                 "type": "clk",
-                "direction": "I"
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "MagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
               },
               "rst_n": {
                 "type": "rst",
@@ -1119,44 +1142,6 @@
           }
         },
         "components": {
-          "MagPingPongBuffers": {
-            "parameters": {
-              "ACTIVE_SIM_BD": {
-                "value": "MagPingPongBuffers.bd"
-              },
-              "ACTIVE_SYNTH_BD": {
-                "value": "MagPingPongBuffers.bd"
-              },
-              "ENABLE_DFX": {
-                "value": "0"
-              },
-              "LIST_SIM_BD": {
-                "value": "MagPingPongBuffers.bd"
-              },
-              "LIST_SYNTH_BD": {
-                "value": "MagPingPongBuffers.bd"
-              },
-              "LOCK_PROPAGATE": {
-                "value": "0"
-              },
-              "TRAINING_MODULE": {
-                "value": "MagPingPongBuffers.bd"
-              }
-            },
-            "post_compiled_compname": "MagPingPongBuffers_inst_0",
-            "architecture": "zynquplus",
-            "variant_info": {
-              "MagPingPongBuffers.bd": {
-                "scoped_diagram": "MagPingPongBuffers_inst_0.bd",
-                "design_checksum": "0x480587B6",
-                "ref_name": "MagPingPongBuffers",
-                "ref_subinst_path": "MagController_MagPingPongBuffers_0",
-                "ref_type": "Block Design",
-                "source_type": "all",
-                "active": "all"
-              }
-            }
-          },
           "gain_LUT": {
             "vlnv": "xilinx.com:module_ref:gain_lut:1.0",
             "xci_name": "MagController_gain_lut_0_0",
@@ -1211,6 +1196,150 @@
               "new_gain": {
                 "direction": "O",
                 "left": "5",
+                "right": "0"
+              }
+            }
+          },
+          "sample_interval_timer": {
+            "vlnv": "xilinx.com:module_ref:counter:1.0",
+            "xci_name": "MagController_counter_0_0",
+            "xci_path": "ip/MagController_counter_0_0/MagController_counter_0_0.xci",
+            "inst_hier_path": "BufferFlowControl/sample_interval_timer",
+            "parameters": {
+              "auto_rst": {
+                "value": "\"0\""
+              },
+              "n_bits": {
+                "value": "20"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "counter",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "user_MAG_BF_CNT_INTERFACE": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "en": {
+                    "physical_name": "en",
+                    "direction": "I"
+                  },
+                  "restart": {
+                    "physical_name": "restart",
+                    "direction": "I"
+                  },
+                  "cnt": {
+                    "physical_name": "cnt",
+                    "direction": "O",
+                    "left": "19",
+                    "right": "0"
+                  },
+                  "irq": {
+                    "physical_name": "irq",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "MagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "target": {
+                "direction": "I",
+                "left": "19",
+                "right": "0"
+              }
+            }
+          },
+          "signal_period_timer": {
+            "vlnv": "xilinx.com:module_ref:counter:1.0",
+            "xci_name": "MagController_sample_mag_interval_timer_0",
+            "xci_path": "ip/MagController_sample_mag_interval_timer_0/MagController_sample_mag_interval_timer_0.xci",
+            "inst_hier_path": "BufferFlowControl/signal_period_timer",
+            "parameters": {
+              "auto_rst": {
+                "value": "\"0\""
+              },
+              "n_bits": {
+                "value": "21"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "counter",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "user_MAG_BF_CNT_INTERFACE": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "en": {
+                    "physical_name": "en",
+                    "direction": "I"
+                  },
+                  "restart": {
+                    "physical_name": "restart",
+                    "direction": "I"
+                  },
+                  "cnt": {
+                    "physical_name": "cnt",
+                    "direction": "O",
+                    "left": "20",
+                    "right": "0"
+                  },
+                  "irq": {
+                    "physical_name": "irq",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "MagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "target": {
+                "direction": "I",
+                "left": "20",
                 "right": "0"
               }
             }
@@ -1404,138 +1533,6 @@
                 "right": "0"
               }
             }
-          },
-          "sample_interval_timer": {
-            "vlnv": "xilinx.com:module_ref:counter:1.0",
-            "xci_name": "MagController_counter_0_0",
-            "xci_path": "ip/MagController_counter_0_0/MagController_counter_0_0.xci",
-            "inst_hier_path": "BufferFlowControl/sample_interval_timer",
-            "parameters": {
-              "auto_rst": {
-                "value": "\"0\""
-              },
-              "n_bits": {
-                "value": "20"
-              }
-            },
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "counter",
-              "boundary_crc": "0x0"
-            },
-            "interface_ports": {
-              "user_MAG_BF_CNT_INTERFACE": {
-                "mode": "Slave",
-                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-                "port_maps": {
-                  "en": {
-                    "physical_name": "en",
-                    "direction": "I"
-                  },
-                  "restart": {
-                    "physical_name": "restart",
-                    "direction": "I"
-                  },
-                  "cnt": {
-                    "physical_name": "cnt",
-                    "direction": "O",
-                    "left": "19",
-                    "right": "0"
-                  },
-                  "irq": {
-                    "physical_name": "irq",
-                    "direction": "O"
-                  }
-                }
-              }
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I"
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "target": {
-                "direction": "I",
-                "left": "19",
-                "right": "0"
-              }
-            }
-          },
-          "signal_period_timer": {
-            "vlnv": "xilinx.com:module_ref:counter:1.0",
-            "xci_name": "MagController_sample_mag_interval_timer_0",
-            "xci_path": "ip/MagController_sample_mag_interval_timer_0/MagController_sample_mag_interval_timer_0.xci",
-            "inst_hier_path": "BufferFlowControl/signal_period_timer",
-            "parameters": {
-              "auto_rst": {
-                "value": "\"0\""
-              },
-              "n_bits": {
-                "value": "21"
-              }
-            },
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "counter",
-              "boundary_crc": "0x0"
-            },
-            "interface_ports": {
-              "user_MAG_BF_CNT_INTERFACE": {
-                "mode": "Slave",
-                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-                "port_maps": {
-                  "en": {
-                    "physical_name": "en",
-                    "direction": "I"
-                  },
-                  "restart": {
-                    "physical_name": "restart",
-                    "direction": "I"
-                  },
-                  "cnt": {
-                    "physical_name": "cnt",
-                    "direction": "O",
-                    "left": "20",
-                    "right": "0"
-                  },
-                  "irq": {
-                    "physical_name": "irq",
-                    "direction": "O"
-                  }
-                }
-              }
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I"
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "target": {
-                "direction": "I",
-                "left": "20",
-                "right": "0"
-              }
-            }
           }
         },
         "nets": {
@@ -1543,17 +1540,17 @@
             "ports": [
               "clk",
               "gain_LUT/clk",
-              "buffer_controller/clk",
               "sample_interval_timer/clk",
-              "signal_period_timer/clk"
+              "signal_period_timer/clk",
+              "buffer_controller/clk"
             ]
           },
           "rst_n_1": {
             "ports": [
               "rst_n",
-              "buffer_controller/rst_n",
               "sample_interval_timer/rst_n",
-              "signal_period_timer/rst_n"
+              "signal_period_timer/rst_n",
+              "buffer_controller/rst_n"
             ]
           },
           "sample_mag_interval_timer_irq": {

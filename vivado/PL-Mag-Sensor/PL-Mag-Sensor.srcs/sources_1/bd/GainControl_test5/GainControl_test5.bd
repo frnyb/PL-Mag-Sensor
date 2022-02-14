@@ -1,0 +1,1051 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x750BBF2A83DEF5FD",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../PL-Mag-Sensor.gen/sources_1/bd/GainControl_test5",
+      "name": "GainControl_test5",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ADCControl": {
+        "ADC_controller": "",
+        "sample_time_counter": "",
+        "SampleTimeLUT": "",
+        "max_gain": "",
+        "ADC_simulator": ""
+      },
+      "UnD_ref_concat": "",
+      "UnD_slice": "",
+      "gain_concat": "",
+      "gain_const": "",
+      "gain_controller": "",
+      "gpio_const": "",
+      "nCS_ref_concat": "",
+      "nCS_slice": ""
+    },
+    "ports": {
+      "ch_out": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "GainControl_test5_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "gain": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "gain_ref": {
+        "direction": "I",
+        "left": "5",
+        "right": "0"
+      },
+      "gpio_UnD": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "gpio_UnD_ref": {
+        "direction": "O",
+        "left": "3",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "gpio_nCS": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "gpio_nCS_ref": {
+        "direction": "O",
+        "left": "3",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "irq_out": {
+        "direction": "O"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "sample_time": {
+        "direction": "O",
+        "left": "19",
+        "right": "0"
+      },
+      "spi_addr": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "spi_cs": {
+        "direction": "O"
+      },
+      "spi_irq": {
+        "direction": "O"
+      },
+      "spi_miso": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "spi_mosi": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "t_sample_en": {
+        "direction": "O"
+      },
+      "t_sample_irq": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "ADCControl": {
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "spi_cs": {
+            "direction": "O"
+          },
+          "spi_addr": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_mosi": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_miso": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_irq": {
+            "direction": "O"
+          },
+          "gpio_UnD": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_UnD_ref": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_nCS": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_nCS_ref": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "t_sample_en": {
+            "direction": "O"
+          },
+          "t_sample_irq": {
+            "direction": "O"
+          },
+          "ch_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "irq_out": {
+            "direction": "O"
+          },
+          "sample_time": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          },
+          "gains": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          }
+        },
+        "components": {
+          "ADC_controller": {
+            "vlnv": "xilinx.com:module_ref:ADC_controller:1.0",
+            "xci_name": "GainControl_test5_ADC_controller_0",
+            "xci_path": "ip/GainControl_test5_ADC_controller_0/GainControl_test5_ADC_controller_0.xci",
+            "inst_hier_path": "ADCControl/ADC_controller",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "ADC_controller",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "spi": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "irq": {
+                    "physical_name": "spi_irq",
+                    "direction": "I"
+                  }
+                }
+              },
+              "t_sample": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "en": {
+                    "physical_name": "t_sample_en",
+                    "direction": "O"
+                  },
+                  "cnt": {
+                    "physical_name": "t_sample_cnt",
+                    "direction": "I",
+                    "left": "19",
+                    "right": "0"
+                  },
+                  "irq": {
+                    "physical_name": "t_sample_irq",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "GainControl_test5_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "spi_cs": {
+                "direction": "O"
+              },
+              "spi_rw": {
+                "direction": "O"
+              },
+              "spi_addr": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "spi_dout": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "spi_din": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "gpio_UnD": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "gpio_UnD_ref": {
+                "direction": "I",
+                "left": "3",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "4",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "gpio_nCS": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "gpio_nCS_ref": {
+                "direction": "I",
+                "left": "3",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "4",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "t_sample_rest": {
+                "direction": "O"
+              },
+              "data_out": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "ch_out": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "irq_out": {
+                "direction": "O"
+              }
+            }
+          },
+          "sample_time_counter": {
+            "vlnv": "xilinx.com:module_ref:counter:1.0",
+            "xci_name": "GainControl_test5_sample_time_counter_0",
+            "xci_path": "ip/GainControl_test5_sample_time_counter_0/GainControl_test5_sample_time_counter_0.xci",
+            "inst_hier_path": "ADCControl/sample_time_counter",
+            "parameters": {
+              "n_bits": {
+                "value": "20"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "counter",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "user_MAG_BF_CNT_INTERFACE": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "en": {
+                    "physical_name": "en",
+                    "direction": "I"
+                  },
+                  "restart": {
+                    "physical_name": "restart",
+                    "direction": "I"
+                  },
+                  "cnt": {
+                    "physical_name": "cnt",
+                    "direction": "O",
+                    "left": "19",
+                    "right": "0"
+                  },
+                  "irq": {
+                    "physical_name": "irq",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "GainControl_test5_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "target": {
+                "direction": "I",
+                "left": "19",
+                "right": "0"
+              }
+            }
+          },
+          "SampleTimeLUT": {
+            "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+            "xci_name": "GainControl_test5_SampleTimeLUT_0",
+            "xci_path": "ip/GainControl_test5_SampleTimeLUT_0/GainControl_test5_SampleTimeLUT_0.xci",
+            "inst_hier_path": "ADCControl/SampleTimeLUT",
+            "parameters": {
+              "Coe_File": {
+                "value": "../../../../../../../../src/sample_time_lut_data.coe"
+              },
+              "Enable_32bit_Address": {
+                "value": "false"
+              },
+              "Enable_A": {
+                "value": "Always_Enabled"
+              },
+              "Fill_Remaining_Memory_Locations": {
+                "value": "true"
+              },
+              "Load_Init_File": {
+                "value": "true"
+              },
+              "Memory_Type": {
+                "value": "Single_Port_ROM"
+              },
+              "Port_A_Write_Rate": {
+                "value": "0"
+              },
+              "Register_PortA_Output_of_Memory_Primitives": {
+                "value": "true"
+              },
+              "Remaining_Memory_Locations": {
+                "value": "F"
+              },
+              "Use_RSTA_Pin": {
+                "value": "false"
+              },
+              "Write_Depth_A": {
+                "value": "64"
+              },
+              "Write_Width_A": {
+                "value": "20"
+              },
+              "use_bram_block": {
+                "value": "Stand_Alone"
+              }
+            }
+          },
+          "max_gain": {
+            "vlnv": "xilinx.com:module_ref:max_gain:1.0",
+            "xci_name": "GainControl_test5_max_gain_0",
+            "xci_path": "ip/GainControl_test5_max_gain_0/GainControl_test5_max_gain_0.xci",
+            "inst_hier_path": "ADCControl/max_gain",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "max_gain",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "gains": {
+                "direction": "I",
+                "left": "23",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "24",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "max_gain_out": {
+                "direction": "O",
+                "left": "5",
+                "right": "0"
+              }
+            }
+          },
+          "ADC_simulator": {
+            "vlnv": "xilinx.com:module_ref:ADC_simulator:1.0",
+            "xci_name": "GainControl_test5_ADC_simulator_0",
+            "xci_path": "ip/GainControl_test5_ADC_simulator_0/GainControl_test5_ADC_simulator_0.xci",
+            "inst_hier_path": "ADCControl/ADC_simulator",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "ADC_simulator",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "spi": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "irq": {
+                    "physical_name": "spi_irq",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "GainControl_test5_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "spi_rw": {
+                "direction": "I"
+              },
+              "spi_cs": {
+                "direction": "I"
+              },
+              "spi_addr": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "spi_din": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "spi_dout": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              }
+            }
+          }
+        },
+        "nets": {
+          "ADC_controller_0_spi_rw": {
+            "ports": [
+              "ADC_controller/spi_rw",
+              "ADC_simulator/spi_rw"
+            ]
+          },
+          "ADC_controller_t_sample_rest": {
+            "ports": [
+              "ADC_controller/t_sample_rest",
+              "sample_time_counter/restart"
+            ]
+          },
+          "sample_time_counter_cnt": {
+            "ports": [
+              "sample_time_counter/cnt",
+              "ADC_controller/t_sample_cnt"
+            ]
+          },
+          "max_gain_0_max_gain_out": {
+            "ports": [
+              "max_gain/max_gain_out",
+              "SampleTimeLUT/addra"
+            ]
+          },
+          "clk_0_1": {
+            "ports": [
+              "clk",
+              "sample_time_counter/clk",
+              "SampleTimeLUT/clka",
+              "ADC_simulator/clk",
+              "ADC_controller/clk"
+            ]
+          },
+          "rst_n_0_1": {
+            "ports": [
+              "rst_n",
+              "sample_time_counter/rst_n",
+              "ADC_simulator/rst_n",
+              "ADC_controller/rst_n"
+            ]
+          },
+          "ADC_controller_0_spi_cs": {
+            "ports": [
+              "ADC_controller/spi_cs",
+              "spi_cs",
+              "ADC_simulator/spi_cs"
+            ]
+          },
+          "ADC_controller_0_spi_addr": {
+            "ports": [
+              "ADC_controller/spi_addr",
+              "spi_addr",
+              "ADC_simulator/spi_addr"
+            ]
+          },
+          "ADC_controller_0_spi_dout": {
+            "ports": [
+              "ADC_controller/spi_dout",
+              "spi_mosi",
+              "ADC_simulator/spi_din"
+            ]
+          },
+          "ADC_simulator_0_spi_dout1": {
+            "ports": [
+              "ADC_simulator/spi_dout",
+              "spi_miso",
+              "ADC_controller/spi_din"
+            ]
+          },
+          "ADC_simulator_0_spi_irq1": {
+            "ports": [
+              "ADC_simulator/spi_irq",
+              "spi_irq",
+              "ADC_controller/spi_irq"
+            ]
+          },
+          "ADC_controller_0_gpio_UnD": {
+            "ports": [
+              "ADC_controller/gpio_UnD",
+              "gpio_UnD"
+            ]
+          },
+          "gpio_UnD_ref_1": {
+            "ports": [
+              "gpio_UnD_ref",
+              "ADC_controller/gpio_UnD_ref"
+            ]
+          },
+          "ADC_controller_0_gpio_nCS": {
+            "ports": [
+              "ADC_controller/gpio_nCS",
+              "gpio_nCS"
+            ]
+          },
+          "gpio_nCS_ref_1": {
+            "ports": [
+              "gpio_nCS_ref",
+              "ADC_controller/gpio_nCS_ref"
+            ]
+          },
+          "ADC_controller_t_sample_en": {
+            "ports": [
+              "ADC_controller/t_sample_en",
+              "t_sample_en",
+              "sample_time_counter/en"
+            ]
+          },
+          "sample_time_counter_irq": {
+            "ports": [
+              "sample_time_counter/irq",
+              "t_sample_irq",
+              "ADC_controller/t_sample_irq"
+            ]
+          },
+          "ADC_controller_0_ch_out": {
+            "ports": [
+              "ADC_controller/ch_out",
+              "ch_out"
+            ]
+          },
+          "ADC_controller_0_irq_out": {
+            "ports": [
+              "ADC_controller/irq_out",
+              "irq_out"
+            ]
+          },
+          "SampleTimeLUT_douta": {
+            "ports": [
+              "SampleTimeLUT/douta",
+              "sample_time",
+              "sample_time_counter/target"
+            ]
+          },
+          "curr_gain_1": {
+            "ports": [
+              "gains",
+              "max_gain/gains"
+            ]
+          }
+        }
+      },
+      "UnD_ref_concat": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "GainControl_test5_UnD_ref_concat_0",
+        "xci_path": "ip/GainControl_test5_UnD_ref_concat_0/GainControl_test5_UnD_ref_concat_0.xci",
+        "inst_hier_path": "UnD_ref_concat",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "UnD_slice": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "GainControl_test5_UnD_slice_0",
+        "xci_path": "ip/GainControl_test5_UnD_slice_0/GainControl_test5_UnD_slice_0.xci",
+        "inst_hier_path": "UnD_slice",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "3"
+          },
+          "DIN_WIDTH": {
+            "value": "4"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "gain_concat": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "GainControl_test5_gain_concat_0",
+        "xci_path": "ip/GainControl_test5_gain_concat_0/GainControl_test5_gain_concat_0.xci",
+        "inst_hier_path": "gain_concat",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "gain_const": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "GainControl_test5_gain_const_0",
+        "xci_path": "ip/GainControl_test5_gain_const_0/GainControl_test5_gain_const_0.xci",
+        "inst_hier_path": "gain_const",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "6"
+          }
+        }
+      },
+      "gain_controller": {
+        "vlnv": "xilinx.com:module_ref:gain_controller:1.0",
+        "xci_name": "GainControl_test5_gain_controller_0",
+        "xci_path": "ip/GainControl_test5_gain_controller_0/GainControl_test5_gain_controller_0.xci",
+        "inst_hier_path": "gain_controller",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "gain_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "GainControl_test5_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "adc_UnD": {
+            "direction": "I"
+          },
+          "adc_UnD_ref": {
+            "direction": "O"
+          },
+          "adc_nCS": {
+            "direction": "I"
+          },
+          "adc_nCS_ref": {
+            "direction": "O"
+          },
+          "gain": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "gain_ref": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          }
+        }
+      },
+      "gpio_const": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "GainControl_test5_gpio_const_0",
+        "xci_path": "ip/GainControl_test5_gpio_const_0/GainControl_test5_gpio_const_0.xci",
+        "inst_hier_path": "gpio_const",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "nCS_ref_concat": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "GainControl_test5_nCS_ref_concat_0",
+        "xci_path": "ip/GainControl_test5_nCS_ref_concat_0/GainControl_test5_nCS_ref_concat_0.xci",
+        "inst_hier_path": "nCS_ref_concat",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "nCS_slice": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "GainControl_test5_nCS_slice_0",
+        "xci_path": "ip/GainControl_test5_nCS_slice_0/GainControl_test5_nCS_slice_0.xci",
+        "inst_hier_path": "nCS_slice",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "3"
+          },
+          "DIN_WIDTH": {
+            "value": "4"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ADC_controller_0_ch_out": {
+        "ports": [
+          "ADCControl/ch_out",
+          "ch_out"
+        ]
+      },
+      "ADC_controller_0_gpio_UnD": {
+        "ports": [
+          "ADCControl/gpio_UnD",
+          "UnD_slice/Din",
+          "gpio_UnD"
+        ]
+      },
+      "ADC_controller_0_gpio_nCS": {
+        "ports": [
+          "ADCControl/gpio_nCS",
+          "nCS_slice/Din",
+          "gpio_nCS"
+        ]
+      },
+      "ADC_controller_0_irq_out": {
+        "ports": [
+          "ADCControl/irq_out",
+          "irq_out"
+        ]
+      },
+      "ADC_controller_0_spi_addr": {
+        "ports": [
+          "ADCControl/spi_addr",
+          "spi_addr"
+        ]
+      },
+      "ADC_controller_0_spi_cs": {
+        "ports": [
+          "ADCControl/spi_cs",
+          "spi_cs"
+        ]
+      },
+      "ADC_controller_0_spi_dout": {
+        "ports": [
+          "ADCControl/spi_mosi",
+          "spi_mosi"
+        ]
+      },
+      "ADC_controller_t_sample_en": {
+        "ports": [
+          "ADCControl/t_sample_en",
+          "t_sample_en"
+        ]
+      },
+      "ADC_simulator_0_spi_dout1": {
+        "ports": [
+          "ADCControl/spi_miso",
+          "spi_miso"
+        ]
+      },
+      "ADC_simulator_0_spi_irq1": {
+        "ports": [
+          "ADCControl/spi_irq",
+          "spi_irq"
+        ]
+      },
+      "SampleTimeLUT_douta": {
+        "ports": [
+          "ADCControl/sample_time",
+          "sample_time"
+        ]
+      },
+      "UnD_slice_Dout": {
+        "ports": [
+          "UnD_slice/Dout",
+          "gain_controller/adc_UnD"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "gain_controller/clk",
+          "ADCControl/clk"
+        ]
+      },
+      "curr_gain_1": {
+        "ports": [
+          "gain_concat/dout",
+          "ADCControl/gains"
+        ]
+      },
+      "gain_const_dout": {
+        "ports": [
+          "gain_const/dout",
+          "gain_concat/In0",
+          "gain_concat/In2",
+          "gain_concat/In1"
+        ]
+      },
+      "gain_controller_0_gain": {
+        "ports": [
+          "gain_controller/gain",
+          "gain",
+          "gain_concat/In3"
+        ]
+      },
+      "gain_controller_adc_UnD_ref": {
+        "ports": [
+          "gain_controller/adc_UnD_ref",
+          "UnD_ref_concat/In3"
+        ]
+      },
+      "gain_controller_adc_nCS_ref": {
+        "ports": [
+          "gain_controller/adc_nCS_ref",
+          "nCS_ref_concat/In3"
+        ]
+      },
+      "gain_ref_0_1": {
+        "ports": [
+          "gain_ref",
+          "gain_controller/gain_ref"
+        ]
+      },
+      "gpio_UnD_ref_1": {
+        "ports": [
+          "UnD_ref_concat/dout",
+          "gpio_UnD_ref",
+          "ADCControl/gpio_UnD_ref"
+        ]
+      },
+      "gpio_nCS_ref_1": {
+        "ports": [
+          "nCS_ref_concat/dout",
+          "gpio_nCS_ref",
+          "ADCControl/gpio_nCS_ref"
+        ]
+      },
+      "nCS_slice_Dout": {
+        "ports": [
+          "nCS_slice/Dout",
+          "gain_controller/adc_nCS"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "gain_controller/rst_n",
+          "ADCControl/rst_n"
+        ]
+      },
+      "sample_time_counter_irq": {
+        "ports": [
+          "ADCControl/t_sample_irq",
+          "t_sample_irq"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "gpio_const/dout",
+          "UnD_ref_concat/In0",
+          "UnD_ref_concat/In2",
+          "nCS_ref_concat/In0",
+          "nCS_ref_concat/In2",
+          "nCS_ref_concat/In1",
+          "UnD_ref_concat/In1"
+        ]
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@
         "direction": "I",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "ADCControl_clk",
+            "value": "MagController_clk",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -51,7 +51,13 @@
       "curr_gain": {
         "direction": "I",
         "left": "23",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "24",
+            "value_src": "default"
+          }
+        }
       },
       "data_out": {
         "direction": "O",
@@ -66,7 +72,13 @@
       "gpio_UnD_ref": {
         "direction": "I",
         "left": "3",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "default"
+          }
+        }
       },
       "gpio_nCS": {
         "direction": "O",
@@ -76,7 +88,13 @@
       "gpio_nCS_ref": {
         "direction": "I",
         "left": "3",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "default"
+          }
+        }
       },
       "irq_out": {
         "direction": "O"
@@ -209,7 +227,7 @@
             "direction": "I",
             "parameters": {
               "CLK_DOMAIN": {
-                "value": "ADCControl_clk",
+                "value": "MagController_clk",
                 "value_src": "default_prop"
               }
             }
@@ -245,7 +263,13 @@
           "gains": {
             "direction": "I",
             "left": "23",
-            "right": "0"
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "24",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "max_gain_out": {
             "direction": "O",
@@ -302,7 +326,7 @@
             "direction": "I",
             "parameters": {
               "CLK_DOMAIN": {
-                "value": "ADCControl_clk",
+                "value": "MagController_clk",
                 "value_src": "default_prop"
               }
             }
@@ -346,7 +370,13 @@
           "gpio_UnD_ref": {
             "direction": "I",
             "left": "3",
-            "right": "0"
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "4",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "gpio_nCS": {
             "direction": "O",
@@ -356,7 +386,13 @@
           "gpio_nCS_ref": {
             "direction": "I",
             "left": "3",
-            "right": "0"
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "4",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "t_sample_rest": {
             "direction": "O"

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ADC_controller, ADC_simulator, max_gain, counter, gain_controller, gain_controller, gain_controller, gain_controller
+# gain_controller, ADC_controller, ADC_simulator, max_gain, counter
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -127,462 +127,6 @@ if { $nRet != 0 } {
 # DESIGN PROCs
 ##################################################################
 
-
-# Hierarchical cell: GainControl_3
-proc create_hier_cell_GainControl_3 { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_GainControl_3() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-
-  # Create pins
-  create_bd_pin -dir O adc_UnD_ref
-  create_bd_pin -dir O adc_nCS_ref
-  create_bd_pin -dir I -type clk clk
-  create_bd_pin -dir O -from 5 -to 0 gain
-  create_bd_pin -dir I -from 5 -to 0 gain_ref
-  create_bd_pin -dir I -from 3 -to 0 gpio_UnD
-  create_bd_pin -dir I -from 3 -to 0 gpio_nCS
-  create_bd_pin -dir I -type rst rst_n
-
-  # Create instance: UnD_slice_0, and set properties
-  set UnD_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 UnD_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_WIDTH {4} \
- ] $UnD_slice_0
-
-  # Create instance: gain_controller_0, and set properties
-  set block_name gain_controller
-  set block_cell_name gain_controller_0
-  if { [catch {set gain_controller_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $gain_controller_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: nCS_slice_0, and set properties
-  set nCS_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 nCS_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_WIDTH {4} \
- ] $nCS_slice_0
-
-  # Create port connections
-  connect_bd_net -net ADC_controller_0_gpio_UnD [get_bd_pins gpio_UnD] [get_bd_pins UnD_slice_0/Din]
-  connect_bd_net -net ADC_controller_0_gpio_nCS [get_bd_pins gpio_nCS] [get_bd_pins nCS_slice_0/Din]
-  connect_bd_net -net UnD_slice_Dout [get_bd_pins UnD_slice_0/Dout] [get_bd_pins gain_controller_0/adc_UnD]
-  connect_bd_net -net clk_0_1 [get_bd_pins clk] [get_bd_pins gain_controller_0/clk]
-  connect_bd_net -net gain_controller_0_adc_UnD_ref [get_bd_pins adc_UnD_ref] [get_bd_pins gain_controller_0/adc_UnD_ref]
-  connect_bd_net -net gain_controller_0_adc_nCS_ref [get_bd_pins adc_nCS_ref] [get_bd_pins gain_controller_0/adc_nCS_ref]
-  connect_bd_net -net gain_controller_0_gain [get_bd_pins gain] [get_bd_pins gain_controller_0/gain]
-  connect_bd_net -net gain_ref_0_1 [get_bd_pins gain_ref] [get_bd_pins gain_controller_0/gain_ref]
-  connect_bd_net -net nCS_slice_Dout [get_bd_pins gain_controller_0/adc_nCS] [get_bd_pins nCS_slice_0/Dout]
-  connect_bd_net -net rst_n_0_1 [get_bd_pins rst_n] [get_bd_pins gain_controller_0/rst_n]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
-
-# Hierarchical cell: GainControl_2
-proc create_hier_cell_GainControl_2 { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_GainControl_2() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-
-  # Create pins
-  create_bd_pin -dir O adc_UnD_ref
-  create_bd_pin -dir O adc_nCS_ref
-  create_bd_pin -dir I -type clk clk
-  create_bd_pin -dir O -from 5 -to 0 gain
-  create_bd_pin -dir I -from 5 -to 0 gain_ref
-  create_bd_pin -dir I -from 3 -to 0 gpio_UnD
-  create_bd_pin -dir I -from 3 -to 0 gpio_nCS
-  create_bd_pin -dir I -type rst rst_n
-
-  # Create instance: UnD_slice_0, and set properties
-  set UnD_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 UnD_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_WIDTH {4} \
- ] $UnD_slice_0
-
-  # Create instance: gain_controller_0, and set properties
-  set block_name gain_controller
-  set block_cell_name gain_controller_0
-  if { [catch {set gain_controller_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $gain_controller_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: nCS_slice_0, and set properties
-  set nCS_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 nCS_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_WIDTH {4} \
- ] $nCS_slice_0
-
-  # Create port connections
-  connect_bd_net -net ADC_controller_0_gpio_UnD [get_bd_pins gpio_UnD] [get_bd_pins UnD_slice_0/Din]
-  connect_bd_net -net ADC_controller_0_gpio_nCS [get_bd_pins gpio_nCS] [get_bd_pins nCS_slice_0/Din]
-  connect_bd_net -net UnD_slice_Dout [get_bd_pins UnD_slice_0/Dout] [get_bd_pins gain_controller_0/adc_UnD]
-  connect_bd_net -net clk_0_1 [get_bd_pins clk] [get_bd_pins gain_controller_0/clk]
-  connect_bd_net -net gain_controller_0_adc_UnD_ref [get_bd_pins adc_UnD_ref] [get_bd_pins gain_controller_0/adc_UnD_ref]
-  connect_bd_net -net gain_controller_0_adc_nCS_ref [get_bd_pins adc_nCS_ref] [get_bd_pins gain_controller_0/adc_nCS_ref]
-  connect_bd_net -net gain_controller_0_gain [get_bd_pins gain] [get_bd_pins gain_controller_0/gain]
-  connect_bd_net -net gain_ref_0_1 [get_bd_pins gain_ref] [get_bd_pins gain_controller_0/gain_ref]
-  connect_bd_net -net nCS_slice_Dout [get_bd_pins gain_controller_0/adc_nCS] [get_bd_pins nCS_slice_0/Dout]
-  connect_bd_net -net rst_n_0_1 [get_bd_pins rst_n] [get_bd_pins gain_controller_0/rst_n]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
-
-# Hierarchical cell: GainControl_1
-proc create_hier_cell_GainControl_1 { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_GainControl_1() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-
-  # Create pins
-  create_bd_pin -dir O adc_UnD_ref
-  create_bd_pin -dir O adc_nCS_ref
-  create_bd_pin -dir I -type clk clk
-  create_bd_pin -dir O -from 5 -to 0 gain
-  create_bd_pin -dir I -from 5 -to 0 gain_ref
-  create_bd_pin -dir I -from 3 -to 0 gpio_UnD
-  create_bd_pin -dir I -from 3 -to 0 gpio_nCS
-  create_bd_pin -dir I -type rst rst_n
-
-  # Create instance: UnD_slice_0, and set properties
-  set UnD_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 UnD_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_WIDTH {4} \
- ] $UnD_slice_0
-
-  # Create instance: gain_controller_0, and set properties
-  set block_name gain_controller
-  set block_cell_name gain_controller_0
-  if { [catch {set gain_controller_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $gain_controller_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: nCS_slice_0, and set properties
-  set nCS_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 nCS_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_WIDTH {4} \
- ] $nCS_slice_0
-
-  # Create port connections
-  connect_bd_net -net ADC_controller_0_gpio_UnD [get_bd_pins gpio_UnD] [get_bd_pins UnD_slice_0/Din]
-  connect_bd_net -net ADC_controller_0_gpio_nCS [get_bd_pins gpio_nCS] [get_bd_pins nCS_slice_0/Din]
-  connect_bd_net -net UnD_slice_Dout [get_bd_pins UnD_slice_0/Dout] [get_bd_pins gain_controller_0/adc_UnD]
-  connect_bd_net -net clk_0_1 [get_bd_pins clk] [get_bd_pins gain_controller_0/clk]
-  connect_bd_net -net gain_controller_0_adc_UnD_ref [get_bd_pins adc_UnD_ref] [get_bd_pins gain_controller_0/adc_UnD_ref]
-  connect_bd_net -net gain_controller_0_adc_nCS_ref [get_bd_pins adc_nCS_ref] [get_bd_pins gain_controller_0/adc_nCS_ref]
-  connect_bd_net -net gain_controller_0_gain [get_bd_pins gain] [get_bd_pins gain_controller_0/gain]
-  connect_bd_net -net gain_ref_0_1 [get_bd_pins gain_ref] [get_bd_pins gain_controller_0/gain_ref]
-  connect_bd_net -net nCS_slice_Dout [get_bd_pins gain_controller_0/adc_nCS] [get_bd_pins nCS_slice_0/Dout]
-  connect_bd_net -net rst_n_0_1 [get_bd_pins rst_n] [get_bd_pins gain_controller_0/rst_n]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
-
-# Hierarchical cell: GainControl_0
-proc create_hier_cell_GainControl_0 { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_GainControl_0() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-
-  # Create pins
-  create_bd_pin -dir O adc_UnD_ref
-  create_bd_pin -dir O adc_nCS_ref
-  create_bd_pin -dir I -type clk clk
-  create_bd_pin -dir O -from 5 -to 0 gain
-  create_bd_pin -dir I -from 5 -to 0 gain_ref
-  create_bd_pin -dir I -from 3 -to 0 gpio_UnD
-  create_bd_pin -dir I -from 3 -to 0 gpio_nCS
-  create_bd_pin -dir I -type rst rst_n
-
-  # Create instance: UnD_slice_0, and set properties
-  set UnD_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 UnD_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_WIDTH {4} \
- ] $UnD_slice_0
-
-  # Create instance: gain_controller_0, and set properties
-  set block_name gain_controller
-  set block_cell_name gain_controller_0
-  if { [catch {set gain_controller_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $gain_controller_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: nCS_slice_0, and set properties
-  set nCS_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 nCS_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_WIDTH {4} \
- ] $nCS_slice_0
-
-  # Create port connections
-  connect_bd_net -net ADC_controller_0_gpio_UnD [get_bd_pins gpio_UnD] [get_bd_pins UnD_slice_0/Din]
-  connect_bd_net -net ADC_controller_0_gpio_nCS [get_bd_pins gpio_nCS] [get_bd_pins nCS_slice_0/Din]
-  connect_bd_net -net UnD_slice_Dout [get_bd_pins UnD_slice_0/Dout] [get_bd_pins gain_controller_0/adc_UnD]
-  connect_bd_net -net clk_0_1 [get_bd_pins clk] [get_bd_pins gain_controller_0/clk]
-  connect_bd_net -net gain_controller_0_adc_UnD_ref [get_bd_pins adc_UnD_ref] [get_bd_pins gain_controller_0/adc_UnD_ref]
-  connect_bd_net -net gain_controller_0_adc_nCS_ref [get_bd_pins adc_nCS_ref] [get_bd_pins gain_controller_0/adc_nCS_ref]
-  connect_bd_net -net gain_controller_0_gain [get_bd_pins gain] [get_bd_pins gain_controller_0/gain]
-  connect_bd_net -net gain_ref_0_1 [get_bd_pins gain_ref] [get_bd_pins gain_controller_0/gain_ref]
-  connect_bd_net -net nCS_slice_Dout [get_bd_pins gain_controller_0/adc_nCS] [get_bd_pins nCS_slice_0/Dout]
-  connect_bd_net -net rst_n_0_1 [get_bd_pins rst_n] [get_bd_pins gain_controller_0/rst_n]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
-
-# Hierarchical cell: GainControl
-proc create_hier_cell_GainControl { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_GainControl() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-
-  # Create pins
-  create_bd_pin -dir I -type clk clk
-  create_bd_pin -dir O -from 23 -to 0 gain
-  create_bd_pin -dir O -from 5 -to 0 gain_0
-  create_bd_pin -dir O -from 5 -to 0 gain_1
-  create_bd_pin -dir O -from 5 -to 0 gain_2
-  create_bd_pin -dir O -from 5 -to 0 gain_3
-  create_bd_pin -dir I -from 5 -to 0 gain_ref_0
-  create_bd_pin -dir I -from 5 -to 0 gain_ref_1
-  create_bd_pin -dir I -from 5 -to 0 gain_ref_2
-  create_bd_pin -dir I -from 5 -to 0 gain_ref_3
-  create_bd_pin -dir I -from 3 -to 0 gpio_UnD
-  create_bd_pin -dir O -from 3 -to 0 gpio_UnD_ref
-  create_bd_pin -dir I -from 3 -to 0 gpio_nCS
-  create_bd_pin -dir O -from 3 -to 0 gpio_nCS_ref
-  create_bd_pin -dir I -type rst rst_n
-
-  # Create instance: GainControl_0
-  create_hier_cell_GainControl_0 $hier_obj GainControl_0
-
-  # Create instance: GainControl_1
-  create_hier_cell_GainControl_1 $hier_obj GainControl_1
-
-  # Create instance: GainControl_2
-  create_hier_cell_GainControl_2 $hier_obj GainControl_2
-
-  # Create instance: GainControl_3
-  create_hier_cell_GainControl_3 $hier_obj GainControl_3
-
-  # Create instance: UnD_ref_concat, and set properties
-  set UnD_ref_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 UnD_ref_concat ]
-  set_property -dict [ list \
-   CONFIG.NUM_PORTS {4} \
- ] $UnD_ref_concat
-
-  # Create instance: gain_concat, and set properties
-  set gain_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 gain_concat ]
-  set_property -dict [ list \
-   CONFIG.IN0_WIDTH {6} \
-   CONFIG.IN1_WIDTH {6} \
-   CONFIG.IN2_WIDTH {6} \
-   CONFIG.IN3_WIDTH {6} \
-   CONFIG.NUM_PORTS {4} \
- ] $gain_concat
-
-  # Create instance: nCS_ref_concat, and set properties
-  set nCS_ref_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 nCS_ref_concat ]
-  set_property -dict [ list \
-   CONFIG.NUM_PORTS {4} \
- ] $nCS_ref_concat
-
-  # Create port connections
-  connect_bd_net -net ADC_controller_0_gpio_UnD [get_bd_pins gpio_UnD] [get_bd_pins GainControl_0/gpio_UnD] [get_bd_pins GainControl_1/gpio_UnD] [get_bd_pins GainControl_2/gpio_UnD] [get_bd_pins GainControl_3/gpio_UnD]
-  connect_bd_net -net ADC_controller_0_gpio_nCS [get_bd_pins gpio_nCS] [get_bd_pins GainControl_0/gpio_nCS] [get_bd_pins GainControl_1/gpio_nCS] [get_bd_pins GainControl_2/gpio_nCS] [get_bd_pins GainControl_3/gpio_nCS]
-  connect_bd_net -net GainControl_0_adc_UnD_ref [get_bd_pins GainControl_0/adc_UnD_ref] [get_bd_pins UnD_ref_concat/In0]
-  connect_bd_net -net GainControl_0_adc_nCS_ref [get_bd_pins GainControl_0/adc_nCS_ref] [get_bd_pins nCS_ref_concat/In0]
-  connect_bd_net -net GainControl_1_adc_UnD_ref [get_bd_pins GainControl_1/adc_UnD_ref] [get_bd_pins UnD_ref_concat/In1]
-  connect_bd_net -net GainControl_1_adc_nCS_ref [get_bd_pins GainControl_1/adc_nCS_ref] [get_bd_pins nCS_ref_concat/In1]
-  connect_bd_net -net GainControl_1_gain [get_bd_pins gain_1] [get_bd_pins GainControl_1/gain] [get_bd_pins gain_concat/In1]
-  connect_bd_net -net GainControl_2_adc_UnD_ref [get_bd_pins GainControl_2/adc_UnD_ref] [get_bd_pins UnD_ref_concat/In2]
-  connect_bd_net -net GainControl_2_adc_nCS_ref [get_bd_pins GainControl_2/adc_nCS_ref] [get_bd_pins nCS_ref_concat/In2]
-  connect_bd_net -net GainControl_2_gain [get_bd_pins gain_2] [get_bd_pins GainControl_2/gain] [get_bd_pins gain_concat/In2]
-  connect_bd_net -net GainControl_3_adc_UnD_ref [get_bd_pins GainControl_3/adc_UnD_ref] [get_bd_pins UnD_ref_concat/In3]
-  connect_bd_net -net GainControl_3_adc_nCS_ref [get_bd_pins GainControl_3/adc_nCS_ref] [get_bd_pins nCS_ref_concat/In3]
-  connect_bd_net -net GainControl_3_gain [get_bd_pins gain_3] [get_bd_pins GainControl_3/gain] [get_bd_pins gain_concat/In3]
-  connect_bd_net -net UnD_ref_concat_dout [get_bd_pins gpio_UnD_ref] [get_bd_pins UnD_ref_concat/dout]
-  connect_bd_net -net clk_0_1 [get_bd_pins clk] [get_bd_pins GainControl_0/clk] [get_bd_pins GainControl_1/clk] [get_bd_pins GainControl_2/clk] [get_bd_pins GainControl_3/clk]
-  connect_bd_net -net gain_concat_dout [get_bd_pins gain] [get_bd_pins gain_concat/dout]
-  connect_bd_net -net gain_controller_0_gain [get_bd_pins gain_0] [get_bd_pins GainControl_0/gain] [get_bd_pins gain_concat/In0]
-  connect_bd_net -net gain_ref_0_1 [get_bd_pins gain_ref_0] [get_bd_pins GainControl_0/gain_ref]
-  connect_bd_net -net gain_ref_1_1 [get_bd_pins gain_ref_1] [get_bd_pins GainControl_1/gain_ref]
-  connect_bd_net -net gain_ref_2_1 [get_bd_pins gain_ref_2] [get_bd_pins GainControl_2/gain_ref]
-  connect_bd_net -net gain_ref_3_1 [get_bd_pins gain_ref_3] [get_bd_pins GainControl_3/gain_ref]
-  connect_bd_net -net nCS_ref_concat_dout [get_bd_pins gpio_nCS_ref] [get_bd_pins nCS_ref_concat/dout]
-  connect_bd_net -net rst_n_0_1 [get_bd_pins rst_n] [get_bd_pins GainControl_0/rst_n] [get_bd_pins GainControl_1/rst_n] [get_bd_pins GainControl_2/rst_n] [get_bd_pins GainControl_3/rst_n]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
 
 # Hierarchical cell: ADCControl
 proc create_hier_cell_ADCControl { parentCell nameHier } {
@@ -775,14 +319,8 @@ proc create_root_design { parentCell } {
   # Create ports
   set ch_out [ create_bd_port -dir O -from 3 -to 0 ch_out ]
   set clk [ create_bd_port -dir I -type clk clk ]
-  set gain_0 [ create_bd_port -dir O -from 5 -to 0 gain_0 ]
-  set gain_1 [ create_bd_port -dir O -from 5 -to 0 gain_1 ]
-  set gain_2 [ create_bd_port -dir O -from 5 -to 0 gain_2 ]
-  set gain_3 [ create_bd_port -dir O -from 5 -to 0 gain_3 ]
-  set gain_ref_0 [ create_bd_port -dir I -from 5 -to 0 gain_ref_0 ]
-  set gain_ref_1 [ create_bd_port -dir I -from 5 -to 0 gain_ref_1 ]
-  set gain_ref_2 [ create_bd_port -dir I -from 5 -to 0 gain_ref_2 ]
-  set gain_ref_3 [ create_bd_port -dir I -from 5 -to 0 gain_ref_3 ]
+  set gain [ create_bd_port -dir O -from 5 -to 0 gain ]
+  set gain_ref [ create_bd_port -dir I -from 5 -to 0 gain_ref ]
   set gpio_UnD [ create_bd_port -dir O -from 3 -to 0 gpio_UnD ]
   set gpio_UnD_ref [ create_bd_port -dir O -from 3 -to 0 gpio_UnD_ref ]
   set gpio_nCS [ create_bd_port -dir O -from 3 -to 0 gpio_nCS ]
@@ -801,13 +339,71 @@ proc create_root_design { parentCell } {
   # Create instance: ADCControl
   create_hier_cell_ADCControl [current_bd_instance .] ADCControl
 
-  # Create instance: GainControl
-  create_hier_cell_GainControl [current_bd_instance .] GainControl
+  # Create instance: UnD_ref_concat, and set properties
+  set UnD_ref_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 UnD_ref_concat ]
+  set_property -dict [ list \
+   CONFIG.NUM_PORTS {4} \
+ ] $UnD_ref_concat
+
+  # Create instance: UnD_slice, and set properties
+  set UnD_slice [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 UnD_slice ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {1} \
+   CONFIG.DIN_TO {1} \
+   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $UnD_slice
+
+  # Create instance: gain_concat, and set properties
+  set gain_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 gain_concat ]
+  set_property -dict [ list \
+   CONFIG.NUM_PORTS {4} \
+ ] $gain_concat
+
+  # Create instance: gain_const, and set properties
+  set gain_const [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 gain_const ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_WIDTH {6} \
+ ] $gain_const
+
+  # Create instance: gain_controller, and set properties
+  set block_name gain_controller
+  set block_cell_name gain_controller
+  if { [catch {set gain_controller [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $gain_controller eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: gpio_const, and set properties
+  set gpio_const [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 gpio_const ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_WIDTH {1} \
+ ] $gpio_const
+
+  # Create instance: nCS_ref_concat, and set properties
+  set nCS_ref_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 nCS_ref_concat ]
+  set_property -dict [ list \
+   CONFIG.NUM_PORTS {4} \
+ ] $nCS_ref_concat
+
+  # Create instance: nCS_slice, and set properties
+  set nCS_slice [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 nCS_slice ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {1} \
+   CONFIG.DIN_TO {1} \
+   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $nCS_slice
 
   # Create port connections
   connect_bd_net -net ADC_controller_0_ch_out [get_bd_ports ch_out] [get_bd_pins ADCControl/ch_out]
-  connect_bd_net -net ADC_controller_0_gpio_UnD [get_bd_ports gpio_UnD] [get_bd_pins ADCControl/gpio_UnD] [get_bd_pins GainControl/gpio_UnD]
-  connect_bd_net -net ADC_controller_0_gpio_nCS [get_bd_ports gpio_nCS] [get_bd_pins ADCControl/gpio_nCS] [get_bd_pins GainControl/gpio_nCS]
+  connect_bd_net -net ADC_controller_0_gpio_UnD [get_bd_ports gpio_UnD] [get_bd_pins ADCControl/gpio_UnD] [get_bd_pins UnD_slice/Din]
+  connect_bd_net -net ADC_controller_0_gpio_nCS [get_bd_ports gpio_nCS] [get_bd_pins ADCControl/gpio_nCS] [get_bd_pins nCS_slice/Din]
   connect_bd_net -net ADC_controller_0_irq_out [get_bd_ports irq_out] [get_bd_pins ADCControl/irq_out]
   connect_bd_net -net ADC_controller_0_spi_addr [get_bd_ports spi_addr] [get_bd_pins ADCControl/spi_addr]
   connect_bd_net -net ADC_controller_0_spi_cs [get_bd_ports spi_cs] [get_bd_pins ADCControl/spi_cs]
@@ -815,21 +411,21 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ADC_controller_t_sample_en [get_bd_ports t_sample_en] [get_bd_pins ADCControl/t_sample_en]
   connect_bd_net -net ADC_simulator_0_spi_dout1 [get_bd_ports spi_miso] [get_bd_pins ADCControl/spi_miso]
   connect_bd_net -net ADC_simulator_0_spi_irq1 [get_bd_ports spi_irq] [get_bd_pins ADCControl/spi_irq]
-  connect_bd_net -net GainControl_1_gain [get_bd_ports gain_1] [get_bd_pins GainControl/gain_1]
-  connect_bd_net -net GainControl_2_gain [get_bd_ports gain_2] [get_bd_pins GainControl/gain_2]
-  connect_bd_net -net GainControl_3_gain [get_bd_ports gain_3] [get_bd_pins GainControl/gain_3]
   connect_bd_net -net SampleTimeLUT_douta [get_bd_ports sample_time] [get_bd_pins ADCControl/sample_time]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins ADCControl/clk] [get_bd_pins GainControl/clk]
-  connect_bd_net -net gain_controller_0_gain [get_bd_ports gain_0] [get_bd_pins GainControl/gain_0]
-  connect_bd_net -net gain_ref_0_1 [get_bd_ports gain_ref_0] [get_bd_pins GainControl/gain_ref_0]
-  connect_bd_net -net gain_ref_1_1 [get_bd_ports gain_ref_1] [get_bd_pins GainControl/gain_ref_1]
-  connect_bd_net -net gain_ref_2_1 [get_bd_ports gain_ref_2] [get_bd_pins GainControl/gain_ref_2]
-  connect_bd_net -net gain_ref_3_1 [get_bd_ports gain_ref_3] [get_bd_pins GainControl/gain_ref_3]
-  connect_bd_net -net gains_1 [get_bd_pins ADCControl/gains] [get_bd_pins GainControl/gain]
-  connect_bd_net -net gpio_UnD_ref_1 [get_bd_ports gpio_UnD_ref] [get_bd_pins ADCControl/gpio_UnD_ref] [get_bd_pins GainControl/gpio_UnD_ref]
-  connect_bd_net -net gpio_nCS_ref_1 [get_bd_ports gpio_nCS_ref] [get_bd_pins ADCControl/gpio_nCS_ref] [get_bd_pins GainControl/gpio_nCS_ref]
-  connect_bd_net -net rst_n_0_1 [get_bd_ports rst_n] [get_bd_pins ADCControl/rst_n] [get_bd_pins GainControl/rst_n]
+  connect_bd_net -net UnD_slice_Dout [get_bd_pins UnD_slice/Dout] [get_bd_pins gain_controller/adc_UnD]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins ADCControl/clk] [get_bd_pins gain_controller/clk]
+  connect_bd_net -net curr_gain_1 [get_bd_pins ADCControl/gains] [get_bd_pins gain_concat/dout]
+  connect_bd_net -net gain_const_dout [get_bd_pins gain_concat/In0] [get_bd_pins gain_concat/In2] [get_bd_pins gain_concat/In3] [get_bd_pins gain_const/dout]
+  connect_bd_net -net gain_controller_0_gain [get_bd_ports gain] [get_bd_pins gain_concat/In1] [get_bd_pins gain_controller/gain]
+  connect_bd_net -net gain_controller_adc_UnD_ref [get_bd_pins UnD_ref_concat/In1] [get_bd_pins gain_controller/adc_UnD_ref]
+  connect_bd_net -net gain_controller_adc_nCS_ref [get_bd_pins gain_controller/adc_nCS_ref] [get_bd_pins nCS_ref_concat/In1]
+  connect_bd_net -net gain_ref_0_1 [get_bd_ports gain_ref] [get_bd_pins gain_controller/gain_ref]
+  connect_bd_net -net gpio_UnD_ref_1 [get_bd_ports gpio_UnD_ref] [get_bd_pins ADCControl/gpio_UnD_ref] [get_bd_pins UnD_ref_concat/dout]
+  connect_bd_net -net gpio_nCS_ref_1 [get_bd_ports gpio_nCS_ref] [get_bd_pins ADCControl/gpio_nCS_ref] [get_bd_pins nCS_ref_concat/dout]
+  connect_bd_net -net nCS_slice_Dout [get_bd_pins gain_controller/adc_nCS] [get_bd_pins nCS_slice/Dout]
+  connect_bd_net -net rst_n_0_1 [get_bd_ports rst_n] [get_bd_pins ADCControl/rst_n] [get_bd_pins gain_controller/rst_n]
   connect_bd_net -net sample_time_counter_irq [get_bd_ports t_sample_irq] [get_bd_pins ADCControl/t_sample_irq]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins UnD_ref_concat/In0] [get_bd_pins UnD_ref_concat/In2] [get_bd_pins UnD_ref_concat/In3] [get_bd_pins gpio_const/dout] [get_bd_pins nCS_ref_concat/In0] [get_bd_pins nCS_ref_concat/In2] [get_bd_pins nCS_ref_concat/In3]
 
   # Create address segments
 

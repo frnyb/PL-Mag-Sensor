@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"GainControl_test5": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -1,0 +1,128 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.852875",
+   "Default View_TopLeft":"49,-277",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 1640 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x 0 -y 1980 -defaultsOSRD
+preplace portBus rd_addr -pg 1 -lvl 0 -x 0 -y 2000 -defaultsOSRD
+preplace portBus wr_addr -pg 1 -lvl 0 -x 0 -y 2020 -defaultsOSRD
+preplace portBus wr -pg 1 -lvl 0 -x 0 -y 1150 -defaultsOSRD
+preplace portBus hold -pg 1 -lvl 0 -x 0 -y 1470 -defaultsOSRD
+preplace portBus shift -pg 1 -lvl 0 -x 0 -y 1810 -defaultsOSRD
+preplace portBus rd_ch -pg 1 -lvl 0 -x 0 -y 2660 -defaultsOSRD
+preplace portBus busy -pg 1 -lvl 4 -x 1640 -y 1180 -defaultsOSRD
+preplace portBus irq -pg 1 -lvl 4 -x 1640 -y 1500 -defaultsOSRD
+preplace portBus wr_din -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus rd_out -pg 1 -lvl 4 -x 1640 -y 1870 -defaultsOSRD
+preplace inst hold_slice -pg 1 -lvl 1 -x 130 -y 1470 -defaultsOSRD -resize 180 296
+preplace inst shift_slice -pg 1 -lvl 1 -x 130 -y 1810 -defaultsOSRD -resize 180 296
+preplace inst xlconstant_0 -pg 1 -lvl 2 -x 840 -y 3400 -defaultsOSRD
+preplace inst busy_concat -pg 1 -lvl 3 -x 1490 -y 1180 -defaultsOSRD
+preplace inst irq_concat -pg 1 -lvl 3 -x 1490 -y 1500 -defaultsOSRD -resize 180 296
+preplace inst mag_pingpong_buffer_0 -pg 1 -lvl 2 -x 840 -y 130 -defaultsOSRD
+preplace inst mag_pingpong_buffer_10 -pg 1 -lvl 2 -x 840 -y 1810 -defaultsOSRD
+preplace inst mag_pingpong_buffer_11 -pg 1 -lvl 2 -x 840 -y 2090 -defaultsOSRD
+preplace inst mag_pingpong_buffer_1 -pg 1 -lvl 2 -x 840 -y 410 -defaultsOSRD
+preplace inst mag_pingpong_buffer_2 -pg 1 -lvl 2 -x 840 -y 690 -defaultsOSRD
+preplace inst mag_pingpong_buffer_3 -pg 1 -lvl 2 -x 840 -y 970 -defaultsOSRD
+preplace inst mag_pingpong_buffer_4 -pg 1 -lvl 2 -x 840 -y 1250 -defaultsOSRD
+preplace inst mag_pingpong_buffer_5 -pg 1 -lvl 2 -x 840 -y 2370 -defaultsOSRD
+preplace inst mag_pingpong_buffer_6 -pg 1 -lvl 2 -x 840 -y 2930 -defaultsOSRD
+preplace inst mag_pingpong_buffer_7 -pg 1 -lvl 2 -x 840 -y 2650 -defaultsOSRD
+preplace inst mag_pingpong_buffer_8 -pg 1 -lvl 2 -x 840 -y 3210 -defaultsOSRD
+preplace inst mag_pingpong_buffer_9 -pg 1 -lvl 2 -x 840 -y 1530 -defaultsOSRD
+preplace inst wr_slice -pg 1 -lvl 1 -x 130 -y 1150 -defaultsOSRD
+preplace inst rd_mux -pg 1 -lvl 3 -x 1490 -y 1870 -defaultsOSRD
+preplace netloc clk_1 1 0 2 NJ 1640 440
+preplace netloc rst_n_1 1 0 2 NJ 1980 450
+preplace netloc rd_addr_0_1 1 0 2 NJ 2000 460
+preplace netloc wr_addr_0_1 1 0 2 NJ 2020 470
+preplace netloc wr_din_0_1 1 0 2 N 140 400
+preplace netloc inp_0_1 1 0 1 NJ 1150
+preplace netloc wr_slice_ch0 1 1 1 250 180n
+preplace netloc wr_slice_ch1 1 1 1 260 460n
+preplace netloc wr_slice_ch2 1 1 1 320 740n
+preplace netloc wr_slice_ch3 1 1 1 380 1020n
+preplace netloc wr_slice_ch4 1 1 1 520 1120n
+preplace netloc wr_slice_ch5 1 1 1 510 1140n
+preplace netloc wr_slice_ch6 1 1 1 430 1160n
+preplace netloc wr_slice_ch7 1 1 1 490 1180n
+preplace netloc wr_slice_ch8 1 1 1 320 1200n
+preplace netloc wr_slice_ch9 1 1 1 380 1220n
+preplace netloc wr_slice_ch10 1 1 1 310 1240n
+preplace netloc wr_slice_ch11 1 1 1 260 1260n
+preplace netloc inp_0_2 1 0 1 NJ 1470
+preplace netloc hold_slice_ch11 1 1 1 370 1580n
+preplace netloc hold_slice_ch10 1 1 1 390 1560n
+preplace netloc hold_slice_ch9 1 1 1 270 1540n
+preplace netloc hold_slice_ch8 1 1 1 280 1520n
+preplace netloc hold_slice_ch7 1 1 1 360 1500n
+preplace netloc hold_slice_ch6 1 1 1 340 1480n
+preplace netloc hold_slice_ch5 1 1 1 420 1460n
+preplace netloc hold_slice_ch4 1 1 1 500 1320n
+preplace netloc hold_slice_ch3 1 1 1 420 1040n
+preplace netloc hold_slice_ch2 1 1 1 390 760n
+preplace netloc hold_slice_ch1 1 1 1 340 480n
+preplace netloc hold_slice_ch0 1 1 1 280 200n
+preplace netloc shift_slice_ch0 1 1 1 350 220n
+preplace netloc shift_slice_ch1 1 1 1 410 500n
+preplace netloc shift_slice_ch2 1 1 1 480 780n
+preplace netloc shift_slice_ch3 1 1 1 290 1060n
+preplace netloc shift_slice_ch4 1 1 1 250 1340n
+preplace netloc shift_slice_ch5 1 1 1 330 1800n
+preplace netloc shift_slice_ch6 1 1 1 290 1820n
+preplace netloc shift_slice_ch7 1 1 1 300 1840n
+preplace netloc shift_slice_ch8 1 1 1 250 1860n
+preplace netloc shift_slice_ch9 1 1 1 270 1620n
+preplace netloc shift_slice_ch10 1 1 1 N 1900
+preplace netloc shift_slice_ch11 1 1 1 310 1920n
+preplace netloc inp_0_3 1 0 1 NJ 1810
+preplace netloc sel_0_1 1 0 3 NJ 2660 240J 3580 1360J
+preplace netloc mag_pingpong_buffer_0_rd_dout 1 2 1 1260 120n
+preplace netloc mag_pingpong_buffer_1_rd_dout 1 2 1 1230 400n
+preplace netloc mag_pingpong_buffer_2_rd_dout 1 2 1 1190 680n
+preplace netloc mag_pingpong_buffer_3_rd_dout 1 2 1 1170 960n
+preplace netloc mag_pingpong_buffer_4_rd_dout 1 2 1 1150 1240n
+preplace netloc mag_pingpong_buffer_5_rd_dout 1 2 1 1210 1830n
+preplace netloc mag_pingpong_buffer_6_rd_dout 1 2 1 1260 1850n
+preplace netloc mag_pingpong_buffer_7_rd_dout 1 2 1 1250 1870n
+preplace netloc mag_pingpong_buffer_8_rd_dout 1 2 1 1290 1890n
+preplace netloc mag_pingpong_buffer_9_rd_dout 1 2 1 1140 1520n
+preplace netloc mag_pingpong_buffer_10_rd_dout 1 2 1 1120 1800n
+preplace netloc mag_pingpong_buffer_11_rd_dout 1 2 1 1230 1950n
+preplace netloc xlconstant_0_dout 1 2 1 1320 1970n
+preplace netloc mag_pingpong_buffer_0_busy 1 2 1 1280 140n
+preplace netloc mag_pingpong_buffer_1_busy 1 2 1 1240 420n
+preplace netloc mag_pingpong_buffer_2_busy 1 2 1 1220 700n
+preplace netloc mag_pingpong_buffer_3_busy 1 2 1 1180 980n
+preplace netloc mag_pingpong_buffer_4_busy 1 2 1 1050 1150n
+preplace netloc mag_pingpong_buffer_5_busy 1 2 1 1070 1170n
+preplace netloc mag_pingpong_buffer_6_busy 1 2 1 1110 1190n
+preplace netloc mag_pingpong_buffer_7_busy 1 2 1 1090 1210n
+preplace netloc mag_pingpong_buffer_8_busy 1 2 1 1130 1230n
+preplace netloc mag_pingpong_buffer_9_busy 1 2 1 1060 1250n
+preplace netloc mag_pingpong_buffer_10_busy 1 2 1 1080 1270n
+preplace netloc mag_pingpong_buffer_11_busy 1 2 1 1100 1290n
+preplace netloc busy_concat_dout 1 3 1 NJ 1180
+preplace netloc mag_pingpong_buffer_0_irq 1 1 2 550 3460 1160
+preplace netloc mag_pingpong_buffer_1_irq 1 1 2 560 3470 1180
+preplace netloc mag_pingpong_buffer_2_irq 1 1 2 570 3480 1200
+preplace netloc mag_pingpong_buffer_3_irq 1 1 2 580 3490 1220
+preplace netloc mag_pingpong_buffer_4_irq 1 1 2 590 3500 1240
+preplace netloc mag_pingpong_buffer_5_irq 1 1 2 610 3510 1270
+preplace netloc mag_pingpong_buffer_6_irq 1 1 2 630 3520 1280
+preplace netloc mag_pingpong_buffer_7_irq 1 1 2 600 3530 1300
+preplace netloc mag_pingpong_buffer_8_irq 1 1 2 620 3540 1310
+preplace netloc mag_pingpong_buffer_9_irq 1 1 2 520 3550 1330
+preplace netloc mag_pingpong_buffer_10_irq 1 1 2 530 3560 1340
+preplace netloc mag_pingpong_buffer_11_irq 1 1 2 540 3570 1350
+preplace netloc irq_concat_dout 1 3 1 NJ 1500
+preplace netloc rd_mux_outp 1 3 1 N 1870
+levelinfo -pg 1 0 130 840 1490 1640
+pagesize -pg 1 -db -bbox -sgen -150 -20 1780 3590
+"
+}
+

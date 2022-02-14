@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="GainControl_test3" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1644756284"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1644756284"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1644756284"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1644756284"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1644824361"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1644824361"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1644824361"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1644824361"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth/GainControl_test3.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

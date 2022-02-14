@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb 14 17:37:39 2022" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="BufferFlowControl_test1" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sine_generator" PORT="clk"/>
+        <CONNECTION INSTANCE="pingpong_buffer" PORT="clk"/>
+        <CONNECTION INSTANCE="pingpong_sim_writer" PORT="clk"/>
+        <CONNECTION INSTANCE="pingpong_sim_reader_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sine_generator" PORT="rst_n"/>
+        <CONNECTION INSTANCE="pingpong_buffer" PORT="rst_n"/>
+        <CONNECTION INSTANCE="pingpong_sim_writer" PORT="rst_n"/>
+        <CONNECTION INSTANCE="pingpong_sim_reader_0" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="din_0" RIGHT="0" SIGIS="undef" SIGNAME="sine_generator_sine_100_pi_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sine_generator" PORT="sine_100_pi_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="din_1" RIGHT="0" SIGIS="undef" SIGNAME="sine_generator_sine_400_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sine_generator" PORT="sine_400_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="bfr_dout_wr" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="9" NAME="bfr_addr_wr" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="bfr_wr" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_wr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_wr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="bfr_shift" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_shift">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_shift"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="bfr_busy" SIGIS="undef" SIGNAME="pingpong_buffer_busy">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_buffer" PORT="busy"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="9" NAME="bfr_addr_rd" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_reader_0_bfr_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_sim_reader_0" PORT="bfr_addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="bfr_hold" SIGIS="undef" SIGNAME="pingpong_sim_reader_0_bfr_hold">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_sim_reader_0" PORT="bfr_hold"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="bfr_dout_rd" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_buffer_rd_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_buffer" PORT="rd_dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="shifted_irq" SIGIS="undef" SIGNAME="pingpong_sim_writer_irq_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pingpong_sim_writer" PORT="irq_out"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/pingpong_buffer" HWVERSION="1.0" INSTANCE="pingpong_buffer" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pingpong_buffer" VLNV="xilinx.com:module_ref:pingpong_buffer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="word_width" VALUE="12"/>
+        <PARAMETER NAME="addr_width" VALUE="10"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test1_pingpong_buffer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="rd_addr" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_reader_0_bfr_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_sim_reader_0" PORT="bfr_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="rd_dout" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_buffer_rd_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_dout_rd"/>
+            <CONNECTION INSTANCE="pingpong_sim_reader_0" PORT="bfr_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="wr_addr" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="wr_din" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wr" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hold" SIGIS="undef" SIGNAME="pingpong_sim_reader_0_bfr_hold">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_sim_reader_0" PORT="bfr_hold"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="shift" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_shift">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_shift"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="busy" SIGIS="undef" SIGNAME="pingpong_buffer_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SIGIS="undef" SIGNAME="pingpong_buffer_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_sim_writer" PORT="bfr_irq"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_MAG_BF_CNT_INTERFACE" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="irq" PHYSICAL="irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pingpong_sim_reader_0" HWVERSION="1.0" INSTANCE="pingpong_sim_reader_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pingpong_sim_reader" VLNV="xilinx.com:module_ref:pingpong_sim_reader:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="word_width" VALUE="16"/>
+        <PARAMETER NAME="addr_width" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test1_pingpong_sim_reader_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="bfr_hold" SIGIS="undef" SIGNAME="pingpong_sim_reader_0_bfr_hold">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_buffer" PORT="hold"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_hold"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="bfr_din" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_buffer_rd_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_buffer" PORT="rd_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="bfr_addr" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_reader_0_bfr_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_buffer" PORT="rd_addr"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_addr_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="irq_in" SIGIS="undef" SIGNAME="pingpong_sim_writer_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_sim_writer" PORT="irq_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pingpong_sim_writer" HWVERSION="1.0" INSTANCE="pingpong_sim_writer" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pingpong_sim_writer" VLNV="xilinx.com:module_ref:pingpong_sim_writer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test1_pingpong_sim_writer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="bfr_wr" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_buffer" PORT="wr"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="bfr_shift" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_shift">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_buffer" PORT="shift"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_shift"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="bfr_irq" SIGIS="undef" SIGNAME="pingpong_buffer_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_buffer" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="bfr_dout" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_buffer" PORT="wr_din"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_dout_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="bfr_addr" RIGHT="0" SIGIS="undef" SIGNAME="pingpong_sim_writer_bfr_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pingpong_buffer" PORT="wr_addr"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_addr_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_0" RIGHT="0" SIGIS="undef" SIGNAME="sine_generator_sine_100_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sine_generator" PORT="sine_100_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_1" RIGHT="0" SIGIS="undef" SIGNAME="sine_generator_sine_400_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sine_generator" PORT="sine_400_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="pingpong_sim_writer_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="shifted_irq"/>
+            <CONNECTION INSTANCE="pingpong_sim_reader_0" PORT="irq_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="bfr" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="irq" PHYSICAL="bfr_irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE BD="sine_generator_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/sine_generator" INSTANCE="sine_generator" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="sine_generator.bd"/>
+        <PARAMETER NAME="TRAINING_MODULE" VALUE="sine_generator.bd"/>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="sine_generator.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="sine_generator.bd"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="sine_generator.bd"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_100_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="sine_generator_sine_100_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="din_0"/>
+            <CONNECTION INSTANCE="pingpong_sim_writer" PORT="din_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_400_0" RIGHT="0" SIGIS="undef" SIGNAME="sine_generator_sine_400_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="din_1"/>
+            <CONNECTION INSTANCE="pingpong_sim_writer" PORT="din_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_300_0" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_100_0" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_200_pi_3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_300_pi_3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_100_2_pi_3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_200_0" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_300_2_pi_3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_400_pi_3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_200_2_pi_3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="sine_400_2_pi_3" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="GainController_test4_wrapper_time_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="GainController_test4_wrapper" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="958000001fs"></ZoomEndTime>
+      <Cursor1Time time="153185413fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="313"></NameColumnWidth>
+      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject type="logic" fp_name="/GainController_test4_wrapper/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/GainController_test4_wrapper/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group602">
+      <obj_property name="label">output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/irq_out">
+         <obj_property name="ElementShortName">irq_out</obj_property>
+         <obj_property name="ObjectShortName">irq_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/ch_out">
+         <obj_property name="ElementShortName">ch_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ch_out[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/data_out">
+         <obj_property name="ElementShortName">data_out[11:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[11:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group601">
+      <obj_property name="label">gpio</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/gpio_UnD">
+         <obj_property name="ElementShortName">gpio_UnD[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gpio_UnD[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/gpio_UnD_ref">
+         <obj_property name="ElementShortName">gpio_UnD_ref[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gpio_UnD_ref[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/gpio_nCS">
+         <obj_property name="ElementShortName">gpio_nCS[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gpio_nCS[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/gpio_nCS_ref">
+         <obj_property name="ElementShortName">gpio_nCS_ref[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gpio_nCS_ref[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group600">
+      <obj_property name="label">gain</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/gain_ref">
+         <obj_property name="ElementShortName">gain_ref[5:0]</obj_property>
+         <obj_property name="ObjectShortName">gain_ref[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/gain">
+         <obj_property name="ElementShortName">gain[5:0]</obj_property>
+         <obj_property name="ObjectShortName">gain[5:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group599">
+      <obj_property name="label">sample_timer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/sample_time">
+         <obj_property name="ElementShortName">sample_time[19:0]</obj_property>
+         <obj_property name="ObjectShortName">sample_time[19:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/t_sample_en">
+         <obj_property name="ElementShortName">t_sample_en</obj_property>
+         <obj_property name="ObjectShortName">t_sample_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/t_sample_irq">
+         <obj_property name="ElementShortName">t_sample_irq</obj_property>
+         <obj_property name="ObjectShortName">t_sample_irq</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group598">
+      <obj_property name="label">SPI</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/spi_miso">
+         <obj_property name="ElementShortName">spi_miso[7:0]</obj_property>
+         <obj_property name="ObjectShortName">spi_miso[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/spi_mosi">
+         <obj_property name="ElementShortName">spi_mosi[7:0]</obj_property>
+         <obj_property name="ObjectShortName">spi_mosi[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/spi_addr">
+         <obj_property name="ElementShortName">spi_addr[1:0]</obj_property>
+         <obj_property name="ObjectShortName">spi_addr[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/spi_irq">
+         <obj_property name="ElementShortName">spi_irq</obj_property>
+         <obj_property name="ObjectShortName">spi_irq</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/spi_cs">
+         <obj_property name="ElementShortName">spi_cs</obj_property>
+         <obj_property name="ObjectShortName">spi_cs</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group597">
+      <obj_property name="label">ADC_controller_int</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/current_state">
+         <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/sampling_reg_n_0">
+         <obj_property name="ElementShortName">sampling_reg_n_0</obj_property>
+         <obj_property name="ObjectShortName">sampling_reg_n_0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/curr_mag">
+         <obj_property name="ElementShortName">curr_mag[1:0]</obj_property>
+         <obj_property name="ObjectShortName">curr_mag[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/\next_mag_reg_n_0_[0] ">
+         <obj_property name="ElementShortName">\next_mag_reg_n_0_[0] </obj_property>
+         <obj_property name="ObjectShortName">\next_mag_reg_n_0_[0] </obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/\next_mag_reg_n_0_[1] ">
+         <obj_property name="ElementShortName">\next_mag_reg_n_0_[1] </obj_property>
+         <obj_property name="ObjectShortName">\next_mag_reg_n_0_[1] </obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/curr_axis">
+         <obj_property name="ElementShortName">curr_axis[1:0]</obj_property>
+         <obj_property name="ObjectShortName">curr_axis[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/\next_axis_reg_n_0_[0] ">
+         <obj_property name="ElementShortName">\next_axis_reg_n_0_[0] </obj_property>
+         <obj_property name="ObjectShortName">\next_axis_reg_n_0_[0] </obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/\next_axis_reg_n_0_[1] ">
+         <obj_property name="ElementShortName">\next_axis_reg_n_0_[1] </obj_property>
+         <obj_property name="ObjectShortName">\next_axis_reg_n_0_[1] </obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/\axis_rd_reg_n_0_[0] ">
+         <obj_property name="ElementShortName">\axis_rd_reg_n_0_[0] </obj_property>
+         <obj_property name="ObjectShortName">\axis_rd_reg_n_0_[0] </obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/\axis_rd_reg_n_0_[1] ">
+         <obj_property name="ElementShortName">\axis_rd_reg_n_0_[1] </obj_property>
+         <obj_property name="ObjectShortName">\axis_rd_reg_n_0_[1] </obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_controller/U0/irq_int_reg_n_0">
+         <obj_property name="ElementShortName">irq_int_reg_n_0</obj_property>
+         <obj_property name="ObjectShortName">irq_int_reg_n_0</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group603">
+      <obj_property name="label">ADC_simulator_int</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/current_state">
+         <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/curr_mag">
+         <obj_property name="ElementShortName">curr_mag[1:0]</obj_property>
+         <obj_property name="ObjectShortName">curr_mag[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group629">
+         <obj_property name="label">data_high_out</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\data_high_out_reg_n_0_[0] ">
+            <obj_property name="ElementShortName">\data_high_out_reg_n_0_[0] </obj_property>
+            <obj_property name="ObjectShortName">\data_high_out_reg_n_0_[0] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\data_high_out_reg_n_0_[1] ">
+            <obj_property name="ElementShortName">\data_high_out_reg_n_0_[1] </obj_property>
+            <obj_property name="ObjectShortName">\data_high_out_reg_n_0_[1] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\data_high_out_reg_n_0_[2] ">
+            <obj_property name="ElementShortName">\data_high_out_reg_n_0_[2] </obj_property>
+            <obj_property name="ObjectShortName">\data_high_out_reg_n_0_[2] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\data_high_out_reg_n_0_[3] ">
+            <obj_property name="ElementShortName">\data_high_out_reg_n_0_[3] </obj_property>
+            <obj_property name="ObjectShortName">\data_high_out_reg_n_0_[3] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\data_high_out_reg_n_0_[4] ">
+            <obj_property name="ElementShortName">\data_high_out_reg_n_0_[4] </obj_property>
+            <obj_property name="ObjectShortName">\data_high_out_reg_n_0_[4] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\data_high_out_reg_n_0_[5] ">
+            <obj_property name="ElementShortName">\data_high_out_reg_n_0_[5] </obj_property>
+            <obj_property name="ObjectShortName">\data_high_out_reg_n_0_[5] </obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group622">
+         <obj_property name="label">axis_shift</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[0][0] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[0][0] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[0][0] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[0][1] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[0][1] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[0][1] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[0][2] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[0][2] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[0][2] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[0][3] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[0][3] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[0][3] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[1][0] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[1][0] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[1][0] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[1][1] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[1][1] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[1][1] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[1][2] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[1][2] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[1][2] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[1][3] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[1][3] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[1][3] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[2][0] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[2][0] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[2][0] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[2][1] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[2][1] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[2][1] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[2][2] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[2][2] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[2][2] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[2][3] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[2][3] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[2][3] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[3][0] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[3][0] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[3][0] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[3][1] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[3][1] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[3][1] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[3][2] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[3][2] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[3][2] </obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/GainController_test4_wrapper/GainController_test2_i/ADC_simulator/U0/\axis_shift_reg_reg_n_0_[3][3] ">
+            <obj_property name="ElementShortName">\axis_shift_reg_reg_n_0_[3][3] </obj_property>
+            <obj_property name="ObjectShortName">\axis_shift_reg_reg_n_0_[3][3] </obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

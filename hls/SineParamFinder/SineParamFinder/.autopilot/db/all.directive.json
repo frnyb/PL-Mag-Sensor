@@ -1,0 +1,29 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "SineParamFinder",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "SineParamFinder"
+              }]
+          }
+        },
+        {
+          "functionName": "SineParamFinder",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "SineParamFinder"
+              }]
+          }
+        }
+      ]
+    }]}

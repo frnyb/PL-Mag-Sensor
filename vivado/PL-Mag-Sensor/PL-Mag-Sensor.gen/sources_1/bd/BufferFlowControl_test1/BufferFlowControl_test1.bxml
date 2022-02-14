@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="39">
+  <CompositeFile CompositeFileTopName="BufferFlowControl_test1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1644856659"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1644856659"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1644856659"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1644856659"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth/BufferFlowControl_test1.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+      </File>
+      <File Name="sim/BufferFlowControl_test1.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="BufferFlowControl_test1_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+      </File>
+      <File Name="hw_handoff/BufferFlowControl_test1.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="BufferFlowControl_test1.bda">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="hw_handoff/BufferFlowControl_test1_bd.tcl">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="synth/BufferFlowControl_test1.hwdef">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="sim/BufferFlowControl_test1.protoinst">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="sine_generator" IsPR="false" State="Generated">
+        <ActiveVariantSynth FileName="bd/sine_generator_inst_0/sine_generator_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd/sine_generator_inst_0/sine_generator_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd/sine_generator_inst_0/sine_generator_inst_0.bd" BDFileset="sine_generator_inst_0" BDSourceFile="../../../../PL-Mag-Sensor.srcs/sources_1/bd/sine_generator/sine_generator.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="sine_generator" Type="Block Design" SubInstancePath="BufferFlowControl_test1_sine_generator_0">
+        <TopFile Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/sine_generator/sine_generator.bd"/>
+        <FileCollection>
+          <File Name="../../../../../../src/counter.vhd"/>
+          <File Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/sine_generator/sine_generator.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
+  </CompositeFile>
+</Root>
