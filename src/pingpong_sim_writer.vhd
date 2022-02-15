@@ -59,7 +59,7 @@ architecture Behavioral of pingpong_sim_writer is
     constant    CNT_MAX         :   UNSIGNED(10 downto 0)   :=  "10000000000";
 
     signal      wait_cnt        :   UNSIGNED(16 downto 0)   :=  (others => '0');
-    constant    WAIT_CNT_MAX    :   UNSIGNED(16 downto 0)   :=  "1" & X"869F";
+    constant    WAIT_CNT_MAX    :   UNSIGNED(16 downto 0)   :=  "0" & X"000F";
 
     signal      selector        :   STD_LOGIC               :=  '0';
 

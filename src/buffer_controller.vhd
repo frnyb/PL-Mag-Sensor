@@ -84,7 +84,7 @@ entity buffer_controller is
         gain_ref        :   out STD_LOGIC_VECTOR(23 downto 0);
 
         -- Output control:
-        n_samples_out   :   out STD_LOGIC_VECTOR(bf_addr_n_bits-1 downto 0);
+        n_samples_out   :   out STD_LOGIC_VECTOR(bf_addr_n_bits downto 0);
         irq_out         :   out STD_LOGIC_VECTOR(11 downto 0)
        
         -- Debug:
@@ -341,6 +341,32 @@ begin
                             sampling                <=  '0';
                         when s_sample_wait =>
                             t_sample_rest           <=  '0';
+
+                            case next_ch is
+                                when X"0" =>
+                                    next_ch         <=  X"3";
+                                when X"3" =>
+                                    next_ch         <=  X"6";
+                                when X"6" =>
+                                    next_ch         <=  X"9";
+                                when X"9" =>
+                                    next_ch         <=  X"1";
+                                when X"1" =>
+                                    next_ch         <=  X"4";
+                                when X"4" =>
+                                    next_ch         <=  X"7";
+                                when X"7" =>
+                                    next_ch         <=  X"A";
+                                when X"10" =>
+                                    next_ch         <=  X"2";
+                                when X"2" =>
+                                    next_ch         <=  X"5";
+                                when X"5" =>
+                                    next_ch         <=  X"8";
+                                when X"8" =>
+                                    next_ch         <=  X"B";
+                                when others => null;
+                            end case;
                         when others => null;
                     end case;
                 when s_sample_wait =>

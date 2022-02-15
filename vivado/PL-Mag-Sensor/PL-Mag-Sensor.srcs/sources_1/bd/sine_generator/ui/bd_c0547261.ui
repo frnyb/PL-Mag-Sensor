@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.957313",
-   "Default View_TopLeft":"-386,1760",
+   "Default View_ScaleFactor":"0.589295",
+   "Default View_TopLeft":"-132,1756",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -56,7 +56,7 @@ preplace netloc sine_200_2_pi_3_douta 1 1 2 480 1130 NJ
 preplace netloc sine_400_2_pi_3_douta 1 1 2 480 2030 NJ
 preplace netloc counter_0_cnt1 1 0 2 10 2200 440
 levelinfo -pg 1 -10 330 650 840
-pagesize -pg 1 -db -bbox -sgen -100 -140 1050 2470
+pagesize -pg 1 -db -bbox -sgen -100 -140 1040 2470
 "
 }
 0

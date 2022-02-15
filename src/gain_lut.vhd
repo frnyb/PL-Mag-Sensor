@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity gain_lut is
     generic(
-        bf_addr_n_bits  :   POSITIVE        :=  8
+        bf_addr_n_bits  :   POSITIVE        :=  10
     );
     port(
         -- STD ports:
@@ -51,6 +51,6 @@ end gain_lut;
 
 architecture Behavioral of gain_lut is
 begin
-    new_gain    <=  "100001";
+    new_gain    <=  "000000";
     irq         <=  clk;
 end Behavioral;

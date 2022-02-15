@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x24627BAE5E658C45",
+      "boundary_crc": "0x8CB3309F5AD55D99",
       "device": "xczu3eg-sbva484-1-i",
       "gen_directory": "../../../../PL-Mag-Sensor.gen/sources_1/bd/MagPingPongBuffers",
       "name": "MagPingPongBuffers",
@@ -74,12 +74,12 @@
       },
       "rd_addr": {
         "direction": "I",
-        "left": "7",
+        "left": "9",
         "right": "0"
       },
       "wr_addr": {
         "direction": "I",
-        "left": "7",
+        "left": "9",
         "right": "0"
       },
       "wr": {
@@ -286,6 +286,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_0_0/MagPingPongBuffers_mag_pingpong_buffer_0_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_0",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -330,7 +333,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -340,7 +343,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -368,6 +371,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_10_0/MagPingPongBuffers_mag_pingpong_buffer_10_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_10",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -412,7 +418,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -422,7 +428,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -450,6 +456,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_11_0/MagPingPongBuffers_mag_pingpong_buffer_11_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_11",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -494,7 +503,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -504,7 +513,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -532,6 +541,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_1_0/MagPingPongBuffers_mag_pingpong_buffer_1_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_1",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -576,7 +588,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -586,7 +598,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -614,6 +626,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_2_0/MagPingPongBuffers_mag_pingpong_buffer_2_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_2",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -658,7 +673,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -668,7 +683,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -696,6 +711,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_3_0/MagPingPongBuffers_mag_pingpong_buffer_3_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_3",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -740,7 +758,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -750,7 +768,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -778,6 +796,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_4_0/MagPingPongBuffers_mag_pingpong_buffer_4_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_4",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -822,7 +843,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -832,7 +853,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -860,6 +881,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_5_0/MagPingPongBuffers_mag_pingpong_buffer_5_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_5",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -904,7 +928,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -914,7 +938,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -942,6 +966,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_6_0/MagPingPongBuffers_mag_pingpong_buffer_6_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_6",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -986,7 +1013,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -996,7 +1023,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -1024,6 +1051,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_7_0/MagPingPongBuffers_mag_pingpong_buffer_7_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_7",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -1068,7 +1098,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -1078,7 +1108,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -1106,6 +1136,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_8_0/MagPingPongBuffers_mag_pingpong_buffer_8_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_8",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -1150,7 +1183,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -1160,7 +1193,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {
@@ -1188,6 +1221,9 @@
         "xci_path": "ip/MagPingPongBuffers_mag_pingpong_buffer_9_0/MagPingPongBuffers_mag_pingpong_buffer_9_0.xci",
         "inst_hier_path": "mag_pingpong_buffer_9",
         "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
           "word_width": {
             "value": "32"
           }
@@ -1232,7 +1268,7 @@
           },
           "rd_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "rd_dout": {
@@ -1242,7 +1278,7 @@
           },
           "wr_addr": {
             "direction": "I",
-            "left": "7",
+            "left": "9",
             "right": "0"
           },
           "wr_din": {

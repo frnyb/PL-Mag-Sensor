@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Mon Feb 14 17:38:48 2022
-// Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
+// Date        : Tue Feb 15 06:42:42 2022
+// Host        : ffn-X299 running 64-bit Ubuntu 20.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.gen/sources_1/bd/BufferFlowControl_test1/ip/BufferFlowControl_test1_pingpong_sim_reader_0_0/BufferFlowControl_test1_pingpong_sim_reader_0_0_sim_netlist.v
+//               /vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.gen/sources_1/bd/BufferFlowControl_test1/ip/BufferFlowControl_test1_pingpong_sim_reader_0_0/BufferFlowControl_test1_pingpong_sim_reader_0_0_sim_netlist.v
 // Design      : BufferFlowControl_test1_pingpong_sim_reader_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -337,16 +337,16 @@ module BufferFlowControl_test1_pingpong_sim_reader_0_0_pingpong_sim_reader
         .I5(Q[5]),
         .O(\cnt[9]_i_4_n_0 ));
   LUT4 #(
-    .INIT(16'hFFDF)) 
+    .INIT(16'hFFF7)) 
     \cnt[9]_i_5 
-       (.I0(\wait_cnt_reg_n_0_[3] ),
-        .I1(\wait_cnt_reg_n_0_[4] ),
-        .I2(\wait_cnt_reg_n_0_[5] ),
-        .I3(\wait_cnt_reg_n_0_[6] ),
+       (.I0(\wait_cnt_reg_n_0_[4] ),
+        .I1(\wait_cnt_reg_n_0_[3] ),
+        .I2(\wait_cnt_reg_n_0_[6] ),
+        .I3(\wait_cnt_reg_n_0_[5] ),
         .O(\cnt[9]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
+    .INIT(32'hFDFFFFFF)) 
     \cnt[9]_i_6 
        (.I0(\wait_cnt_reg_n_0_[0] ),
         .I1(\wait_cnt_reg_n_0_[15] ),
@@ -363,10 +363,10 @@ module BufferFlowControl_test1_pingpong_sim_reader_0_0_pingpong_sim_reader
         .I3(\wait_cnt_reg_n_0_[13] ),
         .O(\cnt[9]_i_7_n_0 ));
   LUT4 #(
-    .INIT(16'hDFFF)) 
+    .INIT(16'hFFFE)) 
     \cnt[9]_i_8 
-       (.I0(\wait_cnt_reg_n_0_[7] ),
-        .I1(\wait_cnt_reg_n_0_[8] ),
+       (.I0(\wait_cnt_reg_n_0_[8] ),
+        .I1(\wait_cnt_reg_n_0_[7] ),
         .I2(\wait_cnt_reg_n_0_[10] ),
         .I3(\wait_cnt_reg_n_0_[9] ),
         .O(\cnt[9]_i_8_n_0 ));

@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 15 09:07:57 2022" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="BufferFlowControl_test3" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="clk"/>
+        <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="clk"/>
+        <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="clk"/>
+        <CONNECTION INSTANCE="BufferFlowControl_gain_LUT" PORT="clk"/>
+        <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="clk"/>
+        <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="23" NAME="gain_curr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_curr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="gain_curr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="23" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_gain_ref">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="gain_ref"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="rst_n"/>
+        <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="rst_n"/>
+        <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="rst_n"/>
+        <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="rst_n"/>
+        <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="rst_n"/>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="rst_n"/>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="busy" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_MagPingPongBuffers_0_busy">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="busy"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="10" NAME="n_samples" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_n_samples_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="n_samples_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="irq_bfr_ctl_out" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_irq_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="irq_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_dout" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_MagPingPongBuffers_0_rd_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="rd_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="bfr_irq_in" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_irq">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="irq"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="bfr_din" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="bfr_wr_ch_in" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_channel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="channel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="bfr_hold_in" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_hold">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="hold"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="9" NAME="bfr_rd_addr_in" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="bfr_rd_ch_in" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_channel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="channel"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE BD="MagPingPongBuffers_inst_2" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/BufferFlowControl/MagPingPongBuffers_0" INSTANCE="BufferFlowControl_MagPingPongBuffers_0" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="MagPingPongBuffers.bd"/>
+        <PARAMETER NAME="TRAINING_MODULE" VALUE="MagPingPongBuffers.bd"/>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="MagPingPongBuffers.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="MagPingPongBuffers.bd"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="MagPingPongBuffers.bd"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="rd_addr" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="wr_addr" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_bf_wr_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="bf_wr_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="wr" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_bf_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="bf_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="hold" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_hold">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="hold"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="shift" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_bf_shift">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="bf_shift"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="rd_ch" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="channel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="busy" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_MagPingPongBuffers_0_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="irq" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_MagPingPongBuffers_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="bf_irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="wr_din" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_bf_wr_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="bf_wr_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="rd_out" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_MagPingPongBuffers_0_rd_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="din"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/BufferFlowControl/buffer_controller" HWVERSION="1.0" INSTANCE="BufferFlowControl_buffer_controller" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="buffer_controller" VLNV="xilinx.com:module_ref:buffer_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="t_sample_n_bits" VALUE="20"/>
+        <PARAMETER NAME="t_sample_target_val" VALUE="10"/>
+        <PARAMETER NAME="t_period_n_bits" VALUE="21"/>
+        <PARAMETER NAME="t_period_target_val" VALUE="10"/>
+        <PARAMETER NAME="bf_addr_n_bits" VALUE="10"/>
+        <PARAMETER NAME="GAIN_HYST_MAX_THRESH" VALUE="0xFF0"/>
+        <PARAMETER NAME="GAIN_HYST_MIN_THRESH" VALUE="0xF10"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test3_buffer_controller_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="t_sample_en" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_sample_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="t_sample_rest" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_sample_rest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="restart"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="t_sample_irq" SIGIS="undef" SIGNAME="BufferFlowControl_sample_interval_timer_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="19" NAME="t_sample_cnt" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_sample_interval_timer_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="19" NAME="t_sample_target" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_sample_target">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="target"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="t_period_en" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_period_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="t_period_rest" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_period_rest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="restart"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="t_period_irq" SIGIS="undef" SIGNAME="BufferFlowControl_signal_period_timer_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="20" NAME="t_period_cnt" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_signal_period_timer_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="20" NAME="t_period_target" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_period_target">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="target"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="adc_din" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="adc_ch" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="channel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="adc_irq" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="bf_wr_addr" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_bf_wr_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="wr_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bf_wr_data" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_bf_wr_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="wr_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="bf_wr" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_bf_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="bf_shift" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_bf_shift">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="shift"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="bf_irq" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_MagPingPongBuffers_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="lut_n_over" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_lut_n_over">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_gain_LUT" PORT="n_over"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="lut_top_val" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_lut_top_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_gain_LUT" PORT="top_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="lut_gain_UnD" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_lut_gain_UnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_gain_LUT" PORT="gain_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="lut_curr_gain" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_lut_curr_gain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_gain_LUT" PORT="curr_gain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="lut_new_gain" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_gain_LUT_new_gain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_gain_LUT" PORT="new_gain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="lut_irq" SIGIS="undef" SIGNAME="BufferFlowControl_gain_LUT_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_gain_LUT" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="gain_curr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_curr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gain_curr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_gain_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="n_samples_out" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_n_samples_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="n_samples"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="n_samples"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="irq_out" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_1" PORT="irq"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="irq_bfr_ctl_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="adc" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="irq" PHYSICAL="adc_irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="bf" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="irq" PHYSICAL="bf_irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="lut" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="irq" PHYSICAL="lut_irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="t_period" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="en" PHYSICAL="t_period_en"/>
+            <PORTMAP LOGICAL="cnt" PHYSICAL="t_period_cnt"/>
+            <PORTMAP LOGICAL="irq" PHYSICAL="t_period_irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="t_sample" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="en" PHYSICAL="t_sample_en"/>
+            <PORTMAP LOGICAL="cnt" PHYSICAL="t_sample_cnt"/>
+            <PORTMAP LOGICAL="irq" PHYSICAL="t_sample_irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/BufferFlowControl/gain_LUT" HWVERSION="1.0" INSTANCE="BufferFlowControl_gain_LUT" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gain_lut" VLNV="xilinx.com:module_ref:gain_lut:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="bf_addr_n_bits" VALUE="10"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test3_gain_LUT_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="n_over" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_lut_n_over">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="lut_n_over"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="top_val" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_lut_top_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="lut_top_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="gain_UnD" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_lut_gain_UnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="lut_gain_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="curr_gain" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_lut_curr_gain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="lut_curr_gain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="new_gain" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_gain_LUT_new_gain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="lut_new_gain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SIGIS="undef" SIGNAME="BufferFlowControl_gain_LUT_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="lut_irq"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_MAG_BF_CNT_INTERFACE" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="irq" PHYSICAL="irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/BufferFlowControl/sample_interval_timer" HWVERSION="1.0" INSTANCE="BufferFlowControl_sample_interval_timer" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="counter" VLNV="xilinx.com:module_ref:counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="20"/>
+        <PARAMETER NAME="auto_rst" VALUE="&quot;0&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test3_sample_interval_timer_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_sample_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_sample_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="restart" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_sample_rest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_sample_rest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="19" NAME="target" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_sample_target">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_sample_target"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="19" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_sample_interval_timer_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_sample_cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SIGIS="undef" SIGNAME="BufferFlowControl_sample_interval_timer_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_sample_irq"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_MAG_BF_CNT_INTERFACE" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="en" PHYSICAL="en"/>
+            <PORTMAP LOGICAL="restart" PHYSICAL="restart"/>
+            <PORTMAP LOGICAL="cnt" PHYSICAL="cnt"/>
+            <PORTMAP LOGICAL="irq" PHYSICAL="irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/BufferFlowControl/signal_period_timer" HWVERSION="1.0" INSTANCE="BufferFlowControl_signal_period_timer" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="counter" VLNV="xilinx.com:module_ref:counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="21"/>
+        <PARAMETER NAME="auto_rst" VALUE="&quot;0&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test3_signal_period_timer_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_period_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_period_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="restart" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_period_rest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_period_rest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="20" NAME="target" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_t_period_target">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_period_target"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="20" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_signal_period_timer_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_period_cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SIGIS="undef" SIGNAME="BufferFlowControl_signal_period_timer_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="t_period_irq"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_MAG_BF_CNT_INTERFACE" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="en" PHYSICAL="en"/>
+            <PORTMAP LOGICAL="restart" PHYSICAL="restart"/>
+            <PORTMAP LOGICAL="cnt" PHYSICAL="cnt"/>
+            <PORTMAP LOGICAL="irq" PHYSICAL="irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Simulator/buffer_flow_control_0" HWVERSION="1.0" INSTANCE="Simulator_buffer_flow_control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="buffer_flow_control_tester" VLNV="xilinx.com:module_ref:buffer_flow_control_tester:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test3_buffer_flow_control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="adc_irq"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_irq_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="adc_din"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="channel" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_0_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="adc_ch"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_wr_ch_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_0" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_100_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_100_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_1" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_400_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_400_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_2" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_300_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_300_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_100_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_100_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_4" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_200_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_200_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_5" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_300_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_300_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_6" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_100_2_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_100_2_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_7" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_200_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_200_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_8" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_300_2_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_300_2_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_9" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_400_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_400_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_A" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_200_2_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_200_2_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_B" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_400_2_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="sine_400_2_pi_3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_MAG_BF_CNT_INTERFACE" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="irq" PHYSICAL="irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Simulator/buffer_flow_control_1" HWVERSION="1.0" INSTANCE="Simulator_buffer_flow_control_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="buffer_flow_control_reader" VLNV="xilinx.com:module_ref:buffer_flow_control_reader:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BufferFlowControl_test3_buffer_flow_control_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="hold" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_hold">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="hold"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_hold_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="rd_addr"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="channel" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_buffer_flow_control_1_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="rd_ch"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_ch_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="n_samples" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_n_samples_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="n_samples_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="irq" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_buffer_controller_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="irq_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_MagPingPongBuffers_0_rd_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="rd_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_MAG_BF_CNT_INTERFACE" TYPE="TARGET" VLNV="DIII:user:MAG_BF_CNT_INTERFACE:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="irq" PHYSICAL="irq"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE BD="sine_generator_inst_2" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/Simulator/sine_generator_0" INSTANCE="Simulator_sine_generator_0" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="sine_generator.bd"/>
+        <PARAMETER NAME="TRAINING_MODULE" VALUE="sine_generator.bd"/>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="sine_generator.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="sine_generator.bd"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="sine_generator.bd"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_100_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_100_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_400_0" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_400_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_300_0" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_300_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_100_0" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_100_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_200_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_200_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_300_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_300_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_100_2_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_100_2_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_200_0" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_200_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_300_2_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_300_2_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_8"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_400_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_400_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_9"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_200_2_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_200_2_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="sine_400_2_pi_3" RIGHT="0" SIGIS="undef" SIGNAME="Simulator_sine_generator_0_sine_400_2_pi_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="din_B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

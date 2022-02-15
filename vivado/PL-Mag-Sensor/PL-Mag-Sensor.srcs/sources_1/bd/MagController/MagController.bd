@@ -35,9 +35,9 @@
         "gain_controller_3": ""
       },
       "BufferFlowControl": {
-        "gain_LUT": "",
         "sample_interval_timer": "",
         "signal_period_timer": "",
+        "gain_LUT": "",
         "buffer_controller": ""
       },
       "ADCControl": ""
@@ -1142,64 +1142,6 @@
           }
         },
         "components": {
-          "gain_LUT": {
-            "vlnv": "xilinx.com:module_ref:gain_lut:1.0",
-            "xci_name": "MagController_gain_lut_0_0",
-            "xci_path": "ip/MagController_gain_lut_0_0/MagController_gain_lut_0_0.xci",
-            "inst_hier_path": "BufferFlowControl/gain_LUT",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "gain_lut",
-              "boundary_crc": "0x0"
-            },
-            "interface_ports": {
-              "user_MAG_BF_CNT_INTERFACE": {
-                "mode": "Slave",
-                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-                "port_maps": {
-                  "irq": {
-                    "physical_name": "irq",
-                    "direction": "O"
-                  }
-                }
-              }
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "MagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "n_over": {
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "top_val": {
-                "direction": "I",
-                "left": "11",
-                "right": "0"
-              },
-              "gain_UnD": {
-                "direction": "I"
-              },
-              "curr_gain": {
-                "direction": "I",
-                "left": "5",
-                "right": "0"
-              },
-              "new_gain": {
-                "direction": "O",
-                "left": "5",
-                "right": "0"
-              }
-            }
-          },
           "sample_interval_timer": {
             "vlnv": "xilinx.com:module_ref:counter:1.0",
             "xci_name": "MagController_counter_0_0",
@@ -1340,6 +1282,58 @@
               "target": {
                 "direction": "I",
                 "left": "20",
+                "right": "0"
+              }
+            }
+          },
+          "gain_LUT": {
+            "vlnv": "xilinx.com:module_ref:gain_lut:1.0",
+            "xci_name": "MagController_gain_lut_0_0",
+            "xci_path": "ip/MagController_gain_lut_0_0/MagController_gain_lut_0_0.xci",
+            "inst_hier_path": "BufferFlowControl/gain_LUT",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gain_lut",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "user_MAG_BF_CNT_INTERFACE": {
+                "mode": "Slave",
+                "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+                "port_maps": {
+                  "irq": {
+                    "physical_name": "irq",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "n_over": {
+                "direction": "I",
+                "left": "9",
+                "right": "0"
+              },
+              "top_val": {
+                "direction": "I",
+                "left": "11",
+                "right": "0"
+              },
+              "gain_UnD": {
+                "direction": "I"
+              },
+              "curr_gain": {
+                "direction": "I",
+                "left": "5",
+                "right": "0"
+              },
+              "new_gain": {
+                "direction": "O",
+                "left": "5",
                 "right": "0"
               }
             }
@@ -1524,7 +1518,7 @@
               },
               "n_samples_out": {
                 "direction": "O",
-                "left": "7",
+                "left": "8",
                 "right": "0"
               },
               "irq_out": {
@@ -1539,9 +1533,9 @@
           "clk_1": {
             "ports": [
               "clk",
-              "gain_LUT/clk",
               "sample_interval_timer/clk",
               "signal_period_timer/clk",
+              "gain_LUT/clk",
               "buffer_controller/clk"
             ]
           },

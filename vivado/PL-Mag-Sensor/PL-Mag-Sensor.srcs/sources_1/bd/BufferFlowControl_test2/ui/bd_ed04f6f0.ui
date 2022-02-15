@@ -1,0 +1,14 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-422,-797",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace inst MagPingPongBuffers -pg 1 -lvl 2 -x 450 -y -230 -defaultsOSRD
+preplace inst sine_generator -pg 1 -lvl 1 -x 20 -y 50 -defaultsOSRD
+levelinfo -pg 1 -140 20 450 610
+pagesize -pg 1 -db -bbox -sgen -140 -370 610 530
+"
+}
+

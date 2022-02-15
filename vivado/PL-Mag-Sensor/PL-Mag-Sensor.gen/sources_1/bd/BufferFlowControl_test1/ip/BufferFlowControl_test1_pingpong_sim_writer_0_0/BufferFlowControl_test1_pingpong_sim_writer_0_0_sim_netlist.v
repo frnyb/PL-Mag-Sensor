@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Mon Feb 14 17:38:48 2022
-// Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
+// Date        : Tue Feb 15 06:42:24 2022
+// Host        : ffn-X299 running 64-bit Ubuntu 20.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.gen/sources_1/bd/BufferFlowControl_test1/ip/BufferFlowControl_test1_pingpong_sim_writer_0_0/BufferFlowControl_test1_pingpong_sim_writer_0_0_sim_netlist.v
+//               /vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.gen/sources_1/bd/BufferFlowControl_test1/ip/BufferFlowControl_test1_pingpong_sim_writer_0_0/BufferFlowControl_test1_pingpong_sim_writer_0_0_sim_netlist.v
 // Design      : BufferFlowControl_test1_pingpong_sim_writer_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -135,24 +135,24 @@ module BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpong_sim_writer
   wire selector_i_3_n_0;
   wire [16:0]wait_cnt;
   wire wait_cnt0;
-  wire wait_cnt0_carry__0_n_1;
-  wire wait_cnt0_carry__0_n_2;
-  wire wait_cnt0_carry__0_n_3;
-  wire wait_cnt0_carry__0_n_4;
-  wire wait_cnt0_carry__0_n_5;
-  wire wait_cnt0_carry__0_n_6;
-  wire wait_cnt0_carry__0_n_7;
-  wire wait_cnt0_carry_n_0;
-  wire wait_cnt0_carry_n_1;
-  wire wait_cnt0_carry_n_2;
-  wire wait_cnt0_carry_n_3;
-  wire wait_cnt0_carry_n_4;
-  wire wait_cnt0_carry_n_5;
-  wire wait_cnt0_carry_n_6;
-  wire wait_cnt0_carry_n_7;
   wire \wait_cnt[16]_i_1_n_0 ;
-  wire \wait_cnt[16]_i_3_n_0 ;
-  wire [7:7]NLW_wait_cnt0_carry__0_CO_UNCONNECTED;
+  wire \wait_cnt[16]_i_4_n_0 ;
+  wire \wait_cnt_reg[16]_i_3_n_1 ;
+  wire \wait_cnt_reg[16]_i_3_n_2 ;
+  wire \wait_cnt_reg[16]_i_3_n_3 ;
+  wire \wait_cnt_reg[16]_i_3_n_4 ;
+  wire \wait_cnt_reg[16]_i_3_n_5 ;
+  wire \wait_cnt_reg[16]_i_3_n_6 ;
+  wire \wait_cnt_reg[16]_i_3_n_7 ;
+  wire \wait_cnt_reg[8]_i_1_n_0 ;
+  wire \wait_cnt_reg[8]_i_1_n_1 ;
+  wire \wait_cnt_reg[8]_i_1_n_2 ;
+  wire \wait_cnt_reg[8]_i_1_n_3 ;
+  wire \wait_cnt_reg[8]_i_1_n_4 ;
+  wire \wait_cnt_reg[8]_i_1_n_5 ;
+  wire \wait_cnt_reg[8]_i_1_n_6 ;
+  wire \wait_cnt_reg[8]_i_1_n_7 ;
+  wire [7:7]\NLW_wait_cnt_reg[16]_i_3_CO_UNCONNECTED ;
 
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
@@ -241,16 +241,16 @@ module BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpong_sim_writer
         .O(\FSM_onehot_current_state[7]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
-    .INIT(16'hFFF7)) 
+    .INIT(16'hFFFD)) 
     \FSM_onehot_current_state[7]_i_4 
-       (.I0(wait_cnt[4]),
-        .I1(wait_cnt[3]),
+       (.I0(wait_cnt[3]),
+        .I1(wait_cnt[4]),
         .I2(wait_cnt[6]),
         .I3(wait_cnt[5]),
         .O(\FSM_onehot_current_state[7]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
+    .INIT(32'hFDFFFFFF)) 
     \FSM_onehot_current_state[7]_i_5 
        (.I0(wait_cnt[0]),
         .I1(wait_cnt[15]),
@@ -267,10 +267,10 @@ module BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpong_sim_writer
         .I3(wait_cnt[13]),
         .O(\FSM_onehot_current_state[7]_i_6_n_0 ));
   LUT4 #(
-    .INIT(16'hDFFF)) 
+    .INIT(16'hFFFE)) 
     \FSM_onehot_current_state[7]_i_7 
-       (.I0(wait_cnt[7]),
-        .I1(wait_cnt[8]),
+       (.I0(wait_cnt[8]),
+        .I1(wait_cnt[7]),
         .I2(wait_cnt[10]),
         .I3(wait_cnt[9]),
         .O(\FSM_onehot_current_state[7]_i_7_n_0 ));
@@ -569,24 +569,24 @@ module BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpong_sim_writer
         .I5(Q[9]),
         .O(cnt__0[9]));
   LUT6 #(
-    .INIT(64'h0020000000000000)) 
+    .INIT(64'h0000000000000002)) 
     \cnt[9]_i_3 
        (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
         .I1(\FSM_onehot_current_state[7]_i_6_n_0 ),
-        .I2(wait_cnt[7]),
-        .I3(wait_cnt[8]),
+        .I2(wait_cnt[8]),
+        .I3(wait_cnt[7]),
         .I4(wait_cnt[10]),
         .I5(wait_cnt[9]),
         .O(\cnt[9]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hFEFFFFFF)) 
+    .INIT(32'hFFFEFFFF)) 
     \cnt[9]_i_4 
        (.I0(\FSM_onehot_current_state[7]_i_5_n_0 ),
         .I1(wait_cnt[5]),
         .I2(wait_cnt[6]),
-        .I3(wait_cnt[3]),
-        .I4(wait_cnt[4]),
+        .I3(wait_cnt[4]),
+        .I4(wait_cnt[3]),
         .O(\cnt[9]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
@@ -757,22 +757,6 @@ module BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpong_sim_writer
         .D(selector_i_1_n_0),
         .Q(selector),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY8 wait_cnt0_carry
-       (.CI(wait_cnt[0]),
-        .CI_TOP(1'b0),
-        .CO({wait_cnt0_carry_n_0,wait_cnt0_carry_n_1,wait_cnt0_carry_n_2,wait_cnt0_carry_n_3,wait_cnt0_carry_n_4,wait_cnt0_carry_n_5,wait_cnt0_carry_n_6,wait_cnt0_carry_n_7}),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(in19[8:1]),
-        .S(wait_cnt[8:1]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY8 wait_cnt0_carry__0
-       (.CI(wait_cnt0_carry_n_0),
-        .CI_TOP(1'b0),
-        .CO({NLW_wait_cnt0_carry__0_CO_UNCONNECTED[7],wait_cnt0_carry__0_n_1,wait_cnt0_carry__0_n_2,wait_cnt0_carry__0_n_3,wait_cnt0_carry__0_n_4,wait_cnt0_carry__0_n_5,wait_cnt0_carry__0_n_6,wait_cnt0_carry__0_n_7}),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(in19[16:9]),
-        .S(wait_cnt[16:9]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT1 #(
     .INIT(2'h1)) 
@@ -784,28 +768,28 @@ module BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpong_sim_writer
     \wait_cnt[16]_i_1 
        (.I0(\FSM_onehot_current_state[6]_i_2_n_0 ),
         .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I2(\wait_cnt[16]_i_3_n_0 ),
+        .I2(\wait_cnt[16]_i_4_n_0 ),
         .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
         .O(\wait_cnt[16]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h8808C000)) 
     \wait_cnt[16]_i_2 
        (.I0(\FSM_onehot_current_state[7]_i_3_n_0 ),
-        .I1(\wait_cnt[16]_i_3_n_0 ),
+        .I1(\wait_cnt[16]_i_4_n_0 ),
         .I2(\FSM_onehot_current_state_reg_n_0_[1] ),
         .I3(\FSM_onehot_current_state[6]_i_2_n_0 ),
         .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
         .O(wait_cnt0));
   LUT6 #(
     .INIT(64'h0000000000000004)) 
-    \wait_cnt[16]_i_3 
+    \wait_cnt[16]_i_4 
        (.I0(\FSM_onehot_current_state_reg_n_0_[4] ),
         .I1(\cnt[9]_i_9_n_0 ),
         .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
         .I3(bfr_wr),
         .I4(\FSM_onehot_current_state_reg_n_0_[0] ),
         .I5(irq_out),
-        .O(\wait_cnt[16]_i_3_n_0 ));
+        .O(\wait_cnt[16]_i_4_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \wait_cnt_reg[0] 
@@ -870,6 +854,14 @@ module BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpong_sim_writer
         .D(in19[16]),
         .Q(wait_cnt[16]),
         .R(\wait_cnt[16]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 \wait_cnt_reg[16]_i_3 
+       (.CI(\wait_cnt_reg[8]_i_1_n_0 ),
+        .CI_TOP(1'b0),
+        .CO({\NLW_wait_cnt_reg[16]_i_3_CO_UNCONNECTED [7],\wait_cnt_reg[16]_i_3_n_1 ,\wait_cnt_reg[16]_i_3_n_2 ,\wait_cnt_reg[16]_i_3_n_3 ,\wait_cnt_reg[16]_i_3_n_4 ,\wait_cnt_reg[16]_i_3_n_5 ,\wait_cnt_reg[16]_i_3_n_6 ,\wait_cnt_reg[16]_i_3_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .O(in19[16:9]),
+        .S(wait_cnt[16:9]));
   FDRE #(
     .INIT(1'b0)) 
     \wait_cnt_reg[1] 
@@ -934,6 +926,14 @@ module BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpong_sim_writer
         .D(in19[8]),
         .Q(wait_cnt[8]),
         .R(\wait_cnt[16]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 \wait_cnt_reg[8]_i_1 
+       (.CI(wait_cnt[0]),
+        .CI_TOP(1'b0),
+        .CO({\wait_cnt_reg[8]_i_1_n_0 ,\wait_cnt_reg[8]_i_1_n_1 ,\wait_cnt_reg[8]_i_1_n_2 ,\wait_cnt_reg[8]_i_1_n_3 ,\wait_cnt_reg[8]_i_1_n_4 ,\wait_cnt_reg[8]_i_1_n_5 ,\wait_cnt_reg[8]_i_1_n_6 ,\wait_cnt_reg[8]_i_1_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .O(in19[8:1]),
+        .S(wait_cnt[8:1]));
   FDRE #(
     .INIT(1'b0)) 
     \wait_cnt_reg[9] 

@@ -57,7 +57,7 @@ architecture Behavioral of pingpong_sim_reader is
     constant    CNT_MAX         :   UNSIGNED(10 downto 0)   :=  "10000000000";
 
     signal      wait_cnt        :   UNSIGNED(16 downto 0)   :=  (others => '0');
-    constant    WAIT_CNT_MAX    :   UNSIGNED(16 downto 0)   :=  "1" & X"86AF";
+    constant    WAIT_CNT_MAX    :   UNSIGNED(16 downto 0)   :=  "0" & X"001F";
 
     -- State machine signals
     type    STATE_TYPE      is  (s_rst, s_wait_irq, s_rd, s_rd_wait);

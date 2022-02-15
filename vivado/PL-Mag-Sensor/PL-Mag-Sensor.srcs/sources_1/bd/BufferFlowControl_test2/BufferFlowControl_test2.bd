@@ -1,0 +1,219 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../PL-Mag-Sensor.gen/sources_1/bd/BufferFlowControl_test2",
+      "name": "BufferFlowControl_test2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "MagPingPongBuffers": "",
+      "sine_generator": ""
+    },
+    "components": {
+      "MagPingPongBuffers": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "MagPingPongBuffers.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "MagPingPongBuffers.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "MagPingPongBuffers.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "MagPingPongBuffers.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "hold": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "shift": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "rd_ch": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "busy": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "irq": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rd_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        },
+        "post_compiled_compname": "MagPingPongBuffers_inst_1",
+        "architecture": "zynquplus",
+        "variant_info": {
+          "MagPingPongBuffers.bd": {
+            "scoped_diagram": "MagPingPongBuffers_inst_1.bd",
+            "design_checksum": "0x6B0FAD04",
+            "ref_name": "MagPingPongBuffers",
+            "ref_subinst_path": "BufferFlowControl_test2_MagPingPongBuffers_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "sine_generator": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "sine_generator.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "sine_generator.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "sine_generator.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "sine_generator.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "rst_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "sine_100_pi_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_400_0": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_300_0": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_100_0": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_200_pi_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_300_pi_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_100_2_pi_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_200_0": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_300_2_pi_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_400_pi_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_200_2_pi_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "sine_400_2_pi_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        },
+        "post_compiled_compname": "sine_generator_inst_1",
+        "architecture": "zynquplus",
+        "variant_info": {
+          "sine_generator.bd": {
+            "scoped_diagram": "sine_generator_inst_1.bd",
+            "design_checksum": "0x9DF80010",
+            "ref_name": "sine_generator",
+            "ref_subinst_path": "BufferFlowControl_test2_sine_generator_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      }
+    }
+  }
+}

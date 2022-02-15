@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Mon Feb 14 17:38:48 2022
--- Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
+-- Date        : Tue Feb 15 06:42:25 2022
+-- Host        : ffn-X299 running 64-bit Ubuntu 20.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.gen/sources_1/bd/BufferFlowControl_test1/ip/BufferFlowControl_test1_pingpong_sim_writer_0_0/BufferFlowControl_test1_pingpong_sim_writer_0_0_sim_netlist.vhdl
+--               /vol/Workspace/Projects/PL-Mag-Sensor/vivado/PL-Mag-Sensor/PL-Mag-Sensor.gen/sources_1/bd/BufferFlowControl_test1/ip/BufferFlowControl_test1_pingpong_sim_writer_0_0/BufferFlowControl_test1_pingpong_sim_writer_0_0_sim_netlist.vhdl
 -- Design      : BufferFlowControl_test1_pingpong_sim_writer_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -77,24 +77,24 @@ architecture STRUCTURE of BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpo
   signal selector_i_3_n_0 : STD_LOGIC;
   signal wait_cnt : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal wait_cnt0 : STD_LOGIC;
-  signal \wait_cnt0_carry__0_n_1\ : STD_LOGIC;
-  signal \wait_cnt0_carry__0_n_2\ : STD_LOGIC;
-  signal \wait_cnt0_carry__0_n_3\ : STD_LOGIC;
-  signal \wait_cnt0_carry__0_n_4\ : STD_LOGIC;
-  signal \wait_cnt0_carry__0_n_5\ : STD_LOGIC;
-  signal \wait_cnt0_carry__0_n_6\ : STD_LOGIC;
-  signal \wait_cnt0_carry__0_n_7\ : STD_LOGIC;
-  signal wait_cnt0_carry_n_0 : STD_LOGIC;
-  signal wait_cnt0_carry_n_1 : STD_LOGIC;
-  signal wait_cnt0_carry_n_2 : STD_LOGIC;
-  signal wait_cnt0_carry_n_3 : STD_LOGIC;
-  signal wait_cnt0_carry_n_4 : STD_LOGIC;
-  signal wait_cnt0_carry_n_5 : STD_LOGIC;
-  signal wait_cnt0_carry_n_6 : STD_LOGIC;
-  signal wait_cnt0_carry_n_7 : STD_LOGIC;
   signal \wait_cnt[16]_i_1_n_0\ : STD_LOGIC;
-  signal \wait_cnt[16]_i_3_n_0\ : STD_LOGIC;
-  signal \NLW_wait_cnt0_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 to 7 );
+  signal \wait_cnt[16]_i_4_n_0\ : STD_LOGIC;
+  signal \wait_cnt_reg[16]_i_3_n_1\ : STD_LOGIC;
+  signal \wait_cnt_reg[16]_i_3_n_2\ : STD_LOGIC;
+  signal \wait_cnt_reg[16]_i_3_n_3\ : STD_LOGIC;
+  signal \wait_cnt_reg[16]_i_3_n_4\ : STD_LOGIC;
+  signal \wait_cnt_reg[16]_i_3_n_5\ : STD_LOGIC;
+  signal \wait_cnt_reg[16]_i_3_n_6\ : STD_LOGIC;
+  signal \wait_cnt_reg[16]_i_3_n_7\ : STD_LOGIC;
+  signal \wait_cnt_reg[8]_i_1_n_0\ : STD_LOGIC;
+  signal \wait_cnt_reg[8]_i_1_n_1\ : STD_LOGIC;
+  signal \wait_cnt_reg[8]_i_1_n_2\ : STD_LOGIC;
+  signal \wait_cnt_reg[8]_i_1_n_3\ : STD_LOGIC;
+  signal \wait_cnt_reg[8]_i_1_n_4\ : STD_LOGIC;
+  signal \wait_cnt_reg[8]_i_1_n_5\ : STD_LOGIC;
+  signal \wait_cnt_reg[8]_i_1_n_6\ : STD_LOGIC;
+  signal \wait_cnt_reg[8]_i_1_n_7\ : STD_LOGIC;
+  signal \NLW_wait_cnt_reg[16]_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 to 7 );
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \FSM_onehot_current_state[1]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \FSM_onehot_current_state[2]_i_1\ : label is "soft_lutpair6";
@@ -140,10 +140,10 @@ architecture STRUCTURE of BufferFlowControl_test1_pingpong_sim_writer_0_0_pingpo
   attribute SOFT_HLUTNM of \cnt[9]_i_5\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \cnt[9]_i_6\ : label is "soft_lutpair17";
   attribute SOFT_HLUTNM of \cnt[9]_i_9\ : label is "soft_lutpair17";
-  attribute ADDER_THRESHOLD : integer;
-  attribute ADDER_THRESHOLD of wait_cnt0_carry : label is 35;
-  attribute ADDER_THRESHOLD of \wait_cnt0_carry__0\ : label is 35;
   attribute SOFT_HLUTNM of \wait_cnt[0]_i_1\ : label is "soft_lutpair1";
+  attribute ADDER_THRESHOLD : integer;
+  attribute ADDER_THRESHOLD of \wait_cnt_reg[16]_i_3\ : label is 35;
+  attribute ADDER_THRESHOLD of \wait_cnt_reg[8]_i_1\ : label is 35;
 begin
   Q(9 downto 0) <= \^q\(9 downto 0);
   bfr_shift <= \^bfr_shift\;
@@ -262,18 +262,18 @@ begin
     );
 \FSM_onehot_current_state[7]_i_4\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFF7"
+      INIT => X"FFFD"
     )
         port map (
-      I0 => wait_cnt(4),
-      I1 => wait_cnt(3),
+      I0 => wait_cnt(3),
+      I1 => wait_cnt(4),
       I2 => wait_cnt(6),
       I3 => wait_cnt(5),
       O => \FSM_onehot_current_state[7]_i_4_n_0\
     );
 \FSM_onehot_current_state[7]_i_5\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7FFFFFFF"
+      INIT => X"FDFFFFFF"
     )
         port map (
       I0 => wait_cnt(0),
@@ -296,11 +296,11 @@ begin
     );
 \FSM_onehot_current_state[7]_i_7\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"DFFF"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => wait_cnt(7),
-      I1 => wait_cnt(8),
+      I0 => wait_cnt(8),
+      I1 => wait_cnt(7),
       I2 => wait_cnt(10),
       I3 => wait_cnt(9),
       O => \FSM_onehot_current_state[7]_i_7_n_0\
@@ -673,27 +673,27 @@ begin
     );
 \cnt[9]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0020000000000000"
+      INIT => X"0000000000000002"
     )
         port map (
       I0 => \FSM_onehot_current_state_reg_n_0_[6]\,
       I1 => \FSM_onehot_current_state[7]_i_6_n_0\,
-      I2 => wait_cnt(7),
-      I3 => wait_cnt(8),
+      I2 => wait_cnt(8),
+      I3 => wait_cnt(7),
       I4 => wait_cnt(10),
       I5 => wait_cnt(9),
       O => \cnt[9]_i_3_n_0\
     );
 \cnt[9]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FEFFFFFF"
+      INIT => X"FFFEFFFF"
     )
         port map (
       I0 => \FSM_onehot_current_state[7]_i_5_n_0\,
       I1 => wait_cnt(5),
       I2 => wait_cnt(6),
-      I3 => wait_cnt(3),
-      I4 => wait_cnt(4),
+      I3 => wait_cnt(4),
+      I4 => wait_cnt(3),
       O => \cnt[9]_i_4_n_0\
     );
 \cnt[9]_i_5\: unisim.vcomponents.LUT4
@@ -922,38 +922,6 @@ selector_reg: unisim.vcomponents.FDRE
       Q => selector,
       R => '0'
     );
-wait_cnt0_carry: unisim.vcomponents.CARRY8
-     port map (
-      CI => wait_cnt(0),
-      CI_TOP => '0',
-      CO(7) => wait_cnt0_carry_n_0,
-      CO(6) => wait_cnt0_carry_n_1,
-      CO(5) => wait_cnt0_carry_n_2,
-      CO(4) => wait_cnt0_carry_n_3,
-      CO(3) => wait_cnt0_carry_n_4,
-      CO(2) => wait_cnt0_carry_n_5,
-      CO(1) => wait_cnt0_carry_n_6,
-      CO(0) => wait_cnt0_carry_n_7,
-      DI(7 downto 0) => B"00000000",
-      O(7 downto 0) => in19(8 downto 1),
-      S(7 downto 0) => wait_cnt(8 downto 1)
-    );
-\wait_cnt0_carry__0\: unisim.vcomponents.CARRY8
-     port map (
-      CI => wait_cnt0_carry_n_0,
-      CI_TOP => '0',
-      CO(7) => \NLW_wait_cnt0_carry__0_CO_UNCONNECTED\(7),
-      CO(6) => \wait_cnt0_carry__0_n_1\,
-      CO(5) => \wait_cnt0_carry__0_n_2\,
-      CO(4) => \wait_cnt0_carry__0_n_3\,
-      CO(3) => \wait_cnt0_carry__0_n_4\,
-      CO(2) => \wait_cnt0_carry__0_n_5\,
-      CO(1) => \wait_cnt0_carry__0_n_6\,
-      CO(0) => \wait_cnt0_carry__0_n_7\,
-      DI(7 downto 0) => B"00000000",
-      O(7 downto 0) => in19(16 downto 9),
-      S(7 downto 0) => wait_cnt(16 downto 9)
-    );
 \wait_cnt[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -969,7 +937,7 @@ wait_cnt0_carry: unisim.vcomponents.CARRY8
         port map (
       I0 => \FSM_onehot_current_state[6]_i_2_n_0\,
       I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I2 => \wait_cnt[16]_i_3_n_0\,
+      I2 => \wait_cnt[16]_i_4_n_0\,
       I3 => \FSM_onehot_current_state_reg_n_0_[6]\,
       O => \wait_cnt[16]_i_1_n_0\
     );
@@ -979,13 +947,13 @@ wait_cnt0_carry: unisim.vcomponents.CARRY8
     )
         port map (
       I0 => \FSM_onehot_current_state[7]_i_3_n_0\,
-      I1 => \wait_cnt[16]_i_3_n_0\,
+      I1 => \wait_cnt[16]_i_4_n_0\,
       I2 => \FSM_onehot_current_state_reg_n_0_[1]\,
       I3 => \FSM_onehot_current_state[6]_i_2_n_0\,
       I4 => \FSM_onehot_current_state_reg_n_0_[6]\,
       O => wait_cnt0
     );
-\wait_cnt[16]_i_3\: unisim.vcomponents.LUT6
+\wait_cnt[16]_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000000004"
     )
@@ -996,7 +964,7 @@ wait_cnt0_carry: unisim.vcomponents.CARRY8
       I3 => \^bfr_wr\,
       I4 => \FSM_onehot_current_state_reg_n_0_[0]\,
       I5 => \^irq_out\,
-      O => \wait_cnt[16]_i_3_n_0\
+      O => \wait_cnt[16]_i_4_n_0\
     );
 \wait_cnt_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -1086,6 +1054,22 @@ wait_cnt0_carry: unisim.vcomponents.CARRY8
       Q => wait_cnt(16),
       R => \wait_cnt[16]_i_1_n_0\
     );
+\wait_cnt_reg[16]_i_3\: unisim.vcomponents.CARRY8
+     port map (
+      CI => \wait_cnt_reg[8]_i_1_n_0\,
+      CI_TOP => '0',
+      CO(7) => \NLW_wait_cnt_reg[16]_i_3_CO_UNCONNECTED\(7),
+      CO(6) => \wait_cnt_reg[16]_i_3_n_1\,
+      CO(5) => \wait_cnt_reg[16]_i_3_n_2\,
+      CO(4) => \wait_cnt_reg[16]_i_3_n_3\,
+      CO(3) => \wait_cnt_reg[16]_i_3_n_4\,
+      CO(2) => \wait_cnt_reg[16]_i_3_n_5\,
+      CO(1) => \wait_cnt_reg[16]_i_3_n_6\,
+      CO(0) => \wait_cnt_reg[16]_i_3_n_7\,
+      DI(7 downto 0) => B"00000000",
+      O(7 downto 0) => in19(16 downto 9),
+      S(7 downto 0) => wait_cnt(16 downto 9)
+    );
 \wait_cnt_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -1173,6 +1157,22 @@ wait_cnt0_carry: unisim.vcomponents.CARRY8
       D => in19(8),
       Q => wait_cnt(8),
       R => \wait_cnt[16]_i_1_n_0\
+    );
+\wait_cnt_reg[8]_i_1\: unisim.vcomponents.CARRY8
+     port map (
+      CI => wait_cnt(0),
+      CI_TOP => '0',
+      CO(7) => \wait_cnt_reg[8]_i_1_n_0\,
+      CO(6) => \wait_cnt_reg[8]_i_1_n_1\,
+      CO(5) => \wait_cnt_reg[8]_i_1_n_2\,
+      CO(4) => \wait_cnt_reg[8]_i_1_n_3\,
+      CO(3) => \wait_cnt_reg[8]_i_1_n_4\,
+      CO(2) => \wait_cnt_reg[8]_i_1_n_5\,
+      CO(1) => \wait_cnt_reg[8]_i_1_n_6\,
+      CO(0) => \wait_cnt_reg[8]_i_1_n_7\,
+      DI(7 downto 0) => B"00000000",
+      O(7 downto 0) => in19(8 downto 1),
+      S(7 downto 0) => wait_cnt(8 downto 1)
     );
 \wait_cnt_reg[9]\: unisim.vcomponents.FDRE
     generic map(
