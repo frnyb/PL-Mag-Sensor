@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-16T18:08:29.937Z" agent="5.0 (X11)" etag="EMQKJ6TM8Y6rRYbzimiY" version="16.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-21T12:28:54.732Z" agent="5.0 (X11)" etag="o25qzQP-Cz_VrjUn23yW" version="16.5.6" type="github">
   <diagram id="vcOmwt670LHLFmOHfxU6" name="Page-1">
-    <mxGraphModel dx="2272" dy="1895" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2500" dy="2044" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,7 +8,7 @@
           <mxGeometry x="345" y="50" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-2" value="&lt;div&gt;&lt;b&gt;Ports&lt;/b&gt;:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;t_sample_en : out std_logic (assigned output)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_sample_rest : out std_logic (assigned transition)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_sample_irq : in std_logic&lt;/li&gt;&lt;li&gt;t_sample_cnt : in std_logic_vector&lt;/li&gt;&lt;li&gt;t_sample_target: in std_logic_vector&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_period_en : out std_logic (assigned output)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_period_rest : out std_logic (assigned transition)&lt;br&gt;&lt;/li&gt;&lt;li&gt;t_period_irq : in std_logic&lt;/li&gt;&lt;li&gt;t_period_cnt : in std_logic_vector&lt;/li&gt;&lt;li&gt;t_period_target: in std_logic_vector&lt;br&gt;&lt;/li&gt;&lt;li&gt;adc_din : in std_logic_vector&lt;/li&gt;&lt;li&gt;adc_ch : in std_logic_vector&lt;/li&gt;&lt;li&gt;adc_irq : in std_logic&lt;/li&gt;&lt;li&gt;bf_wr_addr : out std_logic_vector (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_wr_data : out std_logic_vector (assigned concurrently)&lt;/li&gt;&lt;li&gt;bf_wr : out std_logic_vector (assigned concurrently)&lt;/li&gt;&lt;li&gt;bf_shift : out std_logic_vector (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_irq : in std_logic_vector&lt;/li&gt;&lt;li&gt;lut_n_over: out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_top_val : out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_gain_UnD : out std_logic&lt;/li&gt;&lt;li&gt;lut_curr_gain : out std_logic_vector&lt;/li&gt;&lt;li&gt;lut_new_gain : in std_logic_vector&lt;/li&gt;&lt;li&gt;lut_irq: in std_logic&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_curr : in std_logic_vector&lt;/li&gt;&lt;li&gt;gain_ref : out std_logic_vector (assigned concurrently)&lt;br&gt;&lt;/li&gt;&lt;li&gt;n_samples_out : std_logic_vector (assigned transition)&lt;/li&gt;&lt;li&gt;irq_out : out std_logic_vector (assigned transition)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Signals:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;next_ch : unsigned &amp;lt;= 0&lt;/li&gt;&lt;li&gt;sampling : std_logic &amp;lt;= &#39;0&#39;&lt;/li&gt;&lt;li&gt;wr_addr_cnt : std_logic_vector&lt;/li&gt;&lt;li&gt;sample_start: std_logic&lt;/li&gt;&lt;li&gt;sample_stop: std_logic&lt;/li&gt;&lt;li&gt;period_done: std_logic&lt;br&gt;&lt;/li&gt;&lt;li&gt;shifted_hold: std_logic_vector&lt;/li&gt;&lt;li&gt;accept_mask: std_logic_vector&lt;/li&gt;&lt;li&gt;top_values: array of std_logic_vector&lt;/li&gt;&lt;li&gt;n_over array of unsigned&lt;/li&gt;&lt;li&gt;top_mags: array of std_logic_vector&lt;/li&gt;&lt;li&gt;n_over_mags: array of unsigned&lt;/li&gt;&lt;li&gt;gain_UnD: std_logic_vector&lt;/li&gt;&lt;li&gt;gain_mon_rdy : std_logicfi&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_curr_int: array of std_logic_vector&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref_int: array of std_logic_vector&lt;/li&gt;&lt;li&gt;gain_settled : std_logic&lt;/li&gt;&lt;li&gt;mag_cnt: unsigned&lt;/li&gt;&lt;li&gt;bf_shift_int: std_logic_vector&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b&gt;Generic:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;GAIN_HYST_MAX_THRESH&lt;/li&gt;&lt;li&gt;GAIN_HYST_MIN_THRESH&lt;/li&gt;&lt;li&gt;t_sample_target&lt;/li&gt;&lt;li&gt;t_period_target&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Concurrent statements:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;t_sample_target &amp;lt;= to_unsigned(t_sample_target_val, t_sample_n_bits)&lt;/li&gt;&lt;li&gt;t_period_target &amp;lt;= to_unsigned(t_period_target_val, t_period_n_bits)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_wr &amp;lt;= &lt;span&gt; &lt;/span&gt;adc_irq when sampling=&#39;1&#39; and adc_ch=next_ch else&lt;br&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&#39;0&#39;; (using generate statement)&lt;br&gt;&lt;/li&gt;&lt;li&gt;bf_wr_addr &amp;lt;= wr_addr_cnt;&lt;/li&gt;&lt;li&gt;bf_wr_data&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; t_sample_cnt &amp;amp; adc_din;&lt;/li&gt;&lt;li&gt;gain_curr_int(3) &amp;lt;= gain_curr(23 downto 18)&lt;/li&gt;&lt;li&gt;gain_curr_int(2) &amp;lt;= gain_curr(17 downto 12)&lt;/li&gt;&lt;li&gt;gain_curr_int(1) &amp;lt;= gain_curr(11 downto 6)&lt;/li&gt;&lt;li&gt;gain_curr_int(0) &amp;lt;= gain_curr(5 downto 0)&lt;br&gt;&lt;/li&gt;&lt;li&gt;gain_ref(23 downto 18) &amp;lt;= gain_ref_int(3)&lt;/li&gt;&lt;li&gt;gain_ref(19 downto 12) &amp;lt;= gain_ref_int(2)&lt;/li&gt;&lt;li&gt;gain_ref(11 downto 6) &amp;lt;= gain_ref_int(1)&lt;/li&gt;&lt;li&gt;gain_ref(5 downto 0) &amp;lt;= gain_ref_int(0)&lt;/li&gt;&lt;li&gt;gain_settled &amp;lt;= &#39;1&#39; when gain_curr = gain_ref else &#39;0&#39;&lt;/li&gt;&lt;li&gt;bf_shift &amp;lt;= bf_shift_int&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Auxiliary processes:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Process to set sample_start upon sample timer irq and clear on rising edge of sampling&lt;br&gt;&lt;/li&gt;&lt;li&gt;Process to set sample_stop upon period timer irq and clear upon rising edge of bf_shift&lt;/li&gt;&lt;li&gt;Process asserting shifted hold upon bf_irq, and clear when last one clears&lt;/li&gt;&lt;li&gt;Process monitoring the input signals when sampling, evaluate gain change when period is done, and resets signals when period starts again&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="1400" y="-190" width="410" height="1550" as="geometry" />
+          <mxGeometry x="1630" y="-210" width="410" height="1550" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-3" value="&lt;div&gt;s_sample&lt;/div&gt;&lt;div&gt;_first&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="150" y="230" width="80" height="80" as="geometry" />
@@ -207,34 +207,34 @@
           <mxGeometry x="850" y="340" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-7" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_fetch&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="1090" y="255" width="80" height="80" as="geometry" />
+          <mxGeometry x="1210" y="375" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-8" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-6" target="yGk2pAN8WluMj7sl2VAn-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1080" y="450" as="sourcePoint" />
             <mxPoint x="1130" y="400" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1060" y="430" />
+              <mxPoint x="1070" y="460" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-9" value="&lt;div&gt;if (accept_mask(mag_cnt*3+2 downto mag_cnt*3) != &quot;111&quot;) /&lt;/div&gt;&lt;div&gt;lut_n_over &amp;lt;= n_over_mags(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_top_val &amp;lt;= top_mags(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_gain_UnD &amp;lt;= gain_UnD(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_curr_gain &amp;lt;= gain_curr_int(mag_cnt)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-20.3;" parent="1" vertex="1">
-          <mxGeometry x="900" y="390" width="340" height="80" as="geometry" />
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-9" value="&lt;div&gt;if (accept_mask(mag_cnt*3+2 downto mag_cnt*3) != &quot;111&quot;) /&lt;/div&gt;&lt;div&gt;lut_n_over &amp;lt;= n_over_mags(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_top_val &amp;lt;= top_mags(mag_cnt)&lt;/div&gt;&lt;div&gt;lut_curr_gain &amp;lt;= gain_curr_int(mag_cnt)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=16.999999999999996;" parent="1" vertex="1">
+          <mxGeometry x="940" y="460" width="340" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-10" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_done&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="930" y="170" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-7" target="yGk2pAN8WluMj7sl2VAn-10" edge="1">
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="SsunDbkqlPeY4llJMre3-5" target="yGk2pAN8WluMj7sl2VAn-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1040" y="180" as="sourcePoint" />
+            <mxPoint x="1050" y="250" as="sourcePoint" />
             <mxPoint x="1090" y="130" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1100" y="210" />
+              <mxPoint x="1100" y="240" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yGk2pAN8WluMj7sl2VAn-16" value="&lt;div&gt;if (rising_edge(lut_irq)) /&lt;/div&gt;&lt;div&gt;gain_ref_int(mag_cnt) &amp;lt;= lut_new_gain&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-35;" parent="1" vertex="1">
-          <mxGeometry x="1060" y="140" width="220" height="30" as="geometry" />
+        <mxCell id="yGk2pAN8WluMj7sl2VAn-16" value="&lt;div&gt;if (rising_edge(lut_irq)) /&lt;/div&gt;&lt;div&gt;gain_ref_int(mag_cnt) &amp;lt;= lut_new_gain&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-18;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="220" width="220" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-17" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-10" target="yGk2pAN8WluMj7sl2VAn-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -288,36 +288,36 @@
           <mxGeometry x="805" y="420" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-31" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1170" y="280" width="120" height="30" as="geometry" />
+          <mxGeometry x="1120" y="350" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-32" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="960" y="140" width="120" height="30" as="geometry" />
+          <mxGeometry x="940" y="135" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-33" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="405" y="140" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-1" value="&amp;nbsp;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-1" value="&amp;nbsp;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="780" y="260" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-2" value="&amp;nbsp;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-2" value="&amp;nbsp;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="760" y="480" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-4" value="&lt;div&gt;s_rst&lt;/div&gt;" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-4" value="&lt;div&gt;s_rst&lt;/div&gt;" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="430" y="910" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-5" value="&lt;div&gt;s_wait&lt;/div&gt;&lt;div&gt;_sample&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-5" value="&lt;div&gt;s_wait&lt;/div&gt;&lt;div&gt;_sample&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="445" y="1140" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-6" value="&lt;div&gt;s_get&lt;/div&gt;&lt;div&gt;_sample&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-6" value="&lt;div&gt;s_get&lt;/div&gt;&lt;div&gt;_sample&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="555" y="1320" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-7" value="&lt;div&gt;s_start_mon&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-7" value="&lt;div&gt;s_start_mon&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="145" y="1230" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-8" value="s_finished" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-8" value="s_finished" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="130" y="970" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-9" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-4" target="Pzn7crQTOOGF5psaZsjJ-5">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-9" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-4" target="Pzn7crQTOOGF5psaZsjJ-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="550" y="1110" as="sourcePoint" />
             <mxPoint x="600" y="1060" as="targetPoint" />
@@ -326,10 +326,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-10" value="&lt;div&gt;/ accept_mask &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;gain_UnD &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;top_values &amp;lt;= 0&lt;/div&gt;&lt;div&gt;n_over &amp;lt;= 0&lt;/div&gt;&lt;div&gt;top_mags &amp;lt;= 0&lt;/div&gt;&lt;div&gt;n_over_mags &amp;lt;= 0&lt;/div&gt;&lt;div&gt;gain_mon_rdy &amp;lt;= 0&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-10" value="&lt;div&gt;/ accept_mask &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;gain_UnD &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;top_values &amp;lt;= 0&lt;/div&gt;&lt;div&gt;n_over &amp;lt;= 0&lt;/div&gt;&lt;div&gt;top_mags &amp;lt;= 0&lt;/div&gt;&lt;div&gt;n_over_mags &amp;lt;= 0&lt;/div&gt;&lt;div&gt;gain_mon_rdy &amp;lt;= 0&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="493" y="1010" width="190" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-5" target="Pzn7crQTOOGF5psaZsjJ-6">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-5" target="Pzn7crQTOOGF5psaZsjJ-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="550" y="1240" as="sourcePoint" />
             <mxPoint x="600" y="1190" as="targetPoint" />
@@ -338,13 +338,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-12" value="&lt;div&gt;adc_irq = 1 /&lt;/div&gt;&lt;div&gt;latch_adc_din &amp;lt;= adc_din&lt;/div&gt;&lt;div&gt;latch_adc_ch &amp;lt;= adc_ch&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-12" value="&lt;div&gt;adc_irq = 1 /&lt;/div&gt;&lt;div&gt;latch_adc_din &amp;lt;= adc_din&lt;/div&gt;&lt;div&gt;latch_adc_ch &amp;lt;= adc_ch&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="555" y="1210" width="150" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-13" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-13" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="520" y="1200" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-14" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-6" target="Pzn7crQTOOGF5psaZsjJ-5">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-14" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-6" target="Pzn7crQTOOGF5psaZsjJ-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="460" y="1370" as="sourcePoint" />
             <mxPoint x="510" y="1320" as="targetPoint" />
@@ -353,10 +353,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-15" value="&lt;div&gt;adc_irq = 0 /&lt;/div&gt;&lt;div&gt;if (latch_adc_din &amp;gt; GAIN_HYST_MAX)&lt;/div&gt;&lt;div&gt;n_over(latch_adc_ch) &amp;lt;= +1&lt;/div&gt;&lt;div&gt;end if&lt;/div&gt;&lt;div&gt;if (latch_adc_din &amp;gt; top_values(latch_adc_ch)) &lt;br&gt;&lt;/div&gt;&lt;div&gt;top_values(latch_adc_cd) &amp;gt;= latch_adc_din&lt;/div&gt;&lt;div&gt;end if&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-50;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-15" value="&lt;div&gt;adc_irq = 0 /&lt;/div&gt;&lt;div&gt;if (latch_adc_din &amp;gt; GAIN_HYST_MAX)&lt;/div&gt;&lt;div&gt;n_over(latch_adc_ch) &amp;lt;= +1&lt;/div&gt;&lt;div&gt;end if&lt;/div&gt;&lt;div&gt;if (latch_adc_din &amp;gt; top_values(latch_adc_ch)) &lt;br&gt;&lt;/div&gt;&lt;div&gt;top_values(latch_adc_cd) &amp;gt;= latch_adc_din&lt;/div&gt;&lt;div&gt;end if&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-50;" parent="1" vertex="1">
           <mxGeometry x="295" y="1340" width="260" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-16" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-5" target="Pzn7crQTOOGF5psaZsjJ-7">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-16" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-5" target="Pzn7crQTOOGF5psaZsjJ-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="550" y="1240" as="sourcePoint" />
             <mxPoint x="600" y="1190" as="targetPoint" />
@@ -365,16 +365,16 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-17" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-17" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="420" y="1180" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-18" value="&lt;div&gt;period_done = 1 /&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-20;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-18" value="&lt;div&gt;period_done = 1 /&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-20;" parent="1" vertex="1">
           <mxGeometry x="240" y="1160" width="110" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-20" value="/ gain_mon_rdy &amp;lt;= 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-20" value="/ gain_mon_rdy &amp;lt;= 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-70" y="1000" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-21" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-8" target="Pzn7crQTOOGF5psaZsjJ-4">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-21" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-8" target="Pzn7crQTOOGF5psaZsjJ-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="280" y="1020" as="sourcePoint" />
             <mxPoint x="330" y="970" as="targetPoint" />
@@ -383,13 +383,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-22" value="period_done = 0 /" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-22" value="period_done = 0 /" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="235" y="910" width="110" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-23" value="s_mon_ch" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-23" value="s_mon_ch" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry y="1400" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-24" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-7" target="Pzn7crQTOOGF5psaZsjJ-23">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-24" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-7" target="Pzn7crQTOOGF5psaZsjJ-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-10" y="1390" as="sourcePoint" />
             <mxPoint x="40" y="1340" as="targetPoint" />
@@ -398,13 +398,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-25" value="&lt;div&gt;/&lt;br&gt;&lt;/div&gt;&lt;div&gt;if (n_over(mon_mag*3+mon_axis) &amp;gt; n_over_mag(mon_mag)) then&lt;/div&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; n_over_mag(mon_mag)&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; n_over(mon_mag*3+mon_axis);&lt;br&gt;end if;&lt;br&gt;if (top_values(mon_mag*3+mon_axis) &amp;gt; top_mag(mon_mag)) then&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; top_mag(mon_mag)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; top_values(mon_mag*3+mon_axis);&lt;br&gt;end if;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=30;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-25" value="&lt;div&gt;/&lt;br&gt;&lt;/div&gt;&lt;div&gt;if (n_over(mon_mag*3+mon_axis) &amp;gt; n_over_mag(mon_mag)) then&lt;/div&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; n_over_mag(mon_mag)&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; n_over(mon_mag*3+mon_axis);&lt;br&gt;end if;&lt;br&gt;if (top_values(mon_mag*3+mon_axis) &amp;gt; top_mag(mon_mag)) then&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; top_mag(mon_mag)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; top_values(mon_mag*3+mon_axis);&lt;br&gt;end if;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=30;" parent="1" vertex="1">
           <mxGeometry x="-125" y="1570" width="380" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-26" value="s_mon_next" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-26" value="s_mon_next" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="-240" y="1440" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-27" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-23" target="Pzn7crQTOOGF5psaZsjJ-26">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-27" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-23" target="Pzn7crQTOOGF5psaZsjJ-26" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-90" y="1550" as="sourcePoint" />
             <mxPoint x="-40" y="1500" as="targetPoint" />
@@ -413,7 +413,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-29" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-26" target="Pzn7crQTOOGF5psaZsjJ-23">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-29" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-26" target="Pzn7crQTOOGF5psaZsjJ-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-150" y="1420" as="sourcePoint" />
             <mxPoint x="-100" y="1370" as="targetPoint" />
@@ -422,10 +422,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-30" value="s_next_mag" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-30" value="s_next_mag" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="-130" y="1250" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-31" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-26" target="Pzn7crQTOOGF5psaZsjJ-30">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-31" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-26" target="Pzn7crQTOOGF5psaZsjJ-30" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-150" y="1420" as="sourcePoint" />
             <mxPoint x="-100" y="1370" as="targetPoint" />
@@ -434,13 +434,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-32" value="&lt;div style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;mon_axis = &quot;10&quot; /&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;if (n_over_mag(mon_mag) &amp;gt; &quot;0&quot;) then&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; accept_mask(mon_mag*3+2 downto mon_mag*3)&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &quot;000&quot;;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; gain_UnD(mon_mag)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &#39;1&#39;;&lt;br&gt;elsif (UNSIGNED(top_mag(i)) &amp;lt; UNSIGNED(GAIN_HYST_MIN_THRESH)) then&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; accept_mask(mon_mag*3+2 downto mon_mag*3)&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &quot;000&quot;;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; gain_UnD(mon_mag)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &#39;0&#39;;&lt;br&gt;else&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; accept_mask(mon_mag*3+2 downto mon_mag*3)&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &quot;111&quot;;&lt;br&gt;end if;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-60;" vertex="1" parent="1">
-          <mxGeometry x="-360" y="1230" width="300" height="150" as="geometry" />
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-32" value="&lt;div style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;mon_axis = &quot;10&quot; /&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;if (n_over_mag(mon_mag) &amp;gt; &quot;0&quot;) then&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; accept_mask(mon_mag*3+2 downto mon_mag*3)&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &quot;000&quot;;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; gain_UnD(mon_mag)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &#39;1&#39;;&lt;br&gt;elsif (UNSIGNED(top_mag(i)) &amp;lt; UNSIGNED(GAIN_HYST_MIN_THRESH)&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;and gain_curr(mon_mag*6+5 downto mon_mag*6) /= &quot;111111&quot;) then&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; accept_mask(mon_mag*3+2 downto mon_mag*3)&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &quot;000&quot;;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; gain_UnD(mon_mag)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &#39;0&#39;;&lt;br&gt;else&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; accept_mask(mon_mag*3+2 downto mon_mag*3)&amp;nbsp;&amp;nbsp; &amp;lt;=&amp;nbsp; &quot;111&quot;;&lt;br&gt;end if;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-60;" parent="1" vertex="1">
+          <mxGeometry x="-360" y="1230" width="280" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-34" value="&lt;div&gt;s_mon&lt;/div&gt;&lt;div&gt;_finish&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-34" value="&lt;div&gt;s_mon&lt;/div&gt;&lt;div&gt;_finish&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="-120" y="1070" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-35" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-30" target="Pzn7crQTOOGF5psaZsjJ-34">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-35" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-30" target="Pzn7crQTOOGF5psaZsjJ-34" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-340" y="1290" as="sourcePoint" />
             <mxPoint x="-290" y="1240" as="targetPoint" />
@@ -449,7 +449,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-37" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-30" target="Pzn7crQTOOGF5psaZsjJ-23">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-37" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-30" target="Pzn7crQTOOGF5psaZsjJ-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="30" y="1360" as="sourcePoint" />
             <mxPoint x="80" y="1310" as="targetPoint" />
@@ -458,25 +458,25 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-38" value="/ mon_mag &amp;lt;= 0&lt;div&gt;mon_axis &amp;lt;= 0&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-15;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-38" value="/ mon_mag &amp;lt;= 0&lt;div&gt;mon_axis &amp;lt;= 0&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-15;" parent="1" vertex="1">
           <mxGeometry x="125" y="1375" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-39" value="/ mon_axis &amp;lt;= +1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-15;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-39" value="/ mon_axis &amp;lt;= +1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-15;" parent="1" vertex="1">
           <mxGeometry x="-150" y="1405" width="110" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-40" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-40" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-200" y="1420" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-41" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-41" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-160" y="1450" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-43" value="&lt;div&gt;mon_mag = &quot;11&quot; /&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-43" value="&lt;div&gt;mon_mag = &quot;11&quot; /&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-50" y="1210" width="110" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-44" value="&lt;div&gt;/ mon_axis &amp;lt;= &quot;00&quot;&lt;br&gt;&lt;/div&gt;&lt;div&gt;mon_ch &amp;lt;= mon_ch + &quot;1&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=45;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-44" value="&lt;div&gt;/ mon_axis &amp;lt;= &quot;00&quot;&lt;br&gt;&lt;/div&gt;&lt;div&gt;mon_ch &amp;lt;= mon_ch + &quot;1&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=45;" parent="1" vertex="1">
           <mxGeometry x="-50" y="1305" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-45" value="" style="curved=1;endArrow=classic;html=1;rounded=0;fontSize=8;" edge="1" parent="1" source="Pzn7crQTOOGF5psaZsjJ-34" target="Pzn7crQTOOGF5psaZsjJ-8">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-45" value="" style="curved=1;endArrow=classic;html=1;rounded=0;fontSize=8;" parent="1" source="Pzn7crQTOOGF5psaZsjJ-34" target="Pzn7crQTOOGF5psaZsjJ-8" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-70" y="1030" as="sourcePoint" />
             <mxPoint x="-20" y="980" as="targetPoint" />
@@ -485,11 +485,50 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-46" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-46" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="-70" y="1240" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Pzn7crQTOOGF5psaZsjJ-47" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+        <mxCell id="Pzn7crQTOOGF5psaZsjJ-47" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="-50" y="1280" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-1" value="&amp;nbsp;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="-60" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-2" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_fetch_start&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="205" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-3" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="yGk2pAN8WluMj7sl2VAn-7" target="SsunDbkqlPeY4llJMre3-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1160" y="200" as="sourcePoint" />
+            <mxPoint x="1210" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1360" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-4" value="&lt;div&gt;if (lut_idle = &#39;1&#39;) /&lt;/div&gt;&lt;div&gt;lut_start &amp;lt;= &#39;1&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="320" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-5" value="&lt;div&gt;s_gain&lt;/div&gt;&lt;div&gt;_fetch_wait&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="105" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-6" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="SsunDbkqlPeY4llJMre3-2" target="SsunDbkqlPeY4llJMre3-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1240" y="200" as="sourcePoint" />
+            <mxPoint x="1290" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1340" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-7" value="&lt;div&gt;lut_idle = &#39;0&#39; / &lt;br&gt;&lt;/div&gt;&lt;div&gt;lut_start &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="100" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-8" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="70" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SsunDbkqlPeY4llJMre3-9" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="230" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
