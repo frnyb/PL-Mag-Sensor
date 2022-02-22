@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-21T15:08:00.366Z" agent="5.0 (X11)" etag="dRI_ftyZJRsmukQti8aI" version="16.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-22T06:15:17.887Z" agent="5.0 (X11)" etag="3xTsSnbJBs4s2LDAsICr" version="16.5.6" type="github">
   <diagram id="vcOmwt670LHLFmOHfxU6" name="Page-1">
-    <mxGraphModel dx="2500" dy="2022" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2500" dy="2044" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -136,15 +136,15 @@
             <mxPoint x="410" y="540" as="sourcePoint" />
             <mxPoint x="900" y="370" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1000" y="210" />
+              <mxPoint x="850" y="190" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-36" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="655" y="685" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="8YBCCptctLdzBx9tajcS-40" value="s_stream" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="910" y="35" width="80" height="80" as="geometry" />
+        <mxCell id="8YBCCptctLdzBx9tajcS-40" value="s_irq" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="625" y="75" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-41" value="&lt;div&gt;if (shifted_hold = accept_mask) / &lt;br&gt;&lt;/div&gt;&lt;div&gt;t_sample_rest &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;t_period_rest &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;irq_out &amp;lt;= accept_mask&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=20;" parent="1" vertex="1">
           <mxGeometry x="2190" y="-40" width="190" height="60" as="geometry" />
@@ -155,9 +155,9 @@
         <mxCell id="8YBCCptctLdzBx9tajcS-45" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="390" y="500" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="8YBCCptctLdzBx9tajcS-46" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" target="yGk2pAN8WluMj7sl2VAn-23" edge="1">
+        <mxCell id="8YBCCptctLdzBx9tajcS-46" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="8YBCCptctLdzBx9tajcS-40" target="yGk2pAN8WluMj7sl2VAn-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="600" y="160" as="sourcePoint" />
+            <mxPoint x="330" y="360" as="sourcePoint" />
             <mxPoint x="790" y="200" as="targetPoint" />
             <Array as="points">
               <mxPoint x="620" y="210" />
@@ -168,7 +168,7 @@
           <mxGeometry x="260" y="270" width="190" height="90" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-48" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="990" y="60" width="120" height="30" as="geometry" />
+          <mxGeometry x="610" y="40" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="8YBCCptctLdzBx9tajcS-49" value="t_sample_en &amp;lt;= &#39;0&#39;&lt;div&gt;t_period_en &amp;lt;= &#39;0&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="890" y="540" width="120" height="30" as="geometry" />
@@ -255,7 +255,7 @@
           <mxGeometry x="425" y="170" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-24" value="&lt;div&gt;/ t_sample_rest &amp;lt;= &#39;0&#39;&lt;/div&gt;&lt;div&gt;t_period_rest &amp;lt;= &#39;0&#39;&lt;br&gt;&lt;/div&gt;&lt;div&gt;irq_out &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-30;" parent="1" vertex="1">
-          <mxGeometry x="530" y="193" width="150" height="50" as="geometry" />
+          <mxGeometry x="555" y="185" width="150" height="50" as="geometry" />
         </mxCell>
         <mxCell id="yGk2pAN8WluMj7sl2VAn-25" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" source="yGk2pAN8WluMj7sl2VAn-23" target="8YBCCptctLdzBx9tajcS-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -521,8 +521,8 @@
         <mxCell id="SsunDbkqlPeY4llJMre3-10" value="&lt;div&gt;/ bf_shift &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;/div&gt;&lt;div&gt;mag_cnt &amp;lt;= 0&lt;/div&gt;&lt;div&gt;bf_shift_int &amp;lt;= (others =&amp;gt; &#39;0&#39;)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="2080" y="280" width="170" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="SsunDbkqlPeY4llJMre3-11" value="&lt;div&gt;if (shifted_hold = FFF) / &lt;br&gt;&lt;/div&gt;&lt;div&gt;t_sample_rest &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;t_period_rest &amp;lt;= &#39;1&#39;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=20;" parent="1" vertex="1">
-          <mxGeometry x="970" y="205" width="140" height="50" as="geometry" />
+        <mxCell id="SsunDbkqlPeY4llJMre3-11" value="&lt;div&gt;if (shifted_hold = FFF) / &lt;br&gt;&lt;/div&gt;&lt;div&gt;t_sample_rest &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;t_period_rest &amp;lt;= &#39;1&#39;&lt;/div&gt;&lt;div&gt;irq_out &amp;lt;= FFF&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=20;" parent="1" vertex="1">
+          <mxGeometry x="825" y="165" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="SsunDbkqlPeY4llJMre3-12" value="&lt;div&gt;if (gain_mon_rdy = &#39;1&#39;) /&lt;/div&gt;&lt;div&gt;n_samples_out &amp;lt;= wr_addr_cnt+1&lt;br&gt;&lt;/div&gt;&lt;div&gt;bf_shift_int &amp;lt;= accept_mask&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-30;" parent="1" vertex="1">
           <mxGeometry x="1360" y="380" width="200" height="50" as="geometry" />
