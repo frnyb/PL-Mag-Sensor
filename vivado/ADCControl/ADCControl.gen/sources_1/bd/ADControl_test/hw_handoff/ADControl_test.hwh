@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Feb 24 20:05:14 2022" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="ADControl_test" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADC_simulator_0" PORT="clk"/>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADC_simulator_0" PORT="rst_n"/>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="gpio_UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_UnD_ref">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="gpio_UnD_ref"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="gpio_nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_nCS_ref">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="gpio_nCS_ref"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="23" NAME="curr_gains" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_curr_gains">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="curr_gains"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_data_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="data_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="gpio_UnD" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_gpio_UnD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="gpio_UnD"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="ADCControl_0_irq_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="irq_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_ch_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="ch_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="gpio_nCS" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_gpio_nCS">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="gpio_nCS"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE BD="ADCControl_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/ADCControl_0" INSTANCE="ADCControl_0" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="TRAINING_MODULE" VALUE="ADCControl.bd"/>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="ADCControl.bd"/>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="ADCControl.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="ADCControl.bd"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="ADCControl.bd"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_UnD_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gpio_UnD_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_nCS_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gpio_nCS_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="spi_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="ADC_simulator_0_spi_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_simulator_0" PORT="spi_irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="spi_din" RIGHT="0" SIGIS="undef" SIGNAME="ADC_simulator_0_spi_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_simulator_0" PORT="spi_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="gpio_nCS" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_gpio_nCS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gpio_nCS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="spi_dout" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_spi_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_simulator_0" PORT="spi_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_rw" SIGIS="undef" SIGNAME="ADCControl_0_spi_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_simulator_0" PORT="spi_rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="gpio_UnD" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_gpio_UnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gpio_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_ch_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ch_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_cs" SIGIS="undef" SIGNAME="ADCControl_0_spi_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_simulator_0" PORT="spi_cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="spi_addr" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_spi_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_simulator_0" PORT="spi_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="ADCControl_0_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="irq_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="curr_gains" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_curr_gains">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="curr_gains"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_simulator_0" HWVERSION="1.0" INSTANCE="ADC_simulator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_simulator" VLNV="xilinx.com:module_ref:ADC_simulator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="ADControl_test_ADC_simulator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="spi_rw" SIGIS="undef" SIGNAME="ADCControl_0_spi_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="spi_cs" SIGIS="undef" SIGNAME="ADCControl_0_spi_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="spi_addr" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_spi_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="spi_din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_spi_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="spi_dout" RIGHT="0" SIGIS="undef" SIGNAME="ADC_simulator_0_spi_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="ADC_simulator_0_spi_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_irq"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

@@ -1,0 +1,672 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xBCCA1AB6242DD768",
+      "design_src": "/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vivado/BufferFlowControl/BufferFlowControl.srcs/sources_1/bd/BufferControlSimConst/BufferControlSimConst.bd",
+      "device": "xczu3eg-sbva484-1-i",
+      "name": "BufferControlSimConst_inst_0",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "variant": "true"
+    },
+    "design_tree": {
+      "buffer_flow_control_0": "",
+      "xlconstant_0": "",
+      "xlconstant_1": "",
+      "xlconstant_2": "",
+      "xlconstant_3": "",
+      "xlconstant_4": "",
+      "xlconstant_5": "",
+      "xlconstant_6": "",
+      "xlconstant_7": "",
+      "xlconstant_8": "",
+      "xlconstant_9": "",
+      "xlconstant_10": "",
+      "xlconstant_11": "",
+      "buffer_flow_control_1": ""
+    },
+    "ports": {
+      "adc_ch": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "adc_dout": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "adc_irq": {
+        "type": "intr",
+        "direction": "O",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "BufferControl_test1_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "rd_addr": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "rd_ch": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "rd_din": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "rd_hold": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "intr",
+            "value_src": "ip_prop"
+          },
+          "PortWidth": {
+            "value": "12",
+            "value_src": "ip_prop"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "rd_irq": {
+        "type": "intr",
+        "direction": "I",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default_prop"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "default"
+          }
+        }
+      },
+      "rd_n_samples": {
+        "direction": "I",
+        "left": "5",
+        "right": "0"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "buffer_flow_control_0": {
+        "vlnv": "xilinx.com:module_ref:buffer_flow_control_tester:1.0",
+        "xci_name": "BufferControlSimConst_inst_0_buffer_flow_control_0_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_buffer_flow_control_0_0/BufferControlSimConst_inst_0_buffer_flow_control_0_0.xci",
+        "inst_hier_path": "buffer_flow_control_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "buffer_flow_control_tester",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "BufferControl_test1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "channel": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "din_0": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_1": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_2": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_3": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_4": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_5": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_6": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_7": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_8": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_9": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_A": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_B": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_0_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_0_0/BufferControlSimConst_inst_0_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "111"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_1_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_1_0/BufferControlSimConst_inst_0_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "222"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_2_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_2_0/BufferControlSimConst_inst_0_xlconstant_2_0.xci",
+        "inst_hier_path": "xlconstant_2",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "333"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_3": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_3_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_3_0/BufferControlSimConst_inst_0_xlconstant_3_0.xci",
+        "inst_hier_path": "xlconstant_3",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "444"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_4": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_4_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_4_0/BufferControlSimConst_inst_0_xlconstant_4_0.xci",
+        "inst_hier_path": "xlconstant_4",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "555"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_5": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_5_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_5_0/BufferControlSimConst_inst_0_xlconstant_5_0.xci",
+        "inst_hier_path": "xlconstant_5",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "666"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_6": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_6_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_6_0/BufferControlSimConst_inst_0_xlconstant_6_0.xci",
+        "inst_hier_path": "xlconstant_6",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "777"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_7": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_7_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_7_0/BufferControlSimConst_inst_0_xlconstant_7_0.xci",
+        "inst_hier_path": "xlconstant_7",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "888"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_8": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_8_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_8_0/BufferControlSimConst_inst_0_xlconstant_8_0.xci",
+        "inst_hier_path": "xlconstant_8",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "999"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_9": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_9_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_9_0/BufferControlSimConst_inst_0_xlconstant_9_0.xci",
+        "inst_hier_path": "xlconstant_9",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "1000"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_10": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_10_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_10_0/BufferControlSimConst_inst_0_xlconstant_10_0.xci",
+        "inst_hier_path": "xlconstant_10",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "1100"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "xlconstant_11": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "BufferControlSimConst_inst_0_xlconstant_11_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_xlconstant_11_0/BufferControlSimConst_inst_0_xlconstant_11_0.xci",
+        "inst_hier_path": "xlconstant_11",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "1200"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "buffer_flow_control_1": {
+        "vlnv": "xilinx.com:module_ref:buffer_flow_control_reader:1.0",
+        "xci_name": "BufferControlSimConst_inst_0_buffer_flow_control_1_0",
+        "xci_path": "ip/BufferControlSimConst_inst_0_buffer_flow_control_1_0/BufferControlSimConst_inst_0_buffer_flow_control_1_0.xci",
+        "inst_hier_path": "buffer_flow_control_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "buffer_flow_control_reader",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "BufferControl_test1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "hold": {
+            "direction": "O",
+            "left": "11",
+            "right": "0",
+            "parameters": {
+              "PortType": {
+                "value": "intr",
+                "value_src": "ip_prop"
+              },
+              "PortWidth": {
+                "value": "12",
+                "value_src": "ip_prop"
+              },
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "addr": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "channel": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "n_samples": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "I",
+            "left": "11",
+            "right": "0",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_out": {
+            "direction": "O"
+          },
+          "wr_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "buffer_flow_control_0_channel": {
+        "ports": [
+          "buffer_flow_control_0/channel",
+          "adc_ch"
+        ]
+      },
+      "buffer_flow_control_0_dout": {
+        "ports": [
+          "buffer_flow_control_0/dout",
+          "adc_dout"
+        ]
+      },
+      "buffer_flow_control_0_irq": {
+        "ports": [
+          "buffer_flow_control_0/irq",
+          "adc_irq"
+        ]
+      },
+      "buffer_flow_control_1_addr": {
+        "ports": [
+          "buffer_flow_control_1/addr",
+          "rd_addr"
+        ]
+      },
+      "buffer_flow_control_1_channel": {
+        "ports": [
+          "buffer_flow_control_1/channel",
+          "rd_ch"
+        ]
+      },
+      "buffer_flow_control_1_hold": {
+        "ports": [
+          "buffer_flow_control_1/hold",
+          "rd_hold"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "buffer_flow_control_0/clk",
+          "buffer_flow_control_1/clk"
+        ]
+      },
+      "din_0_1": {
+        "ports": [
+          "rd_din",
+          "buffer_flow_control_1/din"
+        ]
+      },
+      "irq_0_1": {
+        "ports": [
+          "rd_irq",
+          "buffer_flow_control_1/irq"
+        ]
+      },
+      "n_samples_0_1": {
+        "ports": [
+          "rd_n_samples",
+          "buffer_flow_control_1/n_samples"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "buffer_flow_control_0/rst_n",
+          "buffer_flow_control_1/rst_n"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "buffer_flow_control_0/din_0"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "buffer_flow_control_0/din_1"
+        ]
+      },
+      "xlconstant_2_dout": {
+        "ports": [
+          "xlconstant_2/dout",
+          "buffer_flow_control_0/din_2"
+        ]
+      },
+      "xlconstant_3_dout": {
+        "ports": [
+          "xlconstant_3/dout",
+          "buffer_flow_control_0/din_3"
+        ]
+      },
+      "xlconstant_4_dout": {
+        "ports": [
+          "xlconstant_4/dout",
+          "buffer_flow_control_0/din_4"
+        ]
+      },
+      "xlconstant_5_dout": {
+        "ports": [
+          "xlconstant_5/dout",
+          "buffer_flow_control_0/din_5"
+        ]
+      },
+      "xlconstant_6_dout": {
+        "ports": [
+          "xlconstant_6/dout",
+          "buffer_flow_control_0/din_6"
+        ]
+      },
+      "xlconstant_7_dout": {
+        "ports": [
+          "xlconstant_7/dout",
+          "buffer_flow_control_0/din_7"
+        ]
+      },
+      "xlconstant_8_dout": {
+        "ports": [
+          "xlconstant_8/dout",
+          "buffer_flow_control_0/din_8"
+        ]
+      },
+      "xlconstant_9_dout": {
+        "ports": [
+          "xlconstant_9/dout",
+          "buffer_flow_control_0/din_9"
+        ]
+      },
+      "xlconstant_10_dout": {
+        "ports": [
+          "xlconstant_10/dout",
+          "buffer_flow_control_0/din_A"
+        ]
+      },
+      "xlconstant_11_dout": {
+        "ports": [
+          "xlconstant_11/dout",
+          "buffer_flow_control_0/din_B"
+        ]
+      }
+    }
+  }
+}

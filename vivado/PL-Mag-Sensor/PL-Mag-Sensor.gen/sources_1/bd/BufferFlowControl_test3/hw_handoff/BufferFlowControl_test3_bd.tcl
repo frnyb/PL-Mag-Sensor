@@ -365,13 +365,16 @@ proc create_hier_cell_BufferFlowControl { parentCell nameHier } {
  ] $signal_period_timer
 
   # Create port connections
-  connect_bd_net -net MagPingPongBuffers_0_busy1 [get_bd_pins busy] [get_bd_pins MagPingPongBuffers_0/busy]
+  connect_bd_net -net MagPingPongBuffers_0_busy [get_bd_pins busy] [get_bd_pins MagPingPongBuffers_0/busy]
   connect_bd_net -net MagPingPongBuffers_0_irq [get_bd_pins MagPingPongBuffers_0/irq] [get_bd_pins buffer_controller/bf_irq]
-  connect_bd_net -net MagPingPongBuffers_0_rd_out1 [get_bd_pins rd_out] [get_bd_pins MagPingPongBuffers_0/rd_out]
+  connect_bd_net -net MagPingPongBuffers_0_rd_out [get_bd_pins rd_out] [get_bd_pins MagPingPongBuffers_0/rd_out]
   connect_bd_net -net adc_ch_1 [get_bd_pins adc_ch] [get_bd_pins buffer_controller/adc_ch]
   connect_bd_net -net adc_din_1 [get_bd_pins adc_din] [get_bd_pins buffer_controller/adc_din]
   connect_bd_net -net adc_irq_1 [get_bd_pins adc_irq] [get_bd_pins buffer_controller/adc_irq]
+  connect_bd_net -net buffer_controller_bf_shift [get_bd_pins MagPingPongBuffers_0/shift] [get_bd_pins buffer_controller/bf_shift]
+  connect_bd_net -net buffer_controller_bf_wr [get_bd_pins MagPingPongBuffers_0/wr] [get_bd_pins buffer_controller/bf_wr]
   connect_bd_net -net buffer_controller_bf_wr_addr [get_bd_pins MagPingPongBuffers_0/wr_addr] [get_bd_pins buffer_controller/bf_wr_addr]
+  connect_bd_net -net buffer_controller_bf_wr_data [get_bd_pins MagPingPongBuffers_0/wr_din] [get_bd_pins buffer_controller/bf_wr_data]
   connect_bd_net -net buffer_controller_gain_ref [get_bd_pins gain_ref] [get_bd_pins buffer_controller/gain_ref]
   connect_bd_net -net buffer_controller_irq_out [get_bd_pins irq] [get_bd_pins buffer_controller/irq_out]
   connect_bd_net -net buffer_controller_lut_curr_gain [get_bd_pins buffer_controller/lut_curr_gain] [get_bd_pins gain_LUT/curr_gain]
@@ -389,17 +392,14 @@ proc create_hier_cell_BufferFlowControl { parentCell nameHier } {
   connect_bd_net -net gain_LUT_irq [get_bd_pins buffer_controller/lut_irq] [get_bd_pins gain_LUT/irq]
   connect_bd_net -net gain_LUT_new_gain [get_bd_pins buffer_controller/lut_new_gain] [get_bd_pins gain_LUT/new_gain]
   connect_bd_net -net gain_curr_1 [get_bd_pins gain_curr] [get_bd_pins buffer_controller/gain_curr]
-  connect_bd_net -net hold_0_2 [get_bd_pins hold] [get_bd_pins MagPingPongBuffers_0/hold]
-  connect_bd_net -net rd_addr_0_2 [get_bd_pins rd_addr] [get_bd_pins MagPingPongBuffers_0/rd_addr]
-  connect_bd_net -net rd_ch_0_2 [get_bd_pins rd_ch] [get_bd_pins MagPingPongBuffers_0/rd_ch]
+  connect_bd_net -net hold_1 [get_bd_pins hold] [get_bd_pins MagPingPongBuffers_0/hold]
+  connect_bd_net -net rd_addr_1 [get_bd_pins rd_addr] [get_bd_pins MagPingPongBuffers_0/rd_addr]
+  connect_bd_net -net rd_ch_1 [get_bd_pins rd_ch] [get_bd_pins MagPingPongBuffers_0/rd_ch]
   connect_bd_net -net rst_n_1 [get_bd_pins rst_n] [get_bd_pins MagPingPongBuffers_0/rst_n] [get_bd_pins buffer_controller/rst_n] [get_bd_pins sample_interval_timer/rst_n] [get_bd_pins signal_period_timer/rst_n]
   connect_bd_net -net sample_mag_interval_timer_cnt [get_bd_pins buffer_controller/t_sample_cnt] [get_bd_pins sample_interval_timer/cnt]
   connect_bd_net -net sample_mag_interval_timer_irq [get_bd_pins buffer_controller/t_sample_irq] [get_bd_pins sample_interval_timer/irq]
-  connect_bd_net -net shift_1 [get_bd_pins MagPingPongBuffers_0/shift] [get_bd_pins buffer_controller/bf_shift]
   connect_bd_net -net signal_period_timer_cnt [get_bd_pins buffer_controller/t_period_cnt] [get_bd_pins signal_period_timer/cnt]
   connect_bd_net -net signal_period_timer_irq [get_bd_pins buffer_controller/t_period_irq] [get_bd_pins signal_period_timer/irq]
-  connect_bd_net -net wr_1 [get_bd_pins MagPingPongBuffers_0/wr] [get_bd_pins buffer_controller/bf_wr]
-  connect_bd_net -net wr_din_1 [get_bd_pins MagPingPongBuffers_0/wr_din] [get_bd_pins buffer_controller/bf_wr_data]
 
   # Restore current instance
   current_bd_instance $oldCurInst

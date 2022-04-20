@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-761,-484",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -10 -y -110 -defaultsOSRD
+preplace port cs -pg 1 -lvl 0 -x -10 -y -70 -defaultsOSRD
+preplace port irq -pg 1 -lvl 2 -x 310 -y -70 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -10 -y -90 -defaultsOSRD
+preplace port rw -pg 1 -lvl 0 -x -10 -y -50 -defaultsOSRD
+preplace port spi_clk -pg 1 -lvl 2 -x 310 -y -30 -defaultsOSRD
+preplace port spi_miso -pg 1 -lvl 0 -x -10 -y 10 -defaultsOSRD
+preplace port spi_mosi -pg 1 -lvl 2 -x 310 -y -50 -defaultsOSRD
+preplace portBus addr -pg 1 -lvl 0 -x -10 -y -30 -defaultsOSRD
+preplace portBus data_in -pg 1 -lvl 0 -x -10 -y -10 -defaultsOSRD
+preplace portBus data_out -pg 1 -lvl 2 -x 310 -y -90 -defaultsOSRD
+preplace portBus spi_cs_n -pg 1 -lvl 2 -x 310 -y -10 -defaultsOSRD
+preplace inst spi_master -pg 1 -lvl 1 -x 150 -y -50 -defaultsOSRD
+preplace netloc addr_0_1 1 0 1 NJ -30
+preplace netloc clk_0_1 1 0 1 NJ -110
+preplace netloc cs_0_1 1 0 1 NJ -70
+preplace netloc data_in_0_1 1 0 1 NJ -10
+preplace netloc spi_master_0_data_out 1 1 1 NJ -90
+preplace netloc spi_master_0_irq 1 1 1 NJ -70
+preplace netloc rst_n_0_1 1 0 1 NJ -90
+preplace netloc rw_0_1 1 0 1 NJ -50
+preplace netloc spi_master_0_spi_clk 1 1 1 NJ -30
+preplace netloc spi_master_0_spi_cs_n 1 1 1 NJ -10
+preplace netloc spi_miso_0_1 1 0 1 NJ 10
+preplace netloc spi_master_0_spi_mosi 1 1 1 NJ -50
+levelinfo -pg 1 -10 150 310
+pagesize -pg 1 -db -bbox -sgen -150 -170 460 240
+"
+}
+

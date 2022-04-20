@@ -1,0 +1,29 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "MagSampleFetcher",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "MagSampleFetcher"
+              }]
+          }
+        },
+        {
+          "functionName": "MagSampleFetcher",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "MagSampleFetcher"
+              }]
+          }
+        }
+      ]
+    }]}

@@ -1,0 +1,145 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8AAF985BCBB1D9CA",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../DigMagController.gen/sources_1/bd/MagSampleFetcherTest",
+      "name": "MagSampleFetcherTest",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "MagSampleFetcher_0": ""
+    },
+    "ports": {
+      "ap_clk_0": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "ap_rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "ap_idle_0": {
+        "direction": "O"
+      },
+      "ap_done_0": {
+        "direction": "O"
+      },
+      "ap_start_0": {
+        "direction": "I"
+      },
+      "ap_ready_0": {
+        "direction": "O"
+      },
+      "n_samples_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "cnt_out_ap_vld_0": {
+        "direction": "O"
+      },
+      "n_samples_out_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "n_samples_out_ap_vld_0": {
+        "direction": "O"
+      },
+      "bfr_irq_0": {
+        "type": "data",
+        "direction": "I"
+      },
+      "cnt_out_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "MagSampleFetcher_0": {
+        "vlnv": "DIII:PL-Mag-Sensor:MagSampleFetcher:1.0",
+        "xci_name": "MagSampleFetcherTest_MagSampleFetcher_0_0",
+        "xci_path": "ip/MagSampleFetcherTest_MagSampleFetcher_0_0/MagSampleFetcherTest_MagSampleFetcher_0_0.xci",
+        "inst_hier_path": "MagSampleFetcher_0"
+      }
+    },
+    "nets": {
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk_0",
+          "MagSampleFetcher_0/ap_clk"
+        ]
+      },
+      "ap_rst_0_1": {
+        "ports": [
+          "ap_rst_0"
+        ]
+      },
+      "MagSampleFetcher_0_ap_idle": {
+        "ports": [
+          "ap_idle_0"
+        ]
+      },
+      "MagSampleFetcher_0_ap_done": {
+        "ports": [
+          "ap_done_0"
+        ]
+      },
+      "ap_start_0_1": {
+        "ports": [
+          "ap_start_0"
+        ]
+      },
+      "MagSampleFetcher_0_ap_ready": {
+        "ports": [
+          "ap_ready_0"
+        ]
+      },
+      "n_samples_0_1": {
+        "ports": [
+          "n_samples_0",
+          "MagSampleFetcher_0/n_samples"
+        ]
+      },
+      "MagSampleFetcher_0_cnt_out_ap_vld": {
+        "ports": [
+          "cnt_out_ap_vld_0"
+        ]
+      },
+      "MagSampleFetcher_0_n_samples_out": {
+        "ports": [
+          "n_samples_out_0"
+        ]
+      },
+      "MagSampleFetcher_0_n_samples_out_ap_vld": {
+        "ports": [
+          "n_samples_out_ap_vld_0"
+        ]
+      },
+      "MagSampleFetcher_0_cnt_out": {
+        "ports": [
+          "cnt_out_0"
+        ]
+      },
+      "bfr_irq_0_1": {
+        "ports": [
+          "bfr_irq_0",
+          "MagSampleFetcher_0/n_samples_ap_vld",
+          "MagSampleFetcher_0/bfr_irq"
+        ]
+      }
+    }
+  }
+}

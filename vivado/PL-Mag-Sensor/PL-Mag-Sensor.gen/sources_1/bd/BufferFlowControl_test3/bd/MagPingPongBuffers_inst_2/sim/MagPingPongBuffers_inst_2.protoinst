@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"MagPingPongBuffers_inst_2": {
-			"proto_instances": {
-			}
-		}
-	}
-}

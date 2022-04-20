@@ -1,47 +1,106 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.09047",
-   "Default View_TopLeft":"-19,-947",
+   "Default View_ScaleFactor":"0.905208",
+   "Default View_TopLeft":"-319,1",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port clk -pg 1 -lvl 0 -x -130 -y 123 -defaultsOSRD
-preplace port rst_n -pg 1 -lvl 0 -x -130 -y 150 -defaultsOSRD
-preplace port SPI_SCLK -pg 1 -lvl 6 -x 2050 -y 480 -defaultsOSRD
-preplace port SPI_MOSI -pg 1 -lvl 6 -x 2050 -y 460 -defaultsOSRD
-preplace port SPI_MISO -pg 1 -lvl 0 -x -130 -y 520 -defaultsOSRD
-preplace portBus SPI_nCS -pg 1 -lvl 6 -x 2050 -y 540 -defaultsOSRD
-preplace inst SPI_master -pg 1 -lvl 4 -x 1579 -y 460 -defaultsOSRD
-preplace inst SPI_nCS_slice -pg 1 -lvl 5 -x 1930 -y 540 -defaultsOSRD
-preplace inst GainControl -pg 1 -lvl 2 -x 611 -y 150 -defaultsOSRD -resize 205 156
-preplace inst BufferFlowControl -pg 1 -lvl 1 -x 198 -y -724 -defaultsOSRD -resize 218 152
-preplace inst ADCControl -pg 1 -lvl 3 -x 1095 -y 150 -defaultsOSRD
-preplace netloc clk_0_1 1 0 4 -110 50 340 50 750 0 1330J
-preplace netloc rst_n_0_1 1 0 4 -100 40 350 40 760 10 1320J
-preplace netloc spi_master_0_spi_clk 1 4 2 1790J 480 NJ
-preplace netloc spi_master_0_spi_mosi 1 4 2 1790J 460 NJ
-preplace netloc spi_miso_0_1 1 0 4 NJ 520 NJ 520 NJ 520 1270J
-preplace netloc spi_master_0_spi_cs_n 1 4 1 1790J 490n
-preplace netloc xlslice_0_Dout 1 5 1 NJ 540
-preplace netloc ADC_controller_0_spi_cs 1 3 1 1310 190n
-preplace netloc ADC_controller_0_spi_rw 1 3 1 1290 230n
-preplace netloc SPI_master_data_out 1 2 3 740 290 NJ 290 1790
-preplace netloc SPI_master_irq 1 2 2 750 390 NJ
-preplace netloc ADC_controller_0_spi_addr 1 3 1 1300 170n
-preplace netloc ADC_controller_0_spi_dout 1 3 1 1280 210n
-preplace netloc GainControl_dout 1 2 1 N 130
-preplace netloc GainControl_dout1 1 2 1 N 150
-preplace netloc ADC_controller_gpio_UnD 1 1 3 360 -20 NJ -20 1290
-preplace netloc ADC_controller_gpio_nCS 1 1 3 370 -10 NJ -10 1280
-preplace netloc ADC_controller_irq_out 1 0 4 -80 -824 NJ -824 NJ -824 1310
-preplace netloc ADC_controller_data_out 1 0 4 -90 -834 NJ -834 NJ -834 1300
-preplace netloc GainControl_dout2 1 0 3 -90 0 NJ 0 740
-preplace netloc inp_1 1 1 1 330 -724n
-preplace netloc ADC_controller_ch_out 1 0 4 -80 -40 NJ -40 NJ -40 1270
-levelinfo -pg 1 -130 198 611 1095 1579 1930 2050
-pagesize -pg 1 -db -bbox -sgen -250 -890 2190 2060
+preplace port mag_MISO -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port mag_SCLK -pg 1 -lvl 4 -x 1340 -y 820 -defaultsOSRD
+preplace port mag_MOSI -pg 1 -lvl 4 -x 1340 -y 940 -defaultsOSRD
+preplace port irq_out -pg 1 -lvl 4 -x 1340 -y 800 -defaultsOSRD
+preplace port bfr_irq_out -pg 1 -lvl 4 -x 1340 -y 680 -defaultsOSRD
+preplace portBus mag_nCS -pg 1 -lvl 4 -x 1340 -y 880 -defaultsOSRD
+preplace portBus bfr_busy -pg 1 -lvl 4 -x 1340 -y 400 -defaultsOSRD
+preplace portBus ch_out -pg 1 -lvl 4 -x 1340 -y 90 -defaultsOSRD
+preplace portBus data_out -pg 1 -lvl 4 -x 1340 -y 780 -defaultsOSRD
+preplace portBus bfr_n_samples_out -pg 1 -lvl 4 -x 1340 -y 700 -defaultsOSRD
+preplace portBus bfr_hold -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace portBus bfr_rd_dout_10 -pg 1 -lvl 4 -x 1340 -y 460 -defaultsOSRD
+preplace portBus bfr_rd_addr_2 -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace portBus bfr_rd_addr_10 -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
+preplace portBus bfr_rd_addr_11 -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
+preplace portBus bfr_rd_dout_1 -pg 1 -lvl 4 -x 1340 -y 440 -defaultsOSRD
+preplace portBus bfr_rd_dout_2 -pg 1 -lvl 4 -x 1340 -y 500 -defaultsOSRD
+preplace portBus bfr_rd_addr_4 -pg 1 -lvl 0 -x 0 -y 570 -defaultsOSRD
+preplace portBus bfr_rd_addr_1 -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
+preplace portBus bfr_rd_dout_6 -pg 1 -lvl 4 -x 1340 -y 580 -defaultsOSRD
+preplace portBus bfr_rd_addr_3 -pg 1 -lvl 0 -x 0 -y 550 -defaultsOSRD
+preplace portBus bfr_rd_dout_11 -pg 1 -lvl 4 -x 1340 -y 480 -defaultsOSRD
+preplace portBus bfr_rd_dout_4 -pg 1 -lvl 4 -x 1340 -y 540 -defaultsOSRD
+preplace portBus bfr_rd_addr_6 -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
+preplace portBus bfr_rd_dout_5 -pg 1 -lvl 4 -x 1340 -y 560 -defaultsOSRD
+preplace portBus bfr_rd_dout_8 -pg 1 -lvl 4 -x 1340 -y 620 -defaultsOSRD
+preplace portBus bfr_rd_addr_5 -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace portBus bfr_rd_dout_3 -pg 1 -lvl 4 -x 1340 -y 520 -defaultsOSRD
+preplace portBus bfr_rd_addr_8 -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
+preplace portBus bfr_rd_dout_7 -pg 1 -lvl 4 -x 1340 -y 600 -defaultsOSRD
+preplace portBus bfr_rd_addr_7 -pg 1 -lvl 0 -x 0 -y 630 -defaultsOSRD
+preplace portBus bfr_rd_dout_0 -pg 1 -lvl 4 -x 1340 -y 420 -defaultsOSRD
+preplace portBus bfr_rd_addr_0 -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace portBus bfr_rd_addr_9 -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
+preplace portBus bfr_rd_dout_9 -pg 1 -lvl 4 -x 1340 -y 640 -defaultsOSRD
+preplace inst SPIMaster -pg 1 -lvl 1 -x 250 -y 380 -defaultsOSRD
+preplace inst GainControl -pg 1 -lvl 1 -x 250 -y 140 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 3 -x 1110 -y 880 -defaultsOSRD
+preplace inst ADCControl_0 -pg 1 -lvl 2 -x 650 -y 170 -defaultsOSRD
+preplace inst BufferFlowControl_1 -pg 1 -lvl 3 -x 1110 -y 550 -defaultsOSRD
+preplace netloc spi_miso_0_1 1 0 1 NJ 440
+preplace netloc rst_n_0_1 1 0 3 30 530 450 530 800J
+preplace netloc clk_0_1 1 0 3 50 520 410 520 840J
+preplace netloc GainControl_gain 1 1 2 460 370 860J
+preplace netloc SPIMaster_spi_clk 1 1 3 NJ 380 850J 310 1290J
+preplace netloc SPIMaster_spi_mosi 1 1 3 NJ 420 840J 300 1300J
+preplace netloc GainControl_UnD_ref 1 1 1 470 120n
+preplace netloc GainControl_nCS_ref 1 1 1 450 160n
+preplace netloc SPIMaster_data_out 1 1 1 390 210n
+preplace netloc SPIMaster_irq 1 1 1 420 230n
+preplace netloc ADCControl_0_ch_out 1 2 2 890 90 NJ
+preplace netloc ADCControl_0_data_out 1 2 2 880 280 1320J
+preplace netloc ADCControl_0_gpio_UnD 1 0 3 90 10 NJ 10 870
+preplace netloc ADCControl_0_gpio_nCS 1 0 3 100 20 NJ 20 850
+preplace netloc ADCControl_0_irq_out 1 2 2 870 290 1310J
+preplace netloc ADCControl_0_spi_addr 1 0 3 100 240 430J 310 830
+preplace netloc ADCControl_0_spi_cs 1 0 3 80 30 NJ 30 840
+preplace netloc ADCControl_0_spi_dout 1 0 3 90 250 400J 320 820
+preplace netloc ADCControl_0_spi_rw 1 0 3 60 40 440J 330 810
+preplace netloc SPIMaster_spi_cs_n 1 1 2 NJ 400 820J
+preplace netloc xlslice_0_Dout 1 3 1 NJ 880
+preplace netloc BufferFlowControl_1_bfr_busy 1 3 1 NJ 400
+preplace netloc BufferFlowControl_1_bfr_rd_dout_0 1 3 1 NJ 420
+preplace netloc BufferFlowControl_1_bfr_rd_dout_1 1 3 1 NJ 440
+preplace netloc BufferFlowControl_1_bfr_rd_dout_10 1 3 1 NJ 460
+preplace netloc BufferFlowControl_1_bfr_rd_dout_11 1 3 1 NJ 480
+preplace netloc BufferFlowControl_1_bfr_rd_dout_2 1 3 1 NJ 500
+preplace netloc BufferFlowControl_1_bfr_rd_dout_3 1 3 1 NJ 520
+preplace netloc BufferFlowControl_1_bfr_rd_dout_4 1 3 1 NJ 540
+preplace netloc BufferFlowControl_1_bfr_rd_dout_5 1 3 1 NJ 560
+preplace netloc BufferFlowControl_1_bfr_rd_dout_6 1 3 1 NJ 580
+preplace netloc BufferFlowControl_1_bfr_rd_dout_7 1 3 1 NJ 600
+preplace netloc BufferFlowControl_1_bfr_rd_dout_8 1 3 1 NJ 620
+preplace netloc BufferFlowControl_1_bfr_rd_dout_9 1 3 1 NJ 640
+preplace netloc BufferFlowControl_1_irq_out 1 3 1 NJ 680
+preplace netloc BufferFlowControl_1_n_samples_out 1 3 1 NJ 700
+preplace netloc BufferFlowControl_1_gain_ref 1 0 4 70 790 NJ 790 NJ 790 1280
+preplace netloc bfr_hold_1 1 0 3 40J 260 380J 430 NJ
+preplace netloc bfr_rd_addr_0_1 1 0 3 40J 500 460J 450 NJ
+preplace netloc bfr_rd_addr_1_1 1 0 3 NJ 510 470J 470 NJ
+preplace netloc bfr_rd_addr_10_1 1 0 3 NJ 690 NJ 690 810J
+preplace netloc bfr_rd_addr_11_1 1 0 3 NJ 710 NJ 710 830J
+preplace netloc bfr_rd_addr_2_1 1 0 3 20J 540 NJ 540 890J
+preplace netloc bfr_rd_addr_3_1 1 0 3 NJ 550 NJ 550 NJ
+preplace netloc bfr_rd_addr_4_1 1 0 3 NJ 570 NJ 570 NJ
+preplace netloc bfr_rd_addr_5_1 1 0 3 NJ 590 NJ 590 NJ
+preplace netloc bfr_rd_addr_6_1 1 0 3 NJ 610 NJ 610 NJ
+preplace netloc bfr_rd_addr_7_1 1 0 3 NJ 630 NJ 630 NJ
+preplace netloc bfr_rd_addr_8_1 1 0 3 NJ 650 NJ 650 NJ
+preplace netloc bfr_rd_addr_9_1 1 0 3 NJ 670 NJ 670 NJ
+levelinfo -pg 1 0 250 650 1110 1340
+pagesize -pg 1 -db -bbox -sgen -200 0 1560 960
 "
 }
 {
-   "da_clkrst_cnt":"5"
+   "da_clkrst_cnt":"9"
 }

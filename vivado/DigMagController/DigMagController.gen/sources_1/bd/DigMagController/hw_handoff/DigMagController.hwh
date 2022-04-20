@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 17 11:08:49 2022" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="DigMagController" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="clk"/>
+        <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="clk"/>
+        <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="clk"/>
+        <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="clk"/>
+        <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="clk"/>
+        <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="clk"/>
+        <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="clk"/>
+        <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="clk"/>
+        <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="reset_n"/>
+        <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="rst_n"/>
+        <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="reset_n"/>
+        <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="rst_n"/>
+        <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="reset_n"/>
+        <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="rst_n"/>
+        <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="reset_n"/>
+        <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag0_sda_i" SIGIS="undef" SIGNAME="External_Ports_mag0_sda_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="sda_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag0_sda_o" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_sda_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="sda_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag0_scl_o" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_scl_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="scl_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag0_scl_t" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_scl_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="scl_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag0_scl_i" SIGIS="undef" SIGNAME="External_Ports_mag0_scl_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="scl_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag0_sda_t" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_sda_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="sda_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag1_scl_i" SIGIS="undef" SIGNAME="External_Ports_mag1_scl_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="scl_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag1_scl_o" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_scl_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="scl_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag1_scl_t" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_scl_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="scl_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag1_sda_i" SIGIS="undef" SIGNAME="External_Ports_mag1_sda_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="sda_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag1_sda_o" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_sda_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="sda_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag1_sda_t" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_sda_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="sda_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag2_scl_i" SIGIS="undef" SIGNAME="External_Ports_mag2_scl_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="scl_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag2_scl_o" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_scl_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="scl_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag2_scl_t" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_scl_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="scl_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag2_sda_i" SIGIS="undef" SIGNAME="External_Ports_mag2_sda_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="sda_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag2_sda_o" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_sda_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="sda_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag2_sda_t" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_sda_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="sda_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag3_scl_i" SIGIS="undef" SIGNAME="External_Ports_mag3_scl_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="scl_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag3_scl_o" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_scl_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="scl_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag3_scl_t" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_scl_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="scl_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag3_sda_i" SIGIS="undef" SIGNAME="External_Ports_mag3_sda_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="sda_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag3_sda_o" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_sda_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="sda_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag3_sda_t" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_sda_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="sda_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="dig_mag_data_handler_0_irq_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="irq_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef" SIGNAME="dig_mag_data_handler_0_ch_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="ch_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="dig_mag_data_handler_0_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/DigMagController_0/dig_mag_controller" HWVERSION="1.0" INSTANCE="DigMagController_0_dig_mag_controller" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dig_mag_controller" VLNV="xilinx.com:module_ref:dig_mag_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_dig_mag_controller_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="i2c_ena" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_i2c_ena">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="ena"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="i2c_addr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_i2c_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="i2c_rw" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_i2c_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="i2c_data_wr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_i2c_data_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="data_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i2c_busy" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i2c_data_rd" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_data_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_i2c_master" PORT="data_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="irq_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="x_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag0_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="y_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag0_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="z_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_z_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag0_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="idle" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="done" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag0_done"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DigMagController_0/i2c_master" HWVERSION="1.0" INSTANCE="DigMagController_0_i2c_master" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2c_master" VLNV="xilinx.com:module_ref:i2c_master:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="input_clk" VALUE="100000000"/>
+        <PARAMETER NAME="bus_clk" VALUE="100000"/>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_i2c_master_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_i2c_ena">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="i2c_ena"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="6" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_i2c_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="i2c_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rw" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_i2c_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="i2c_rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_wr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_i2c_data_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="i2c_data_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="busy" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="i2c_busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_rd" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_data_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="i2c_data_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ack_error" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sda_i" SIGIS="undef" SIGNAME="External_Ports_mag0_sda_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag0_sda_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_o" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_sda_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag0_sda_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_t" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_sda_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag0_sda_t"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="scl_i" SIGIS="undef" SIGNAME="External_Ports_mag0_scl_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag0_scl_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_o" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_scl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag0_scl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_t" SIGIS="undef" SIGNAME="DigMagController_0_i2c_master_scl_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag0_scl_t"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="interface_iic" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="SCL_I" PHYSICAL="scl_i"/>
+            <PORTMAP LOGICAL="SCL_O" PHYSICAL="scl_o"/>
+            <PORTMAP LOGICAL="SCL_T" PHYSICAL="scl_t"/>
+            <PORTMAP LOGICAL="SDA_I" PHYSICAL="sda_i"/>
+            <PORTMAP LOGICAL="SDA_O" PHYSICAL="sda_o"/>
+            <PORTMAP LOGICAL="SDA_T" PHYSICAL="sda_t"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DigMagController_1/dig_mag_controller" HWVERSION="1.0" INSTANCE="DigMagController_1_dig_mag_controller" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dig_mag_controller" VLNV="xilinx.com:module_ref:dig_mag_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_dig_mag_controller_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="i2c_ena" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_i2c_ena">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="ena"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="i2c_addr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_i2c_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="i2c_rw" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_i2c_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="i2c_data_wr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_i2c_data_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="data_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i2c_busy" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i2c_data_rd" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_data_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_i2c_master" PORT="data_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="irq_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="x_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag1_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="y_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag1_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="z_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_z_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag1_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="idle" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="done" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag1_done"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DigMagController_1/i2c_master" HWVERSION="1.0" INSTANCE="DigMagController_1_i2c_master" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2c_master" VLNV="xilinx.com:module_ref:i2c_master:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="input_clk" VALUE="100000000"/>
+        <PARAMETER NAME="bus_clk" VALUE="100000"/>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_i2c_master_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_i2c_ena">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="i2c_ena"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="6" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_i2c_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="i2c_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rw" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_i2c_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="i2c_rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_wr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_i2c_data_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="i2c_data_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="busy" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="i2c_busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_rd" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_data_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="i2c_data_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ack_error" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sda_i" SIGIS="undef" SIGNAME="External_Ports_mag1_sda_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag1_sda_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_o" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_sda_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag1_sda_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_t" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_sda_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag1_sda_t"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="scl_i" SIGIS="undef" SIGNAME="External_Ports_mag1_scl_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag1_scl_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_o" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_scl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag1_scl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_t" SIGIS="undef" SIGNAME="DigMagController_1_i2c_master_scl_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag1_scl_t"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="interface_iic" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="SCL_I" PHYSICAL="scl_i"/>
+            <PORTMAP LOGICAL="SCL_O" PHYSICAL="scl_o"/>
+            <PORTMAP LOGICAL="SCL_T" PHYSICAL="scl_t"/>
+            <PORTMAP LOGICAL="SDA_I" PHYSICAL="sda_i"/>
+            <PORTMAP LOGICAL="SDA_O" PHYSICAL="sda_o"/>
+            <PORTMAP LOGICAL="SDA_T" PHYSICAL="sda_t"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DigMagController_2/dig_mag_controller" HWVERSION="1.0" INSTANCE="DigMagController_2_dig_mag_controller" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dig_mag_controller" VLNV="xilinx.com:module_ref:dig_mag_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_dig_mag_controller_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="i2c_ena" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_i2c_ena">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="ena"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="i2c_addr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_i2c_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="i2c_rw" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_i2c_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="i2c_data_wr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_i2c_data_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="data_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i2c_busy" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i2c_data_rd" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_data_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_i2c_master" PORT="data_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="irq_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="x_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag2_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="y_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag2_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="z_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_z_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag2_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="idle" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="done" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag2_done"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DigMagController_2/i2c_master" HWVERSION="1.0" INSTANCE="DigMagController_2_i2c_master" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2c_master" VLNV="xilinx.com:module_ref:i2c_master:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="input_clk" VALUE="100000000"/>
+        <PARAMETER NAME="bus_clk" VALUE="100000"/>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_i2c_master_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_i2c_ena">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="i2c_ena"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="6" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_i2c_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="i2c_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rw" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_i2c_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="i2c_rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_wr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_i2c_data_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="i2c_data_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="busy" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="i2c_busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_rd" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_data_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="i2c_data_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ack_error" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sda_i" SIGIS="undef" SIGNAME="External_Ports_mag2_sda_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag2_sda_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_o" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_sda_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag2_sda_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_t" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_sda_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag2_sda_t"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="scl_i" SIGIS="undef" SIGNAME="External_Ports_mag2_scl_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag2_scl_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_o" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_scl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag2_scl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_t" SIGIS="undef" SIGNAME="DigMagController_2_i2c_master_scl_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag2_scl_t"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="interface_iic" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="SCL_I" PHYSICAL="scl_i"/>
+            <PORTMAP LOGICAL="SCL_O" PHYSICAL="scl_o"/>
+            <PORTMAP LOGICAL="SCL_T" PHYSICAL="scl_t"/>
+            <PORTMAP LOGICAL="SDA_I" PHYSICAL="sda_i"/>
+            <PORTMAP LOGICAL="SDA_O" PHYSICAL="sda_o"/>
+            <PORTMAP LOGICAL="SDA_T" PHYSICAL="sda_t"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DigMagController_3/dig_mag_controller" HWVERSION="1.0" INSTANCE="DigMagController_3_dig_mag_controller" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dig_mag_controller" VLNV="xilinx.com:module_ref:dig_mag_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_dig_mag_controller_5"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="i2c_ena" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_i2c_ena">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="ena"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="i2c_addr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_i2c_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="i2c_rw" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_i2c_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="i2c_data_wr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_i2c_data_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="data_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i2c_busy" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i2c_data_rd" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_data_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_i2c_master" PORT="data_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="irq_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="x_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag3_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="y_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag3_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="z_dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_z_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag3_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="idle" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="done" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dig_mag_data_handler_0" PORT="mag3_done"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DigMagController_3/i2c_master" HWVERSION="1.0" INSTANCE="DigMagController_3_i2c_master" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2c_master" VLNV="xilinx.com:module_ref:i2c_master:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="input_clk" VALUE="100000000"/>
+        <PARAMETER NAME="bus_clk" VALUE="100000"/>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_i2c_master_5"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_i2c_ena">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="i2c_ena"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="6" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_i2c_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="i2c_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rw" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_i2c_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="i2c_rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_wr" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_i2c_data_wr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="i2c_data_wr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="busy" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="i2c_busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_rd" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_data_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="i2c_data_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ack_error" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sda_i" SIGIS="undef" SIGNAME="External_Ports_mag3_sda_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag3_sda_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_o" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_sda_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag3_sda_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_t" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_sda_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag3_sda_t"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="scl_i" SIGIS="undef" SIGNAME="External_Ports_mag3_scl_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag3_scl_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_o" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_scl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag3_scl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_t" SIGIS="undef" SIGNAME="DigMagController_3_i2c_master_scl_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag3_scl_t"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="interface_iic" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="SCL_I" PHYSICAL="scl_i"/>
+            <PORTMAP LOGICAL="SCL_O" PHYSICAL="scl_o"/>
+            <PORTMAP LOGICAL="SCL_T" PHYSICAL="scl_t"/>
+            <PORTMAP LOGICAL="SDA_I" PHYSICAL="sda_i"/>
+            <PORTMAP LOGICAL="SDA_O" PHYSICAL="sda_o"/>
+            <PORTMAP LOGICAL="SDA_T" PHYSICAL="sda_t"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/dig_mag_data_handler_0" HWVERSION="1.0" INSTANCE="dig_mag_data_handler_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dig_mag_data_handler" VLNV="xilinx.com:module_ref:dig_mag_data_handler:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="DigMagController_dig_mag_data_handler_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag0_x" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="x_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag0_y" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="y_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag0_z" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_z_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="z_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag1_x" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="x_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag1_y" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="y_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag1_z" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_z_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="z_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag2_x" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="x_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag2_y" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="y_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag2_z" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_z_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="z_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag3_x" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="x_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag3_y" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="y_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="mag3_z" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_z_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="z_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mag0_done" SIGIS="undef" SIGNAME="DigMagController_0_dig_mag_controller_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0_dig_mag_controller" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mag1_done" SIGIS="undef" SIGNAME="DigMagController_1_dig_mag_controller_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_1_dig_mag_controller" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mag2_done" SIGIS="undef" SIGNAME="DigMagController_2_dig_mag_controller_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_2_dig_mag_controller" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mag3_done" SIGIS="undef" SIGNAME="DigMagController_3_dig_mag_controller_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_3_dig_mag_controller" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="dig_mag_data_handler_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="dig_mag_data_handler_0_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="irq_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef" SIGNAME="dig_mag_data_handler_0_ch_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ch_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

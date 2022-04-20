@@ -2,30 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="MagController" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1644912433"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1644912433"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1644912433"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1644912433"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1650376202"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1650376202"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1650376202"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1650376202"/>
     <FileCollection Name="SOURCES" Type="SOURCES"/>
-    <BlockContainerCollection>
-      <BlockContainer InstPath="ADCControl" IsPR="false" State="Stale">
-        <ActiveVariantSynth FileName="bd/ADCControl_inst_0/ADCControl_inst_0.bd"/>
-        <ActiveVariantSim FileName="bd/ADCControl_inst_0/ADCControl_inst_0.bd"/>
-        <VariantsCollection>
-          <BDFile BDFilePath="bd/ADCControl_inst_0/ADCControl_inst_0.bd" BDFileset="ADCControl_inst_0" BDSourceFile="../../../../PL-Mag-Sensor.srcs/sources_1/bd/ADCControl/ADCControl.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
-        </VariantsCollection>
-      </BlockContainer>
-    </BlockContainerCollection>
-    <ReferenceCollection>
-      <ModuleReference TargetName="ADCControl" Type="Block Design" SubInstancePath="MagController_ADCControl_0">
-        <TopFile Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/ADCControl/ADCControl.bd"/>
-        <FileCollection>
-          <File Name="../../../../../../src/counter.vhd"/>
-          <File Name="../../../../../../src/max_gain.vhd"/>
-          <File Name="../../../../../../src/ADC_controller.vhd"/>
-          <File Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/ADCControl/ADCControl.bd"/>
-        </FileCollection>
-      </ModuleReference>
-    </ReferenceCollection>
   </CompositeFile>
 </Root>

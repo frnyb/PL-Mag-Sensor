@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="MagController_test1_wrapper_func_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="MagController_test1_wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="11250000001fs"></ZoomEndTime>
+      <Cursor1Time time="658090100fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="289"></NameColumnWidth>
+      <ValueColumnWidth column_width="141"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject type="logic" fp_name="/MagController_test1_wrapper/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/MagController_test1_wrapper/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group59">
+      <obj_property name="label">adc</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/adc_dout">
+         <obj_property name="ElementShortName">adc_dout[11:0]</obj_property>
+         <obj_property name="ObjectShortName">adc_dout[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagController_test1_wrapper/adc_irq_out">
+         <obj_property name="ElementShortName">adc_irq_out</obj_property>
+         <obj_property name="ObjectShortName">adc_irq_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/ch_out">
+         <obj_property name="ElementShortName">ch_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ch_out[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group60">
+      <obj_property name="label">Gain</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/gain">
+         <obj_property name="ElementShortName">gain[23:0]</obj_property>
+         <obj_property name="ObjectShortName">gain[23:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/gain_ref">
+         <obj_property name="ElementShortName">gain_ref[23:0]</obj_property>
+         <obj_property name="ObjectShortName">gain_ref[23:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/gpio_UnD">
+         <obj_property name="ElementShortName">gpio_UnD[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gpio_UnD[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/gpio_nCS">
+         <obj_property name="ElementShortName">gpio_nCS[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gpio_nCS[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/UnD_ref">
+         <obj_property name="ElementShortName">UnD_ref[3:0]</obj_property>
+         <obj_property name="ObjectShortName">UnD_ref[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/nCS_ref">
+         <obj_property name="ElementShortName">nCS_ref[3:0]</obj_property>
+         <obj_property name="ObjectShortName">nCS_ref[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group62">
+      <obj_property name="label">spi</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/spi_addr">
+         <obj_property name="ElementShortName">spi_addr[1:0]</obj_property>
+         <obj_property name="ObjectShortName">spi_addr[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagController_test1_wrapper/spi_cs">
+         <obj_property name="ElementShortName">spi_cs</obj_property>
+         <obj_property name="ObjectShortName">spi_cs</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/spi_din">
+         <obj_property name="ElementShortName">spi_din[7:0]</obj_property>
+         <obj_property name="ObjectShortName">spi_din[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagController_test1_wrapper/spi_dout">
+         <obj_property name="ElementShortName">spi_dout[7:0]</obj_property>
+         <obj_property name="ObjectShortName">spi_dout[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagController_test1_wrapper/spi_rw">
+         <obj_property name="ElementShortName">spi_rw</obj_property>
+         <obj_property name="ObjectShortName">spi_rw</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group77">
+      <obj_property name="label">BufferFlowController</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group266">
+         <obj_property name="label">streamer</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/MagStreamer/buffer_in_ce0">
+            <obj_property name="ElementShortName">buffer_in_ce0</obj_property>
+            <obj_property name="ObjectShortName">buffer_in_ce0</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/MagStreamer/buffer_in_address0">
+            <obj_property name="ElementShortName">buffer_in_address0[7:0]</obj_property>
+            <obj_property name="ObjectShortName">buffer_in_address0[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/MagStreamer/buffer_in_q0">
+            <obj_property name="ElementShortName">buffer_in_q0[31:0]</obj_property>
+            <obj_property name="ObjectShortName">buffer_in_q0[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/stream_ready">
+            <obj_property name="ElementShortName">stream_ready</obj_property>
+            <obj_property name="ObjectShortName">stream_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/mag_stream_out_tready">
+            <obj_property name="ElementShortName">mag_stream_out_tready</obj_property>
+            <obj_property name="ObjectShortName">mag_stream_out_tready</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/mag_stream_out_tdata">
+            <obj_property name="ElementShortName">mag_stream_out_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">mag_stream_out_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/mag_stream_out_tkeep">
+            <obj_property name="ElementShortName">mag_stream_out_tkeep[3:0]</obj_property>
+            <obj_property name="ObjectShortName">mag_stream_out_tkeep[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/mag_stream_out_tlast">
+            <obj_property name="ElementShortName">mag_stream_out_tlast[0:0]</obj_property>
+            <obj_property name="ObjectShortName">mag_stream_out_tlast[0:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/mag_stream_out_tstrb">
+            <obj_property name="ElementShortName">mag_stream_out_tstrb[3:0]</obj_property>
+            <obj_property name="ObjectShortName">mag_stream_out_tstrb[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/mag_stream_out_tvalid">
+            <obj_property name="ElementShortName">mag_stream_out_tvalid</obj_property>
+            <obj_property name="ObjectShortName">mag_stream_out_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group271">
+         <obj_property name="label">stream_controller</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/stream_controller_0/U0/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/stream_controller_0/U0/dout">
+            <obj_property name="ElementShortName">dout[1:0]</obj_property>
+            <obj_property name="ObjectShortName">dout[1:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/stream_controller_0/U0/stream_ready">
+            <obj_property name="ElementShortName">stream_ready</obj_property>
+            <obj_property name="ObjectShortName">stream_ready</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/stream_controller_0/U0/current_state">
+            <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+            <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group108">
+         <obj_property name="label">buffer_controller</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/buffer_controller_0/U0/current_state">
+            <obj_property name="ElementShortName">current_state[3:0]</obj_property>
+            <obj_property name="ObjectShortName">current_state[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/buffer_controller_0/adc_irq">
+            <obj_property name="ElementShortName">adc_irq</obj_property>
+            <obj_property name="ObjectShortName">adc_irq</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/U0/MagPingPongBuffer_0/U0/ram_0/douta">
+            <obj_property name="ElementShortName">douta[31:0]</obj_property>
+            <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/U0/MagPingPongBuffer_0/U0/pingpong_buffer/ram_selector_reg">
+            <obj_property name="ElementShortName">ram_selector_reg[0:0]</obj_property>
+            <obj_property name="ObjectShortName">ram_selector_reg[0:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/rd_addr">
+            <obj_property name="ElementShortName">rd_addr[9:0]</obj_property>
+            <obj_property name="ObjectShortName">rd_addr[9:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/rd_ch">
+            <obj_property name="ElementShortName">rd_ch[3:0]</obj_property>
+            <obj_property name="ObjectShortName">rd_ch[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/rd_out">
+            <obj_property name="ElementShortName">rd_out[31:0]</obj_property>
+            <obj_property name="ObjectShortName">rd_out[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/shift">
+            <obj_property name="ElementShortName">shift[11:0]</obj_property>
+            <obj_property name="ObjectShortName">shift[11:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/wr">
+            <obj_property name="ElementShortName">wr[11:0]</obj_property>
+            <obj_property name="ObjectShortName">wr[11:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/wr_addr">
+            <obj_property name="ElementShortName">wr_addr[9:0]</obj_property>
+            <obj_property name="ObjectShortName">wr_addr[9:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/MagPingPongBuffers_0/wr_din">
+            <obj_property name="ElementShortName">wr_din[31:0]</obj_property>
+            <obj_property name="ObjectShortName">wr_din[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group276">
+         <obj_property name="label">sample_interval_counter</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/sample_interval_counter/wr_din">
+            <obj_property name="ElementShortName">wr_din[19:0]</obj_property>
+            <obj_property name="ObjectShortName">wr_din[19:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/sample_interval_counter/\cnt_int_reg[18]\">
+            <obj_property name="ElementShortName">\cnt_int_reg[18]\</obj_property>
+            <obj_property name="ObjectShortName">\cnt_int_reg[18]\</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/sample_interval_counter/buffer_controller_0_t_period_en">
+            <obj_property name="ElementShortName">buffer_controller_0_t_period_en</obj_property>
+            <obj_property name="ObjectShortName">buffer_controller_0_t_period_en</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group278">
+         <obj_property name="label">signal_period_counter</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/MagController_test1_wrapper/MagController_test1_i/BufferFlowControl_0/U0/BufferFlowControl/signal_period_counter/buffer_controller_0_t_period_en">
+            <obj_property name="ElementShortName">buffer_controller_0_t_period_en</obj_property>
+            <obj_property name="ObjectShortName">buffer_controller_0_t_period_en</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

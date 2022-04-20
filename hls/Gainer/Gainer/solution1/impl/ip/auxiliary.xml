@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ApplyGain" xd:componentRef="ApplyGain" xd:initiationInterval="31" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="gain_step" xd:originalName="gain_step" xd:direction="in" xd:interfaceRef="gain_step" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="signal_in" xd:originalName="signal_in" xd:direction="in" xd:interfaceRef="signal_in" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(signal_out)" xd:originalName="signal_out" xd:direction="out" xd:interfaceRef="signal_out" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="1" xd:firstOut="30"/>
+  <xd:latencyEstimates xd:best-case="30" xd:worst-case="30" xd:average-case="30"/>
+  <xd:resourceEstimates xd:LUT="1364" xd:FF="1157" xd:BRAM="0" xd:DSP="18"/>
+</xd:acceleratorMap>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 15 09:01:32 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 15 12:42:31 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="sine_generator_inst_2" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -298,7 +298,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -485,7 +485,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -672,7 +672,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -859,7 +859,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -1046,7 +1046,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -1233,7 +1233,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -1420,7 +1420,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -1607,7 +1607,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -1794,7 +1794,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -1981,7 +1981,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -2168,7 +2168,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -2355,7 +2355,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clka" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>

@@ -1,0 +1,45 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-634,-204",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port busy -pg 1 -lvl 2 -x 690 -y 240 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -140 -y 130 -defaultsOSRD
+preplace port hold -pg 1 -lvl 0 -x -140 -y 330 -defaultsOSRD
+preplace port irq -pg 1 -lvl 2 -x 690 -y 260 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -140 -y 230 -defaultsOSRD
+preplace port shift -pg 1 -lvl 0 -x -140 -y 350 -defaultsOSRD
+preplace port wr -pg 1 -lvl 0 -x -140 -y 310 -defaultsOSRD
+preplace portBus rd_addr -pg 1 -lvl 0 -x -140 -y 250 -defaultsOSRD
+preplace portBus rd_dout -pg 1 -lvl 2 -x 690 -y 220 -defaultsOSRD
+preplace portBus wr_addr -pg 1 -lvl 0 -x -140 -y 270 -defaultsOSRD
+preplace portBus wr_din -pg 1 -lvl 0 -x -140 -y 290 -defaultsOSRD
+preplace inst pingpong_buffer_0 -pg 1 -lvl 1 -x 190 -y 20 -defaultsOSRD
+preplace inst ram_0 -pg 1 -lvl 1 -x 190 -y 460 -defaultsOSRD
+preplace inst ram_1 -pg 1 -lvl 1 -x 190 -y 260 -defaultsOSRD
+preplace netloc clk_0_1 1 0 1 -90 -70n
+preplace netloc hold_1 1 0 1 -60J 50n
+preplace netloc pingpong_buffer_0_busy 1 1 1 400J -40n
+preplace netloc pingpong_buffer_0_irq 1 1 1 390J -20n
+preplace netloc pingpong_buffer_0_ram0_addr 1 0 2 -40 -140 360
+preplace netloc pingpong_buffer_0_ram0_dout 1 0 2 -30 -130 350
+preplace netloc pingpong_buffer_0_ram0_wr 1 0 2 0 570 380
+preplace netloc pingpong_buffer_0_ram1_addr 1 0 2 10 580 370
+preplace netloc pingpong_buffer_0_ram1_dout 1 0 2 20 590 360
+preplace netloc pingpong_buffer_0_ram1_wr 1 0 2 30 600 350
+preplace netloc pingpong_buffer_0_rd_dout 1 1 1 410J -60n
+preplace netloc ram_0_douta 1 0 1 -10 110n
+preplace netloc ram_1_douta 1 0 1 -20 90n
+preplace netloc rd_addr_1 1 0 1 -110J -30n
+preplace netloc rst_n_1 1 0 1 -120J -50n
+preplace netloc shift_1 1 0 1 -50J 70n
+preplace netloc wr_1 1 0 1 -70J 30n
+preplace netloc wr_addr_1 1 0 1 -100J -10n
+preplace netloc wr_din_1 1 0 1 -80J 10n
+levelinfo -pg 1 -140 190 690
+pagesize -pg 1 -db -bbox -sgen -290 -150 840 610
+"
+}
+0

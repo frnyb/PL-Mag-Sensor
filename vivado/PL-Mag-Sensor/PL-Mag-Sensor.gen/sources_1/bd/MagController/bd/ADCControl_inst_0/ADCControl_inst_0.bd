@@ -55,7 +55,7 @@
         "parameters": {
           "PortWidth": {
             "value": "24",
-            "value_src": "default"
+            "value_src": "ip_prop"
           }
         }
       },
@@ -76,7 +76,7 @@
         "parameters": {
           "PortWidth": {
             "value": "4",
-            "value_src": "default"
+            "value_src": "ip_prop"
           }
         }
       },
@@ -92,7 +92,7 @@
         "parameters": {
           "PortWidth": {
             "value": "4",
-            "value_src": "default"
+            "value_src": "ip_prop"
           }
         }
       },

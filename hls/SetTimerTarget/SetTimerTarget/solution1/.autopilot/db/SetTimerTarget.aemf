@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1644930875069">
+  <ports id="1" name="timer_target_in" type="PortType" originalName="timer_target_in" coreId="544367988" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="timer_target_out" type="PortType" originalName="timer_target_out" coreId="543517794" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="16" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="19" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@ports.1"/>
+  <edges id="20" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <blocks id="13" name="SetTimerTarget" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="timer_target_in_read" lineNumber="3" originalName="timer_target_in" fileName="SetTimerTarget.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="SetTimerTarget" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SetTimerTarget.cpp" linenumber="3" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SetTimerTarget" functionName="SetTimerTarget"/>
+      <dataInputObjs>timer_target_in</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="timer_target_out_write_ln8" lineNumber="8" fileName="SetTimerTarget.cpp" fileDirectory=".." coreId="1" contextFuncName="SetTimerTarget" opcode="write" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SetTimerTarget.cpp" linenumber="8" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SetTimerTarget" functionName="SetTimerTarget"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>timer_target_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln9" lineNumber="9" fileName="SetTimerTarget.cpp" fileDirectory=".." coreId="0" contextFuncName="SetTimerTarget" opcode="ret" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SetTimerTarget.cpp" linenumber="9" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SetTimerTarget" functionName="SetTimerTarget"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="SetTimerTarget.cpp">
+      <validLinenumbers>3</validLinenumbers>
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>9</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ioNodes realName="timer_target_in_read_read_fu_30">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln8_write_fu_36">
+    <nodeIds>11</nodeIds>
+  </ioNodes>
+  <ioPorts name="timer_target_in">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="timer_target_out">
+    <contents name="write">
+      <nodeIds>11</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="SetTimerTarget" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>13</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

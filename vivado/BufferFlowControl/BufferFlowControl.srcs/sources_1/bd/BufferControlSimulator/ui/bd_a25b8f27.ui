@@ -1,0 +1,51 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-562,-136",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port adc_irq -pg 1 -lvl 3 -x 740 -y 180 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace portBus adc_dout -pg 1 -lvl 3 -x 740 -y 200 -defaultsOSRD
+preplace portBus adc_ch -pg 1 -lvl 3 -x 740 -y 220 -defaultsOSRD
+preplace portBus rd_hold -pg 1 -lvl 3 -x 740 -y 450 -defaultsOSRD
+preplace portBus rd_addr -pg 1 -lvl 3 -x 740 -y 470 -defaultsOSRD
+preplace portBus rd_ch -pg 1 -lvl 3 -x 740 -y 490 -defaultsOSRD
+preplace portBus rd_irq -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace portBus rd_n_samples -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace portBus rd_din -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
+preplace inst buffer_flow_control_0 -pg 1 -lvl 2 -x 540 -y 200 -defaultsOSRD
+preplace inst SineGenerator_0 -pg 1 -lvl 1 -x 160 -y 220 -defaultsOSRD
+preplace inst buffer_flow_control_1 -pg 1 -lvl 2 -x 540 -y 470 -defaultsOSRD
+preplace netloc clk_0_1 1 0 2 20 40 340
+preplace netloc buffer_flow_control_0_irq 1 2 1 NJ 180
+preplace netloc buffer_flow_control_0_dout 1 2 1 NJ 200
+preplace netloc buffer_flow_control_0_channel 1 2 1 NJ 220
+preplace netloc buffer_flow_control_1_hold 1 2 1 720J 430n
+preplace netloc buffer_flow_control_1_addr 1 2 1 710J 450n
+preplace netloc buffer_flow_control_1_channel 1 2 1 700J 470n
+preplace netloc irq_0_1 1 0 2 NJ 490 NJ
+preplace netloc n_samples_0_1 1 0 2 NJ 470 NJ
+preplace netloc din_0_1 1 0 2 NJ 510 NJ
+preplace netloc rst_n_0_1 1 0 2 30 50 320
+preplace netloc SineGenerator_0_dout_8 1 1 1 370 270n
+preplace netloc SineGenerator_0_dout_7 1 1 1 360 250n
+preplace netloc SineGenerator_0_dout_6 1 1 1 350 230n
+preplace netloc SineGenerator_0_dout_5 1 1 1 330 210n
+preplace netloc SineGenerator_0_dout_4 1 1 1 310 190n
+preplace netloc SineGenerator_0_dout_9 1 1 1 380 290n
+preplace netloc SineGenerator_0_dout_3 1 1 1 300 170n
+preplace netloc SineGenerator_0_dout_2 1 1 1 290 150n
+preplace netloc SineGenerator_0_dout_11 1 1 1 270 170n
+preplace netloc SineGenerator_0_dout_10 1 1 1 280 150n
+preplace netloc SineGenerator_0_dout_0 1 1 1 N 110
+preplace netloc SineGenerator_0_dout_1 1 1 1 N 130
+levelinfo -pg 1 0 160 540 740
+pagesize -pg 1 -db -bbox -sgen -190 0 900 570
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

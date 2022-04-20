@@ -39,10 +39,10 @@ entity pingpong_sim_writer is
         
         -- Buffer interface:
         bfr_wr          :   out STD_LOGIC;
-        bfr_shift       :   out STD_LOGIC;
+        bfr_shift       :   out STD_LOGIC                       :=  '0';
         bfr_irq         :   in  STD_LOGIC;
         bfr_dout        :   out STD_LOGIC_VECTOR(11 downto 0);
-        bfr_addr        :   out STD_LOGIC_VECTOR(9 downto 0);
+        bfr_addr        :   out STD_LOGIC_VECTOR(4 downto 0);
 
         -- Data sources
         din_0           :   in  STD_LOGIC_VECTOR(11 downto 0);
@@ -55,8 +55,8 @@ entity pingpong_sim_writer is
 end pingpong_sim_writer;
 
 architecture Behavioral of pingpong_sim_writer is
-    signal      cnt             :   UNSIGNED(10 downto 0)   :=  (others => '0');
-    constant    CNT_MAX         :   UNSIGNED(10 downto 0)   :=  "10000000000";
+    signal      cnt             :   UNSIGNED(4 downto 0)   :=  (others => '0');
+    constant    CNT_MAX         :   UNSIGNED(4 downto 0)   :=  "10000";
 
     signal      wait_cnt        :   UNSIGNED(16 downto 0)   :=  (others => '0');
     constant    WAIT_CNT_MAX    :   UNSIGNED(16 downto 0)   :=  "0" & X"000F";
@@ -74,7 +74,7 @@ begin
     bfr_dout    <=  din_0   when selector = '0' else
                     din_1;
 
-    bfr_addr    <=  STD_LOGIC_VECTOR(cnt(9 downto 0));
+    bfr_addr    <=  STD_LOGIC_VECTOR(cnt(4 downto 0));
 
     ------------------------------------------------------------------------------
     --  Auxilliary processes
@@ -101,6 +101,7 @@ begin
 						when s_wr_0 =>
                             cnt                     <=  (others => '0');
                             selector                <=  '0';
+                            bfr_shift               <=  '0';
                         when others => null;
                     end case;
                 when s_wr_0 =>
@@ -125,12 +126,14 @@ begin
                     end case;
                 when s_wr_done =>
                     case next_state is
-                        when s_shift => null;
+                        when s_shift => 
+                            bfr_shift               <=  '1';
                         when others => null;
                     end case;
                 when s_shift =>
                     case next_state is
-                        when s_wait => null;
+                        when s_wait => 
+                            bfr_shift               <=  '0';
                         when others => null;
                     end case;
                 when s_wait =>
@@ -201,35 +204,35 @@ begin
         case current_state is                       
             when s_rst =>                       
                 bfr_wr      <=  '0';
-                bfr_shift   <=  '0';
+                --bfr_shift   <=  '0';
                 irq_out     <=  '0';
             when s_wr_0 =>
                 bfr_wr      <=  '0';
-                bfr_shift   <=  '0';
+                --bfr_shift   <=  '0';
                 irq_out     <=  '0';
             when s_wr_wait =>
                 bfr_wr      <=  '0';
-                bfr_shift   <=  '0';
+                --bfr_shift   <=  '0';
                 irq_out     <=  '0';
             when s_wr_1 =>
                 bfr_wr      <=  '1';
-                bfr_shift   <=  '0';
+                --bfr_shift   <=  '0';
                 irq_out     <=  '0';
             when s_wr_done =>
                 bfr_wr      <=  '0';
-                bfr_shift   <=  '0';
+                --bfr_shift   <=  '0';
                 irq_out     <=  '0';
             when s_shift =>
                 bfr_wr      <=  '0';
-                bfr_shift   <=  '1';
+                --bfr_shift   <=  '1';
                 irq_out     <=  '0';
             when s_wait =>
                 bfr_wr      <=  '0';
-                bfr_shift   <=  '0';
+                --bfr_shift   <=  '0';
                 irq_out     <=  '0';
             when s_irq =>
                 bfr_wr      <=  '0';
-                bfr_shift   <=  '0';
+                --bfr_shift   <=  '0';
                 irq_out     <=  '1';
             when others => null;
         end case;

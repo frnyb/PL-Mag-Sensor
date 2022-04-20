@@ -1,0 +1,62 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.398624",
+   "Default View_TopLeft":"-1791,5",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus dout_0 -pg 1 -lvl 5 -x 950 -y 180 -defaultsOSRD
+preplace portBus dout_1 -pg 1 -lvl 5 -x 950 -y 360 -defaultsOSRD
+preplace portBus dout_10 -pg 1 -lvl 5 -x 950 -y 1100 -defaultsOSRD
+preplace portBus dout_11 -pg 1 -lvl 5 -x 950 -y 2160 -defaultsOSRD
+preplace portBus dout_2 -pg 1 -lvl 5 -x 950 -y 540 -defaultsOSRD
+preplace portBus dout_3 -pg 1 -lvl 5 -x 950 -y 720 -defaultsOSRD
+preplace portBus dout_4 -pg 1 -lvl 5 -x 950 -y 900 -defaultsOSRD
+preplace portBus dout_5 -pg 1 -lvl 5 -x 950 -y 920 -defaultsOSRD
+preplace portBus dout_6 -pg 1 -lvl 5 -x 950 -y 1440 -defaultsOSRD
+preplace portBus dout_7 -pg 1 -lvl 5 -x 950 -y 1460 -defaultsOSRD
+preplace portBus dout_8 -pg 1 -lvl 5 -x 950 -y 1640 -defaultsOSRD
+preplace portBus dout_9 -pg 1 -lvl 5 -x 950 -y 1980 -defaultsOSRD
+preplace inst constant_en -pg 1 -lvl 1 -x 110 -y 240 -defaultsOSRD
+preplace inst constant_rest -pg 1 -lvl 1 -x 110 -y 340 -defaultsOSRD
+preplace inst constant_target -pg 1 -lvl 1 -x 110 -y 440 -defaultsOSRD
+preplace inst counter_0 -pg 1 -lvl 2 -x 340 -y 240 -defaultsOSRD
+preplace inst sine_0 -pg 1 -lvl 4 -x 820 -y 90 -defaultsOSRD
+preplace inst sine_1 -pg 1 -lvl 4 -x 820 -y 270 -defaultsOSRD
+preplace inst sine_10 -pg 1 -lvl 4 -x 820 -y 1190 -defaultsOSRD
+preplace inst sine_11 -pg 1 -lvl 4 -x 820 -y 2070 -defaultsOSRD
+preplace inst sine_2 -pg 1 -lvl 4 -x 820 -y 450 -defaultsOSRD
+preplace inst sine_3 -pg 1 -lvl 4 -x 820 -y 630 -defaultsOSRD
+preplace inst sine_4 -pg 1 -lvl 4 -x 820 -y 810 -defaultsOSRD
+preplace inst sine_5 -pg 1 -lvl 4 -x 820 -y 1010 -defaultsOSRD
+preplace inst sine_6 -pg 1 -lvl 4 -x 820 -y 1350 -defaultsOSRD
+preplace inst sine_7 -pg 1 -lvl 4 -x 820 -y 1550 -defaultsOSRD
+preplace inst sine_8 -pg 1 -lvl 4 -x 820 -y 1730 -defaultsOSRD
+preplace inst sine_9 -pg 1 -lvl 4 -x 820 -y 1890 -defaultsOSRD
+preplace inst slice_cnt -pg 1 -lvl 3 -x 580 -y 80 -defaultsOSRD
+preplace netloc clk_0_1 1 0 4 NJ 140 210 140 NJ 140 700
+preplace netloc constant_rest1_dout 1 1 1 210J 280n
+preplace netloc constant_rest_dout 1 1 1 200J 260n
+preplace netloc rst_n_0_2 1 0 2 NJ 180 200J
+preplace netloc slice_cnt_Dout 1 3 1 690 80n
+preplace netloc xlconstant_0_dout 1 1 1 NJ 240
+preplace netloc sine_0_douta 1 3 2 710 180 NJ
+preplace netloc sine_1_douta 1 3 2 710 360 NJ
+preplace netloc sine_6_douta 1 3 2 710 1440 NJ
+preplace netloc sine_2_douta 1 3 2 710 540 NJ
+preplace netloc sine_7_douta 1 3 2 710 1460 NJ
+preplace netloc sine_8_douta 1 3 2 710 1640 NJ
+preplace netloc sine_3_douta 1 3 2 710 720 NJ
+preplace netloc sine_4_douta 1 3 2 710 900 NJ
+preplace netloc sine_5_douta 1 3 2 710 920 NJ
+preplace netloc sine_9_douta 1 3 2 710 1980 NJ
+preplace netloc sine_10_douta 1 3 2 710 1100 NJ
+preplace netloc sine_11_douta 1 3 2 710 2160 NJ
+preplace netloc counter_0_cnt 1 2 1 470 80n
+levelinfo -pg 1 0 110 340 580 820 950
+pagesize -pg 1 -db -bbox -sgen -90 0 1100 2180
+"
+}
+0

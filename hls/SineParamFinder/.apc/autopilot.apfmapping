@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="SineParamFinder.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/src/SineParamFinder.h"/>
-    <originFiles name="SineParamFinder.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/src/SineParamFinder.cpp"/>
+    <originFiles name="SineParamFinder.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/SineParamFinder.cpp"/>
+    <originFiles name="SineParamFinder.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/SineParamFinder.h"/>
+    <originFiles name="data_types.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/data_types.h"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

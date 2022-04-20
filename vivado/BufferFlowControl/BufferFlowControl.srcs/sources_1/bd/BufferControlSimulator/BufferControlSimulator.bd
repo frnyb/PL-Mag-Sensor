@@ -1,0 +1,415 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x529A9C85009C510A",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../BufferFlowControl.gen/sources_1/bd/BufferControlSimulator",
+      "name": "BufferControlSimulator",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "buffer_flow_control_0": "",
+      "SineGenerator_0": "",
+      "buffer_flow_control_1": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "adc_irq": {
+        "type": "intr",
+        "direction": "O"
+      },
+      "adc_dout": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "adc_ch": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "rd_hold": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "rd_addr": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "rd_ch": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "rd_irq": {
+        "type": "intr",
+        "direction": "I",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "12"
+          }
+        }
+      },
+      "rd_n_samples": {
+        "direction": "I",
+        "left": "10",
+        "right": "0"
+      },
+      "rd_din": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      }
+    },
+    "components": {
+      "buffer_flow_control_0": {
+        "vlnv": "xilinx.com:module_ref:buffer_flow_control_tester:1.0",
+        "xci_name": "BufferControlSimulator_buffer_flow_control_0_0",
+        "xci_path": "ip/BufferControlSimulator_buffer_flow_control_0_0/BufferControlSimulator_buffer_flow_control_0_0.xci",
+        "inst_hier_path": "buffer_flow_control_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "buffer_flow_control_tester",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "BufferControlSimulator_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "channel": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "din_0": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_1": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_2": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_3": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_4": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_5": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_6": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_7": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_8": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_9": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_A": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "din_B": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
+      "SineGenerator_0": {
+        "vlnv": "DIII:PL-Mag-Sensor:SineGenerator:1.0",
+        "xci_name": "BufferControlSimulator_SineGenerator_0_3",
+        "xci_path": "ip/BufferControlSimulator_SineGenerator_0_3/BufferControlSimulator_SineGenerator_0_3.xci",
+        "inst_hier_path": "SineGenerator_0"
+      },
+      "buffer_flow_control_1": {
+        "vlnv": "xilinx.com:module_ref:buffer_flow_control_reader:1.0",
+        "xci_name": "BufferControlSimulator_buffer_flow_control_1_0",
+        "xci_path": "ip/BufferControlSimulator_buffer_flow_control_1_0/BufferControlSimulator_buffer_flow_control_1_0.xci",
+        "inst_hier_path": "buffer_flow_control_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "buffer_flow_control_reader",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "hold": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "channel": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "n_samples": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "I",
+            "left": "11",
+            "right": "0",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_out": {
+            "direction": "O"
+          },
+          "wr_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "buffer_flow_control_0/clk",
+          "SineGenerator_0/clk",
+          "buffer_flow_control_1/clk"
+        ]
+      },
+      "buffer_flow_control_0_irq": {
+        "ports": [
+          "buffer_flow_control_0/irq",
+          "adc_irq"
+        ]
+      },
+      "buffer_flow_control_0_dout": {
+        "ports": [
+          "buffer_flow_control_0/dout",
+          "adc_dout"
+        ]
+      },
+      "buffer_flow_control_0_channel": {
+        "ports": [
+          "buffer_flow_control_0/channel",
+          "adc_ch"
+        ]
+      },
+      "buffer_flow_control_1_hold": {
+        "ports": [
+          "buffer_flow_control_1/hold",
+          "rd_hold"
+        ]
+      },
+      "buffer_flow_control_1_addr": {
+        "ports": [
+          "buffer_flow_control_1/addr",
+          "rd_addr"
+        ]
+      },
+      "buffer_flow_control_1_channel": {
+        "ports": [
+          "buffer_flow_control_1/channel",
+          "rd_ch"
+        ]
+      },
+      "irq_0_1": {
+        "ports": [
+          "rd_irq",
+          "buffer_flow_control_1/irq"
+        ]
+      },
+      "n_samples_0_1": {
+        "ports": [
+          "rd_n_samples",
+          "buffer_flow_control_1/n_samples"
+        ]
+      },
+      "din_0_1": {
+        "ports": [
+          "rd_din",
+          "buffer_flow_control_1/din"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "buffer_flow_control_0/rst_n",
+          "SineGenerator_0/rst_n",
+          "buffer_flow_control_1/rst_n"
+        ]
+      },
+      "SineGenerator_0_dout_8": {
+        "ports": [
+          "SineGenerator_0/dout_8",
+          "buffer_flow_control_0/din_8"
+        ]
+      },
+      "SineGenerator_0_dout_7": {
+        "ports": [
+          "SineGenerator_0/dout_7",
+          "buffer_flow_control_0/din_7"
+        ]
+      },
+      "SineGenerator_0_dout_6": {
+        "ports": [
+          "SineGenerator_0/dout_6",
+          "buffer_flow_control_0/din_6"
+        ]
+      },
+      "SineGenerator_0_dout_5": {
+        "ports": [
+          "SineGenerator_0/dout_5",
+          "buffer_flow_control_0/din_5"
+        ]
+      },
+      "SineGenerator_0_dout_4": {
+        "ports": [
+          "SineGenerator_0/dout_4",
+          "buffer_flow_control_0/din_4"
+        ]
+      },
+      "SineGenerator_0_dout_9": {
+        "ports": [
+          "SineGenerator_0/dout_9",
+          "buffer_flow_control_0/din_9"
+        ]
+      },
+      "SineGenerator_0_dout_3": {
+        "ports": [
+          "SineGenerator_0/dout_3",
+          "buffer_flow_control_0/din_3"
+        ]
+      },
+      "SineGenerator_0_dout_2": {
+        "ports": [
+          "SineGenerator_0/dout_2",
+          "buffer_flow_control_0/din_2"
+        ]
+      },
+      "SineGenerator_0_dout_11": {
+        "ports": [
+          "SineGenerator_0/dout_11",
+          "buffer_flow_control_0/din_B"
+        ]
+      },
+      "SineGenerator_0_dout_10": {
+        "ports": [
+          "SineGenerator_0/dout_10",
+          "buffer_flow_control_0/din_A"
+        ]
+      },
+      "SineGenerator_0_dout_0": {
+        "ports": [
+          "SineGenerator_0/dout_0",
+          "buffer_flow_control_0/din_0"
+        ]
+      },
+      "SineGenerator_0_dout_1": {
+        "ports": [
+          "SineGenerator_0/dout_1",
+          "buffer_flow_control_0/din_1"
+        ]
+      }
+    }
+  }
+}

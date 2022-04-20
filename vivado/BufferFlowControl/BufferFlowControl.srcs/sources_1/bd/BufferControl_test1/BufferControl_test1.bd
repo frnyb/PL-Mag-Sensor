@@ -1,0 +1,247 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA43F0E67AEBA3C59",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../BufferFlowControl.gen/sources_1/bd/BufferControl_test1",
+      "name": "BufferControl_test1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "BufferControlSimConst_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "adc_dout": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "gain_ref": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "bfr_busy": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "adc_ch": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "rd_hold": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "rd_addr": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "rd_ch": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "n_samples_out": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "adc_irq": {
+        "type": "intr",
+        "direction": "O"
+      },
+      "bfr_rd_out": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "gain_curr": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "irq_out": {
+        "type": "intr",
+        "direction": "O"
+      }
+    },
+    "components": {
+      "BufferControlSimConst_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "BufferControlSimConst.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "BufferControlSimConst.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "BufferControlSimConst.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "BufferControlSimConst.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "BufferControlSimConst.bd"
+          }
+        },
+        "ports": {
+          "adc_ch": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "adc_dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "adc_irq": {
+            "type": "intr",
+            "direction": "O"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rd_addr": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rd_ch": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "rd_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rd_hold": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "rd_irq": {
+            "type": "intr",
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "rd_n_samples": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I"
+          }
+        },
+        "post_compiled_compname": "BufferControlSimConst_inst_0",
+        "architecture": "zynquplus",
+        "variant_info": {
+          "BufferControlSimConst.bd": {
+            "scoped_diagram": "BufferControlSimConst_inst_0.bd",
+            "design_checksum": "0x25D2DB14",
+            "ref_name": "BufferControlSimConst",
+            "ref_subinst_path": "BufferControl_test1_BufferControlSimConst_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "BufferControlSimConst_0/clk"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "BufferControlSimConst_0/rst_n"
+        ]
+      },
+      "BufferFlowControl_0_irq_out": {
+        "ports": [
+          "irq_out",
+          "BufferControlSimConst_0/rd_irq"
+        ]
+      },
+      "BufferControlSimulat_0_adc_dout": {
+        "ports": [
+          "BufferControlSimConst_0/adc_dout",
+          "adc_dout"
+        ]
+      },
+      "BufferControlSimulat_0_adc_ch": {
+        "ports": [
+          "BufferControlSimConst_0/adc_ch",
+          "adc_ch"
+        ]
+      },
+      "BufferFlowControl_0_n_samples_out": {
+        "ports": [
+          "n_samples_out",
+          "BufferControlSimConst_0/rd_n_samples"
+        ]
+      },
+      "BufferControlSimulat_0_adc_irq": {
+        "ports": [
+          "BufferControlSimConst_0/adc_irq",
+          "adc_irq"
+        ]
+      },
+      "BufferFlowControl_0_bfr_rd_out": {
+        "ports": [
+          "bfr_rd_out",
+          "BufferControlSimConst_0/rd_din"
+        ]
+      },
+      "BufferControlSimConst_0_rd_addr": {
+        "ports": [
+          "BufferControlSimConst_0/rd_addr",
+          "rd_addr"
+        ]
+      },
+      "BufferControlSimConst_0_rd_ch": {
+        "ports": [
+          "BufferControlSimConst_0/rd_ch",
+          "rd_ch"
+        ]
+      },
+      "BufferControlSimConst_0_rd_hold": {
+        "ports": [
+          "BufferControlSimConst_0/rd_hold",
+          "rd_hold"
+        ]
+      }
+    }
+  }
+}

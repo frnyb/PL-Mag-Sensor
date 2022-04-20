@@ -1,0 +1,12 @@
+#ifndef _DEFINES_H_
+#define _DEFINES_H_
+
+#define SAMPLE_ADDR_WIDTH 10
+
+#define GAIN_HYST_MAX_THRESH 0xE00
+#define GAIN_HYST_MIN_THRESH 0xA00
+#define GAIN_SIGNAL_TARGET 0xC00
+
+#define GAIN_PER_STEP 2.
+
+#endif

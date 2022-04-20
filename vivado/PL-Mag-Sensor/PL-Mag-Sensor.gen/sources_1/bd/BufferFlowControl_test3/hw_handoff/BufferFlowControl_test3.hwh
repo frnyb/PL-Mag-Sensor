@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 15 09:07:57 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 15 14:29:16 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="BufferFlowControl_test3" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -7,9 +7,9 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="clk"/>
-        <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="clk"/>
         <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="clk"/>
         <CONNECTION INSTANCE="BufferFlowControl_gain_LUT" PORT="clk"/>
+        <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="clk"/>
         <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="clk"/>
         <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="clk"/>
         <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="clk"/>
@@ -29,8 +29,8 @@
     <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="BufferFlowControl_signal_period_timer" PORT="rst_n"/>
-        <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="rst_n"/>
         <CONNECTION INSTANCE="BufferFlowControl_sample_interval_timer" PORT="rst_n"/>
+        <CONNECTION INSTANCE="BufferFlowControl_MagPingPongBuffers_0" PORT="rst_n"/>
         <CONNECTION INSTANCE="BufferFlowControl_buffer_controller" PORT="rst_n"/>
         <CONNECTION INSTANCE="Simulator_sine_generator_0" PORT="rst_n"/>
         <CONNECTION INSTANCE="Simulator_buffer_flow_control_0" PORT="rst_n"/>
@@ -92,7 +92,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE BD="MagPingPongBuffers_inst_2" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/BufferFlowControl/MagPingPongBuffers_0" INSTANCE="BufferFlowControl_MagPingPongBuffers_0" IS_ENABLE="1">
+    <MODULE BD="MagPingPongBuffers_inst_4" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/BufferFlowControl/MagPingPongBuffers_0" INSTANCE="BufferFlowControl_MagPingPongBuffers_0" IS_ENABLE="1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>

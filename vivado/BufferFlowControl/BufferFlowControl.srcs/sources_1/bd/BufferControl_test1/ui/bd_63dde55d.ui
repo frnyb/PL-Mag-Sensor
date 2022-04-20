@@ -1,0 +1,40 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-699,-294",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port adc_irq -pg 1 -lvl 2 -x 390 -y 120 -defaultsOSRD
+preplace port irq_out -pg 1 -lvl 2 -x 390 -y 240 -defaultsOSRD
+preplace portBus adc_dout -pg 1 -lvl 2 -x 390 -y 100 -defaultsOSRD
+preplace portBus gain_ref -pg 1 -lvl 2 -x 390 -y 60 -defaultsOSRD
+preplace portBus bfr_busy -pg 1 -lvl 2 -x 390 -y 40 -defaultsOSRD
+preplace portBus adc_ch -pg 1 -lvl 2 -x 390 -y 80 -defaultsOSRD
+preplace portBus rd_hold -pg 1 -lvl 2 -x 390 -y 180 -defaultsOSRD
+preplace portBus rd_addr -pg 1 -lvl 2 -x 390 -y 140 -defaultsOSRD
+preplace portBus rd_ch -pg 1 -lvl 2 -x 390 -y 160 -defaultsOSRD
+preplace portBus n_samples_out -pg 1 -lvl 2 -x 390 -y 260 -defaultsOSRD
+preplace portBus bfr_rd_out -pg 1 -lvl 2 -x 390 -y 20 -defaultsOSRD
+preplace portBus gain_curr -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace inst BufferControlSimConst_0 -pg 1 -lvl 1 -x 200 -y 130 -defaultsOSRD
+preplace netloc clk_0_1 1 0 1 NJ 90
+preplace netloc rst_n_0_1 1 0 1 NJ 170
+preplace netloc BufferFlowControl_0_irq_out 1 0 2 20 240 NJ
+preplace netloc BufferControlSimulat_0_adc_dout 1 1 1 NJ 100
+preplace netloc BufferControlSimulat_0_adc_ch 1 1 1 NJ 80
+preplace netloc BufferFlowControl_0_n_samples_out 1 0 2 30 260 NJ
+preplace netloc BufferControlSimulat_0_adc_irq 1 1 1 NJ 120
+preplace netloc BufferFlowControl_0_bfr_rd_out 1 0 2 20 20 NJ
+preplace netloc BufferControlSimConst_0_rd_addr 1 1 1 NJ 140
+preplace netloc BufferControlSimConst_0_rd_ch 1 1 1 NJ 160
+preplace netloc BufferControlSimConst_0_rd_hold 1 1 1 NJ 180
+levelinfo -pg 1 0 200 390
+pagesize -pg 1 -db -bbox -sgen -160 0 580 280
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

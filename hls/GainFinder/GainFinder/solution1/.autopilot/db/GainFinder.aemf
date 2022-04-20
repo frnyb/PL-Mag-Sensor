@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1645103832508">
+  <ports id="1" name="signal_top_val" type="PortType" originalName="signal_top_val.V" coreId="4294967295" bitwidth="12">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="n_samples_sat" type="PortType" originalName="n_samples_sat" coreId="1629888613" bitwidth="11"/>
+  <ports id="3" name="n_samples" type="PortType" originalName="n_samples" coreId="539111028" bitwidth="11"/>
+  <ports id="4" name="curr_gain" type="PortType" originalName="curr_gain" coreId="1226980724" bitwidth="6">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="new_gain" type="PortType" originalName="new_gain" coreId="1629888623" bitwidth="6" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="39" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="42" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="43" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="46" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="47" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="48" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="49" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="52" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="53" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="54" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="57" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@ports.4"/>
+  <edges id="58" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="59" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="61" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@ports.4"/>
+  <edges id="64" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="66" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@ports.4"/>
+  <edges id="68" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="197" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.4"/>
+  <edges id="198" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="199" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="200" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="201" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.5"/>
+  <edges id="202" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5"/>
+  <edges id="203" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <blocks id="22" name="block_22" type="BlockType">
+    <controlOutputObjs>.critedge</controlOutputObjs>
+    <controlOutputObjs>block_25</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="curr_gain_read" lineNumber="3" originalName="curr_gain" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="1629888613" contextFuncName="GainFinder" bitwidth="6" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="3" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="GainFinder"/>
+      <dataInputObjs>curr_gain</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="signal_top_val_read" lineNumber="3" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="576534583" contextFuncName="GainFinder" bitwidth="12" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="3" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="GainFinder"/>
+      <dataInputObjs>signal_top_val</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="icmp_ln886" lineNumber="886" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln886_fu_61_p2" opType="icmp" coreId="1730556465" contextFuncName="operator_gt_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.86" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="886" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="operator&amp;gt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln16" lineNumber="16" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="0" contextFuncName="GainFinder" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="16" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="GainFinder"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_25</controlInputObjs>
+      <controlInputObjs>.critedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/GainFinder.cpp">
+      <validLinenumbers>3</validLinenumbers>
+      <validLinenumbers>16</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>886</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="25" name="block_25" type="BlockType">
+    <controlInputObjs>block_22</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>ap_fixed_base.exit166</controlOutputObjs>
+    <controlOutputObjs>block_28</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="icmp_ln878" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln878_fu_67_p2" opType="icmp" coreId="1629888613" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.86" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln20" lineNumber="20" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="539769716" contextFuncName="GainFinder" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="20" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="GainFinder"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_28</controlInputObjs>
+      <controlInputObjs>ap_fixed_base.exit166</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/GainFinder.cpp">
+      <validLinenumbers>20</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>878</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="28" name="block_28" type="BlockType">
+    <controlInputObjs>block_25</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>_Z8gainDown7ap_uintILi12EES_ILi11EES1_S_ILi6EEPS2_.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="new_gain_write_ln26" lineNumber="26" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="1601200416" contextFuncName="GainFinder" opcode="write" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="26" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="GainFinder"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>new_gain</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln27" lineNumber="27" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="1397508130" contextFuncName="GainFinder" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="27" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="GainFinder"/>
+      <controlInputObjs>_Z8gainDown7ap_uintILi12EES_ILi11EES1_S_ILi6EEPS2_.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/GainFinder.cpp">
+      <validLinenumbers>26</validLinenumbers>
+      <validLinenumbers>27</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="31" name="ap_fixed_base.exit166" type="BlockType">
+    <controlInputObjs>block_25</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>_Z8gainDown7ap_uintILi12EES_ILi11EES1_S_ILi6EEPS2_.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="new_gain_write_ln60" lineNumber="60" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="539119430" contextFuncName="findGain" opcode="write" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="60" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="findGain"/>
+      <dataOutputObjs>new_gain</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="br_ln35" lineNumber="35" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="575620686" contextFuncName="GainFinder" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="35" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="GainFinder"/>
+      <controlInputObjs>_Z8gainDown7ap_uintILi12EES_ILi11EES1_S_ILi6EEPS2_.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/GainFinder.cpp">
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>35</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="34" name=".critedge" type="BlockType">
+    <controlInputObjs>block_22</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>_Z8gainDown7ap_uintILi12EES_ILi11EES1_S_ILi6EEPS2_.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="new_gain_write_ln60" lineNumber="60" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="1953459744" contextFuncName="findGain" opcode="write" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="60" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="findGain"/>
+      <dataOutputObjs>new_gain</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="br_ln71" lineNumber="71" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="1852404841" contextFuncName="gainDown" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="71" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="gainDown"/>
+      <controlInputObjs>_Z8gainDown7ap_uintILi12EES_ILi11EES1_S_ILi6EEPS2_.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/GainFinder.cpp">
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>71</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="36" name="_Z8gainDown7ap_uintILi12EES_ILi11EES1_S_ILi6EEPS2_.exit" type="BlockType">
+    <controlInputObjs>block_28</controlInputObjs>
+    <controlInputObjs>ap_fixed_base.exit166</controlInputObjs>
+    <controlInputObjs>.critedge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln40" lineNumber="40" fileName="../src/GainFinder.cpp" fileDirectory=".." coreId="3004" contextFuncName="GainFinder" opcode="ret" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/GainFinder.cpp" linenumber="40" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/GainFinder" functionName="GainFinder"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/GainFinder.cpp">
+      <validLinenumbers>40</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="icmp_ln878_fu_67">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln886_fu_61">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="curr_gain_read_read_fu_40">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="signal_top_val_read_read_fu_46">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_52">
+    <nodeIds>26</nodeIds>
+    <nodeIds>29</nodeIds>
+    <nodeIds>32</nodeIds>
+  </ioNodes>
+  <ioPorts name="curr_gain">
+    <contents name="read">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="n_samples"/>
+  <ioPorts name="n_samples_sat"/>
+  <ioPorts name="new_gain">
+    <contents name="write">
+      <nodeIds>26</nodeIds>
+      <nodeIds>29</nodeIds>
+      <nodeIds>32</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="signal_top_val">
+    <contents name="read">
+      <nodeIds>19</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="GainFinder" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>22</basicBlocks>
+      <basicBlocks>25</basicBlocks>
+      <basicBlocks>28</basicBlocks>
+      <basicBlocks>31</basicBlocks>
+      <basicBlocks>34</basicBlocks>
+      <basicBlocks>36</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

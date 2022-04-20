@@ -316,7 +316,7 @@
         "variant_info": {
           "MagPingPongBuffers.bd": {
             "scoped_diagram": "MagPingPongBuffers_inst_0.bd",
-            "design_checksum": "0x6B0FAD04",
+            "design_checksum": "0xFD803203",
             "ref_name": "MagPingPongBuffers",
             "ref_subinst_path": "BufferFlowControl_MagPingPongBuffers_0",
             "ref_type": "Block Design",

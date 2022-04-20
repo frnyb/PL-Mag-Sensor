@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar 22 10:39:29 2022" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="BufferControlSimConst_inst_0" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="3" NAME="adc_ch" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_0_channel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_0" PORT="channel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="adc_dout" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_0_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="adc_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="buffer_flow_control_0_irq">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_0" PORT="irq"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_0" PORT="clk"/>
+        <CONNECTION INSTANCE="buffer_flow_control_1" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="4" NAME="rd_addr" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_1_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_1" PORT="addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="rd_ch" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_1_channel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_1" PORT="channel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="rd_din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_rd_din">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_1" PORT="din"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="rd_hold" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_1_hold">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_1" PORT="hold"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="11" NAME="rd_irq" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="External_Ports_rd_irq">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_1" PORT="irq"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="5" NAME="rd_n_samples" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_rd_n_samples">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_1" PORT="n_samples"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="buffer_flow_control_0" PORT="rst_n"/>
+        <CONNECTION INSTANCE="buffer_flow_control_1" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/buffer_flow_control_0" HWVERSION="1.0" INSTANCE="buffer_flow_control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="buffer_flow_control_tester" VLNV="xilinx.com:module_ref:buffer_flow_control_tester:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_buffer_flow_control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="buffer_flow_control_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="adc_irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="adc_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="channel" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_0_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="adc_ch"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_0" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_1" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_2" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_2" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_3" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_3" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_4" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_4_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_4" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_5" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_5_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_5" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_6" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_6_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_6" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_7" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_7_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_7" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_8" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_8_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_8" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_9" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_9_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_9" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_A" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_10_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_10" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="din_B" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_11_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_11" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/buffer_flow_control_1" HWVERSION="1.0" INSTANCE="buffer_flow_control_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="buffer_flow_control_reader" VLNV="xilinx.com:module_ref:buffer_flow_control_reader:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="addr_width" VALUE="5"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_buffer_flow_control_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="hold" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_1_hold">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rd_hold"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_1_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rd_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="channel" RIGHT="0" SIGIS="undef" SIGNAME="buffer_flow_control_1_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rd_ch"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="n_samples" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_rd_n_samples">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rd_n_samples"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="irq" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="External_Ports_rd_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rd_irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_rd_din">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rd_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="wr_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="wr_dout" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x06F"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_1" HWVERSION="1.1" INSTANCE="xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0DE"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_10" HWVERSION="1.1" INSTANCE="xlconstant_10" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x44C"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_10_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_10_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_11" HWVERSION="1.1" INSTANCE="xlconstant_11" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x4B0"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_11_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_11_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_2" HWVERSION="1.1" INSTANCE="xlconstant_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x14D"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_3" HWVERSION="1.1" INSTANCE="xlconstant_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1BC"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_4" HWVERSION="1.1" INSTANCE="xlconstant_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x22B"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_4_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_4_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_5" HWVERSION="1.1" INSTANCE="xlconstant_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x29A"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_5_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_5_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_5"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_6" HWVERSION="1.1" INSTANCE="xlconstant_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x309"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_6_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_6_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_6"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_7" HWVERSION="1.1" INSTANCE="xlconstant_7" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x378"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_7_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_7_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_7"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_8" HWVERSION="1.1" INSTANCE="xlconstant_8" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x3E7"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_8_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_8_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_8"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_9" HWVERSION="1.1" INSTANCE="xlconstant_9" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x3E8"/>
+        <PARAMETER NAME="Component_Name" VALUE="BufferControlSimConst_inst_0_xlconstant_9_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_9_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="buffer_flow_control_0" PORT="din_9"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

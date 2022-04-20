@@ -1,0 +1,29 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "MagBramWriter",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "MagBramWriter"
+              }]
+          }
+        },
+        {
+          "functionName": "MagBramWriter",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "MagBramWriter"
+              }]
+          }
+        }
+      ]
+    }]}

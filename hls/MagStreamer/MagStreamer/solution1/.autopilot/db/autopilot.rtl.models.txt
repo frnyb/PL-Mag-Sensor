@@ -1,0 +1,6 @@
+MagStreamer_buffer
+MagStreamer_regslice_both
+MagStreamer_regslice_both
+MagStreamer_regslice_both
+MagStreamer_regslice_both
+MagStreamer

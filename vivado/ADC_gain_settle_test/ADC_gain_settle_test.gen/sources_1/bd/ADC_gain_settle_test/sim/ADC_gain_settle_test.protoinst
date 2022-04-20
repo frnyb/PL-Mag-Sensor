@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ADC_gain_settle_test": {
+			"proto_instances": {
+			}
+		}
+	}
+}

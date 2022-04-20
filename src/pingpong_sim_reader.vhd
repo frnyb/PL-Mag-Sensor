@@ -43,8 +43,8 @@ entity pingpong_sim_reader is
         
         -- Buffer interface:
         bfr_hold        :   out STD_LOGIC;
-        bfr_din         :   in  STD_LOGIC_VECTOR(11 downto 0);
-        bfr_addr        :   out STD_LOGIC_VECTOR(9 downto 0);
+        bfr_din         :   in  STD_LOGIC_VECTOR(word_width-1 downto 0);
+        bfr_addr        :   out STD_LOGIC_VECTOR(addr_width-1 downto 0);
 
         -- Handshake
         irq_in          :   in  STD_LOGIC
@@ -53,8 +53,8 @@ entity pingpong_sim_reader is
 end pingpong_sim_reader;
 
 architecture Behavioral of pingpong_sim_reader is
-    signal      cnt             :   UNSIGNED(10 downto 0)   :=  (others => '0');
-    constant    CNT_MAX         :   UNSIGNED(10 downto 0)   :=  "10000000000";
+    signal      cnt             :   UNSIGNED(addr_width-1 downto 0)   :=  (others => '0');
+    constant    CNT_MAX         :   UNSIGNED(addr_width-1 downto 0)   :=  (addr_width-1=>'1', others => '0');
 
     signal      wait_cnt        :   UNSIGNED(16 downto 0)   :=  (others => '0');
     constant    WAIT_CNT_MAX    :   UNSIGNED(16 downto 0)   :=  "0" & X"001F";
@@ -67,7 +67,7 @@ begin
     ------------------------------------------------------------------------------
     --  Concurrent statements
     ------------------------------------------------------------------------------
-    bfr_addr    <=  STD_LOGIC_VECTOR(cnt(9 downto 0));
+    bfr_addr    <=  STD_LOGIC_VECTOR(cnt(addr_width-1 downto 0));
 
     ------------------------------------------------------------------------------
     --  Auxilliary processes

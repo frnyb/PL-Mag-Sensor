@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1648556577389">
+  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM" coreId="3349065216" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="buffer_r" type="PortType" originalName="buffer" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="20">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="23" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="24" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="25" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="28" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="29" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="32" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="35" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="36" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="37" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="38" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="39" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="42" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="43" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="44" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="46" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="47" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="48" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="49" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="94" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="95" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <blocks id="5" name="block_5" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_12</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="br_ln86" lineNumber="86" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreId="0" contextFuncName="loadBuffer" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="86" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+      <controlInputObjs>block_12</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/mag_bram_writer.cpp">
+      <validLinenumbers>86</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="22" name="block_22" type="BlockType">
+    <controlInputObjs>block_12</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln91" lineNumber="91" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreId="0" contextFuncName="loadBuffer" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="91" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/mag_bram_writer.cpp">
+      <validLinenumbers>91</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="81" pipe_depth="2" RegionName="load_loop">
+    <basic_blocks id="12" name="block_12" type="BlockType">
+      <controlInputObjs>block_5</controlInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_22</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i" lineNumber="86" originalName="i" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreId="0" contextFuncName="loadBuffer" bitwidth="5" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="86" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_5</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="add_ln86" lineNumber="86" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="add_ln86_fu_74_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="loadBuffer" bitwidth="5" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="86" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="icmp_ln86" lineNumber="86" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="icmp_ln86_fu_80_p2" opType="icmp" coreId="0" contextFuncName="loadBuffer" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="86" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="br_ln86" lineNumber="86" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreId="81" contextFuncName="loadBuffer" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="86" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_22</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/mag_bram_writer.cpp">
+        <validLinenumbers>86</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="20" name=".split" type="BlockType">
+      <controlInputObjs>block_12</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_12</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i_cast" lineNumber="86" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="i_cast_fu_86_p1" coreId="3349062384" contextFuncName="loadBuffer" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="86" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="buffer_in_0_addr" lineNumber="88" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreId="0" contextFuncName="loadBuffer" bitwidth="5" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="88" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>buffer_in_0</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="buffer_in_0_load" lineNumber="88" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="loadBuffer" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="88" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="buffer_addr" lineNumber="88" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreId="1651077985" contextFuncName="loadBuffer" bitwidth="5" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="88" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>buffer_r</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="buffer_addr_write_ln88" lineNumber="88" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="loadBuffer" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.79" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="88" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="loadBuffer"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln0" coreId="0" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_12</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/mag_bram_writer.cpp">
+        <validLinenumbers>86</validLinenumbers>
+        <validLinenumbers>88</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="icmp_ln86_reg_96">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="i_cast_reg_100">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="buffer_in_0_addr_reg_105">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_63">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln86_reg_91">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln86_fu_80">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_addr_gep_fu_49">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_in_0_addr_gep_fu_36">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_67">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln86_fu_74">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_cast_fu_86">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <memoryPorts dataString="buffer_in_0">
+    <nodeIds>16</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buffer_r">
+    <nodeIds>18</nodeIds>
+  </memoryPorts>
+  <ioPorts name="buffer_in_0(p0)">
+    <contents name="load">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="buffer_r(p0)">
+    <contents name="store">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="2"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="21" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="loadBuffer" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="22" mMaxLatency="22">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>5</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="load_loop" mII="1" mDepth="2" mMinTripCount="20" mMaxTripCount="20" mMinLatency="20" mMaxLatency="20" mType="1">
+      <basicBlocks>12</basicBlocks>
+      <basicBlocks>20</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>22</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

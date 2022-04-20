@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb 16 18:42:35 2022" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="ADC_gain_settle_test" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="MAG_MOSI" SIGIS="undef" SIGNAME="spi_master_0_spi_mosi">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master_0" PORT="spi_mosi"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="MAG_SCLK" SIGIS="clk" SIGNAME="spi_master_0_spi_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master_0" PORT="spi_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="MAG_MISO" SIGIS="undef" SIGNAME="External_Ports_MAG_MISO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master_0" PORT="spi_miso"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="axis_rd_out" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_axis_rd_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADC_controller_0" PORT="axis_rd_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="MAG_nCS0" RIGHT="0" SIGIS="undef" SIGNAME="spi_nCS_slice_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_nCS_slice" PORT="Dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="timer_target" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_timer_target">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_2" PORT="Din"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="curr_gain" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master_0" PORT="clk"/>
+        <CONNECTION INSTANCE="counter_0" PORT="clk"/>
+        <CONNECTION INSTANCE="GainControl_0" PORT="clk"/>
+        <CONNECTION INSTANCE="ADC_controller_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master_0" PORT="rst_n"/>
+        <CONNECTION INSTANCE="counter_0" PORT="rst_n"/>
+        <CONNECTION INSTANCE="GainControl_0" PORT="rst_n"/>
+        <CONNECTION INSTANCE="ADC_controller_0" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="next_axis" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_next_axis">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADC_controller_0" PORT="next_axis_in"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_controller_0" HWVERSION="1.0" INSTANCE="ADC_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_controller" VLNV="xilinx.com:module_ref:ADC_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="t_sample_n_bits" VALUE="20"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_ADC_controller_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_cs" SIGIS="undef" SIGNAME="ADC_controller_0_spi_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_master_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_rw" SIGIS="undef" SIGNAME="ADC_controller_0_spi_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_master_0" PORT="rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="spi_addr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_spi_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_master_0" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="spi_dout" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_spi_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_master_0" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="spi_din" RIGHT="0" SIGIS="undef" SIGNAME="spi_master_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_master_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="spi_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="spi_master_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_master_0" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="gpio_UnD" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_gpio_UnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl_0" PORT="gpio_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_0_UnD_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl_0" PORT="UnD_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="gpio_nCS" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_gpio_nCS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl_0" PORT="gpio_nCS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_0_nCS_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl_0" PORT="nCS_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="t_sample_en" SIGIS="undef" SIGNAME="ADC_controller_0_t_sample_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_0" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="t_sample_rest" SIGIS="undef" SIGNAME="ADC_controller_0_t_sample_rest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_0" PORT="restart"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="19" NAME="t_sample_cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_0" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="t_sample_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="counter_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_0" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="irq_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="axis_rd_out" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_axis_rd_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="axis_rd_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="next_axis_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_next_axis">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="next_axis"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/GainControl_0" HWVERSION="1.0" INSTANCE="GainControl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GainControl" VLNV="DIII:PL-Mag-Sensor:GainControl:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_GainControl_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="3" NAME="UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_0_UnD_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="gpio_UnD_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_0_gain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_2" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_UnD" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_gpio_UnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="gpio_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_nCS" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_gpio_nCS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="gpio_nCS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_0_nCS_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="gpio_nCS_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/counter_0" HWVERSION="1.0" INSTANCE="counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="counter" VLNV="xilinx.com:module_ref:counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="20"/>
+        <PARAMETER NAME="auto_rst" VALUE="&quot;1&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="ADC_controller_0_t_sample_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="t_sample_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="restart" SIGIS="undef" SIGNAME="ADC_controller_0_t_sample_rest">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="t_sample_rest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="19" NAME="target" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_2" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="19" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="t_sample_cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="counter_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="t_sample_irq"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/spi_master_0" HWVERSION="1.0" INSTANCE="spi_master_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_master" VLNV="xilinx.com:module_ref:spi_master:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_spi_master_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="99999001" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cs" SIGIS="undef" SIGNAME="ADC_controller_0_spi_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="spi_cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rw" SIGIS="undef" SIGNAME="ADC_controller_0_spi_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="spi_rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_spi_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="spi_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="ADC_controller_0_spi_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="spi_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_master_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="spi_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="spi_master_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_controller_0" PORT="spi_irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="spi_miso" SIGIS="undef" SIGNAME="External_Ports_MAG_MISO">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="MAG_MISO"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_mosi" SIGIS="undef" SIGNAME="spi_master_0_spi_mosi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="MAG_MOSI"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="spi_clk" SIGIS="clk" SIGNAME="spi_master_0_spi_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="MAG_SCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="spi_cs_n" RIGHT="0" SIGIS="undef" SIGNAME="spi_master_0_spi_cs_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_nCS_slice" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/spi_nCS_slice" HWVERSION="1.0" INSTANCE="spi_nCS_slice" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_master_0_spi_cs_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_master_0" PORT="spi_cs_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="spi_nCS_slice_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="MAG_nCS0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/xlconcat_0" HWVERSION="2.1" INSTANCE="xlconcat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="8"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_xlconcat_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="curr_gain"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/xlconcat_2" HWVERSION="2.1" INSTANCE="xlconcat_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="18"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="24"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_xlconcat_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="17" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl_0" PORT="gain_ref"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="1" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_1" HWVERSION="1.1" INSTANCE="xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="18"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x00000"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_xlconstant_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="17" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_2" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="5"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_xlslice_0_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="23" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_0_gain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl_0" PORT="gain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="5"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_xlslice_0_2"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_2" PORT="In0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="19"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ADC_gain_settle_test_xlslice_1_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="20"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_timer_target">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="timer_target"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="19" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_0" PORT="target"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

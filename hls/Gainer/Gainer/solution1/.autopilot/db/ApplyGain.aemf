@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1645171001382">
+  <ports id="1" name="gain_step" type="PortType" originalName="gain_step.V" coreId="0" bitwidth="6">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="signal_in" type="PortType" originalName="signal_in" coreId="3401614098" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="signal_out" type="PortType" originalName="signal_out" coreId="3799119488" bitwidth="12" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="69" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="72" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="76" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="77" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="78" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="84" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="86" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="89" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="94" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="102" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="108" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="109" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="114" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="115" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="116" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="121" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="122" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="125" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="128" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="132" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="137" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="138" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="139" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="140" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="141" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="142" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="143" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="144" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="145" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="146" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="147" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="149" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="150" source_obj="//@blocks.0/@node_objs.35" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="151" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="152" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.37" sink_obj="//@blocks.0/@node_objs.38"/>
+  <edges id="154" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@blocks.0/@node_objs.38"/>
+  <edges id="156" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="157" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="158" source_obj="//@blocks.0/@node_objs.39" sink_obj="//@blocks.0/@node_objs.40"/>
+  <edges id="160" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@blocks.0/@node_objs.41"/>
+  <edges id="161" source_obj="//@blocks.0/@node_objs.40" sink_obj="//@blocks.0/@node_objs.41"/>
+  <edges id="162" source_obj="//@blocks.0/@node_objs.41" sink_obj="//@blocks.0/@node_objs.42"/>
+  <edges id="163" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.42"/>
+  <edges id="164" source_obj="//@blocks.0/@node_objs.38" sink_obj="//@blocks.0/@node_objs.42"/>
+  <edges id="165" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.43"/>
+  <edges id="167" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.44"/>
+  <edges id="168" source_obj="//@blocks.0/@node_objs.43" sink_obj="//@blocks.0/@node_objs.44"/>
+  <edges id="169" source_obj="//@blocks.0/@node_objs.44" sink_obj="//@blocks.0/@node_objs.45"/>
+  <edges id="170" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.45"/>
+  <edges id="171" source_obj="//@blocks.0/@node_objs.45" sink_obj="//@blocks.0/@node_objs.46"/>
+  <edges id="173" source_obj="//@blocks.0/@node_objs.42" sink_obj="//@blocks.0/@node_objs.46"/>
+  <edges id="174" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.47"/>
+  <edges id="176" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.48"/>
+  <edges id="177" source_obj="//@blocks.0/@node_objs.47" sink_obj="//@blocks.0/@node_objs.48"/>
+  <edges id="178" source_obj="//@blocks.0/@node_objs.48" sink_obj="//@blocks.0/@node_objs.49"/>
+  <edges id="179" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.49"/>
+  <edges id="180" source_obj="//@blocks.0/@node_objs.46" sink_obj="//@blocks.0/@node_objs.49"/>
+  <edges id="182" source_obj="//@blocks.0/@node_objs.49" sink_obj="//@blocks.0/@node_objs.50"/>
+  <edges id="183" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.51"/>
+  <edges id="184" source_obj="//@blocks.0/@node_objs.50" sink_obj="//@blocks.0/@node_objs.51"/>
+  <edges id="185" source_obj="//@blocks.0/@node_objs.49" sink_obj="//@blocks.0/@node_objs.51"/>
+  <edges id="188" source_obj="//@blocks.0/@node_objs.52" sink_obj="//@ports.2"/>
+  <edges id="189" source_obj="//@blocks.0/@node_objs.51" sink_obj="//@blocks.0/@node_objs.52"/>
+  <blocks id="66" name="ApplyGain" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="signal_in_read" lineNumber="7" originalName="signal_in" fileName="gainer.cpp" fileDirectory=".." coreId="208" contextFuncName="ApplyGain" bitwidth="32" opcode="read" nodeLabel="8.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="7" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>signal_in</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="gain_step_read" lineNumber="7" fileName="gainer.cpp" fileDirectory=".." coreId="385" contextFuncName="ApplyGain" bitwidth="6" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="7" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>gain_step</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="signal_ampl" lineNumber="16" originalName="signal_ampl" fileName="gainer.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_5_full_dsp_1_U1" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="auto" opType="fadd" coreId="18" contextFuncName="ApplyGain" bitwidth="32" opcode="fadd" nodeLabel="8.0" nodeLatency="4" m_display="0" m_delay="6.01" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="16" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="sext_ln18" lineNumber="18" fileName="gainer.cpp" fileDirectory=".." rtlName="grp_fu_102_p0" coreId="0" contextFuncName="ApplyGain" bitwidth="32" opcode="sext" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="18" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sitofp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="conv" lineNumber="18" fileName="gainer.cpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U4" opType="sitofp" coreId="1345" contextFuncName="ApplyGain" bitwidth="32" opcode="sitofp" nodeLatency="3" m_display="0" m_delay="6.67" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="18" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="mul" lineNumber="18" fileName="gainer.cpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_4_max_dsp_1_U3" coreName="FMul_maxdsp" implIndex="maxdsp" control="auto" opType="fmul" coreId="30" contextFuncName="ApplyGain" bitwidth="32" opcode="fmul" nodeLabel="4.0" nodeLatency="3" m_display="0" m_delay="4.67" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="18" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>sitofp</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="gain" lineNumber="18" originalName="gain" fileName="gainer.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_5_full_dsp_1_U2" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="auto" opType="fadd" coreId="18" contextFuncName="ApplyGain" bitwidth="32" opcode="fadd" nodeLabel="8.0" nodeLatency="4" m_display="0" m_delay="6.01" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="18" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="ampl_gained" lineNumber="22" originalName="ampl_gained" fileName="gainer.cpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_4_max_dsp_1_U3" coreName="FMul_maxdsp" implIndex="maxdsp" control="auto" opType="fmul" coreId="30" contextFuncName="ApplyGain" bitwidth="32" opcode="fmul" nodeLabel="13.0" nodeLatency="3" m_display="0" m_delay="4.67" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="22" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="signal_gained" lineNumber="22" originalName="signal_gained" fileName="gainer.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_5_full_dsp_1_U1" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="auto" opType="fadd" coreId="18" contextFuncName="ApplyGain" bitwidth="32" opcode="fadd" nodeLabel="17.0" nodeLatency="4" m_display="0" m_delay="6.01" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="22" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataOutputObjs>fpext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="conv6" lineNumber="24" fileName="gainer.cpp" fileDirectory=".." rtlName="fpext_32ns_64_2_no_dsp_1_U5" opType="fpext" coreId="0" contextFuncName="ApplyGain" bitwidth="64" opcode="fpext" nodeLabel="22.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="24" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>dmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="val" lineNumber="24" originalName="val" fileName="gainer.cpp" fileDirectory=".." rtlName="dmul_64ns_64ns_64_6_max_dsp_1_U6" coreName="DMul_maxdsp" implIndex="maxdsp" control="auto" opType="dmul" coreId="49" contextFuncName="ApplyGain" bitwidth="64" opcode="dmul" nodeLabel="24.0" nodeLatency="5" m_display="0" m_delay="6.6" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="24" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>fpext</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="reg" lineNumber="702" originalName="reg" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h" fileDirectory=".." rtlName="reg_fu_130_p1" coreId="0" contextFuncName="doubleToRawBits" bitwidth="64" opcode="bitcast" nodeLabel="30.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h" linenumber="702" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="doubleToRawBits"/>
+      <dataInputObjs>dmul</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="trunc_ln306" lineNumber="306" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="trunc_ln306_fu_133_p1" coreId="0" contextFuncName="ap_int_base" bitwidth="63" opcode="trunc" nodeLabel="30.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="306" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="p_Result_s" lineNumber="308" originalName="__Result__" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_Result_s_fu_137_p3" coreId="132" contextFuncName="ap_int_base" bitwidth="1" opcode="bitselect" nodeLabel="30.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="308" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="exp" lineNumber="311" originalName="exp" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="exp_fu_145_p4" coreId="0" contextFuncName="ap_int_base" bitwidth="11" opcode="partselect" nodeLabel="30.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="311" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="zext_ln311" lineNumber="311" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln311_fu_155_p1" coreId="1073743520" contextFuncName="ap_int_base" bitwidth="12" opcode="zext" nodeLabel="30.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="311" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="trunc_ln315" lineNumber="315" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="trunc_ln315_fu_159_p1" coreId="0" contextFuncName="ap_int_base" bitwidth="52" opcode="trunc" nodeLabel="30.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="315" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="trunc_ln328" lineNumber="328" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="trunc_ln328_fu_163_p1" coreId="4116" contextFuncName="ap_int_base" bitwidth="12" opcode="trunc" nodeLabel="30.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="328" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="p_Result_1" lineNumber="320" originalName="__Result__" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_Result_1_fu_167_p3" coreId="4294967295" contextFuncName="ap_int_base" bitwidth="53" opcode="bitconcatenate" nodeLabel="30.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="320" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="zext_ln320" lineNumber="320" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln320_fu_175_p1" coreId="3665" contextFuncName="ap_int_base" bitwidth="54" opcode="zext" nodeLabel="30.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="320" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="icmp_ln323" lineNumber="323" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln323_fu_179_p2" opType="icmp" coreId="3799173568" contextFuncName="ap_int_base" bitwidth="1" opcode="icmp" nodeLabel="30.0" m_display="0" m_delay="1.46" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="323" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="sh_amt" lineNumber="326" originalName="sh_amt" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sh_amt_fu_185_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="ap_int_base" bitwidth="12" opcode="sub" nodeLabel="30.0" m_display="0" m_delay="0.96" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="326" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="icmp_ln327" lineNumber="327" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln327_fu_191_p2" opType="icmp" coreId="1073741952" contextFuncName="ap_int_base" bitwidth="1" opcode="icmp" nodeLabel="30.0" m_display="0" m_delay="0.85" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="327" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="icmp_ln329" lineNumber="329" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln329_fu_197_p2" opType="icmp" coreId="132" contextFuncName="ap_int_base" bitwidth="1" opcode="icmp" nodeLabel="30.0" m_display="0" m_delay="0.86" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="329" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="icmp_ln330" lineNumber="330" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln330_fu_203_p2" opType="icmp" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="icmp" nodeLabel="30.0" m_display="0" m_delay="0.86" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="330" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="sh_amt_1" lineNumber="336" originalName="sh_amt" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sh_amt_1_fu_209_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="ap_int_base" bitwidth="12" opcode="sub" nodeLabel="30.0" m_display="0" m_delay="0.96" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="336" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="sext_ln326" lineNumber="326" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sext_ln326_fu_215_p1" coreId="539119430" contextFuncName="ap_int_base" bitwidth="32" opcode="sext" nodeLabel="30.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="326" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="icmp_ln337" lineNumber="337" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln337_fu_219_p2" opType="icmp" coreId="1597059377" contextFuncName="ap_int_base" bitwidth="1" opcode="icmp" nodeLabel="30.0" m_display="0" m_delay="0.86" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="337" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="sext_ln331" lineNumber="331" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sext_ln331_fu_225_p1" coreId="840972921" contextFuncName="ap_int_base" bitwidth="32" opcode="sext" nodeLabel="30.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="331" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln331" lineNumber="331" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln331_fu_229_p1" coreId="757935405" contextFuncName="ap_int_base" bitwidth="54" opcode="zext" nodeLabel="30.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="331" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="lshr_ln331" lineNumber="331" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="lshr_ln331_fu_233_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="lshr" coreId="75" contextFuncName="ap_int_base" bitwidth="54" opcode="lshr" nodeLabel="30.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="331" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="trunc_ln331" lineNumber="331" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="trunc_ln331_fu_239_p1" coreId="0" contextFuncName="ap_int_base" bitwidth="12" opcode="trunc" nodeLabel="30.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="331" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>lshr</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="sext_ln326cast" lineNumber="339" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sext_ln326cast_fu_243_p1" coreId="0" contextFuncName="ap_int_base" bitwidth="12" opcode="trunc" nodeLabel="30.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="339" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="shl_ln339" lineNumber="339" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="shl_ln339_fu_247_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="shl" coreId="75" contextFuncName="ap_int_base" bitwidth="12" opcode="shl" nodeLabel="30.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="339" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="or_ln327" lineNumber="327" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="or_ln327_fu_253_p2" opType="or" coreId="132" contextFuncName="ap_int_base" bitwidth="1" opcode="or" nodeLabel="30.0" m_display="0" m_delay="0.33" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="327" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="xor_ln327" lineNumber="327" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="xor_ln327_fu_259_p2" opType="xor" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="xor" nodeLabel="30.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="327" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="and_ln329" lineNumber="329" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="and_ln329_fu_265_p2" opType="and" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="and" nodeLabel="30.0" m_display="0" m_delay="0.33" m_topoIndex="37" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="329" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="and_ln330" lineNumber="330" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="and_ln330_fu_271_p2" opType="and" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="and" nodeLabel="30.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="330" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="select_ln330" lineNumber="330" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="select_ln330_fu_277_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="ap_int_base" bitwidth="12" opcode="select" nodeLabel="30.0" m_display="0" m_delay="1.69" m_topoIndex="39" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="330" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="or_ln329" lineNumber="329" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="or_ln329_fu_285_p2" opType="or" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="or" nodeLabel="30.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="329" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="xor_ln329" lineNumber="329" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="xor_ln329_fu_291_p2" opType="xor" coreId="3799200384" contextFuncName="ap_int_base" bitwidth="1" opcode="xor" nodeLabel="30.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="329" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="and_ln337" lineNumber="337" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="and_ln337_fu_297_p2" opType="and" coreId="913" contextFuncName="ap_int_base" bitwidth="1" opcode="and" nodeLabel="30.0" m_display="0" m_delay="0.33" m_topoIndex="42" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="337" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="select_ln337" lineNumber="337" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="select_ln337_fu_303_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="ap_int_base" bitwidth="12" opcode="select" nodeLabel="30.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="337" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="xor_ln330" lineNumber="330" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="xor_ln330_fu_311_p2" opType="xor" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="xor" nodeLabel="30.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="330" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="and_ln330_1" lineNumber="330" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="and_ln330_1_fu_317_p2" opType="and" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="and" nodeLabel="30.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="330" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="or_ln330" lineNumber="330" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="or_ln330_fu_323_p2" opType="or" coreId="1073741952" contextFuncName="ap_int_base" bitwidth="1" opcode="or" nodeLabel="30.0" m_display="0" m_delay="0.33" m_topoIndex="46" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="330" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="select_ln330_1" lineNumber="330" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="select_ln330_1_fu_329_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="ap_int_base" bitwidth="12" opcode="select" nodeLabel="30.0" m_display="0" m_delay="1.14" m_topoIndex="47" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="330" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="xor_ln323" lineNumber="323" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="xor_ln323_fu_337_p2" opType="xor" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="xor" nodeLabel="30.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="323" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="and_ln327" lineNumber="327" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="and_ln327_fu_343_p2" opType="and" coreId="0" contextFuncName="ap_int_base" bitwidth="1" opcode="and" nodeLabel="30.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="327" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="select_ln327" lineNumber="327" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="select_ln327_fu_349_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="ap_int_base" bitwidth="12" opcode="select" nodeLabel="30.0" m_display="0" m_delay="0.43" m_topoIndex="50" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="327" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="sub_ln455" lineNumber="455" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sub_ln455_fu_357_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="operator_assign_13_true" bitwidth="12" opcode="sub" nodeLabel="30.0" m_display="0" m_delay="0.96" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="455" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="operator=&amp;lt;13, true&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="select_ln345" lineNumber="345" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="signal_out" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="ap_int_base" bitwidth="12" opcode="select" nodeLabel="30.0" m_display="0" m_delay="0.43" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="345" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ap_int_base"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="signal_out_write_ln24" lineNumber="24" fileName="gainer.cpp" fileDirectory=".." coreId="0" contextFuncName="ApplyGain" opcode="write" nodeLabel="30.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="24" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>signal_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="_ln25" lineNumber="25" fileName="gainer.cpp" fileDirectory=".." coreId="0" contextFuncName="ApplyGain" opcode="ret" nodeLabel="30.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="gainer.cpp" linenumber="25" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/Gainer" functionName="ApplyGain"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h">
+      <validLinenumbers>702</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="gainer.cpp">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>16</validLinenumbers>
+      <validLinenumbers>18</validLinenumbers>
+      <validLinenumbers>22</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>25</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>306</validLinenumbers>
+      <validLinenumbers>308</validLinenumbers>
+      <validLinenumbers>311</validLinenumbers>
+      <validLinenumbers>315</validLinenumbers>
+      <validLinenumbers>328</validLinenumbers>
+      <validLinenumbers>320</validLinenumbers>
+      <validLinenumbers>323</validLinenumbers>
+      <validLinenumbers>326</validLinenumbers>
+      <validLinenumbers>327</validLinenumbers>
+      <validLinenumbers>329</validLinenumbers>
+      <validLinenumbers>330</validLinenumbers>
+      <validLinenumbers>336</validLinenumbers>
+      <validLinenumbers>337</validLinenumbers>
+      <validLinenumbers>331</validLinenumbers>
+      <validLinenumbers>339</validLinenumbers>
+      <validLinenumbers>455</validLinenumbers>
+      <validLinenumbers>345</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <ScheduleInfo time="28"/>
+  <ScheduleInfo time="29"/>
+  <ScheduleInfo time="30"/>
+  <regnodes realName="conv_reg_377">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="conv6_reg_392">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln18_reg_372">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="signal_in_read_reg_382">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="gain_reg_387">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_119">
+    <nodeIds>14</nodeIds>
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="val_reg_397">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_113">
+    <nodeIds>17</nodeIds>
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <expressionNodes realName="sh_amt_1_fu_209">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sh_amt_fu_185">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="reg_fu_130">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln306_fu_133">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln330_fu_277">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln315_fu_159">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln331_fu_225">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln320_fu_175">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln323_fu_179">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exp_fu_145">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln337_fu_219">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln330_fu_271">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln455_fu_357">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln331_fu_239">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln328_fu_163">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln329_fu_265">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln327_fu_253">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln327_fu_343">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln329_fu_197">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_s_fu_137">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln327_fu_191">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_1_fu_167">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln330_fu_323">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln327_fu_259">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln331_fu_233">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln326_fu_215">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln339_fu_247">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln330_1_fu_329">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln323_fu_337">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln330_1_fu_317">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln330_fu_311">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln327_fu_349">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln330_fu_203">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln337_fu_303">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln345_fu_363">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln18_fu_125">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln326cast_fu_243">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln337_fu_297">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln331_fu_229">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln329_fu_285">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln311_fu_155">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln329_fu_291">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_105">
+    <nodeIds>21</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_91">
+    <nodeIds>18</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_108">
+    <nodeIds>22</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_102">
+    <nodeIds>16</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_85">
+    <nodeIds>14</nodeIds>
+    <nodeIds>20</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_97">
+    <nodeIds>17</nodeIds>
+    <nodeIds>19</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="write_ln24_write_fu_78">
+    <nodeIds>64</nodeIds>
+  </ioNodes>
+  <ioNodes realName="signal_in_read_read_fu_72">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gain_step_read_read_fu_66">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioPorts name="gain_step">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="signal_in">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="signal_out">
+    <contents name="write">
+      <nodeIds>64</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="4" latency="4"/>
+    </states>
+    <states id="2">
+      <operations id="16" stage="3" latency="4"/>
+    </states>
+    <states id="3">
+      <operations id="16" stage="2" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="16" stage="1" latency="4"/>
+    </states>
+    <states id="5">
+      <operations id="17" stage="4" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="17" stage="3" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="17" stage="2" latency="4"/>
+    </states>
+    <states id="8">
+      <operations id="17" stage="1" latency="4"/>
+    </states>
+    <states id="9">
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="14" stage="5" latency="5"/>
+      <operations id="18" stage="5" latency="5"/>
+    </states>
+    <states id="10">
+      <operations id="14" stage="4" latency="5"/>
+      <operations id="18" stage="4" latency="5"/>
+    </states>
+    <states id="11">
+      <operations id="14" stage="3" latency="5"/>
+      <operations id="18" stage="3" latency="5"/>
+    </states>
+    <states id="12">
+      <operations id="14" stage="2" latency="5"/>
+      <operations id="18" stage="2" latency="5"/>
+    </states>
+    <states id="13">
+      <operations id="14" stage="1" latency="5"/>
+      <operations id="18" stage="1" latency="5"/>
+    </states>
+    <states id="14">
+      <operations id="19" stage="4" latency="4"/>
+    </states>
+    <states id="15">
+      <operations id="19" stage="3" latency="4"/>
+    </states>
+    <states id="16">
+      <operations id="19" stage="2" latency="4"/>
+    </states>
+    <states id="17">
+      <operations id="19" stage="1" latency="4"/>
+    </states>
+    <states id="18">
+      <operations id="20" stage="5" latency="5"/>
+    </states>
+    <states id="19">
+      <operations id="20" stage="4" latency="5"/>
+    </states>
+    <states id="20">
+      <operations id="20" stage="3" latency="5"/>
+    </states>
+    <states id="21">
+      <operations id="20" stage="2" latency="5"/>
+    </states>
+    <states id="22">
+      <operations id="20" stage="1" latency="5"/>
+    </states>
+    <states id="23">
+      <operations id="21" stage="2" latency="2"/>
+    </states>
+    <states id="24">
+      <operations id="21" stage="1" latency="2"/>
+    </states>
+    <states id="25">
+      <operations id="22" stage="6" latency="6"/>
+    </states>
+    <states id="26">
+      <operations id="22" stage="5" latency="6"/>
+    </states>
+    <states id="27">
+      <operations id="22" stage="4" latency="6"/>
+    </states>
+    <states id="28">
+      <operations id="22" stage="3" latency="6"/>
+    </states>
+    <states id="29">
+      <operations id="22" stage="2" latency="6"/>
+    </states>
+    <states id="30">
+      <operations id="22" stage="1" latency="6"/>
+    </states>
+    <states id="31">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="29">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="29" outState="30">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="30" outState="31">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="ApplyGain" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="30" mMaxLatency="30">
+      <basicBlocks>66</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

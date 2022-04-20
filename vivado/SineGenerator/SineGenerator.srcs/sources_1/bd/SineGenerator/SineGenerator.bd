@@ -1,0 +1,955 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x43463B47E1A3ED0F",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../SineGenerator.gen/sources_1/bd/SineGenerator",
+      "name": "SineGenerator",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "constant_en": "",
+      "constant_rest": "",
+      "constant_target": "",
+      "counter_0": "",
+      "sine_0": "",
+      "sine_1": "",
+      "sine_10": "",
+      "sine_11": "",
+      "sine_2": "",
+      "sine_3": "",
+      "sine_4": "",
+      "sine_5": "",
+      "sine_6": "",
+      "sine_7": "",
+      "sine_8": "",
+      "sine_9": "",
+      "slice_cnt": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "SineGenerator_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "dout_0": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_1": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_10": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_11": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_2": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_3": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_4": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_5": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_6": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_7": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_8": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "dout_9": {
+        "direction": "O",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "constant_en": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "SineGenerator_constant_en_0",
+        "xci_path": "ip/SineGenerator_constant_en_0/SineGenerator_constant_en_0.xci",
+        "inst_hier_path": "constant_en"
+      },
+      "constant_rest": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "SineGenerator_constant_rest_0",
+        "xci_path": "ip/SineGenerator_constant_rest_0/SineGenerator_constant_rest_0.xci",
+        "inst_hier_path": "constant_rest",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "constant_target": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "SineGenerator_constant_target_0",
+        "xci_path": "ip/SineGenerator_constant_target_0/SineGenerator_constant_target_0.xci",
+        "inst_hier_path": "constant_target",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "2031616"
+          },
+          "CONST_WIDTH": {
+            "value": "28"
+          }
+        }
+      },
+      "counter_0": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "SineGenerator_counter_0_0",
+        "xci_path": "ip/SineGenerator_counter_0_0/SineGenerator_counter_0_0.xci",
+        "inst_hier_path": "counter_0",
+        "parameters": {
+          "n_bits": {
+            "value": "28"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "SineGenerator_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "restart": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "27",
+            "right": "0"
+          },
+          "cnt": {
+            "direction": "O",
+            "left": "27",
+            "right": "0"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "sine_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_0_0",
+        "xci_path": "ip/SineGenerator_sine_0_0/SineGenerator_sine_0_0.xci",
+        "inst_hier_path": "sine_0",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/0_sine_0_037878788_0.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_1_0",
+        "xci_path": "ip/SineGenerator_sine_1_0/SineGenerator_sine_1_0.xci",
+        "inst_hier_path": "sine_1",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/1_sine_0_035_0_035_pi_3.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_10": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_10_0",
+        "xci_path": "ip/SineGenerator_sine_10_0/SineGenerator_sine_10_0.xci",
+        "inst_hier_path": "sine_10",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/A_sine_1_9_2_pi_3.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_11": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_11_0",
+        "xci_path": "ip/SineGenerator_sine_11_0/SineGenerator_sine_11_0.xci",
+        "inst_hier_path": "sine_11",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/B_sine_1_8_0.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_2": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_2_0",
+        "xci_path": "ip/SineGenerator_sine_2_0/SineGenerator_sine_2_0.xci",
+        "inst_hier_path": "sine_2",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/2_sine_0_033_0_032_2_pi_3.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_3": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_3_0",
+        "xci_path": "ip/SineGenerator_sine_3_0/SineGenerator_sine_3_0.xci",
+        "inst_hier_path": "sine_3",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/3_sine_0_018_pi_3.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_4": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_4_0",
+        "xci_path": "ip/SineGenerator_sine_4_0/SineGenerator_sine_4_0.xci",
+        "inst_hier_path": "sine_4",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/4_sine_0_019230769_2_pi_3.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_5": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_5_0",
+        "xci_path": "ip/SineGenerator_sine_5_0/SineGenerator_sine_5_0.xci",
+        "inst_hier_path": "sine_5",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/5_sine_0_015_0.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_6": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_6_0",
+        "xci_path": "ip/SineGenerator_sine_6_0/SineGenerator_sine_6_0.xci",
+        "inst_hier_path": "sine_6",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/6_sine_0_0033_2_pi_3.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_7": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_7_0",
+        "xci_path": "ip/SineGenerator_sine_7_0/SineGenerator_sine_7_0.xci",
+        "inst_hier_path": "sine_7",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/7_sine_0_0031_0.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_8": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_8_0",
+        "xci_path": "ip/SineGenerator_sine_8_0/SineGenerator_sine_8_0.xci",
+        "inst_hier_path": "sine_8",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/8_sine_0_00389845_pi_3.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "sine_9": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "SineGenerator_sine_9_0",
+        "xci_path": "ip/SineGenerator_sine_9_0/SineGenerator_sine_9_0.xci",
+        "inst_hier_path": "sine_9",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../../testing/BufferFlowControl/data/9_sine_2_2_pi_3.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "64"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "slice_cnt": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "SineGenerator_slice_cnt_0",
+        "xci_path": "ip/SineGenerator_slice_cnt_0/SineGenerator_slice_cnt_0.xci",
+        "inst_hier_path": "slice_cnt",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "20"
+          },
+          "DIN_TO": {
+            "value": "15"
+          },
+          "DIN_WIDTH": {
+            "value": "28"
+          },
+          "DOUT_WIDTH": {
+            "value": "6"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "sine_0/clka",
+          "sine_11/clka",
+          "sine_10/clka",
+          "sine_9/clka",
+          "sine_8/clka",
+          "sine_7/clka",
+          "sine_6/clka",
+          "sine_5/clka",
+          "sine_4/clka",
+          "sine_3/clka",
+          "sine_2/clka",
+          "sine_1/clka",
+          "counter_0/clk"
+        ]
+      },
+      "constant_rest1_dout": {
+        "ports": [
+          "constant_target/dout",
+          "counter_0/target"
+        ]
+      },
+      "constant_rest_dout": {
+        "ports": [
+          "constant_rest/dout",
+          "counter_0/restart"
+        ]
+      },
+      "rst_n_0_2": {
+        "ports": [
+          "rst_n",
+          "counter_0/rst_n"
+        ]
+      },
+      "slice_cnt_Dout": {
+        "ports": [
+          "slice_cnt/Dout",
+          "sine_0/addra",
+          "sine_1/addra",
+          "sine_2/addra",
+          "sine_3/addra",
+          "sine_4/addra",
+          "sine_5/addra",
+          "sine_6/addra",
+          "sine_7/addra",
+          "sine_8/addra",
+          "sine_9/addra",
+          "sine_10/addra",
+          "sine_11/addra"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "constant_en/dout",
+          "counter_0/en"
+        ]
+      },
+      "sine_0_douta": {
+        "ports": [
+          "sine_0/douta",
+          "dout_0"
+        ]
+      },
+      "sine_1_douta": {
+        "ports": [
+          "sine_1/douta",
+          "dout_1"
+        ]
+      },
+      "sine_6_douta": {
+        "ports": [
+          "sine_6/douta",
+          "dout_6"
+        ]
+      },
+      "sine_2_douta": {
+        "ports": [
+          "sine_2/douta",
+          "dout_2"
+        ]
+      },
+      "sine_7_douta": {
+        "ports": [
+          "sine_7/douta",
+          "dout_7"
+        ]
+      },
+      "sine_8_douta": {
+        "ports": [
+          "sine_8/douta",
+          "dout_8"
+        ]
+      },
+      "sine_3_douta": {
+        "ports": [
+          "sine_3/douta",
+          "dout_3"
+        ]
+      },
+      "sine_4_douta": {
+        "ports": [
+          "sine_4/douta",
+          "dout_4"
+        ]
+      },
+      "sine_5_douta": {
+        "ports": [
+          "sine_5/douta",
+          "dout_5"
+        ]
+      },
+      "sine_9_douta": {
+        "ports": [
+          "sine_9/douta",
+          "dout_9"
+        ]
+      },
+      "sine_10_douta": {
+        "ports": [
+          "sine_10/douta",
+          "dout_10"
+        ]
+      },
+      "sine_11_douta": {
+        "ports": [
+          "sine_11/douta",
+          "dout_11"
+        ]
+      },
+      "counter_0_cnt": {
+        "ports": [
+          "counter_0/cnt",
+          "slice_cnt/Din"
+        ]
+      }
+    }
+  }
+}

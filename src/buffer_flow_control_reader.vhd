@@ -32,6 +32,9 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity buffer_flow_control_reader is
+    generic(
+        addr_width : POSITIVE := 5
+    );
     port(
         -- STD ports:
         clk             :   in  STD_LOGIC;
@@ -39,11 +42,15 @@ entity buffer_flow_control_reader is
         
         -- Buffer interface:
         hold            :   out STD_LOGIC_VECTOR(11 downto 0);
-        addr            :   out STD_LOGIC_VECTOR(9 downto 0);
+        addr            :   out STD_LOGIC_VECTOR(addr_width-1 downto 0);
         channel         :   out STD_LOGIC_VECTOR(3 downto 0);
-        n_samples       :   in  STD_LOGIC_VECTOR(10 downto 0);
+        n_samples       :   in  STD_LOGIC_VECTOR(addr_width downto 0);
         irq             :   in  STD_LOGIC_VECTOR(11 downto 0);
-        din             :   in  STD_LOGIC_VECTOR(31 downto 0)
+        din             :   in  STD_LOGIC_VECTOR(31 downto 0);
+
+        -- Write interface:
+        wr_out          :   out STD_LOGIC;
+        wr_dout         :   out STD_LOGIC_VECTOR(31 downto 0)
 
     );
 end buffer_flow_control_reader;
@@ -54,9 +61,9 @@ architecture Behavioral of buffer_flow_control_reader is
 
     signal      channel_int     :   UNSIGNED(3 downto 0)    :=  (others => '0');
 
-    signal      addr_int        :   UNSIGNED(9 downto 0)    :=  (others => '0');
-    signal      addr_max        :   UNSIGNED(9 downto 0)    :=  (others => '0');
-    signal      addr_max_tmp    :   UNSIGNED(10 downto 0);
+    signal      addr_int        :   UNSIGNED(addr_width-1 downto 0)    :=  (others => '0');
+    signal      addr_max        :   UNSIGNED(addr_width-1 downto 0)    :=  (others => '0');
+    signal      addr_max_tmp    :   UNSIGNED(addr_width downto 0);
 
     -- State machine signals
     type    STATE_TYPE      is  (s_rst, s_wait_irq, s_rd_start, s_rd_wait, s_rd);
@@ -71,6 +78,8 @@ begin
     addr    <=  STD_LOGIC_VECTOR(addr_int);
 
     addr_max_tmp <= UNSIGNED(n_samples) - "1";
+
+    wr_dout <= din;
 
     ------------------------------------------------------------------------------
     --  Auxilliary processes
@@ -104,7 +113,7 @@ begin
                     case next_state is
                         when s_rd_start => 
                             channel_int <= (others => '0');
-                            addr_max <= addr_max_tmp(9 downto 0);
+                            addr_max <= addr_max_tmp(addr_width-1 downto 0);
                         when others => null;
                     end case;
                 when s_rd_start =>
@@ -118,16 +127,19 @@ begin
                     case next_state is
                         when s_rd_wait =>
                             wait_cnt <= wait_cnt + "1";
-                        when s_rd =>
-                            addr_int <= addr_int + "1";
                         when others => null;
                     end case;
                 when s_rd =>
                     case next_state is
                         when s_rd_wait =>
+                            if (addr_int = addr_max) then
+                                channel_int <= channel_int + "1";
+                                addr_int <= (others => '0');
+                            else
+                                addr_int <= addr_int + "1";
+                            end if;
+
                             wait_cnt <= (others => '0');
-                        when s_rd_start =>
-                            channel_int <= channel_int + "1";
                         when others => null;
                     end case;
                 when others => null;
@@ -157,7 +169,7 @@ begin
             when s_rd_start =>
                 next_state      <=  s_rd_wait;
             when s_rd_wait =>
-                if (wait_cnt = WAIT_CNT_MAX) then
+                if(wait_cnt = WAIT_CNT_MAX) then
                     next_state <= s_rd;
                 else
                     next_state <= s_rd_wait;
@@ -165,8 +177,6 @@ begin
             when s_rd =>
                 if (channel_int = X"B" and addr_int = addr_max) then
                     next_state <= s_wait_irq;
-                elsif (addr_int = addr_max) then
-                    next_state <= s_rd_start;
                 else
                     next_state <= s_rd_wait;
                 end if;
@@ -186,14 +196,19 @@ begin
         case current_state is                       
             when s_rst =>                       
                 hold <= (others => '0');
+                wr_out <= '0';
             when s_wait_irq =>
                 hold <= (others => '0');
+                wr_out <= '0';
             when s_rd_start =>
                 hold <= (others => '1');
+                wr_out <= '0';
             when s_rd_wait =>
                 hold <= (others => '1');
+                wr_out <= '0';
             when s_rd =>
                 hold <= (others => '1');
+                wr_out <= '1';
             when others => null;
         end case;
     ------------------------------------------------------------------------------

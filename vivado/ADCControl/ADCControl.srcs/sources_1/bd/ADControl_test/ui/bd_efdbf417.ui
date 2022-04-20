@@ -1,0 +1,40 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-888,-402",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -440 -y -90 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -440 -y -70 -defaultsOSRD
+preplace port irq_out -pg 1 -lvl 3 -x 520 -y 160 -defaultsOSRD
+preplace portBus gpio_UnD_ref -pg 1 -lvl 0 -x -440 -y 60 -defaultsOSRD
+preplace portBus gpio_nCS_ref -pg 1 -lvl 0 -x -440 -y 80 -defaultsOSRD
+preplace portBus curr_gains -pg 1 -lvl 0 -x -440 -y 140 -defaultsOSRD
+preplace portBus data_out -pg 1 -lvl 3 -x 520 -y 140 -defaultsOSRD
+preplace portBus gpio_UnD -pg 1 -lvl 3 -x 520 -y 60 -defaultsOSRD
+preplace portBus ch_out -pg 1 -lvl 3 -x 520 -y 80 -defaultsOSRD
+preplace portBus gpio_nCS -pg 1 -lvl 3 -x 520 -y 0 -defaultsOSRD
+preplace inst ADCControl_0 -pg 1 -lvl 1 -x -110 -y 80 -defaultsOSRD
+preplace inst ADC_simulator_0 -pg 1 -lvl 2 -x 323 -y -40 -defaultsOSRD
+preplace netloc clk_0_1 1 0 2 -410J -90 N
+preplace netloc rst_n_0_1 1 0 2 -420J -70 N
+preplace netloc ADCControl_0_spi_rw 1 1 1 70 -50n
+preplace netloc ADCControl_0_spi_cs 1 1 1 90 -30n
+preplace netloc ADCControl_0_spi_addr 1 1 1 110 -10n
+preplace netloc ADCControl_0_spi_dout 1 1 1 100 10n
+preplace netloc ADC_simulator_0_spi_dout 1 0 3 -400 -160 NJ -160 480
+preplace netloc spi_irq_1 1 0 3 -390 -60 80J 70 480
+preplace netloc gpio_UnD_ref_0_1 1 0 1 N 60
+preplace netloc gpio_nCS_ref_0_1 1 0 1 N 80
+preplace netloc curr_gains_0_1 1 0 1 N 140
+preplace netloc ADCControl_0_data_out 1 1 2 NJ 140 NJ
+preplace netloc ADCControl_0_gpio_UnD 1 1 2 60J 90 490J
+preplace netloc ADCControl_0_irq_out 1 1 2 NJ 160 NJ
+preplace netloc ADCControl_0_ch_out 1 1 2 NJ 80 NJ
+preplace netloc ADCControl_0_gpio_nCS 1 1 2 60J -150 490J
+levelinfo -pg 1 -440 -110 323 520
+pagesize -pg 1 -db -bbox -sgen -620 -170 680 560
+"
+}
+0

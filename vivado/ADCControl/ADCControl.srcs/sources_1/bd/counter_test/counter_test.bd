@@ -1,0 +1,194 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xAECB439109C85F29",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../ADCControl.gen/sources_1/bd/counter_test",
+      "name": "counter_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "counter_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "counter_test_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "cnt_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "en_0": {
+        "direction": "I"
+      },
+      "irq_0": {
+        "type": "intr",
+        "direction": "O",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "restart_0": {
+        "direction": "I"
+      },
+      "rst_n_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "target_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "counter_0": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "counter_test_counter_0_0",
+        "xci_path": "ip/counter_test_counter_0_0/counter_test_counter_0_0.xci",
+        "inst_hier_path": "counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "counter_test_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "restart": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "cnt": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "counter_0/clk"
+        ]
+      },
+      "counter_0_cnt": {
+        "ports": [
+          "counter_0/cnt",
+          "cnt_0"
+        ]
+      },
+      "en_0_1": {
+        "ports": [
+          "en_0",
+          "counter_0/en"
+        ]
+      },
+      "counter_0_irq": {
+        "ports": [
+          "counter_0/irq",
+          "irq_0"
+        ]
+      },
+      "restart_0_1": {
+        "ports": [
+          "restart_0",
+          "counter_0/restart"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n_0",
+          "counter_0/rst_n"
+        ]
+      },
+      "target_0_1": {
+        "ports": [
+          "target_0",
+          "counter_0/target"
+        ]
+      }
+    }
+  }
+}

@@ -44,12 +44,17 @@
 		<link>
 			<name>source/SineParamFinder.cpp</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/src/SineParamFinder.cpp</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/SineParamFinder.cpp</location>
 		</link>
 		<link>
 			<name>source/SineParamFinder.h</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/src/SineParamFinder.h</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/SineParamFinder.h</location>
+		</link>
+		<link>
+			<name>source/data_types.h</name>
+			<type>1</type>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/data_types.h</location>
 		</link>
 		<link>
 			<name>SineParamFinder/constraints/.xml.directive</name>

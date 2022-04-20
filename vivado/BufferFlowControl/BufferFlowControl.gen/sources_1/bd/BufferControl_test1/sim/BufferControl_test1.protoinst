@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"BufferControl_test1": {
+			"proto_instances": {
+			}
+		}
+	}
+}

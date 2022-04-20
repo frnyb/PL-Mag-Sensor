@@ -1,0 +1,60 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.563636",
+   "Default View_TopLeft":"-1166,-630",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port adc_irq -pg 1 -lvl 3 -x 950 -y 180 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -10 -y 170 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -10 -y 10 -defaultsOSRD
+preplace portBus adc_ch -pg 1 -lvl 3 -x 950 -y 220 -defaultsOSRD
+preplace portBus adc_dout -pg 1 -lvl 3 -x 950 -y 200 -defaultsOSRD
+preplace portBus rd_addr -pg 1 -lvl 3 -x 950 -y 470 -defaultsOSRD
+preplace portBus rd_ch -pg 1 -lvl 3 -x 950 -y 490 -defaultsOSRD
+preplace portBus rd_din -pg 1 -lvl 0 -x -10 -y 510 -defaultsOSRD
+preplace portBus rd_hold -pg 1 -lvl 3 -x 950 -y 450 -defaultsOSRD
+preplace portBus rd_irq -pg 1 -lvl 0 -x -10 -y 490 -defaultsOSRD
+preplace portBus rd_n_samples -pg 1 -lvl 0 -x -10 -y 470 -defaultsOSRD
+preplace inst buffer_flow_control_0 -pg 1 -lvl 2 -x 610 -y 300 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 210 -y -570 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 210 -y -460 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_2 -pg 1 -lvl 1 -x 210 -y -350 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_3 -pg 1 -lvl 1 -x 210 -y -240 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_4 -pg 1 -lvl 1 -x 210 -y -130 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_5 -pg 1 -lvl 1 -x 210 -y -20 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_6 -pg 1 -lvl 1 -x 210 -y 90 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_7 -pg 1 -lvl 1 -x 210 -y 200 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_8 -pg 1 -lvl 1 -x 210 -y 310 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_9 -pg 1 -lvl 1 -x 210 -y 420 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_10 -pg 1 -lvl 1 -x 210 -y 530 -defaultsOSRD -resize 140 88
+preplace inst xlconstant_11 -pg 1 -lvl 1 -x 210 -y 640 -defaultsOSRD -resize 140 88
+preplace inst buffer_flow_control_1 -pg 1 -lvl 1 -x 210 -y 790 -defaultsOSRD
+preplace netloc buffer_flow_control_0_channel 1 2 1 770 220n
+preplace netloc buffer_flow_control_0_dout 1 2 1 760 200n
+preplace netloc buffer_flow_control_0_irq 1 2 1 750 180n
+preplace netloc buffer_flow_control_1_addr 1 1 2 470 740 770
+preplace netloc buffer_flow_control_1_channel 1 1 2 460 490 N
+preplace netloc buffer_flow_control_1_hold 1 1 2 N 750 750
+preplace netloc clk_0_1 1 0 2 30 890 410
+preplace netloc din_0_1 1 0 1 10J 510n
+preplace netloc irq_0_1 1 0 1 20J 490n
+preplace netloc n_samples_0_1 1 0 1 50J 470n
+preplace netloc rst_n_0_1 1 0 2 40 900 430
+preplace netloc xlconstant_0_dout 1 1 1 470 -570n
+preplace netloc xlconstant_1_dout 1 1 1 460 -460n
+preplace netloc xlconstant_2_dout 1 1 1 450 -350n
+preplace netloc xlconstant_3_dout 1 1 1 440 -240n
+preplace netloc xlconstant_4_dout 1 1 1 420 -130n
+preplace netloc xlconstant_5_dout 1 1 1 400 -20n
+preplace netloc xlconstant_6_dout 1 1 1 390 90n
+preplace netloc xlconstant_7_dout 1 1 1 380 200n
+preplace netloc xlconstant_8_dout 1 1 1 370 310n
+preplace netloc xlconstant_9_dout 1 1 1 370 390n
+preplace netloc xlconstant_10_dout 1 1 1 380 410n
+preplace netloc xlconstant_11_dout 1 1 1 420 430n
+levelinfo -pg 1 -10 210 610 950
+pagesize -pg 1 -db -bbox -sgen -200 -630 1110 910
+"
+}
+0

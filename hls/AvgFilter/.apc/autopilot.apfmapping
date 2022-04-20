@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="AverageFilter.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/AverageFilter.cpp"/>
+    <originFiles name="AverageFilter.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/AverageFilter.h"/>
+    <originFiles name="data_types.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/data_types.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="com.autoesl.autopilot.project" name="SineParamFinder" top="SineParamFinder">
+<project xmlns="com.autoesl.autopilot.project" name="SineParamFinder" top="FindSineParams">
   <files>
-    <file name="../src/SineParamFinder.h" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
-    <file name="../src/SineParamFinder.cpp" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
+    <file name="src/SineParamFinder.cpp" sc="0" tb="false" cflags="" blackbox="false"/>
+    <file name="src/SineParamFinder.h" sc="0" tb="false" cflags="" blackbox="false"/>
+    <file name="src/data_types.h" sc="0" tb="false" cflags="" blackbox="false"/>
   </files>
   <solutions>
     <solution name="SineParamFinder" status="active"/>

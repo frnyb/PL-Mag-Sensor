@@ -25,37 +25,37 @@
       <data key="VT">BC</data>
     </node>
     <node id="n1">
-      <data key="VH">5</data>
-      <data key="VM">MagPingPongBuffers_inst_0</data>
-      <data key="VT">VR</data>
+      <data key="TU">active</data>
+      <data key="VH">10</data>
+      <data key="VT">PM</data>
     </node>
     <node id="n2">
       <data key="VM">BufferFlowControl</data>
       <data key="VT">BC</data>
     </node>
     <node id="n3">
-      <data key="TU">active</data>
-      <data key="VH">10</data>
-      <data key="VT">PM</data>
+      <data key="VH">5</data>
+      <data key="VM">MagPingPongBuffers_inst_0</data>
+      <data key="VT">VR</data>
     </node>
     <node id="n4">
-      <data key="VM">MagPingPongBuffers</data>
-      <data key="VT">BC</data>
-    </node>
-    <node id="n5">
       <data key="VH">2</data>
       <data key="VM">BufferFlowControl</data>
       <data key="VT">VR</data>
     </node>
-    <edge id="e0" source="n2" target="n5">
+    <node id="n5">
+      <data key="VM">MagPingPongBuffers</data>
+      <data key="VT">BC</data>
+    </node>
+    <edge id="e0" source="n2" target="n4">
     </edge>
-    <edge id="e1" source="n5" target="n3">
+    <edge id="e1" source="n4" target="n1">
     </edge>
-    <edge id="e2" source="n0" target="n1">
+    <edge id="e2" source="n0" target="n3">
     </edge>
-    <edge id="e3" source="n1" target="n3">
+    <edge id="e3" source="n3" target="n1">
     </edge>
-    <edge id="e4" source="n4" target="n1">
+    <edge id="e4" source="n5" target="n3">
     </edge>
   </graph>
 </graphml>

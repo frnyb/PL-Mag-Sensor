@@ -1,0 +1,342 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB76919420674A49A",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../ADCControl.gen/sources_1/bd/ADControl_test",
+      "name": "ADControl_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "ADCControl_0": "",
+      "ADC_simulator_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "gpio_UnD_ref": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "gpio_nCS_ref": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "curr_gains": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "data_out": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "gpio_UnD": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "irq_out": {
+        "direction": "O"
+      },
+      "ch_out": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "gpio_nCS": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "ADCControl_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "ADCControl.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "ADCControl.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "ADCControl.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "ADCControl.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "ADCControl.bd"
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "gpio_UnD_ref": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_nCS_ref": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "spi_irq": {
+            "type": "intr",
+            "direction": "I"
+          },
+          "spi_din": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "gpio_nCS": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "spi_dout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_rw": {
+            "direction": "O"
+          },
+          "gpio_UnD": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "ch_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "spi_cs": {
+            "direction": "O"
+          },
+          "spi_addr": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "irq_out": {
+            "direction": "O"
+          },
+          "curr_gains": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          }
+        },
+        "post_compiled_compname": "ADCControl_inst_0",
+        "architecture": "zynquplus",
+        "variant_info": {
+          "ADCControl.bd": {
+            "scoped_diagram": "ADCControl_inst_0.bd",
+            "design_checksum": "0xF6B4D406",
+            "ref_name": "ADCControl",
+            "ref_subinst_path": "ADControl_test_ADCControl_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "ADC_simulator_0": {
+        "vlnv": "xilinx.com:module_ref:ADC_simulator:1.0",
+        "xci_name": "ADControl_test_ADC_simulator_0_0",
+        "xci_path": "ip/ADControl_test_ADC_simulator_0_0/ADControl_test_ADC_simulator_0_0.xci",
+        "inst_hier_path": "ADC_simulator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ADC_simulator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "ADControl_test_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "spi_rw": {
+            "direction": "I"
+          },
+          "spi_cs": {
+            "direction": "I"
+          },
+          "spi_addr": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_din": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_dout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "ADC_simulator_0/clk",
+          "ADCControl_0/clk"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "ADC_simulator_0/rst_n",
+          "ADCControl_0/rst_n"
+        ]
+      },
+      "ADCControl_0_spi_rw": {
+        "ports": [
+          "ADCControl_0/spi_rw",
+          "ADC_simulator_0/spi_rw"
+        ]
+      },
+      "ADCControl_0_spi_cs": {
+        "ports": [
+          "ADCControl_0/spi_cs",
+          "ADC_simulator_0/spi_cs"
+        ]
+      },
+      "ADCControl_0_spi_addr": {
+        "ports": [
+          "ADCControl_0/spi_addr",
+          "ADC_simulator_0/spi_addr"
+        ]
+      },
+      "ADCControl_0_spi_dout": {
+        "ports": [
+          "ADCControl_0/spi_dout",
+          "ADC_simulator_0/spi_din"
+        ]
+      },
+      "ADC_simulator_0_spi_dout": {
+        "ports": [
+          "ADC_simulator_0/spi_dout",
+          "ADCControl_0/spi_din"
+        ]
+      },
+      "spi_irq_1": {
+        "ports": [
+          "ADC_simulator_0/spi_irq",
+          "ADCControl_0/spi_irq"
+        ]
+      },
+      "gpio_UnD_ref_0_1": {
+        "ports": [
+          "gpio_UnD_ref",
+          "ADCControl_0/gpio_UnD_ref"
+        ]
+      },
+      "gpio_nCS_ref_0_1": {
+        "ports": [
+          "gpio_nCS_ref",
+          "ADCControl_0/gpio_nCS_ref"
+        ]
+      },
+      "curr_gains_0_1": {
+        "ports": [
+          "curr_gains",
+          "ADCControl_0/curr_gains"
+        ]
+      },
+      "ADCControl_0_data_out": {
+        "ports": [
+          "ADCControl_0/data_out",
+          "data_out"
+        ]
+      },
+      "ADCControl_0_gpio_UnD": {
+        "ports": [
+          "ADCControl_0/gpio_UnD",
+          "gpio_UnD"
+        ]
+      },
+      "ADCControl_0_irq_out": {
+        "ports": [
+          "ADCControl_0/irq_out",
+          "irq_out"
+        ]
+      },
+      "ADCControl_0_ch_out": {
+        "ports": [
+          "ADCControl_0/ch_out",
+          "ch_out"
+        ]
+      },
+      "ADCControl_0_gpio_nCS": {
+        "ports": [
+          "ADCControl_0/gpio_nCS",
+          "gpio_nCS"
+        ]
+      }
+    }
+  }
+}

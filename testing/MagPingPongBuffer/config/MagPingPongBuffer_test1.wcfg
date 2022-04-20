@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="MagPingPongBuffer_test1_wrapper_time_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="MagPingPongBuffer_test1_wrapper" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="25720000001fs"></ZoomEndTime>
+      <Cursor1Time time="3001914fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="261"></NameColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="group" fp_name="group259">
+      <obj_property name="label">Top</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/bfr_irq">
+         <obj_property name="ElementShortName">bfr_irq</obj_property>
+         <obj_property name="ObjectShortName">bfr_irq</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/bfr_irq_OBUF">
+         <obj_property name="ElementShortName">bfr_irq_OBUF</obj_property>
+         <obj_property name="ObjectShortName">bfr_irq_OBUF</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/busy">
+         <obj_property name="ElementShortName">busy</obj_property>
+         <obj_property name="ObjectShortName">busy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/busy_OBUF">
+         <obj_property name="ElementShortName">busy_OBUF</obj_property>
+         <obj_property name="ObjectShortName">busy_OBUF</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/clk_IBUF">
+         <obj_property name="ElementShortName">clk_IBUF</obj_property>
+         <obj_property name="ObjectShortName">clk_IBUF</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/data_0">
+         <obj_property name="ElementShortName">data_0[11:0]</obj_property>
+         <obj_property name="ObjectShortName">data_0[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/data_0_OBUF">
+         <obj_property name="ElementShortName">data_0_OBUF[11:0]</obj_property>
+         <obj_property name="ObjectShortName">data_0_OBUF[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/data_1">
+         <obj_property name="ElementShortName">data_1[11:0]</obj_property>
+         <obj_property name="ObjectShortName">data_1[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/data_1_OBUF">
+         <obj_property name="ElementShortName">data_1_OBUF[11:0]</obj_property>
+         <obj_property name="ObjectShortName">data_1_OBUF[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/hold">
+         <obj_property name="ElementShortName">hold</obj_property>
+         <obj_property name="ObjectShortName">hold</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/hold_OBUF">
+         <obj_property name="ElementShortName">hold_OBUF</obj_property>
+         <obj_property name="ObjectShortName">hold_OBUF</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/irq_out">
+         <obj_property name="ElementShortName">irq_out</obj_property>
+         <obj_property name="ObjectShortName">irq_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/irq_out_OBUF">
+         <obj_property name="ElementShortName">irq_out_OBUF</obj_property>
+         <obj_property name="ObjectShortName">irq_out_OBUF</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/rd_out">
+         <obj_property name="ElementShortName">rd_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/rd_out_OBUF">
+         <obj_property name="ElementShortName">rd_out_OBUF[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_out_OBUF[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/rst_n">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/rst_n_IBUF">
+         <obj_property name="ElementShortName">rst_n_IBUF</obj_property>
+         <obj_property name="ObjectShortName">rst_n_IBUF</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/shift">
+         <obj_property name="ElementShortName">shift</obj_property>
+         <obj_property name="ObjectShortName">shift</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/shift_OBUF">
+         <obj_property name="ElementShortName">shift_OBUF</obj_property>
+         <obj_property name="ObjectShortName">shift_OBUF</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/wr">
+         <obj_property name="ElementShortName">wr</obj_property>
+         <obj_property name="ObjectShortName">wr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/wr_OBUF">
+         <obj_property name="ElementShortName">wr_OBUF</obj_property>
+         <obj_property name="ObjectShortName">wr_OBUF</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/wr_addr">
+         <obj_property name="ElementShortName">wr_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/wr_addr_OBUF">
+         <obj_property name="ElementShortName">wr_addr_OBUF[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_addr_OBUF[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/wr_in">
+         <obj_property name="ElementShortName">wr_in[11:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_in[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/wr_in_OBUF">
+         <obj_property name="ElementShortName">wr_in_OBUF[11:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_in_OBUF[11:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group304">
+      <obj_property name="label">PingPongBuffer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group305">
+         <obj_property name="label">Top</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/busy">
+            <obj_property name="ElementShortName">busy</obj_property>
+            <obj_property name="ObjectShortName">busy</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/clk">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/hold">
+            <obj_property name="ElementShortName">hold</obj_property>
+            <obj_property name="ObjectShortName">hold</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/irq">
+            <obj_property name="ElementShortName">irq</obj_property>
+            <obj_property name="ObjectShortName">irq</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_0_douta">
+            <obj_property name="ElementShortName">ram_0_douta[31:0]</obj_property>
+            <obj_property name="ObjectShortName">ram_0_douta[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_1_douta">
+            <obj_property name="ElementShortName">ram_1_douta[31:0]</obj_property>
+            <obj_property name="ObjectShortName">ram_1_douta[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/rd_addr">
+            <obj_property name="ElementShortName">rd_addr[4:0]</obj_property>
+            <obj_property name="ObjectShortName">rd_addr[4:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/rd_dout">
+            <obj_property name="ElementShortName">rd_dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">rd_dout[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/rst_n">
+            <obj_property name="ElementShortName">rst_n</obj_property>
+            <obj_property name="ObjectShortName">rst_n</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/shift">
+            <obj_property name="ElementShortName">shift</obj_property>
+            <obj_property name="ObjectShortName">shift</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/wr">
+            <obj_property name="ElementShortName">wr</obj_property>
+            <obj_property name="ObjectShortName">wr</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/wr_addr">
+            <obj_property name="ElementShortName">wr_addr[4:0]</obj_property>
+            <obj_property name="ObjectShortName">wr_addr[4:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/wr_din">
+            <obj_property name="ElementShortName">wr_din[11:0]</obj_property>
+            <obj_property name="ObjectShortName">wr_din[11:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group318">
+         <obj_property name="label">pingpong_buffer</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="group" fp_name="group338">
+            <obj_property name="label">Top</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/busy">
+               <obj_property name="ElementShortName">busy</obj_property>
+               <obj_property name="ObjectShortName">busy</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/clk">
+               <obj_property name="ElementShortName">clk</obj_property>
+               <obj_property name="ObjectShortName">clk</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/hold">
+               <obj_property name="ElementShortName">hold</obj_property>
+               <obj_property name="ObjectShortName">hold</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/irq">
+               <obj_property name="ElementShortName">irq</obj_property>
+               <obj_property name="ObjectShortName">irq</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/ram0_addr">
+               <obj_property name="ElementShortName">ram0_addr[4:0]</obj_property>
+               <obj_property name="ObjectShortName">ram0_addr[4:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/ram0_din">
+               <obj_property name="ElementShortName">ram0_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ram0_din[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/ram0_dout">
+               <obj_property name="ElementShortName">ram0_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ram0_dout[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/ram0_wr">
+               <obj_property name="ElementShortName">ram0_wr</obj_property>
+               <obj_property name="ObjectShortName">ram0_wr</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/ram1_addr">
+               <obj_property name="ElementShortName">ram1_addr[4:0]</obj_property>
+               <obj_property name="ObjectShortName">ram1_addr[4:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/ram1_din">
+               <obj_property name="ElementShortName">ram1_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ram1_din[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/ram1_dout">
+               <obj_property name="ElementShortName">ram1_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ram1_dout[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/ram1_wr">
+               <obj_property name="ElementShortName">ram1_wr</obj_property>
+               <obj_property name="ObjectShortName">ram1_wr</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/rd_addr">
+               <obj_property name="ElementShortName">rd_addr[4:0]</obj_property>
+               <obj_property name="ObjectShortName">rd_addr[4:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/rd_dout">
+               <obj_property name="ElementShortName">rd_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">rd_dout[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/rst_n">
+               <obj_property name="ElementShortName">rst_n</obj_property>
+               <obj_property name="ObjectShortName">rst_n</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/shift">
+               <obj_property name="ElementShortName">shift</obj_property>
+               <obj_property name="ObjectShortName">shift</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/wr">
+               <obj_property name="ElementShortName">wr</obj_property>
+               <obj_property name="ObjectShortName">wr</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/wr_addr">
+               <obj_property name="ElementShortName">wr_addr[4:0]</obj_property>
+               <obj_property name="ObjectShortName">wr_addr[4:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/wr_din">
+               <obj_property name="ElementShortName">wr_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">wr_din[31:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group339">
+            <obj_property name="label">Internal</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/busy">
+               <obj_property name="ElementShortName">busy</obj_property>
+               <obj_property name="ObjectShortName">busy</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/busy_reg_i_1_n_0">
+               <obj_property name="ElementShortName">busy_reg_i_1_n_0</obj_property>
+               <obj_property name="ObjectShortName">busy_reg_i_1_n_0</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/busy_reg_i_2_n_0">
+               <obj_property name="ElementShortName">busy_reg_i_2_n_0</obj_property>
+               <obj_property name="ObjectShortName">busy_reg_i_2_n_0</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/clk">
+               <obj_property name="ElementShortName">clk</obj_property>
+               <obj_property name="ObjectShortName">clk</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/current_state">
+               <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+               <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/hold">
+               <obj_property name="ElementShortName">hold</obj_property>
+               <obj_property name="ObjectShortName">hold</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/irq">
+               <obj_property name="ElementShortName">irq</obj_property>
+               <obj_property name="ObjectShortName">irq</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/irq_i_1_n_0">
+               <obj_property name="ElementShortName">irq_i_1_n_0</obj_property>
+               <obj_property name="ObjectShortName">irq_i_1_n_0</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/irq_i_2_n_0">
+               <obj_property name="ElementShortName">irq_i_2_n_0</obj_property>
+               <obj_property name="ObjectShortName">irq_i_2_n_0</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/next_state">
+               <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+               <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/next_state__0">
+               <obj_property name="ElementShortName">next_state__0[2:0]</obj_property>
+               <obj_property name="ObjectShortName">next_state__0[2:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\next_state_reg[0]_i_2_n_0 ">
+               <obj_property name="ElementShortName">\next_state_reg[0]_i_2_n_0 </obj_property>
+               <obj_property name="ObjectShortName">\next_state_reg[0]_i_2_n_0 </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/p_0_in">
+               <obj_property name="ElementShortName">p_0_in</obj_property>
+               <obj_property name="ObjectShortName">p_0_in</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram0_addr">
+               <obj_property name="ElementShortName">ram0_addr[4:0]</obj_property>
+               <obj_property name="ObjectShortName">ram0_addr[4:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram0_din">
+               <obj_property name="ElementShortName">ram0_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ram0_din[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram0_dout">
+               <obj_property name="ElementShortName">ram0_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ram0_dout[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram0_wr">
+               <obj_property name="ElementShortName">ram0_wr</obj_property>
+               <obj_property name="ObjectShortName">ram0_wr</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram1_addr">
+               <obj_property name="ElementShortName">ram1_addr[4:0]</obj_property>
+               <obj_property name="ObjectShortName">ram1_addr[4:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram1_din">
+               <obj_property name="ElementShortName">ram1_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ram1_din[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram1_dout">
+               <obj_property name="ElementShortName">ram1_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ram1_dout[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram1_wr">
+               <obj_property name="ElementShortName">ram1_wr</obj_property>
+               <obj_property name="ObjectShortName">ram1_wr</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram_selector">
+               <obj_property name="ElementShortName">ram_selector</obj_property>
+               <obj_property name="ObjectShortName">ram_selector</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram_selector_i_1_n_0">
+               <obj_property name="ElementShortName">ram_selector_i_1_n_0</obj_property>
+               <obj_property name="ObjectShortName">ram_selector_i_1_n_0</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/ram_selector_i_2_n_0">
+               <obj_property name="ElementShortName">ram_selector_i_2_n_0</obj_property>
+               <obj_property name="ObjectShortName">ram_selector_i_2_n_0</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/rd_addr">
+               <obj_property name="ElementShortName">rd_addr[4:0]</obj_property>
+               <obj_property name="ObjectShortName">rd_addr[4:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/rd_dout">
+               <obj_property name="ElementShortName">rd_dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">rd_dout[31:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/rst_n">
+               <obj_property name="ElementShortName">rst_n</obj_property>
+               <obj_property name="ObjectShortName">rst_n</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/shift">
+               <obj_property name="ElementShortName">shift</obj_property>
+               <obj_property name="ObjectShortName">shift</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/wait_cnt0">
+               <obj_property name="ElementShortName">wait_cnt0</obj_property>
+               <obj_property name="ObjectShortName">wait_cnt0</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt[0]_i_1_n_0 ">
+               <obj_property name="ElementShortName">\wait_cnt[0]_i_1_n_0 </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt[0]_i_1_n_0 </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt[1]_i_1_n_0 ">
+               <obj_property name="ElementShortName">\wait_cnt[1]_i_1_n_0 </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt[1]_i_1_n_0 </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt[2]_i_1_n_0 ">
+               <obj_property name="ElementShortName">\wait_cnt[2]_i_1_n_0 </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt[2]_i_1_n_0 </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt[3]_i_2_n_0 ">
+               <obj_property name="ElementShortName">\wait_cnt[3]_i_2_n_0 </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt[3]_i_2_n_0 </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt[3]_i_3_n_0 ">
+               <obj_property name="ElementShortName">\wait_cnt[3]_i_3_n_0 </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt[3]_i_3_n_0 </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt_reg_n_0_[0] ">
+               <obj_property name="ElementShortName">\wait_cnt_reg_n_0_[0] </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt_reg_n_0_[0] </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt_reg_n_0_[1] ">
+               <obj_property name="ElementShortName">\wait_cnt_reg_n_0_[1] </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt_reg_n_0_[1] </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt_reg_n_0_[2] ">
+               <obj_property name="ElementShortName">\wait_cnt_reg_n_0_[2] </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt_reg_n_0_[2] </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/\wait_cnt_reg_n_0_[3] ">
+               <obj_property name="ElementShortName">\wait_cnt_reg_n_0_[3] </obj_property>
+               <obj_property name="ObjectShortName">\wait_cnt_reg_n_0_[3] </obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/wr">
+               <obj_property name="ElementShortName">wr</obj_property>
+               <obj_property name="ObjectShortName">wr</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/wr_addr">
+               <obj_property name="ElementShortName">wr_addr[4:0]</obj_property>
+               <obj_property name="ObjectShortName">wr_addr[4:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/pingpong_buffer_0/U0/wr_din">
+               <obj_property name="ElementShortName">wr_din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">wr_din[31:0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group306">
+         <obj_property name="label">ram_0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_0/addra">
+            <obj_property name="ElementShortName">addra[4:0]</obj_property>
+            <obj_property name="ObjectShortName">addra[4:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_0/clka">
+            <obj_property name="ElementShortName">clka</obj_property>
+            <obj_property name="ObjectShortName">clka</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_0/dina">
+            <obj_property name="ElementShortName">dina[31:0]</obj_property>
+            <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_0/douta">
+            <obj_property name="ElementShortName">douta[31:0]</obj_property>
+            <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_0/wea">
+            <obj_property name="ElementShortName">wea[0:0]</obj_property>
+            <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group307">
+         <obj_property name="label">ram_1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_1/addra">
+            <obj_property name="ElementShortName">addra[4:0]</obj_property>
+            <obj_property name="ObjectShortName">addra[4:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_1/clka">
+            <obj_property name="ElementShortName">clka</obj_property>
+            <obj_property name="ObjectShortName">clka</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_1/dina">
+            <obj_property name="ElementShortName">dina[31:0]</obj_property>
+            <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_1/douta">
+            <obj_property name="ElementShortName">douta[31:0]</obj_property>
+            <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/PingPongBuffer_0/ram_1/wea">
+            <obj_property name="ElementShortName">wea[0:0]</obj_property>
+            <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group369">
+      <obj_property name="label">SineGenerator</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_0">
+         <obj_property name="ElementShortName">dout_0[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_0[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_1">
+         <obj_property name="ElementShortName">dout_1[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_1[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_10">
+         <obj_property name="ElementShortName">dout_10[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_10[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_11">
+         <obj_property name="ElementShortName">dout_11[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_11[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_2">
+         <obj_property name="ElementShortName">dout_2[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_2[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_3">
+         <obj_property name="ElementShortName">dout_3[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_3[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_4">
+         <obj_property name="ElementShortName">dout_4[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_4[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_5">
+         <obj_property name="ElementShortName">dout_5[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_5[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_6">
+         <obj_property name="ElementShortName">dout_6[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_6[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_7">
+         <obj_property name="ElementShortName">dout_7[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_7[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_8">
+         <obj_property name="ElementShortName">dout_8[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_8[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/SineGenerator_0/dout_9">
+         <obj_property name="ElementShortName">dout_9[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_9[11:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group382">
+      <obj_property name="label">pingpong_sim_reader</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_reader_0/bfr_din">
+         <obj_property name="ElementShortName">bfr_din[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bfr_din[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_reader_0/bfr_addr">
+         <obj_property name="ElementShortName">bfr_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">bfr_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_reader_0/bfr_hold">
+         <obj_property name="ElementShortName">bfr_hold</obj_property>
+         <obj_property name="ObjectShortName">bfr_hold</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_reader_0/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_reader_0/irq_in">
+         <obj_property name="ElementShortName">irq_in</obj_property>
+         <obj_property name="ObjectShortName">irq_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_reader_0/rst_n">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group389">
+      <obj_property name="label">pingpong_sim_writer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/bfr_addr">
+         <obj_property name="ElementShortName">bfr_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">bfr_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/bfr_dout">
+         <obj_property name="ElementShortName">bfr_dout[11:0]</obj_property>
+         <obj_property name="ObjectShortName">bfr_dout[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/bfr_irq">
+         <obj_property name="ElementShortName">bfr_irq</obj_property>
+         <obj_property name="ObjectShortName">bfr_irq</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/bfr_shift">
+         <obj_property name="ElementShortName">bfr_shift</obj_property>
+         <obj_property name="ObjectShortName">bfr_shift</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/bfr_wr">
+         <obj_property name="ElementShortName">bfr_wr</obj_property>
+         <obj_property name="ObjectShortName">bfr_wr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/din_0">
+         <obj_property name="ElementShortName">din_0[11:0]</obj_property>
+         <obj_property name="ObjectShortName">din_0[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/din_1">
+         <obj_property name="ElementShortName">din_1[11:0]</obj_property>
+         <obj_property name="ObjectShortName">din_1[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/irq_out">
+         <obj_property name="ElementShortName">irq_out</obj_property>
+         <obj_property name="ObjectShortName">irq_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/MagPingPongBuffer_test1_wrapper/MagPingPongBuffer_test1_i/pingpong_sim_writer_0/rst_n">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

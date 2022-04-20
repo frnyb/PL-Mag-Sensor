@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1648556577633">
+  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="buffer_in_2" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM" coreId="177" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM" coreId="177" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="buffer_in_5" type="PortType" coreName="RAM" coreId="177" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="buffer_in_6" type="PortType" coreName="RAM" coreId="3350199472" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="buffer_in_7" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="9" name="buffer_in_8" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="10" name="buffer_in_9" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM" coreId="609" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="12" name="buffer_in_11" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="13" name="buffer_out" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="240">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="96" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="99" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="102" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="103" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="105" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="106" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="108" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="109" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="111" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="112" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="114" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="115" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="117" source_obj="//@ports.7" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="118" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="120" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="121" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="123" source_obj="//@ports.9" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="124" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="126" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="127" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="129" source_obj="//@ports.11" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="130" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@ports.12"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="138" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@ports.12"/>
+  <edges id="139" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="143" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@ports.12"/>
+  <edges id="144" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="148" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@ports.12"/>
+  <edges id="149" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@ports.12"/>
+  <edges id="154" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="158" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@ports.12"/>
+  <edges id="159" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="163" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@ports.12"/>
+  <edges id="164" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="168" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@ports.12"/>
+  <edges id="169" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="173" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@ports.12"/>
+  <edges id="174" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="178" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@ports.12"/>
+  <edges id="179" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="183" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@ports.12"/>
+  <edges id="184" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="188" source_obj="//@blocks.0/@node_objs.35" sink_obj="//@ports.12"/>
+  <edges id="189" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="482" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="483" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="484" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="485" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="486" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="487" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="488" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="489" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="490" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="491" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="492" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="493" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="494" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="495" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="496" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="497" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="498" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="499" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="500" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="501" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="502" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="503" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="504" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="505" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="506" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="507" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="508" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="509" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="510" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="511" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="512" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="513" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="514" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="515" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="516" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.35"/>
+  <blocks id="80" name="MagBramWriter" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="buffer_0" lineNumber="42" originalName="buffer_0" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_0_U" coreId="255" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="42" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="buffer_1" lineNumber="43" originalName="buffer_1" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_1_U" coreId="2" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="43" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="buffer_2" lineNumber="44" originalName="buffer_2" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_2_U" coreId="0" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="44" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="buffer_3" lineNumber="45" originalName="buffer_3" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_3_U" coreId="0" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="45" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="buffer_4" lineNumber="46" originalName="buffer_4" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_4_U" coreId="49" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="46" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="buffer_5" lineNumber="47" originalName="buffer_5" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_5_U" coreId="825307437" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="47" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="buffer_6" lineNumber="48" originalName="buffer_6" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_6_U" coreId="3350196752" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="48" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="buffer_7" lineNumber="49" originalName="buffer_7" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_7_U" coreId="128" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="49" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="buffer_8" lineNumber="50" originalName="buffer_8" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_8_U" coreId="49" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="buffer_9" lineNumber="51" originalName="buffer_9" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_9_U" coreId="128" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="51" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="buffer_10" lineNumber="52" originalName="buffer_10" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_10_U" coreId="11" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="52" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="buffer_11" lineNumber="53" originalName="buffer_11" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="buffer_11_U" coreId="66" contextFuncName="MagBramWriter" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="_ln55" lineNumber="55" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="3350315673" contextFuncName="MagBramWriter" opcode="call" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="55" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_0</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln56" lineNumber="56" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="49" contextFuncName="MagBramWriter" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="56" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_1</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="_ln57" lineNumber="57" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="3350204000" contextFuncName="MagBramWriter" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="57" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_2</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln58" lineNumber="58" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="3350207680" contextFuncName="MagBramWriter" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="58" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_3</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln59" lineNumber="59" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="132" contextFuncName="MagBramWriter" opcode="call" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="59" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_4</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln60" lineNumber="60" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="3350207248" contextFuncName="MagBramWriter" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="60" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_5</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="_ln61" lineNumber="61" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="3350217720" contextFuncName="MagBramWriter" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="61" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_6</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="_ln62" lineNumber="62" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="49" contextFuncName="MagBramWriter" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="62" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_7</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln63" lineNumber="63" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="0" contextFuncName="MagBramWriter" opcode="call" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="63" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_8</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln64" lineNumber="64" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="0" contextFuncName="MagBramWriter" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="64" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_9</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="_ln65" lineNumber="65" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="0" contextFuncName="MagBramWriter" opcode="call" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="65" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_10</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln66" lineNumber="66" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_152" coreId="3350321368" contextFuncName="MagBramWriter" opcode="call" nodeLabel="22.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="66" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>buffer_in_11</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln70" lineNumber="70" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="3350322281" contextFuncName="MagBramWriter" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="70" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="_ln71" lineNumber="71" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="0" contextFuncName="MagBramWriter" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="71" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="_ln72" lineNumber="72" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="539915108" contextFuncName="MagBramWriter" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="72" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="_ln73" lineNumber="73" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="1734439968" contextFuncName="MagBramWriter" opcode="call" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="73" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="_ln74" lineNumber="74" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="2037672306" contextFuncName="MagBramWriter" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="74" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="_ln75" lineNumber="75" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="3350217632" contextFuncName="MagBramWriter" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="75" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="_ln76" lineNumber="76" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="3350219024" contextFuncName="MagBramWriter" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="76" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="_ln77" lineNumber="77" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="5873" contextFuncName="MagBramWriter" opcode="call" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="77" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="_ln78" lineNumber="78" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="0" contextFuncName="MagBramWriter" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="78" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln79" lineNumber="79" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="128" contextFuncName="MagBramWriter" opcode="call" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="79" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="_ln80" lineNumber="80" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="3350222880" contextFuncName="MagBramWriter" opcode="call" nodeLabel="22.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="80" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="_ln81" lineNumber="81" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." rtlName="grp_writeData_fu_132" coreId="3350225504" contextFuncName="MagBramWriter" opcode="call" nodeLabel="24.0" nodeLatency="1" m_display="0" m_delay="2.7" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="81" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="_ln82" lineNumber="82" fileName="../src/mag_bram_writer.cpp" fileDirectory=".." coreId="657" contextFuncName="MagBramWriter" opcode="ret" nodeLabel="25.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/mag_bram_writer.cpp" linenumber="82" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagBramWriter" functionName="MagBramWriter"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/mag_bram_writer.cpp">
+      <validLinenumbers>42</validLinenumbers>
+      <validLinenumbers>43</validLinenumbers>
+      <validLinenumbers>44</validLinenumbers>
+      <validLinenumbers>45</validLinenumbers>
+      <validLinenumbers>46</validLinenumbers>
+      <validLinenumbers>47</validLinenumbers>
+      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>49</validLinenumbers>
+      <validLinenumbers>50</validLinenumbers>
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>52</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
+      <validLinenumbers>55</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+      <validLinenumbers>57</validLinenumbers>
+      <validLinenumbers>58</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>61</validLinenumbers>
+      <validLinenumbers>62</validLinenumbers>
+      <validLinenumbers>63</validLinenumbers>
+      <validLinenumbers>64</validLinenumbers>
+      <validLinenumbers>65</validLinenumbers>
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>70</validLinenumbers>
+      <validLinenumbers>71</validLinenumbers>
+      <validLinenumbers>72</validLinenumbers>
+      <validLinenumbers>73</validLinenumbers>
+      <validLinenumbers>74</validLinenumbers>
+      <validLinenumbers>75</validLinenumbers>
+      <validLinenumbers>76</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+      <validLinenumbers>78</validLinenumbers>
+      <validLinenumbers>79</validLinenumbers>
+      <validLinenumbers>80</validLinenumbers>
+      <validLinenumbers>81</validLinenumbers>
+      <validLinenumbers>82</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <expressionNodes realName="buffer_0_alloca_fu_84">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_2_alloca_fu_92">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_4_alloca_fu_100">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_11_alloca_fu_128">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_7_alloca_fu_112">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_3_alloca_fu_96">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_6_alloca_fu_108">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_10_alloca_fu_124">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_5_alloca_fu_104">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_8_alloca_fu_116">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_1_alloca_fu_88">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_9_alloca_fu_120">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_loadBuffer_fu_152">
+    <nodeIds>55</nodeIds>
+    <nodeIds>56</nodeIds>
+    <nodeIds>57</nodeIds>
+    <nodeIds>58</nodeIds>
+    <nodeIds>59</nodeIds>
+    <nodeIds>60</nodeIds>
+    <nodeIds>61</nodeIds>
+    <nodeIds>62</nodeIds>
+    <nodeIds>63</nodeIds>
+    <nodeIds>64</nodeIds>
+    <nodeIds>65</nodeIds>
+    <nodeIds>66</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_writeData_fu_132">
+    <nodeIds>67</nodeIds>
+    <nodeIds>68</nodeIds>
+    <nodeIds>69</nodeIds>
+    <nodeIds>70</nodeIds>
+    <nodeIds>71</nodeIds>
+    <nodeIds>72</nodeIds>
+    <nodeIds>73</nodeIds>
+    <nodeIds>74</nodeIds>
+    <nodeIds>75</nodeIds>
+    <nodeIds>76</nodeIds>
+    <nodeIds>77</nodeIds>
+    <nodeIds>78</nodeIds>
+  </moduleNodes>
+  <fsm>
+    <states id="1">
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="55" stage="1" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="56" stage="2" latency="2"/>
+      <operations id="67" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="56" stage="1" latency="2"/>
+      <operations id="67" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="57" stage="2" latency="2"/>
+      <operations id="68" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="57" stage="1" latency="2"/>
+      <operations id="68" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="58" stage="2" latency="2"/>
+      <operations id="69" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="58" stage="1" latency="2"/>
+      <operations id="69" stage="1" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="59" stage="2" latency="2"/>
+      <operations id="70" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="59" stage="1" latency="2"/>
+      <operations id="70" stage="1" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="60" stage="2" latency="2"/>
+      <operations id="71" stage="2" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="60" stage="1" latency="2"/>
+      <operations id="71" stage="1" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="61" stage="2" latency="2"/>
+      <operations id="72" stage="2" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="61" stage="1" latency="2"/>
+      <operations id="72" stage="1" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="62" stage="2" latency="2"/>
+      <operations id="73" stage="2" latency="2"/>
+    </states>
+    <states id="16">
+      <operations id="62" stage="1" latency="2"/>
+      <operations id="73" stage="1" latency="2"/>
+    </states>
+    <states id="17">
+      <operations id="63" stage="2" latency="2"/>
+      <operations id="74" stage="2" latency="2"/>
+    </states>
+    <states id="18">
+      <operations id="63" stage="1" latency="2"/>
+      <operations id="74" stage="1" latency="2"/>
+    </states>
+    <states id="19">
+      <operations id="64" stage="2" latency="2"/>
+      <operations id="75" stage="2" latency="2"/>
+    </states>
+    <states id="20">
+      <operations id="64" stage="1" latency="2"/>
+      <operations id="75" stage="1" latency="2"/>
+    </states>
+    <states id="21">
+      <operations id="65" stage="2" latency="2"/>
+      <operations id="76" stage="2" latency="2"/>
+    </states>
+    <states id="22">
+      <operations id="65" stage="1" latency="2"/>
+      <operations id="76" stage="1" latency="2"/>
+    </states>
+    <states id="23">
+      <operations id="66" stage="2" latency="2"/>
+      <operations id="77" stage="2" latency="2"/>
+    </states>
+    <states id="24">
+      <operations id="66" stage="1" latency="2"/>
+      <operations id="77" stage="1" latency="2"/>
+    </states>
+    <states id="25">
+      <operations id="78" stage="2" latency="2"/>
+    </states>
+    <states id="26">
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="2"/>
+      <operations id="79" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="MagBramWriter" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <basicBlocks>80</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

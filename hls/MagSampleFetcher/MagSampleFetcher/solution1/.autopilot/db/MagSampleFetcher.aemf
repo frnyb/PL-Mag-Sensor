@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1650371867912">
+  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM" coreId="65" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM" coreId="129" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="buffer_in_2" type="PortType" coreName="RAM" coreId="177" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="buffer_in_5" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="buffer_in_6" type="PortType" coreName="RAM" coreId="433" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="buffer_in_7" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="9" name="buffer_in_8" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="10" name="buffer_in_9" type="PortType" coreName="RAM" coreId="737" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="12" name="buffer_in_11" type="PortType" coreName="RAM" coreId="737" bitwidth="32" iftype="IfTypeRegister" arraysize="20">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="13" name="buffer_out" type="PortType" coreName="RAM_1P" coreId="132" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="7680">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="n_periods" type="PortType" originalName="n_periods" coreId="49" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="15" name="bfr_irq" type="PortType" originalName="bfr_irq" coreId="305" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="16" name="n_samples" type="PortType" originalName="n_samples" coreId="1400781417" bitwidth="6">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="17" name="n_samples_out" type="PortType" originalName="n_samples_out" coreId="1400769656" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="126" source_obj="//@ports.13" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="140" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="143" source_obj="//@ports.15" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="144" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="145" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="146" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="147" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="148" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="152" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="156" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="157" source_obj="//@blocks.3/@node_objs.24" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="158" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="159" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="162" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="163" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="164" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="165" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="166" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="167" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="168" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="171" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="172" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="173" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="174" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="175" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="178" source_obj="//@ports.0" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="179" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="180" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="182" source_obj="//@ports.1" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="183" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="184" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="186" source_obj="//@ports.2" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="187" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="188" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="190" source_obj="//@ports.3" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="191" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="192" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="194" source_obj="//@ports.4" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="195" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="196" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="198" source_obj="//@ports.5" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="199" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="200" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="202" source_obj="//@ports.6" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="203" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="204" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="206" source_obj="//@ports.7" sink_obj="//@blocks.3/@node_objs.7"/>
+  <edges id="207" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.3/@node_objs.7"/>
+  <edges id="208" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.7"/>
+  <edges id="210" source_obj="//@ports.8" sink_obj="//@blocks.3/@node_objs.8"/>
+  <edges id="211" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.3/@node_objs.8"/>
+  <edges id="212" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.8"/>
+  <edges id="214" source_obj="//@ports.9" sink_obj="//@blocks.3/@node_objs.9"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.3/@node_objs.9"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.9"/>
+  <edges id="218" source_obj="//@ports.10" sink_obj="//@blocks.3/@node_objs.10"/>
+  <edges id="219" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.3/@node_objs.10"/>
+  <edges id="220" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.10"/>
+  <edges id="222" source_obj="//@ports.11" sink_obj="//@blocks.3/@node_objs.11"/>
+  <edges id="223" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.3/@node_objs.11"/>
+  <edges id="224" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.11"/>
+  <edges id="227" source_obj="//@blocks.3/@node_objs.12" sink_obj="//@ports.12"/>
+  <edges id="228" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="231" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="232" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="234" source_obj="//@blocks.3/@node_objs.13" sink_obj="//@ports.12"/>
+  <edges id="235" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="238" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="239" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="241" source_obj="//@blocks.3/@node_objs.14" sink_obj="//@ports.12"/>
+  <edges id="242" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="245" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="246" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="248" source_obj="//@blocks.3/@node_objs.15" sink_obj="//@ports.12"/>
+  <edges id="249" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="252" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="253" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="255" source_obj="//@blocks.3/@node_objs.16" sink_obj="//@ports.12"/>
+  <edges id="256" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.3/@node_objs.16"/>
+  <edges id="259" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.16"/>
+  <edges id="260" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.16"/>
+  <edges id="262" source_obj="//@blocks.3/@node_objs.17" sink_obj="//@ports.12"/>
+  <edges id="263" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.3/@node_objs.17"/>
+  <edges id="266" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.17"/>
+  <edges id="267" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.17"/>
+  <edges id="269" source_obj="//@blocks.3/@node_objs.18" sink_obj="//@ports.12"/>
+  <edges id="270" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.3/@node_objs.18"/>
+  <edges id="273" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.18"/>
+  <edges id="274" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.18"/>
+  <edges id="276" source_obj="//@blocks.3/@node_objs.19" sink_obj="//@ports.12"/>
+  <edges id="277" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.3/@node_objs.19"/>
+  <edges id="280" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.19"/>
+  <edges id="281" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.19"/>
+  <edges id="283" source_obj="//@blocks.3/@node_objs.20" sink_obj="//@ports.12"/>
+  <edges id="284" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.3/@node_objs.20"/>
+  <edges id="287" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.20"/>
+  <edges id="288" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.20"/>
+  <edges id="290" source_obj="//@blocks.3/@node_objs.21" sink_obj="//@ports.12"/>
+  <edges id="291" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.3/@node_objs.21"/>
+  <edges id="294" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.21"/>
+  <edges id="295" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.21"/>
+  <edges id="297" source_obj="//@blocks.3/@node_objs.22" sink_obj="//@ports.12"/>
+  <edges id="298" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.3/@node_objs.22"/>
+  <edges id="301" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.22"/>
+  <edges id="302" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.22"/>
+  <edges id="304" source_obj="//@blocks.3/@node_objs.23" sink_obj="//@ports.12"/>
+  <edges id="305" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.3/@node_objs.23"/>
+  <edges id="308" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.23"/>
+  <edges id="309" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.3/@node_objs.23"/>
+  <edges id="310" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.3/@node_objs.24"/>
+  <edges id="311" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.3/@node_objs.24"/>
+  <edges id="312" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.25"/>
+  <edges id="315" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@ports.16"/>
+  <edges id="316" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="735" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="736" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.4"/>
+  <edges id="737" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="738" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="739" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="740" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="741" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="742" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="743" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.22" sink_obj="//@blocks.3/@node_objs.23"/>
+  <edges id="744" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.21" sink_obj="//@blocks.3/@node_objs.22"/>
+  <edges id="745" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.20" sink_obj="//@blocks.3/@node_objs.21"/>
+  <edges id="746" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.19" sink_obj="//@blocks.3/@node_objs.20"/>
+  <edges id="747" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.18" sink_obj="//@blocks.3/@node_objs.19"/>
+  <edges id="748" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.17" sink_obj="//@blocks.3/@node_objs.18"/>
+  <edges id="749" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.16" sink_obj="//@blocks.3/@node_objs.17"/>
+  <edges id="750" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.15" sink_obj="//@blocks.3/@node_objs.16"/>
+  <edges id="751" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.14" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="752" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.13" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="753" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.12" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="754" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.11" sink_obj="//@blocks.3/@node_objs.23"/>
+  <edges id="755" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.10" sink_obj="//@blocks.3/@node_objs.22"/>
+  <edges id="756" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.9" sink_obj="//@blocks.3/@node_objs.21"/>
+  <edges id="757" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.8" sink_obj="//@blocks.3/@node_objs.20"/>
+  <edges id="758" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.7" sink_obj="//@blocks.3/@node_objs.19"/>
+  <edges id="759" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.6" sink_obj="//@blocks.3/@node_objs.18"/>
+  <edges id="760" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.5" sink_obj="//@blocks.3/@node_objs.17"/>
+  <edges id="761" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@blocks.3/@node_objs.16"/>
+  <edges id="762" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="763" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="764" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="765" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="766" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="767" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.12" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="768" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.13" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="769" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.14" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="770" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.15" sink_obj="//@blocks.3/@node_objs.16"/>
+  <edges id="771" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.16" sink_obj="//@blocks.3/@node_objs.17"/>
+  <edges id="772" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.17" sink_obj="//@blocks.3/@node_objs.18"/>
+  <edges id="773" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.18" sink_obj="//@blocks.3/@node_objs.19"/>
+  <edges id="774" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.19" sink_obj="//@blocks.3/@node_objs.20"/>
+  <edges id="775" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.20" sink_obj="//@blocks.3/@node_objs.21"/>
+  <edges id="776" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.21" sink_obj="//@blocks.3/@node_objs.22"/>
+  <edges id="777" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.22" sink_obj="//@blocks.3/@node_objs.23"/>
+  <blocks id="75" name=".lr.ph" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_82</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="n_periods_read" originalName="n_periods" coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>n_periods</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="buffer_0" lineNumber="46" originalName="buffer_0" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_0_U" coreId="0" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="46" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="buffer_1" lineNumber="47" originalName="buffer_1" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_1_U" coreId="1265" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="47" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="buffer_2" lineNumber="48" originalName="buffer_2" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_2_U" coreId="825307437" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="48" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="buffer_3" lineNumber="49" originalName="buffer_3" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_3_U" coreId="49" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="49" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="buffer_4" lineNumber="50" originalName="buffer_4" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_4_U" coreId="0" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="50" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="buffer_5" lineNumber="51" originalName="buffer_5" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_5_U" coreId="0" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="51" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="buffer_6" lineNumber="52" originalName="buffer_6" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_6_U" coreId="0" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="52" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="buffer_7" lineNumber="53" originalName="buffer_7" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_7_U" coreId="1400755040" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="53" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="buffer_8" lineNumber="54" originalName="buffer_8" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_8_U" coreId="0" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="54" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="buffer_9" lineNumber="55" originalName="buffer_9" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_9_U" coreId="7" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="55" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="buffer_10" lineNumber="56" originalName="buffer_10" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_10_U" coreId="1030185332" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="56" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="buffer_11" lineNumber="57" originalName="buffer_11" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="buffer_11_U" coreId="1400759993" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="57" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="zext_ln218" lineNumber="218" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" fileDirectory=".." rtlName="n_samples_total_fu_279_p00" coreId="0" contextFuncName="ap_uint_6_s" bitwidth="14" opcode="zext" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="218" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="ap_uint&amp;lt;6&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="n_samples_period" lineNumber="218" originalName="n_samples_period" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" fileDirectory=".." coreId="132" contextFuncName="ap_uint_6_s" bitwidth="6" opcode="read" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h" linenumber="218" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="ap_uint&amp;lt;6&amp;gt;"/>
+      <dataInputObjs>n_samples</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="zext_ln59" lineNumber="59" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="zext_ln59_fu_275_p1" coreId="0" contextFuncName="MagSampleFetcher" bitwidth="14" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="59" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="n_samples_total" lineNumber="59" originalName="n_samples_total" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="mul_8ns_6ns_14_1_1_U9" opType="mul" coreId="1769218148" contextFuncName="MagSampleFetcher" bitwidth="14" opcode="mul" m_display="0" m_delay="2.17" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="59" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="zext_ln59_1" lineNumber="59" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="zext_ln59_1_fu_285_p1" coreId="1598902863" contextFuncName="MagSampleFetcher" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="59" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="br_ln61" lineNumber="61" fileName="mag_sample_fetcher.cpp" fileDirectory=".." coreId="1528970616" contextFuncName="MagSampleFetcher" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="61" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <controlInputObjs>block_82</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mag_sample_fetcher.cpp">
+      <validLinenumbers>46</validLinenumbers>
+      <validLinenumbers>47</validLinenumbers>
+      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>49</validLinenumbers>
+      <validLinenumbers>50</validLinenumbers>
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>52</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
+      <validLinenumbers>54</validLinenumbers>
+      <validLinenumbers>55</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+      <validLinenumbers>57</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+      <validLinenumbers>61</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int.h">
+      <validLinenumbers>218</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="82" name="block_82" type="BlockType">
+    <controlInputObjs>.lr.ph</controlInputObjs>
+    <controlInputObjs>block_120</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge.loopexit</controlOutputObjs>
+    <controlOutputObjs>.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="i" originalName="i" coreId="132" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>.lr.ph</controlInputObjs>
+      <controlInputObjs>block_120</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="n_samples_total_1" originalName="n_samples_total" coreId="4225" bitwidth="14" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>.lr.ph</controlInputObjs>
+      <controlInputObjs>block_120</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="i_1" lineNumber="61" originalName="i" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="i_1_fu_289_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="MagSampleFetcher" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.9" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="61" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="icmp_ln61" lineNumber="61" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="icmp_ln61_fu_295_p2" opType="icmp" coreId="1400764616" contextFuncName="MagSampleFetcher" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.85" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="61" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="br_ln61" lineNumber="61" fileName="mag_sample_fetcher.cpp" fileDirectory=".." coreId="0" contextFuncName="MagSampleFetcher" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="61" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mag_sample_fetcher.cpp">
+      <validLinenumbers>61</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="86" name=".split" type="BlockType">
+    <controlInputObjs>block_82</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_90</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="trunc_ln61" lineNumber="61" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="trunc_ln61_fu_300_p1" coreId="16" contextFuncName="MagSampleFetcher" bitwidth="11" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="61" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln64" lineNumber="64" fileName="mag_sample_fetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="MagSampleFetcher" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="64" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <controlInputObjs>block_90</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mag_sample_fetcher.cpp">
+      <validLinenumbers>61</validLinenumbers>
+      <validLinenumbers>64</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="120" name="block_120" type="BlockType">
+    <controlInputObjs>block_90</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_82</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="_ln68" lineNumber="68" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="6" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="68" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_0</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="_ln69" lineNumber="69" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="69" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_1</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="_ln70" lineNumber="70" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="70" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_2</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="_ln71" lineNumber="71" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="71" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_3</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="_ln72" lineNumber="72" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="1400789016" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="72" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_4</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="_ln73" lineNumber="73" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="73" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_5</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="_ln74" lineNumber="74" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="1400793696" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="74" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_6</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="_ln75" lineNumber="75" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="11" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="17.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="75" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_7</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="_ln76" lineNumber="76" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="19.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="76" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_8</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="_ln77" lineNumber="77" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="132" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="21.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="77" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_9</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="_ln78" lineNumber="78" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="23.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="78" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_10</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="_ln79" lineNumber="79" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_loadBuffer_fu_252" coreId="1852795252" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="0.89" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="79" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>buffer_in_11</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <constName>loadBuffer</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="_ln81" lineNumber="81" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="1881154127" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="81" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="_ln82" lineNumber="82" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="1634692155" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="82" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="_ln83" lineNumber="83" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="1836016430" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="83" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="_ln84" lineNumber="84" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="1313415741" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="84" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln85" lineNumber="85" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="1394752884" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="85" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="_ln86" lineNumber="86" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="1629905268" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="86" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="_ln87" lineNumber="87" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="1717924464" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="17.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="87" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="_ln88" lineNumber="88" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="1596993887" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="19.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="88" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="_ln89" lineNumber="89" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="21.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="89" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="_ln90" lineNumber="90" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="23.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="90" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="_ln91" lineNumber="91" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="91" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="_ln92" lineNumber="92" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="grp_writeData_fu_230" coreId="0" contextFuncName="MagSampleFetcher" opcode="call" nodeLabel="27.0" nodeLatency="1" m_display="0" m_delay="1.87" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="92" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>writeData</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="n_samples_total_2" lineNumber="94" originalName="n_samples_total" fileName="mag_sample_fetcher.cpp" fileDirectory=".." rtlName="n_samples_total_2_fu_304_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="MagSampleFetcher" bitwidth="14" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.98" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="94" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="br_ln0" coreId="0" opcode="br" nodeLabel="28.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_82</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mag_sample_fetcher.cpp">
+      <validLinenumbers>68</validLinenumbers>
+      <validLinenumbers>69</validLinenumbers>
+      <validLinenumbers>70</validLinenumbers>
+      <validLinenumbers>71</validLinenumbers>
+      <validLinenumbers>72</validLinenumbers>
+      <validLinenumbers>73</validLinenumbers>
+      <validLinenumbers>74</validLinenumbers>
+      <validLinenumbers>75</validLinenumbers>
+      <validLinenumbers>76</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+      <validLinenumbers>78</validLinenumbers>
+      <validLinenumbers>79</validLinenumbers>
+      <validLinenumbers>81</validLinenumbers>
+      <validLinenumbers>82</validLinenumbers>
+      <validLinenumbers>83</validLinenumbers>
+      <validLinenumbers>84</validLinenumbers>
+      <validLinenumbers>85</validLinenumbers>
+      <validLinenumbers>86</validLinenumbers>
+      <validLinenumbers>87</validLinenumbers>
+      <validLinenumbers>88</validLinenumbers>
+      <validLinenumbers>89</validLinenumbers>
+      <validLinenumbers>90</validLinenumbers>
+      <validLinenumbers>91</validLinenumbers>
+      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>94</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="123" name="._crit_edge.loopexit" type="BlockType">
+    <controlInputObjs>block_82</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="n_samples_out_write_ln98" lineNumber="98" fileName="mag_sample_fetcher.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="MagSampleFetcher" opcode="write" nodeLabel="1.0" m_display="0" m_delay="1.0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="98" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>n_samples_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="_ln100" lineNumber="100" fileName="mag_sample_fetcher.cpp" fileDirectory=".." coreId="2348810368" contextFuncName="MagSampleFetcher" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="100" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="mag_sample_fetcher.cpp">
+      <validLinenumbers>98</validLinenumbers>
+      <validLinenumbers>100</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="501" pipe_depth="1" RegionName="VITIS_LOOP_64_2">
+    <basic_blocks id="90" name="block_90" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlInputObjs>block_93</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_120</controlOutputObjs>
+      <controlOutputObjs>block_93</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="bfr_irq_read" lineNumber="64" fileName="mag_sample_fetcher.cpp" fileDirectory=".." coreId="2348810368" contextFuncName="MagSampleFetcher" bitwidth="1" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="64" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+        <dataInputObjs>bfr_irq</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="br_ln64" lineNumber="64" fileName="mag_sample_fetcher.cpp" fileDirectory=".." coreId="0" contextFuncName="MagSampleFetcher" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="64" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+        <dataInputObjs>read</dataInputObjs>
+        <controlInputObjs>block_93</controlInputObjs>
+        <controlInputObjs>block_120</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="mag_sample_fetcher.cpp">
+        <validLinenumbers>64</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="93" name="block_93" type="BlockType">
+      <controlInputObjs>block_90</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_90</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="br_ln64" lineNumber="64" fileName="mag_sample_fetcher.cpp" fileDirectory=".." coreId="0" contextFuncName="MagSampleFetcher" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="mag_sample_fetcher.cpp" linenumber="64" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/MagSampleFetcher" functionName="MagSampleFetcher"/>
+        <controlInputObjs>block_90</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="mag_sample_fetcher.cpp">
+        <validLinenumbers>64</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <ScheduleInfo time="28"/>
+  <regnodes realName="i_reg_207">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="n_periods_read_reg_309">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln59_reg_320">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln61_reg_338">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="n_samples_total_1_reg_218">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="n_samples_total_2_reg_346">
+    <nodeIds>118</nodeIds>
+  </regnodes>
+  <regnodes realName="n_samples_period_reg_314">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln59_1_reg_325">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="i_1_reg_330">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <expressionNodes realName="zext_ln218_fu_271">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln59_1_fu_285">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_1_alloca_fu_138">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_2_alloca_fu_142">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_7_alloca_fu_162">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_8_alloca_fu_166">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_211">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln59_fu_275">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_0_alloca_fu_134">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_9_alloca_fu_170">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="n_samples_total_2_fu_304">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="n_samples_total_1_phi_fu_222">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln61_fu_295">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_3_alloca_fu_146">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln61_fu_300">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="n_samples_total_fu_279">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_10_alloca_fu_174">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_11_alloca_fu_178">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_6_alloca_fu_158">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_1_fu_289">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_4_alloca_fu_150">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_5_alloca_fu_154">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_writeData_fu_230">
+    <nodeIds>106</nodeIds>
+    <nodeIds>107</nodeIds>
+    <nodeIds>108</nodeIds>
+    <nodeIds>109</nodeIds>
+    <nodeIds>110</nodeIds>
+    <nodeIds>111</nodeIds>
+    <nodeIds>112</nodeIds>
+    <nodeIds>113</nodeIds>
+    <nodeIds>114</nodeIds>
+    <nodeIds>115</nodeIds>
+    <nodeIds>116</nodeIds>
+    <nodeIds>117</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_loadBuffer_fu_252">
+    <nodeIds>94</nodeIds>
+    <nodeIds>95</nodeIds>
+    <nodeIds>96</nodeIds>
+    <nodeIds>97</nodeIds>
+    <nodeIds>98</nodeIds>
+    <nodeIds>99</nodeIds>
+    <nodeIds>100</nodeIds>
+    <nodeIds>101</nodeIds>
+    <nodeIds>102</nodeIds>
+    <nodeIds>103</nodeIds>
+    <nodeIds>104</nodeIds>
+    <nodeIds>105</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="n_samples_period_read_fu_188">
+    <nodeIds>70</nodeIds>
+  </ioNodes>
+  <ioNodes realName="n_periods_read_read_fu_182">
+    <nodeIds>56</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln98_write_fu_194">
+    <nodeIds>121</nodeIds>
+  </ioNodes>
+  <ioNodes realName="bfr_irq_read_read_fu_201">
+    <nodeIds>88</nodeIds>
+  </ioNodes>
+  <ioPorts name="bfr_irq">
+    <contents name="read">
+      <nodeIds>88</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="n_periods">
+    <contents name="read">
+      <nodeIds>56</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="n_samples">
+    <contents name="read">
+      <nodeIds>70</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="n_samples_out">
+    <contents name="write">
+      <nodeIds>121</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="94" stage="2" latency="2"/>
+      <operations id="118" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="94" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="95" stage="2" latency="2"/>
+      <operations id="106" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="95" stage="1" latency="2"/>
+      <operations id="106" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="96" stage="2" latency="2"/>
+      <operations id="107" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="96" stage="1" latency="2"/>
+      <operations id="107" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="97" stage="2" latency="2"/>
+      <operations id="108" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="97" stage="1" latency="2"/>
+      <operations id="108" stage="1" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="98" stage="2" latency="2"/>
+      <operations id="109" stage="2" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="98" stage="1" latency="2"/>
+      <operations id="109" stage="1" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="99" stage="2" latency="2"/>
+      <operations id="110" stage="2" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="99" stage="1" latency="2"/>
+      <operations id="110" stage="1" latency="2"/>
+    </states>
+    <states id="16">
+      <operations id="100" stage="2" latency="2"/>
+      <operations id="111" stage="2" latency="2"/>
+    </states>
+    <states id="17">
+      <operations id="100" stage="1" latency="2"/>
+      <operations id="111" stage="1" latency="2"/>
+    </states>
+    <states id="18">
+      <operations id="101" stage="2" latency="2"/>
+      <operations id="112" stage="2" latency="2"/>
+    </states>
+    <states id="19">
+      <operations id="101" stage="1" latency="2"/>
+      <operations id="112" stage="1" latency="2"/>
+    </states>
+    <states id="20">
+      <operations id="102" stage="2" latency="2"/>
+      <operations id="113" stage="2" latency="2"/>
+    </states>
+    <states id="21">
+      <operations id="102" stage="1" latency="2"/>
+      <operations id="113" stage="1" latency="2"/>
+    </states>
+    <states id="22">
+      <operations id="103" stage="2" latency="2"/>
+      <operations id="114" stage="2" latency="2"/>
+    </states>
+    <states id="23">
+      <operations id="103" stage="1" latency="2"/>
+      <operations id="114" stage="1" latency="2"/>
+    </states>
+    <states id="24">
+      <operations id="104" stage="2" latency="2"/>
+      <operations id="115" stage="2" latency="2"/>
+    </states>
+    <states id="25">
+      <operations id="104" stage="1" latency="2"/>
+      <operations id="115" stage="1" latency="2"/>
+    </states>
+    <states id="26">
+      <operations id="105" stage="2" latency="2"/>
+      <operations id="116" stage="2" latency="2"/>
+    </states>
+    <states id="27">
+      <operations id="105" stage="1" latency="2"/>
+      <operations id="116" stage="1" latency="2"/>
+    </states>
+    <states id="28">
+      <operations id="117" stage="2" latency="2"/>
+    </states>
+    <states id="29">
+      <operations id="117" stage="1" latency="2"/>
+      <operations id="119" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="29">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="29" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="MagSampleFetcher" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>75</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_61_1" mII="-1" mDepth="-1" mMaxTripCount="255" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>82</basicBlocks>
+      <basicBlocks>86</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="VITIS_LOOP_64_2" mII="1" mDepth="1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>90</basicBlocks>
+      <basicBlocks>93</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="51" mMaxLatency="870">
+      <basicBlocks>120</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>123</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

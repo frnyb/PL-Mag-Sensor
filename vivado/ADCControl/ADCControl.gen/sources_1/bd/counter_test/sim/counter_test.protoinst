@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"counter_test": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -1,0 +1,685 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9BAE272F4E3DC0F0",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../ADC_gain_settle_test.gen/sources_1/bd/ADC_gain_settle_test",
+      "name": "ADC_gain_settle_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "spi_master_0": "",
+      "spi_nCS_slice": "",
+      "xlslice_0": "",
+      "xlconcat_0": "",
+      "xlconstant_0": "",
+      "xlslice_1": "",
+      "xlslice_2": "",
+      "xlconcat_2": "",
+      "xlconstant_1": "",
+      "counter_0": "",
+      "GainControl_0": "",
+      "ADC_controller_0": ""
+    },
+    "ports": {
+      "MAG_MOSI": {
+        "direction": "O"
+      },
+      "MAG_SCLK": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "ADC_gain_settle_test_spi_master_0_0_spi_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "MAG_MISO": {
+        "direction": "I"
+      },
+      "axis_rd_out": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "MAG_nCS0": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "timer_target": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "curr_gain": {
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "8",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "gain_ref": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "rst_n": {
+        "direction": "I"
+      },
+      "next_axis": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      }
+    },
+    "components": {
+      "spi_master_0": {
+        "vlnv": "xilinx.com:module_ref:spi_master:1.0",
+        "xci_name": "ADC_gain_settle_test_spi_master_0_0",
+        "xci_path": "ip/ADC_gain_settle_test_spi_master_0_0/ADC_gain_settle_test_spi_master_0_0.xci",
+        "inst_hier_path": "spi_master_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_master",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "ADC_gain_settle_test_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "cs": {
+            "direction": "I"
+          },
+          "rw": {
+            "direction": "I"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "spi_miso": {
+            "direction": "I"
+          },
+          "spi_mosi": {
+            "direction": "O"
+          },
+          "spi_clk": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "spi_cs_n": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "spi_nCS_slice": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "ADC_gain_settle_test_xlslice_0_0",
+        "xci_path": "ip/ADC_gain_settle_test_xlslice_0_0/ADC_gain_settle_test_xlslice_0_0.xci",
+        "inst_hier_path": "spi_nCS_slice",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "8"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "ADC_gain_settle_test_xlslice_0_1",
+        "xci_path": "ip/ADC_gain_settle_test_xlslice_0_1/ADC_gain_settle_test_xlslice_0_1.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "5"
+          },
+          "DIN_WIDTH": {
+            "value": "24"
+          },
+          "DOUT_WIDTH": {
+            "value": "6"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "ADC_gain_settle_test_xlconcat_0_1",
+        "xci_path": "ip/ADC_gain_settle_test_xlconcat_0_1/ADC_gain_settle_test_xlconcat_0_1.xci",
+        "inst_hier_path": "xlconcat_0"
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "ADC_gain_settle_test_xlconstant_0_0",
+        "xci_path": "ip/ADC_gain_settle_test_xlconstant_0_0/ADC_gain_settle_test_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "2"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "ADC_gain_settle_test_xlslice_0_2",
+        "xci_path": "ip/ADC_gain_settle_test_xlslice_0_2/ADC_gain_settle_test_xlslice_0_2.xci",
+        "inst_hier_path": "xlslice_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "5"
+          },
+          "DIN_WIDTH": {
+            "value": "8"
+          },
+          "DOUT_WIDTH": {
+            "value": "6"
+          }
+        }
+      },
+      "xlslice_2": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "ADC_gain_settle_test_xlslice_1_0",
+        "xci_path": "ip/ADC_gain_settle_test_xlslice_1_0/ADC_gain_settle_test_xlslice_1_0.xci",
+        "inst_hier_path": "xlslice_2",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "19"
+          },
+          "DIN_WIDTH": {
+            "value": "32"
+          },
+          "DOUT_WIDTH": {
+            "value": "20"
+          }
+        }
+      },
+      "xlconcat_2": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "ADC_gain_settle_test_xlconcat_2_0",
+        "xci_path": "ip/ADC_gain_settle_test_xlconcat_2_0/ADC_gain_settle_test_xlconcat_2_0.xci",
+        "inst_hier_path": "xlconcat_2"
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "ADC_gain_settle_test_xlconstant_1_0",
+        "xci_path": "ip/ADC_gain_settle_test_xlconstant_1_0/ADC_gain_settle_test_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "18"
+          }
+        }
+      },
+      "counter_0": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "ADC_gain_settle_test_counter_0_0",
+        "xci_path": "ip/ADC_gain_settle_test_counter_0_0/ADC_gain_settle_test_counter_0_0.xci",
+        "inst_hier_path": "counter_0",
+        "parameters": {
+          "n_bits": {
+            "value": "20"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "restart": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "cnt": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "GainControl_0": {
+        "vlnv": "DIII:PL-Mag-Sensor:GainControl:1.0",
+        "xci_name": "ADC_gain_settle_test_GainControl_0_0",
+        "xci_path": "ip/ADC_gain_settle_test_GainControl_0_0/ADC_gain_settle_test_GainControl_0_0.xci",
+        "inst_hier_path": "GainControl_0"
+      },
+      "ADC_controller_0": {
+        "vlnv": "xilinx.com:module_ref:ADC_controller:1.0",
+        "xci_name": "ADC_gain_settle_test_ADC_controller_0_0",
+        "xci_path": "ip/ADC_gain_settle_test_ADC_controller_0_0/ADC_gain_settle_test_ADC_controller_0_0.xci",
+        "inst_hier_path": "ADC_controller_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ADC_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "spi_cs": {
+            "direction": "O"
+          },
+          "spi_rw": {
+            "direction": "O"
+          },
+          "spi_addr": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_dout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_din": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_irq": {
+            "type": "intr",
+            "direction": "I",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "gpio_UnD": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_UnD_ref": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_nCS": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "gpio_nCS_ref": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "t_sample_en": {
+            "direction": "O"
+          },
+          "t_sample_rest": {
+            "direction": "O"
+          },
+          "t_sample_cnt": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "t_sample_irq": {
+            "type": "intr",
+            "direction": "I",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "ch_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "irq_out": {
+            "direction": "O"
+          },
+          "axis_rd_out": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "next_axis_in": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "spi_master_0/rst_n",
+          "counter_0/rst_n",
+          "GainControl_0/rst_n",
+          "ADC_controller_0/rst_n"
+        ]
+      },
+      "spi_master_0_data_out": {
+        "ports": [
+          "spi_master_0/data_out",
+          "ADC_controller_0/spi_din"
+        ]
+      },
+      "spi_master_0_irq": {
+        "ports": [
+          "spi_master_0/irq",
+          "ADC_controller_0/spi_irq"
+        ]
+      },
+      "spi_master_0_spi_mosi": {
+        "ports": [
+          "spi_master_0/spi_mosi",
+          "MAG_MOSI"
+        ]
+      },
+      "spi_master_0_spi_clk": {
+        "ports": [
+          "spi_master_0/spi_clk",
+          "MAG_SCLK"
+        ]
+      },
+      "spi_master_0_spi_cs_n": {
+        "ports": [
+          "spi_master_0/spi_cs_n",
+          "spi_nCS_slice/Din"
+        ]
+      },
+      "spi_miso_0_1": {
+        "ports": [
+          "MAG_MISO",
+          "spi_master_0/spi_miso"
+        ]
+      },
+      "ADC_controller_0_spi_dout": {
+        "ports": [
+          "ADC_controller_0/spi_dout",
+          "spi_master_0/data_in"
+        ]
+      },
+      "ADC_controller_0_spi_addr": {
+        "ports": [
+          "ADC_controller_0/spi_addr",
+          "spi_master_0/addr"
+        ]
+      },
+      "ADC_controller_0_spi_rw": {
+        "ports": [
+          "ADC_controller_0/spi_rw",
+          "spi_master_0/rw"
+        ]
+      },
+      "ADC_controller_0_spi_cs": {
+        "ports": [
+          "ADC_controller_0/spi_cs",
+          "spi_master_0/cs"
+        ]
+      },
+      "ADC_controller_0_t_sample_en": {
+        "ports": [
+          "ADC_controller_0/t_sample_en",
+          "counter_0/en"
+        ]
+      },
+      "ADC_controller_0_t_sample_rest": {
+        "ports": [
+          "ADC_controller_0/t_sample_rest",
+          "counter_0/restart"
+        ]
+      },
+      "counter_0_cnt": {
+        "ports": [
+          "counter_0/cnt",
+          "ADC_controller_0/t_sample_cnt"
+        ]
+      },
+      "counter_0_irq": {
+        "ports": [
+          "counter_0/irq",
+          "ADC_controller_0/t_sample_irq"
+        ]
+      },
+      "ADC_controller_0_axis_rd_out": {
+        "ports": [
+          "ADC_controller_0/axis_rd_out",
+          "axis_rd_out"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "xlconcat_0/In0"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "xlconcat_0/In1"
+        ]
+      },
+      "xlslice_2_Dout": {
+        "ports": [
+          "xlslice_2/Dout",
+          "counter_0/target"
+        ]
+      },
+      "zynq_ultra_ps_e_0_pl_clk0": {
+        "ports": [
+          "clk",
+          "spi_master_0/clk",
+          "counter_0/clk",
+          "GainControl_0/clk",
+          "ADC_controller_0/clk"
+        ]
+      },
+      "spi_nCS_slice_Dout": {
+        "ports": [
+          "spi_nCS_slice/Dout",
+          "MAG_nCS0"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "xlconcat_2/In0"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "xlconcat_2/In1"
+        ]
+      },
+      "Din_0_1": {
+        "ports": [
+          "timer_target",
+          "xlslice_2/Din"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "curr_gain"
+        ]
+      },
+      "Din_0_2": {
+        "ports": [
+          "gain_ref",
+          "xlslice_1/Din"
+        ]
+      },
+      "ADC_controller_0_gpio_nCS": {
+        "ports": [
+          "ADC_controller_0/gpio_nCS",
+          "GainControl_0/gpio_nCS"
+        ]
+      },
+      "xlconcat_2_dout": {
+        "ports": [
+          "xlconcat_2/dout",
+          "GainControl_0/gain_ref"
+        ]
+      },
+      "ADC_controller_0_gpio_UnD": {
+        "ports": [
+          "ADC_controller_0/gpio_UnD",
+          "GainControl_0/gpio_UnD"
+        ]
+      },
+      "GainControl_0_UnD_ref": {
+        "ports": [
+          "GainControl_0/UnD_ref",
+          "ADC_controller_0/gpio_UnD_ref"
+        ]
+      },
+      "GainControl_0_gain": {
+        "ports": [
+          "GainControl_0/gain",
+          "xlslice_0/Din"
+        ]
+      },
+      "GainControl_0_nCS_ref": {
+        "ports": [
+          "GainControl_0/nCS_ref",
+          "ADC_controller_0/gpio_nCS_ref"
+        ]
+      },
+      "next_axis_in_0_1": {
+        "ports": [
+          "next_axis",
+          "ADC_controller_0/next_axis_in"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="../src/mag_bram_writer.cpp:88:15" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.load.3" VarName="buffer_in"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="../src/mag_bram_writer.cpp:88:13" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.store.5" VarName="buffer"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="../src/mag_bram_writer.cpp:88:15" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.load.3" VarName="buffer_in"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="../src/mag_bram_writer.cpp:88:13" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.store.5" VarName="buffer"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="../src/mag_bram_writer.cpp:97:19" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb2.load.6" VarName="buffer"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="../src/mag_bram_writer.cpp:97:17" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb2.store.8" VarName="buffer_out"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="../src/mag_bram_writer.cpp:97:19" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb2.load.6" VarName="buffer"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="../src/mag_bram_writer.cpp:97:17" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb2.store.8" VarName="buffer_out"/>
+</VitisHLS:BurstInfo>
+

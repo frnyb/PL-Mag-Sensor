@@ -1,0 +1,5 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="ControlGain.cpp:10:16" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by gain_ref_out" ID="bb0.store.4" VarName="gain_ref_out"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="ControlGain.cpp:11:12" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by gain_out" ID="bb0.store.5" VarName="gain_out"/>
+</VitisHLS:BurstInfo>
+

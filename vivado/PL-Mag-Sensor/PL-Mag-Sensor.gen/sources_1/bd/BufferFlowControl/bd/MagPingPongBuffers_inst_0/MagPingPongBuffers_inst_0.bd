@@ -16,6 +16,8 @@
       "xlconstant_0": "",
       "busy_concat": "",
       "irq_concat": "",
+      "wr_slice": "",
+      "rd_mux": "",
       "mag_pingpong_buffer_0": "",
       "mag_pingpong_buffer_10": "",
       "mag_pingpong_buffer_11": "",
@@ -27,9 +29,7 @@
       "mag_pingpong_buffer_6": "",
       "mag_pingpong_buffer_7": "",
       "mag_pingpong_buffer_8": "",
-      "mag_pingpong_buffer_9": "",
-      "wr_slice": "",
-      "rd_mux": ""
+      "mag_pingpong_buffer_9": ""
     },
     "ports": {
       "clk": {
@@ -118,8 +118,16 @@
         "left": "11",
         "right": "0",
         "parameters": {
+          "PortType": {
+            "value": "intr",
+            "value_src": "default"
+          },
           "PortWidth": {
             "value": "12",
+            "value_src": "default"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH",
             "value_src": "default"
           }
         }
@@ -254,7 +262,7 @@
             "value": "0"
           },
           "CONST_WIDTH": {
-            "value": "8"
+            "value": "32"
           }
         }
       },
@@ -277,1026 +285,6 @@
         "parameters": {
           "NUM_PORTS": {
             "value": "12"
-          }
-        }
-      },
-      "mag_pingpong_buffer_0": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_0_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_0_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_0_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_0",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_10": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_10_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_10_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_10_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_10",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_11": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_11_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_11_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_11_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_11",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_1": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_1_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_1_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_1_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_1",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_2": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_2_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_2_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_2_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_2",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_3": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_3_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_3_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_3_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_3",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_4": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_4_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_4_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_4_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_4",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_5": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_5_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_5_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_5_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_5",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_6": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_6_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_6_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_6_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_6",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_7": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_7_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_7_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_7_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_7",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_8": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_8_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_8_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_8_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_8",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
-      "mag_pingpong_buffer_9": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_9_0",
-        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_9_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_9_0.xci",
-        "inst_hier_path": "mag_pingpong_buffer_9",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "MagPingPongBuffers_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
           }
         }
       },
@@ -1457,6 +445,1482 @@
           },
           "outp": {
             "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_0": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_0_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_0_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_0_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_0",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_10": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_10_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_10_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_10_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_10",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_11": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_11_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_11_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_11_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_11",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_1": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_1_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_1_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_1_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_1",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_2": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_2_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_2_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_2_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_2",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_3": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_3_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_3_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_3_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_3",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_4": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_4_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_4_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_4_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_4",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_5": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_5_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_5_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_5_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_5",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_6": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_6_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_6_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_6_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_6",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_7": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_7_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_7_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_7_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_7",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_8": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_8_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_8_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_8_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_8",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mag_pingpong_buffer_9": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "MagPingPongBuffers_inst_0_mag_pingpong_buffer_9_0",
+        "xci_path": "ip/MagPingPongBuffers_inst_0_mag_pingpong_buffer_9_0/MagPingPongBuffers_inst_0_mag_pingpong_buffer_9_0.xci",
+        "inst_hier_path": "mag_pingpong_buffer_9",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagPingPongBuffers_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
             "left": "31",
             "right": "0"
           }

@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-179,-27",
+   "Default View_TopLeft":"-499,-225",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -21,20 +21,20 @@ preplace portBus bfr_rd_addr_in -pg 1 -lvl 3 -x 800 -y 180 -defaultsOSRD
 preplace portBus bfr_rd_ch_in -pg 1 -lvl 3 -x 800 -y 200 -defaultsOSRD
 preplace inst BufferFlowControl -pg 1 -lvl 1 -x 230 -y 230 -defaultsOSRD
 preplace inst Simulator -pg 1 -lvl 2 -x 580 -y 150 -defaultsOSRD
-preplace netloc buffer_controller_gain_ref 1 1 2 390J 400 NJ
-preplace netloc clk_1 1 0 2 20 360 410J
+preplace netloc buffer_controller_gain_ref 1 1 2 380J 400 NJ
+preplace netloc clk_1 1 0 2 20 80 410J
 preplace netloc gain_curr_1 1 0 1 NJ 250
-preplace netloc rst_n_1 1 0 2 80 90 430
-preplace netloc MagPingPongBuffers_0_busy1 1 1 2 NJ 250 NJ
-preplace netloc adc_din_1 1 0 3 30 390 NJ 390 770
-preplace netloc adc_ch_1 1 0 3 60 370 420J 360 730
-preplace netloc adc_irq_1 1 0 3 70 380 NJ 380 780
-preplace netloc buffer_flow_control_1_hold 1 0 3 80 410 NJ 410 760
-preplace netloc buffer_flow_control_1_addr 1 0 3 40 420 NJ 420 750
-preplace netloc buffer_flow_control_1_channel 1 0 3 50 430 NJ 430 740
-preplace netloc BufferFlowControl_rd_out 1 1 2 430 370 NJ
-preplace netloc BufferFlowControl_irq 1 1 2 400 40 NJ
-preplace netloc BufferFlowControl_n_samples 1 1 2 380 20 NJ
+preplace netloc rst_n_1 1 0 2 30 90 400
+preplace netloc MagPingPongBuffers_0_busy1 1 1 2 390J 260 780J
+preplace netloc adc_din_1 1 0 3 60 30 NJ 30 750
+preplace netloc adc_ch_1 1 0 3 40 10 NJ 10 780
+preplace netloc adc_irq_1 1 0 3 50 40 NJ 40 730
+preplace netloc buffer_flow_control_1_hold 1 0 3 50 370 NJ 370 750
+preplace netloc buffer_flow_control_1_addr 1 0 3 40 360 NJ 360 730
+preplace netloc buffer_flow_control_1_channel 1 0 3 60 380 NJ 380 770
+preplace netloc BufferFlowControl_rd_out 1 1 2 400 350 760J
+preplace netloc BufferFlowControl_irq 1 1 2 410 250 740J
+preplace netloc BufferFlowControl_n_samples 1 1 2 390 20 NJ
 levelinfo -pg 1 0 230 580 800
 pagesize -pg 1 -db -bbox -sgen -160 0 1000 440
 "

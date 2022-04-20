@@ -1,0 +1,418 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x4FE6701248031277",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../PL-Mag-Sensor.gen/sources_1/bd/MagController_test1",
+      "name": "MagController_test1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "GainControl": "",
+      "ADC_simulator_0": "",
+      "ADCControl": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "spi_din": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "nCS_ref": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "adc_irq_out": {
+        "direction": "O"
+      },
+      "adc_dout": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "UnD_ref": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "gain": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "gpio_nCS": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "spi_addr": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "gpio_UnD": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "spi_dout": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "spi_cs": {
+        "direction": "O"
+      },
+      "spi_rw": {
+        "direction": "O"
+      },
+      "gain_ref": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "spi_irq": {
+        "direction": "O"
+      },
+      "bfr_busy": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "n_samples_out": {
+        "direction": "O",
+        "left": "10",
+        "right": "0"
+      },
+      "bfr_hold": {
+        "direction": "I",
+        "left": "11",
+        "right": "0"
+      },
+      "bfr_rd_dout_10_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_addr_2_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_10_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_11_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_1_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_2_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_addr_4_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_1_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_6_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_addr_3_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_11_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_4_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_addr_6_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_5_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_8_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_addr_5_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_3_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_addr_8_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_7_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_addr_7_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_0_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_addr_0_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_9_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_9_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "GainControl": {
+        "vlnv": "DIII:PL-Mag-Sensor:GainControl:1.0",
+        "xci_name": "MagController_test1_GainControl_0",
+        "xci_path": "ip/MagController_test1_GainControl_0/MagController_test1_GainControl_0.xci",
+        "inst_hier_path": "GainControl"
+      },
+      "ADC_simulator_0": {
+        "vlnv": "xilinx.com:module_ref:ADC_simulator:1.0",
+        "xci_name": "MagController_test1_ADC_simulator_0_0",
+        "xci_path": "ip/MagController_test1_ADC_simulator_0_0/MagController_test1_ADC_simulator_0_0.xci",
+        "inst_hier_path": "ADC_simulator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ADC_simulator",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "spi": {
+            "mode": "Slave",
+            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
+            "port_maps": {
+              "irq": {
+                "physical_name": "spi_irq",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "MagController_test1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "spi_rw": {
+            "direction": "I"
+          },
+          "spi_cs": {
+            "direction": "I"
+          },
+          "spi_addr": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "spi_din": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "spi_dout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "ADCControl": {
+        "vlnv": "DIII:PL-Mag-Sensor:ADCControl:1.0",
+        "xci_name": "MagController_test1_ADCControl_0",
+        "xci_path": "ip/MagController_test1_ADCControl_0/MagController_test1_ADCControl_0.xci",
+        "inst_hier_path": "ADCControl"
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "GainControl/clk",
+          "ADC_simulator_0/clk",
+          "ADCControl/clk"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "GainControl/rst_n",
+          "ADC_simulator_0/rst_n",
+          "ADCControl/rst_n"
+        ]
+      },
+      "ADC_simulator_0_spi_irq": {
+        "ports": [
+          "ADC_simulator_0/spi_irq",
+          "spi_irq",
+          "ADCControl/spi_irq"
+        ]
+      },
+      "ADCControl_spi_dout": {
+        "ports": [
+          "ADCControl/spi_dout",
+          "spi_din",
+          "ADC_simulator_0/spi_din"
+        ]
+      },
+      "GainControl_nCS_ref": {
+        "ports": [
+          "GainControl/nCS_ref",
+          "nCS_ref",
+          "ADCControl/gpio_nCS_ref"
+        ]
+      },
+      "ADCControl_irq_out": {
+        "ports": [
+          "ADCControl/irq_out",
+          "adc_irq_out"
+        ]
+      },
+      "ADCControl_data_out": {
+        "ports": [
+          "ADCControl/data_out",
+          "adc_dout"
+        ]
+      },
+      "GainControl_UnD_ref": {
+        "ports": [
+          "GainControl/UnD_ref",
+          "UnD_ref",
+          "ADCControl/gpio_UnD_ref"
+        ]
+      },
+      "GainControl_gain": {
+        "ports": [
+          "GainControl/gain",
+          "gain",
+          "ADCControl/curr_gains"
+        ]
+      },
+      "ADCControl_gpio_nCS": {
+        "ports": [
+          "ADCControl/gpio_nCS",
+          "gpio_nCS",
+          "GainControl/gpio_nCS"
+        ]
+      },
+      "ADCControl_spi_addr": {
+        "ports": [
+          "ADCControl/spi_addr",
+          "spi_addr",
+          "ADC_simulator_0/spi_addr"
+        ]
+      },
+      "ADCControl_gpio_UnD": {
+        "ports": [
+          "ADCControl/gpio_UnD",
+          "gpio_UnD",
+          "GainControl/gpio_UnD"
+        ]
+      },
+      "ADC_simulator_0_spi_dout": {
+        "ports": [
+          "ADC_simulator_0/spi_dout",
+          "spi_dout",
+          "ADCControl/spi_din"
+        ]
+      },
+      "ADCControl_spi_cs": {
+        "ports": [
+          "ADCControl/spi_cs",
+          "spi_cs",
+          "ADC_simulator_0/spi_cs"
+        ]
+      },
+      "ADCControl_spi_rw": {
+        "ports": [
+          "ADCControl/spi_rw",
+          "spi_rw",
+          "ADC_simulator_0/spi_rw"
+        ]
+      },
+      "BufferFlowControlStr_0_gain_ref": {
+        "ports": [
+          "gain_ref",
+          "GainControl/gain_ref"
+        ]
+      }
+    }
+  }
+}

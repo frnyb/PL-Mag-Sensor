@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="data_types.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/data_types.h"/>
+    <originFiles name="GainFinder.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/GainFinder.cpp"/>
+    <originFiles name="GainFinder.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/GainFinder.h"/>
+    <originFiles name="defines.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/defines.h"/>
+    <originFiles name="comp_top_lut.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/comp_top_lut.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

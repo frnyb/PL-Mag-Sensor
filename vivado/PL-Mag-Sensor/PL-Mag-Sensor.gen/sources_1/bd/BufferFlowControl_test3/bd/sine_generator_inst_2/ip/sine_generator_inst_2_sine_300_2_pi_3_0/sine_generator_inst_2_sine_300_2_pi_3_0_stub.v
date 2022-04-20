@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Tue Feb 15 06:41:10 2022
-// Host        : ffn-X299 running 64-bit Ubuntu 20.04.3 LTS
+// Date        : Mon Feb 14 17:03:37 2022
+// Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top sine_generator_inst_2_sine_300_2_pi_3_0 -prefix
 //               sine_generator_inst_2_sine_300_2_pi_3_0_ sine_generator_inst_0_sine_300_2_pi_3_0_stub.v
 // Design      : sine_generator_inst_0_sine_300_2_pi_3_0

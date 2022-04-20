@@ -1,0 +1,45 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-603,-194",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port busy -pg 1 -lvl 3 -x 620 -y 240 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port hold -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port irq -pg 1 -lvl 3 -x 620 -y 260 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port shift -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port wr -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace portBus rd_addr -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace portBus rd_dout -pg 1 -lvl 3 -x 620 -y 220 -defaultsOSRD
+preplace portBus wr_addr -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
+preplace portBus wr_din -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace inst pingpong_buffer_0 -pg 1 -lvl 1 -x 190 -y 300 -defaultsOSRD
+preplace inst ram_0 -pg 1 -lvl 2 -x 490 -y 370 -defaultsOSRD
+preplace inst ram_1 -pg 1 -lvl 2 -x 490 -y 110 -defaultsOSRD
+preplace netloc clk_0_1 1 0 2 20 130 380
+preplace netloc hold_1 1 0 1 NJ 330
+preplace netloc pingpong_buffer_0_busy 1 1 2 NJ 240 NJ
+preplace netloc pingpong_buffer_0_irq 1 1 2 NJ 260 NJ
+preplace netloc pingpong_buffer_0_ram0_addr 1 1 1 350 80n
+preplace netloc pingpong_buffer_0_ram0_dout 1 1 1 360 120n
+preplace netloc pingpong_buffer_0_ram0_wr 1 1 1 370 160n
+preplace netloc pingpong_buffer_0_ram1_addr 1 1 1 N 340
+preplace netloc pingpong_buffer_0_ram1_dout 1 1 1 370 360n
+preplace netloc pingpong_buffer_0_ram1_wr 1 1 1 350 380n
+preplace netloc pingpong_buffer_0_rd_dout 1 1 2 NJ 220 NJ
+preplace netloc ram_0_douta 1 0 2 30 450 370J
+preplace netloc ram_1_douta 1 0 2 30 140 NJ
+preplace netloc rd_addr_1 1 0 1 NJ 250
+preplace netloc rst_n_1 1 0 1 NJ 230
+preplace netloc shift_1 1 0 1 NJ 350
+preplace netloc wr_1 1 0 1 NJ 310
+preplace netloc wr_addr_1 1 0 1 NJ 270
+preplace netloc wr_din_1 1 0 1 NJ 290
+levelinfo -pg 1 0 190 490 620
+pagesize -pg 1 -db -bbox -sgen -150 0 770 480
+"
+}
+0

@@ -1,0 +1,479 @@
+<profile>
+    <ReportVersion>
+        <Version>2020.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynquplus</ProductFamily>
+        <Part>xczu3eg-sbva484-1-i</Part>
+        <TopModelName>GainFinder</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>none</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>1.192</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>0</Best-caseLatency>
+            <Average-caseLatency>0</Average-caseLatency>
+            <Worst-caseLatency>0</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>0</FF>
+            <LUT>38</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>432</BRAM_18K>
+            <DSP>360</DSP>
+            <FF>141120</FF>
+            <LUT>70560</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>GainFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>GainFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>GainFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>GainFinder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>signal_top_val</name>
+            <Object>signal_top_val</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>12</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>n_samples_sat</name>
+            <Object>n_samples_sat</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>11</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>n_samples</name>
+            <Object>n_samples</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>11</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>curr_gain</name>
+            <Object>curr_gain</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>6</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>new_gain</name>
+            <Object>new_gain</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>new_gain_ap_vld</name>
+            <Object>new_gain</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule>
+            <ModuleName>GainFinder</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>GainFinder</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.192</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineType>none</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>38</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>432</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>360</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <InterfaceSummary>
+                <RtlPorts>
+                    <name>ap_start</name>
+                    <Object>GainFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_done</name>
+                    <Object>GainFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_idle</name>
+                    <Object>GainFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_ready</name>
+                    <Object>GainFinder</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>signal_top_val</name>
+                    <Object>signal_top_val</Object>
+                    <Type>scalar</Type>
+                    <Scope/>
+                    <IOProtocol>ap_none</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>12</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>n_samples_sat</name>
+                    <Object>n_samples_sat</Object>
+                    <Type>scalar</Type>
+                    <Scope/>
+                    <IOProtocol>ap_none</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>11</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>n_samples</name>
+                    <Object>n_samples</Object>
+                    <Type>scalar</Type>
+                    <Scope/>
+                    <IOProtocol>ap_none</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>11</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>curr_gain</name>
+                    <Object>curr_gain</Object>
+                    <Type>scalar</Type>
+                    <Scope/>
+                    <IOProtocol>ap_none</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>6</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>new_gain</name>
+                    <Object>new_gain</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>ap_vld</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>6</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>new_gain_ap_vld</name>
+                    <Object>new_gain</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>ap_vld</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+            </InterfaceSummary>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <Args>
+        <Arg ArgName="signal_top_val" index="0" direction="in" srcType="ap_uint&lt;12&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="signal_top_val" name="signal_top_val" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="n_samples_sat" index="1" direction="in" srcType="ap_uint&lt;11&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="n_samples_sat" name="n_samples_sat" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="n_samples" index="2" direction="in" srcType="ap_uint&lt;11&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="n_samples" name="n_samples" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="curr_gain" index="3" direction="in" srcType="ap_uint&lt;6&gt;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="curr_gain" name="curr_gain" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="new_gain" index="4" direction="out" srcType="ap_uint&lt;6&gt;*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="new_gain" name="new_gain" usage="data" direction="out"/>
+                <hwRef type="port" interface="new_gain_ap_vld" name="new_gain_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="curr_gain" type="data" busTypeName="data" mode="slave" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="curr_gain">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>curr_gain</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="curr_gain"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="n_samples" type="data" busTypeName="data" mode="slave" dataWidth="11">
+            <portMaps>
+                <portMap portMapName="n_samples">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>n_samples</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="n_samples"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="n_samples_sat" type="data" busTypeName="data" mode="slave" dataWidth="11">
+            <portMaps>
+                <portMap portMapName="n_samples_sat">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>n_samples_sat</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="n_samples_sat"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="new_gain" type="data" busTypeName="data" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="new_gain">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>new_gain</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_vld" register_option="0" argName="new_gain"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="signal_top_val" type="data" busTypeName="data" mode="slave" dataWidth="12">
+            <portMaps>
+                <portMap portMapName="signal_top_val">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>signal_top_val</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="signal_top_val"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="REGISTER">
+                <table>
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="curr_gain">ap_none, 6</column>
+                    <column name="n_samples">ap_none, 11</column>
+                    <column name="n_samples_sat">ap_none, 11</column>
+                    <column name="new_gain">ap_vld, 6</column>
+                    <column name="signal_top_val">ap_none, 12</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="signal_top_val">in, ap_uint&lt;12&gt;</column>
+                    <column name="n_samples_sat">in, ap_uint&lt;11&gt;</column>
+                    <column name="n_samples">in, ap_uint&lt;11&gt;</column>
+                    <column name="curr_gain">in, ap_uint&lt;6&gt;</column>
+                    <column name="new_gain">out, ap_uint&lt;6&gt;*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Name, HW Type</keys>
+                    <column name="signal_top_val">signal_top_val, port</column>
+                    <column name="n_samples_sat">n_samples_sat, port</column>
+                    <column name="n_samples">n_samples, port</column>
+                    <column name="curr_gain">curr_gain, port</column>
+                    <column name="new_gain">new_gain, port</column>
+                    <column name="new_gain">new_gain_ap_vld, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0"/>
+    </ReportBurst>
+</profile>
+

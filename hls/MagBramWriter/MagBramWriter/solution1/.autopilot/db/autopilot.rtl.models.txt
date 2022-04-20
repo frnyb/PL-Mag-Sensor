@@ -1,0 +1,6 @@
+MagBramWriter_srem_32ns_6ns_5_36_1
+MagBramWriter_buffer_0
+MagBramWriter_control_s_axi
+loadBuffer
+writeData
+MagBramWriter

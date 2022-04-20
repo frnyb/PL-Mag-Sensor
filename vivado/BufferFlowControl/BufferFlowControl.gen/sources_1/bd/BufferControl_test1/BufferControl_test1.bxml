@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="39">
+  <CompositeFile CompositeFileTopName="BufferControl_test1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1648198308"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1648198308"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1648198308"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1648198308"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth/BufferControl_test1.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+      </File>
+      <File Name="sim/BufferControl_test1.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="BufferControl_test1_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+      </File>
+      <File Name="hw_handoff/BufferControl_test1.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="BufferControl_test1.bda">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="hw_handoff/BufferControl_test1_bd.tcl">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="synth/BufferControl_test1.hwdef">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="sim/BufferControl_test1.protoinst">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="BufferControlSimConst_0" IsPR="false" State="Generated">
+        <ActiveVariantSynth FileName="bd/BufferControlSimConst_inst_0/BufferControlSimConst_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd/BufferControlSimConst_inst_0/BufferControlSimConst_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd/BufferControlSimConst_inst_0/BufferControlSimConst_inst_0.bd" BDFileset="BufferControlSimConst_inst_0" BDSourceFile="../../../../BufferFlowControl.srcs/sources_1/bd/BufferControlSimConst/BufferControlSimConst.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="BufferControlSimConst" Type="Block Design" SubInstancePath="BufferControl_test1_BufferControlSimConst_0">
+        <TopFile Name="../../../../BufferFlowControl.srcs/sources_1/bd/BufferControlSimConst/BufferControlSimConst.bd"/>
+        <FileCollection>
+          <File Name="../../../../../../src/buffer_flow_control_tester.vhd"/>
+          <File Name="../../../../../../src/buffer_flow_control_reader.vhd"/>
+          <File Name="../../../../BufferFlowControl.srcs/sources_1/bd/BufferControlSimConst/BufferControlSimConst.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
+  </CompositeFile>
+</Root>

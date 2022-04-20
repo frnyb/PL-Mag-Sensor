@@ -50,7 +50,15 @@ entity gain_lut is
 end gain_lut;
 
 architecture Behavioral of gain_lut is
+    signal irq_int : std_logic  := '0';
 begin
     new_gain    <=  "000000";
-    irq         <=  clk;
+    irq <= irq_int;
+
+    process (clk) 
+    begin
+        if (rising_edge(clk)) then
+            irq_int         <=  not irq_int;
+        end if;
+    end process;
 end Behavioral;

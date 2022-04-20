@@ -24,13 +24,6 @@
       </BlockContainer>
     </BlockContainerCollection>
     <ReferenceCollection>
-      <ModuleReference TargetName="sine_generator" Type="Block Design" SubInstancePath="BufferFlowControl_test2_sine_generator_0">
-        <TopFile Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/sine_generator/sine_generator.bd"/>
-        <FileCollection>
-          <File Name="../../../../../../src/counter.vhd"/>
-          <File Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/sine_generator/sine_generator.bd"/>
-        </FileCollection>
-      </ModuleReference>
       <ModuleReference TargetName="MagPingPongBuffers" Type="Block Design" SubInstancePath="BufferFlowControl_test2_MagPingPongBuffers_0">
         <TopFile Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/MagPingPongBuffers/MagPingPongBuffers.bd"/>
         <FileCollection>
@@ -38,6 +31,13 @@
           <File Name="../../../../../../src/pingpong_buffer.vhd"/>
           <File Name="../../../../../../src/multiplexer_4x16.vhd"/>
           <File Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/MagPingPongBuffers/MagPingPongBuffers.bd"/>
+        </FileCollection>
+      </ModuleReference>
+      <ModuleReference TargetName="sine_generator" Type="Block Design" SubInstancePath="BufferFlowControl_test2_sine_generator_0">
+        <TopFile Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/sine_generator/sine_generator.bd"/>
+        <FileCollection>
+          <File Name="../../../../../../src/counter.vhd"/>
+          <File Name="../../../../PL-Mag-Sensor.srcs/sources_1/bd/sine_generator/sine_generator.bd"/>
         </FileCollection>
       </ModuleReference>
     </ReferenceCollection>

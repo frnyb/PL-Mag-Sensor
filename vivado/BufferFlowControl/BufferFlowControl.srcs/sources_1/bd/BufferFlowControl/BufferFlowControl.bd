@@ -1,0 +1,884 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE8E1E88DB3F991BE",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../BufferFlowControl.gen/sources_1/bd/BufferFlowControl",
+      "name": "BufferFlowControl",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "or_gate_0": "",
+      "sample_interval_counter": "",
+      "signal_period_counter": "",
+      "MagPingPongBuffers_0": "",
+      "buffer_controller_0": ""
+    },
+    "ports": {
+      "adc_ch": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "adc_din": {
+        "direction": "I",
+        "left": "11",
+        "right": "0"
+      },
+      "adc_irq": {
+        "type": "intr",
+        "direction": "I",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "default"
+          }
+        }
+      },
+      "bfr_busy": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "BufferFlowControl_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "gain_curr": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "gain_ref": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "bfr_hold": {
+        "direction": "I",
+        "left": "11",
+        "right": "0"
+      },
+      "irq_out": {
+        "direction": "O"
+      },
+      "n_samples_out": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "bfr_rd_addr_7": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_6": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_5": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_4": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_3": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_2": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_11": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_10": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_1": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_8": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_addr_9": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "bfr_rd_dout_8": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_7": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_6": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_5": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_4": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_3": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_2": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_11": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_10": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_1": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "bfr_rd_dout_9": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "or_gate_0": {
+        "vlnv": "xilinx.com:module_ref:or_gate:1.0",
+        "xci_name": "BufferFlowControl_or_gate_0_1",
+        "xci_path": "ip/BufferFlowControl_or_gate_0_1/BufferFlowControl_or_gate_0_1.xci",
+        "inst_hier_path": "or_gate_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "or_gate",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "inp": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "outp": {
+            "direction": "O"
+          }
+        }
+      },
+      "sample_interval_counter": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "BufferFlowControl_sample_interval_counter_0",
+        "xci_path": "ip/BufferFlowControl_sample_interval_counter_0/BufferFlowControl_sample_interval_counter_0.xci",
+        "inst_hier_path": "sample_interval_counter",
+        "parameters": {
+          "auto_rst": {
+            "value": "\"0\""
+          },
+          "n_bits": {
+            "value": "20"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "BufferFlowControl_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "restart": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "cnt": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "signal_period_counter": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "BufferFlowControl_signal_period_counter_0",
+        "xci_path": "ip/BufferFlowControl_signal_period_counter_0/BufferFlowControl_signal_period_counter_0.xci",
+        "inst_hier_path": "signal_period_counter",
+        "parameters": {
+          "auto_rst": {
+            "value": "\"0\""
+          },
+          "n_bits": {
+            "value": "21"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "BufferFlowControl_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "restart": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "20",
+            "right": "0"
+          },
+          "cnt": {
+            "direction": "O",
+            "left": "20",
+            "right": "0"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "MagPingPongBuffers_0": {
+        "vlnv": "DIII:PL-Mag-Sensor:MagPingPongBuffers:1.0",
+        "xci_name": "BufferFlowControl_MagPingPongBuffers_0_0",
+        "xci_path": "ip/BufferFlowControl_MagPingPongBuffers_0_0/BufferFlowControl_MagPingPongBuffers_0_0.xci",
+        "inst_hier_path": "MagPingPongBuffers_0"
+      },
+      "buffer_controller_0": {
+        "vlnv": "xilinx.com:module_ref:buffer_controller:1.0",
+        "xci_name": "BufferFlowControl_buffer_controller_0_2",
+        "xci_path": "ip/BufferFlowControl_buffer_controller_0_2/BufferFlowControl_buffer_controller_0_2.xci",
+        "inst_hier_path": "buffer_controller_0",
+        "parameters": {
+          "bf_addr_n_bits": {
+            "value": "5"
+          },
+          "t_period_target_val": {
+            "value": "2000000"
+          },
+          "t_sample_target_val": {
+            "value": "100000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "buffer_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "BufferFlowControl_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "t_sample_en": {
+            "direction": "O"
+          },
+          "t_sample_rest": {
+            "direction": "O"
+          },
+          "t_sample_irq": {
+            "type": "intr",
+            "direction": "I",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "t_sample_cnt": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "t_sample_target": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          },
+          "t_period_en": {
+            "direction": "O"
+          },
+          "t_period_rest": {
+            "direction": "O"
+          },
+          "t_period_irq": {
+            "type": "intr",
+            "direction": "I",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "t_period_cnt": {
+            "direction": "I",
+            "left": "20",
+            "right": "0"
+          },
+          "t_period_target": {
+            "direction": "O",
+            "left": "20",
+            "right": "0"
+          },
+          "adc_din": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "adc_ch": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "adc_irq": {
+            "type": "intr",
+            "direction": "I",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "bf_wr_addr": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "bf_wr_data": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "bf_wr": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "bf_shift": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "bf_irq": {
+            "type": "intr",
+            "direction": "I",
+            "left": "11",
+            "right": "0",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "gain_curr": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "gain_ref": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "n_samples_out": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "irq_out": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BufferFlowControl_gain_ref": {
+        "ports": [
+          "buffer_controller_0/gain_ref",
+          "gain_ref"
+        ]
+      },
+      "BufferFlowControl_irq_out": {
+        "ports": [
+          "buffer_controller_0/irq_out",
+          "or_gate_0/inp"
+        ]
+      },
+      "BufferFlowControl_n_samples_out": {
+        "ports": [
+          "buffer_controller_0/n_samples_out",
+          "n_samples_out"
+        ]
+      },
+      "adc_ch_1": {
+        "ports": [
+          "adc_ch",
+          "buffer_controller_0/adc_ch"
+        ]
+      },
+      "adc_din_1": {
+        "ports": [
+          "adc_din",
+          "buffer_controller_0/adc_din"
+        ]
+      },
+      "adc_irq_1": {
+        "ports": [
+          "adc_irq",
+          "buffer_controller_0/adc_irq"
+        ]
+      },
+      "buffer_controller_0_t_period_en": {
+        "ports": [
+          "buffer_controller_0/t_period_en",
+          "signal_period_counter/en"
+        ]
+      },
+      "buffer_controller_0_t_period_rest": {
+        "ports": [
+          "buffer_controller_0/t_period_rest",
+          "signal_period_counter/restart"
+        ]
+      },
+      "buffer_controller_0_t_period_target": {
+        "ports": [
+          "buffer_controller_0/t_period_target",
+          "signal_period_counter/target"
+        ]
+      },
+      "buffer_controller_0_t_sample_en": {
+        "ports": [
+          "buffer_controller_0/t_sample_en",
+          "sample_interval_counter/en"
+        ]
+      },
+      "buffer_controller_0_t_sample_rest": {
+        "ports": [
+          "buffer_controller_0/t_sample_rest",
+          "sample_interval_counter/restart"
+        ]
+      },
+      "buffer_controller_0_t_sample_target": {
+        "ports": [
+          "buffer_controller_0/t_sample_target",
+          "sample_interval_counter/target"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "signal_period_counter/clk",
+          "sample_interval_counter/clk",
+          "MagPingPongBuffers_0/clk",
+          "buffer_controller_0/clk"
+        ]
+      },
+      "gain_curr_1": {
+        "ports": [
+          "gain_curr",
+          "buffer_controller_0/gain_curr"
+        ]
+      },
+      "or_gate_0_outp": {
+        "ports": [
+          "or_gate_0/outp",
+          "irq_out"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "signal_period_counter/rst_n",
+          "sample_interval_counter/rst_n",
+          "MagPingPongBuffers_0/rst_n",
+          "buffer_controller_0/rst_n"
+        ]
+      },
+      "sample_interval_counter_cnt": {
+        "ports": [
+          "sample_interval_counter/cnt",
+          "buffer_controller_0/t_sample_cnt"
+        ]
+      },
+      "sample_interval_counter_irq": {
+        "ports": [
+          "sample_interval_counter/irq",
+          "buffer_controller_0/t_sample_irq"
+        ]
+      },
+      "signal_period_timer_cnt": {
+        "ports": [
+          "signal_period_counter/cnt",
+          "buffer_controller_0/t_period_cnt"
+        ]
+      },
+      "signal_period_timer_irq": {
+        "ports": [
+          "signal_period_counter/irq",
+          "buffer_controller_0/t_period_irq"
+        ]
+      },
+      "hold_1": {
+        "ports": [
+          "bfr_hold",
+          "MagPingPongBuffers_0/hold"
+        ]
+      },
+      "rd_addr_7_0_1": {
+        "ports": [
+          "bfr_rd_addr_7",
+          "MagPingPongBuffers_0/rd_addr_7"
+        ]
+      },
+      "rd_addr_6_0_1": {
+        "ports": [
+          "bfr_rd_addr_6",
+          "MagPingPongBuffers_0/rd_addr_6"
+        ]
+      },
+      "rd_addr_5_0_1": {
+        "ports": [
+          "bfr_rd_addr_5",
+          "MagPingPongBuffers_0/rd_addr_5"
+        ]
+      },
+      "rd_addr_4_0_1": {
+        "ports": [
+          "bfr_rd_addr_4",
+          "MagPingPongBuffers_0/rd_addr_4"
+        ]
+      },
+      "rd_addr_3_0_1": {
+        "ports": [
+          "bfr_rd_addr_3",
+          "MagPingPongBuffers_0/rd_addr_3"
+        ]
+      },
+      "rd_addr_2_0_1": {
+        "ports": [
+          "bfr_rd_addr_2",
+          "MagPingPongBuffers_0/rd_addr_2"
+        ]
+      },
+      "rd_addr_11_0_1": {
+        "ports": [
+          "bfr_rd_addr_11",
+          "MagPingPongBuffers_0/rd_addr_11"
+        ]
+      },
+      "rd_addr_10_0_1": {
+        "ports": [
+          "bfr_rd_addr_10",
+          "MagPingPongBuffers_0/rd_addr_10"
+        ]
+      },
+      "rd_addr_1_0_1": {
+        "ports": [
+          "bfr_rd_addr_1",
+          "MagPingPongBuffers_0/rd_addr_1"
+        ]
+      },
+      "rd_addr_0_0_1": {
+        "ports": [
+          "bfr_rd_addr_0",
+          "MagPingPongBuffers_0/rd_addr_0"
+        ]
+      },
+      "rd_addr_8_0_1": {
+        "ports": [
+          "bfr_rd_addr_8",
+          "MagPingPongBuffers_0/rd_addr_8"
+        ]
+      },
+      "rd_addr_9_0_1": {
+        "ports": [
+          "bfr_rd_addr_9",
+          "MagPingPongBuffers_0/rd_addr_9"
+        ]
+      },
+      "buffer_controller_0_bf_shift": {
+        "ports": [
+          "buffer_controller_0/bf_shift",
+          "MagPingPongBuffers_0/shift"
+        ]
+      },
+      "buffer_controller_0_bf_wr": {
+        "ports": [
+          "buffer_controller_0/bf_wr",
+          "MagPingPongBuffers_0/wr"
+        ]
+      },
+      "buffer_controller_0_bf_wr_addr": {
+        "ports": [
+          "buffer_controller_0/bf_wr_addr",
+          "MagPingPongBuffers_0/wr_addr"
+        ]
+      },
+      "buffer_controller_0_bf_wr_data": {
+        "ports": [
+          "buffer_controller_0/bf_wr_data",
+          "MagPingPongBuffers_0/wr_din"
+        ]
+      },
+      "MagPingPongBuffers_0_busy": {
+        "ports": [
+          "MagPingPongBuffers_0/busy",
+          "bfr_busy"
+        ]
+      },
+      "MagPingPongBuffers_0_irq": {
+        "ports": [
+          "MagPingPongBuffers_0/irq",
+          "buffer_controller_0/bf_irq"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_8": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_8",
+          "bfr_rd_dout_8"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_7": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_7",
+          "bfr_rd_dout_7"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_6": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_6",
+          "bfr_rd_dout_6"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_5": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_5",
+          "bfr_rd_dout_5"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_4": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_4",
+          "bfr_rd_dout_4"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_3": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_3",
+          "bfr_rd_dout_3"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_2": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_2",
+          "bfr_rd_dout_2"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_11": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_11",
+          "bfr_rd_dout_11"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_10": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_10",
+          "bfr_rd_dout_10"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_1": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_1",
+          "bfr_rd_dout_1"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_0": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_0",
+          "bfr_rd_dout_0"
+        ]
+      },
+      "MagPingPongBuffers_0_rd_dout_9": {
+        "ports": [
+          "MagPingPongBuffers_0/rd_dout_9",
+          "bfr_rd_dout_9"
+        ]
+      }
+    }
+  }
+}

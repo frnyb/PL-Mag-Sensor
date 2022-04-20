@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Tue Feb 15 09:07:56 2022
---Host        : ffn-X299 running 64-bit Ubuntu 20.04.3 LTS
+--Date        : Tue Feb 15 14:29:15 2022
+--Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target BufferFlowControl_test3.bd
 --Design      : BufferFlowControl_test3
 --Purpose     : IP block netlist
@@ -53,7 +53,18 @@ architecture STRUCTURE of BufferFlowControl_imp_1NI0UJX is
     irq : out STD_LOGIC
   );
   end component BufferFlowControl_test3_signal_period_timer_0;
-  component MagPingPongBuffers_inst_2 is
+  component BufferFlowControl_test3_gain_LUT_0 is
+  port (
+    clk : in STD_LOGIC;
+    n_over : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    top_val : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    gain_UnD : in STD_LOGIC;
+    curr_gain : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    new_gain : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    irq : out STD_LOGIC
+  );
+  end component BufferFlowControl_test3_gain_LUT_0;
+  component MagPingPongBuffers_inst_4 is
   port (
     busy : out STD_LOGIC_VECTOR ( 11 downto 0 );
     clk : in STD_LOGIC;
@@ -68,18 +79,7 @@ architecture STRUCTURE of BufferFlowControl_imp_1NI0UJX is
     wr_addr : in STD_LOGIC_VECTOR ( 9 downto 0 );
     wr_din : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  end component MagPingPongBuffers_inst_2;
-  component BufferFlowControl_test3_gain_LUT_0 is
-  port (
-    clk : in STD_LOGIC;
-    n_over : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    top_val : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    gain_UnD : in STD_LOGIC;
-    curr_gain : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    new_gain : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    irq : out STD_LOGIC
-  );
-  end component BufferFlowControl_test3_gain_LUT_0;
+  end component MagPingPongBuffers_inst_4;
   component BufferFlowControl_test3_buffer_controller_0 is
   port (
     clk : in STD_LOGIC;
@@ -114,13 +114,16 @@ architecture STRUCTURE of BufferFlowControl_imp_1NI0UJX is
     irq_out : out STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   end component BufferFlowControl_test3_buffer_controller_0;
-  signal MagPingPongBuffers_0_busy1 : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal MagPingPongBuffers_0_busy : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal MagPingPongBuffers_0_irq : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal MagPingPongBuffers_0_rd_out1 : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal MagPingPongBuffers_0_rd_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal adc_ch_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal adc_din_1 : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal adc_irq_1 : STD_LOGIC;
+  signal buffer_controller_bf_shift : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal buffer_controller_bf_wr : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal buffer_controller_bf_wr_addr : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal buffer_controller_bf_wr_data : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal buffer_controller_gain_ref : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal buffer_controller_irq_out : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal buffer_controller_lut_curr_gain : STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -138,46 +141,43 @@ architecture STRUCTURE of BufferFlowControl_imp_1NI0UJX is
   signal gain_LUT_irq : STD_LOGIC;
   signal gain_LUT_new_gain : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal gain_curr_1 : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal hold_0_2 : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal rd_addr_0_2 : STD_LOGIC_VECTOR ( 9 downto 0 );
-  signal rd_ch_0_2 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal hold_1 : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal rd_addr_1 : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal rd_ch_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal rst_n_1 : STD_LOGIC;
   signal sample_mag_interval_timer_cnt : STD_LOGIC_VECTOR ( 19 downto 0 );
   signal sample_mag_interval_timer_irq : STD_LOGIC;
-  signal shift_1 : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal signal_period_timer_cnt : STD_LOGIC_VECTOR ( 20 downto 0 );
   signal signal_period_timer_irq : STD_LOGIC;
-  signal wr_1 : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal wr_din_1 : STD_LOGIC_VECTOR ( 31 downto 0 );
 begin
   adc_ch_1(3 downto 0) <= adc_ch(3 downto 0);
   adc_din_1(11 downto 0) <= adc_din(11 downto 0);
   adc_irq_1 <= adc_irq;
-  busy(11 downto 0) <= MagPingPongBuffers_0_busy1(11 downto 0);
+  busy(11 downto 0) <= MagPingPongBuffers_0_busy(11 downto 0);
   clk_1 <= clk;
   gain_curr_1(23 downto 0) <= gain_curr(23 downto 0);
   gain_ref(23 downto 0) <= buffer_controller_gain_ref(23 downto 0);
-  hold_0_2(11 downto 0) <= hold(11 downto 0);
+  hold_1(11 downto 0) <= hold(11 downto 0);
   irq(11 downto 0) <= buffer_controller_irq_out(11 downto 0);
   n_samples(10 downto 0) <= buffer_controller_n_samples_out(10 downto 0);
-  rd_addr_0_2(9 downto 0) <= rd_addr(9 downto 0);
-  rd_ch_0_2(3 downto 0) <= rd_ch(3 downto 0);
-  rd_out(31 downto 0) <= MagPingPongBuffers_0_rd_out1(31 downto 0);
+  rd_addr_1(9 downto 0) <= rd_addr(9 downto 0);
+  rd_ch_1(3 downto 0) <= rd_ch(3 downto 0);
+  rd_out(31 downto 0) <= MagPingPongBuffers_0_rd_out(31 downto 0);
   rst_n_1 <= rst_n;
-MagPingPongBuffers_0: component MagPingPongBuffers_inst_2
+MagPingPongBuffers_0: component MagPingPongBuffers_inst_4
      port map (
-      busy(11 downto 0) => MagPingPongBuffers_0_busy1(11 downto 0),
+      busy(11 downto 0) => MagPingPongBuffers_0_busy(11 downto 0),
       clk => clk_1,
-      hold(11 downto 0) => hold_0_2(11 downto 0),
+      hold(11 downto 0) => hold_1(11 downto 0),
       irq(11 downto 0) => MagPingPongBuffers_0_irq(11 downto 0),
-      rd_addr(9 downto 0) => rd_addr_0_2(9 downto 0),
-      rd_ch(3 downto 0) => rd_ch_0_2(3 downto 0),
-      rd_out(31 downto 0) => MagPingPongBuffers_0_rd_out1(31 downto 0),
+      rd_addr(9 downto 0) => rd_addr_1(9 downto 0),
+      rd_ch(3 downto 0) => rd_ch_1(3 downto 0),
+      rd_out(31 downto 0) => MagPingPongBuffers_0_rd_out(31 downto 0),
       rst_n => rst_n_1,
-      shift(11 downto 0) => shift_1(11 downto 0),
-      wr(11 downto 0) => wr_1(11 downto 0),
+      shift(11 downto 0) => buffer_controller_bf_shift(11 downto 0),
+      wr(11 downto 0) => buffer_controller_bf_wr(11 downto 0),
       wr_addr(9 downto 0) => buffer_controller_bf_wr_addr(9 downto 0),
-      wr_din(31 downto 0) => wr_din_1(31 downto 0)
+      wr_din(31 downto 0) => buffer_controller_bf_wr_data(31 downto 0)
     );
 buffer_controller: component BufferFlowControl_test3_buffer_controller_0
      port map (
@@ -185,10 +185,10 @@ buffer_controller: component BufferFlowControl_test3_buffer_controller_0
       adc_din(11 downto 0) => adc_din_1(11 downto 0),
       adc_irq => adc_irq_1,
       bf_irq(11 downto 0) => MagPingPongBuffers_0_irq(11 downto 0),
-      bf_shift(11 downto 0) => shift_1(11 downto 0),
-      bf_wr(11 downto 0) => wr_1(11 downto 0),
+      bf_shift(11 downto 0) => buffer_controller_bf_shift(11 downto 0),
+      bf_wr(11 downto 0) => buffer_controller_bf_wr(11 downto 0),
       bf_wr_addr(9 downto 0) => buffer_controller_bf_wr_addr(9 downto 0),
-      bf_wr_data(31 downto 0) => wr_din_1(31 downto 0),
+      bf_wr_data(31 downto 0) => buffer_controller_bf_wr_data(31 downto 0),
       clk => clk_1,
       gain_curr(23 downto 0) => gain_curr_1(23 downto 0),
       gain_ref(23 downto 0) => buffer_controller_gain_ref(23 downto 0),

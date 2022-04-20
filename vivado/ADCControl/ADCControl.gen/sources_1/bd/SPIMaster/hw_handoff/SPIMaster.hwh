@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb 16 08:35:51 2022" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="SPIMaster" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="1" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="cs" SIGIS="undef" SIGNAME="External_Ports_cs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="cs"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_data_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="data_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_master_data_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="data_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="spi_master_irq">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="irq"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rw" SIGIS="undef" SIGNAME="External_Ports_rw">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="rw"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="spi_clk" SIGIS="clk" SIGNAME="spi_master_spi_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="spi_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="spi_cs_n" RIGHT="0" SIGIS="undef" SIGNAME="spi_master_spi_cs_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="spi_cs_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="spi_miso" SIGIS="undef" SIGNAME="External_Ports_spi_miso">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="spi_miso"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="spi_mosi" SIGIS="undef" SIGNAME="spi_master_spi_mosi">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_master" PORT="spi_mosi"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/spi_master" HWVERSION="1.0" INSTANCE="spi_master" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_master" VLNV="xilinx.com:module_ref:spi_master:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="SPIMaster_spi_master_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cs" SIGIS="undef" SIGNAME="External_Ports_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rw" SIGIS="undef" SIGNAME="External_Ports_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_data_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_master_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="spi_master_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="spi_miso" SIGIS="undef" SIGNAME="External_Ports_spi_miso">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi_miso"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_mosi" SIGIS="undef" SIGNAME="spi_master_spi_mosi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi_mosi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="spi_clk" SIGIS="clk" SIGNAME="spi_master_spi_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="spi_cs_n" RIGHT="0" SIGIS="undef" SIGNAME="spi_master_spi_cs_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi_cs_n"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

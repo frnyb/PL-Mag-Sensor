@@ -7,55 +7,22 @@
       "name": "BufferFlowControl_test1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2020.2"
     },
     "design_tree": {
-      "pingpong_buffer": "",
       "sine_generator": "",
       "pingpong_sim_writer": "",
-      "pingpong_sim_reader_0": ""
+      "pingpong_sim_reader_0": "",
+      "pingpong_buffer": ""
     },
     "ports": {
       "clk": {
         "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "BufferFlowControl_test1_clk_0",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "rst_n": {
         "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "din_0": {
         "direction": "O",
@@ -104,91 +71,6 @@
       }
     },
     "components": {
-      "pingpong_buffer": {
-        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
-        "xci_name": "BufferFlowControl_test1_pingpong_buffer_0_0",
-        "xci_path": "ip/BufferFlowControl_test1_pingpong_buffer_0_0/BufferFlowControl_test1_pingpong_buffer_0_0.xci",
-        "inst_hier_path": "pingpong_buffer",
-        "parameters": {
-          "addr_width": {
-            "value": "10"
-          },
-          "word_width": {
-            "value": "12"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pingpong_buffer",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "user_MAG_BF_CNT_INTERFACE": {
-            "mode": "Slave",
-            "vlnv": "DIII:user:MAG_BF_CNT_INTERFACE_rtl:1.0",
-            "port_maps": {
-              "irq": {
-                "physical_name": "irq",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "BufferFlowControl_test1_clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rd_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "rd_dout": {
-            "direction": "O",
-            "left": "11",
-            "right": "0"
-          },
-          "wr_addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "wr_din": {
-            "direction": "I",
-            "left": "11",
-            "right": "0"
-          },
-          "wr": {
-            "direction": "I"
-          },
-          "hold": {
-            "direction": "I"
-          },
-          "shift": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          }
-        }
-      },
       "sine_generator": {
         "parameters": {
           "ACTIVE_SIM_BD": {
@@ -216,43 +98,11 @@
         "ports": {
           "rst_n": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "default"
-              },
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "default"
-              }
-            }
+            "direction": "I"
           },
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "BufferFlowControl_test1_clk_0",
-                "value_src": "default"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "default"
-              },
-              "FREQ_TOLERANCE_HZ": {
-                "value": "0",
-                "value_src": "default"
-              },
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "default"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default"
-              }
-            }
+            "direction": "I"
           },
           "sine_100_pi_3": {
             "direction": "O",
@@ -451,6 +301,119 @@
             "direction": "I"
           }
         }
+      },
+      "pingpong_buffer": {
+        "vlnv": "xilinx.com:module_ref:pingpong_buffer:1.0",
+        "xci_name": "BufferFlowControl_test1_pingpong_buffer_0_0",
+        "xci_path": "ip/BufferFlowControl_test1_pingpong_buffer_0_0/BufferFlowControl_test1_pingpong_buffer_0_0.xci",
+        "inst_hier_path": "pingpong_buffer",
+        "parameters": {
+          "addr_width": {
+            "value": "10"
+          },
+          "word_width": {
+            "value": "12"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pingpong_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "rd_dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "wr_din": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "hold": {
+            "direction": "I"
+          },
+          "shift": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              }
+            }
+          },
+          "ram0_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram0_dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "ram0_wr": {
+            "direction": "O"
+          },
+          "ram0_din": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "ram1_addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ram1_dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "ram1_wr": {
+            "direction": "O"
+          },
+          "ram1_din": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
@@ -458,18 +421,18 @@
         "ports": [
           "clk",
           "sine_generator/clk",
-          "pingpong_buffer/clk",
           "pingpong_sim_writer/clk",
-          "pingpong_sim_reader_0/clk"
+          "pingpong_sim_reader_0/clk",
+          "pingpong_buffer/clk"
         ]
       },
       "rst_n_0_1": {
         "ports": [
           "rst_n",
           "sine_generator/rst_n",
-          "pingpong_buffer/rst_n",
           "pingpong_sim_writer/rst_n",
-          "pingpong_sim_reader_0/rst_n"
+          "pingpong_sim_reader_0/rst_n",
+          "pingpong_buffer/rst_n"
         ]
       },
       "pingpong_buffer_irq": {
@@ -495,29 +458,29 @@
       "pingpong_sim_writer_bfr_wr": {
         "ports": [
           "pingpong_sim_writer/bfr_wr",
-          "pingpong_buffer/wr",
-          "bfr_wr"
+          "bfr_wr",
+          "pingpong_buffer/wr"
         ]
       },
       "pingpong_sim_writer_bfr_shift": {
         "ports": [
           "pingpong_sim_writer/bfr_shift",
-          "pingpong_buffer/shift",
-          "bfr_shift"
+          "bfr_shift",
+          "pingpong_buffer/shift"
         ]
       },
       "pingpong_sim_writer_bfr_dout": {
         "ports": [
           "pingpong_sim_writer/bfr_dout",
-          "pingpong_buffer/wr_din",
-          "bfr_dout_wr"
+          "bfr_dout_wr",
+          "pingpong_buffer/wr_din"
         ]
       },
       "pingpong_sim_writer_bfr_addr": {
         "ports": [
           "pingpong_sim_writer/bfr_addr",
-          "pingpong_buffer/wr_addr",
-          "bfr_addr_wr"
+          "bfr_addr_wr",
+          "pingpong_buffer/wr_addr"
         ]
       },
       "pingpong_buffer_rd_dout": {
@@ -537,15 +500,15 @@
       "pingpong_sim_reader_0_bfr_hold": {
         "ports": [
           "pingpong_sim_reader_0/bfr_hold",
-          "pingpong_buffer/hold",
-          "bfr_hold"
+          "bfr_hold",
+          "pingpong_buffer/hold"
         ]
       },
       "pingpong_sim_reader_0_bfr_addr": {
         "ports": [
           "pingpong_sim_reader_0/bfr_addr",
-          "pingpong_buffer/rd_addr",
-          "bfr_addr_rd"
+          "bfr_addr_rd",
+          "pingpong_buffer/rd_addr"
         ]
       },
       "pingpong_buffer_busy": {

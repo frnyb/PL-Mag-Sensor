@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SineGenerator_wrapper_func_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="SineGenerator_wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="590900000fs"></ZoomStartTime>
+      <ZoomEndTime time="879300001fs"></ZoomEndTime>
+      <Cursor1Time time="698900000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="260"></NameColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="logic" fp_name="/SineGenerator_wrapper/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SineGenerator_wrapper/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SineGenerator_wrapper/curr_gain">
+      <obj_property name="ElementShortName">curr_gain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_gain[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group31">
+      <obj_property name="label">dout</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_0">
+         <obj_property name="ElementShortName">dout_0[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_0[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_1">
+         <obj_property name="ElementShortName">dout_1[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_1[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_2">
+         <obj_property name="ElementShortName">dout_2[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_2[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_3">
+         <obj_property name="ElementShortName">dout_3[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_3[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_4">
+         <obj_property name="ElementShortName">dout_4[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_4[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_5">
+         <obj_property name="ElementShortName">dout_5[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_5[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_6">
+         <obj_property name="ElementShortName">dout_6[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_6[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_7">
+         <obj_property name="ElementShortName">dout_7[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_7[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_8">
+         <obj_property name="ElementShortName">dout_8[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_8[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_9">
+         <obj_property name="ElementShortName">dout_9[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_9[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_10">
+         <obj_property name="ElementShortName">dout_10[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_10[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/dout_11">
+         <obj_property name="ElementShortName">dout_11[11:0]</obj_property>
+         <obj_property name="ObjectShortName">dout_11[11:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus70">
+      <obj_property name="label">raw_signal</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_0/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_1/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[1][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_2/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[2][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_3/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[3][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_4/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[4][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_5/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[5][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_6/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[6][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_7/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[7][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_8/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[8][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_9/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[9][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_10/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[10][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/SineGenerator_wrapper/SineGenerator_i/ApplyGain_11/U0/signal_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">signal_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_in[31:0]</obj_property>
+         <obj_property name="label">signal_in[11][31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
