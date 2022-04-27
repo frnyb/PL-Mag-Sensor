@@ -126,43 +126,57 @@ diffs = max_vals - min_vals;
 %% Find phase
 [max_diff, phase_ref_idx] = max(diffs);
 
-max_time = mag_times(end, phase_ref_idx);
-min_time = mag_times(1, phase_ref_idx);
+% max_time = mag_times(end, phase_ref_idx);
+% min_time = mag_times(1, phase_ref_idx);
+% 
+% max_point_offsets = [];
+% idx = 1;
+% 
+% while true
+%     next_time = min_time + 1/50;
+%     
+%     if (next_time > max_time)
+%         break;
+%     end
+%     
+%     one_period_idx = find(mag_times(idx:end,phase_ref_idx) < next_time);
+%     
+%     last_idx = one_period_idx(end) + idx - 1;
+%     
+%     one_period = mag_samples(idx:last_idx, phase_ref_idx);
+%     one_period_times = mag_times(idx:last_idx, phase_ref_idx);
+%     
+%     [max_val, max_idx] = max(one_period);
+%     
+%     max_idx = max_idx + idx - 1;
+%     
+%     max_val_time = mag_times(max_idx, phase_ref_idx);
+%     
+%     max_time_offset = max_val_time - min_time + mag_times(1, phase_ref_idx);
+%     
+%     max_point_offsets = [max_point_offsets;max_time_offset];
+%     
+%     min_time = next_time;
+%     idx = last_idx + 1;    
+% end
+% 
+% avg_offset = mean(max_point_offsets);
+% phase = (avg_offset/(1/50)) * 2*pi;
 
-max_point_offsets = [];
-idx = 1;
+A_phase = zeros(size(mag_samples,1), 3);
+b_phase = zeros(size(mag_samples,1), 1);
 
-while true
-    next_time = min_time + 1/50;
+for i=1:size(mag_samples,1)
+    A_phase(i,1) = 1;
+    A_phase(i,2) = sin(2*pi*50*mag_times(i,phase_ref_idx));
+    A_phase(i,3) = cos(2*pi*50*mag_times(i,phase_ref_idx));
     
-    if (next_time > max_time)
-        break;
-    end
-    
-    one_period_idx = find(mag_times(idx:end,phase_ref_idx) < next_time);
-    
-    last_idx = one_period_idx(end) + idx - 1;
-    
-    one_period = mag_samples(idx:last_idx, phase_ref_idx);
-    one_period_times = mag_times(idx:last_idx, phase_ref_idx);
-    
-    [max_val, max_idx] = max(one_period);
-    
-    max_idx = max_idx + idx - 1;
-    
-    max_val_time = mag_times(max_idx, phase_ref_idx);
-    
-    max_time_offset = max_val_time - min_time + mag_times(1, phase_ref_idx);
-    
-    max_point_offsets = [max_point_offsets;max_time_offset];
-    
-    min_time = next_time;
-    idx = last_idx + 1;    
+    b_phase(i) = mag_samples(i,phase_ref_idx);
 end
 
-avg_offset = mean(max_point_offsets);
+x_phase = (A_phase'*A_phase)\A_phase'*b_phase;
 
-phase = (avg_offset/(1/50)) * 2*pi;
+phase = atan(x_phase(3)/x_phase(2));
 
 %% Sine LLS
 n_samples = length(mag_samples(:,1));
@@ -244,7 +258,7 @@ cross_vecs = [];
 for i=1:2
 %     for j=i+1:4
     for j=i+1:3
-        if (dot(norm_mag_vecs(:,i), norm_mag_vecs(:,j)) > 0.95)
+        if (abs(dot(norm_mag_vecs(:,i), norm_mag_vecs(:,j))) > 0.95)
             continue;
         end
         
@@ -276,6 +290,11 @@ for i=1:3
     hold on;
 end
 
+
+% for i=1:size(cross_vecs,2)
+%     plot3([0 cross_vecs(1,i)], [0 cross_vecs(2,i)], [0 cross_vecs(3,i)]);
+%     hold on;
+% end
 
 plot3([0 pl_dir(1)], [0 pl_dir(2)], [0 pl_dir(3)]);
 
@@ -311,7 +330,7 @@ end
 
 x_pos = (A_pos'*A_pos)\A_pos'*b_pos;
 
-
+x_pos
 
 
 
