@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Sun Apr 17 11:08:48 2022
+--Date        : Thu Apr 21 10:28:26 2022
 --Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target DigMagController.bd
 --Design      : DigMagController
@@ -25,32 +25,13 @@ entity DigMagController_0_imp_AIUWA7 is
     sda_o : out STD_LOGIC;
     sda_t : out STD_LOGIC;
     start : in STD_LOGIC;
-    x : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    y : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    z : out STD_LOGIC_VECTOR ( 11 downto 0 )
+    x : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    y : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    z : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
 end DigMagController_0_imp_AIUWA7;
 
 architecture STRUCTURE of DigMagController_0_imp_AIUWA7 is
-  component DigMagController_dig_mag_controller_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    rst_n : in STD_LOGIC;
-    i2c_ena : out STD_LOGIC;
-    i2c_addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    i2c_rw : out STD_LOGIC;
-    i2c_data_wr : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    i2c_busy : in STD_LOGIC;
-    i2c_data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    irq_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    x_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    y_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    z_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    start : in STD_LOGIC;
-    idle : out STD_LOGIC;
-    done : out STD_LOGIC
-  );
-  end component DigMagController_dig_mag_controller_0_0;
   component DigMagController_i2c_master_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -70,6 +51,25 @@ architecture STRUCTURE of DigMagController_0_imp_AIUWA7 is
     scl_t : out STD_LOGIC
   );
   end component DigMagController_i2c_master_0_0;
+  component DigMagController_dig_mag_controller_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    rst_n : in STD_LOGIC;
+    i2c_ena : out STD_LOGIC;
+    i2c_addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    i2c_rw : out STD_LOGIC;
+    i2c_data_wr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    i2c_busy : in STD_LOGIC;
+    i2c_data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    irq_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    x_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    y_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    z_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    start : in STD_LOGIC;
+    idle : out STD_LOGIC;
+    done : out STD_LOGIC
+  );
+  end component DigMagController_dig_mag_controller_0_0;
   signal clk_0_1 : STD_LOGIC;
   signal dig_mag_controller_0_done : STD_LOGIC;
   signal dig_mag_controller_0_i2c_addr : STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -78,9 +78,9 @@ architecture STRUCTURE of DigMagController_0_imp_AIUWA7 is
   signal dig_mag_controller_0_i2c_rw : STD_LOGIC;
   signal dig_mag_controller_0_idle : STD_LOGIC;
   signal dig_mag_controller_0_irq_out : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal dig_mag_controller_0_x_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal dig_mag_controller_0_y_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal dig_mag_controller_0_z_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal dig_mag_controller_0_x_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal dig_mag_controller_0_y_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal dig_mag_controller_0_z_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal i2c_master_0_busy : STD_LOGIC;
   signal i2c_master_0_data_rd : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal i2c_master_0_scl_o : STD_LOGIC;
@@ -105,9 +105,9 @@ begin
   sda_o <= i2c_master_0_sda_o;
   sda_t <= i2c_master_0_sda_t;
   start_0_1 <= start;
-  x(11 downto 0) <= dig_mag_controller_0_x_dout(11 downto 0);
-  y(11 downto 0) <= dig_mag_controller_0_y_dout(11 downto 0);
-  z(11 downto 0) <= dig_mag_controller_0_z_dout(11 downto 0);
+  x(15 downto 0) <= dig_mag_controller_0_x_dout(15 downto 0);
+  y(15 downto 0) <= dig_mag_controller_0_y_dout(15 downto 0);
+  z(15 downto 0) <= dig_mag_controller_0_z_dout(15 downto 0);
 dig_mag_controller: component DigMagController_dig_mag_controller_0_0
      port map (
       clk => clk_0_1,
@@ -122,9 +122,9 @@ dig_mag_controller: component DigMagController_dig_mag_controller_0_0
       irq_out(2 downto 0) => dig_mag_controller_0_irq_out(2 downto 0),
       rst_n => rst_n_0_1,
       start => start_0_1,
-      x_dout(11 downto 0) => dig_mag_controller_0_x_dout(11 downto 0),
-      y_dout(11 downto 0) => dig_mag_controller_0_y_dout(11 downto 0),
-      z_dout(11 downto 0) => dig_mag_controller_0_z_dout(11 downto 0)
+      x_dout(15 downto 0) => dig_mag_controller_0_x_dout(15 downto 0),
+      y_dout(15 downto 0) => dig_mag_controller_0_y_dout(15 downto 0),
+      z_dout(15 downto 0) => dig_mag_controller_0_z_dout(15 downto 0)
     );
 i2c_master: component DigMagController_i2c_master_0_0
      port map (
@@ -163,32 +163,13 @@ entity DigMagController_1_imp_19147FW is
     sda_o : out STD_LOGIC;
     sda_t : out STD_LOGIC;
     start : in STD_LOGIC;
-    x : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    y : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    z : out STD_LOGIC_VECTOR ( 11 downto 0 )
+    x : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    y : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    z : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
 end DigMagController_1_imp_19147FW;
 
 architecture STRUCTURE of DigMagController_1_imp_19147FW is
-  component DigMagController_dig_mag_controller_1 is
-  port (
-    clk : in STD_LOGIC;
-    rst_n : in STD_LOGIC;
-    i2c_ena : out STD_LOGIC;
-    i2c_addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    i2c_rw : out STD_LOGIC;
-    i2c_data_wr : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    i2c_busy : in STD_LOGIC;
-    i2c_data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    irq_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    x_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    y_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    z_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    start : in STD_LOGIC;
-    idle : out STD_LOGIC;
-    done : out STD_LOGIC
-  );
-  end component DigMagController_dig_mag_controller_1;
   component DigMagController_i2c_master_1 is
   port (
     clk : in STD_LOGIC;
@@ -208,6 +189,25 @@ architecture STRUCTURE of DigMagController_1_imp_19147FW is
     scl_t : out STD_LOGIC
   );
   end component DigMagController_i2c_master_1;
+  component DigMagController_dig_mag_controller_1 is
+  port (
+    clk : in STD_LOGIC;
+    rst_n : in STD_LOGIC;
+    i2c_ena : out STD_LOGIC;
+    i2c_addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    i2c_rw : out STD_LOGIC;
+    i2c_data_wr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    i2c_busy : in STD_LOGIC;
+    i2c_data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    irq_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    x_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    y_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    z_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    start : in STD_LOGIC;
+    idle : out STD_LOGIC;
+    done : out STD_LOGIC
+  );
+  end component DigMagController_dig_mag_controller_1;
   signal clk_0_1 : STD_LOGIC;
   signal dig_mag_controller_0_done : STD_LOGIC;
   signal dig_mag_controller_0_i2c_addr : STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -216,9 +216,9 @@ architecture STRUCTURE of DigMagController_1_imp_19147FW is
   signal dig_mag_controller_0_i2c_rw : STD_LOGIC;
   signal dig_mag_controller_0_idle : STD_LOGIC;
   signal dig_mag_controller_0_irq_out : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal dig_mag_controller_0_x_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal dig_mag_controller_0_y_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal dig_mag_controller_0_z_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal dig_mag_controller_0_x_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal dig_mag_controller_0_y_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal dig_mag_controller_0_z_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal i2c_master_0_busy : STD_LOGIC;
   signal i2c_master_0_data_rd : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal i2c_master_0_scl_o : STD_LOGIC;
@@ -243,9 +243,9 @@ begin
   sda_o <= i2c_master_0_sda_o;
   sda_t <= i2c_master_0_sda_t;
   start_0_1 <= start;
-  x(11 downto 0) <= dig_mag_controller_0_x_dout(11 downto 0);
-  y(11 downto 0) <= dig_mag_controller_0_y_dout(11 downto 0);
-  z(11 downto 0) <= dig_mag_controller_0_z_dout(11 downto 0);
+  x(15 downto 0) <= dig_mag_controller_0_x_dout(15 downto 0);
+  y(15 downto 0) <= dig_mag_controller_0_y_dout(15 downto 0);
+  z(15 downto 0) <= dig_mag_controller_0_z_dout(15 downto 0);
 dig_mag_controller: component DigMagController_dig_mag_controller_1
      port map (
       clk => clk_0_1,
@@ -260,9 +260,9 @@ dig_mag_controller: component DigMagController_dig_mag_controller_1
       irq_out(2 downto 0) => dig_mag_controller_0_irq_out(2 downto 0),
       rst_n => rst_n_0_1,
       start => start_0_1,
-      x_dout(11 downto 0) => dig_mag_controller_0_x_dout(11 downto 0),
-      y_dout(11 downto 0) => dig_mag_controller_0_y_dout(11 downto 0),
-      z_dout(11 downto 0) => dig_mag_controller_0_z_dout(11 downto 0)
+      x_dout(15 downto 0) => dig_mag_controller_0_x_dout(15 downto 0),
+      y_dout(15 downto 0) => dig_mag_controller_0_y_dout(15 downto 0),
+      z_dout(15 downto 0) => dig_mag_controller_0_z_dout(15 downto 0)
     );
 i2c_master: component DigMagController_i2c_master_1
      port map (
@@ -301,32 +301,13 @@ entity DigMagController_2_imp_1V3FXUW is
     sda_o : out STD_LOGIC;
     sda_t : out STD_LOGIC;
     start : in STD_LOGIC;
-    x : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    y : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    z : out STD_LOGIC_VECTOR ( 11 downto 0 )
+    x : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    y : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    z : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
 end DigMagController_2_imp_1V3FXUW;
 
 architecture STRUCTURE of DigMagController_2_imp_1V3FXUW is
-  component DigMagController_dig_mag_controller_4 is
-  port (
-    clk : in STD_LOGIC;
-    rst_n : in STD_LOGIC;
-    i2c_ena : out STD_LOGIC;
-    i2c_addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    i2c_rw : out STD_LOGIC;
-    i2c_data_wr : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    i2c_busy : in STD_LOGIC;
-    i2c_data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    irq_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    x_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    y_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    z_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    start : in STD_LOGIC;
-    idle : out STD_LOGIC;
-    done : out STD_LOGIC
-  );
-  end component DigMagController_dig_mag_controller_4;
   component DigMagController_i2c_master_4 is
   port (
     clk : in STD_LOGIC;
@@ -346,6 +327,25 @@ architecture STRUCTURE of DigMagController_2_imp_1V3FXUW is
     scl_t : out STD_LOGIC
   );
   end component DigMagController_i2c_master_4;
+  component DigMagController_dig_mag_controller_4 is
+  port (
+    clk : in STD_LOGIC;
+    rst_n : in STD_LOGIC;
+    i2c_ena : out STD_LOGIC;
+    i2c_addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    i2c_rw : out STD_LOGIC;
+    i2c_data_wr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    i2c_busy : in STD_LOGIC;
+    i2c_data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    irq_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    x_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    y_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    z_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    start : in STD_LOGIC;
+    idle : out STD_LOGIC;
+    done : out STD_LOGIC
+  );
+  end component DigMagController_dig_mag_controller_4;
   signal clk_0_1 : STD_LOGIC;
   signal dig_mag_controller_0_done : STD_LOGIC;
   signal dig_mag_controller_0_i2c_addr : STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -354,9 +354,9 @@ architecture STRUCTURE of DigMagController_2_imp_1V3FXUW is
   signal dig_mag_controller_0_i2c_rw : STD_LOGIC;
   signal dig_mag_controller_0_idle : STD_LOGIC;
   signal dig_mag_controller_0_irq_out : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal dig_mag_controller_0_x_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal dig_mag_controller_0_y_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal dig_mag_controller_0_z_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal dig_mag_controller_0_x_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal dig_mag_controller_0_y_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal dig_mag_controller_0_z_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal i2c_master_0_busy : STD_LOGIC;
   signal i2c_master_0_data_rd : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal i2c_master_0_scl_o : STD_LOGIC;
@@ -381,9 +381,9 @@ begin
   sda_o <= i2c_master_0_sda_o;
   sda_t <= i2c_master_0_sda_t;
   start_0_1 <= start;
-  x(11 downto 0) <= dig_mag_controller_0_x_dout(11 downto 0);
-  y(11 downto 0) <= dig_mag_controller_0_y_dout(11 downto 0);
-  z(11 downto 0) <= dig_mag_controller_0_z_dout(11 downto 0);
+  x(15 downto 0) <= dig_mag_controller_0_x_dout(15 downto 0);
+  y(15 downto 0) <= dig_mag_controller_0_y_dout(15 downto 0);
+  z(15 downto 0) <= dig_mag_controller_0_z_dout(15 downto 0);
 dig_mag_controller: component DigMagController_dig_mag_controller_4
      port map (
       clk => clk_0_1,
@@ -398,9 +398,9 @@ dig_mag_controller: component DigMagController_dig_mag_controller_4
       irq_out(2 downto 0) => dig_mag_controller_0_irq_out(2 downto 0),
       rst_n => rst_n_0_1,
       start => start_0_1,
-      x_dout(11 downto 0) => dig_mag_controller_0_x_dout(11 downto 0),
-      y_dout(11 downto 0) => dig_mag_controller_0_y_dout(11 downto 0),
-      z_dout(11 downto 0) => dig_mag_controller_0_z_dout(11 downto 0)
+      x_dout(15 downto 0) => dig_mag_controller_0_x_dout(15 downto 0),
+      y_dout(15 downto 0) => dig_mag_controller_0_y_dout(15 downto 0),
+      z_dout(15 downto 0) => dig_mag_controller_0_z_dout(15 downto 0)
     );
 i2c_master: component DigMagController_i2c_master_4
      port map (
@@ -439,32 +439,13 @@ entity DigMagController_3_imp_WVCHNV is
     sda_o : out STD_LOGIC;
     sda_t : out STD_LOGIC;
     start : in STD_LOGIC;
-    x : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    y : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    z : out STD_LOGIC_VECTOR ( 11 downto 0 )
+    x : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    y : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    z : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
 end DigMagController_3_imp_WVCHNV;
 
 architecture STRUCTURE of DigMagController_3_imp_WVCHNV is
-  component DigMagController_dig_mag_controller_5 is
-  port (
-    clk : in STD_LOGIC;
-    rst_n : in STD_LOGIC;
-    i2c_ena : out STD_LOGIC;
-    i2c_addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    i2c_rw : out STD_LOGIC;
-    i2c_data_wr : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    i2c_busy : in STD_LOGIC;
-    i2c_data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    irq_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    x_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    y_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    z_dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    start : in STD_LOGIC;
-    idle : out STD_LOGIC;
-    done : out STD_LOGIC
-  );
-  end component DigMagController_dig_mag_controller_5;
   component DigMagController_i2c_master_5 is
   port (
     clk : in STD_LOGIC;
@@ -484,6 +465,25 @@ architecture STRUCTURE of DigMagController_3_imp_WVCHNV is
     scl_t : out STD_LOGIC
   );
   end component DigMagController_i2c_master_5;
+  component DigMagController_dig_mag_controller_5 is
+  port (
+    clk : in STD_LOGIC;
+    rst_n : in STD_LOGIC;
+    i2c_ena : out STD_LOGIC;
+    i2c_addr : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    i2c_rw : out STD_LOGIC;
+    i2c_data_wr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    i2c_busy : in STD_LOGIC;
+    i2c_data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    irq_out : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    x_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    y_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    z_dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    start : in STD_LOGIC;
+    idle : out STD_LOGIC;
+    done : out STD_LOGIC
+  );
+  end component DigMagController_dig_mag_controller_5;
   signal clk_0_1 : STD_LOGIC;
   signal dig_mag_controller_0_done : STD_LOGIC;
   signal dig_mag_controller_0_i2c_addr : STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -492,9 +492,9 @@ architecture STRUCTURE of DigMagController_3_imp_WVCHNV is
   signal dig_mag_controller_0_i2c_rw : STD_LOGIC;
   signal dig_mag_controller_0_idle : STD_LOGIC;
   signal dig_mag_controller_0_irq_out : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal dig_mag_controller_0_x_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal dig_mag_controller_0_y_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal dig_mag_controller_0_z_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal dig_mag_controller_0_x_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal dig_mag_controller_0_y_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal dig_mag_controller_0_z_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal i2c_master_0_busy : STD_LOGIC;
   signal i2c_master_0_data_rd : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal i2c_master_0_scl_o : STD_LOGIC;
@@ -519,9 +519,9 @@ begin
   sda_o <= i2c_master_0_sda_o;
   sda_t <= i2c_master_0_sda_t;
   start_0_1 <= start;
-  x(11 downto 0) <= dig_mag_controller_0_x_dout(11 downto 0);
-  y(11 downto 0) <= dig_mag_controller_0_y_dout(11 downto 0);
-  z(11 downto 0) <= dig_mag_controller_0_z_dout(11 downto 0);
+  x(15 downto 0) <= dig_mag_controller_0_x_dout(15 downto 0);
+  y(15 downto 0) <= dig_mag_controller_0_y_dout(15 downto 0);
+  z(15 downto 0) <= dig_mag_controller_0_z_dout(15 downto 0);
 dig_mag_controller: component DigMagController_dig_mag_controller_5
      port map (
       clk => clk_0_1,
@@ -536,9 +536,9 @@ dig_mag_controller: component DigMagController_dig_mag_controller_5
       irq_out(2 downto 0) => dig_mag_controller_0_irq_out(2 downto 0),
       rst_n => rst_n_0_1,
       start => start_0_1,
-      x_dout(11 downto 0) => dig_mag_controller_0_x_dout(11 downto 0),
-      y_dout(11 downto 0) => dig_mag_controller_0_y_dout(11 downto 0),
-      z_dout(11 downto 0) => dig_mag_controller_0_z_dout(11 downto 0)
+      x_dout(15 downto 0) => dig_mag_controller_0_x_dout(15 downto 0),
+      y_dout(15 downto 0) => dig_mag_controller_0_y_dout(15 downto 0),
+      z_dout(15 downto 0) => dig_mag_controller_0_z_dout(15 downto 0)
     );
 i2c_master: component DigMagController_i2c_master_5
      port map (
@@ -567,7 +567,7 @@ entity DigMagController is
   port (
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
     irq_out : out STD_LOGIC;
     mag0_scl_i : in STD_LOGIC;
     mag0_scl_o : out STD_LOGIC;
@@ -605,50 +605,50 @@ architecture STRUCTURE of DigMagController is
   component DigMagController_dig_mag_data_handler_0_0 is
   port (
     clk : in STD_LOGIC;
-    mag0_x : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag0_y : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag0_z : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag1_x : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag1_y : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag1_z : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag2_x : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag2_y : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag2_z : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag3_x : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag3_y : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    mag3_z : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    mag0_x : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag0_y : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag0_z : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag1_x : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag1_y : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag1_z : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag2_x : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag2_y : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag2_z : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag3_x : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag3_y : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    mag3_z : in STD_LOGIC_VECTOR ( 15 downto 0 );
     mag0_done : in STD_LOGIC;
     mag1_done : in STD_LOGIC;
     mag2_done : in STD_LOGIC;
     mag3_done : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
     irq_out : out STD_LOGIC;
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component DigMagController_dig_mag_data_handler_0_0;
   signal DigMagController_0_done : STD_LOGIC;
   signal DigMagController_0_idle : STD_LOGIC;
-  signal DigMagController_0_x : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal DigMagController_0_y : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal DigMagController_0_z : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal DigMagController_0_x : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal DigMagController_0_y : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal DigMagController_0_z : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal DigMagController_1_done : STD_LOGIC;
   signal DigMagController_1_idle : STD_LOGIC;
-  signal DigMagController_1_x : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal DigMagController_1_y : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal DigMagController_1_z : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal DigMagController_1_x : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal DigMagController_1_y : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal DigMagController_1_z : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal DigMagController_2_done : STD_LOGIC;
   signal DigMagController_2_idle : STD_LOGIC;
-  signal DigMagController_2_x : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal DigMagController_2_y : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal DigMagController_2_z : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal DigMagController_2_x : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal DigMagController_2_y : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal DigMagController_2_z : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal DigMagController_3_done : STD_LOGIC;
   signal DigMagController_3_idle : STD_LOGIC;
-  signal DigMagController_3_x : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal DigMagController_3_y : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal DigMagController_3_z : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal DigMagController_3_x : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal DigMagController_3_y : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal DigMagController_3_z : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal clk_0_1 : STD_LOGIC;
   signal dig_mag_data_handler_0_ch_out : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal dig_mag_data_handler_0_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal dig_mag_data_handler_0_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal dig_mag_data_handler_0_irq_out : STD_LOGIC;
   signal i2c_master_0_scl_o : STD_LOGIC;
   signal i2c_master_0_scl_o1 : STD_LOGIC;
@@ -688,7 +688,7 @@ architecture STRUCTURE of DigMagController is
 begin
   ch_out(3 downto 0) <= dig_mag_data_handler_0_ch_out(3 downto 0);
   clk_0_1 <= clk;
-  dout(11 downto 0) <= dig_mag_data_handler_0_dout(11 downto 0);
+  dout(15 downto 0) <= dig_mag_data_handler_0_dout(15 downto 0);
   irq_out <= dig_mag_data_handler_0_irq_out;
   mag0_scl_o <= i2c_master_0_scl_o;
   mag0_scl_t <= i2c_master_0_scl_t;
@@ -729,9 +729,9 @@ DigMagController_0: entity work.DigMagController_0_imp_AIUWA7
       sda_o => i2c_master_0_sda_o,
       sda_t => i2c_master_0_sda_t,
       start => DigMagController_0_idle,
-      x(11 downto 0) => DigMagController_0_x(11 downto 0),
-      y(11 downto 0) => DigMagController_0_y(11 downto 0),
-      z(11 downto 0) => DigMagController_0_z(11 downto 0)
+      x(15 downto 0) => DigMagController_0_x(15 downto 0),
+      y(15 downto 0) => DigMagController_0_y(15 downto 0),
+      z(15 downto 0) => DigMagController_0_z(15 downto 0)
     );
 DigMagController_1: entity work.DigMagController_1_imp_19147FW
      port map (
@@ -747,9 +747,9 @@ DigMagController_1: entity work.DigMagController_1_imp_19147FW
       sda_o => i2c_master_0_sda_o1,
       sda_t => i2c_master_0_sda_t1,
       start => DigMagController_1_idle,
-      x(11 downto 0) => DigMagController_1_x(11 downto 0),
-      y(11 downto 0) => DigMagController_1_y(11 downto 0),
-      z(11 downto 0) => DigMagController_1_z(11 downto 0)
+      x(15 downto 0) => DigMagController_1_x(15 downto 0),
+      y(15 downto 0) => DigMagController_1_y(15 downto 0),
+      z(15 downto 0) => DigMagController_1_z(15 downto 0)
     );
 DigMagController_2: entity work.DigMagController_2_imp_1V3FXUW
      port map (
@@ -765,9 +765,9 @@ DigMagController_2: entity work.DigMagController_2_imp_1V3FXUW
       sda_o => i2c_master_0_sda_o2,
       sda_t => i2c_master_0_sda_t2,
       start => DigMagController_2_idle,
-      x(11 downto 0) => DigMagController_2_x(11 downto 0),
-      y(11 downto 0) => DigMagController_2_y(11 downto 0),
-      z(11 downto 0) => DigMagController_2_z(11 downto 0)
+      x(15 downto 0) => DigMagController_2_x(15 downto 0),
+      y(15 downto 0) => DigMagController_2_y(15 downto 0),
+      z(15 downto 0) => DigMagController_2_z(15 downto 0)
     );
 DigMagController_3: entity work.DigMagController_3_imp_WVCHNV
      port map (
@@ -783,31 +783,31 @@ DigMagController_3: entity work.DigMagController_3_imp_WVCHNV
       sda_o => i2c_master_0_sda_o3,
       sda_t => i2c_master_0_sda_t3,
       start => DigMagController_3_idle,
-      x(11 downto 0) => DigMagController_3_x(11 downto 0),
-      y(11 downto 0) => DigMagController_3_y(11 downto 0),
-      z(11 downto 0) => DigMagController_3_z(11 downto 0)
+      x(15 downto 0) => DigMagController_3_x(15 downto 0),
+      y(15 downto 0) => DigMagController_3_y(15 downto 0),
+      z(15 downto 0) => DigMagController_3_z(15 downto 0)
     );
 dig_mag_data_handler_0: component DigMagController_dig_mag_data_handler_0_0
      port map (
       ch_out(3 downto 0) => dig_mag_data_handler_0_ch_out(3 downto 0),
       clk => clk_0_1,
-      dout(11 downto 0) => dig_mag_data_handler_0_dout(11 downto 0),
+      dout(15 downto 0) => dig_mag_data_handler_0_dout(15 downto 0),
       irq_out => dig_mag_data_handler_0_irq_out,
       mag0_done => DigMagController_0_done,
-      mag0_x(11 downto 0) => DigMagController_0_x(11 downto 0),
-      mag0_y(11 downto 0) => DigMagController_0_y(11 downto 0),
-      mag0_z(11 downto 0) => DigMagController_0_z(11 downto 0),
+      mag0_x(15 downto 0) => DigMagController_0_x(15 downto 0),
+      mag0_y(15 downto 0) => DigMagController_0_y(15 downto 0),
+      mag0_z(15 downto 0) => DigMagController_0_z(15 downto 0),
       mag1_done => DigMagController_1_done,
-      mag1_x(11 downto 0) => DigMagController_1_x(11 downto 0),
-      mag1_y(11 downto 0) => DigMagController_1_y(11 downto 0),
-      mag1_z(11 downto 0) => DigMagController_1_z(11 downto 0),
+      mag1_x(15 downto 0) => DigMagController_1_x(15 downto 0),
+      mag1_y(15 downto 0) => DigMagController_1_y(15 downto 0),
+      mag1_z(15 downto 0) => DigMagController_1_z(15 downto 0),
       mag2_done => DigMagController_2_done,
-      mag2_x(11 downto 0) => DigMagController_2_x(11 downto 0),
-      mag2_y(11 downto 0) => DigMagController_2_y(11 downto 0),
-      mag2_z(11 downto 0) => DigMagController_2_z(11 downto 0),
+      mag2_x(15 downto 0) => DigMagController_2_x(15 downto 0),
+      mag2_y(15 downto 0) => DigMagController_2_y(15 downto 0),
+      mag2_z(15 downto 0) => DigMagController_2_z(15 downto 0),
       mag3_done => DigMagController_3_done,
-      mag3_x(11 downto 0) => DigMagController_3_x(11 downto 0),
-      mag3_y(11 downto 0) => DigMagController_3_y(11 downto 0),
-      mag3_z(11 downto 0) => DigMagController_3_z(11 downto 0)
+      mag3_x(15 downto 0) => DigMagController_3_x(15 downto 0),
+      mag3_y(15 downto 0) => DigMagController_3_y(15 downto 0),
+      mag3_z(15 downto 0) => DigMagController_3_z(15 downto 0)
     );
 end STRUCTURE;

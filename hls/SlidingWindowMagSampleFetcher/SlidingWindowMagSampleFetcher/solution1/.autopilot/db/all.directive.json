@@ -1,0 +1,29 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "SlidingWindowMagSampleFetcher",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "SlidingWindowMagSampleFetcher"
+              }]
+          }
+        },
+        {
+          "functionName": "SlidingWindowMagSampleFetcher",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "SlidingWindowMagSampleFetcher"
+              }]
+          }
+        }
+      ]
+    }]}

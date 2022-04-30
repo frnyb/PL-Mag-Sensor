@@ -36,32 +36,32 @@ entity dig_mag_data_handler is
         --  Std ports:
         clk         :   in  STD_LOGIC;
 
-        mag0_x      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag0_y      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag0_z      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag1_x      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag1_y      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag1_z      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag2_x      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag2_y      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag2_z      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag3_x      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag3_y      :   in  STD_LOGIC_VECTOR(11 downto 0);
-        mag3_z      :   in  STD_LOGIC_VECTOR(11 downto 0);
+        mag0_x      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag0_y      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag0_z      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag1_x      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag1_y      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag1_z      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag2_x      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag2_y      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag2_z      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag3_x      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag3_y      :   in  STD_LOGIC_VECTOR(15 downto 0);
+        mag3_z      :   in  STD_LOGIC_VECTOR(15 downto 0);
 
         mag0_done   :   in  std_logic;
         mag1_done   :   in  std_logic;
         mag2_done   :   in  std_logic;
         mag3_done   :   in  std_logic;
 
-        dout        :   out std_logic_vector(11 downto 0);
+        dout        :   out std_logic_vector(15 downto 0);
         irq_out     :   out std_logic;
         ch_out      :   out std_logic_vector(3 downto 0)
     );
 end dig_mag_data_handler;
 
 architecture Behavioral of dig_mag_data_handler is
-    type DATA_TYPE is array (0 to 11) of std_logic_vector(11 downto 0);
+    type DATA_TYPE is array (0 to 11) of std_logic_vector(15 downto 0);
     signal data : DATA_TYPE;
 
     signal ch : std_logic_vector(3 downto 0);
@@ -70,18 +70,18 @@ architecture Behavioral of dig_mag_data_handler is
     constant cnt_max : unsigned(7 downto 0) := "10111111";
     constant cnt_irq : unsigned(3 downto 0) := "1000";
 
-    signal x0 : std_logic_vector(11 downto 0) := X"000";
-    signal y0 : std_logic_vector(11 downto 0) := X"001";
-    signal z0 : std_logic_vector(11 downto 0) := X"002";
-    signal x1 : std_logic_vector(11 downto 0) := X"003";
-    signal y1 : std_logic_vector(11 downto 0) := X"004";
-    signal z1 : std_logic_vector(11 downto 0) := X"005";
-    signal x2 : std_logic_vector(11 downto 0) := X"006";
-    signal y2 : std_logic_vector(11 downto 0) := X"007";
-    signal z2 : std_logic_vector(11 downto 0) := X"008";
-    signal x3 : std_logic_vector(11 downto 0) := X"009";
-    signal y3 : std_logic_vector(11 downto 0) := X"00A";
-    signal z3 : std_logic_vector(11 downto 0) := X"00B";
+    signal x0 : std_logic_vector(15 downto 0) := X"000";
+    signal y0 : std_logic_vector(15 downto 0) := X"001";
+    signal z0 : std_logic_vector(15 downto 0) := X"002";
+    signal x1 : std_logic_vector(15 downto 0) := X"003";
+    signal y1 : std_logic_vector(15 downto 0) := X"004";
+    signal z1 : std_logic_vector(15 downto 0) := X"005";
+    signal x2 : std_logic_vector(15 downto 0) := X"006";
+    signal y2 : std_logic_vector(15 downto 0) := X"007";
+    signal z2 : std_logic_vector(15 downto 0) := X"008";
+    signal x3 : std_logic_vector(15 downto 0) := X"009";
+    signal y3 : std_logic_vector(15 downto 0) := X"00A";
+    signal z3 : std_logic_vector(15 downto 0) := X"00B";
 
     signal recv0 : std_logic := '0';
     signal recv1 : std_logic := '0';

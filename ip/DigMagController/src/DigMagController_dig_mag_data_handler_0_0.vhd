@@ -56,23 +56,23 @@ USE ieee.numeric_std.ALL;
 ENTITY DigMagController_dig_mag_data_handler_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    mag0_x : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag0_y : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag0_z : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag1_x : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag1_y : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag1_z : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag2_x : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag2_y : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag2_z : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag3_x : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag3_y : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    mag3_z : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    mag0_x : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag0_y : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag0_z : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag1_x : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag1_y : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag1_z : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag2_x : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag2_y : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag2_z : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag3_x : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag3_y : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    mag3_z : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     mag0_done : IN STD_LOGIC;
     mag1_done : IN STD_LOGIC;
     mag2_done : IN STD_LOGIC;
     mag3_done : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+    dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     irq_out : OUT STD_LOGIC;
     ch_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
@@ -84,23 +84,23 @@ ARCHITECTURE DigMagController_dig_mag_data_handler_0_0_arch OF DigMagController_
   COMPONENT dig_mag_data_handler IS
     PORT (
       clk : IN STD_LOGIC;
-      mag0_x : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag0_y : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag0_z : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag1_x : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag1_y : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag1_z : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag2_x : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag2_y : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag2_z : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag3_x : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag3_y : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      mag3_z : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+      mag0_x : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag0_y : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag0_z : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag1_x : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag1_y : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag1_z : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag2_x : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag2_y : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag2_z : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag3_x : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag3_y : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      mag3_z : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       mag0_done : IN STD_LOGIC;
       mag1_done : IN STD_LOGIC;
       mag2_done : IN STD_LOGIC;
       mag3_done : IN STD_LOGIC;
-      dout : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+      dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       irq_out : OUT STD_LOGIC;
       ch_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>DIII</spirit:vendor>
-  <spirit:library>PL-Mag-Sensor</spirit:library>
+  <spirit:library>user</spirit:library>
   <spirit:name>DigMagController</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
@@ -53,6 +53,230 @@
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>mag0_i2c</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag0_scl_t</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag0_sda_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag0_sda_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag0_sda_t</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag0_scl_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag0_scl_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>mag1_i2c</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag1_scl_t</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag1_sda_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag1_sda_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag1_sda_t</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag1_scl_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag1_scl_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>mag2_i2c</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag2_scl_t</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag2_sda_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag2_sda_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag2_sda_t</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag2_scl_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag2_scl_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>mag3_i2c</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag3_scl_t</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag3_sda_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag3_sda_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag3_sda_t</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag3_scl_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>mag3_scl_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:model>
     <spirit:views>
@@ -68,7 +292,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>35f1a973</spirit:value>
+            <spirit:value>c9a047d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -84,7 +308,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3ffbf972</spirit:value>
+            <spirit:value>45156016</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -139,7 +363,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -564,7 +788,7 @@
       <spirit:file>
         <spirit:name>src/DigMagController.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_1e6e80d0</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_6a44cb6d</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -663,25 +887,32 @@
       </xilinx:taxonomies>
       <xilinx:displayName>DigMagController_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-04-19T13:48:02Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-04-21T08:32:22Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3240faf9_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@35652a21_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fd93dda_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@558dc67c_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f42cd1b_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed1d27_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@17ece350_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d3e8f1_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4660f13e_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dfacc32_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d35be6_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c62b10d_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@403eda20_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@671f63aa_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f7c82c3_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55af8072_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7abae135_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b4d1e23_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b0dd87d_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63604612_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31ef34b4_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c92a60_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@89a49ba_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@334707ce_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f0c191f_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/DigMagController</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0f09bc0a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bb9e9bee"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="a8ca5f20"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c1de3018"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c1bcc2ef"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="ac1c179b"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="07101d08"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

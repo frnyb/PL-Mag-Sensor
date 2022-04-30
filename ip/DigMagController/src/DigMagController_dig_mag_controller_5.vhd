@@ -64,9 +64,9 @@ ENTITY DigMagController_dig_mag_controller_5 IS
     i2c_busy : IN STD_LOGIC;
     i2c_data_rd : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     irq_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-    x_dout : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-    y_dout : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-    z_dout : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+    x_dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    y_dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    z_dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     start : IN STD_LOGIC;
     idle : OUT STD_LOGIC;
     done : OUT STD_LOGIC
@@ -87,9 +87,9 @@ ARCHITECTURE DigMagController_dig_mag_controller_5_arch OF DigMagController_dig_
       i2c_busy : IN STD_LOGIC;
       i2c_data_rd : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       irq_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-      x_dout : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-      y_dout : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-      z_dout : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+      x_dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      y_dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      z_dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       start : IN STD_LOGIC;
       idle : OUT STD_LOGIC;
       done : OUT STD_LOGIC

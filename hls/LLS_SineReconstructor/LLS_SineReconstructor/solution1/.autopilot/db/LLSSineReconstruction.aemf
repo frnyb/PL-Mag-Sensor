@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651234839772">
+  <ports id="1" name="input_int" type="PortType" originalName="input_int" coreId="543516513" bitwidth="8"/>
+  <ports id="2" name="output_int" type="PortType" originalName="output_int" coreId="3022257448" bitwidth="8"/>
+  <blocks id="9" name="LLSSineReconstruction" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="_ln9" lineNumber="9" fileName="LLS_SineReconstructor.cpp" fileDirectory=".." coreId="12" contextFuncName="LLSSineReconstruction" opcode="ret" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="LLS_SineReconstructor.cpp" linenumber="9" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="LLS_SineReconstructor.cpp">
+      <validLinenumbers>9</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ioPorts name="input_int"/>
+  <ioPorts name="output_int"/>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="LLSSineReconstruction" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>9</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

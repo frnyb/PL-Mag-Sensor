@@ -30,7 +30,7 @@ p_mag3 = [-1;-1;0]*0.17;
 positions = [p_mag0 p_mag1 p_mag2 p_mag3];
 
 %% Load data
-mag_data = importdata('airport1/1.txt');
+mag_data = importdata('direction_test/0yz/1.txt');
 mag_data = mag_data.data;
 
 mag0_samples = mag_data(:,13:15);

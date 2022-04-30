@@ -12,20 +12,20 @@
     },
     "design_tree": {
       "DigMagController_0": {
-        "dig_mag_controller": "",
-        "i2c_master": ""
+        "i2c_master": "",
+        "dig_mag_controller": ""
       },
       "DigMagController_1": {
-        "dig_mag_controller": "",
-        "i2c_master": ""
+        "i2c_master": "",
+        "dig_mag_controller": ""
       },
       "DigMagController_2": {
-        "dig_mag_controller": "",
-        "i2c_master": ""
+        "i2c_master": "",
+        "dig_mag_controller": ""
       },
       "DigMagController_3": {
-        "dig_mag_controller": "",
-        "i2c_master": ""
+        "i2c_master": "",
+        "dig_mag_controller": ""
       },
       "dig_mag_data_handler_0": ""
     },
@@ -216,92 +216,6 @@
           }
         },
         "components": {
-          "dig_mag_controller": {
-            "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
-            "xci_name": "DigMagController_dig_mag_controller_0_0",
-            "xci_path": "ip/DigMagController_dig_mag_controller_0_0/DigMagController_dig_mag_controller_0_0.xci",
-            "inst_hier_path": "DigMagController_0/dig_mag_controller",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "dig_mag_controller",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "DigMagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "i2c_ena": {
-                "direction": "O"
-              },
-              "i2c_addr": {
-                "direction": "O",
-                "left": "6",
-                "right": "0"
-              },
-              "i2c_rw": {
-                "direction": "O"
-              },
-              "i2c_data_wr": {
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "i2c_busy": {
-                "direction": "I"
-              },
-              "i2c_data_rd": {
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "irq_out": {
-                "direction": "O",
-                "left": "2",
-                "right": "0"
-              },
-              "x_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "y_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "z_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "start": {
-                "direction": "I"
-              },
-              "idle": {
-                "direction": "O"
-              },
-              "done": {
-                "direction": "O"
-              }
-            }
-          },
           "i2c_master": {
             "vlnv": "xilinx.com:module_ref:i2c_master:1.0",
             "xci_name": "DigMagController_i2c_master_0_0",
@@ -389,6 +303,92 @@
                 "right": "0"
               },
               "ack_error": {
+                "direction": "O"
+              }
+            }
+          },
+          "dig_mag_controller": {
+            "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
+            "xci_name": "DigMagController_dig_mag_controller_0_0",
+            "xci_path": "ip/DigMagController_dig_mag_controller_0_0/DigMagController_dig_mag_controller_0_0.xci",
+            "inst_hier_path": "DigMagController_0/dig_mag_controller",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "dig_mag_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "DigMagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "i2c_ena": {
+                "direction": "O"
+              },
+              "i2c_addr": {
+                "direction": "O",
+                "left": "6",
+                "right": "0"
+              },
+              "i2c_rw": {
+                "direction": "O"
+              },
+              "i2c_data_wr": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "i2c_busy": {
+                "direction": "I"
+              },
+              "i2c_data_rd": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "irq_out": {
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "x_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "y_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "z_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "start": {
+                "direction": "I"
+              },
+              "idle": {
+                "direction": "O"
+              },
+              "done": {
                 "direction": "O"
               }
             }
@@ -584,92 +584,6 @@
           }
         },
         "components": {
-          "dig_mag_controller": {
-            "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
-            "xci_name": "DigMagController_dig_mag_controller_1",
-            "xci_path": "ip/DigMagController_dig_mag_controller_1/DigMagController_dig_mag_controller_1.xci",
-            "inst_hier_path": "DigMagController_1/dig_mag_controller",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "dig_mag_controller",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "DigMagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "i2c_ena": {
-                "direction": "O"
-              },
-              "i2c_addr": {
-                "direction": "O",
-                "left": "6",
-                "right": "0"
-              },
-              "i2c_rw": {
-                "direction": "O"
-              },
-              "i2c_data_wr": {
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "i2c_busy": {
-                "direction": "I"
-              },
-              "i2c_data_rd": {
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "irq_out": {
-                "direction": "O",
-                "left": "2",
-                "right": "0"
-              },
-              "x_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "y_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "z_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "start": {
-                "direction": "I"
-              },
-              "idle": {
-                "direction": "O"
-              },
-              "done": {
-                "direction": "O"
-              }
-            }
-          },
           "i2c_master": {
             "vlnv": "xilinx.com:module_ref:i2c_master:1.0",
             "xci_name": "DigMagController_i2c_master_1",
@@ -757,6 +671,92 @@
                 "right": "0"
               },
               "ack_error": {
+                "direction": "O"
+              }
+            }
+          },
+          "dig_mag_controller": {
+            "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
+            "xci_name": "DigMagController_dig_mag_controller_1",
+            "xci_path": "ip/DigMagController_dig_mag_controller_1/DigMagController_dig_mag_controller_1.xci",
+            "inst_hier_path": "DigMagController_1/dig_mag_controller",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "dig_mag_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "DigMagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "i2c_ena": {
+                "direction": "O"
+              },
+              "i2c_addr": {
+                "direction": "O",
+                "left": "6",
+                "right": "0"
+              },
+              "i2c_rw": {
+                "direction": "O"
+              },
+              "i2c_data_wr": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "i2c_busy": {
+                "direction": "I"
+              },
+              "i2c_data_rd": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "irq_out": {
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "x_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "y_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "z_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "start": {
+                "direction": "I"
+              },
+              "idle": {
+                "direction": "O"
+              },
+              "done": {
                 "direction": "O"
               }
             }
@@ -952,92 +952,6 @@
           }
         },
         "components": {
-          "dig_mag_controller": {
-            "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
-            "xci_name": "DigMagController_dig_mag_controller_4",
-            "xci_path": "ip/DigMagController_dig_mag_controller_4/DigMagController_dig_mag_controller_4.xci",
-            "inst_hier_path": "DigMagController_2/dig_mag_controller",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "dig_mag_controller",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "DigMagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "i2c_ena": {
-                "direction": "O"
-              },
-              "i2c_addr": {
-                "direction": "O",
-                "left": "6",
-                "right": "0"
-              },
-              "i2c_rw": {
-                "direction": "O"
-              },
-              "i2c_data_wr": {
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "i2c_busy": {
-                "direction": "I"
-              },
-              "i2c_data_rd": {
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "irq_out": {
-                "direction": "O",
-                "left": "2",
-                "right": "0"
-              },
-              "x_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "y_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "z_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "start": {
-                "direction": "I"
-              },
-              "idle": {
-                "direction": "O"
-              },
-              "done": {
-                "direction": "O"
-              }
-            }
-          },
           "i2c_master": {
             "vlnv": "xilinx.com:module_ref:i2c_master:1.0",
             "xci_name": "DigMagController_i2c_master_4",
@@ -1125,6 +1039,92 @@
                 "right": "0"
               },
               "ack_error": {
+                "direction": "O"
+              }
+            }
+          },
+          "dig_mag_controller": {
+            "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
+            "xci_name": "DigMagController_dig_mag_controller_4",
+            "xci_path": "ip/DigMagController_dig_mag_controller_4/DigMagController_dig_mag_controller_4.xci",
+            "inst_hier_path": "DigMagController_2/dig_mag_controller",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "dig_mag_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "DigMagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "i2c_ena": {
+                "direction": "O"
+              },
+              "i2c_addr": {
+                "direction": "O",
+                "left": "6",
+                "right": "0"
+              },
+              "i2c_rw": {
+                "direction": "O"
+              },
+              "i2c_data_wr": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "i2c_busy": {
+                "direction": "I"
+              },
+              "i2c_data_rd": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "irq_out": {
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "x_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "y_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "z_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "start": {
+                "direction": "I"
+              },
+              "idle": {
+                "direction": "O"
+              },
+              "done": {
                 "direction": "O"
               }
             }
@@ -1320,92 +1320,6 @@
           }
         },
         "components": {
-          "dig_mag_controller": {
-            "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
-            "xci_name": "DigMagController_dig_mag_controller_5",
-            "xci_path": "ip/DigMagController_dig_mag_controller_5/DigMagController_dig_mag_controller_5.xci",
-            "inst_hier_path": "DigMagController_3/dig_mag_controller",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "dig_mag_controller",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "DigMagController_clk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "rst_n": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "i2c_ena": {
-                "direction": "O"
-              },
-              "i2c_addr": {
-                "direction": "O",
-                "left": "6",
-                "right": "0"
-              },
-              "i2c_rw": {
-                "direction": "O"
-              },
-              "i2c_data_wr": {
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "i2c_busy": {
-                "direction": "I"
-              },
-              "i2c_data_rd": {
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "irq_out": {
-                "direction": "O",
-                "left": "2",
-                "right": "0"
-              },
-              "x_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "y_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "z_dout": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
-              },
-              "start": {
-                "direction": "I"
-              },
-              "idle": {
-                "direction": "O"
-              },
-              "done": {
-                "direction": "O"
-              }
-            }
-          },
           "i2c_master": {
             "vlnv": "xilinx.com:module_ref:i2c_master:1.0",
             "xci_name": "DigMagController_i2c_master_5",
@@ -1493,6 +1407,92 @@
                 "right": "0"
               },
               "ack_error": {
+                "direction": "O"
+              }
+            }
+          },
+          "dig_mag_controller": {
+            "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
+            "xci_name": "DigMagController_dig_mag_controller_5",
+            "xci_path": "ip/DigMagController_dig_mag_controller_5/DigMagController_dig_mag_controller_5.xci",
+            "inst_hier_path": "DigMagController_3/dig_mag_controller",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "dig_mag_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "DigMagController_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "i2c_ena": {
+                "direction": "O"
+              },
+              "i2c_addr": {
+                "direction": "O",
+                "left": "6",
+                "right": "0"
+              },
+              "i2c_rw": {
+                "direction": "O"
+              },
+              "i2c_data_wr": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "i2c_busy": {
+                "direction": "I"
+              },
+              "i2c_data_rd": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "irq_out": {
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "x_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "y_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "z_dout": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              },
+              "start": {
+                "direction": "I"
+              },
+              "idle": {
+                "direction": "O"
+              },
+              "done": {
                 "direction": "O"
               }
             }
