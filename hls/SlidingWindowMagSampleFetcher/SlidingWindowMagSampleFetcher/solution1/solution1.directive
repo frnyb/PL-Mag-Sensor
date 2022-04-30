@@ -5,11 +5,6 @@
                 <option name="name" value="SlidingWindowMagSampleFetcher"/>
             </pragma>
         </directive>
-        <directive functionName="SlidingWindowMagSampleFetcher" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="SlidingWindowMagSampleFetcher"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

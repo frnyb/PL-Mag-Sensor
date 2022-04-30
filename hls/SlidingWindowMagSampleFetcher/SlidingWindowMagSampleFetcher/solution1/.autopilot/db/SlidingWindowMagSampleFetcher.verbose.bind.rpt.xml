@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'SlidingWindowMagSampleFetcher'" level="0">
-<item name = "Date">Fri Apr 29 19:01:54 2022
+<item name = "Date">Sat Apr 30 14:04:39 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">SlidingWindowMagSampleFetcher</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 2.676 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 4.787 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,19 +24,19 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">35, 417, 0.350 us, 4.170 us, 36, 418, none</column>
+<column name="">93, 14001, 0.930 us, 0.140 ms, 94, 14002, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_loadSlidingWindow_fu_205">loadSlidingWindow, 1, 382, 10.000 ns, 3.820 us, 1, 382, none</column>
+<column name="grp_loadSlidingWindow_fu_601">loadSlidingWindow, 91, 333, 0.910 us, 3.330 us, 91, 333, none</column>
+<column name="grp_writeToRAM_fu_1119">writeToRAM, 8, 13665, 80.000 ns, 0.137 ms, 8, 13665, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">31, 31, 1, 1, 1, 32, yes</column>
 </table>
 </item>
 </section>

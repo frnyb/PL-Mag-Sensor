@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/./sim/autowrap/testbench/SlidingWindowMagSampleFetcher.cpp_pre.cpp.tb.cpp

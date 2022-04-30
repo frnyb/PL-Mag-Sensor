@@ -29,62 +29,62 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/.apc/.src</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/.apc/.tb</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/.tcls</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/SlidingWindowMagSampleFetcher.cpp</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/SlidingWindowMagSampleFetcher.cpp</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/SlidingWindowMagSampleFetcher.cpp</location>
+		</link>
+		<link>
+			<name>source/SlidingWindowMagSampleFetcher.h</name>
+			<type>1</type>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/SlidingWindowMagSampleFetcher.h</location>
 		</link>
 		<link>
 			<name>source/cyclic_buffer.h</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h</location>
 		</link>
 		<link>
 			<name>source/sample.h</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h</location>
 		</link>
 		<link>
 			<name>source/sample_period.h</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h</location>
 		</link>
 		<link>
-			<name>source/test_class.cpp</name>
+			<name>testbench/sliding_window_mag_sample_fetcher_test_bench.cpp</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/test_class.cpp</location>
-		</link>
-		<link>
-			<name>source/test_class.h</name>
-			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/test_class.h</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sliding_window_mag_sample_fetcher_test_bench.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/solution1.directive</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/directives.tcl</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/script.tcl</location>
+			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

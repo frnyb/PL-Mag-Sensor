@@ -61,38 +61,28 @@
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>
-      <arg id="12" access_type="" src_name="buffer_out" src_type="unsigned int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="3840">
+      <arg id="12" access_type="w" src_name="buffer_out" src_type="unsigned int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="3840">
         <hw hw_usage="data" hw_interface="BRAM" hw_name="buffer_out" hw_bitwidth="32" hw_size_or_depth="3840">
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>
-      <arg id="13" access_type="r" src_name="n_periods" src_type="unsigned char" src_isptr="0" src_bitwidth="8" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="axi" hw_bitwidth="8" hw_size_or_depth="1">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
-        </hw>
-      </arg>
-      <arg id="14" access_type="r" src_name="bfr_irq" src_type="*" src_isptr="1" src_bitwidth="1" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="bfr_irq" hw_bitwidth="1" hw_size_or_depth="1">
-          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
-        </hw>
-      </arg>
-      <arg id="15" access_type="r" src_name="n_samples" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
+      <arg id="13" access_type="r" src_name="n_samples" src_type="ap_uint&lt;6&gt;" src_isptr="0" src_bitwidth="8" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="Register" hw_name="n_samples" hw_bitwidth="6" hw_size_or_depth="1">
           <constraint constraint_type="pragma interface" mode="ap_vld" register_option="0"/>
         </hw>
       </arg>
-      <arg id="16" access_type="w" src_name="n_samples_out" src_type="unsigned int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="axi" hw_bitwidth="32" hw_size_or_depth="1">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24"/>
-        </hw>
-      </arg>
-      <arg id="17" access_type="rw" src_name="start_write" src_type="*" src_isptr="1" src_bitwidth="1" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="start_write" hw_bitwidth="1" hw_size_or_depth="1">
+      <arg id="14" access_type="r" src_name="n_periods" src_type="unsigned char" src_isptr="0" src_bitwidth="8" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="n_periods" hw_bitwidth="8" hw_size_or_depth="1">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>
       </arg>
-      <arg id="18" access_type="w" src_name="write_finished" src_type="*" src_isptr="1" src_bitwidth="1" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="write_finished" hw_bitwidth="1" hw_size_or_depth="1">
+      <arg id="15" access_type="w" src_name="n_samples_out" src_type="unsigned int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="n_samples_out" hw_bitwidth="32" hw_size_or_depth="1">
+          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="16" access_type="rw" src_name="start_write" src_type="*" src_isptr="1" src_bitwidth="1" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="start_write" hw_bitwidth="1" hw_size_or_depth="1">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>
       </arg>

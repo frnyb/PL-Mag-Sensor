@@ -7,11 +7,15 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="SlidingWindowMagSampleFetcher_SlidingWindowMagSampleFetcher,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.676000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=1294,HLS_SYN_LUT=1633,HLS_VERSION=2020_2}" *)
+(* CORE_GENERATION_INFO="SlidingWindowMagSampleFetcher_SlidingWindowMagSampleFetcher,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.787000,HLS_SYN_LAT=1051,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=13630,HLS_SYN_LUT=21108,HLS_VERSION=2020_2}" *)
 
 module SlidingWindowMagSampleFetcher (
         ap_clk,
-        ap_rst_n,
+        ap_rst,
+        ap_start,
+        ap_done,
+        ap_idle,
+        ap_ready,
         buffer_in_0_address0,
         buffer_in_0_ce0,
         buffer_in_0_q0,
@@ -52,54 +56,27 @@ module SlidingWindowMagSampleFetcher (
         buffer_out_ce0,
         buffer_out_we0,
         buffer_out_d0,
-        buffer_out_q0,
-        buffer_out_address1,
-        buffer_out_ce1,
-        buffer_out_we1,
-        buffer_out_d1,
-        buffer_out_q1,
-        bfr_irq,
         n_samples,
         n_samples_ap_vld,
+        n_periods,
+        n_samples_out,
+        n_samples_out_ap_vld,
         start_write_i,
         start_write_o,
-        start_write_o_ap_vld,
-        write_finished,
-        write_finished_ap_vld,
-        s_axi_axi_AWVALID,
-        s_axi_axi_AWREADY,
-        s_axi_axi_AWADDR,
-        s_axi_axi_WVALID,
-        s_axi_axi_WREADY,
-        s_axi_axi_WDATA,
-        s_axi_axi_WSTRB,
-        s_axi_axi_ARVALID,
-        s_axi_axi_ARREADY,
-        s_axi_axi_ARADDR,
-        s_axi_axi_RVALID,
-        s_axi_axi_RREADY,
-        s_axi_axi_RDATA,
-        s_axi_axi_RRESP,
-        s_axi_axi_BVALID,
-        s_axi_axi_BREADY,
-        s_axi_axi_BRESP,
-        interrupt
+        start_write_o_ap_vld
 );
 
-parameter    ap_ST_fsm_state1 = 5'd1;
-parameter    ap_ST_fsm_state2 = 5'd2;
-parameter    ap_ST_fsm_state3 = 5'd4;
-parameter    ap_ST_fsm_state4 = 5'd8;
-parameter    ap_ST_fsm_state5 = 5'd16;
-parameter    C_S_AXI_AXI_DATA_WIDTH = 32;
-parameter    C_S_AXI_AXI_ADDR_WIDTH = 5;
-parameter    C_S_AXI_DATA_WIDTH = 32;
-
-parameter C_S_AXI_AXI_WSTRB_WIDTH = (32 / 8);
-parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
+parameter    ap_ST_fsm_state1 = 4'd1;
+parameter    ap_ST_fsm_state2 = 4'd2;
+parameter    ap_ST_fsm_state3 = 4'd4;
+parameter    ap_ST_fsm_state4 = 4'd8;
 
 input   ap_clk;
-input   ap_rst_n;
+input   ap_rst;
+input   ap_start;
+output   ap_done;
+output   ap_idle;
+output   ap_ready;
 output  [3:0] buffer_in_0_address0;
 output   buffer_in_0_ce0;
 input  [31:0] buffer_in_0_q0;
@@ -140,158 +117,5864 @@ output  [11:0] buffer_out_address0;
 output   buffer_out_ce0;
 output   buffer_out_we0;
 output  [31:0] buffer_out_d0;
-input  [31:0] buffer_out_q0;
-output  [11:0] buffer_out_address1;
-output   buffer_out_ce1;
-output   buffer_out_we1;
-output  [31:0] buffer_out_d1;
-input  [31:0] buffer_out_q1;
-input   bfr_irq;
 input  [5:0] n_samples;
 input   n_samples_ap_vld;
+input  [7:0] n_periods;
+output  [31:0] n_samples_out;
+output   n_samples_out_ap_vld;
 input   start_write_i;
 output   start_write_o;
 output   start_write_o_ap_vld;
-output   write_finished;
-output   write_finished_ap_vld;
-input   s_axi_axi_AWVALID;
-output   s_axi_axi_AWREADY;
-input  [C_S_AXI_AXI_ADDR_WIDTH - 1:0] s_axi_axi_AWADDR;
-input   s_axi_axi_WVALID;
-output   s_axi_axi_WREADY;
-input  [C_S_AXI_AXI_DATA_WIDTH - 1:0] s_axi_axi_WDATA;
-input  [C_S_AXI_AXI_WSTRB_WIDTH - 1:0] s_axi_axi_WSTRB;
-input   s_axi_axi_ARVALID;
-output   s_axi_axi_ARREADY;
-input  [C_S_AXI_AXI_ADDR_WIDTH - 1:0] s_axi_axi_ARADDR;
-output   s_axi_axi_RVALID;
-input   s_axi_axi_RREADY;
-output  [C_S_AXI_AXI_DATA_WIDTH - 1:0] s_axi_axi_RDATA;
-output  [1:0] s_axi_axi_RRESP;
-output   s_axi_axi_BVALID;
-input   s_axi_axi_BREADY;
-output  [1:0] s_axi_axi_BRESP;
-output   interrupt;
 
+reg ap_done;
+reg ap_idle;
+reg ap_ready;
+reg n_samples_out_ap_vld;
 reg start_write_o;
 reg start_write_o_ap_vld;
-reg write_finished;
-reg write_finished_ap_vld;
 
- reg    ap_rst_n_inv;
-wire    ap_start;
-reg    ap_done;
-reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [4:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg    ap_ready;
-wire   [7:0] n_periods;
 reg   [5:0] n_samples_preg;
 reg   [5:0] n_samples_in_sig;
 reg    n_samples_ap_vld_preg;
 reg    n_samples_ap_vld_in_sig;
-reg    n_samples_out_ap_vld;
-reg    n_samples_blk_n;
-wire    ap_CS_fsm_state3;
-wire   [0:0] bfr_irq_read_read_fu_126_p2;
-reg   [7:0] n_periods_read_reg_262;
-wire   [4:0] add_ln8_fu_236_p2;
-wire    ap_CS_fsm_state2;
-reg   [0:0] bfr_irq_read_reg_275;
-wire   [0:0] start_write_read_read_fu_138_p2;
-reg   [0:0] start_write_read_reg_284;
-wire    ap_CS_fsm_state4;
+reg   [5:0] sliding_window_front_ptr_s;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_0_address0;
+reg    sliding_window_buffer_samples_sample_V_0_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_1_address0;
+reg    sliding_window_buffer_samples_sample_V_0_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_2_address0;
+reg    sliding_window_buffer_samples_sample_V_0_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_3_address0;
+reg    sliding_window_buffer_samples_sample_V_0_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_4_address0;
+reg    sliding_window_buffer_samples_sample_V_0_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_5_address0;
+reg    sliding_window_buffer_samples_sample_V_0_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_6_address0;
+reg    sliding_window_buffer_samples_sample_V_0_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_7_address0;
+reg    sliding_window_buffer_samples_sample_V_0_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_8_address0;
+reg    sliding_window_buffer_samples_sample_V_0_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_9_address0;
+reg    sliding_window_buffer_samples_sample_V_0_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_10_address0;
+reg    sliding_window_buffer_samples_sample_V_0_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_0_11_address0;
+reg    sliding_window_buffer_samples_sample_V_0_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_0_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_0_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_0_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_0_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_0_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_0_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_0_address0;
+reg    sliding_window_buffer_samples_sample_V_1_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_1_address0;
+reg    sliding_window_buffer_samples_sample_V_1_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_2_address0;
+reg    sliding_window_buffer_samples_sample_V_1_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_3_address0;
+reg    sliding_window_buffer_samples_sample_V_1_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_4_address0;
+reg    sliding_window_buffer_samples_sample_V_1_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_5_address0;
+reg    sliding_window_buffer_samples_sample_V_1_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_6_address0;
+reg    sliding_window_buffer_samples_sample_V_1_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_7_address0;
+reg    sliding_window_buffer_samples_sample_V_1_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_8_address0;
+reg    sliding_window_buffer_samples_sample_V_1_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_9_address0;
+reg    sliding_window_buffer_samples_sample_V_1_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_10_address0;
+reg    sliding_window_buffer_samples_sample_V_1_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_1_11_address0;
+reg    sliding_window_buffer_samples_sample_V_1_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_1_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_1_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_1_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_1_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_1_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_1_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_0_address0;
+reg    sliding_window_buffer_samples_sample_V_2_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_1_address0;
+reg    sliding_window_buffer_samples_sample_V_2_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_2_address0;
+reg    sliding_window_buffer_samples_sample_V_2_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_3_address0;
+reg    sliding_window_buffer_samples_sample_V_2_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_4_address0;
+reg    sliding_window_buffer_samples_sample_V_2_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_5_address0;
+reg    sliding_window_buffer_samples_sample_V_2_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_6_address0;
+reg    sliding_window_buffer_samples_sample_V_2_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_7_address0;
+reg    sliding_window_buffer_samples_sample_V_2_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_8_address0;
+reg    sliding_window_buffer_samples_sample_V_2_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_9_address0;
+reg    sliding_window_buffer_samples_sample_V_2_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_10_address0;
+reg    sliding_window_buffer_samples_sample_V_2_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_2_11_address0;
+reg    sliding_window_buffer_samples_sample_V_2_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_2_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_2_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_2_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_2_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_2_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_2_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_0_address0;
+reg    sliding_window_buffer_samples_sample_V_3_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_1_address0;
+reg    sliding_window_buffer_samples_sample_V_3_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_2_address0;
+reg    sliding_window_buffer_samples_sample_V_3_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_3_address0;
+reg    sliding_window_buffer_samples_sample_V_3_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_4_address0;
+reg    sliding_window_buffer_samples_sample_V_3_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_5_address0;
+reg    sliding_window_buffer_samples_sample_V_3_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_6_address0;
+reg    sliding_window_buffer_samples_sample_V_3_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_7_address0;
+reg    sliding_window_buffer_samples_sample_V_3_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_8_address0;
+reg    sliding_window_buffer_samples_sample_V_3_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_9_address0;
+reg    sliding_window_buffer_samples_sample_V_3_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_10_address0;
+reg    sliding_window_buffer_samples_sample_V_3_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_3_11_address0;
+reg    sliding_window_buffer_samples_sample_V_3_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_3_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_3_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_3_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_3_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_3_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_3_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_0_address0;
+reg    sliding_window_buffer_samples_sample_V_4_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_1_address0;
+reg    sliding_window_buffer_samples_sample_V_4_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_2_address0;
+reg    sliding_window_buffer_samples_sample_V_4_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_3_address0;
+reg    sliding_window_buffer_samples_sample_V_4_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_4_address0;
+reg    sliding_window_buffer_samples_sample_V_4_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_5_address0;
+reg    sliding_window_buffer_samples_sample_V_4_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_6_address0;
+reg    sliding_window_buffer_samples_sample_V_4_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_7_address0;
+reg    sliding_window_buffer_samples_sample_V_4_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_8_address0;
+reg    sliding_window_buffer_samples_sample_V_4_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_9_address0;
+reg    sliding_window_buffer_samples_sample_V_4_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_10_address0;
+reg    sliding_window_buffer_samples_sample_V_4_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_4_11_address0;
+reg    sliding_window_buffer_samples_sample_V_4_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_4_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_4_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_4_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_4_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_4_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_4_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_0_address0;
+reg    sliding_window_buffer_samples_sample_V_5_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_1_address0;
+reg    sliding_window_buffer_samples_sample_V_5_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_2_address0;
+reg    sliding_window_buffer_samples_sample_V_5_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_3_address0;
+reg    sliding_window_buffer_samples_sample_V_5_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_4_address0;
+reg    sliding_window_buffer_samples_sample_V_5_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_5_address0;
+reg    sliding_window_buffer_samples_sample_V_5_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_6_address0;
+reg    sliding_window_buffer_samples_sample_V_5_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_7_address0;
+reg    sliding_window_buffer_samples_sample_V_5_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_8_address0;
+reg    sliding_window_buffer_samples_sample_V_5_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_9_address0;
+reg    sliding_window_buffer_samples_sample_V_5_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_10_address0;
+reg    sliding_window_buffer_samples_sample_V_5_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_5_11_address0;
+reg    sliding_window_buffer_samples_sample_V_5_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_5_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_5_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_5_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_5_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_5_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_5_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_0_address0;
+reg    sliding_window_buffer_samples_sample_V_6_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_1_address0;
+reg    sliding_window_buffer_samples_sample_V_6_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_2_address0;
+reg    sliding_window_buffer_samples_sample_V_6_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_3_address0;
+reg    sliding_window_buffer_samples_sample_V_6_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_4_address0;
+reg    sliding_window_buffer_samples_sample_V_6_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_5_address0;
+reg    sliding_window_buffer_samples_sample_V_6_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_6_address0;
+reg    sliding_window_buffer_samples_sample_V_6_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_7_address0;
+reg    sliding_window_buffer_samples_sample_V_6_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_8_address0;
+reg    sliding_window_buffer_samples_sample_V_6_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_9_address0;
+reg    sliding_window_buffer_samples_sample_V_6_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_10_address0;
+reg    sliding_window_buffer_samples_sample_V_6_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_6_11_address0;
+reg    sliding_window_buffer_samples_sample_V_6_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_6_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_6_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_6_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_6_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_6_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_6_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_0_address0;
+reg    sliding_window_buffer_samples_sample_V_7_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_1_address0;
+reg    sliding_window_buffer_samples_sample_V_7_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_2_address0;
+reg    sliding_window_buffer_samples_sample_V_7_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_3_address0;
+reg    sliding_window_buffer_samples_sample_V_7_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_4_address0;
+reg    sliding_window_buffer_samples_sample_V_7_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_5_address0;
+reg    sliding_window_buffer_samples_sample_V_7_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_6_address0;
+reg    sliding_window_buffer_samples_sample_V_7_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_7_address0;
+reg    sliding_window_buffer_samples_sample_V_7_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_8_address0;
+reg    sliding_window_buffer_samples_sample_V_7_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_9_address0;
+reg    sliding_window_buffer_samples_sample_V_7_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_10_address0;
+reg    sliding_window_buffer_samples_sample_V_7_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_7_11_address0;
+reg    sliding_window_buffer_samples_sample_V_7_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_7_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_7_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_7_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_7_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_7_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_7_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_0_address0;
+reg    sliding_window_buffer_samples_sample_V_8_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_1_address0;
+reg    sliding_window_buffer_samples_sample_V_8_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_2_address0;
+reg    sliding_window_buffer_samples_sample_V_8_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_3_address0;
+reg    sliding_window_buffer_samples_sample_V_8_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_4_address0;
+reg    sliding_window_buffer_samples_sample_V_8_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_5_address0;
+reg    sliding_window_buffer_samples_sample_V_8_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_6_address0;
+reg    sliding_window_buffer_samples_sample_V_8_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_7_address0;
+reg    sliding_window_buffer_samples_sample_V_8_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_8_address0;
+reg    sliding_window_buffer_samples_sample_V_8_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_9_address0;
+reg    sliding_window_buffer_samples_sample_V_8_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_10_address0;
+reg    sliding_window_buffer_samples_sample_V_8_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_8_11_address0;
+reg    sliding_window_buffer_samples_sample_V_8_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_8_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_8_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_8_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_8_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_8_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_8_11_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_0_address0;
+reg    sliding_window_buffer_samples_sample_V_9_0_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_0_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_0_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_1_address0;
+reg    sliding_window_buffer_samples_sample_V_9_1_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_1_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_1_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_2_address0;
+reg    sliding_window_buffer_samples_sample_V_9_2_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_2_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_2_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_3_address0;
+reg    sliding_window_buffer_samples_sample_V_9_3_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_3_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_3_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_4_address0;
+reg    sliding_window_buffer_samples_sample_V_9_4_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_4_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_4_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_5_address0;
+reg    sliding_window_buffer_samples_sample_V_9_5_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_5_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_5_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_6_address0;
+reg    sliding_window_buffer_samples_sample_V_9_6_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_6_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_6_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_7_address0;
+reg    sliding_window_buffer_samples_sample_V_9_7_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_7_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_7_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_8_address0;
+reg    sliding_window_buffer_samples_sample_V_9_8_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_8_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_8_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_9_address0;
+reg    sliding_window_buffer_samples_sample_V_9_9_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_9_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_9_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_10_address0;
+reg    sliding_window_buffer_samples_sample_V_9_10_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_10_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_10_q0;
+reg   [4:0] sliding_window_buffer_samples_sample_V_9_11_address0;
+reg    sliding_window_buffer_samples_sample_V_9_11_ce0;
+reg    sliding_window_buffer_samples_sample_V_9_11_we0;
+wire   [11:0] sliding_window_buffer_samples_sample_V_9_11_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_0_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_0_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_0_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_0_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_1_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_1_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_1_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_1_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_2_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_2_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_2_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_2_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_3_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_3_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_3_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_3_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_4_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_4_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_4_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_4_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_5_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_5_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_5_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_5_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_6_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_6_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_6_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_6_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_7_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_7_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_7_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_7_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_8_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_8_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_8_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_8_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_9_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_9_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_9_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_9_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_10_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_10_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_10_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_10_q0;
+reg   [4:0] sliding_window_buffer_samples_timestamp_V_9_11_address0;
+reg    sliding_window_buffer_samples_timestamp_V_9_11_ce0;
+reg    sliding_window_buffer_samples_timestamp_V_9_11_we0;
+wire   [19:0] sliding_window_buffer_samples_timestamp_V_9_11_q0;
 reg   [4:0] sliding_window_buffer_count_s_address0;
 reg    sliding_window_buffer_count_s_ce0;
 reg    sliding_window_buffer_count_s_we0;
-reg   [5:0] sliding_window_buffer_count_s_d0;
-wire    grp_loadSlidingWindow_fu_205_ap_start;
-wire    grp_loadSlidingWindow_fu_205_ap_done;
-wire    grp_loadSlidingWindow_fu_205_ap_idle;
-wire    grp_loadSlidingWindow_fu_205_ap_ready;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_0_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_0_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_1_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_1_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_2_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_2_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_3_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_3_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_4_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_4_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_5_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_5_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_6_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_6_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_7_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_7_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_8_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_8_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_9_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_9_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_10_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_10_ce0;
-wire   [3:0] grp_loadSlidingWindow_fu_205_buffer_in_11_address0;
-wire    grp_loadSlidingWindow_fu_205_buffer_in_11_ce0;
-wire   [4:0] grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_address0;
-wire    grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_ce0;
-wire    grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_we0;
-wire   [5:0] grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_d0;
-reg   [4:0] indvar_i_reg_182;
-wire   [0:0] icmp_ln8_fu_247_p2;
-reg   [0:0] ap_phi_mux_sliding_window_size_0_phi_fu_197_p4;
-reg   [0:0] sliding_window_size_0_reg_193;
+wire   [5:0] sliding_window_buffer_count_s_q0;
+reg   [5:0] sliding_window_back_ptr_s;
+reg    n_samples_blk_n;
+wire    ap_CS_fsm_state2;
+wire   [0:0] start_write_rd_read_fu_580_p2;
+reg   [0:0] start_write_rd_reg_1623;
+wire    grp_loadSlidingWindow_fu_601_ap_start;
+wire    grp_loadSlidingWindow_fu_601_ap_done;
+wire    grp_loadSlidingWindow_fu_601_ap_idle;
+wire    grp_loadSlidingWindow_fu_601_ap_ready;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_0_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_0_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_1_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_1_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_2_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_2_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_3_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_3_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_4_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_4_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_5_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_5_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_6_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_6_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_7_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_7_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_8_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_8_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_9_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_9_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_10_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_10_ce0;
+wire   [3:0] grp_loadSlidingWindow_fu_601_buffer_in_11_address0;
+wire    grp_loadSlidingWindow_fu_601_buffer_in_11_ce0;
+wire   [5:0] grp_loadSlidingWindow_fu_601_sliding_window_front_ptr_s_o;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_front_ptr_s_o_ap_vld;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_we0;
+wire   [11:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_we0;
+wire   [19:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_d0;
+wire   [4:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_address0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_ce0;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_we0;
+wire   [5:0] grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_d0;
+wire   [5:0] grp_loadSlidingWindow_fu_601_sliding_window_back_ptr_s_o;
+wire    grp_loadSlidingWindow_fu_601_sliding_window_back_ptr_s_o_ap_vld;
+wire    grp_writeToRAM_fu_1119_ap_start;
+wire    grp_writeToRAM_fu_1119_ap_done;
+wire    grp_writeToRAM_fu_1119_ap_idle;
+wire    grp_writeToRAM_fu_1119_ap_ready;
+wire   [11:0] grp_writeToRAM_fu_1119_buffer_out_address0;
+wire    grp_writeToRAM_fu_1119_buffer_out_ce0;
+wire    grp_writeToRAM_fu_1119_buffer_out_we0;
+wire   [31:0] grp_writeToRAM_fu_1119_buffer_out_d0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_count_s_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_count_s_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_0_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_11_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_11_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_10_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_10_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_9_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_9_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_8_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_8_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_7_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_7_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_6_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_6_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_5_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_5_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_4_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_4_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_3_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_3_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_2_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_2_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_1_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_1_ce0;
+wire   [4:0] grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_0_address0;
+wire    grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_0_ce0;
+wire   [31:0] grp_writeToRAM_fu_1119_ap_return;
+reg    grp_loadSlidingWindow_fu_601_ap_start_reg;
+reg    ap_block_state1_ignore_call39;
+reg    grp_writeToRAM_fu_1119_ap_start_reg;
+wire    ap_CS_fsm_state3;
+wire    ap_CS_fsm_state4;
+reg    ap_block_state1;
 reg    ap_block_state4_on_subcall_done;
-reg    ap_block_state3;
-reg    grp_loadSlidingWindow_fu_205_ap_start_reg;
-reg    ap_block_state3_ignore_call1;
-wire   [63:0] zext_ln12_fu_242_p1;
-wire    ap_CS_fsm_state5;
-wire   [0:0] icmp_ln94_fu_257_p2;
-wire   [7:0] zext_ln90_fu_253_p1;
-reg   [4:0] ap_NS_fsm;
+reg   [3:0] ap_NS_fsm;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 5'd1;
+#0 ap_CS_fsm = 4'd1;
 #0 n_samples_preg = 6'd0;
 #0 n_samples_ap_vld_preg = 1'b0;
-#0 grp_loadSlidingWindow_fu_205_ap_start_reg = 1'b0;
+#0 sliding_window_front_ptr_s = 6'd0;
+#0 sliding_window_back_ptr_s = 6'd0;
+#0 grp_loadSlidingWindow_fu_601_ap_start_reg = 1'b0;
+#0 grp_writeToRAM_fu_1119_ap_start_reg = 1'b0;
 end
 
-SlidingWindowMagSampleFetcher_axi_s_axi #(
-    .C_S_AXI_ADDR_WIDTH( C_S_AXI_AXI_ADDR_WIDTH ),
-    .C_S_AXI_DATA_WIDTH( C_S_AXI_AXI_DATA_WIDTH ))
-axi_s_axi_U(
-    .AWVALID(s_axi_axi_AWVALID),
-    .AWREADY(s_axi_axi_AWREADY),
-    .AWADDR(s_axi_axi_AWADDR),
-    .WVALID(s_axi_axi_WVALID),
-    .WREADY(s_axi_axi_WREADY),
-    .WDATA(s_axi_axi_WDATA),
-    .WSTRB(s_axi_axi_WSTRB),
-    .ARVALID(s_axi_axi_ARVALID),
-    .ARREADY(s_axi_axi_ARREADY),
-    .ARADDR(s_axi_axi_ARADDR),
-    .RVALID(s_axi_axi_RVALID),
-    .RREADY(s_axi_axi_RREADY),
-    .RDATA(s_axi_axi_RDATA),
-    .RRESP(s_axi_axi_RRESP),
-    .BVALID(s_axi_axi_BVALID),
-    .BREADY(s_axi_axi_BREADY),
-    .BRESP(s_axi_axi_BRESP),
-    .ACLK(ap_clk),
-    .ARESET(ap_rst_n_inv),
-    .ACLK_EN(1'b1),
-    .n_periods(n_periods),
-    .n_samples_out(32'd0),
-    .n_samples_out_ap_vld(n_samples_out_ap_vld),
-    .ap_start(ap_start),
-    .interrupt(interrupt),
-    .ap_ready(ap_ready),
-    .ap_done(ap_done),
-    .ap_idle(ap_idle)
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_0_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_0_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_0_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_0_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_0_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_0_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_0_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_0_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_0_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_0_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_1_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_1_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_1_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_1_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_1_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_1_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_1_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_1_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_1_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_1_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_2_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_2_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_2_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_2_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_2_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_2_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_2_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_2_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_2_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_2_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_3_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_3_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_3_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_3_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_3_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_3_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_3_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_3_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_3_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_3_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_4_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_4_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_4_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_4_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_4_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_4_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_4_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_4_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_4_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_4_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_5_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_5_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_5_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_5_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_5_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_5_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_5_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_5_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_5_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_5_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_6_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_6_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_6_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_6_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_6_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_6_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_6_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_6_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_6_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_6_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_7_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_7_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_7_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_7_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_7_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_7_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_7_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_7_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_7_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_7_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_8_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_8_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_8_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_8_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_8_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_8_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_8_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_8_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_8_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_8_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_0_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_0_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_1_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_1_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_2_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_2_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_3_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_3_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_4_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_4_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_5_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_5_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_6_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_6_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_7_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_7_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_8_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_8_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_9_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_9_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_10_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_10_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_sample_V_0_0 #(
+    .DataWidth( 12 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_sample_V_9_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_sample_V_9_11_address0),
+    .ce0(sliding_window_buffer_samples_sample_V_9_11_ce0),
+    .we0(sliding_window_buffer_samples_sample_V_9_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_d0),
+    .q0(sliding_window_buffer_samples_sample_V_9_11_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_0_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_0_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_0_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_0_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_0_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_1_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_1_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_1_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_1_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_2_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_2_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_2_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_2_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_3_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_3_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_3_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_3_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_4_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_4_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_4_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_4_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_5_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_5_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_5_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_5_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_6_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_6_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_6_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_6_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_7_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_7_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_7_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_7_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_8_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_8_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_8_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_8_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_9_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_9_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_9_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_9_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_10_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_10_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_10_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_10_q0)
+);
+
+SlidingWindowMagSampleFetcher_sliding_window_buffer_samples_timestamp_V_0_0 #(
+    .DataWidth( 20 ),
+    .AddressRange( 32 ),
+    .AddressWidth( 5 ))
+sliding_window_buffer_samples_timestamp_V_9_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(sliding_window_buffer_samples_timestamp_V_9_11_address0),
+    .ce0(sliding_window_buffer_samples_timestamp_V_9_11_ce0),
+    .we0(sliding_window_buffer_samples_timestamp_V_9_11_we0),
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_d0),
+    .q0(sliding_window_buffer_samples_timestamp_V_9_11_q0)
 );
 
 SlidingWindowMagSampleFetcher_sliding_window_buffer_count_s #(
@@ -300,65 +5983,1772 @@ SlidingWindowMagSampleFetcher_sliding_window_buffer_count_s #(
     .AddressWidth( 5 ))
 sliding_window_buffer_count_s_U(
     .clk(ap_clk),
-    .reset(ap_rst_n_inv),
+    .reset(ap_rst),
     .address0(sliding_window_buffer_count_s_address0),
     .ce0(sliding_window_buffer_count_s_ce0),
     .we0(sliding_window_buffer_count_s_we0),
-    .d0(sliding_window_buffer_count_s_d0)
+    .d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_d0),
+    .q0(sliding_window_buffer_count_s_q0)
 );
 
-SlidingWindowMagSampleFetcher_loadSlidingWindow grp_loadSlidingWindow_fu_205(
+SlidingWindowMagSampleFetcher_loadSlidingWindow grp_loadSlidingWindow_fu_601(
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_loadSlidingWindow_fu_205_ap_start),
-    .ap_done(grp_loadSlidingWindow_fu_205_ap_done),
-    .ap_idle(grp_loadSlidingWindow_fu_205_ap_idle),
-    .ap_ready(grp_loadSlidingWindow_fu_205_ap_ready),
-    .buffer_in_0_address0(grp_loadSlidingWindow_fu_205_buffer_in_0_address0),
-    .buffer_in_0_ce0(grp_loadSlidingWindow_fu_205_buffer_in_0_ce0),
+    .ap_rst(ap_rst),
+    .ap_start(grp_loadSlidingWindow_fu_601_ap_start),
+    .ap_done(grp_loadSlidingWindow_fu_601_ap_done),
+    .ap_idle(grp_loadSlidingWindow_fu_601_ap_idle),
+    .ap_ready(grp_loadSlidingWindow_fu_601_ap_ready),
+    .buffer_in_0_address0(grp_loadSlidingWindow_fu_601_buffer_in_0_address0),
+    .buffer_in_0_ce0(grp_loadSlidingWindow_fu_601_buffer_in_0_ce0),
     .buffer_in_0_q0(buffer_in_0_q0),
-    .buffer_in_1_address0(grp_loadSlidingWindow_fu_205_buffer_in_1_address0),
-    .buffer_in_1_ce0(grp_loadSlidingWindow_fu_205_buffer_in_1_ce0),
+    .buffer_in_1_address0(grp_loadSlidingWindow_fu_601_buffer_in_1_address0),
+    .buffer_in_1_ce0(grp_loadSlidingWindow_fu_601_buffer_in_1_ce0),
     .buffer_in_1_q0(buffer_in_1_q0),
-    .buffer_in_2_address0(grp_loadSlidingWindow_fu_205_buffer_in_2_address0),
-    .buffer_in_2_ce0(grp_loadSlidingWindow_fu_205_buffer_in_2_ce0),
+    .buffer_in_2_address0(grp_loadSlidingWindow_fu_601_buffer_in_2_address0),
+    .buffer_in_2_ce0(grp_loadSlidingWindow_fu_601_buffer_in_2_ce0),
     .buffer_in_2_q0(buffer_in_2_q0),
-    .buffer_in_3_address0(grp_loadSlidingWindow_fu_205_buffer_in_3_address0),
-    .buffer_in_3_ce0(grp_loadSlidingWindow_fu_205_buffer_in_3_ce0),
+    .buffer_in_3_address0(grp_loadSlidingWindow_fu_601_buffer_in_3_address0),
+    .buffer_in_3_ce0(grp_loadSlidingWindow_fu_601_buffer_in_3_ce0),
     .buffer_in_3_q0(buffer_in_3_q0),
-    .buffer_in_4_address0(grp_loadSlidingWindow_fu_205_buffer_in_4_address0),
-    .buffer_in_4_ce0(grp_loadSlidingWindow_fu_205_buffer_in_4_ce0),
+    .buffer_in_4_address0(grp_loadSlidingWindow_fu_601_buffer_in_4_address0),
+    .buffer_in_4_ce0(grp_loadSlidingWindow_fu_601_buffer_in_4_ce0),
     .buffer_in_4_q0(buffer_in_4_q0),
-    .buffer_in_5_address0(grp_loadSlidingWindow_fu_205_buffer_in_5_address0),
-    .buffer_in_5_ce0(grp_loadSlidingWindow_fu_205_buffer_in_5_ce0),
+    .buffer_in_5_address0(grp_loadSlidingWindow_fu_601_buffer_in_5_address0),
+    .buffer_in_5_ce0(grp_loadSlidingWindow_fu_601_buffer_in_5_ce0),
     .buffer_in_5_q0(buffer_in_5_q0),
-    .buffer_in_6_address0(grp_loadSlidingWindow_fu_205_buffer_in_6_address0),
-    .buffer_in_6_ce0(grp_loadSlidingWindow_fu_205_buffer_in_6_ce0),
+    .buffer_in_6_address0(grp_loadSlidingWindow_fu_601_buffer_in_6_address0),
+    .buffer_in_6_ce0(grp_loadSlidingWindow_fu_601_buffer_in_6_ce0),
     .buffer_in_6_q0(buffer_in_6_q0),
-    .buffer_in_7_address0(grp_loadSlidingWindow_fu_205_buffer_in_7_address0),
-    .buffer_in_7_ce0(grp_loadSlidingWindow_fu_205_buffer_in_7_ce0),
+    .buffer_in_7_address0(grp_loadSlidingWindow_fu_601_buffer_in_7_address0),
+    .buffer_in_7_ce0(grp_loadSlidingWindow_fu_601_buffer_in_7_ce0),
     .buffer_in_7_q0(buffer_in_7_q0),
-    .buffer_in_8_address0(grp_loadSlidingWindow_fu_205_buffer_in_8_address0),
-    .buffer_in_8_ce0(grp_loadSlidingWindow_fu_205_buffer_in_8_ce0),
+    .buffer_in_8_address0(grp_loadSlidingWindow_fu_601_buffer_in_8_address0),
+    .buffer_in_8_ce0(grp_loadSlidingWindow_fu_601_buffer_in_8_ce0),
     .buffer_in_8_q0(buffer_in_8_q0),
-    .buffer_in_9_address0(grp_loadSlidingWindow_fu_205_buffer_in_9_address0),
-    .buffer_in_9_ce0(grp_loadSlidingWindow_fu_205_buffer_in_9_ce0),
+    .buffer_in_9_address0(grp_loadSlidingWindow_fu_601_buffer_in_9_address0),
+    .buffer_in_9_ce0(grp_loadSlidingWindow_fu_601_buffer_in_9_ce0),
     .buffer_in_9_q0(buffer_in_9_q0),
-    .buffer_in_10_address0(grp_loadSlidingWindow_fu_205_buffer_in_10_address0),
-    .buffer_in_10_ce0(grp_loadSlidingWindow_fu_205_buffer_in_10_ce0),
+    .buffer_in_10_address0(grp_loadSlidingWindow_fu_601_buffer_in_10_address0),
+    .buffer_in_10_ce0(grp_loadSlidingWindow_fu_601_buffer_in_10_ce0),
     .buffer_in_10_q0(buffer_in_10_q0),
-    .buffer_in_11_address0(grp_loadSlidingWindow_fu_205_buffer_in_11_address0),
-    .buffer_in_11_ce0(grp_loadSlidingWindow_fu_205_buffer_in_11_ce0),
+    .buffer_in_11_address0(grp_loadSlidingWindow_fu_601_buffer_in_11_address0),
+    .buffer_in_11_ce0(grp_loadSlidingWindow_fu_601_buffer_in_11_ce0),
     .buffer_in_11_q0(buffer_in_11_q0),
-    .sliding_window_buffer_1_address0(grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_address0),
-    .sliding_window_buffer_1_ce0(grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_ce0),
-    .sliding_window_buffer_1_we0(grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_we0),
-    .sliding_window_buffer_1_d0(grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_d0),
-    .n_samples(n_samples_in_sig)
+    .n_samples(n_samples_in_sig),
+    .sliding_window_front_ptr_s_i(sliding_window_front_ptr_s),
+    .sliding_window_front_ptr_s_o(grp_loadSlidingWindow_fu_601_sliding_window_front_ptr_s_o),
+    .sliding_window_front_ptr_s_o_ap_vld(grp_loadSlidingWindow_fu_601_sliding_window_front_ptr_s_o_ap_vld),
+    .sliding_window_buffer_samples_sample_V_0_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_address0),
+    .sliding_window_buffer_samples_sample_V_0_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_ce0),
+    .sliding_window_buffer_samples_sample_V_0_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_we0),
+    .sliding_window_buffer_samples_sample_V_0_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_d0),
+    .sliding_window_buffer_samples_sample_V_0_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_address0),
+    .sliding_window_buffer_samples_sample_V_0_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_ce0),
+    .sliding_window_buffer_samples_sample_V_0_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_we0),
+    .sliding_window_buffer_samples_sample_V_0_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_d0),
+    .sliding_window_buffer_samples_sample_V_0_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_address0),
+    .sliding_window_buffer_samples_sample_V_0_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_ce0),
+    .sliding_window_buffer_samples_sample_V_0_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_we0),
+    .sliding_window_buffer_samples_sample_V_0_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_d0),
+    .sliding_window_buffer_samples_sample_V_0_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_address0),
+    .sliding_window_buffer_samples_sample_V_0_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_ce0),
+    .sliding_window_buffer_samples_sample_V_0_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_we0),
+    .sliding_window_buffer_samples_sample_V_0_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_d0),
+    .sliding_window_buffer_samples_sample_V_0_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_address0),
+    .sliding_window_buffer_samples_sample_V_0_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_ce0),
+    .sliding_window_buffer_samples_sample_V_0_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_we0),
+    .sliding_window_buffer_samples_sample_V_0_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_d0),
+    .sliding_window_buffer_samples_sample_V_0_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_address0),
+    .sliding_window_buffer_samples_sample_V_0_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_ce0),
+    .sliding_window_buffer_samples_sample_V_0_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_we0),
+    .sliding_window_buffer_samples_sample_V_0_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_d0),
+    .sliding_window_buffer_samples_sample_V_0_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_address0),
+    .sliding_window_buffer_samples_sample_V_0_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_ce0),
+    .sliding_window_buffer_samples_sample_V_0_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_we0),
+    .sliding_window_buffer_samples_sample_V_0_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_d0),
+    .sliding_window_buffer_samples_sample_V_0_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_address0),
+    .sliding_window_buffer_samples_sample_V_0_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_ce0),
+    .sliding_window_buffer_samples_sample_V_0_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_we0),
+    .sliding_window_buffer_samples_sample_V_0_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_d0),
+    .sliding_window_buffer_samples_sample_V_0_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_address0),
+    .sliding_window_buffer_samples_sample_V_0_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_ce0),
+    .sliding_window_buffer_samples_sample_V_0_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_we0),
+    .sliding_window_buffer_samples_sample_V_0_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_d0),
+    .sliding_window_buffer_samples_sample_V_0_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_address0),
+    .sliding_window_buffer_samples_sample_V_0_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_ce0),
+    .sliding_window_buffer_samples_sample_V_0_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_we0),
+    .sliding_window_buffer_samples_sample_V_0_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_d0),
+    .sliding_window_buffer_samples_sample_V_0_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_address0),
+    .sliding_window_buffer_samples_sample_V_0_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_ce0),
+    .sliding_window_buffer_samples_sample_V_0_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_we0),
+    .sliding_window_buffer_samples_sample_V_0_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_d0),
+    .sliding_window_buffer_samples_sample_V_0_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_address0),
+    .sliding_window_buffer_samples_sample_V_0_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_ce0),
+    .sliding_window_buffer_samples_sample_V_0_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_we0),
+    .sliding_window_buffer_samples_sample_V_0_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_0_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_0_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_d0),
+    .sliding_window_buffer_samples_sample_V_1_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_address0),
+    .sliding_window_buffer_samples_sample_V_1_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_ce0),
+    .sliding_window_buffer_samples_sample_V_1_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_we0),
+    .sliding_window_buffer_samples_sample_V_1_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_d0),
+    .sliding_window_buffer_samples_sample_V_1_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_address0),
+    .sliding_window_buffer_samples_sample_V_1_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_ce0),
+    .sliding_window_buffer_samples_sample_V_1_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_we0),
+    .sliding_window_buffer_samples_sample_V_1_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_d0),
+    .sliding_window_buffer_samples_sample_V_1_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_address0),
+    .sliding_window_buffer_samples_sample_V_1_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_ce0),
+    .sliding_window_buffer_samples_sample_V_1_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_we0),
+    .sliding_window_buffer_samples_sample_V_1_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_d0),
+    .sliding_window_buffer_samples_sample_V_1_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_address0),
+    .sliding_window_buffer_samples_sample_V_1_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_ce0),
+    .sliding_window_buffer_samples_sample_V_1_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_we0),
+    .sliding_window_buffer_samples_sample_V_1_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_d0),
+    .sliding_window_buffer_samples_sample_V_1_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_address0),
+    .sliding_window_buffer_samples_sample_V_1_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_ce0),
+    .sliding_window_buffer_samples_sample_V_1_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_we0),
+    .sliding_window_buffer_samples_sample_V_1_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_d0),
+    .sliding_window_buffer_samples_sample_V_1_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_address0),
+    .sliding_window_buffer_samples_sample_V_1_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_ce0),
+    .sliding_window_buffer_samples_sample_V_1_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_we0),
+    .sliding_window_buffer_samples_sample_V_1_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_d0),
+    .sliding_window_buffer_samples_sample_V_1_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_address0),
+    .sliding_window_buffer_samples_sample_V_1_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_ce0),
+    .sliding_window_buffer_samples_sample_V_1_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_we0),
+    .sliding_window_buffer_samples_sample_V_1_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_d0),
+    .sliding_window_buffer_samples_sample_V_1_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_address0),
+    .sliding_window_buffer_samples_sample_V_1_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_ce0),
+    .sliding_window_buffer_samples_sample_V_1_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_we0),
+    .sliding_window_buffer_samples_sample_V_1_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_d0),
+    .sliding_window_buffer_samples_sample_V_1_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_address0),
+    .sliding_window_buffer_samples_sample_V_1_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_ce0),
+    .sliding_window_buffer_samples_sample_V_1_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_we0),
+    .sliding_window_buffer_samples_sample_V_1_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_d0),
+    .sliding_window_buffer_samples_sample_V_1_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_address0),
+    .sliding_window_buffer_samples_sample_V_1_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_ce0),
+    .sliding_window_buffer_samples_sample_V_1_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_we0),
+    .sliding_window_buffer_samples_sample_V_1_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_d0),
+    .sliding_window_buffer_samples_sample_V_1_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_address0),
+    .sliding_window_buffer_samples_sample_V_1_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_ce0),
+    .sliding_window_buffer_samples_sample_V_1_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_we0),
+    .sliding_window_buffer_samples_sample_V_1_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_d0),
+    .sliding_window_buffer_samples_sample_V_1_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_address0),
+    .sliding_window_buffer_samples_sample_V_1_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_ce0),
+    .sliding_window_buffer_samples_sample_V_1_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_we0),
+    .sliding_window_buffer_samples_sample_V_1_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_1_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_1_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_d0),
+    .sliding_window_buffer_samples_sample_V_2_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_address0),
+    .sliding_window_buffer_samples_sample_V_2_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_ce0),
+    .sliding_window_buffer_samples_sample_V_2_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_we0),
+    .sliding_window_buffer_samples_sample_V_2_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_d0),
+    .sliding_window_buffer_samples_sample_V_2_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_address0),
+    .sliding_window_buffer_samples_sample_V_2_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_ce0),
+    .sliding_window_buffer_samples_sample_V_2_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_we0),
+    .sliding_window_buffer_samples_sample_V_2_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_d0),
+    .sliding_window_buffer_samples_sample_V_2_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_address0),
+    .sliding_window_buffer_samples_sample_V_2_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_ce0),
+    .sliding_window_buffer_samples_sample_V_2_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_we0),
+    .sliding_window_buffer_samples_sample_V_2_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_d0),
+    .sliding_window_buffer_samples_sample_V_2_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_address0),
+    .sliding_window_buffer_samples_sample_V_2_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_ce0),
+    .sliding_window_buffer_samples_sample_V_2_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_we0),
+    .sliding_window_buffer_samples_sample_V_2_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_d0),
+    .sliding_window_buffer_samples_sample_V_2_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_address0),
+    .sliding_window_buffer_samples_sample_V_2_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_ce0),
+    .sliding_window_buffer_samples_sample_V_2_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_we0),
+    .sliding_window_buffer_samples_sample_V_2_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_d0),
+    .sliding_window_buffer_samples_sample_V_2_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_address0),
+    .sliding_window_buffer_samples_sample_V_2_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_ce0),
+    .sliding_window_buffer_samples_sample_V_2_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_we0),
+    .sliding_window_buffer_samples_sample_V_2_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_d0),
+    .sliding_window_buffer_samples_sample_V_2_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_address0),
+    .sliding_window_buffer_samples_sample_V_2_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_ce0),
+    .sliding_window_buffer_samples_sample_V_2_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_we0),
+    .sliding_window_buffer_samples_sample_V_2_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_d0),
+    .sliding_window_buffer_samples_sample_V_2_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_address0),
+    .sliding_window_buffer_samples_sample_V_2_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_ce0),
+    .sliding_window_buffer_samples_sample_V_2_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_we0),
+    .sliding_window_buffer_samples_sample_V_2_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_d0),
+    .sliding_window_buffer_samples_sample_V_2_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_address0),
+    .sliding_window_buffer_samples_sample_V_2_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_ce0),
+    .sliding_window_buffer_samples_sample_V_2_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_we0),
+    .sliding_window_buffer_samples_sample_V_2_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_d0),
+    .sliding_window_buffer_samples_sample_V_2_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_address0),
+    .sliding_window_buffer_samples_sample_V_2_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_ce0),
+    .sliding_window_buffer_samples_sample_V_2_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_we0),
+    .sliding_window_buffer_samples_sample_V_2_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_d0),
+    .sliding_window_buffer_samples_sample_V_2_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_address0),
+    .sliding_window_buffer_samples_sample_V_2_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_ce0),
+    .sliding_window_buffer_samples_sample_V_2_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_we0),
+    .sliding_window_buffer_samples_sample_V_2_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_d0),
+    .sliding_window_buffer_samples_sample_V_2_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_address0),
+    .sliding_window_buffer_samples_sample_V_2_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_ce0),
+    .sliding_window_buffer_samples_sample_V_2_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_we0),
+    .sliding_window_buffer_samples_sample_V_2_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_2_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_2_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_d0),
+    .sliding_window_buffer_samples_sample_V_3_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_address0),
+    .sliding_window_buffer_samples_sample_V_3_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_ce0),
+    .sliding_window_buffer_samples_sample_V_3_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_we0),
+    .sliding_window_buffer_samples_sample_V_3_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_d0),
+    .sliding_window_buffer_samples_sample_V_3_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_address0),
+    .sliding_window_buffer_samples_sample_V_3_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_ce0),
+    .sliding_window_buffer_samples_sample_V_3_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_we0),
+    .sliding_window_buffer_samples_sample_V_3_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_d0),
+    .sliding_window_buffer_samples_sample_V_3_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_address0),
+    .sliding_window_buffer_samples_sample_V_3_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_ce0),
+    .sliding_window_buffer_samples_sample_V_3_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_we0),
+    .sliding_window_buffer_samples_sample_V_3_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_d0),
+    .sliding_window_buffer_samples_sample_V_3_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_address0),
+    .sliding_window_buffer_samples_sample_V_3_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_ce0),
+    .sliding_window_buffer_samples_sample_V_3_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_we0),
+    .sliding_window_buffer_samples_sample_V_3_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_d0),
+    .sliding_window_buffer_samples_sample_V_3_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_address0),
+    .sliding_window_buffer_samples_sample_V_3_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_ce0),
+    .sliding_window_buffer_samples_sample_V_3_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_we0),
+    .sliding_window_buffer_samples_sample_V_3_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_d0),
+    .sliding_window_buffer_samples_sample_V_3_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_address0),
+    .sliding_window_buffer_samples_sample_V_3_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_ce0),
+    .sliding_window_buffer_samples_sample_V_3_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_we0),
+    .sliding_window_buffer_samples_sample_V_3_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_d0),
+    .sliding_window_buffer_samples_sample_V_3_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_address0),
+    .sliding_window_buffer_samples_sample_V_3_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_ce0),
+    .sliding_window_buffer_samples_sample_V_3_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_we0),
+    .sliding_window_buffer_samples_sample_V_3_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_d0),
+    .sliding_window_buffer_samples_sample_V_3_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_address0),
+    .sliding_window_buffer_samples_sample_V_3_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_ce0),
+    .sliding_window_buffer_samples_sample_V_3_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_we0),
+    .sliding_window_buffer_samples_sample_V_3_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_d0),
+    .sliding_window_buffer_samples_sample_V_3_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_address0),
+    .sliding_window_buffer_samples_sample_V_3_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_ce0),
+    .sliding_window_buffer_samples_sample_V_3_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_we0),
+    .sliding_window_buffer_samples_sample_V_3_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_d0),
+    .sliding_window_buffer_samples_sample_V_3_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_address0),
+    .sliding_window_buffer_samples_sample_V_3_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_ce0),
+    .sliding_window_buffer_samples_sample_V_3_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_we0),
+    .sliding_window_buffer_samples_sample_V_3_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_d0),
+    .sliding_window_buffer_samples_sample_V_3_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_address0),
+    .sliding_window_buffer_samples_sample_V_3_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_ce0),
+    .sliding_window_buffer_samples_sample_V_3_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_we0),
+    .sliding_window_buffer_samples_sample_V_3_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_d0),
+    .sliding_window_buffer_samples_sample_V_3_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_address0),
+    .sliding_window_buffer_samples_sample_V_3_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_ce0),
+    .sliding_window_buffer_samples_sample_V_3_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_we0),
+    .sliding_window_buffer_samples_sample_V_3_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_3_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_3_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_d0),
+    .sliding_window_buffer_samples_sample_V_4_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_address0),
+    .sliding_window_buffer_samples_sample_V_4_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_ce0),
+    .sliding_window_buffer_samples_sample_V_4_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_we0),
+    .sliding_window_buffer_samples_sample_V_4_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_d0),
+    .sliding_window_buffer_samples_sample_V_4_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_address0),
+    .sliding_window_buffer_samples_sample_V_4_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_ce0),
+    .sliding_window_buffer_samples_sample_V_4_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_we0),
+    .sliding_window_buffer_samples_sample_V_4_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_d0),
+    .sliding_window_buffer_samples_sample_V_4_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_address0),
+    .sliding_window_buffer_samples_sample_V_4_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_ce0),
+    .sliding_window_buffer_samples_sample_V_4_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_we0),
+    .sliding_window_buffer_samples_sample_V_4_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_d0),
+    .sliding_window_buffer_samples_sample_V_4_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_address0),
+    .sliding_window_buffer_samples_sample_V_4_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_ce0),
+    .sliding_window_buffer_samples_sample_V_4_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_we0),
+    .sliding_window_buffer_samples_sample_V_4_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_d0),
+    .sliding_window_buffer_samples_sample_V_4_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_address0),
+    .sliding_window_buffer_samples_sample_V_4_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_ce0),
+    .sliding_window_buffer_samples_sample_V_4_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_we0),
+    .sliding_window_buffer_samples_sample_V_4_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_d0),
+    .sliding_window_buffer_samples_sample_V_4_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_address0),
+    .sliding_window_buffer_samples_sample_V_4_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_ce0),
+    .sliding_window_buffer_samples_sample_V_4_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_we0),
+    .sliding_window_buffer_samples_sample_V_4_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_d0),
+    .sliding_window_buffer_samples_sample_V_4_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_address0),
+    .sliding_window_buffer_samples_sample_V_4_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_ce0),
+    .sliding_window_buffer_samples_sample_V_4_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_we0),
+    .sliding_window_buffer_samples_sample_V_4_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_d0),
+    .sliding_window_buffer_samples_sample_V_4_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_address0),
+    .sliding_window_buffer_samples_sample_V_4_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_ce0),
+    .sliding_window_buffer_samples_sample_V_4_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_we0),
+    .sliding_window_buffer_samples_sample_V_4_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_d0),
+    .sliding_window_buffer_samples_sample_V_4_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_address0),
+    .sliding_window_buffer_samples_sample_V_4_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_ce0),
+    .sliding_window_buffer_samples_sample_V_4_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_we0),
+    .sliding_window_buffer_samples_sample_V_4_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_d0),
+    .sliding_window_buffer_samples_sample_V_4_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_address0),
+    .sliding_window_buffer_samples_sample_V_4_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_ce0),
+    .sliding_window_buffer_samples_sample_V_4_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_we0),
+    .sliding_window_buffer_samples_sample_V_4_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_d0),
+    .sliding_window_buffer_samples_sample_V_4_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_address0),
+    .sliding_window_buffer_samples_sample_V_4_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_ce0),
+    .sliding_window_buffer_samples_sample_V_4_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_we0),
+    .sliding_window_buffer_samples_sample_V_4_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_d0),
+    .sliding_window_buffer_samples_sample_V_4_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_address0),
+    .sliding_window_buffer_samples_sample_V_4_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_ce0),
+    .sliding_window_buffer_samples_sample_V_4_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_we0),
+    .sliding_window_buffer_samples_sample_V_4_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_4_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_4_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_d0),
+    .sliding_window_buffer_samples_sample_V_5_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_address0),
+    .sliding_window_buffer_samples_sample_V_5_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_ce0),
+    .sliding_window_buffer_samples_sample_V_5_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_we0),
+    .sliding_window_buffer_samples_sample_V_5_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_d0),
+    .sliding_window_buffer_samples_sample_V_5_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_address0),
+    .sliding_window_buffer_samples_sample_V_5_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_ce0),
+    .sliding_window_buffer_samples_sample_V_5_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_we0),
+    .sliding_window_buffer_samples_sample_V_5_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_d0),
+    .sliding_window_buffer_samples_sample_V_5_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_address0),
+    .sliding_window_buffer_samples_sample_V_5_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_ce0),
+    .sliding_window_buffer_samples_sample_V_5_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_we0),
+    .sliding_window_buffer_samples_sample_V_5_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_d0),
+    .sliding_window_buffer_samples_sample_V_5_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_address0),
+    .sliding_window_buffer_samples_sample_V_5_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_ce0),
+    .sliding_window_buffer_samples_sample_V_5_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_we0),
+    .sliding_window_buffer_samples_sample_V_5_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_d0),
+    .sliding_window_buffer_samples_sample_V_5_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_address0),
+    .sliding_window_buffer_samples_sample_V_5_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_ce0),
+    .sliding_window_buffer_samples_sample_V_5_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_we0),
+    .sliding_window_buffer_samples_sample_V_5_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_d0),
+    .sliding_window_buffer_samples_sample_V_5_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_address0),
+    .sliding_window_buffer_samples_sample_V_5_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_ce0),
+    .sliding_window_buffer_samples_sample_V_5_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_we0),
+    .sliding_window_buffer_samples_sample_V_5_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_d0),
+    .sliding_window_buffer_samples_sample_V_5_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_address0),
+    .sliding_window_buffer_samples_sample_V_5_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_ce0),
+    .sliding_window_buffer_samples_sample_V_5_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_we0),
+    .sliding_window_buffer_samples_sample_V_5_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_d0),
+    .sliding_window_buffer_samples_sample_V_5_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_address0),
+    .sliding_window_buffer_samples_sample_V_5_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_ce0),
+    .sliding_window_buffer_samples_sample_V_5_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_we0),
+    .sliding_window_buffer_samples_sample_V_5_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_d0),
+    .sliding_window_buffer_samples_sample_V_5_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_address0),
+    .sliding_window_buffer_samples_sample_V_5_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_ce0),
+    .sliding_window_buffer_samples_sample_V_5_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_we0),
+    .sliding_window_buffer_samples_sample_V_5_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_d0),
+    .sliding_window_buffer_samples_sample_V_5_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_address0),
+    .sliding_window_buffer_samples_sample_V_5_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_ce0),
+    .sliding_window_buffer_samples_sample_V_5_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_we0),
+    .sliding_window_buffer_samples_sample_V_5_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_d0),
+    .sliding_window_buffer_samples_sample_V_5_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_address0),
+    .sliding_window_buffer_samples_sample_V_5_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_ce0),
+    .sliding_window_buffer_samples_sample_V_5_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_we0),
+    .sliding_window_buffer_samples_sample_V_5_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_d0),
+    .sliding_window_buffer_samples_sample_V_5_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_address0),
+    .sliding_window_buffer_samples_sample_V_5_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_ce0),
+    .sliding_window_buffer_samples_sample_V_5_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_we0),
+    .sliding_window_buffer_samples_sample_V_5_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_5_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_5_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_d0),
+    .sliding_window_buffer_samples_sample_V_6_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_address0),
+    .sliding_window_buffer_samples_sample_V_6_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_ce0),
+    .sliding_window_buffer_samples_sample_V_6_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_we0),
+    .sliding_window_buffer_samples_sample_V_6_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_d0),
+    .sliding_window_buffer_samples_sample_V_6_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_address0),
+    .sliding_window_buffer_samples_sample_V_6_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_ce0),
+    .sliding_window_buffer_samples_sample_V_6_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_we0),
+    .sliding_window_buffer_samples_sample_V_6_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_d0),
+    .sliding_window_buffer_samples_sample_V_6_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_address0),
+    .sliding_window_buffer_samples_sample_V_6_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_ce0),
+    .sliding_window_buffer_samples_sample_V_6_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_we0),
+    .sliding_window_buffer_samples_sample_V_6_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_d0),
+    .sliding_window_buffer_samples_sample_V_6_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_address0),
+    .sliding_window_buffer_samples_sample_V_6_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_ce0),
+    .sliding_window_buffer_samples_sample_V_6_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_we0),
+    .sliding_window_buffer_samples_sample_V_6_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_d0),
+    .sliding_window_buffer_samples_sample_V_6_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_address0),
+    .sliding_window_buffer_samples_sample_V_6_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_ce0),
+    .sliding_window_buffer_samples_sample_V_6_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_we0),
+    .sliding_window_buffer_samples_sample_V_6_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_d0),
+    .sliding_window_buffer_samples_sample_V_6_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_address0),
+    .sliding_window_buffer_samples_sample_V_6_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_ce0),
+    .sliding_window_buffer_samples_sample_V_6_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_we0),
+    .sliding_window_buffer_samples_sample_V_6_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_d0),
+    .sliding_window_buffer_samples_sample_V_6_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_address0),
+    .sliding_window_buffer_samples_sample_V_6_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_ce0),
+    .sliding_window_buffer_samples_sample_V_6_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_we0),
+    .sliding_window_buffer_samples_sample_V_6_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_d0),
+    .sliding_window_buffer_samples_sample_V_6_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_address0),
+    .sliding_window_buffer_samples_sample_V_6_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_ce0),
+    .sliding_window_buffer_samples_sample_V_6_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_we0),
+    .sliding_window_buffer_samples_sample_V_6_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_d0),
+    .sliding_window_buffer_samples_sample_V_6_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_address0),
+    .sliding_window_buffer_samples_sample_V_6_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_ce0),
+    .sliding_window_buffer_samples_sample_V_6_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_we0),
+    .sliding_window_buffer_samples_sample_V_6_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_d0),
+    .sliding_window_buffer_samples_sample_V_6_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_address0),
+    .sliding_window_buffer_samples_sample_V_6_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_ce0),
+    .sliding_window_buffer_samples_sample_V_6_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_we0),
+    .sliding_window_buffer_samples_sample_V_6_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_d0),
+    .sliding_window_buffer_samples_sample_V_6_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_address0),
+    .sliding_window_buffer_samples_sample_V_6_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_ce0),
+    .sliding_window_buffer_samples_sample_V_6_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_we0),
+    .sliding_window_buffer_samples_sample_V_6_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_d0),
+    .sliding_window_buffer_samples_sample_V_6_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_address0),
+    .sliding_window_buffer_samples_sample_V_6_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_ce0),
+    .sliding_window_buffer_samples_sample_V_6_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_we0),
+    .sliding_window_buffer_samples_sample_V_6_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_6_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_6_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_d0),
+    .sliding_window_buffer_samples_sample_V_7_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_address0),
+    .sliding_window_buffer_samples_sample_V_7_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_ce0),
+    .sliding_window_buffer_samples_sample_V_7_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_we0),
+    .sliding_window_buffer_samples_sample_V_7_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_d0),
+    .sliding_window_buffer_samples_sample_V_7_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_address0),
+    .sliding_window_buffer_samples_sample_V_7_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_ce0),
+    .sliding_window_buffer_samples_sample_V_7_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_we0),
+    .sliding_window_buffer_samples_sample_V_7_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_d0),
+    .sliding_window_buffer_samples_sample_V_7_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_address0),
+    .sliding_window_buffer_samples_sample_V_7_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_ce0),
+    .sliding_window_buffer_samples_sample_V_7_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_we0),
+    .sliding_window_buffer_samples_sample_V_7_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_d0),
+    .sliding_window_buffer_samples_sample_V_7_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_address0),
+    .sliding_window_buffer_samples_sample_V_7_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_ce0),
+    .sliding_window_buffer_samples_sample_V_7_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_we0),
+    .sliding_window_buffer_samples_sample_V_7_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_d0),
+    .sliding_window_buffer_samples_sample_V_7_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_address0),
+    .sliding_window_buffer_samples_sample_V_7_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_ce0),
+    .sliding_window_buffer_samples_sample_V_7_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_we0),
+    .sliding_window_buffer_samples_sample_V_7_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_d0),
+    .sliding_window_buffer_samples_sample_V_7_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_address0),
+    .sliding_window_buffer_samples_sample_V_7_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_ce0),
+    .sliding_window_buffer_samples_sample_V_7_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_we0),
+    .sliding_window_buffer_samples_sample_V_7_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_d0),
+    .sliding_window_buffer_samples_sample_V_7_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_address0),
+    .sliding_window_buffer_samples_sample_V_7_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_ce0),
+    .sliding_window_buffer_samples_sample_V_7_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_we0),
+    .sliding_window_buffer_samples_sample_V_7_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_d0),
+    .sliding_window_buffer_samples_sample_V_7_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_address0),
+    .sliding_window_buffer_samples_sample_V_7_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_ce0),
+    .sliding_window_buffer_samples_sample_V_7_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_we0),
+    .sliding_window_buffer_samples_sample_V_7_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_d0),
+    .sliding_window_buffer_samples_sample_V_7_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_address0),
+    .sliding_window_buffer_samples_sample_V_7_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_ce0),
+    .sliding_window_buffer_samples_sample_V_7_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_we0),
+    .sliding_window_buffer_samples_sample_V_7_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_d0),
+    .sliding_window_buffer_samples_sample_V_7_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_address0),
+    .sliding_window_buffer_samples_sample_V_7_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_ce0),
+    .sliding_window_buffer_samples_sample_V_7_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_we0),
+    .sliding_window_buffer_samples_sample_V_7_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_d0),
+    .sliding_window_buffer_samples_sample_V_7_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_address0),
+    .sliding_window_buffer_samples_sample_V_7_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_ce0),
+    .sliding_window_buffer_samples_sample_V_7_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_we0),
+    .sliding_window_buffer_samples_sample_V_7_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_d0),
+    .sliding_window_buffer_samples_sample_V_7_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_address0),
+    .sliding_window_buffer_samples_sample_V_7_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_ce0),
+    .sliding_window_buffer_samples_sample_V_7_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_we0),
+    .sliding_window_buffer_samples_sample_V_7_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_7_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_7_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_d0),
+    .sliding_window_buffer_samples_sample_V_8_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_address0),
+    .sliding_window_buffer_samples_sample_V_8_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_ce0),
+    .sliding_window_buffer_samples_sample_V_8_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_we0),
+    .sliding_window_buffer_samples_sample_V_8_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_d0),
+    .sliding_window_buffer_samples_sample_V_8_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_address0),
+    .sliding_window_buffer_samples_sample_V_8_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_ce0),
+    .sliding_window_buffer_samples_sample_V_8_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_we0),
+    .sliding_window_buffer_samples_sample_V_8_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_d0),
+    .sliding_window_buffer_samples_sample_V_8_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_address0),
+    .sliding_window_buffer_samples_sample_V_8_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_ce0),
+    .sliding_window_buffer_samples_sample_V_8_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_we0),
+    .sliding_window_buffer_samples_sample_V_8_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_d0),
+    .sliding_window_buffer_samples_sample_V_8_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_address0),
+    .sliding_window_buffer_samples_sample_V_8_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_ce0),
+    .sliding_window_buffer_samples_sample_V_8_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_we0),
+    .sliding_window_buffer_samples_sample_V_8_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_d0),
+    .sliding_window_buffer_samples_sample_V_8_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_address0),
+    .sliding_window_buffer_samples_sample_V_8_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_ce0),
+    .sliding_window_buffer_samples_sample_V_8_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_we0),
+    .sliding_window_buffer_samples_sample_V_8_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_d0),
+    .sliding_window_buffer_samples_sample_V_8_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_address0),
+    .sliding_window_buffer_samples_sample_V_8_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_ce0),
+    .sliding_window_buffer_samples_sample_V_8_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_we0),
+    .sliding_window_buffer_samples_sample_V_8_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_d0),
+    .sliding_window_buffer_samples_sample_V_8_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_address0),
+    .sliding_window_buffer_samples_sample_V_8_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_ce0),
+    .sliding_window_buffer_samples_sample_V_8_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_we0),
+    .sliding_window_buffer_samples_sample_V_8_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_d0),
+    .sliding_window_buffer_samples_sample_V_8_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_address0),
+    .sliding_window_buffer_samples_sample_V_8_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_ce0),
+    .sliding_window_buffer_samples_sample_V_8_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_we0),
+    .sliding_window_buffer_samples_sample_V_8_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_d0),
+    .sliding_window_buffer_samples_sample_V_8_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_address0),
+    .sliding_window_buffer_samples_sample_V_8_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_ce0),
+    .sliding_window_buffer_samples_sample_V_8_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_we0),
+    .sliding_window_buffer_samples_sample_V_8_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_d0),
+    .sliding_window_buffer_samples_sample_V_8_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_address0),
+    .sliding_window_buffer_samples_sample_V_8_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_ce0),
+    .sliding_window_buffer_samples_sample_V_8_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_we0),
+    .sliding_window_buffer_samples_sample_V_8_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_d0),
+    .sliding_window_buffer_samples_sample_V_8_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_address0),
+    .sliding_window_buffer_samples_sample_V_8_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_ce0),
+    .sliding_window_buffer_samples_sample_V_8_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_we0),
+    .sliding_window_buffer_samples_sample_V_8_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_d0),
+    .sliding_window_buffer_samples_sample_V_8_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_address0),
+    .sliding_window_buffer_samples_sample_V_8_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_ce0),
+    .sliding_window_buffer_samples_sample_V_8_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_we0),
+    .sliding_window_buffer_samples_sample_V_8_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_8_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_8_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_d0),
+    .sliding_window_buffer_samples_sample_V_9_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_address0),
+    .sliding_window_buffer_samples_sample_V_9_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_ce0),
+    .sliding_window_buffer_samples_sample_V_9_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_we0),
+    .sliding_window_buffer_samples_sample_V_9_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_d0),
+    .sliding_window_buffer_samples_sample_V_9_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_address0),
+    .sliding_window_buffer_samples_sample_V_9_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_ce0),
+    .sliding_window_buffer_samples_sample_V_9_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_we0),
+    .sliding_window_buffer_samples_sample_V_9_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_d0),
+    .sliding_window_buffer_samples_sample_V_9_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_address0),
+    .sliding_window_buffer_samples_sample_V_9_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_ce0),
+    .sliding_window_buffer_samples_sample_V_9_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_we0),
+    .sliding_window_buffer_samples_sample_V_9_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_d0),
+    .sliding_window_buffer_samples_sample_V_9_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_address0),
+    .sliding_window_buffer_samples_sample_V_9_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_ce0),
+    .sliding_window_buffer_samples_sample_V_9_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_we0),
+    .sliding_window_buffer_samples_sample_V_9_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_d0),
+    .sliding_window_buffer_samples_sample_V_9_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_address0),
+    .sliding_window_buffer_samples_sample_V_9_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_ce0),
+    .sliding_window_buffer_samples_sample_V_9_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_we0),
+    .sliding_window_buffer_samples_sample_V_9_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_d0),
+    .sliding_window_buffer_samples_sample_V_9_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_address0),
+    .sliding_window_buffer_samples_sample_V_9_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_ce0),
+    .sliding_window_buffer_samples_sample_V_9_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_we0),
+    .sliding_window_buffer_samples_sample_V_9_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_d0),
+    .sliding_window_buffer_samples_sample_V_9_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_address0),
+    .sliding_window_buffer_samples_sample_V_9_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_ce0),
+    .sliding_window_buffer_samples_sample_V_9_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_we0),
+    .sliding_window_buffer_samples_sample_V_9_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_d0),
+    .sliding_window_buffer_samples_sample_V_9_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_address0),
+    .sliding_window_buffer_samples_sample_V_9_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_ce0),
+    .sliding_window_buffer_samples_sample_V_9_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_we0),
+    .sliding_window_buffer_samples_sample_V_9_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_d0),
+    .sliding_window_buffer_samples_sample_V_9_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_address0),
+    .sliding_window_buffer_samples_sample_V_9_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_ce0),
+    .sliding_window_buffer_samples_sample_V_9_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_we0),
+    .sliding_window_buffer_samples_sample_V_9_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_d0),
+    .sliding_window_buffer_samples_sample_V_9_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_address0),
+    .sliding_window_buffer_samples_sample_V_9_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_ce0),
+    .sliding_window_buffer_samples_sample_V_9_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_we0),
+    .sliding_window_buffer_samples_sample_V_9_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_d0),
+    .sliding_window_buffer_samples_sample_V_9_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_address0),
+    .sliding_window_buffer_samples_sample_V_9_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_ce0),
+    .sliding_window_buffer_samples_sample_V_9_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_we0),
+    .sliding_window_buffer_samples_sample_V_9_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_d0),
+    .sliding_window_buffer_samples_sample_V_9_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_address0),
+    .sliding_window_buffer_samples_sample_V_9_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_ce0),
+    .sliding_window_buffer_samples_sample_V_9_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_we0),
+    .sliding_window_buffer_samples_sample_V_9_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_0_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_0_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_0_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_0_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_1_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_1_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_1_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_1_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_2_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_2_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_2_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_2_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_3_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_3_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_3_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_3_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_4_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_4_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_4_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_4_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_5_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_5_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_5_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_5_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_6_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_6_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_6_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_6_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_7_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_7_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_7_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_7_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_8_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_8_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_8_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_8_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_9_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_9_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_9_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_9_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_10_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_10_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_10_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_10_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_d0),
+    .sliding_window_buffer_samples_timestamp_V_9_11_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_11_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_11_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_we0),
+    .sliding_window_buffer_samples_timestamp_V_9_11_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_d0),
+    .sliding_window_buffer_count_s_address0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_address0),
+    .sliding_window_buffer_count_s_ce0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_ce0),
+    .sliding_window_buffer_count_s_we0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_we0),
+    .sliding_window_buffer_count_s_d0(grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_d0),
+    .sliding_window_back_ptr_s_i(sliding_window_back_ptr_s),
+    .sliding_window_back_ptr_s_o(grp_loadSlidingWindow_fu_601_sliding_window_back_ptr_s_o),
+    .sliding_window_back_ptr_s_o_ap_vld(grp_loadSlidingWindow_fu_601_sliding_window_back_ptr_s_o_ap_vld)
+);
+
+SlidingWindowMagSampleFetcher_writeToRAM grp_writeToRAM_fu_1119(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_writeToRAM_fu_1119_ap_start),
+    .ap_done(grp_writeToRAM_fu_1119_ap_done),
+    .ap_idle(grp_writeToRAM_fu_1119_ap_idle),
+    .ap_ready(grp_writeToRAM_fu_1119_ap_ready),
+    .buffer_out_address0(grp_writeToRAM_fu_1119_buffer_out_address0),
+    .buffer_out_ce0(grp_writeToRAM_fu_1119_buffer_out_ce0),
+    .buffer_out_we0(grp_writeToRAM_fu_1119_buffer_out_we0),
+    .buffer_out_d0(grp_writeToRAM_fu_1119_buffer_out_d0),
+    .n_periods(n_periods),
+    .sliding_window_front_ptr_s(sliding_window_front_ptr_s),
+    .sliding_window_back_ptr_s(sliding_window_back_ptr_s),
+    .sliding_window_buffer_count_s_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_count_s_address0),
+    .sliding_window_buffer_count_s_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_count_s_ce0),
+    .sliding_window_buffer_count_s_q0(sliding_window_buffer_count_s_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_11_q0(sliding_window_buffer_samples_timestamp_V_9_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_10_q0(sliding_window_buffer_samples_timestamp_V_9_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_9_q0(sliding_window_buffer_samples_timestamp_V_9_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_8_q0(sliding_window_buffer_samples_timestamp_V_9_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_7_q0(sliding_window_buffer_samples_timestamp_V_9_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_6_q0(sliding_window_buffer_samples_timestamp_V_9_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_5_q0(sliding_window_buffer_samples_timestamp_V_9_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_4_q0(sliding_window_buffer_samples_timestamp_V_9_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_3_q0(sliding_window_buffer_samples_timestamp_V_9_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_2_q0(sliding_window_buffer_samples_timestamp_V_9_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_1_q0(sliding_window_buffer_samples_timestamp_V_9_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_9_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_9_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_9_0_q0(sliding_window_buffer_samples_timestamp_V_9_0_q0),
+    .sliding_window_buffer_samples_sample_V_9_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_11_address0),
+    .sliding_window_buffer_samples_sample_V_9_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_11_ce0),
+    .sliding_window_buffer_samples_sample_V_9_11_q0(sliding_window_buffer_samples_sample_V_9_11_q0),
+    .sliding_window_buffer_samples_sample_V_9_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_10_address0),
+    .sliding_window_buffer_samples_sample_V_9_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_10_ce0),
+    .sliding_window_buffer_samples_sample_V_9_10_q0(sliding_window_buffer_samples_sample_V_9_10_q0),
+    .sliding_window_buffer_samples_sample_V_9_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_9_address0),
+    .sliding_window_buffer_samples_sample_V_9_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_9_ce0),
+    .sliding_window_buffer_samples_sample_V_9_9_q0(sliding_window_buffer_samples_sample_V_9_9_q0),
+    .sliding_window_buffer_samples_sample_V_9_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_8_address0),
+    .sliding_window_buffer_samples_sample_V_9_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_8_ce0),
+    .sliding_window_buffer_samples_sample_V_9_8_q0(sliding_window_buffer_samples_sample_V_9_8_q0),
+    .sliding_window_buffer_samples_sample_V_9_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_7_address0),
+    .sliding_window_buffer_samples_sample_V_9_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_7_ce0),
+    .sliding_window_buffer_samples_sample_V_9_7_q0(sliding_window_buffer_samples_sample_V_9_7_q0),
+    .sliding_window_buffer_samples_sample_V_9_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_6_address0),
+    .sliding_window_buffer_samples_sample_V_9_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_6_ce0),
+    .sliding_window_buffer_samples_sample_V_9_6_q0(sliding_window_buffer_samples_sample_V_9_6_q0),
+    .sliding_window_buffer_samples_sample_V_9_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_5_address0),
+    .sliding_window_buffer_samples_sample_V_9_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_5_ce0),
+    .sliding_window_buffer_samples_sample_V_9_5_q0(sliding_window_buffer_samples_sample_V_9_5_q0),
+    .sliding_window_buffer_samples_sample_V_9_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_4_address0),
+    .sliding_window_buffer_samples_sample_V_9_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_4_ce0),
+    .sliding_window_buffer_samples_sample_V_9_4_q0(sliding_window_buffer_samples_sample_V_9_4_q0),
+    .sliding_window_buffer_samples_sample_V_9_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_3_address0),
+    .sliding_window_buffer_samples_sample_V_9_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_3_ce0),
+    .sliding_window_buffer_samples_sample_V_9_3_q0(sliding_window_buffer_samples_sample_V_9_3_q0),
+    .sliding_window_buffer_samples_sample_V_9_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_2_address0),
+    .sliding_window_buffer_samples_sample_V_9_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_2_ce0),
+    .sliding_window_buffer_samples_sample_V_9_2_q0(sliding_window_buffer_samples_sample_V_9_2_q0),
+    .sliding_window_buffer_samples_sample_V_9_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_1_address0),
+    .sliding_window_buffer_samples_sample_V_9_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_1_ce0),
+    .sliding_window_buffer_samples_sample_V_9_1_q0(sliding_window_buffer_samples_sample_V_9_1_q0),
+    .sliding_window_buffer_samples_sample_V_9_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_0_address0),
+    .sliding_window_buffer_samples_sample_V_9_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_0_ce0),
+    .sliding_window_buffer_samples_sample_V_9_0_q0(sliding_window_buffer_samples_sample_V_9_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_11_q0(sliding_window_buffer_samples_timestamp_V_8_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_10_q0(sliding_window_buffer_samples_timestamp_V_8_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_9_q0(sliding_window_buffer_samples_timestamp_V_8_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_8_q0(sliding_window_buffer_samples_timestamp_V_8_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_7_q0(sliding_window_buffer_samples_timestamp_V_8_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_6_q0(sliding_window_buffer_samples_timestamp_V_8_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_5_q0(sliding_window_buffer_samples_timestamp_V_8_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_4_q0(sliding_window_buffer_samples_timestamp_V_8_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_3_q0(sliding_window_buffer_samples_timestamp_V_8_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_2_q0(sliding_window_buffer_samples_timestamp_V_8_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_1_q0(sliding_window_buffer_samples_timestamp_V_8_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_8_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_8_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_8_0_q0(sliding_window_buffer_samples_timestamp_V_8_0_q0),
+    .sliding_window_buffer_samples_sample_V_8_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_11_address0),
+    .sliding_window_buffer_samples_sample_V_8_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_11_ce0),
+    .sliding_window_buffer_samples_sample_V_8_11_q0(sliding_window_buffer_samples_sample_V_8_11_q0),
+    .sliding_window_buffer_samples_sample_V_8_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_10_address0),
+    .sliding_window_buffer_samples_sample_V_8_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_10_ce0),
+    .sliding_window_buffer_samples_sample_V_8_10_q0(sliding_window_buffer_samples_sample_V_8_10_q0),
+    .sliding_window_buffer_samples_sample_V_8_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_9_address0),
+    .sliding_window_buffer_samples_sample_V_8_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_9_ce0),
+    .sliding_window_buffer_samples_sample_V_8_9_q0(sliding_window_buffer_samples_sample_V_8_9_q0),
+    .sliding_window_buffer_samples_sample_V_8_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_8_address0),
+    .sliding_window_buffer_samples_sample_V_8_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_8_ce0),
+    .sliding_window_buffer_samples_sample_V_8_8_q0(sliding_window_buffer_samples_sample_V_8_8_q0),
+    .sliding_window_buffer_samples_sample_V_8_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_7_address0),
+    .sliding_window_buffer_samples_sample_V_8_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_7_ce0),
+    .sliding_window_buffer_samples_sample_V_8_7_q0(sliding_window_buffer_samples_sample_V_8_7_q0),
+    .sliding_window_buffer_samples_sample_V_8_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_6_address0),
+    .sliding_window_buffer_samples_sample_V_8_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_6_ce0),
+    .sliding_window_buffer_samples_sample_V_8_6_q0(sliding_window_buffer_samples_sample_V_8_6_q0),
+    .sliding_window_buffer_samples_sample_V_8_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_5_address0),
+    .sliding_window_buffer_samples_sample_V_8_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_5_ce0),
+    .sliding_window_buffer_samples_sample_V_8_5_q0(sliding_window_buffer_samples_sample_V_8_5_q0),
+    .sliding_window_buffer_samples_sample_V_8_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_4_address0),
+    .sliding_window_buffer_samples_sample_V_8_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_4_ce0),
+    .sliding_window_buffer_samples_sample_V_8_4_q0(sliding_window_buffer_samples_sample_V_8_4_q0),
+    .sliding_window_buffer_samples_sample_V_8_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_3_address0),
+    .sliding_window_buffer_samples_sample_V_8_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_3_ce0),
+    .sliding_window_buffer_samples_sample_V_8_3_q0(sliding_window_buffer_samples_sample_V_8_3_q0),
+    .sliding_window_buffer_samples_sample_V_8_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_2_address0),
+    .sliding_window_buffer_samples_sample_V_8_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_2_ce0),
+    .sliding_window_buffer_samples_sample_V_8_2_q0(sliding_window_buffer_samples_sample_V_8_2_q0),
+    .sliding_window_buffer_samples_sample_V_8_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_1_address0),
+    .sliding_window_buffer_samples_sample_V_8_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_1_ce0),
+    .sliding_window_buffer_samples_sample_V_8_1_q0(sliding_window_buffer_samples_sample_V_8_1_q0),
+    .sliding_window_buffer_samples_sample_V_8_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_0_address0),
+    .sliding_window_buffer_samples_sample_V_8_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_0_ce0),
+    .sliding_window_buffer_samples_sample_V_8_0_q0(sliding_window_buffer_samples_sample_V_8_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_11_q0(sliding_window_buffer_samples_timestamp_V_7_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_10_q0(sliding_window_buffer_samples_timestamp_V_7_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_9_q0(sliding_window_buffer_samples_timestamp_V_7_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_8_q0(sliding_window_buffer_samples_timestamp_V_7_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_7_q0(sliding_window_buffer_samples_timestamp_V_7_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_6_q0(sliding_window_buffer_samples_timestamp_V_7_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_5_q0(sliding_window_buffer_samples_timestamp_V_7_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_4_q0(sliding_window_buffer_samples_timestamp_V_7_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_3_q0(sliding_window_buffer_samples_timestamp_V_7_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_2_q0(sliding_window_buffer_samples_timestamp_V_7_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_1_q0(sliding_window_buffer_samples_timestamp_V_7_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_7_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_7_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_7_0_q0(sliding_window_buffer_samples_timestamp_V_7_0_q0),
+    .sliding_window_buffer_samples_sample_V_7_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_11_address0),
+    .sliding_window_buffer_samples_sample_V_7_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_11_ce0),
+    .sliding_window_buffer_samples_sample_V_7_11_q0(sliding_window_buffer_samples_sample_V_7_11_q0),
+    .sliding_window_buffer_samples_sample_V_7_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_10_address0),
+    .sliding_window_buffer_samples_sample_V_7_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_10_ce0),
+    .sliding_window_buffer_samples_sample_V_7_10_q0(sliding_window_buffer_samples_sample_V_7_10_q0),
+    .sliding_window_buffer_samples_sample_V_7_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_9_address0),
+    .sliding_window_buffer_samples_sample_V_7_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_9_ce0),
+    .sliding_window_buffer_samples_sample_V_7_9_q0(sliding_window_buffer_samples_sample_V_7_9_q0),
+    .sliding_window_buffer_samples_sample_V_7_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_8_address0),
+    .sliding_window_buffer_samples_sample_V_7_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_8_ce0),
+    .sliding_window_buffer_samples_sample_V_7_8_q0(sliding_window_buffer_samples_sample_V_7_8_q0),
+    .sliding_window_buffer_samples_sample_V_7_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_7_address0),
+    .sliding_window_buffer_samples_sample_V_7_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_7_ce0),
+    .sliding_window_buffer_samples_sample_V_7_7_q0(sliding_window_buffer_samples_sample_V_7_7_q0),
+    .sliding_window_buffer_samples_sample_V_7_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_6_address0),
+    .sliding_window_buffer_samples_sample_V_7_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_6_ce0),
+    .sliding_window_buffer_samples_sample_V_7_6_q0(sliding_window_buffer_samples_sample_V_7_6_q0),
+    .sliding_window_buffer_samples_sample_V_7_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_5_address0),
+    .sliding_window_buffer_samples_sample_V_7_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_5_ce0),
+    .sliding_window_buffer_samples_sample_V_7_5_q0(sliding_window_buffer_samples_sample_V_7_5_q0),
+    .sliding_window_buffer_samples_sample_V_7_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_4_address0),
+    .sliding_window_buffer_samples_sample_V_7_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_4_ce0),
+    .sliding_window_buffer_samples_sample_V_7_4_q0(sliding_window_buffer_samples_sample_V_7_4_q0),
+    .sliding_window_buffer_samples_sample_V_7_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_3_address0),
+    .sliding_window_buffer_samples_sample_V_7_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_3_ce0),
+    .sliding_window_buffer_samples_sample_V_7_3_q0(sliding_window_buffer_samples_sample_V_7_3_q0),
+    .sliding_window_buffer_samples_sample_V_7_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_2_address0),
+    .sliding_window_buffer_samples_sample_V_7_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_2_ce0),
+    .sliding_window_buffer_samples_sample_V_7_2_q0(sliding_window_buffer_samples_sample_V_7_2_q0),
+    .sliding_window_buffer_samples_sample_V_7_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_1_address0),
+    .sliding_window_buffer_samples_sample_V_7_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_1_ce0),
+    .sliding_window_buffer_samples_sample_V_7_1_q0(sliding_window_buffer_samples_sample_V_7_1_q0),
+    .sliding_window_buffer_samples_sample_V_7_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_0_address0),
+    .sliding_window_buffer_samples_sample_V_7_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_0_ce0),
+    .sliding_window_buffer_samples_sample_V_7_0_q0(sliding_window_buffer_samples_sample_V_7_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_11_q0(sliding_window_buffer_samples_timestamp_V_6_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_10_q0(sliding_window_buffer_samples_timestamp_V_6_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_9_q0(sliding_window_buffer_samples_timestamp_V_6_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_8_q0(sliding_window_buffer_samples_timestamp_V_6_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_7_q0(sliding_window_buffer_samples_timestamp_V_6_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_6_q0(sliding_window_buffer_samples_timestamp_V_6_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_5_q0(sliding_window_buffer_samples_timestamp_V_6_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_4_q0(sliding_window_buffer_samples_timestamp_V_6_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_3_q0(sliding_window_buffer_samples_timestamp_V_6_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_2_q0(sliding_window_buffer_samples_timestamp_V_6_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_1_q0(sliding_window_buffer_samples_timestamp_V_6_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_6_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_6_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_6_0_q0(sliding_window_buffer_samples_timestamp_V_6_0_q0),
+    .sliding_window_buffer_samples_sample_V_6_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_11_address0),
+    .sliding_window_buffer_samples_sample_V_6_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_11_ce0),
+    .sliding_window_buffer_samples_sample_V_6_11_q0(sliding_window_buffer_samples_sample_V_6_11_q0),
+    .sliding_window_buffer_samples_sample_V_6_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_10_address0),
+    .sliding_window_buffer_samples_sample_V_6_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_10_ce0),
+    .sliding_window_buffer_samples_sample_V_6_10_q0(sliding_window_buffer_samples_sample_V_6_10_q0),
+    .sliding_window_buffer_samples_sample_V_6_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_9_address0),
+    .sliding_window_buffer_samples_sample_V_6_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_9_ce0),
+    .sliding_window_buffer_samples_sample_V_6_9_q0(sliding_window_buffer_samples_sample_V_6_9_q0),
+    .sliding_window_buffer_samples_sample_V_6_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_8_address0),
+    .sliding_window_buffer_samples_sample_V_6_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_8_ce0),
+    .sliding_window_buffer_samples_sample_V_6_8_q0(sliding_window_buffer_samples_sample_V_6_8_q0),
+    .sliding_window_buffer_samples_sample_V_6_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_7_address0),
+    .sliding_window_buffer_samples_sample_V_6_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_7_ce0),
+    .sliding_window_buffer_samples_sample_V_6_7_q0(sliding_window_buffer_samples_sample_V_6_7_q0),
+    .sliding_window_buffer_samples_sample_V_6_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_6_address0),
+    .sliding_window_buffer_samples_sample_V_6_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_6_ce0),
+    .sliding_window_buffer_samples_sample_V_6_6_q0(sliding_window_buffer_samples_sample_V_6_6_q0),
+    .sliding_window_buffer_samples_sample_V_6_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_5_address0),
+    .sliding_window_buffer_samples_sample_V_6_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_5_ce0),
+    .sliding_window_buffer_samples_sample_V_6_5_q0(sliding_window_buffer_samples_sample_V_6_5_q0),
+    .sliding_window_buffer_samples_sample_V_6_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_4_address0),
+    .sliding_window_buffer_samples_sample_V_6_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_4_ce0),
+    .sliding_window_buffer_samples_sample_V_6_4_q0(sliding_window_buffer_samples_sample_V_6_4_q0),
+    .sliding_window_buffer_samples_sample_V_6_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_3_address0),
+    .sliding_window_buffer_samples_sample_V_6_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_3_ce0),
+    .sliding_window_buffer_samples_sample_V_6_3_q0(sliding_window_buffer_samples_sample_V_6_3_q0),
+    .sliding_window_buffer_samples_sample_V_6_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_2_address0),
+    .sliding_window_buffer_samples_sample_V_6_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_2_ce0),
+    .sliding_window_buffer_samples_sample_V_6_2_q0(sliding_window_buffer_samples_sample_V_6_2_q0),
+    .sliding_window_buffer_samples_sample_V_6_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_1_address0),
+    .sliding_window_buffer_samples_sample_V_6_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_1_ce0),
+    .sliding_window_buffer_samples_sample_V_6_1_q0(sliding_window_buffer_samples_sample_V_6_1_q0),
+    .sliding_window_buffer_samples_sample_V_6_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_0_address0),
+    .sliding_window_buffer_samples_sample_V_6_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_0_ce0),
+    .sliding_window_buffer_samples_sample_V_6_0_q0(sliding_window_buffer_samples_sample_V_6_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_11_q0(sliding_window_buffer_samples_timestamp_V_5_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_10_q0(sliding_window_buffer_samples_timestamp_V_5_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_9_q0(sliding_window_buffer_samples_timestamp_V_5_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_8_q0(sliding_window_buffer_samples_timestamp_V_5_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_7_q0(sliding_window_buffer_samples_timestamp_V_5_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_6_q0(sliding_window_buffer_samples_timestamp_V_5_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_5_q0(sliding_window_buffer_samples_timestamp_V_5_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_4_q0(sliding_window_buffer_samples_timestamp_V_5_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_3_q0(sliding_window_buffer_samples_timestamp_V_5_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_2_q0(sliding_window_buffer_samples_timestamp_V_5_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_1_q0(sliding_window_buffer_samples_timestamp_V_5_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_5_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_5_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_5_0_q0(sliding_window_buffer_samples_timestamp_V_5_0_q0),
+    .sliding_window_buffer_samples_sample_V_5_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_11_address0),
+    .sliding_window_buffer_samples_sample_V_5_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_11_ce0),
+    .sliding_window_buffer_samples_sample_V_5_11_q0(sliding_window_buffer_samples_sample_V_5_11_q0),
+    .sliding_window_buffer_samples_sample_V_5_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_10_address0),
+    .sliding_window_buffer_samples_sample_V_5_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_10_ce0),
+    .sliding_window_buffer_samples_sample_V_5_10_q0(sliding_window_buffer_samples_sample_V_5_10_q0),
+    .sliding_window_buffer_samples_sample_V_5_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_9_address0),
+    .sliding_window_buffer_samples_sample_V_5_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_9_ce0),
+    .sliding_window_buffer_samples_sample_V_5_9_q0(sliding_window_buffer_samples_sample_V_5_9_q0),
+    .sliding_window_buffer_samples_sample_V_5_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_8_address0),
+    .sliding_window_buffer_samples_sample_V_5_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_8_ce0),
+    .sliding_window_buffer_samples_sample_V_5_8_q0(sliding_window_buffer_samples_sample_V_5_8_q0),
+    .sliding_window_buffer_samples_sample_V_5_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_7_address0),
+    .sliding_window_buffer_samples_sample_V_5_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_7_ce0),
+    .sliding_window_buffer_samples_sample_V_5_7_q0(sliding_window_buffer_samples_sample_V_5_7_q0),
+    .sliding_window_buffer_samples_sample_V_5_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_6_address0),
+    .sliding_window_buffer_samples_sample_V_5_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_6_ce0),
+    .sliding_window_buffer_samples_sample_V_5_6_q0(sliding_window_buffer_samples_sample_V_5_6_q0),
+    .sliding_window_buffer_samples_sample_V_5_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_5_address0),
+    .sliding_window_buffer_samples_sample_V_5_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_5_ce0),
+    .sliding_window_buffer_samples_sample_V_5_5_q0(sliding_window_buffer_samples_sample_V_5_5_q0),
+    .sliding_window_buffer_samples_sample_V_5_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_4_address0),
+    .sliding_window_buffer_samples_sample_V_5_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_4_ce0),
+    .sliding_window_buffer_samples_sample_V_5_4_q0(sliding_window_buffer_samples_sample_V_5_4_q0),
+    .sliding_window_buffer_samples_sample_V_5_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_3_address0),
+    .sliding_window_buffer_samples_sample_V_5_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_3_ce0),
+    .sliding_window_buffer_samples_sample_V_5_3_q0(sliding_window_buffer_samples_sample_V_5_3_q0),
+    .sliding_window_buffer_samples_sample_V_5_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_2_address0),
+    .sliding_window_buffer_samples_sample_V_5_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_2_ce0),
+    .sliding_window_buffer_samples_sample_V_5_2_q0(sliding_window_buffer_samples_sample_V_5_2_q0),
+    .sliding_window_buffer_samples_sample_V_5_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_1_address0),
+    .sliding_window_buffer_samples_sample_V_5_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_1_ce0),
+    .sliding_window_buffer_samples_sample_V_5_1_q0(sliding_window_buffer_samples_sample_V_5_1_q0),
+    .sliding_window_buffer_samples_sample_V_5_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_0_address0),
+    .sliding_window_buffer_samples_sample_V_5_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_0_ce0),
+    .sliding_window_buffer_samples_sample_V_5_0_q0(sliding_window_buffer_samples_sample_V_5_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_11_q0(sliding_window_buffer_samples_timestamp_V_4_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_10_q0(sliding_window_buffer_samples_timestamp_V_4_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_9_q0(sliding_window_buffer_samples_timestamp_V_4_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_8_q0(sliding_window_buffer_samples_timestamp_V_4_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_7_q0(sliding_window_buffer_samples_timestamp_V_4_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_6_q0(sliding_window_buffer_samples_timestamp_V_4_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_5_q0(sliding_window_buffer_samples_timestamp_V_4_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_4_q0(sliding_window_buffer_samples_timestamp_V_4_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_3_q0(sliding_window_buffer_samples_timestamp_V_4_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_2_q0(sliding_window_buffer_samples_timestamp_V_4_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_1_q0(sliding_window_buffer_samples_timestamp_V_4_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_4_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_4_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_4_0_q0(sliding_window_buffer_samples_timestamp_V_4_0_q0),
+    .sliding_window_buffer_samples_sample_V_4_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_11_address0),
+    .sliding_window_buffer_samples_sample_V_4_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_11_ce0),
+    .sliding_window_buffer_samples_sample_V_4_11_q0(sliding_window_buffer_samples_sample_V_4_11_q0),
+    .sliding_window_buffer_samples_sample_V_4_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_10_address0),
+    .sliding_window_buffer_samples_sample_V_4_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_10_ce0),
+    .sliding_window_buffer_samples_sample_V_4_10_q0(sliding_window_buffer_samples_sample_V_4_10_q0),
+    .sliding_window_buffer_samples_sample_V_4_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_9_address0),
+    .sliding_window_buffer_samples_sample_V_4_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_9_ce0),
+    .sliding_window_buffer_samples_sample_V_4_9_q0(sliding_window_buffer_samples_sample_V_4_9_q0),
+    .sliding_window_buffer_samples_sample_V_4_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_8_address0),
+    .sliding_window_buffer_samples_sample_V_4_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_8_ce0),
+    .sliding_window_buffer_samples_sample_V_4_8_q0(sliding_window_buffer_samples_sample_V_4_8_q0),
+    .sliding_window_buffer_samples_sample_V_4_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_7_address0),
+    .sliding_window_buffer_samples_sample_V_4_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_7_ce0),
+    .sliding_window_buffer_samples_sample_V_4_7_q0(sliding_window_buffer_samples_sample_V_4_7_q0),
+    .sliding_window_buffer_samples_sample_V_4_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_6_address0),
+    .sliding_window_buffer_samples_sample_V_4_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_6_ce0),
+    .sliding_window_buffer_samples_sample_V_4_6_q0(sliding_window_buffer_samples_sample_V_4_6_q0),
+    .sliding_window_buffer_samples_sample_V_4_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_5_address0),
+    .sliding_window_buffer_samples_sample_V_4_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_5_ce0),
+    .sliding_window_buffer_samples_sample_V_4_5_q0(sliding_window_buffer_samples_sample_V_4_5_q0),
+    .sliding_window_buffer_samples_sample_V_4_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_4_address0),
+    .sliding_window_buffer_samples_sample_V_4_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_4_ce0),
+    .sliding_window_buffer_samples_sample_V_4_4_q0(sliding_window_buffer_samples_sample_V_4_4_q0),
+    .sliding_window_buffer_samples_sample_V_4_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_3_address0),
+    .sliding_window_buffer_samples_sample_V_4_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_3_ce0),
+    .sliding_window_buffer_samples_sample_V_4_3_q0(sliding_window_buffer_samples_sample_V_4_3_q0),
+    .sliding_window_buffer_samples_sample_V_4_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_2_address0),
+    .sliding_window_buffer_samples_sample_V_4_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_2_ce0),
+    .sliding_window_buffer_samples_sample_V_4_2_q0(sliding_window_buffer_samples_sample_V_4_2_q0),
+    .sliding_window_buffer_samples_sample_V_4_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_1_address0),
+    .sliding_window_buffer_samples_sample_V_4_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_1_ce0),
+    .sliding_window_buffer_samples_sample_V_4_1_q0(sliding_window_buffer_samples_sample_V_4_1_q0),
+    .sliding_window_buffer_samples_sample_V_4_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_0_address0),
+    .sliding_window_buffer_samples_sample_V_4_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_0_ce0),
+    .sliding_window_buffer_samples_sample_V_4_0_q0(sliding_window_buffer_samples_sample_V_4_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_11_q0(sliding_window_buffer_samples_timestamp_V_3_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_10_q0(sliding_window_buffer_samples_timestamp_V_3_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_9_q0(sliding_window_buffer_samples_timestamp_V_3_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_8_q0(sliding_window_buffer_samples_timestamp_V_3_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_7_q0(sliding_window_buffer_samples_timestamp_V_3_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_6_q0(sliding_window_buffer_samples_timestamp_V_3_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_5_q0(sliding_window_buffer_samples_timestamp_V_3_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_4_q0(sliding_window_buffer_samples_timestamp_V_3_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_3_q0(sliding_window_buffer_samples_timestamp_V_3_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_2_q0(sliding_window_buffer_samples_timestamp_V_3_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_1_q0(sliding_window_buffer_samples_timestamp_V_3_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_3_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_3_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_3_0_q0(sliding_window_buffer_samples_timestamp_V_3_0_q0),
+    .sliding_window_buffer_samples_sample_V_3_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_11_address0),
+    .sliding_window_buffer_samples_sample_V_3_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_11_ce0),
+    .sliding_window_buffer_samples_sample_V_3_11_q0(sliding_window_buffer_samples_sample_V_3_11_q0),
+    .sliding_window_buffer_samples_sample_V_3_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_10_address0),
+    .sliding_window_buffer_samples_sample_V_3_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_10_ce0),
+    .sliding_window_buffer_samples_sample_V_3_10_q0(sliding_window_buffer_samples_sample_V_3_10_q0),
+    .sliding_window_buffer_samples_sample_V_3_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_9_address0),
+    .sliding_window_buffer_samples_sample_V_3_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_9_ce0),
+    .sliding_window_buffer_samples_sample_V_3_9_q0(sliding_window_buffer_samples_sample_V_3_9_q0),
+    .sliding_window_buffer_samples_sample_V_3_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_8_address0),
+    .sliding_window_buffer_samples_sample_V_3_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_8_ce0),
+    .sliding_window_buffer_samples_sample_V_3_8_q0(sliding_window_buffer_samples_sample_V_3_8_q0),
+    .sliding_window_buffer_samples_sample_V_3_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_7_address0),
+    .sliding_window_buffer_samples_sample_V_3_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_7_ce0),
+    .sliding_window_buffer_samples_sample_V_3_7_q0(sliding_window_buffer_samples_sample_V_3_7_q0),
+    .sliding_window_buffer_samples_sample_V_3_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_6_address0),
+    .sliding_window_buffer_samples_sample_V_3_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_6_ce0),
+    .sliding_window_buffer_samples_sample_V_3_6_q0(sliding_window_buffer_samples_sample_V_3_6_q0),
+    .sliding_window_buffer_samples_sample_V_3_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_5_address0),
+    .sliding_window_buffer_samples_sample_V_3_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_5_ce0),
+    .sliding_window_buffer_samples_sample_V_3_5_q0(sliding_window_buffer_samples_sample_V_3_5_q0),
+    .sliding_window_buffer_samples_sample_V_3_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_4_address0),
+    .sliding_window_buffer_samples_sample_V_3_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_4_ce0),
+    .sliding_window_buffer_samples_sample_V_3_4_q0(sliding_window_buffer_samples_sample_V_3_4_q0),
+    .sliding_window_buffer_samples_sample_V_3_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_3_address0),
+    .sliding_window_buffer_samples_sample_V_3_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_3_ce0),
+    .sliding_window_buffer_samples_sample_V_3_3_q0(sliding_window_buffer_samples_sample_V_3_3_q0),
+    .sliding_window_buffer_samples_sample_V_3_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_2_address0),
+    .sliding_window_buffer_samples_sample_V_3_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_2_ce0),
+    .sliding_window_buffer_samples_sample_V_3_2_q0(sliding_window_buffer_samples_sample_V_3_2_q0),
+    .sliding_window_buffer_samples_sample_V_3_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_1_address0),
+    .sliding_window_buffer_samples_sample_V_3_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_1_ce0),
+    .sliding_window_buffer_samples_sample_V_3_1_q0(sliding_window_buffer_samples_sample_V_3_1_q0),
+    .sliding_window_buffer_samples_sample_V_3_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_0_address0),
+    .sliding_window_buffer_samples_sample_V_3_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_0_ce0),
+    .sliding_window_buffer_samples_sample_V_3_0_q0(sliding_window_buffer_samples_sample_V_3_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_11_q0(sliding_window_buffer_samples_timestamp_V_2_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_10_q0(sliding_window_buffer_samples_timestamp_V_2_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_9_q0(sliding_window_buffer_samples_timestamp_V_2_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_8_q0(sliding_window_buffer_samples_timestamp_V_2_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_7_q0(sliding_window_buffer_samples_timestamp_V_2_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_6_q0(sliding_window_buffer_samples_timestamp_V_2_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_5_q0(sliding_window_buffer_samples_timestamp_V_2_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_4_q0(sliding_window_buffer_samples_timestamp_V_2_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_3_q0(sliding_window_buffer_samples_timestamp_V_2_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_2_q0(sliding_window_buffer_samples_timestamp_V_2_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_1_q0(sliding_window_buffer_samples_timestamp_V_2_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_2_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_2_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_2_0_q0(sliding_window_buffer_samples_timestamp_V_2_0_q0),
+    .sliding_window_buffer_samples_sample_V_2_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_11_address0),
+    .sliding_window_buffer_samples_sample_V_2_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_11_ce0),
+    .sliding_window_buffer_samples_sample_V_2_11_q0(sliding_window_buffer_samples_sample_V_2_11_q0),
+    .sliding_window_buffer_samples_sample_V_2_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_10_address0),
+    .sliding_window_buffer_samples_sample_V_2_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_10_ce0),
+    .sliding_window_buffer_samples_sample_V_2_10_q0(sliding_window_buffer_samples_sample_V_2_10_q0),
+    .sliding_window_buffer_samples_sample_V_2_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_9_address0),
+    .sliding_window_buffer_samples_sample_V_2_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_9_ce0),
+    .sliding_window_buffer_samples_sample_V_2_9_q0(sliding_window_buffer_samples_sample_V_2_9_q0),
+    .sliding_window_buffer_samples_sample_V_2_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_8_address0),
+    .sliding_window_buffer_samples_sample_V_2_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_8_ce0),
+    .sliding_window_buffer_samples_sample_V_2_8_q0(sliding_window_buffer_samples_sample_V_2_8_q0),
+    .sliding_window_buffer_samples_sample_V_2_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_7_address0),
+    .sliding_window_buffer_samples_sample_V_2_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_7_ce0),
+    .sliding_window_buffer_samples_sample_V_2_7_q0(sliding_window_buffer_samples_sample_V_2_7_q0),
+    .sliding_window_buffer_samples_sample_V_2_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_6_address0),
+    .sliding_window_buffer_samples_sample_V_2_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_6_ce0),
+    .sliding_window_buffer_samples_sample_V_2_6_q0(sliding_window_buffer_samples_sample_V_2_6_q0),
+    .sliding_window_buffer_samples_sample_V_2_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_5_address0),
+    .sliding_window_buffer_samples_sample_V_2_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_5_ce0),
+    .sliding_window_buffer_samples_sample_V_2_5_q0(sliding_window_buffer_samples_sample_V_2_5_q0),
+    .sliding_window_buffer_samples_sample_V_2_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_4_address0),
+    .sliding_window_buffer_samples_sample_V_2_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_4_ce0),
+    .sliding_window_buffer_samples_sample_V_2_4_q0(sliding_window_buffer_samples_sample_V_2_4_q0),
+    .sliding_window_buffer_samples_sample_V_2_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_3_address0),
+    .sliding_window_buffer_samples_sample_V_2_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_3_ce0),
+    .sliding_window_buffer_samples_sample_V_2_3_q0(sliding_window_buffer_samples_sample_V_2_3_q0),
+    .sliding_window_buffer_samples_sample_V_2_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_2_address0),
+    .sliding_window_buffer_samples_sample_V_2_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_2_ce0),
+    .sliding_window_buffer_samples_sample_V_2_2_q0(sliding_window_buffer_samples_sample_V_2_2_q0),
+    .sliding_window_buffer_samples_sample_V_2_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_1_address0),
+    .sliding_window_buffer_samples_sample_V_2_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_1_ce0),
+    .sliding_window_buffer_samples_sample_V_2_1_q0(sliding_window_buffer_samples_sample_V_2_1_q0),
+    .sliding_window_buffer_samples_sample_V_2_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_0_address0),
+    .sliding_window_buffer_samples_sample_V_2_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_0_ce0),
+    .sliding_window_buffer_samples_sample_V_2_0_q0(sliding_window_buffer_samples_sample_V_2_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_11_q0(sliding_window_buffer_samples_timestamp_V_1_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_10_q0(sliding_window_buffer_samples_timestamp_V_1_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_9_q0(sliding_window_buffer_samples_timestamp_V_1_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_8_q0(sliding_window_buffer_samples_timestamp_V_1_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_7_q0(sliding_window_buffer_samples_timestamp_V_1_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_6_q0(sliding_window_buffer_samples_timestamp_V_1_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_5_q0(sliding_window_buffer_samples_timestamp_V_1_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_4_q0(sliding_window_buffer_samples_timestamp_V_1_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_3_q0(sliding_window_buffer_samples_timestamp_V_1_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_2_q0(sliding_window_buffer_samples_timestamp_V_1_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_1_q0(sliding_window_buffer_samples_timestamp_V_1_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_1_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_1_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_1_0_q0(sliding_window_buffer_samples_timestamp_V_1_0_q0),
+    .sliding_window_buffer_samples_sample_V_1_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_11_address0),
+    .sliding_window_buffer_samples_sample_V_1_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_11_ce0),
+    .sliding_window_buffer_samples_sample_V_1_11_q0(sliding_window_buffer_samples_sample_V_1_11_q0),
+    .sliding_window_buffer_samples_sample_V_1_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_10_address0),
+    .sliding_window_buffer_samples_sample_V_1_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_10_ce0),
+    .sliding_window_buffer_samples_sample_V_1_10_q0(sliding_window_buffer_samples_sample_V_1_10_q0),
+    .sliding_window_buffer_samples_sample_V_1_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_9_address0),
+    .sliding_window_buffer_samples_sample_V_1_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_9_ce0),
+    .sliding_window_buffer_samples_sample_V_1_9_q0(sliding_window_buffer_samples_sample_V_1_9_q0),
+    .sliding_window_buffer_samples_sample_V_1_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_8_address0),
+    .sliding_window_buffer_samples_sample_V_1_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_8_ce0),
+    .sliding_window_buffer_samples_sample_V_1_8_q0(sliding_window_buffer_samples_sample_V_1_8_q0),
+    .sliding_window_buffer_samples_sample_V_1_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_7_address0),
+    .sliding_window_buffer_samples_sample_V_1_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_7_ce0),
+    .sliding_window_buffer_samples_sample_V_1_7_q0(sliding_window_buffer_samples_sample_V_1_7_q0),
+    .sliding_window_buffer_samples_sample_V_1_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_6_address0),
+    .sliding_window_buffer_samples_sample_V_1_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_6_ce0),
+    .sliding_window_buffer_samples_sample_V_1_6_q0(sliding_window_buffer_samples_sample_V_1_6_q0),
+    .sliding_window_buffer_samples_sample_V_1_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_5_address0),
+    .sliding_window_buffer_samples_sample_V_1_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_5_ce0),
+    .sliding_window_buffer_samples_sample_V_1_5_q0(sliding_window_buffer_samples_sample_V_1_5_q0),
+    .sliding_window_buffer_samples_sample_V_1_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_4_address0),
+    .sliding_window_buffer_samples_sample_V_1_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_4_ce0),
+    .sliding_window_buffer_samples_sample_V_1_4_q0(sliding_window_buffer_samples_sample_V_1_4_q0),
+    .sliding_window_buffer_samples_sample_V_1_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_3_address0),
+    .sliding_window_buffer_samples_sample_V_1_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_3_ce0),
+    .sliding_window_buffer_samples_sample_V_1_3_q0(sliding_window_buffer_samples_sample_V_1_3_q0),
+    .sliding_window_buffer_samples_sample_V_1_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_2_address0),
+    .sliding_window_buffer_samples_sample_V_1_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_2_ce0),
+    .sliding_window_buffer_samples_sample_V_1_2_q0(sliding_window_buffer_samples_sample_V_1_2_q0),
+    .sliding_window_buffer_samples_sample_V_1_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_1_address0),
+    .sliding_window_buffer_samples_sample_V_1_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_1_ce0),
+    .sliding_window_buffer_samples_sample_V_1_1_q0(sliding_window_buffer_samples_sample_V_1_1_q0),
+    .sliding_window_buffer_samples_sample_V_1_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_0_address0),
+    .sliding_window_buffer_samples_sample_V_1_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_0_ce0),
+    .sliding_window_buffer_samples_sample_V_1_0_q0(sliding_window_buffer_samples_sample_V_1_0_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_11_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_11_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_11_q0(sliding_window_buffer_samples_timestamp_V_0_11_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_10_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_10_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_10_q0(sliding_window_buffer_samples_timestamp_V_0_10_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_9_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_9_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_9_q0(sliding_window_buffer_samples_timestamp_V_0_9_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_8_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_8_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_8_q0(sliding_window_buffer_samples_timestamp_V_0_8_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_7_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_7_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_7_q0(sliding_window_buffer_samples_timestamp_V_0_7_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_6_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_6_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_6_q0(sliding_window_buffer_samples_timestamp_V_0_6_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_5_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_5_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_5_q0(sliding_window_buffer_samples_timestamp_V_0_5_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_4_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_4_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_4_q0(sliding_window_buffer_samples_timestamp_V_0_4_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_3_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_3_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_3_q0(sliding_window_buffer_samples_timestamp_V_0_3_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_2_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_2_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_2_q0(sliding_window_buffer_samples_timestamp_V_0_2_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_1_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_1_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_1_q0(sliding_window_buffer_samples_timestamp_V_0_1_q0),
+    .sliding_window_buffer_samples_timestamp_V_0_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_0_address0),
+    .sliding_window_buffer_samples_timestamp_V_0_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_0_ce0),
+    .sliding_window_buffer_samples_timestamp_V_0_0_q0(sliding_window_buffer_samples_timestamp_V_0_0_q0),
+    .sliding_window_buffer_samples_sample_V_0_11_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_11_address0),
+    .sliding_window_buffer_samples_sample_V_0_11_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_11_ce0),
+    .sliding_window_buffer_samples_sample_V_0_11_q0(sliding_window_buffer_samples_sample_V_0_11_q0),
+    .sliding_window_buffer_samples_sample_V_0_10_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_10_address0),
+    .sliding_window_buffer_samples_sample_V_0_10_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_10_ce0),
+    .sliding_window_buffer_samples_sample_V_0_10_q0(sliding_window_buffer_samples_sample_V_0_10_q0),
+    .sliding_window_buffer_samples_sample_V_0_9_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_9_address0),
+    .sliding_window_buffer_samples_sample_V_0_9_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_9_ce0),
+    .sliding_window_buffer_samples_sample_V_0_9_q0(sliding_window_buffer_samples_sample_V_0_9_q0),
+    .sliding_window_buffer_samples_sample_V_0_8_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_8_address0),
+    .sliding_window_buffer_samples_sample_V_0_8_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_8_ce0),
+    .sliding_window_buffer_samples_sample_V_0_8_q0(sliding_window_buffer_samples_sample_V_0_8_q0),
+    .sliding_window_buffer_samples_sample_V_0_7_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_7_address0),
+    .sliding_window_buffer_samples_sample_V_0_7_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_7_ce0),
+    .sliding_window_buffer_samples_sample_V_0_7_q0(sliding_window_buffer_samples_sample_V_0_7_q0),
+    .sliding_window_buffer_samples_sample_V_0_6_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_6_address0),
+    .sliding_window_buffer_samples_sample_V_0_6_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_6_ce0),
+    .sliding_window_buffer_samples_sample_V_0_6_q0(sliding_window_buffer_samples_sample_V_0_6_q0),
+    .sliding_window_buffer_samples_sample_V_0_5_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_5_address0),
+    .sliding_window_buffer_samples_sample_V_0_5_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_5_ce0),
+    .sliding_window_buffer_samples_sample_V_0_5_q0(sliding_window_buffer_samples_sample_V_0_5_q0),
+    .sliding_window_buffer_samples_sample_V_0_4_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_4_address0),
+    .sliding_window_buffer_samples_sample_V_0_4_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_4_ce0),
+    .sliding_window_buffer_samples_sample_V_0_4_q0(sliding_window_buffer_samples_sample_V_0_4_q0),
+    .sliding_window_buffer_samples_sample_V_0_3_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_3_address0),
+    .sliding_window_buffer_samples_sample_V_0_3_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_3_ce0),
+    .sliding_window_buffer_samples_sample_V_0_3_q0(sliding_window_buffer_samples_sample_V_0_3_q0),
+    .sliding_window_buffer_samples_sample_V_0_2_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_2_address0),
+    .sliding_window_buffer_samples_sample_V_0_2_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_2_ce0),
+    .sliding_window_buffer_samples_sample_V_0_2_q0(sliding_window_buffer_samples_sample_V_0_2_q0),
+    .sliding_window_buffer_samples_sample_V_0_1_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_1_address0),
+    .sliding_window_buffer_samples_sample_V_0_1_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_1_ce0),
+    .sliding_window_buffer_samples_sample_V_0_1_q0(sliding_window_buffer_samples_sample_V_0_1_q0),
+    .sliding_window_buffer_samples_sample_V_0_0_address0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_0_address0),
+    .sliding_window_buffer_samples_sample_V_0_0_ce0(grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_0_ce0),
+    .sliding_window_buffer_samples_sample_V_0_0_q0(sliding_window_buffer_samples_sample_V_0_0_q0),
+    .ap_return(grp_writeToRAM_fu_1119_ap_return)
 );
 
 always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         ap_CS_fsm <= ap_ST_fsm_state1;
     end else begin
         ap_CS_fsm <= ap_NS_fsm;
@@ -366,75 +7756,71 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_loadSlidingWindow_fu_205_ap_start_reg <= 1'b0;
+    if (ap_rst == 1'b1) begin
+        grp_loadSlidingWindow_fu_601_ap_start_reg <= 1'b0;
     end else begin
-        if ((~((bfr_irq_read_read_fu_126_p2 == 1'd1) & (n_samples_ap_vld_in_sig == 1'b0)) & (1'b1 == ap_CS_fsm_state3) & (bfr_irq_read_read_fu_126_p2 == 1'd1))) begin
-            grp_loadSlidingWindow_fu_205_ap_start_reg <= 1'b1;
-        end else if ((grp_loadSlidingWindow_fu_205_ap_ready == 1'b1)) begin
-            grp_loadSlidingWindow_fu_205_ap_start_reg <= 1'b0;
+        if ((~((ap_start == 1'b0) | (n_samples_ap_vld_in_sig == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_loadSlidingWindow_fu_601_ap_start_reg <= 1'b1;
+        end else if ((grp_loadSlidingWindow_fu_601_ap_ready == 1'b1)) begin
+            grp_loadSlidingWindow_fu_601_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
+        grp_writeToRAM_fu_1119_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state3)) begin
+            grp_writeToRAM_fu_1119_ap_start_reg <= 1'b1;
+        end else if ((grp_writeToRAM_fu_1119_ap_ready == 1'b1)) begin
+            grp_writeToRAM_fu_1119_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
         n_samples_ap_vld_preg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state5)) begin
+        if (((1'b0 == ap_block_state4_on_subcall_done) & (1'b1 == ap_CS_fsm_state4))) begin
             n_samples_ap_vld_preg <= 1'b0;
-        end else if ((~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (n_samples_ap_vld == 1'b1))) begin
+        end else if ((~((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) & (n_samples_ap_vld == 1'b1))) begin
             n_samples_ap_vld_preg <= n_samples_ap_vld;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         n_samples_preg <= 6'd0;
     end else begin
-        if ((~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (n_samples_ap_vld == 1'b1))) begin
+        if ((~((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) & (n_samples_ap_vld == 1'b1))) begin
             n_samples_preg <= n_samples;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln8_fu_247_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        indvar_i_reg_182 <= add_ln8_fu_236_p2;
-    end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        indvar_i_reg_182 <= 5'd0;
+    if (((grp_loadSlidingWindow_fu_601_sliding_window_back_ptr_s_o_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        sliding_window_back_ptr_s <= grp_loadSlidingWindow_fu_601_sliding_window_back_ptr_s_o;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((bfr_irq_read_read_fu_126_p2 == 1'd1) & (n_samples_ap_vld_in_sig == 1'b0)) & (1'b1 == ap_CS_fsm_state3) & (bfr_irq_read_read_fu_126_p2 == 1'd0))) begin
-        sliding_window_size_0_reg_193 <= 1'd0;
-    end else if (((1'b0 == ap_block_state4_on_subcall_done) & (1'b1 == ap_CS_fsm_state4) & (bfr_irq_read_reg_275 == 1'd1))) begin
-        sliding_window_size_0_reg_193 <= 1'd1;
+    if (((grp_loadSlidingWindow_fu_601_sliding_window_front_ptr_s_o_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        sliding_window_front_ptr_s <= grp_loadSlidingWindow_fu_601_sliding_window_front_ptr_s_o;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
-        bfr_irq_read_reg_275 <= bfr_irq;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state1)) begin
-        n_periods_read_reg_262 <= n_periods;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        start_write_read_reg_284 <= start_write_i;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        start_write_rd_reg_1623 <= start_write_i;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
+    if (((1'b0 == ap_block_state4_on_subcall_done) & (1'b1 == ap_CS_fsm_state4))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -442,7 +7828,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0))) begin
+    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -450,15 +7836,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) & (bfr_irq_read_reg_275 == 1'd1))) begin
-        ap_phi_mux_sliding_window_size_0_phi_fu_197_p4 = 1'd1;
-    end else begin
-        ap_phi_mux_sliding_window_size_0_phi_fu_197_p4 = sliding_window_size_0_reg_193;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
+    if (((1'b0 == ap_block_state4_on_subcall_done) & (1'b1 == ap_CS_fsm_state4))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -474,7 +7852,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (bfr_irq_read_read_fu_126_p2 == 1'd1))) begin
+    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         n_samples_blk_n = n_samples_ap_vld;
     end else begin
         n_samples_blk_n = 1'b1;
@@ -490,7 +7868,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln94_fu_257_p2 == 1'd1) & (1'b0 == ap_block_state4_on_subcall_done) & (1'b1 == ap_CS_fsm_state4) & (start_write_read_read_fu_138_p2 == 1'd1))) begin
+    if (((1'b0 == ap_block_state4_on_subcall_done) & (start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
         n_samples_out_ap_vld = 1'b1;
     end else begin
         n_samples_out_ap_vld = 1'b0;
@@ -498,20 +7876,20 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        sliding_window_buffer_count_s_address0 = zext_ln12_fu_242_p1;
-    end else if (((1'b1 == ap_CS_fsm_state4) & (bfr_irq_read_reg_275 == 1'd1))) begin
-        sliding_window_buffer_count_s_address0 = grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_address0;
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_count_s_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_count_s_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_count_s_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_address0;
     end else begin
         sliding_window_buffer_count_s_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        sliding_window_buffer_count_s_ce0 = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state4) & (bfr_irq_read_reg_275 == 1'd1))) begin
-        sliding_window_buffer_count_s_ce0 = grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_ce0;
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_count_s_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_count_s_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_count_s_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_ce0;
     end else begin
         sliding_window_buffer_count_s_ce0 = 1'b0;
     end
@@ -519,26 +7897,6734 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        sliding_window_buffer_count_s_d0 = 6'd0;
-    end else if (((1'b1 == ap_CS_fsm_state4) & (bfr_irq_read_reg_275 == 1'd1))) begin
-        sliding_window_buffer_count_s_d0 = grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_d0;
-    end else begin
-        sliding_window_buffer_count_s_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        sliding_window_buffer_count_s_we0 = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state4) & (bfr_irq_read_reg_275 == 1'd1))) begin
-        sliding_window_buffer_count_s_we0 = grp_loadSlidingWindow_fu_205_sliding_window_buffer_1_we0;
+        sliding_window_buffer_count_s_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_count_s_we0;
     end else begin
         sliding_window_buffer_count_s_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (start_write_read_reg_284 == 1'd1))) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_0_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_0_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_0_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_0_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_0_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_1_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_1_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_1_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_1_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_1_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_2_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_2_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_2_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_2_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_2_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_3_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_3_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_3_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_3_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_3_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_4_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_4_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_4_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_4_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_4_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_5_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_5_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_5_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_5_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_5_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_6_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_6_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_6_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_6_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_6_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_7_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_7_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_7_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_7_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_7_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_8_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_8_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_8_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_8_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_8_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_0_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_10_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_11_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_1_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_2_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_3_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_4_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_5_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_6_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_7_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_8_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_address0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_sample_V_9_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_sample_V_9_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_sample_V_9_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_sample_V_9_9_we0;
+    end else begin
+        sliding_window_buffer_samples_sample_V_9_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_0_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_0_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_0_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_0_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_1_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_1_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_1_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_1_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_2_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_2_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_2_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_2_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_3_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_3_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_3_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_3_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_4_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_4_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_4_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_4_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_5_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_5_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_5_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_5_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_5_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_6_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_6_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_6_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_6_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_6_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_7_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_7_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_7_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_7_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_7_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_8_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_8_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_8_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_8_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_8_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_0_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_0_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_0_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_0_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_0_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_0_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_10_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_10_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_10_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_10_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_10_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_10_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_11_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_11_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_11_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_11_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_11_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_11_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_1_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_1_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_1_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_1_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_1_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_1_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_2_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_2_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_2_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_2_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_2_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_2_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_3_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_3_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_3_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_3_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_3_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_3_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_4_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_4_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_4_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_4_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_4_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_4_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_5_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_5_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_5_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_5_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_5_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_5_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_6_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_6_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_6_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_6_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_6_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_6_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_7_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_7_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_7_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_7_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_7_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_7_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_8_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_8_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_8_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_8_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_8_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_8_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_9_address0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_9_address0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_address0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        sliding_window_buffer_samples_timestamp_V_9_9_ce0 = grp_writeToRAM_fu_1119_sliding_window_buffer_samples_timestamp_V_9_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_9_ce0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_ce0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        sliding_window_buffer_samples_timestamp_V_9_9_we0 = grp_loadSlidingWindow_fu_601_sliding_window_buffer_samples_timestamp_V_9_9_we0;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_9_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state4_on_subcall_done) & (start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
         start_write_o = 1'd0;
     end else begin
         start_write_o = start_write_i;
@@ -546,7 +14632,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (start_write_read_reg_284 == 1'd1))) begin
+    if (((1'b0 == ap_block_state4_on_subcall_done) & (start_write_rd_reg_1623 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
         start_write_o_ap_vld = 1'b1;
     end else begin
         start_write_o_ap_vld = 1'b0;
@@ -554,63 +14640,38 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (start_write_read_reg_284 == 1'd1))) begin
-        write_finished = 1'd1;
-    end else if (((1'b0 == ap_block_state4_on_subcall_done) & (1'b1 == ap_CS_fsm_state4) & (start_write_read_read_fu_138_p2 == 1'd1))) begin
-        write_finished = 1'd0;
-    end else begin
-        write_finished = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((1'b1 == ap_CS_fsm_state5) & (start_write_read_reg_284 == 1'd1)) | ((1'b0 == ap_block_state4_on_subcall_done) & (1'b1 == ap_CS_fsm_state4) & (start_write_read_read_fu_138_p2 == 1'd1)))) begin
-        write_finished_ap_vld = 1'b1;
-    end else begin
-        write_finished_ap_vld = 1'b0;
-    end
-end
-
-always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            if ((~((ap_start == 1'b0) | (n_samples_ap_vld_in_sig == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((icmp_ln8_fu_247_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-                ap_NS_fsm = ap_ST_fsm_state2;
-            end else begin
+            if (((grp_loadSlidingWindow_fu_601_ap_done == 1'b1) & (start_write_rd_read_fu_580_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end else if (((grp_loadSlidingWindow_fu_601_ap_done == 1'b1) & (start_write_rd_read_fu_580_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
-            if ((~((bfr_irq_read_read_fu_126_p2 == 1'd1) & (n_samples_ap_vld_in_sig == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state3;
-            end
+            ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
             if (((1'b0 == ap_block_state4_on_subcall_done) & (1'b1 == ap_CS_fsm_state4))) begin
-                ap_NS_fsm = ap_ST_fsm_state5;
+                ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end
-        end
-        ap_ST_fsm_state5 : begin
-            ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
             ap_NS_fsm = 'bx;
         end
     endcase
 end
-
-assign add_ln8_fu_236_p2 = (indvar_i_reg_182 + 5'd1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -620,100 +14681,80 @@ assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
-assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
-
 always @ (*) begin
-    ap_block_state3 = ((bfr_irq_read_read_fu_126_p2 == 1'd1) & (n_samples_ap_vld_in_sig == 1'b0));
+    ap_block_state1 = ((ap_start == 1'b0) | (n_samples_ap_vld_in_sig == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state3_ignore_call1 = ((bfr_irq_read_read_fu_126_p2 == 1'd1) & (n_samples_ap_vld_in_sig == 1'b0));
+    ap_block_state1_ignore_call39 = ((ap_start == 1'b0) | (n_samples_ap_vld_in_sig == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state4_on_subcall_done = ((grp_loadSlidingWindow_fu_205_ap_done == 1'b0) & (bfr_irq_read_reg_275 == 1'd1));
+    ap_block_state4_on_subcall_done = ((grp_writeToRAM_fu_1119_ap_done == 1'b0) & (start_write_rd_reg_1623 == 1'd1));
 end
 
-always @ (*) begin
-    ap_rst_n_inv = ~ap_rst_n;
-end
+assign buffer_in_0_address0 = grp_loadSlidingWindow_fu_601_buffer_in_0_address0;
 
-assign bfr_irq_read_read_fu_126_p2 = bfr_irq;
+assign buffer_in_0_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_0_ce0;
 
-assign buffer_in_0_address0 = grp_loadSlidingWindow_fu_205_buffer_in_0_address0;
+assign buffer_in_10_address0 = grp_loadSlidingWindow_fu_601_buffer_in_10_address0;
 
-assign buffer_in_0_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_0_ce0;
+assign buffer_in_10_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_10_ce0;
 
-assign buffer_in_10_address0 = grp_loadSlidingWindow_fu_205_buffer_in_10_address0;
+assign buffer_in_11_address0 = grp_loadSlidingWindow_fu_601_buffer_in_11_address0;
 
-assign buffer_in_10_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_10_ce0;
+assign buffer_in_11_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_11_ce0;
 
-assign buffer_in_11_address0 = grp_loadSlidingWindow_fu_205_buffer_in_11_address0;
+assign buffer_in_1_address0 = grp_loadSlidingWindow_fu_601_buffer_in_1_address0;
 
-assign buffer_in_11_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_11_ce0;
+assign buffer_in_1_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_1_ce0;
 
-assign buffer_in_1_address0 = grp_loadSlidingWindow_fu_205_buffer_in_1_address0;
+assign buffer_in_2_address0 = grp_loadSlidingWindow_fu_601_buffer_in_2_address0;
 
-assign buffer_in_1_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_1_ce0;
+assign buffer_in_2_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_2_ce0;
 
-assign buffer_in_2_address0 = grp_loadSlidingWindow_fu_205_buffer_in_2_address0;
+assign buffer_in_3_address0 = grp_loadSlidingWindow_fu_601_buffer_in_3_address0;
 
-assign buffer_in_2_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_2_ce0;
+assign buffer_in_3_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_3_ce0;
 
-assign buffer_in_3_address0 = grp_loadSlidingWindow_fu_205_buffer_in_3_address0;
+assign buffer_in_4_address0 = grp_loadSlidingWindow_fu_601_buffer_in_4_address0;
 
-assign buffer_in_3_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_3_ce0;
+assign buffer_in_4_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_4_ce0;
 
-assign buffer_in_4_address0 = grp_loadSlidingWindow_fu_205_buffer_in_4_address0;
+assign buffer_in_5_address0 = grp_loadSlidingWindow_fu_601_buffer_in_5_address0;
 
-assign buffer_in_4_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_4_ce0;
+assign buffer_in_5_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_5_ce0;
 
-assign buffer_in_5_address0 = grp_loadSlidingWindow_fu_205_buffer_in_5_address0;
+assign buffer_in_6_address0 = grp_loadSlidingWindow_fu_601_buffer_in_6_address0;
 
-assign buffer_in_5_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_5_ce0;
+assign buffer_in_6_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_6_ce0;
 
-assign buffer_in_6_address0 = grp_loadSlidingWindow_fu_205_buffer_in_6_address0;
+assign buffer_in_7_address0 = grp_loadSlidingWindow_fu_601_buffer_in_7_address0;
 
-assign buffer_in_6_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_6_ce0;
+assign buffer_in_7_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_7_ce0;
 
-assign buffer_in_7_address0 = grp_loadSlidingWindow_fu_205_buffer_in_7_address0;
+assign buffer_in_8_address0 = grp_loadSlidingWindow_fu_601_buffer_in_8_address0;
 
-assign buffer_in_7_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_7_ce0;
+assign buffer_in_8_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_8_ce0;
 
-assign buffer_in_8_address0 = grp_loadSlidingWindow_fu_205_buffer_in_8_address0;
+assign buffer_in_9_address0 = grp_loadSlidingWindow_fu_601_buffer_in_9_address0;
 
-assign buffer_in_8_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_8_ce0;
+assign buffer_in_9_ce0 = grp_loadSlidingWindow_fu_601_buffer_in_9_ce0;
 
-assign buffer_in_9_address0 = grp_loadSlidingWindow_fu_205_buffer_in_9_address0;
+assign buffer_out_address0 = grp_writeToRAM_fu_1119_buffer_out_address0;
 
-assign buffer_in_9_ce0 = grp_loadSlidingWindow_fu_205_buffer_in_9_ce0;
+assign buffer_out_ce0 = grp_writeToRAM_fu_1119_buffer_out_ce0;
 
-assign buffer_out_address0 = 12'd0;
+assign buffer_out_d0 = grp_writeToRAM_fu_1119_buffer_out_d0;
 
-assign buffer_out_address1 = 12'd0;
+assign buffer_out_we0 = grp_writeToRAM_fu_1119_buffer_out_we0;
 
-assign buffer_out_ce0 = 1'b0;
+assign grp_loadSlidingWindow_fu_601_ap_start = grp_loadSlidingWindow_fu_601_ap_start_reg;
 
-assign buffer_out_ce1 = 1'b0;
+assign grp_writeToRAM_fu_1119_ap_start = grp_writeToRAM_fu_1119_ap_start_reg;
 
-assign buffer_out_d0 = 32'd0;
+assign n_samples_out = grp_writeToRAM_fu_1119_ap_return;
 
-assign buffer_out_d1 = 32'd0;
-
-assign buffer_out_we0 = 1'b0;
-
-assign buffer_out_we1 = 1'b0;
-
-assign grp_loadSlidingWindow_fu_205_ap_start = grp_loadSlidingWindow_fu_205_ap_start_reg;
-
-assign icmp_ln8_fu_247_p2 = ((indvar_i_reg_182 == 5'd31) ? 1'b1 : 1'b0);
-
-assign icmp_ln94_fu_257_p2 = ((zext_ln90_fu_253_p1 < n_periods_read_reg_262) ? 1'b1 : 1'b0);
-
-assign start_write_read_read_fu_138_p2 = start_write_i;
-
-assign zext_ln12_fu_242_p1 = indvar_i_reg_182;
-
-assign zext_ln90_fu_253_p1 = ap_phi_mux_sliding_window_size_0_phi_fu_197_p4;
+assign start_write_rd_read_fu_580_p2 = start_write_i;
 
 endmodule //SlidingWindowMagSampleFetcher

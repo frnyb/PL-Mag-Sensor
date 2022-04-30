@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'loadSlidingWindow'" level="0">
-<item name = "Date">Fri Apr 29 19:01:54 2022
+<item name = "Date">Sat Apr 30 14:04:37 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">SlidingWindowMagSampleFetcher</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 2.286 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 2.655 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 382, 10.000 ns, 3.820 us, 1, 382, none</column>
+<column name="">91, 333, 0.910 us, 3.330 us, 91, 333, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- load_loop">1, 63, 2, 1, 1, 1 ~ 63, yes</column>
-<column name="- VITIS_LOOP_18_1">21, 315, 22, 21, 1, 1 ~ 15, yes</column>
+<column name="- load_data_loop">1, 20, 2, 1, 1, 1 ~ 20, yes</column>
+<column name="- sample_period_init_loop">22, 220, 22, -, -, 1 ~ 10, no</column>
 </table>
 </item>
 </section>

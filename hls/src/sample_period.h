@@ -15,7 +15,11 @@ public:
 
 	SamplePeriod(sample_t samples[max_n_samples], int count) {
 
+		sample_period_init_loop:
 		for (int i = 0; i < count; i++) {
+#pragma HLS PIPELINE off
+#pragma HLS loop_tripcount min=1 max=max_n_samples
+
 
 			samples_[i] = samples[i];
 
@@ -29,9 +33,7 @@ public:
 
 		if (idx > max_n_samples) {
 
-			sample_t empty;
-
-			return empty;
+			idx = max_n_samples - 1;
 
 		}
 

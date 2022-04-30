@@ -32,8 +32,9 @@ class AESL_RUNTIME_BC {
     fstream file_token;
     string mName;
 };
-extern "C" void SlidingWindowMagSampleFetcher(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, char, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
-extern "C" void apatb_SlidingWindowMagSampleFetcher_hw(volatile void * __xlx_apatb_param_buffer_in_0, volatile void * __xlx_apatb_param_buffer_in_1, volatile void * __xlx_apatb_param_buffer_in_2, volatile void * __xlx_apatb_param_buffer_in_3, volatile void * __xlx_apatb_param_buffer_in_4, volatile void * __xlx_apatb_param_buffer_in_5, volatile void * __xlx_apatb_param_buffer_in_6, volatile void * __xlx_apatb_param_buffer_in_7, volatile void * __xlx_apatb_param_buffer_in_8, volatile void * __xlx_apatb_param_buffer_in_9, volatile void * __xlx_apatb_param_buffer_in_10, volatile void * __xlx_apatb_param_buffer_in_11, volatile void * __xlx_apatb_param_buffer_out, char __xlx_apatb_param_n_periods, volatile void * __xlx_apatb_param_bfr_irq, volatile void * __xlx_apatb_param_n_samples, volatile void * __xlx_apatb_param_n_samples_out, volatile void * __xlx_apatb_param_start_write, volatile void * __xlx_apatb_param_write_finished) {
+struct __cosim_s1__ { char data[1]; };
+extern "C" void SlidingWindowMagSampleFetcher(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, __cosim_s1__, char, volatile void *, volatile void *);
+extern "C" void apatb_SlidingWindowMagSampleFetcher_hw(volatile void * __xlx_apatb_param_buffer_in_0, volatile void * __xlx_apatb_param_buffer_in_1, volatile void * __xlx_apatb_param_buffer_in_2, volatile void * __xlx_apatb_param_buffer_in_3, volatile void * __xlx_apatb_param_buffer_in_4, volatile void * __xlx_apatb_param_buffer_in_5, volatile void * __xlx_apatb_param_buffer_in_6, volatile void * __xlx_apatb_param_buffer_in_7, volatile void * __xlx_apatb_param_buffer_in_8, volatile void * __xlx_apatb_param_buffer_in_9, volatile void * __xlx_apatb_param_buffer_in_10, volatile void * __xlx_apatb_param_buffer_in_11, volatile void * __xlx_apatb_param_buffer_out, __cosim_s1__ __xlx_apatb_param_n_samples, char __xlx_apatb_param_n_periods, volatile void * __xlx_apatb_param_n_samples_out, volatile void * __xlx_apatb_param_start_write) {
   // Collect __xlx_buffer_in_0__tmp_vec
   vector<sc_bv<32> >__xlx_buffer_in_0__tmp_vec;
   for (int j = 0, e = 10; j != e; ++j) {
@@ -191,7 +192,7 @@ extern "C" void apatb_SlidingWindowMagSampleFetcher_hw(volatile void * __xlx_apa
     __xlx_buffer_out__input_buffer[i] = __xlx_buffer_out__tmp_vec[i].range(31, 0).to_uint64();
   }
   // DUT call
-  SlidingWindowMagSampleFetcher(__xlx_buffer_in_0__input_buffer, __xlx_buffer_in_1__input_buffer, __xlx_buffer_in_2__input_buffer, __xlx_buffer_in_3__input_buffer, __xlx_buffer_in_4__input_buffer, __xlx_buffer_in_5__input_buffer, __xlx_buffer_in_6__input_buffer, __xlx_buffer_in_7__input_buffer, __xlx_buffer_in_8__input_buffer, __xlx_buffer_in_9__input_buffer, __xlx_buffer_in_10__input_buffer, __xlx_buffer_in_11__input_buffer, __xlx_buffer_out__input_buffer, __xlx_apatb_param_n_periods, __xlx_apatb_param_bfr_irq, __xlx_apatb_param_n_samples, __xlx_apatb_param_n_samples_out, __xlx_apatb_param_start_write, __xlx_apatb_param_write_finished);
+  SlidingWindowMagSampleFetcher(__xlx_buffer_in_0__input_buffer, __xlx_buffer_in_1__input_buffer, __xlx_buffer_in_2__input_buffer, __xlx_buffer_in_3__input_buffer, __xlx_buffer_in_4__input_buffer, __xlx_buffer_in_5__input_buffer, __xlx_buffer_in_6__input_buffer, __xlx_buffer_in_7__input_buffer, __xlx_buffer_in_8__input_buffer, __xlx_buffer_in_9__input_buffer, __xlx_buffer_in_10__input_buffer, __xlx_buffer_in_11__input_buffer, __xlx_buffer_out__input_buffer, __xlx_apatb_param_n_samples, __xlx_apatb_param_n_periods, __xlx_apatb_param_n_samples_out, __xlx_apatb_param_start_write);
 // print __xlx_apatb_param_buffer_in_0
   sc_bv<32>*__xlx_buffer_in_0_output_buffer = new sc_bv<32>[__xlx_size_param_buffer_in_0];
   for (int i = 0; i < __xlx_size_param_buffer_in_0; ++i) {

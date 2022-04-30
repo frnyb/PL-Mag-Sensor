@@ -1,190 +1,595 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651251715511">
-  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651320283777">
+  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM" coreId="2413733040" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM" coreId="2413876568" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="buffer_in_2" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="3" name="buffer_in_2" type="PortType" coreName="RAM" coreId="2413875648" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM" coreId="3019899008" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM" coreId="2413876608" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="6" name="buffer_in_5" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="7" name="buffer_in_6" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="7" name="buffer_in_6" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="8" name="buffer_in_7" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="8" name="buffer_in_7" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="9" name="buffer_in_8" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="9" name="buffer_in_8" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="10" name="buffer_in_9" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="12" name="buffer_in_11" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="13" name="buffer_out" type="PortType" coreId="132" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="3840"/>
-  <ports id="14" name="n_periods" type="PortType" originalName="n_periods" coreId="49" bitwidth="8">
+  <ports id="13" name="buffer_out" type="PortType" coreName="RAM_1P" coreId="132" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="3840">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="n_samples" type="PortType" originalName="n_samples.V" coreId="132" bitwidth="6">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="15" name="bfr_irq" type="PortType" originalName="bfr_irq" coreId="49" bitwidth="1">
+  <ports id="15" name="n_periods" type="PortType" originalName="n_periods" coreId="132" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="16" name="n_samples" type="PortType" originalName="n_samples" coreId="49" bitwidth="6">
-    <dataOutputObjs>read</dataOutputObjs>
-  </ports>
-  <ports id="17" name="n_samples_out" type="PortType" originalName="n_samples_out" coreId="132" bitwidth="32" direction="DirOut">
+  <ports id="16" name="n_samples_out" type="PortType" originalName="n_samples_out" coreId="49" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="18" name="start_write" type="PortType" originalName="start_write" coreId="68" bitwidth="1" direction="DirInOut">
+  <ports id="17" name="start_write" type="PortType" originalName="start_write" coreId="132" bitwidth="1" direction="DirInOut">
     <dataInputObjs>read</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>write</dataOutputObjs>
   </ports>
-  <ports id="19" name="write_finished" type="PortType" originalName="write_finished" coreId="49" bitwidth="1" direction="DirOut">
-    <dataInputObjs>write</dataInputObjs>
-    <dataInputObjs>write</dataInputObjs>
-  </ports>
-  <edges id="103" source_obj="//@ports.13" sink_obj="//@blocks.0/@node_objs.0"/>
-  <edges id="106" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
-  <edges id="109" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="110" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
-  <edges id="111" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
-  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
-  <edges id="115" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
-  <edges id="116" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
-  <edges id="119" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
-  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
-  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
-  <edges id="126" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
-  <edges id="127" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
-  <edges id="128" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
-  <edges id="131" source_obj="//@ports.14" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="132" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="133" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="134" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="137" source_obj="//@ports.15" sink_obj="//@blocks.2/@node_objs.0"/>
-  <edges id="140" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="141" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="142" source_obj="//@ports.2" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="143" source_obj="//@ports.3" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="144" source_obj="//@ports.4" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="145" source_obj="//@ports.5" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="146" source_obj="//@ports.6" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="147" source_obj="//@ports.7" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="148" source_obj="//@ports.8" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="149" source_obj="//@ports.9" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="150" source_obj="//@ports.10" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="151" source_obj="//@ports.11" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="152" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="153" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="154" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.2"/>
-  <edges id="157" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
-  <edges id="160" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.0"/>
-  <edges id="161" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
-  <edges id="164" source_obj="//@ports.17" sink_obj="//@blocks.3/@node_objs.2"/>
-  <edges id="165" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.3"/>
-  <edges id="166" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.3/@node_objs.3"/>
-  <edges id="167" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
-  <edges id="170" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@ports.18"/>
-  <edges id="172" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.4/@node_objs.1"/>
-  <edges id="173" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
-  <edges id="174" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.2"/>
-  <edges id="175" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.4/@node_objs.2"/>
-  <edges id="176" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.2"/>
-  <edges id="179" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@ports.16"/>
-  <edges id="182" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.1"/>
-  <edges id="184" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@ports.18"/>
-  <edges id="187" source_obj="//@ports.17" sink_obj="//@blocks.6/@node_objs.1"/>
-  <edges id="189" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.2"/>
-  <edges id="635" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
-  <edges id="636" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
-  <edges id="637" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
-  <edges id="638" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
-  <edges id="639" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
-  <edges id="640" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
-  <edges id="641" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
-  <edges id="642" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.7"/>
-  <edges id="643" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
-  <edges id="644" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6"/>
-  <edges id="645" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
-  <edges id="646" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
-  <edges id="647" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.1"/>
-  <edges id="648" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.6/@node_objs.1"/>
-  <edges id="649" edge_type="VirtEdge" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
-  <edges id="-164" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@ports.17"/>
-  <edges id="-187" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@ports.17"/>
-  <blocks id="65" name="block_65" type="BlockType">
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>arrayctor.loop.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="n_periods_read" originalName="n_periods" coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+  <edges id="319" source_obj="//@ports.14" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="322" source_obj="//@ports.13" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="325" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="326" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="327" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="328" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="329" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="330" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="331" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="332" source_obj="//@ports.7" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="333" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="334" source_obj="//@ports.9" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="335" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="336" source_obj="//@ports.11" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="337" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="340" source_obj="//@ports.16" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="341" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="342" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="343" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="346" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.12"/>
+  <edges id="347" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="350" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@ports.15"/>
+  <edges id="351" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="354" source_obj="//@ports.16" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="357" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="358" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="359" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="360" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="361" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="362" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="363" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="364" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="365" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="366" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="367" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="368" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="369" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="370" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="371" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="372" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="373" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="374" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="375" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="376" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="377" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="378" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="379" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="380" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="381" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="382" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="383" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="384" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="385" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="386" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="387" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="388" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="389" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="390" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="391" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="392" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="393" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="394" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="395" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="396" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="397" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="398" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="399" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="400" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="401" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="402" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="403" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="404" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="405" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="406" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="407" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="408" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="409" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="410" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="411" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="412" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="413" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="414" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="415" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="416" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="417" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="418" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="419" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="420" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="421" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="422" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="423" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="424" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="425" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="426" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="427" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="428" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="429" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="430" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="431" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="432" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="433" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="434" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="435" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="436" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="437" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="438" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="439" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="440" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="441" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="442" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="443" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="444" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="445" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="446" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="447" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="448" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="449" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="450" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="451" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="452" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="453" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="454" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="455" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="456" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="457" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="458" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="459" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="460" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="461" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="462" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="463" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="464" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="465" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="466" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="467" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="468" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="469" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="470" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="471" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="472" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="473" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="474" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="475" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="476" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="477" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="478" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="479" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="480" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="481" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="482" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="483" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="484" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="485" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="486" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="487" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="488" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="489" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="490" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="491" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="492" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="493" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="494" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="495" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="496" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="497" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="498" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="499" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="500" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="501" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="502" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="503" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="504" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="505" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="506" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="507" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="508" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="509" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="510" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="511" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="512" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="513" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="514" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="515" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="516" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="517" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="518" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="519" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="520" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="521" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="522" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="523" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="524" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="525" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="526" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="527" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="528" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="529" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="530" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="531" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="532" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="533" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="534" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="535" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="536" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="537" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="538" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="539" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="540" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="541" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="542" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="543" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="544" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="545" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="546" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="547" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="548" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="549" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="550" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="551" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="552" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="553" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="554" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="555" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="556" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="557" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="558" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="559" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="560" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="561" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="562" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="563" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="564" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="565" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="566" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="567" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="568" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="569" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="570" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="571" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="572" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="573" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="574" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="575" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="576" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="577" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="578" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="579" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="580" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="581" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="582" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="583" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="584" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="585" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="586" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="587" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="588" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="589" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="590" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="591" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="592" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="593" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="594" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="595" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="596" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="597" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="598" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="599" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="600" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="601" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="602" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="603" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="604" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="605" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="606" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="607" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="608" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="609" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="610" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="611" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="612" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="613" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="614" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="615" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="616" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="617" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="618" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="619" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="620" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="621" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="622" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="623" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="624" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="625" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="626" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="627" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="628" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="629" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="630" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="631" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="632" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="633" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="634" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="635" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="636" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="637" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="638" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="639" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="640" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="641" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="642" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="643" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="644" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="645" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="646" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="647" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="648" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="649" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="650" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="651" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="652" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="653" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="654" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="655" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="656" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="657" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="658" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="659" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="660" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="661" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="662" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="663" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="664" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="665" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="666" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="667" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="668" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="669" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="670" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="671" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="672" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="673" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="674" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="675" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="676" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="677" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="678" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="679" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="680" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="681" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="682" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="683" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="684" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="685" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="686" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="687" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="688" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="689" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="690" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="691" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="692" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="693" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="694" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="695" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="696" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="697" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="698" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="699" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="700" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="701" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="702" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="703" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="704" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="705" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="706" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="707" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="708" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="709" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="710" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="711" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="712" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="713" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="714" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="715" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="716" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="717" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="718" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="719" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="720" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="721" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="722" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="723" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="724" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="725" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="726" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="727" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="728" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="729" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="730" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="731" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="732" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="733" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="734" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="735" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="736" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="737" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="738" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="739" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="740" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="741" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="742" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="743" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="744" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="745" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="746" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="747" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="748" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="749" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="750" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="751" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="752" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="753" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="754" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="755" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="756" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="757" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="758" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="759" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="760" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="761" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="762" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="763" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="764" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="765" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="766" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="767" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="768" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="769" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="770" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="771" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="772" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="773" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="774" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="775" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="776" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="777" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="778" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="779" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="780" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="781" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="782" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="783" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="784" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="785" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="786" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="787" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="788" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="789" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="790" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="791" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="792" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="793" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="794" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="795" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="796" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="797" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="798" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="799" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="800" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="801" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="802" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="803" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="804" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="805" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="806" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="807" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="808" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="809" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="810" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="811" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="812" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="813" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="814" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="815" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="816" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="817" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="818" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="819" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="820" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="821" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="822" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="823" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="824" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="825" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="826" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="827" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="828" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="829" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="830" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="831" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="832" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="833" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="834" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="835" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="836" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="837" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="838" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="839" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="840" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="841" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="842" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="843" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="844" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1212" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="1213" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="1214" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="1215" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1216" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1217" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1218" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="-340" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.16"/>
+  <edges id="-354" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@ports.16"/>
+  <blocks id="309" name="block_309" type="BlockType">
+    <controlOutputObjs>block_314</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="304" name="n_periods_read" lineNumber="25" originalName="n_periods" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="106" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="8" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="25" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>n_periods</dataInputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="sliding_window_buffer_count_s" lineNumber="78" originalName="sliding_window.buffer_.count_" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="sliding_window_buffer_count_s_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="78" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
-      <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="br_ln8" lineNumber="8" fileName="../src/cyclic_buffer.h" fileDirectory=".." coreId="113" contextFuncName="CyclicBuffer" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/cyclic_buffer.h" linenumber="8" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="CyclicBuffer"/>
-      <controlInputObjs>arrayctor.loop.i</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>78</validLinenumbers>
-    </fileValidLineNumbers>
-    <fileValidLineNumbers fileName="../src/cyclic_buffer.h">
-      <validLinenumbers>8</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="78" name="_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit" type="BlockType">
-    <controlInputObjs>arrayctor.loop.i</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>block_82</controlOutputObjs>
-    <controlOutputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit._crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="bfr_irq_read" lineNumber="80" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="1" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="80" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataInputObjs>bfr_irq</dataInputObjs>
-      <dataOutputObjs>br</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="br_ln80" lineNumber="80" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.48" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="80" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataInputObjs>read</dataInputObjs>
-      <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit._crit_edge</controlInputObjs>
-      <controlInputObjs>block_82</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>80</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="82" name="block_82" type="BlockType">
-    <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit._crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="curr_n_samples" lineNumber="534" originalName="curr_n_samples" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="49" contextFuncName="operator_unsigned_long_long" bitwidth="6" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="534" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="operator unsigned long long"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="305" name="n_samples_read" lineNumber="25" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="6" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="25" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>n_samples</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="_ln84" lineNumber="84" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_205" coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.87" m_topoIndex="14" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="84" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="306" name="_ln59" lineNumber="59" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_601" coreId="106" contextFuncName="SlidingWindowMagSampleFetcher" opcode="call" nodeLatency="1" m_display="0" m_delay="0.87" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="59" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>buffer_in_0</dataInputObjs>
       <dataInputObjs>buffer_in_1</dataInputObjs>
       <dataInputObjs>buffer_in_2</dataInputObjs>
@@ -197,443 +602,1169 @@
       <dataInputObjs>buffer_in_9</dataInputObjs>
       <dataInputObjs>buffer_in_10</dataInputObjs>
       <dataInputObjs>buffer_in_11</dataInputObjs>
-      <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <constName>loadSlidingWindow</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="br_ln88" lineNumber="88" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.48" m_topoIndex="15" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="88" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit._crit_edge</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>84</validLinenumbers>
-      <validLinenumbers>88</validLinenumbers>
-    </fileValidLineNumbers>
-    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
-      <validLinenumbers>534</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="87" name="_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit._crit_edge" type="BlockType">
-    <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit</controlInputObjs>
-    <controlInputObjs>block_82</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>block_91</controlOutputObjs>
-    <controlOutputObjs>._crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="sliding_window_size_0" coreId="49" bitwidth="1" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <dataOutputObjs>zext</dataOutputObjs>
-      <controlInputObjs>block_82</controlInputObjs>
-      <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit</controlInputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="zext_ln90" lineNumber="90" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="zext_ln90_fu_253_p1" coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="8" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="90" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="start_write_read" lineNumber="90" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="1" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="90" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="307" name="start_write_rd" lineNumber="66" originalName="start_write_rd" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="90" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="1" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="66" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>start_write</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <dataOutputObjs>start_write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="br_ln90" lineNumber="90" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="90" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="308" name="br_ln68" lineNumber="68" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="106" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="68" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>read</dataInputObjs>
       <controlInputObjs>._crit_edge</controlInputObjs>
-      <controlInputObjs>block_91</controlInputObjs>
+      <controlInputObjs>block_314</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>90</validLinenumbers>
+      <validLinenumbers>25</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>68</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="91" name="block_91" type="BlockType">
-    <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit._crit_edge</controlInputObjs>
+  <blocks id="314" name="block_314" type="BlockType">
+    <controlInputObjs>block_309</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>block_94</controlOutputObjs>
-    <controlOutputObjs>._crit_edge1</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="write_finished_write_ln92" lineNumber="92" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="92" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataOutputObjs>write_finished</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="icmp_ln94" lineNumber="94" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="icmp_ln94_fu_257_p2" opType="icmp" coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="21" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="94" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataInputObjs>zext</dataInputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="310" name="tmp" lineNumber="76" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_writeToRAM_fu_1119" coreId="4294967295" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.48" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="76" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>br</dataOutputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <constName>writeToRAM</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="br_ln94" lineNumber="94" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="94" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>._crit_edge1</controlInputObjs>
-      <controlInputObjs>block_94</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>92</validLinenumbers>
-      <validLinenumbers>94</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="94" name="block_94" type="BlockType">
-    <controlInputObjs>block_91</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>._crit_edge1</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="n_samples_out_write_ln96" lineNumber="96" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="23" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="96" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="311" name="n_samples_out_write_ln76" lineNumber="76" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="4294967294" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="76" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+      <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>n_samples_out</dataOutputObjs>
-      <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="br_ln98" lineNumber="98" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="128280568" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="98" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <controlInputObjs>._crit_edge1</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>96</validLinenumbers>
-      <validLinenumbers>98</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="98" name="._crit_edge1" type="BlockType">
-    <controlInputObjs>block_91</controlInputObjs>
-    <controlInputObjs>block_94</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>._crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="write_finished_write_ln104" lineNumber="104" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="4.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="104" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataOutputObjs>write_finished</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="start_write_write_ln105" lineNumber="105" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="4.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="105" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="312" name="start_write_write_ln80" lineNumber="80" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="80" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>start_write</dataInputObjs>
       <dataOutputObjs>start_write</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="br_ln107" lineNumber="107" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="305" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="107" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="313" name="br_ln82" lineNumber="82" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="1931498832" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="82" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <controlInputObjs>._crit_edge</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>104</validLinenumbers>
-      <validLinenumbers>105</validLinenumbers>
-      <validLinenumbers>107</validLinenumbers>
+      <validLinenumbers>76</validLinenumbers>
+      <validLinenumbers>80</validLinenumbers>
+      <validLinenumbers>82</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="100" name="._crit_edge" type="BlockType">
-    <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit._crit_edge</controlInputObjs>
-    <controlInputObjs>._crit_edge1</controlInputObjs>
+  <blocks id="316" name="._crit_edge" type="BlockType">
+    <controlInputObjs>block_309</controlInputObjs>
+    <controlInputObjs>block_314</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="_ln109" lineNumber="109" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="SlidingWindowMagSampleFetcher" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="109" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="315" name="_ln83" lineNumber="83" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="SlidingWindowMagSampleFetcher" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="83" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>109</validLinenumbers>
+      <validLinenumbers>83</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="236" pipe_depth="1" RegionName="Loop 1">
-    <basic_blocks id="75" name="arrayctor.loop.i" type="BlockType">
-      <controlInputObjs>block_65</controlInputObjs>
-      <controlInputObjs>arrayctor.loop.i</controlInputObjs>
-      <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>phi</controlOutputObjs>
-      <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit</controlOutputObjs>
-      <controlOutputObjs>arrayctor.loop.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="indvar_i" lineNumber="8" fileName="../src/cyclic_buffer.h" fileDirectory=".." coreId="113" contextFuncName="CyclicBuffer" bitwidth="5" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/cyclic_buffer.h" linenumber="8" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="CyclicBuffer"/>
-        <dataInputObjs>add</dataInputObjs>
-        <dataOutputObjs>add</dataOutputObjs>
-        <dataOutputObjs>zext</dataOutputObjs>
-        <dataOutputObjs>icmp</dataOutputObjs>
-        <controlInputObjs>block_65</controlInputObjs>
-        <controlInputObjs>arrayctor.loop.i</controlInputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="add_ln8" lineNumber="8" fileName="../src/cyclic_buffer.h" fileDirectory=".." rtlName="add_ln8_fu_236_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="CyclicBuffer" bitwidth="5" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="5" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/cyclic_buffer.h" linenumber="8" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="CyclicBuffer"/>
-        <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>phi</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="zext_ln12" lineNumber="12" fileName="../src/sample_period.h" fileDirectory=".." rtlName="zext_ln12_fu_242_p1" coreId="113" contextFuncName="SamplePeriod" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/sample_period.h" linenumber="12" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SamplePeriod"/>
-        <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>getelementptr</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="this_buffer_count_addr" lineNumber="12" fileName="../src/sample_period.h" fileDirectory=".." coreId="113" contextFuncName="SamplePeriod" bitwidth="5" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/sample_period.h" linenumber="12" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SamplePeriod"/>
-        <dataInputObjs>alloca</dataInputObjs>
-        <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="this_buffer_count_addr_write_ln12" lineNumber="12" fileName="../src/sample_period.h" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="SamplePeriod" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.79" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/sample_period.h" linenumber="12" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SamplePeriod"/>
-        <dataInputObjs>getelementptr</dataInputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="icmp_ln8" lineNumber="8" fileName="../src/cyclic_buffer.h" fileDirectory=".." rtlName="icmp_ln8_fu_247_p2" opType="icmp" coreId="132" contextFuncName="CyclicBuffer" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="9" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/cyclic_buffer.h" linenumber="8" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="CyclicBuffer"/>
-        <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>br</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="br_ln8" lineNumber="8" fileName="../src/cyclic_buffer.h" fileDirectory=".." coreId="49" contextFuncName="CyclicBuffer" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/cyclic_buffer.h" linenumber="8" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="CyclicBuffer"/>
-        <dataInputObjs>icmp</dataInputObjs>
-        <controlInputObjs>arrayctor.loop.i</controlInputObjs>
-        <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi10EELi32EEC2Ev.exit</controlInputObjs>
-      </node_objs>
-      <fileValidLineNumbers fileName="../src/sample_period.h">
-        <validLinenumbers>12</validLinenumbers>
-      </fileValidLineNumbers>
-      <fileValidLineNumbers fileName="../src/cyclic_buffer.h">
-        <validLinenumbers>8</validLinenumbers>
-      </fileValidLineNumbers>
-    </basic_blocks>
-  </regions>
   <ScheduleInfo time="0"/>
   <ScheduleInfo time="1"/>
   <ScheduleInfo time="2"/>
   <ScheduleInfo time="3"/>
-  <ScheduleInfo time="4"/>
-  <regnodes realName="start_write_read_reg_284">
-    <nodeIds>85</nodeIds>
+  <regnodes realName="start_write_rd_reg_1623">
+    <nodeIds>307</nodeIds>
   </regnodes>
-  <regnodes realName="sliding_window_size_0_reg_193">
-    <nodeIds>83</nodeIds>
+  <regnodes realName="n_periods_read_reg_1618">
+    <nodeIds>304</nodeIds>
   </regnodes>
-  <regnodes realName="bfr_irq_read_reg_275">
-    <nodeIds>76</nodeIds>
+  <regnodes realName="n_samples_read_reg_1613">
+    <nodeIds>305</nodeIds>
   </regnodes>
-  <regnodes realName="indvar_i_reg_182">
-    <nodeIds>66</nodeIds>
-  </regnodes>
-  <regnodes realName="add_ln8_reg_267">
-    <nodeIds>67</nodeIds>
-  </regnodes>
-  <regnodes realName="n_periods_read_reg_262">
-    <nodeIds>62</nodeIds>
-  </regnodes>
-  <regnodes realName="curr_n_samples_reg_279">
-    <nodeIds>79</nodeIds>
-  </regnodes>
-  <expressionNodes realName="icmp_ln8_fu_247">
-    <nodeIds>72</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="indvar_i_phi_fu_186">
-    <nodeIds>66</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln8_fu_236">
-    <nodeIds>67</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="sliding_window_buffer_count_s_alloca_fu_116">
-    <nodeIds>63</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="sliding_window_size_0_phi_fu_197">
-    <nodeIds>83</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="this_buffer_count_addr_gep_fu_169">
-    <nodeIds>70</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln12_fu_242">
-    <nodeIds>69</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln94_fu_257">
-    <nodeIds>89</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln90_fu_253">
-    <nodeIds>84</nodeIds>
-  </expressionNodes>
-  <moduleNodes realName="grp_loadSlidingWindow_fu_205">
-    <nodeIds>80</nodeIds>
+  <moduleNodes realName="grp_writeToRAM_fu_1119">
+    <nodeIds>310</nodeIds>
   </moduleNodes>
-  <ioNodes realName="n_periods_read_read_fu_120">
-    <nodeIds>62</nodeIds>
+  <moduleNodes realName="grp_loadSlidingWindow_fu_601">
+    <nodeIds>306</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="write_ln80_write_fu_593">
+    <nodeIds>312</nodeIds>
   </ioNodes>
-  <ioNodes realName="start_write_read_read_fu_138">
-    <nodeIds>85</nodeIds>
+  <ioNodes realName="start_write_rd_read_fu_580">
+    <nodeIds>307</nodeIds>
   </ioNodes>
-  <ioNodes realName="grp_write_fu_144">
-    <nodeIds>88</nodeIds>
-    <nodeIds>95</nodeIds>
+  <ioNodes realName="write_ln76_write_fu_586">
+    <nodeIds>311</nodeIds>
   </ioNodes>
-  <ioNodes realName="curr_n_samples_read_fu_132">
-    <nodeIds>79</nodeIds>
+  <ioNodes realName="n_samples_read_read_fu_568">
+    <nodeIds>305</nodeIds>
   </ioNodes>
-  <ioNodes realName="bfr_irq_read_read_fu_126">
-    <nodeIds>76</nodeIds>
+  <ioNodes realName="n_periods_read_read_fu_574">
+    <nodeIds>304</nodeIds>
   </ioNodes>
-  <ioNodes realName="write_ln105_write_fu_161">
-    <nodeIds>96</nodeIds>
-  </ioNodes>
-  <ioNodes realName="write_ln96_write_fu_152">
-    <nodeIds>92</nodeIds>
-  </ioNodes>
-  <memoryPorts dataString="sliding_window_buffer_count_s">
-    <nodeIds>71</nodeIds>
-  </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_count_s" portID="100">
-    <nodeIds>80</nodeIds>
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
   </memoryPorts>
-  <ioPorts name="bfr_irq">
-    <contents name="read">
-      <nodeIds>76</nodeIds>
-    </contents>
-  </ioPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_0" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_1" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_10" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_11" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_2" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_3" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_4" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_5" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_6" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_7" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_8" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_9" portID="100">
+    <nodeIds>306</nodeIds>
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
   <ioPorts name="n_periods">
     <contents name="read">
-      <nodeIds>62</nodeIds>
+      <nodeIds>304</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="n_samples">
     <contents name="read">
-      <nodeIds>79</nodeIds>
+      <nodeIds>305</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="n_samples_out">
     <contents name="write">
-      <nodeIds>92</nodeIds>
+      <nodeIds>311</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="start_write">
     <contents name="read">
-      <nodeIds>85</nodeIds>
+      <nodeIds>307</nodeIds>
     </contents>
     <contents name="write">
-      <nodeIds>96</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="write_finished">
-    <contents name="write">
-      <nodeIds>88</nodeIds>
-      <nodeIds>95</nodeIds>
+      <nodeIds>312</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
     <states id="1">
-      <operations id="20" stage="1" latency="1"/>
-      <operations id="21" stage="1" latency="1"/>
-      <operations id="22" stage="1" latency="1"/>
-      <operations id="23" stage="1" latency="1"/>
-      <operations id="24" stage="1" latency="1"/>
-      <operations id="25" stage="1" latency="1"/>
-      <operations id="26" stage="1" latency="1"/>
-      <operations id="27" stage="1" latency="1"/>
-      <operations id="28" stage="1" latency="1"/>
-      <operations id="29" stage="1" latency="1"/>
-      <operations id="30" stage="1" latency="1"/>
-      <operations id="31" stage="1" latency="1"/>
-      <operations id="32" stage="1" latency="1"/>
-      <operations id="33" stage="1" latency="1"/>
-      <operations id="34" stage="1" latency="1"/>
-      <operations id="35" stage="1" latency="1"/>
-      <operations id="36" stage="1" latency="1"/>
-      <operations id="37" stage="1" latency="1"/>
-      <operations id="38" stage="1" latency="1"/>
-      <operations id="39" stage="1" latency="1"/>
-      <operations id="40" stage="1" latency="1"/>
-      <operations id="41" stage="1" latency="1"/>
-      <operations id="42" stage="1" latency="1"/>
-      <operations id="43" stage="1" latency="1"/>
-      <operations id="44" stage="1" latency="1"/>
-      <operations id="45" stage="1" latency="1"/>
-      <operations id="46" stage="1" latency="1"/>
-      <operations id="47" stage="1" latency="1"/>
-      <operations id="48" stage="1" latency="1"/>
-      <operations id="49" stage="1" latency="1"/>
-      <operations id="50" stage="1" latency="1"/>
-      <operations id="51" stage="1" latency="1"/>
-      <operations id="52" stage="1" latency="1"/>
-      <operations id="53" stage="1" latency="1"/>
-      <operations id="54" stage="1" latency="1"/>
-      <operations id="55" stage="1" latency="1"/>
-      <operations id="56" stage="1" latency="1"/>
-      <operations id="57" stage="1" latency="1"/>
-      <operations id="58" stage="1" latency="1"/>
-      <operations id="59" stage="1" latency="1"/>
-      <operations id="60" stage="1" latency="1"/>
-      <operations id="61" stage="1" latency="1"/>
-      <operations id="62" stage="1" latency="1"/>
-      <operations id="63" stage="1" latency="1"/>
-      <operations id="64" stage="1" latency="1"/>
+      <operations id="305" stage="1" latency="1"/>
+      <operations id="306" stage="2" latency="2"/>
     </states>
     <states id="2">
-      <operations id="66" stage="1" latency="1"/>
-      <operations id="67" stage="1" latency="1"/>
-      <operations id="68" stage="1" latency="1"/>
-      <operations id="69" stage="1" latency="1"/>
-      <operations id="70" stage="1" latency="1"/>
-      <operations id="71" stage="1" latency="1"/>
-      <operations id="72" stage="1" latency="1"/>
-      <operations id="73" stage="1" latency="1"/>
-      <operations id="74" stage="1" latency="1"/>
+      <operations id="267" stage="1" latency="1"/>
+      <operations id="268" stage="1" latency="1"/>
+      <operations id="269" stage="1" latency="1"/>
+      <operations id="270" stage="1" latency="1"/>
+      <operations id="271" stage="1" latency="1"/>
+      <operations id="272" stage="1" latency="1"/>
+      <operations id="273" stage="1" latency="1"/>
+      <operations id="274" stage="1" latency="1"/>
+      <operations id="275" stage="1" latency="1"/>
+      <operations id="276" stage="1" latency="1"/>
+      <operations id="277" stage="1" latency="1"/>
+      <operations id="278" stage="1" latency="1"/>
+      <operations id="279" stage="1" latency="1"/>
+      <operations id="280" stage="1" latency="1"/>
+      <operations id="281" stage="1" latency="1"/>
+      <operations id="282" stage="1" latency="1"/>
+      <operations id="283" stage="1" latency="1"/>
+      <operations id="284" stage="1" latency="1"/>
+      <operations id="285" stage="1" latency="1"/>
+      <operations id="286" stage="1" latency="1"/>
+      <operations id="287" stage="1" latency="1"/>
+      <operations id="288" stage="1" latency="1"/>
+      <operations id="289" stage="1" latency="1"/>
+      <operations id="290" stage="1" latency="1"/>
+      <operations id="291" stage="1" latency="1"/>
+      <operations id="292" stage="1" latency="1"/>
+      <operations id="293" stage="1" latency="1"/>
+      <operations id="294" stage="1" latency="1"/>
+      <operations id="295" stage="1" latency="1"/>
+      <operations id="296" stage="1" latency="1"/>
+      <operations id="297" stage="1" latency="1"/>
+      <operations id="298" stage="1" latency="1"/>
+      <operations id="299" stage="1" latency="1"/>
+      <operations id="300" stage="1" latency="1"/>
+      <operations id="301" stage="1" latency="1"/>
+      <operations id="302" stage="1" latency="1"/>
+      <operations id="303" stage="1" latency="1"/>
+      <operations id="304" stage="1" latency="1"/>
+      <operations id="306" stage="1" latency="2"/>
+      <operations id="307" stage="1" latency="1"/>
+      <operations id="308" stage="1" latency="1"/>
     </states>
     <states id="3">
-      <operations id="76" stage="1" latency="1"/>
-      <operations id="77" stage="1" latency="1"/>
-      <operations id="79" stage="1" latency="1"/>
-      <operations id="80" stage="2" latency="2"/>
+      <operations id="310" stage="2" latency="2"/>
     </states>
     <states id="4">
-      <operations id="80" stage="1" latency="2"/>
-      <operations id="81" stage="1" latency="1"/>
-      <operations id="83" stage="1" latency="1"/>
-      <operations id="84" stage="1" latency="1"/>
-      <operations id="85" stage="1" latency="1"/>
-      <operations id="86" stage="1" latency="1"/>
-      <operations id="88" stage="1" latency="1"/>
-      <operations id="89" stage="1" latency="1"/>
-      <operations id="90" stage="1" latency="1"/>
-      <operations id="92" stage="1" latency="1"/>
-      <operations id="93" stage="1" latency="1"/>
-    </states>
-    <states id="5">
-      <operations id="95" stage="1" latency="1"/>
-      <operations id="96" stage="1" latency="1"/>
-      <operations id="97" stage="1" latency="1"/>
-      <operations id="99" stage="1" latency="1"/>
+      <operations id="310" stage="1" latency="2"/>
+      <operations id="311" stage="1" latency="1"/>
+      <operations id="312" stage="1" latency="1"/>
+      <operations id="313" stage="1" latency="1"/>
+      <operations id="315" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
-      <condition id="-1"/>
-    </transitions>
-    <transitions inState="3" outState="4">
-      <condition id="-1"/>
-    </transitions>
-    <transitions inState="4" outState="5">
       <condition id="-1"/>
     </transitions>
     <transitions inState="2" outState="3">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="2" outState="2">
+    <transitions inState="2" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
       <condition id="-1"/>
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="SlidingWindowMagSampleFetcher" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="35" mMaxLatency="417">
-      <subRegions>2</subRegions>
-      <subRegions>3</subRegions>
-      <subRegions>4</subRegions>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>65</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="3" mTag="Loop_1" mII="1" mDepth="1" mMinTripCount="32" mMaxTripCount="32" mMinLatency="31" mMaxLatency="31" mType="1">
-      <basicBlocks>75</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2" mMaxLatency="384">
-      <basicBlocks>78</basicBlocks>
-      <basicBlocks>82</basicBlocks>
-      <basicBlocks>87</basicBlocks>
-      <basicBlocks>91</basicBlocks>
-      <basicBlocks>94</basicBlocks>
-      <basicBlocks>98</basicBlocks>
-      <basicBlocks>100</basicBlocks>
+    <cfgRegions mId="1" mTag="SlidingWindowMagSampleFetcher" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="93" mMaxLatency="14001">
+      <basicBlocks>309</basicBlocks>
+      <basicBlocks>314</basicBlocks>
+      <basicBlocks>316</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>
