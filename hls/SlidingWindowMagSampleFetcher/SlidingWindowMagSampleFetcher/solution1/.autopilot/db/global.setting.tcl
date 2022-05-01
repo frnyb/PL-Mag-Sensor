@@ -14,7 +14,7 @@ set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 0
-set ResetLevelFlag 1
+set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-i
 set SourceFiles {sc {} c ../../../src/SlidingWindowMagSampleFetcher.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/solution1.directive
+set DirectiveFile /home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher/SlidingWindowMagSampleFetcher/solution1/solution1.directive
 set TBFiles {verilog ../../../src/sliding_window_mag_sample_fetcher_test_bench.cpp bc ../../../src/sliding_window_mag_sample_fetcher_test_bench.cpp vhdl ../../../src/sliding_window_mag_sample_fetcher_test_bench.cpp sc ../../../src/sliding_window_mag_sample_fetcher_test_bench.cpp cas ../../../src/sliding_window_mag_sample_fetcher_test_bench.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

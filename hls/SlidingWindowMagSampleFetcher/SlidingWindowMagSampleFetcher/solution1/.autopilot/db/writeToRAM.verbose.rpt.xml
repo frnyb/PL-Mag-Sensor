@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'writeToRAM'" level="0">
-<item name = "Date">Sat Apr 30 14:04:41 2022
+<item name = "Date">Sat Apr 30 14:36:37 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">SlidingWindowMagSampleFetcher</item>
@@ -50,7 +50,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 331, -</column>
+<column name="Expression">-, -, 0, 350, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">0, -, 832, 79, -</column>
@@ -106,22 +106,23 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln161_1_fu_6932_p2">+, 0, 0, 39, 32, 4</column>
-<column name="add_ln161_fu_6877_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln168_fu_6891_p2">+, 0, 0, 12, 4, 1</column>
-<column name="add_ln177_fu_6909_p2">+, 0, 0, 40, 33, 1</column>
-<column name="i_fu_6716_p2">+, 0, 0, 39, 32, 2</column>
-<column name="j_1_fu_6808_p2">+, 0, 0, 13, 6, 1</column>
-<column name="buffer_idx_fu_6728_p2">-, 0, 0, 39, 32, 32</column>
-<column name="sub_ln161_fu_6867_p2">-, 0, 0, 18, 11, 11</column>
-<column name="icmp_ln152_fu_6722_p2">icmp, 0, 0, 20, 32, 1</column>
-<column name="icmp_ln161_1_fu_6818_p2">icmp, 0, 0, 10, 6, 6</column>
-<column name="icmp_ln161_fu_6802_p2">icmp, 0, 0, 10, 6, 1</column>
-<column name="icmp_ln168_fu_6903_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="icmp_ln32_fu_6737_p2">icmp, 0, 0, 20, 32, 7</column>
-<column name="icmp_ln34_fu_6823_p2">icmp, 0, 0, 10, 6, 4</column>
-<column name="buffer_idx_3_fu_6743_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln34_fu_6829_p3">select, 0, 0, 4, 1, 4</column>
+<column name="add_ln162_1_fu_6940_p2">+, 0, 0, 39, 32, 4</column>
+<column name="add_ln162_fu_6879_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln169_fu_6893_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln178_1_fu_6930_p2">+, 0, 0, 19, 12, 1</column>
+<column name="add_ln178_fu_6915_p2">+, 0, 0, 40, 33, 1</column>
+<column name="i_fu_6718_p2">+, 0, 0, 39, 32, 2</column>
+<column name="j_1_fu_6810_p2">+, 0, 0, 13, 6, 1</column>
+<column name="buffer_idx_fu_6730_p2">-, 0, 0, 39, 32, 32</column>
+<column name="sub_ln162_fu_6869_p2">-, 0, 0, 18, 11, 11</column>
+<column name="icmp_ln153_fu_6724_p2">icmp, 0, 0, 20, 32, 1</column>
+<column name="icmp_ln162_1_fu_6820_p2">icmp, 0, 0, 10, 6, 6</column>
+<column name="icmp_ln162_fu_6804_p2">icmp, 0, 0, 10, 6, 1</column>
+<column name="icmp_ln169_fu_6905_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="icmp_ln32_fu_6739_p2">icmp, 0, 0, 20, 32, 7</column>
+<column name="icmp_ln34_fu_6825_p2">icmp, 0, 0, 10, 6, 4</column>
+<column name="buffer_idx_3_fu_6745_p3">select, 0, 0, 5, 1, 5</column>
+<column name="select_ln34_fu_6831_p3">select, 0, 0, 4, 1, 4</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
 </table>
@@ -130,12 +131,12 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">81, 17, 1, 17</column>
 <column name="ap_enable_reg_pp0_iter1">14, 3, 1, 3</column>
-<column name="i_08_in_reg_6638">9, 2, 32, 64</column>
-<column name="idx_2_reg_6658">9, 2, 32, 64</column>
-<column name="idx_4_reg_6668">9, 2, 33, 66</column>
-<column name="idx_fu_586">9, 2, 32, 64</column>
-<column name="j_reg_6647">9, 2, 6, 12</column>
-<column name="k_reg_6677">9, 2, 4, 8</column>
+<column name="i_08_in_reg_6640">9, 2, 32, 64</column>
+<column name="idx_2_reg_6660">9, 2, 32, 64</column>
+<column name="idx_4_reg_6670">9, 2, 33, 66</column>
+<column name="idx_fu_588">9, 2, 32, 64</column>
+<column name="j_reg_6649">9, 2, 6, 12</column>
+<column name="k_reg_6679">9, 2, 4, 8</column>
 <column name="sample_period_samples_0_sample_V_address0">37, 7, 4, 28</column>
 <column name="sample_period_samples_0_sample_V_address1">31, 6, 4, 24</column>
 <column name="sample_period_samples_0_sample_V_d0">31, 6, 12, 72</column>
@@ -247,22 +248,22 @@
 <column name="ap_CS_fsm">16, 0, 16, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="i_08_in_reg_6638">32, 0, 32, 0</column>
-<column name="i_reg_8283">32, 0, 32, 0</column>
-<column name="icmp_ln161_reg_9700">1, 0, 1, 0</column>
-<column name="icmp_ln168_reg_9866">1, 0, 1, 0</column>
-<column name="idx_2_reg_6658">32, 0, 32, 0</column>
-<column name="idx_4_reg_6668">33, 0, 33, 0</column>
-<column name="idx_fu_586">32, 0, 32, 0</column>
-<column name="j_1_reg_9704">6, 0, 6, 0</column>
-<column name="j_reg_6647">6, 0, 6, 0</column>
-<column name="k_reg_6677">4, 0, 4, 0</column>
-<column name="sample_period_count_s_reg_9693">6, 0, 6, 0</column>
-<column name="sext_ln34_reg_8270">32, 0, 32, 0</column>
-<column name="trunc_ln177_reg_9885">12, 0, 12, 0</column>
-<column name="trunc_ln22_reg_8275">5, 0, 5, 0</column>
-<column name="zext_ln40_reg_9712">4, 0, 64, 60</column>
-<column name="zext_ln46_reg_8291">5, 0, 64, 59</column>
+<column name="i_08_in_reg_6640">32, 0, 32, 0</column>
+<column name="i_reg_8291">32, 0, 32, 0</column>
+<column name="icmp_ln162_reg_9708">1, 0, 1, 0</column>
+<column name="icmp_ln169_reg_9874">1, 0, 1, 0</column>
+<column name="idx_2_reg_6660">32, 0, 32, 0</column>
+<column name="idx_4_reg_6670">33, 0, 33, 0</column>
+<column name="idx_fu_588">32, 0, 32, 0</column>
+<column name="j_1_reg_9712">6, 0, 6, 0</column>
+<column name="j_reg_6649">6, 0, 6, 0</column>
+<column name="k_reg_6679">4, 0, 4, 0</column>
+<column name="sample_period_count_s_reg_9701">6, 0, 6, 0</column>
+<column name="sext_ln34_reg_8278">32, 0, 32, 0</column>
+<column name="trunc_ln178_reg_9888">12, 0, 12, 0</column>
+<column name="trunc_ln22_reg_8283">5, 0, 5, 0</column>
+<column name="zext_ln40_reg_9720">4, 0, 64, 60</column>
+<column name="zext_ln46_reg_8299">5, 0, 64, 59</column>
 </table>
 </item>
 </section>

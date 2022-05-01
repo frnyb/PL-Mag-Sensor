@@ -365,7 +365,7 @@
     },
     "buffer_out": {
       "index": "12",
-      "direction": "out",
+      "direction": "inout",
       "srcType": "unsigned int*",
       "srcSize": "32",
       "hwRefs": [
@@ -381,14 +381,14 @@
           "interface": "buffer_out_ce0",
           "name": "buffer_out_ce0",
           "usage": "control",
-          "direction": "out"
+          "direction": "inout"
         },
         {
           "type": "port",
           "interface": "buffer_out_we0",
           "name": "buffer_out_we0",
           "usage": "control",
-          "direction": "out"
+          "direction": "inout"
         },
         {
           "type": "port",
@@ -396,6 +396,13 @@
           "name": "buffer_out_d0",
           "usage": "data",
           "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "buffer_out_q0",
+          "name": "buffer_out_q0",
+          "usage": "data",
+          "direction": "in"
         }
       ]
     },
@@ -427,8 +434,8 @@
       "srcType": "unsigned char",
       "srcSize": "8",
       "hwRefs": [{
-          "type": "port",
-          "interface": "n_periods",
+          "type": "register",
+          "interface": "s_axi_axi",
           "name": "n_periods",
           "usage": "data",
           "direction": "in"
@@ -441,47 +448,18 @@
       "srcSize": "32",
       "hwRefs": [
         {
-          "type": "port",
-          "interface": "n_samples_out",
+          "type": "register",
+          "interface": "s_axi_axi",
           "name": "n_samples_out",
           "usage": "data",
           "direction": "out"
         },
         {
-          "type": "port",
-          "interface": "n_samples_out_ap_vld",
-          "name": "n_samples_out_ap_vld",
+          "type": "register",
+          "interface": "s_axi_axi",
+          "name": "n_samples_out_ctrl",
           "usage": "control",
           "direction": "out"
-        }
-      ]
-    },
-    "start_write": {
-      "index": "16",
-      "direction": "inout",
-      "srcType": "*",
-      "srcSize": "1",
-      "hwRefs": [
-        {
-          "type": "port",
-          "interface": "start_write_i",
-          "name": "start_write_i",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "start_write_o",
-          "name": "start_write_o",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "start_write_o_ap_vld",
-          "name": "start_write_o_ap_vld",
-          "usage": "control",
-          "direction": "inout"
         }
       ]
     }
@@ -491,7 +469,7 @@
     "ConfigTcl": [
       "config_export -display_name=SlidingWindowMagSampleFetcher",
       "config_export -format=ip_catalog",
-      "config_export -output=\/home\/ffn\/Workspace\/Projects\/PL-Mag-Sensor\/ip\/SlidingWindowMagSampleFetcher.zip",
+      "config_export -output=\/home\/ffn\/Nextcloud\/Workspace\/Projects\/PL-Mag-Sensor\/ip\/SlidingWindowMagSampleFetcher.zip",
       "config_export -rtl=vhdl",
       "config_export -vendor=DIII"
     ],
@@ -524,6 +502,7 @@
   "Files": {
     "CSource": ["..\/..\/..\/src\/SlidingWindowMagSampleFetcher.cpp"],
     "Vhdl": [
+      "impl\/vhdl\/SlidingWindowMagSampleFetcher_axi_s_axi.vhd",
       "impl\/vhdl\/SlidingWindowMagSampleFetcher_loadSlidingWindow.vhd",
       "impl\/vhdl\/SlidingWindowMagSampleFetcher_loadSlidingWindow_sample_period.vhd",
       "impl\/vhdl\/SlidingWindowMagSampleFetcher_loadSlidingWindow_samples_0_sample_V.vhd",
@@ -539,6 +518,7 @@
       "impl\/vhdl\/SlidingWindowMagSampleFetcher.vhd"
     ],
     "Verilog": [
+      "impl\/verilog\/SlidingWindowMagSampleFetcher_axi_s_axi.v",
       "impl\/verilog\/SlidingWindowMagSampleFetcher_loadSlidingWindow.v",
       "impl\/verilog\/SlidingWindowMagSampleFetcher_loadSlidingWindow_sample_period.v",
       "impl\/verilog\/SlidingWindowMagSampleFetcher_loadSlidingWindow_samples_0_sample_V.v",
@@ -556,10 +536,20 @@
       "impl\/verilog\/SlidingWindowMagSampleFetcher_writeToRAM_sample_timestamp_V.v",
       "impl\/verilog\/SlidingWindowMagSampleFetcher.v"
     ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/SlidingWindowMagSampleFetcher_v1_0\/data\/SlidingWindowMagSampleFetcher.mdd",
+      "impl\/misc\/drivers\/SlidingWindowMagSampleFetcher_v1_0\/data\/SlidingWindowMagSampleFetcher.tcl",
+      "impl\/misc\/drivers\/SlidingWindowMagSampleFetcher_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/SlidingWindowMagSampleFetcher_v1_0\/src\/xslidingwindowmagsamplefetcher.c",
+      "impl\/misc\/drivers\/SlidingWindowMagSampleFetcher_v1_0\/src\/xslidingwindowmagsamplefetcher.h",
+      "impl\/misc\/drivers\/SlidingWindowMagSampleFetcher_v1_0\/src\/xslidingwindowmagsamplefetcher_hw.h",
+      "impl\/misc\/drivers\/SlidingWindowMagSampleFetcher_v1_0\/src\/xslidingwindowmagsamplefetcher_linux.c",
+      "impl\/misc\/drivers\/SlidingWindowMagSampleFetcher_v1_0\/src\/xslidingwindowmagsamplefetcher_sinit.c"
+    ],
     "IpMisc": ["impl\/misc\/logo.png"],
     "DesignXml": ".autopilot\/db\/SlidingWindowMagSampleFetcher.design.xml",
     "DebugDir": ".debug",
-    "ProtoInst": ["\/vol\/Workspace\/Projects\/PL-Mag-Sensor\/hls\/SlidingWindowMagSampleFetcher\/SlidingWindowMagSampleFetcher\/solution1\/.debug\/SlidingWindowMagSampleFetcher.protoinst"]
+    "ProtoInst": ["\/home\/ffn\/Nextcloud\/Workspace\/Projects\/PL-Mag-Sensor\/hls\/SlidingWindowMagSampleFetcher\/SlidingWindowMagSampleFetcher\/solution1\/.debug\/SlidingWindowMagSampleFetcher.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -571,7 +561,10 @@
       "type": "clock",
       "busTypeName": "clock",
       "mode": "slave",
-      "busParams": {"ASSOCIATED_RESET": "ap_rst"},
+      "busParams": {
+        "ASSOCIATED_BUSIF": "s_axi_axi",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
       "portMap": {"ap_clk": "CLK"},
       "ports": ["ap_clk"]
     },
@@ -592,13 +585,13 @@
         "ap_start"
       ]
     },
-    "ap_rst": {
+    "ap_rst_n": {
       "type": "reset",
       "busTypeName": "reset",
       "mode": "slave",
-      "busParams": {"POLARITY": "ACTIVE_HIGH"},
-      "portMap": {"ap_rst": "RST"},
-      "ports": ["ap_rst"]
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
     },
     "buffer_in_0_address0": {
       "type": "data",
@@ -964,18 +957,18 @@
           "argName": "buffer_out"
         }]
     },
-    "n_periods": {
+    "buffer_out_q0": {
       "type": "data",
       "busTypeName": "data",
       "mode": "slave",
-      "dataWidth": "8",
-      "portMap": {"n_periods": "DATA"},
-      "ports": ["n_periods"],
+      "dataWidth": "32",
+      "portMap": {"buffer_out_q0": "DATA"},
+      "ports": ["buffer_out_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
-          "mode": "ap_none",
+          "mode": "ap_memory",
           "register_option": "0",
-          "argName": "n_periods"
+          "argName": "buffer_out"
         }]
     },
     "n_samples": {
@@ -992,55 +985,186 @@
           "argName": "n_samples"
         }]
     },
-    "n_samples_out": {
-      "type": "data",
-      "busTypeName": "data",
-      "mode": "master",
-      "dataWidth": "32",
-      "portMap": {"n_samples_out": "DATA"},
-      "ports": ["n_samples_out"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "n_samples_out"
-        }]
-    },
-    "start_write_i": {
-      "type": "data",
-      "busTypeName": "data",
+    "s_axi_axi": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
       "mode": "slave",
-      "dataWidth": "1",
-      "portMap": {"start_write_i": "DATA"},
-      "ports": ["start_write_i"],
+      "dataWidth": "32",
+      "addrWidth": "5",
+      "portPrefix": "s_axi_axi_",
+      "paramPrefix": "C_S_AXI_AXI_",
+      "ports": [
+        "s_axi_axi_ARADDR",
+        "s_axi_axi_ARREADY",
+        "s_axi_axi_ARVALID",
+        "s_axi_axi_AWADDR",
+        "s_axi_axi_AWREADY",
+        "s_axi_axi_AWVALID",
+        "s_axi_axi_BREADY",
+        "s_axi_axi_BRESP",
+        "s_axi_axi_BVALID",
+        "s_axi_axi_RDATA",
+        "s_axi_axi_RREADY",
+        "s_axi_axi_RRESP",
+        "s_axi_axi_RVALID",
+        "s_axi_axi_WDATA",
+        "s_axi_axi_WREADY",
+        "s_axi_axi_WSTRB",
+        "s_axi_axi_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x10",
+          "name": "n_periods",
+          "access": "W",
+          "resetValue": "0x0",
+          "description": "Data signal of n_periods",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "8",
+              "name": "n_periods",
+              "access": "W",
+              "resetValue": "0",
+              "description": "Bit 7 to 0 of n_periods"
+            },
+            {
+              "offset": "8",
+              "width": "24",
+              "name": "RESERVED",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x18",
+          "name": "n_samples_out",
+          "access": "R",
+          "resetValue": "0x0",
+          "description": "Data signal of n_samples_out",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "n_samples_out",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Bit 31 to 0 of n_samples_out"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "n_samples_out_ctrl",
+          "access": "R",
+          "resetValue": "0x0",
+          "description": "Control signal of n_samples_out",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "n_samples_out_ap_vld",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Control signal n_samples_out_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
       "constraints": [{
           "constraint_type": "pragma interface",
-          "mode": "ap_none",
+          "mode": "s_axilite",
           "register_option": "0",
-          "argName": "start_write"
-        }]
-    },
-    "start_write_o": {
-      "type": "data",
-      "busTypeName": "data",
-      "mode": "master",
-      "dataWidth": "1",
-      "portMap": {"start_write_o": "DATA"},
-      "ports": ["start_write_o"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "start_write"
+          "offset": "16",
+          "argName": "n_periods"
         }]
     }
   },
   "RtlPorts": {
+    "s_axi_axi_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axi_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axi_AWADDR": {
+      "dir": "in",
+      "width": "5"
+    },
+    "s_axi_axi_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axi_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axi_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_axi_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_axi_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axi_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axi_ARADDR": {
+      "dir": "in",
+      "width": "5"
+    },
+    "s_axi_axi_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axi_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axi_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_axi_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_axi_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axi_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axi_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
     "ap_clk": {
       "dir": "in",
       "width": "1"
     },
-    "ap_rst": {
+    "ap_rst_n": {
       "dir": "in",
       "width": "1"
     },
@@ -1220,36 +1344,16 @@
       "dir": "out",
       "width": "32"
     },
+    "buffer_out_q0": {
+      "dir": "in",
+      "width": "32"
+    },
     "n_samples": {
       "dir": "in",
       "width": "6"
     },
     "n_samples_ap_vld": {
       "dir": "in",
-      "width": "1"
-    },
-    "n_periods": {
-      "dir": "in",
-      "width": "8"
-    },
-    "n_samples_out": {
-      "dir": "out",
-      "width": "32"
-    },
-    "n_samples_out_ap_vld": {
-      "dir": "out",
-      "width": "1"
-    },
-    "start_write_i": {
-      "dir": "in",
-      "width": "1"
-    },
-    "start_write_o": {
-      "dir": "out",
-      "width": "1"
-    },
-    "start_write_o_ap_vld": {
-      "dir": "out",
       "width": "1"
     }
   },
@@ -1259,11 +1363,11 @@
       "Instances": [
         {
           "ModuleName": "loadSlidingWindow",
-          "InstanceName": "grp_loadSlidingWindow_fu_601"
+          "InstanceName": "grp_loadSlidingWindow_fu_604"
         },
         {
           "ModuleName": "writeToRAM",
-          "InstanceName": "grp_writeToRAM_fu_1119"
+          "InstanceName": "grp_writeToRAM_fu_1122"
         }
       ]
     },
@@ -1395,7 +1499,7 @@
           "FF": "1093",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "3987",
+          "LUT": "4006",
           "AVAIL_LUT": "70560",
           "UTIL_LUT": "5",
           "DSP": "0",
@@ -1409,11 +1513,11 @@
       "SlidingWindowMagSampleFetcher": {
         "Latency": {
           "LatencyBest": "93",
-          "LatencyAvg": "1051",
-          "LatencyWorst": "14001",
+          "LatencyAvg": "1052",
+          "LatencyWorst": "14002",
           "PipelineIIMin": "94",
-          "PipelineIIMax": "14002",
-          "PipelineII": "94 ~ 14002",
+          "PipelineIIMax": "14003",
+          "PipelineII": "94 ~ 14003",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1426,12 +1530,12 @@
           "BRAM_18K": "2",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "~0",
-          "FF": "13630",
+          "FF": "13721",
           "AVAIL_FF": "141120",
           "UTIL_FF": "9",
-          "LUT": "21108",
+          "LUT": "21323",
           "AVAIL_LUT": "70560",
-          "UTIL_LUT": "29",
+          "UTIL_LUT": "30",
           "DSP": "0",
           "AVAIL_DSP": "360",
           "UTIL_DSP": "0",
@@ -1445,7 +1549,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-04-30 14:05:06 CEST",
+    "Time": "2022-04-30 14:38:21 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

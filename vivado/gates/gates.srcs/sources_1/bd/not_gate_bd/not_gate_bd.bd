@@ -1,0 +1,60 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x2D35FF1C2D35FF1C",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../gates.gen/sources_1/bd/not_gate_bd",
+      "name": "not_gate_bd",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "not_gate": ""
+    },
+    "ports": {
+      "i": {
+        "direction": "I"
+      },
+      "o": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "not_gate": {
+        "vlnv": "xilinx.com:module_ref:not_gate:1.0",
+        "xci_name": "not_gate_bd_not_gate_0_0",
+        "xci_path": "ip/not_gate_bd_not_gate_0_0/not_gate_bd_not_gate_0_0.xci",
+        "inst_hier_path": "not_gate",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "not_gate",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i": {
+            "direction": "I"
+          },
+          "o": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "i_0_1": {
+        "ports": [
+          "i",
+          "not_gate/i"
+        ]
+      },
+      "not_gate_0_o": {
+        "ports": [
+          "not_gate/o",
+          "o"
+        ]
+      }
+    }
+  }
+}

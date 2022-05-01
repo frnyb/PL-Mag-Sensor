@@ -24,8 +24,9 @@ void SlidingWindowMagSampleFetcher(
 		uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
 		ap_uint<6> n_samples,
 		uint8_t n_periods,
-		uint32_t *n_samples_out,
-		volatile bool *start_write
+		uint32_t *n_samples_out
+//		volatile bool *start_write
+//		bool *write_finished
 		) {
 #pragma HLS TOP name=MagStreamer
 #pragma HLS INTERFACE ap_ctrl_hs port=return
@@ -46,13 +47,13 @@ void SlidingWindowMagSampleFetcher(
 
 #pragma HLS INTERFACE ap_vld port=n_samples
 
-//#pragma HLS INTERFACE s_axilite port=n_periods bundle=axi
-//#pragma HLS INTERFACE s_axilite port=n_samples_out bundle=axi
-//#pragma HLS INTERFACE s_axilite port=start_write bundle=axi
+#pragma HLS INTERFACE s_axilite port=n_periods bundle=axi
+#pragma HLS INTERFACE s_axilite port=n_samples_out bundle=axi
+//#pragma HLS INTERFACE s_axilite register bundle=axi port=start_write
 
-#pragma HLS INTERFACE ap_none port=n_periods bundle=axi
-#pragma HLS INTERFACE ap_vld port=n_samples_out bundle=axi
-#pragma HLS INTERFACE ap_none port=start_write bundle=axi
+//#pragma HLS INTERFACE ap_none port=n_periods bundle=axi
+//#pragma HLS INTERFACE ap_vld port=n_samples_out bundle=axi
+//#pragma HLS INTERFACE ap_none port=start_write bundle=axi
 
 	static CyclicBuffer<SamplePeriod<N_SAMPLES_MAX>, N_PERIODS_MAX> sliding_window;
 
@@ -63,9 +64,9 @@ void SlidingWindowMagSampleFetcher(
 			buffer_in_9, buffer_in_10, buffer_in_11,
 			&sliding_window, n_samples);
 
-	bool start_write_rd = *((bool *)start_write);
+	bool start_write = (bool)buffer_out[0];
 
-	if (start_write_rd) {
+	if (start_write) {
 
 //		if (n_periods > sliding_window.Size()) {
 //
@@ -77,7 +78,7 @@ void SlidingWindowMagSampleFetcher(
 
 //		}
 
-		*start_write = false;
+		buffer_out[0] = (uint32_t)false;
 
 	}
 }
@@ -174,7 +175,7 @@ uint32_t writeToRAM(
 
 				uint32_t item = ((((uint32_t)timestamp) << 12) & 0xFFFFF000) | ((uint32_t)data);
 
-				buffer_out[idx++] = item;
+				buffer_out[1+idx++] = item;
 
 			}
 		}

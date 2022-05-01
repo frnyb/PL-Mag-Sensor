@@ -12,7 +12,7 @@ set isEnableWaveformDebug 1
 set C_modelName {writeToRAM}
 set C_modelType { int 32 }
 set C_modelArgList {
-	{ buffer_out int 32 regular {array 3840 { 0 } 0 1 }  }
+	{ buffer_out int 32 regular {array 3841 { 0 } 0 1 }  }
 	{ n_periods int 8 regular  }
 	{ sliding_window_front_ptr_s int 6 regular {pointer 0} {global 0}  }
 	{ sliding_window_back_ptr_s int 6 regular {pointer 0} {global 0}  }

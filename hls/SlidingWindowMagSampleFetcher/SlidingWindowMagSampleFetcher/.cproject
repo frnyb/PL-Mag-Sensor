@@ -51,15 +51,17 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.558077183" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher"/>
                                     								
                                 </option>
                                 								
@@ -85,15 +87,17 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.845675371" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher"/>
                                     								
                                 </option>
                                 								
@@ -115,7 +119,7 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.paths.823662964" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
                                     								
                                 </option>
                                 								
@@ -129,7 +133,7 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1808416991" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
                                     								
                                 </option>
                                 								
@@ -156,6 +160,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.98629175.1719869710" name="sliding_window_mag_sample_fetcher_test_bench.cpp" rcbsApplicability="disable" resourcePath="testbench/sliding_window_mag_sample_fetcher_test_bench.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.2054833661.1839145374">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.2054833661.1839145374" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.2054833661">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.997899595" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.2029550346" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1817169443" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1996823687" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						
@@ -219,15 +253,17 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1499833942" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher"/>
                                     								
                                 </option>
                                 								
@@ -243,15 +279,17 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.1952935549" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher"/>
                                     								
                                 </option>
                                 								
@@ -263,7 +301,7 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.paths.579618579" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
                                     								
                                 </option>
                                 								
@@ -277,7 +315,7 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1167977057" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
                                     									
-                                    <listOptionValue builtIn="false" value="/vol/Software/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
+                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
                                     								
                                 </option>
                                 								
@@ -304,6 +342,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1284752229.66816245" name="sliding_window_mag_sample_fetcher_test_bench.cpp" rcbsApplicability="disable" resourcePath="testbench/sliding_window_mag_sample_fetcher_test_bench.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1998727679.374169673">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1998727679.374169673" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1998727679">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.811722285" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1813050415" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1742806939" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.61147047" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						

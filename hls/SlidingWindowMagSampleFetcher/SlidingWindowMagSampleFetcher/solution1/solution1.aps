@@ -6,7 +6,7 @@
         <DownStreamTool name="vivado"/>
     </downStreamTool>
     <config>
-        <config_export display_name="SlidingWindowMagSampleFetcher" format="ip_catalog" output="/home/ffn/Workspace/Projects/PL-Mag-Sensor/ip/SlidingWindowMagSampleFetcher.zip" rtl="vhdl" vendor="DIII"/>
+        <config_export display_name="SlidingWindowMagSampleFetcher" format="ip_catalog" output="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/SlidingWindowMagSampleFetcher.zip" rtl="vhdl" vendor="DIII"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -40,7 +40,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ffn/Workspace/Projects/PL-Mag-Sensor/ip/SlidingWindowMagSampleFetcher.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/SlidingWindowMagSampleFetcher.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
         <Format display_name="SlidingWindowMagSampleFetcher" formatName="ip_catalog" vendor="DIII" description="" library="" ipname="SlidingWindowMagSampleFetcher" version="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>

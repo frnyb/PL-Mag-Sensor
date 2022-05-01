@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="SlidingWindowMagSampleFetcher" xd:componentRef="SlidingWindowMagSampleFetcher" xd:initiationInterval="14002" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="SlidingWindowMagSampleFetcher" xd:componentRef="SlidingWindowMagSampleFetcher" xd:initiationInterval="14003" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
   <xd:arg xd:name="n_samples" xd:originalName="n_samples" xd:direction="in" xd:interfaceRef="n_samples" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="1"/>
-  <xd:arg xd:name="n_periods" xd:originalName="n_periods" xd:direction="in" xd:interfaceRef="n_periods" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
-  <xd:arg xd:name="*(n_samples_out)" xd:originalName="n_samples_out" xd:direction="out" xd:interfaceRef="n_samples_out" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="1" xd:firstOut="3"/>
-  <xd:arg xd:name="*(start_write)" xd:originalName="start_write" xd:direction="in" xd:interfaceRef="start_write_i" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="3"/>
-  <xd:arg xd:name="*(start_write)" xd:originalName="start_write" xd:direction="out" xd:interfaceRef="start_write_o" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="1"/>
+  <xd:arg xd:name="n_periods" xd:originalName="n_periods" xd:direction="in" xd:interfaceRef="s_axi_axi" xd:busTypeRef="axilite" xd:dataWidth="1" xd:offset="0x10" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="*(n_samples_out)" xd:originalName="n_samples_out" xd:direction="out" xd:interfaceRef="s_axi_axi" xd:busTypeRef="axilite" xd:dataWidth="1" xd:offset="0x18" xd:handshakeRef="ap_vld" xd:statusOffset="0x1C"/>
   <xd:arg xd:name="buffer_in_0_q0" xd:originalName="buffer_in_0_q0" xd:direction="in" xd:interfaceRef="buffer_in_0_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
   <xd:arg xd:name="buffer_in_1_q0" xd:originalName="buffer_in_1_q0" xd:direction="in" xd:interfaceRef="buffer_in_1_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
   <xd:arg xd:name="buffer_in_2_q0" xd:originalName="buffer_in_2_q0" xd:direction="in" xd:interfaceRef="buffer_in_2_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
@@ -19,6 +17,7 @@
   <xd:arg xd:name="buffer_in_10_q0" xd:originalName="buffer_in_10_q0" xd:direction="in" xd:interfaceRef="buffer_in_10_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
   <xd:arg xd:name="buffer_in_11_q0" xd:originalName="buffer_in_11_q0" xd:direction="in" xd:interfaceRef="buffer_in_11_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
   <xd:arg xd:name="buffer_out_d0" xd:originalName="buffer_out_d0" xd:direction="out" xd:interfaceRef="buffer_out_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="93" xd:worst-case="14001" xd:average-case="1051"/>
-  <xd:resourceEstimates xd:LUT="21108" xd:FF="13630" xd:BRAM="2" xd:DSP="0"/>
+  <xd:arg xd:name="buffer_out_q0" xd:originalName="buffer_out_q0" xd:direction="in" xd:interfaceRef="buffer_out_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="93" xd:worst-case="14002" xd:average-case="1052"/>
+  <xd:resourceEstimates xd:LUT="21323" xd:FF="13721" xd:BRAM="2" xd:DSP="0"/>
 </xd:acceleratorMap>

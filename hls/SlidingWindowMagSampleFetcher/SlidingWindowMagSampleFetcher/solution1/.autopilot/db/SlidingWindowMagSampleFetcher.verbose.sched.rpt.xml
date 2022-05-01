@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'SlidingWindowMagSampleFetcher'" level="0">
-<item name = "Date">Sat Apr 30 14:04:39 2022
+<item name = "Date">Sat Apr 30 14:36:35 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">SlidingWindowMagSampleFetcher</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">93, 14001, 0.930 us, 0.140 ms, 94, 14002, none</column>
+<column name="">93, 14002, 0.930 us, 0.140 ms, 94, 14003, none</column>
 </table>
 </item>
 <item name = "Detail">

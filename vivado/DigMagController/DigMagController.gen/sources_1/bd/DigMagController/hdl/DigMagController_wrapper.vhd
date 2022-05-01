@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Thu Apr 21 10:28:26 2022
+--Date        : Sat Apr 30 16:05:50 2022
 --Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target DigMagController_wrapper.bd
 --Design      : DigMagController_wrapper
@@ -15,7 +15,7 @@ entity DigMagController_wrapper is
   port (
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
     irq_out : out STD_LOGIC;
     mag0_scl_i : in STD_LOGIC;
     mag0_scl_o : out STD_LOGIC;
@@ -76,7 +76,7 @@ architecture STRUCTURE of DigMagController_wrapper is
     mag3_sda_t : out STD_LOGIC;
     irq_out : out STD_LOGIC;
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    dout : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    dout : out STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   end component DigMagController;
 begin
@@ -84,7 +84,7 @@ DigMagController_i: component DigMagController
      port map (
       ch_out(3 downto 0) => ch_out(3 downto 0),
       clk => clk,
-      dout(15 downto 0) => dout(15 downto 0),
+      dout(11 downto 0) => dout(11 downto 0),
       irq_out => irq_out,
       mag0_scl_i => mag0_scl_i,
       mag0_scl_o => mag0_scl_o,

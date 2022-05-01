@@ -65,9 +65,6 @@ using namespace sc_dt;
 // wrapc file define:
 #define AUTOTB_TVIN_n_samples_out "../tv/cdatafile/c.SlidingWindowMagSampleFetcher.autotvin_n_samples_out.dat"
 #define AUTOTB_TVOUT_n_samples_out "../tv/cdatafile/c.SlidingWindowMagSampleFetcher.autotvout_n_samples_out.dat"
-// wrapc file define:
-#define AUTOTB_TVIN_start_write "../tv/cdatafile/c.SlidingWindowMagSampleFetcher.autotvin_start_write.dat"
-#define AUTOTB_TVOUT_start_write "../tv/cdatafile/c.SlidingWindowMagSampleFetcher.autotvout_start_write.dat"
 
 #define INTER_TCL "../tv/cdatafile/ref.tcl"
 
@@ -103,8 +100,6 @@ using namespace sc_dt;
 #define AUTOTB_TVOUT_PC_n_periods "../tv/rtldatafile/rtl.SlidingWindowMagSampleFetcher.autotvout_n_periods.dat"
 // tvout file define:
 #define AUTOTB_TVOUT_PC_n_samples_out "../tv/rtldatafile/rtl.SlidingWindowMagSampleFetcher.autotvout_n_samples_out.dat"
-// tvout file define:
-#define AUTOTB_TVOUT_PC_start_write "../tv/rtldatafile/rtl.SlidingWindowMagSampleFetcher.autotvout_start_write.dat"
 
 class INTER_TCL_FILE {
   public:
@@ -126,7 +121,6 @@ INTER_TCL_FILE(const char* name) {
   n_samples_depth = 0;
   n_periods_depth = 0;
   n_samples_out_depth = 0;
-  start_write_depth = 0;
   trans_num =0;
 }
 ~INTER_TCL_FILE() {
@@ -160,7 +154,6 @@ string get_depth_list () {
   total_list << "{n_samples " << n_samples_depth << "}\n";
   total_list << "{n_periods " << n_periods_depth << "}\n";
   total_list << "{n_samples_out " << n_samples_out_depth << "}\n";
-  total_list << "{start_write " << start_write_depth << "}\n";
   return total_list.str();
 }
 void set_num (int num , int* class_num) {
@@ -186,7 +179,6 @@ void set_string(std::string list, std::string* class_list) {
     int n_samples_depth;
     int n_periods_depth;
     int n_samples_out_depth;
-    int start_write_depth;
     int trans_num;
   private:
     ofstream mFile;
@@ -229,9 +221,9 @@ static void RTLOutputCheckAndReplacement(std::string &AESL_token, std::string Po
   }
 }
 struct __cosim_s1__ { char data[1]; };
-extern "C" void SlidingWindowMagSampleFetcher_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, __cosim_s1__*, char, volatile void *, volatile void *);
+extern "C" void SlidingWindowMagSampleFetcher_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, __cosim_s1__*, char, volatile void *);
 
-extern "C" void apatb_SlidingWindowMagSampleFetcher_hw(volatile void * __xlx_apatb_param_buffer_in_0, volatile void * __xlx_apatb_param_buffer_in_1, volatile void * __xlx_apatb_param_buffer_in_2, volatile void * __xlx_apatb_param_buffer_in_3, volatile void * __xlx_apatb_param_buffer_in_4, volatile void * __xlx_apatb_param_buffer_in_5, volatile void * __xlx_apatb_param_buffer_in_6, volatile void * __xlx_apatb_param_buffer_in_7, volatile void * __xlx_apatb_param_buffer_in_8, volatile void * __xlx_apatb_param_buffer_in_9, volatile void * __xlx_apatb_param_buffer_in_10, volatile void * __xlx_apatb_param_buffer_in_11, volatile void * __xlx_apatb_param_buffer_out, __cosim_s1__* __xlx_apatb_param_n_samples, char __xlx_apatb_param_n_periods, volatile void * __xlx_apatb_param_n_samples_out, volatile void * __xlx_apatb_param_start_write) {
+extern "C" void apatb_SlidingWindowMagSampleFetcher_hw(volatile void * __xlx_apatb_param_buffer_in_0, volatile void * __xlx_apatb_param_buffer_in_1, volatile void * __xlx_apatb_param_buffer_in_2, volatile void * __xlx_apatb_param_buffer_in_3, volatile void * __xlx_apatb_param_buffer_in_4, volatile void * __xlx_apatb_param_buffer_in_5, volatile void * __xlx_apatb_param_buffer_in_6, volatile void * __xlx_apatb_param_buffer_in_7, volatile void * __xlx_apatb_param_buffer_in_8, volatile void * __xlx_apatb_param_buffer_in_9, volatile void * __xlx_apatb_param_buffer_in_10, volatile void * __xlx_apatb_param_buffer_in_11, volatile void * __xlx_apatb_param_buffer_out, __cosim_s1__* __xlx_apatb_param_n_samples, char __xlx_apatb_param_n_periods, volatile void * __xlx_apatb_param_n_samples_out) {
   refine_signal_handler();
   fstream wrapc_switch_file_token;
   wrapc_switch_file_token.open(".hls_cosim_wrapc_switch.log");
@@ -261,7 +253,7 @@ extern "C" void apatb_SlidingWindowMagSampleFetcher_hw(volatile void * __xlx_apa
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<32> > buffer_out_pc_buffer(3840);
+          std::vector<sc_bv<32> > buffer_out_pc_buffer(3841);
           int i = 0;
 
           rtl_tv_out_file >> AESL_token; //data
@@ -281,7 +273,7 @@ extern "C" void apatb_SlidingWindowMagSampleFetcher_hw(volatile void * __xlx_apa
           }
           if (i > 0) {{
             int i = 0;
-            for (int j = 0, e = 3840; j < e; j += 1, ++i) {
+            for (int j = 0, e = 3841; j < e; j += 1, ++i) {
             ((int*)__xlx_apatb_param_buffer_out)[j] = buffer_out_pc_buffer[i].to_int64();
           }}}
         } // end transaction
@@ -326,49 +318,6 @@ extern "C" void apatb_SlidingWindowMagSampleFetcher_hw(volatile void * __xlx_apa
           }
           if (i > 0) {
             ((int*)__xlx_apatb_param_n_samples_out)[0] = n_samples_out_pc_buffer[0].to_int64();
-          }
-        } // end transaction
-      } // end file is good
-    } // end post check logic bolck
-  {
-      static ifstream rtl_tv_out_file;
-      if (!rtl_tv_out_file.is_open()) {
-        rtl_tv_out_file.open(AUTOTB_TVOUT_PC_start_write);
-        if (rtl_tv_out_file.good()) {
-          rtl_tv_out_file >> AESL_token;
-          if (AESL_token != "[[[runtime]]]")
-            exit(1);
-        }
-      }
-  
-      if (rtl_tv_out_file.good()) {
-        rtl_tv_out_file >> AESL_token; 
-        rtl_tv_out_file >> AESL_num;  // transaction number
-        if (AESL_token != "[[transaction]]") {
-          cerr << "Unexpected token: " << AESL_token << endl;
-          exit(1);
-        }
-        if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<1> > start_write_pc_buffer(1);
-          int i = 0;
-
-          rtl_tv_out_file >> AESL_token; //data
-          while (AESL_token != "[[/transaction]]"){
-
-            RTLOutputCheckAndReplacement(AESL_token, "start_write");
-  
-            // push token into output port buffer
-            if (AESL_token != "") {
-              start_write_pc_buffer[i] = AESL_token.c_str();;
-              i++;
-            }
-  
-            rtl_tv_out_file >> AESL_token; //data or [[/transaction]]
-            if (AESL_token == "[[[/runtime]]]" || rtl_tv_out_file.eof())
-              exit(1);
-          }
-          if (i > 0) {
-            ((char*)__xlx_apatb_param_start_write)[0] = start_write_pc_buffer[0].to_uint64();
           }
         } // end transaction
       } // end file is good
@@ -430,9 +379,6 @@ aesl_fh.touch(AUTOTB_TVOUT_n_periods);
 //n_samples_out
 aesl_fh.touch(AUTOTB_TVIN_n_samples_out);
 aesl_fh.touch(AUTOTB_TVOUT_n_samples_out);
-//start_write
-aesl_fh.touch(AUTOTB_TVIN_start_write);
-aesl_fh.touch(AUTOTB_TVOUT_start_write);
 CodeState = DUMP_INPUTS;
 unsigned __xlx_offset_byte_param_buffer_in_0 = 0;
 // print buffer_in_0 Transactions
@@ -669,7 +615,7 @@ unsigned __xlx_offset_byte_param_buffer_out = 0;
   aesl_fh.write(AUTOTB_TVIN_buffer_out, __xlx_sprintf_buffer.data());
   {  __xlx_offset_byte_param_buffer_out = 0*4;
   if (__xlx_apatb_param_buffer_out) {
-    for (int j = 0  - 0, e = 3840 - 0; j != e; ++j) {
+    for (int j = 0  - 0, e = 3841 - 0; j != e; ++j) {
 sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
 
     sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
@@ -677,7 +623,7 @@ sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
       }
   }
 }
-  tcl_file.set_num(3840, &tcl_file.buffer_out_depth);
+  tcl_file.set_num(3841, &tcl_file.buffer_out_depth);
   sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
   aesl_fh.write(AUTOTB_TVIN_buffer_out, __xlx_sprintf_buffer.data());
 }
@@ -723,22 +669,8 @@ sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
   sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
   aesl_fh.write(AUTOTB_TVIN_n_samples_out, __xlx_sprintf_buffer.data());
 }
-// print start_write Transactions
-{
-  sprintf(__xlx_sprintf_buffer.data(), "[[transaction]] %d\n", AESL_transaction);
-  aesl_fh.write(AUTOTB_TVIN_start_write, __xlx_sprintf_buffer.data());
-  {
-    sc_bv<1> __xlx_tmp_lv = *((char*)__xlx_apatb_param_start_write);
-
-    sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
-    aesl_fh.write(AUTOTB_TVIN_start_write, __xlx_sprintf_buffer.data()); 
-  }
-  tcl_file.set_num(1, &tcl_file.start_write_depth);
-  sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
-  aesl_fh.write(AUTOTB_TVIN_start_write, __xlx_sprintf_buffer.data());
-}
 CodeState = CALL_C_DUT;
-SlidingWindowMagSampleFetcher_hw_stub_wrapper(__xlx_apatb_param_buffer_in_0, __xlx_apatb_param_buffer_in_1, __xlx_apatb_param_buffer_in_2, __xlx_apatb_param_buffer_in_3, __xlx_apatb_param_buffer_in_4, __xlx_apatb_param_buffer_in_5, __xlx_apatb_param_buffer_in_6, __xlx_apatb_param_buffer_in_7, __xlx_apatb_param_buffer_in_8, __xlx_apatb_param_buffer_in_9, __xlx_apatb_param_buffer_in_10, __xlx_apatb_param_buffer_in_11, __xlx_apatb_param_buffer_out, __xlx_apatb_param_n_samples, __xlx_apatb_param_n_periods, __xlx_apatb_param_n_samples_out, __xlx_apatb_param_start_write);
+SlidingWindowMagSampleFetcher_hw_stub_wrapper(__xlx_apatb_param_buffer_in_0, __xlx_apatb_param_buffer_in_1, __xlx_apatb_param_buffer_in_2, __xlx_apatb_param_buffer_in_3, __xlx_apatb_param_buffer_in_4, __xlx_apatb_param_buffer_in_5, __xlx_apatb_param_buffer_in_6, __xlx_apatb_param_buffer_in_7, __xlx_apatb_param_buffer_in_8, __xlx_apatb_param_buffer_in_9, __xlx_apatb_param_buffer_in_10, __xlx_apatb_param_buffer_in_11, __xlx_apatb_param_buffer_out, __xlx_apatb_param_n_samples, __xlx_apatb_param_n_periods, __xlx_apatb_param_n_samples_out);
 CodeState = DUMP_OUTPUTS;
 // print buffer_out Transactions
 {
@@ -746,7 +678,7 @@ CodeState = DUMP_OUTPUTS;
   aesl_fh.write(AUTOTB_TVOUT_buffer_out, __xlx_sprintf_buffer.data());
   {  __xlx_offset_byte_param_buffer_out = 0*4;
   if (__xlx_apatb_param_buffer_out) {
-    for (int j = 0  - 0, e = 3840 - 0; j != e; ++j) {
+    for (int j = 0  - 0, e = 3841 - 0; j != e; ++j) {
 sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
 
     sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
@@ -754,7 +686,7 @@ sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
       }
   }
 }
-  tcl_file.set_num(3840, &tcl_file.buffer_out_depth);
+  tcl_file.set_num(3841, &tcl_file.buffer_out_depth);
   sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
   aesl_fh.write(AUTOTB_TVOUT_buffer_out, __xlx_sprintf_buffer.data());
 }
@@ -771,20 +703,6 @@ sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_buffer_out)[j];
   tcl_file.set_num(1, &tcl_file.n_samples_out_depth);
   sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
   aesl_fh.write(AUTOTB_TVOUT_n_samples_out, __xlx_sprintf_buffer.data());
-}
-// print start_write Transactions
-{
-  sprintf(__xlx_sprintf_buffer.data(), "[[transaction]] %d\n", AESL_transaction);
-  aesl_fh.write(AUTOTB_TVOUT_start_write, __xlx_sprintf_buffer.data());
-  {
-    sc_bv<1> __xlx_tmp_lv = *((char*)__xlx_apatb_param_start_write);
-
-    sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
-    aesl_fh.write(AUTOTB_TVOUT_start_write, __xlx_sprintf_buffer.data()); 
-  }
-  tcl_file.set_num(1, &tcl_file.start_write_depth);
-  sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
-  aesl_fh.write(AUTOTB_TVOUT_start_write, __xlx_sprintf_buffer.data());
 }
 CodeState = DELETE_CHAR_BUFFERS;
 AESL_transaction++;

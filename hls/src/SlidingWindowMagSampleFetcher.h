@@ -23,7 +23,7 @@ using namespace std;
 #define PERIOD_BUFFER_SIZE_MAX \
 						N_CHANNELS*N_SAMPLES_MAX
 #define OUTPUT_BUFFER_SIZE_MAX \
-						PERIOD_BUFFER_SIZE_MAX*N_PERIODS_MAX
+						PERIOD_BUFFER_SIZE_MAX*N_PERIODS_MAX + 1
 
 /******************************************************************************************************
  * Method declarations
@@ -46,8 +46,8 @@ void SlidingWindowMagSampleFetcher(
 //		volatile bool *bfr_irq,
 		ap_uint<6> n_samples,
 		uint8_t n_periods,
-		uint32_t *n_samples_out,
-		volatile bool *start_write
+		uint32_t *n_samples_out
+//		volatile bool *start_write
 //		volatile bool *write_finished
 		);
 

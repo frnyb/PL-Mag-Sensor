@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651320283777">
-  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM" coreId="2413733040" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651322200252">
+  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM" coreId="2413876568" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="buffer_in_2" type="PortType" coreName="RAM" coreId="2413875648" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="3" name="buffer_in_2" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM" coreId="3019899008" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM" coreId="2413876608" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="6" name="buffer_in_5" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="6" name="buffer_in_5" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="7" name="buffer_in_6" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
@@ -27,32 +27,29 @@
   <ports id="9" name="buffer_in_8" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="10" name="buffer_in_9" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="10" name="buffer_in_9" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="12" name="buffer_in_11" type="PortType" coreName="RAM" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="13" name="buffer_out" type="PortType" coreName="RAM_1P" coreId="132" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="3840">
+  <ports id="13" name="buffer_out" type="PortType" coreName="RAM_1P" coreId="132" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="3841">
+    <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="14" name="n_samples" type="PortType" originalName="n_samples.V" coreId="132" bitwidth="6">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="15" name="n_periods" type="PortType" originalName="n_periods" coreId="132" bitwidth="8">
+  <ports id="15" name="n_periods" type="PortType" originalName="n_periods" coreId="49" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="16" name="n_samples_out" type="PortType" originalName="n_samples_out" coreId="49" bitwidth="32" direction="DirOut">
+  <ports id="16" name="n_samples_out" type="PortType" originalName="n_samples_out" coreId="132" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
-  </ports>
-  <ports id="17" name="start_write" type="PortType" originalName="start_write" coreId="132" bitwidth="1" direction="DirInOut">
-    <dataInputObjs>read</dataInputObjs>
-    <dataInputObjs>write</dataInputObjs>
-    <dataOutputObjs>read</dataOutputObjs>
-    <dataOutputObjs>write</dataOutputObjs>
   </ports>
   <edges id="319" source_obj="//@ports.14" sink_obj="//@blocks.0/@node_objs.0"/>
   <edges id="322" source_obj="//@ports.13" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -69,17 +66,18 @@
   <edges id="335" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="336" source_obj="//@ports.11" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="337" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
-  <edges id="340" source_obj="//@ports.16" sink_obj="//@blocks.0/@node_objs.3"/>
-  <edges id="341" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="342" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="343" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="346" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.12"/>
-  <edges id="347" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="350" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@ports.15"/>
-  <edges id="351" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="354" source_obj="//@ports.16" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="357" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
-  <edges id="358" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="338" source_obj="//@ports.12" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="342" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="343" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="345" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="346" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="347" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="350" source_obj="//@ports.12" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="351" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="354" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@ports.15"/>
+  <edges id="355" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="357" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="358" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
   <edges id="359" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="360" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="361" sink_obj="//@blocks.0/@node_objs.2"/>
@@ -323,7 +321,7 @@
   <edges id="599" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="600" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="601" sink_obj="//@blocks.0/@node_objs.2"/>
-  <edges id="602" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="602" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="603" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="604" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="605" sink_obj="//@blocks.1/@node_objs.0"/>
@@ -566,30 +564,32 @@
   <edges id="842" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="843" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="844" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="1212" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
-  <edges id="1213" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.2"/>
-  <edges id="1214" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
-  <edges id="1215" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="1216" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="1217" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="1218" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="-340" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.16"/>
-  <edges id="-354" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@ports.16"/>
+  <edges id="845" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1219" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="1220" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="1221" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="1222" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1223" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1224" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1225" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1226" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="-338" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.12"/>
+  <edges id="-350" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.12"/>
   <blocks id="309" name="block_309" type="BlockType">
-    <controlOutputObjs>block_314</controlOutputObjs>
     <controlOutputObjs>._crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="304" name="n_periods_read" lineNumber="25" originalName="n_periods" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="106" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="8" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="25" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <controlOutputObjs>block_314</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="302" name="n_periods_read" lineNumber="25" originalName="n_periods" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="25" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>n_periods</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="305" name="n_samples_read" lineNumber="25" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="6" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="25" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="303" name="n_samples_read" lineNumber="25" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="0" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="6" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="25" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>n_samples</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="306" name="_ln59" lineNumber="59" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_601" coreId="106" contextFuncName="SlidingWindowMagSampleFetcher" opcode="call" nodeLatency="1" m_display="0" m_delay="0.87" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="59" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="304" name="_ln60" lineNumber="60" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_604" coreId="0" contextFuncName="SlidingWindowMagSampleFetcher" opcode="call" nodeLatency="1" m_display="0" m_delay="0.87" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="60" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>buffer_in_0</dataInputObjs>
       <dataInputObjs>buffer_in_1</dataInputObjs>
       <dataInputObjs>buffer_in_2</dataInputObjs>
@@ -605,55 +605,68 @@
       <dataInputObjs>read</dataInputObjs>
       <constName>loadSlidingWindow</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="307" name="start_write_rd" lineNumber="66" originalName="start_write_rd" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="90" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="1" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="66" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataInputObjs>start_write</dataInputObjs>
-      <dataOutputObjs>br</dataOutputObjs>
-      <dataOutputObjs>start_write</dataOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="305" name="buffer_out_addr" lineNumber="67" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="0" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="12" opcode="getelementptr" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="67" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+      <dataInputObjs>buffer_out</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="308" name="br_ln68" lineNumber="68" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="106" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="68" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataInputObjs>read</dataInputObjs>
-      <controlInputObjs>._crit_edge</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="306" name="buffer_out_load" lineNumber="67" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="67" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="307" name="start_write" lineNumber="67" originalName="start_write" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="start_write_fu_1616_p2" opType="icmp" coreId="113" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.11" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="67" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="308" name="br_ln69" lineNumber="69" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="113" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="69" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+      <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>block_314</controlInputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
       <validLinenumbers>25</validLinenumbers>
-      <validLinenumbers>59</validLinenumbers>
-      <validLinenumbers>66</validLinenumbers>
-      <validLinenumbers>68</validLinenumbers>
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>67</validLinenumbers>
+      <validLinenumbers>69</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="314" name="block_314" type="BlockType">
     <controlInputObjs>block_309</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>._crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="310" name="tmp" lineNumber="76" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_writeToRAM_fu_1119" coreId="4294967295" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.48" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="76" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="310" name="tmp" lineNumber="77" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_writeToRAM_fu_1122" coreId="1599296852" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.48" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="77" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+      <dataInputObjs>buffer_out</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>buffer_out</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
       <constName>writeToRAM</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="311" name="n_samples_out_write_ln76" lineNumber="76" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="4294967294" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="76" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="311" name="n_samples_out_write_ln77" lineNumber="77" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="77" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>n_samples_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="312" name="start_write_write_ln80" lineNumber="80" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="132" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="80" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
-      <dataInputObjs>start_write</dataInputObjs>
-      <dataOutputObjs>start_write</dataOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="312" name="buffer_out_addr_write_ln81" lineNumber="81" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="SlidingWindowMagSampleFetcher" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.35" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="81" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="313" name="br_ln82" lineNumber="82" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="1931498832" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="82" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="313" name="br_ln83" lineNumber="83" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="0" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="83" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <controlInputObjs>._crit_edge</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>76</validLinenumbers>
-      <validLinenumbers>80</validLinenumbers>
-      <validLinenumbers>82</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+      <validLinenumbers>81</validLinenumbers>
+      <validLinenumbers>83</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="316" name="._crit_edge" type="BlockType">
@@ -661,1019 +674,1038 @@
     <controlInputObjs>block_314</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="315" name="_ln83" lineNumber="83" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="SlidingWindowMagSampleFetcher" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="83" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="315" name="_ln84" lineNumber="84" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="3422411408" contextFuncName="SlidingWindowMagSampleFetcher" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="84" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>83</validLinenumbers>
+      <validLinenumbers>84</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
   <ScheduleInfo time="1"/>
   <ScheduleInfo time="2"/>
   <ScheduleInfo time="3"/>
-  <regnodes realName="start_write_rd_reg_1623">
-    <nodeIds>307</nodeIds>
-  </regnodes>
-  <regnodes realName="n_periods_read_reg_1618">
-    <nodeIds>304</nodeIds>
-  </regnodes>
-  <regnodes realName="n_samples_read_reg_1613">
+  <ScheduleInfo time="4"/>
+  <regnodes realName="buffer_out_addr_reg_1632">
     <nodeIds>305</nodeIds>
   </regnodes>
-  <moduleNodes realName="grp_writeToRAM_fu_1119">
+  <regnodes realName="start_write_reg_1637">
+    <nodeIds>307</nodeIds>
+  </regnodes>
+  <regnodes realName="n_periods_read_reg_1622">
+    <nodeIds>302</nodeIds>
+  </regnodes>
+  <regnodes realName="n_samples_read_reg_1627">
+    <nodeIds>303</nodeIds>
+  </regnodes>
+  <expressionNodes realName="start_write_fu_1616">
+    <nodeIds>307</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_out_addr_gep_fu_589">
+    <nodeIds>305</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_writeToRAM_fu_1122">
     <nodeIds>310</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_loadSlidingWindow_fu_601">
-    <nodeIds>306</nodeIds>
+  <moduleNodes realName="grp_loadSlidingWindow_fu_604">
+    <nodeIds>304</nodeIds>
   </moduleNodes>
-  <ioNodes realName="write_ln80_write_fu_593">
-    <nodeIds>312</nodeIds>
+  <ioNodes realName="n_periods_read_read_fu_570">
+    <nodeIds>302</nodeIds>
   </ioNodes>
-  <ioNodes realName="start_write_rd_read_fu_580">
-    <nodeIds>307</nodeIds>
-  </ioNodes>
-  <ioNodes realName="write_ln76_write_fu_586">
+  <ioNodes realName="write_ln77_write_fu_582">
     <nodeIds>311</nodeIds>
   </ioNodes>
-  <ioNodes realName="n_samples_read_read_fu_568">
-    <nodeIds>305</nodeIds>
+  <ioNodes realName="n_samples_read_read_fu_576">
+    <nodeIds>303</nodeIds>
   </ioNodes>
-  <ioNodes realName="n_periods_read_read_fu_574">
-    <nodeIds>304</nodeIds>
-  </ioNodes>
-  <memoryPorts dataString="sliding_window_buffer_count_s" portID="100">
+  <memoryPorts dataString="buffer_out">
     <nodeIds>306</nodeIds>
+    <nodeIds>312</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buffer_out" portID="100">
+    <nodeIds>310</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_count_s" portID="100">
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_8_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_sample_V_9_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_8_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_0" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_1" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_10" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_11" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_2" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_3" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_4" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_5" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_6" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_7" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_8" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_9_9" portID="100">
-    <nodeIds>306</nodeIds>
+    <nodeIds>304</nodeIds>
     <nodeIds>310</nodeIds>
   </memoryPorts>
+  <ioPorts name="buffer_out(p0)">
+    <contents name="load">
+      <nodeIds>306</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>312</nodeIds>
+    </contents>
+  </ioPorts>
   <ioPorts name="n_periods">
     <contents name="read">
-      <nodeIds>304</nodeIds>
+      <nodeIds>302</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="n_samples">
     <contents name="read">
-      <nodeIds>305</nodeIds>
+      <nodeIds>303</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="n_samples_out">
@@ -1681,20 +1713,16 @@
       <nodeIds>311</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="start_write">
-    <contents name="read">
-      <nodeIds>307</nodeIds>
-    </contents>
-    <contents name="write">
-      <nodeIds>312</nodeIds>
-    </contents>
-  </ioPorts>
   <fsm>
     <states id="1">
+      <operations id="302" stage="1" latency="1"/>
+      <operations id="303" stage="1" latency="1"/>
+      <operations id="304" stage="2" latency="2"/>
       <operations id="305" stage="1" latency="1"/>
       <operations id="306" stage="2" latency="2"/>
     </states>
     <states id="2">
+      <operations id="266" stage="1" latency="1"/>
       <operations id="267" stage="1" latency="1"/>
       <operations id="268" stage="1" latency="1"/>
       <operations id="269" stage="1" latency="1"/>
@@ -1730,9 +1758,7 @@
       <operations id="299" stage="1" latency="1"/>
       <operations id="300" stage="1" latency="1"/>
       <operations id="301" stage="1" latency="1"/>
-      <operations id="302" stage="1" latency="1"/>
-      <operations id="303" stage="1" latency="1"/>
-      <operations id="304" stage="1" latency="1"/>
+      <operations id="304" stage="1" latency="2"/>
       <operations id="306" stage="1" latency="2"/>
       <operations id="307" stage="1" latency="1"/>
       <operations id="308" stage="1" latency="1"/>
@@ -1743,6 +1769,8 @@
     <states id="4">
       <operations id="310" stage="1" latency="2"/>
       <operations id="311" stage="1" latency="1"/>
+    </states>
+    <states id="5">
       <operations id="312" stage="1" latency="1"/>
       <operations id="313" stage="1" latency="1"/>
       <operations id="315" stage="1" latency="1"/>
@@ -1753,15 +1781,18 @@
     <transitions inState="2" outState="3">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="2" outState="4">
+    <transitions inState="2" outState="5">
       <condition id="-1"/>
     </transitions>
     <transitions inState="3" outState="4">
       <condition id="-1"/>
     </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="SlidingWindowMagSampleFetcher" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="93" mMaxLatency="14001">
+    <cfgRegions mId="1" mTag="SlidingWindowMagSampleFetcher" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="93" mMaxLatency="14002">
       <basicBlocks>309</basicBlocks>
       <basicBlocks>314</basicBlocks>
       <basicBlocks>316</basicBlocks>

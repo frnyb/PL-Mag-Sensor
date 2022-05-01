@@ -197,13 +197,13 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>buffer_out_we0</name>
-        <type>bool</type>
+        <name>buffer_out_q0</name>
+        <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>n_periods</name>
-        <type>Unsigned</type>
+        <name>buffer_out_we0</name>
+        <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
@@ -213,31 +213,6 @@
       </RtlPort>
       <RtlPort>
         <name>n_samples_ap_vld</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>n_samples_out</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>n_samples_out_ap_vld</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>start_write_i</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>start_write_o</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>start_write_o_ap_vld</name>
         <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>

@@ -813,6 +813,7 @@ architecture behav of SlidingWindowMagSampleFetcher_writeToRAM is
     constant ap_const_lv4_1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
     constant ap_const_lv4_C : STD_LOGIC_VECTOR (3 downto 0) := "1100";
     constant ap_const_lv33_1 : STD_LOGIC_VECTOR (32 downto 0) := "000000000000000000000000000000001";
+    constant ap_const_lv12_1 : STD_LOGIC_VECTOR (11 downto 0) := "000000000001";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000001";
@@ -820,20 +821,20 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal idx_4_reg_6668 : STD_LOGIC_VECTOR (32 downto 0);
-    signal k_reg_6677 : STD_LOGIC_VECTOR (3 downto 0);
-    signal n_periods_cast_fu_6688_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal sext_ln34_fu_6696_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal sext_ln34_reg_8270 : STD_LOGIC_VECTOR (31 downto 0);
-    signal trunc_ln22_fu_6704_p1 : STD_LOGIC_VECTOR (4 downto 0);
-    signal trunc_ln22_reg_8275 : STD_LOGIC_VECTOR (4 downto 0);
-    signal i_fu_6716_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal i_reg_8283 : STD_LOGIC_VECTOR (31 downto 0);
+    signal idx_4_reg_6670 : STD_LOGIC_VECTOR (32 downto 0);
+    signal k_reg_6679 : STD_LOGIC_VECTOR (3 downto 0);
+    signal n_periods_cast_fu_6690_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal sext_ln34_fu_6698_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal sext_ln34_reg_8278 : STD_LOGIC_VECTOR (31 downto 0);
+    signal trunc_ln22_fu_6706_p1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal trunc_ln22_reg_8283 : STD_LOGIC_VECTOR (4 downto 0);
+    signal i_fu_6718_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal i_reg_8291 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal zext_ln46_fu_6750_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal zext_ln46_reg_8291 : STD_LOGIC_VECTOR (63 downto 0);
-    signal icmp_ln152_fu_6722_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal zext_ln46_fu_6752_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal zext_ln46_reg_8299 : STD_LOGIC_VECTOR (63 downto 0);
+    signal icmp_ln153_fu_6724_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal ap_CS_fsm_state4 : STD_LOGIC;
@@ -842,18 +843,18 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
     signal ap_CS_fsm_state6 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state6 : signal is "none";
-    signal sample_period_count_s_reg_9693 : STD_LOGIC_VECTOR (5 downto 0);
+    signal sample_period_count_s_reg_9701 : STD_LOGIC_VECTOR (5 downto 0);
     signal ap_CS_fsm_state7 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state7 : signal is "none";
-    signal icmp_ln161_fu_6802_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal icmp_ln161_reg_9700 : STD_LOGIC_VECTOR (0 downto 0);
-    signal j_1_fu_6808_p2 : STD_LOGIC_VECTOR (5 downto 0);
-    signal j_1_reg_9704 : STD_LOGIC_VECTOR (5 downto 0);
+    signal icmp_ln162_fu_6804_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln162_reg_9708 : STD_LOGIC_VECTOR (0 downto 0);
+    signal j_1_fu_6810_p2 : STD_LOGIC_VECTOR (5 downto 0);
+    signal j_1_reg_9712 : STD_LOGIC_VECTOR (5 downto 0);
     signal ap_CS_fsm_state8 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state8 : signal is "none";
-    signal zext_ln40_fu_6837_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal zext_ln40_reg_9712 : STD_LOGIC_VECTOR (63 downto 0);
-    signal icmp_ln161_1_fu_6818_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal zext_ln40_fu_6839_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal zext_ln40_reg_9720 : STD_LOGIC_VECTOR (63 downto 0);
+    signal icmp_ln162_1_fu_6820_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state9 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state9 : signal is "none";
     signal ap_CS_fsm_state10 : STD_LOGIC;
@@ -864,22 +865,22 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
     signal ap_CS_fsm_state13 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state13 : signal is "none";
-    signal sext_ln168_fu_6887_p1 : STD_LOGIC_VECTOR (32 downto 0);
+    signal sext_ln169_fu_6889_p1 : STD_LOGIC_VECTOR (32 downto 0);
     signal ap_CS_fsm_state14 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state14 : signal is "none";
-    signal add_ln168_fu_6891_p2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal add_ln169_fu_6893_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_CS_fsm_pp0_stage0 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_pp0_stage0 : signal is "none";
     signal ap_enable_reg_pp0_iter0 : STD_LOGIC := '0';
     signal ap_block_state15_pp0_stage0_iter0 : BOOLEAN;
     signal ap_block_state16_pp0_stage0_iter1 : BOOLEAN;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal icmp_ln168_fu_6903_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal icmp_ln168_reg_9866 : STD_LOGIC_VECTOR (0 downto 0);
-    signal add_ln177_fu_6909_p2 : STD_LOGIC_VECTOR (32 downto 0);
-    signal trunc_ln177_fu_6915_p1 : STD_LOGIC_VECTOR (11 downto 0);
-    signal trunc_ln177_reg_9885 : STD_LOGIC_VECTOR (11 downto 0);
-    signal add_ln161_1_fu_6932_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal icmp_ln169_fu_6905_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln169_reg_9874 : STD_LOGIC_VECTOR (0 downto 0);
+    signal trunc_ln178_fu_6911_p1 : STD_LOGIC_VECTOR (11 downto 0);
+    signal trunc_ln178_reg_9888 : STD_LOGIC_VECTOR (11 downto 0);
+    signal add_ln178_fu_6915_p2 : STD_LOGIC_VECTOR (32 downto 0);
+    signal add_ln162_1_fu_6940_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state17 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state17 : signal is "none";
     signal ap_block_pp0_stage0_subdone : BOOLEAN;
@@ -1119,27 +1120,28 @@ attribute shreg_extract : string;
     signal sample_timestamp_V_ce1 : STD_LOGIC;
     signal sample_timestamp_V_we1 : STD_LOGIC;
     signal sample_timestamp_V_d1 : STD_LOGIC_VECTOR (19 downto 0);
-    signal i_08_in_reg_6638 : STD_LOGIC_VECTOR (31 downto 0);
-    signal j_reg_6647 : STD_LOGIC_VECTOR (5 downto 0);
-    signal idx_2_reg_6658 : STD_LOGIC_VECTOR (31 downto 0);
-    signal k_cast_fu_6897_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal i_08_in_reg_6640 : STD_LOGIC_VECTOR (31 downto 0);
+    signal j_reg_6649 : STD_LOGIC_VECTOR (5 downto 0);
+    signal idx_2_reg_6660 : STD_LOGIC_VECTOR (31 downto 0);
+    signal k_cast_fu_6899_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal zext_ln177_fu_6928_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal idx_fu_586 : STD_LOGIC_VECTOR (31 downto 0);
-    signal add_ln161_fu_6877_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal buffer_idx_fu_6728_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal icmp_ln32_fu_6737_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal buffer_idx_2_fu_6733_p1 : STD_LOGIC_VECTOR (4 downto 0);
-    signal buffer_idx_3_fu_6743_p3 : STD_LOGIC_VECTOR (4 downto 0);
-    signal icmp_ln34_fu_6823_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal trunc_ln161_fu_6814_p1 : STD_LOGIC_VECTOR (3 downto 0);
-    signal select_ln34_fu_6829_p3 : STD_LOGIC_VECTOR (3 downto 0);
-    signal shl_ln_fu_6845_p3 : STD_LOGIC_VECTOR (9 downto 0);
-    signal shl_ln161_1_fu_6856_p3 : STD_LOGIC_VECTOR (7 downto 0);
-    signal zext_ln161_fu_6852_p1 : STD_LOGIC_VECTOR (10 downto 0);
-    signal zext_ln161_1_fu_6863_p1 : STD_LOGIC_VECTOR (10 downto 0);
-    signal sub_ln161_fu_6867_p2 : STD_LOGIC_VECTOR (10 downto 0);
-    signal sext_ln161_fu_6873_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal zext_ln178_fu_6935_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal idx_fu_588 : STD_LOGIC_VECTOR (31 downto 0);
+    signal add_ln162_fu_6879_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal buffer_idx_fu_6730_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal icmp_ln32_fu_6739_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal buffer_idx_2_fu_6735_p1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal buffer_idx_3_fu_6745_p3 : STD_LOGIC_VECTOR (4 downto 0);
+    signal icmp_ln34_fu_6825_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal trunc_ln162_fu_6816_p1 : STD_LOGIC_VECTOR (3 downto 0);
+    signal select_ln34_fu_6831_p3 : STD_LOGIC_VECTOR (3 downto 0);
+    signal shl_ln_fu_6847_p3 : STD_LOGIC_VECTOR (9 downto 0);
+    signal shl_ln162_1_fu_6858_p3 : STD_LOGIC_VECTOR (7 downto 0);
+    signal zext_ln162_fu_6854_p1 : STD_LOGIC_VECTOR (10 downto 0);
+    signal zext_ln162_1_fu_6865_p1 : STD_LOGIC_VECTOR (10 downto 0);
+    signal sub_ln162_fu_6869_p2 : STD_LOGIC_VECTOR (10 downto 0);
+    signal sext_ln162_fu_6875_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal add_ln178_1_fu_6930_p2 : STD_LOGIC_VECTOR (11 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (15 downto 0);
     signal ap_idle_pp0 : STD_LOGIC;
     signal ap_enable_pp0 : STD_LOGIC;
@@ -1745,68 +1747,68 @@ begin
     end process;
 
 
-    i_08_in_reg_6638_assign_proc : process (ap_clk)
+    i_08_in_reg_6640_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state8) and ((icmp_ln161_1_fu_6818_p2 = ap_const_lv1_1) or (icmp_ln161_reg_9700 = ap_const_lv1_1)))) then 
-                i_08_in_reg_6638 <= i_reg_8283;
+            if (((ap_const_logic_1 = ap_CS_fsm_state8) and ((icmp_ln162_1_fu_6820_p2 = ap_const_lv1_1) or (icmp_ln162_reg_9708 = ap_const_lv1_1)))) then 
+                i_08_in_reg_6640 <= i_reg_8291;
             elsif (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                i_08_in_reg_6638 <= n_periods_cast_fu_6688_p1;
+                i_08_in_reg_6640 <= n_periods_cast_fu_6690_p1;
             end if; 
         end if;
     end process;
 
-    idx_2_reg_6658_assign_proc : process (ap_clk)
+    idx_2_reg_6660_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln161_fu_6802_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state7))) then 
-                idx_2_reg_6658 <= idx_fu_586;
+            if (((icmp_ln162_fu_6804_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state7))) then 
+                idx_2_reg_6660 <= idx_fu_588;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-                idx_2_reg_6658 <= add_ln161_1_fu_6932_p2;
+                idx_2_reg_6660 <= add_ln162_1_fu_6940_p2;
             end if; 
         end if;
     end process;
 
-    idx_4_reg_6668_assign_proc : process (ap_clk)
+    idx_4_reg_6670_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
-                idx_4_reg_6668 <= sext_ln168_fu_6887_p1;
-            elsif (((icmp_ln168_fu_6903_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                idx_4_reg_6668 <= add_ln177_fu_6909_p2;
+                idx_4_reg_6670 <= sext_ln169_fu_6889_p1;
+            elsif (((icmp_ln169_fu_6905_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+                idx_4_reg_6670 <= add_ln178_fu_6915_p2;
             end if; 
         end if;
     end process;
 
-    idx_fu_586_assign_proc : process (ap_clk)
+    idx_fu_588_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                idx_fu_586 <= ap_const_lv32_0;
-            elsif (((icmp_ln161_1_fu_6818_p2 = ap_const_lv1_1) and (icmp_ln161_reg_9700 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state8))) then 
-                idx_fu_586 <= add_ln161_fu_6877_p2;
+                idx_fu_588 <= ap_const_lv32_0;
+            elsif (((icmp_ln162_1_fu_6820_p2 = ap_const_lv1_1) and (icmp_ln162_reg_9708 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state8))) then 
+                idx_fu_588 <= add_ln162_fu_6879_p2;
             end if; 
         end if;
     end process;
 
-    j_reg_6647_assign_proc : process (ap_clk)
+    j_reg_6649_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln161_fu_6802_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state7))) then 
-                j_reg_6647 <= ap_const_lv6_0;
+            if (((icmp_ln162_fu_6804_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state7))) then 
+                j_reg_6649 <= ap_const_lv6_0;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
-                j_reg_6647 <= j_1_reg_9704;
+                j_reg_6649 <= j_1_reg_9712;
             end if; 
         end if;
     end process;
 
-    k_reg_6677_assign_proc : process (ap_clk)
+    k_reg_6679_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
-                k_reg_6677 <= ap_const_lv4_0;
-            elsif (((icmp_ln168_fu_6903_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                k_reg_6677 <= add_ln168_fu_6891_p2;
+                k_reg_6679 <= ap_const_lv4_0;
+            elsif (((icmp_ln169_fu_6905_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+                k_reg_6679 <= add_ln169_fu_6893_p2;
             end if; 
         end if;
     end process;
@@ -1814,7 +1816,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state2)) then
-                i_reg_8283 <= i_fu_6716_p2;
+                i_reg_8291 <= i_fu_6718_p2;
             end if;
         end if;
     end process;
@@ -1822,8 +1824,8 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state7)) then
-                icmp_ln161_reg_9700 <= icmp_ln161_fu_6802_p2;
-                sample_period_count_s_reg_9693 <= sliding_window_buffer_count_s_q0;
+                icmp_ln162_reg_9708 <= icmp_ln162_fu_6804_p2;
+                sample_period_count_s_reg_9701 <= sliding_window_buffer_count_s_q0;
             end if;
         end if;
     end process;
@@ -1831,15 +1833,15 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                icmp_ln168_reg_9866 <= icmp_ln168_fu_6903_p2;
+                icmp_ln169_reg_9874 <= icmp_ln169_fu_6905_p2;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln161_reg_9700 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state8))) then
-                j_1_reg_9704 <= j_1_fu_6808_p2;
+            if (((icmp_ln162_reg_9708 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state8))) then
+                j_1_reg_9712 <= j_1_fu_6810_p2;
             end if;
         end if;
     end process;
@@ -1847,39 +1849,39 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                sext_ln34_reg_8270 <= sext_ln34_fu_6696_p1;
-                trunc_ln22_reg_8275 <= trunc_ln22_fu_6704_p1;
+                sext_ln34_reg_8278 <= sext_ln34_fu_6698_p1;
+                trunc_ln22_reg_8283 <= trunc_ln22_fu_6706_p1;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln168_fu_6903_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                trunc_ln177_reg_9885 <= trunc_ln177_fu_6915_p1;
+            if (((icmp_ln169_fu_6905_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
+                trunc_ln178_reg_9888 <= trunc_ln178_fu_6911_p1;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln161_1_fu_6818_p2 = ap_const_lv1_0) and (icmp_ln161_reg_9700 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state8))) then
-                    zext_ln40_reg_9712(3 downto 0) <= zext_ln40_fu_6837_p1(3 downto 0);
+            if (((icmp_ln162_1_fu_6820_p2 = ap_const_lv1_0) and (icmp_ln162_reg_9708 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state8))) then
+                    zext_ln40_reg_9720(3 downto 0) <= zext_ln40_fu_6839_p1(3 downto 0);
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln152_fu_6722_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
-                    zext_ln46_reg_8291(4 downto 0) <= zext_ln46_fu_6750_p1(4 downto 0);
+            if (((icmp_ln153_fu_6724_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                    zext_ln46_reg_8299(4 downto 0) <= zext_ln46_fu_6752_p1(4 downto 0);
             end if;
         end if;
     end process;
-    zext_ln46_reg_8291(63 downto 5) <= "00000000000000000000000000000000000000000000000000000000000";
-    zext_ln40_reg_9712(63 downto 4) <= "000000000000000000000000000000000000000000000000000000000000";
+    zext_ln46_reg_8299(63 downto 5) <= "00000000000000000000000000000000000000000000000000000000000";
+    zext_ln40_reg_9720(63 downto 4) <= "000000000000000000000000000000000000000000000000000000000000";
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_state2, icmp_ln152_fu_6722_p2, icmp_ln161_reg_9700, ap_CS_fsm_state8, icmp_ln161_1_fu_6818_p2, ap_enable_reg_pp0_iter0, icmp_ln168_fu_6903_p2, ap_block_pp0_stage0_subdone)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_state2, icmp_ln153_fu_6724_p2, icmp_ln162_reg_9708, ap_CS_fsm_state8, icmp_ln162_1_fu_6820_p2, ap_enable_reg_pp0_iter0, icmp_ln169_fu_6905_p2, ap_block_pp0_stage0_subdone)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -1889,7 +1891,7 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((icmp_ln152_fu_6722_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                if (((icmp_ln153_fu_6724_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state3;
@@ -1905,7 +1907,7 @@ begin
             when ap_ST_fsm_state7 => 
                 ap_NS_fsm <= ap_ST_fsm_state8;
             when ap_ST_fsm_state8 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state8) and ((icmp_ln161_1_fu_6818_p2 = ap_const_lv1_1) or (icmp_ln161_reg_9700 = ap_const_lv1_1)))) then
+                if (((ap_const_logic_1 = ap_CS_fsm_state8) and ((icmp_ln162_1_fu_6820_p2 = ap_const_lv1_1) or (icmp_ln162_reg_9708 = ap_const_lv1_1)))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state9;
@@ -1923,9 +1925,9 @@ begin
             when ap_ST_fsm_state14 => 
                 ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
             when ap_ST_fsm_pp0_stage0 => 
-                if (not(((icmp_ln168_fu_6903_p2 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1)))) then
+                if (not(((icmp_ln169_fu_6905_p2 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1)))) then
                     ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
-                elsif (((icmp_ln168_fu_6903_p2 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then
+                elsif (((icmp_ln169_fu_6905_p2 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state17;
                 else
                     ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
@@ -1936,10 +1938,11 @@ begin
                 ap_NS_fsm <= "XXXXXXXXXXXXXXXX";
         end case;
     end process;
-    add_ln161_1_fu_6932_p2 <= std_logic_vector(signed(idx_2_reg_6658) + signed(ap_const_lv32_C));
-    add_ln161_fu_6877_p2 <= std_logic_vector(signed(sext_ln161_fu_6873_p1) + signed(idx_fu_586));
-    add_ln168_fu_6891_p2 <= std_logic_vector(unsigned(k_reg_6677) + unsigned(ap_const_lv4_1));
-    add_ln177_fu_6909_p2 <= std_logic_vector(unsigned(idx_4_reg_6668) + unsigned(ap_const_lv33_1));
+    add_ln162_1_fu_6940_p2 <= std_logic_vector(signed(idx_2_reg_6660) + signed(ap_const_lv32_C));
+    add_ln162_fu_6879_p2 <= std_logic_vector(signed(sext_ln162_fu_6875_p1) + signed(idx_fu_588));
+    add_ln169_fu_6893_p2 <= std_logic_vector(unsigned(k_reg_6679) + unsigned(ap_const_lv4_1));
+    add_ln178_1_fu_6930_p2 <= std_logic_vector(unsigned(trunc_ln178_reg_9888) + unsigned(ap_const_lv12_1));
+    add_ln178_fu_6915_p2 <= std_logic_vector(unsigned(idx_4_reg_6670) + unsigned(ap_const_lv33_1));
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(14);
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state10 <= ap_CS_fsm(9);
@@ -1962,9 +1965,9 @@ begin
         ap_block_state15_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state16_pp0_stage0_iter1 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_condition_pp0_exit_iter0_state15_assign_proc : process(icmp_ln168_fu_6903_p2)
+    ap_condition_pp0_exit_iter0_state15_assign_proc : process(icmp_ln169_fu_6905_p2)
     begin
-        if ((icmp_ln168_fu_6903_p2 = ap_const_lv1_1)) then 
+        if ((icmp_ln169_fu_6905_p2 = ap_const_lv1_1)) then 
             ap_condition_pp0_exit_iter0_state15 <= ap_const_logic_1;
         else 
             ap_condition_pp0_exit_iter0_state15 <= ap_const_logic_0;
@@ -1972,9 +1975,9 @@ begin
     end process;
 
 
-    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, ap_CS_fsm_state2, icmp_ln152_fu_6722_p2)
+    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, ap_CS_fsm_state2, icmp_ln153_fu_6724_p2)
     begin
-        if ((((icmp_ln152_fu_6722_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2)) or ((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)))) then 
+        if ((((icmp_ln153_fu_6724_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2)) or ((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -2003,22 +2006,22 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(ap_CS_fsm_state2, icmp_ln152_fu_6722_p2)
+    ap_ready_assign_proc : process(ap_CS_fsm_state2, icmp_ln153_fu_6724_p2)
     begin
-        if (((icmp_ln152_fu_6722_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+        if (((icmp_ln153_fu_6724_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
         end if; 
     end process;
 
-    ap_return <= idx_fu_586;
-    buffer_idx_2_fu_6733_p1 <= buffer_idx_fu_6728_p2(5 - 1 downto 0);
-    buffer_idx_3_fu_6743_p3 <= 
-        trunc_ln22_reg_8275 when (icmp_ln32_fu_6737_p2(0) = '1') else 
-        buffer_idx_2_fu_6733_p1;
-    buffer_idx_fu_6728_p2 <= std_logic_vector(signed(sext_ln34_reg_8270) - signed(i_fu_6716_p2));
-    buffer_out_address0 <= zext_ln177_fu_6928_p1(12 - 1 downto 0);
+    ap_return <= idx_fu_588;
+    buffer_idx_2_fu_6735_p1 <= buffer_idx_fu_6730_p2(5 - 1 downto 0);
+    buffer_idx_3_fu_6745_p3 <= 
+        trunc_ln22_reg_8283 when (icmp_ln32_fu_6739_p2(0) = '1') else 
+        buffer_idx_2_fu_6735_p1;
+    buffer_idx_fu_6730_p2 <= std_logic_vector(signed(sext_ln34_reg_8278) - signed(i_fu_6718_p2));
+    buffer_out_address0 <= zext_ln178_fu_6935_p1(12 - 1 downto 0);
 
     buffer_out_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001, ap_enable_reg_pp0_iter1)
     begin
@@ -2031,30 +2034,30 @@ begin
 
     buffer_out_d0 <= (sample_timestamp_V_q0 & sample_sample_V_q0);
 
-    buffer_out_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001, icmp_ln168_reg_9866, ap_enable_reg_pp0_iter1)
+    buffer_out_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001, icmp_ln169_reg_9874, ap_enable_reg_pp0_iter1)
     begin
-        if (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (icmp_ln168_reg_9866 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+        if (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (icmp_ln169_reg_9874 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
             buffer_out_we0 <= ap_const_logic_1;
         else 
             buffer_out_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
-    i_fu_6716_p2 <= std_logic_vector(unsigned(i_08_in_reg_6638) + unsigned(ap_const_lv32_FFFFFFFF));
-    icmp_ln152_fu_6722_p2 <= "1" when (signed(i_08_in_reg_6638) > signed(ap_const_lv32_0)) else "0";
-    icmp_ln161_1_fu_6818_p2 <= "1" when (j_reg_6647 = sample_period_count_s_reg_9693) else "0";
-    icmp_ln161_fu_6802_p2 <= "1" when (sliding_window_buffer_count_s_q0 = ap_const_lv6_0) else "0";
-    icmp_ln168_fu_6903_p2 <= "1" when (k_reg_6677 = ap_const_lv4_C) else "0";
-    icmp_ln32_fu_6737_p2 <= "1" when (signed(buffer_idx_fu_6728_p2) < signed(ap_const_lv32_FFFFFFE0)) else "0";
-    icmp_ln34_fu_6823_p2 <= "1" when (unsigned(j_reg_6647) > unsigned(ap_const_lv6_A)) else "0";
-    j_1_fu_6808_p2 <= std_logic_vector(unsigned(j_reg_6647) + unsigned(ap_const_lv6_1));
-    k_cast_fu_6897_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(k_reg_6677),64));
-    n_periods_cast_fu_6688_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(n_periods),32));
+    i_fu_6718_p2 <= std_logic_vector(unsigned(i_08_in_reg_6640) + unsigned(ap_const_lv32_FFFFFFFF));
+    icmp_ln153_fu_6724_p2 <= "1" when (signed(i_08_in_reg_6640) > signed(ap_const_lv32_0)) else "0";
+    icmp_ln162_1_fu_6820_p2 <= "1" when (j_reg_6649 = sample_period_count_s_reg_9701) else "0";
+    icmp_ln162_fu_6804_p2 <= "1" when (sliding_window_buffer_count_s_q0 = ap_const_lv6_0) else "0";
+    icmp_ln169_fu_6905_p2 <= "1" when (k_reg_6679 = ap_const_lv4_C) else "0";
+    icmp_ln32_fu_6739_p2 <= "1" when (signed(buffer_idx_fu_6730_p2) < signed(ap_const_lv32_FFFFFFE0)) else "0";
+    icmp_ln34_fu_6825_p2 <= "1" when (unsigned(j_reg_6649) > unsigned(ap_const_lv6_A)) else "0";
+    j_1_fu_6810_p2 <= std_logic_vector(unsigned(j_reg_6649) + unsigned(ap_const_lv6_1));
+    k_cast_fu_6899_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(k_reg_6679),64));
+    n_periods_cast_fu_6690_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(n_periods),32));
 
-    sample_period_samples_0_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln40_fu_6837_p1)
+    sample_period_samples_0_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln40_fu_6839_p1)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
-            sample_period_samples_0_sample_V_address0 <= zext_ln40_fu_6837_p1(4 - 1 downto 0);
+            sample_period_samples_0_sample_V_address0 <= zext_ln40_fu_6839_p1(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_0_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -2165,10 +2168,10 @@ begin
     end process;
 
 
-    sample_period_samples_0_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln40_fu_6837_p1)
+    sample_period_samples_0_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln40_fu_6839_p1)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
-            sample_period_samples_0_timestamp_V_address0 <= zext_ln40_fu_6837_p1(4 - 1 downto 0);
+            sample_period_samples_0_timestamp_V_address0 <= zext_ln40_fu_6839_p1(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_0_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -2279,10 +2282,10 @@ begin
     end process;
 
 
-    sample_period_samples_10_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state13)
+    sample_period_samples_10_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state13)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
-            sample_period_samples_10_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_10_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_10_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -2393,10 +2396,10 @@ begin
     end process;
 
 
-    sample_period_samples_10_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state13)
+    sample_period_samples_10_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state13)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
-            sample_period_samples_10_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_10_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_10_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -2507,10 +2510,10 @@ begin
     end process;
 
 
-    sample_period_samples_11_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state13)
+    sample_period_samples_11_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state13)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
-            sample_period_samples_11_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_11_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_11_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -2621,10 +2624,10 @@ begin
     end process;
 
 
-    sample_period_samples_11_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state13)
+    sample_period_samples_11_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state13)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
-            sample_period_samples_11_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_11_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_11_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -2735,10 +2738,10 @@ begin
     end process;
 
 
-    sample_period_samples_1_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln40_fu_6837_p1)
+    sample_period_samples_1_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln40_fu_6839_p1)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
-            sample_period_samples_1_sample_V_address0 <= zext_ln40_fu_6837_p1(4 - 1 downto 0);
+            sample_period_samples_1_sample_V_address0 <= zext_ln40_fu_6839_p1(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_1_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -2849,10 +2852,10 @@ begin
     end process;
 
 
-    sample_period_samples_1_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln40_fu_6837_p1)
+    sample_period_samples_1_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln40_fu_6839_p1)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
-            sample_period_samples_1_timestamp_V_address0 <= zext_ln40_fu_6837_p1(4 - 1 downto 0);
+            sample_period_samples_1_timestamp_V_address0 <= zext_ln40_fu_6839_p1(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_1_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -2963,10 +2966,10 @@ begin
     end process;
 
 
-    sample_period_samples_2_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state9)
+    sample_period_samples_2_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state9)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
-            sample_period_samples_2_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_2_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_2_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3077,10 +3080,10 @@ begin
     end process;
 
 
-    sample_period_samples_2_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state9)
+    sample_period_samples_2_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state9)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
-            sample_period_samples_2_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_2_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_2_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3191,10 +3194,10 @@ begin
     end process;
 
 
-    sample_period_samples_3_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state9)
+    sample_period_samples_3_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state9)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
-            sample_period_samples_3_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_3_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_3_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3305,10 +3308,10 @@ begin
     end process;
 
 
-    sample_period_samples_3_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state9)
+    sample_period_samples_3_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state9)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
-            sample_period_samples_3_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_3_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_3_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3419,10 +3422,10 @@ begin
     end process;
 
 
-    sample_period_samples_4_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state10)
+    sample_period_samples_4_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state10)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
-            sample_period_samples_4_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_4_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_4_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3533,10 +3536,10 @@ begin
     end process;
 
 
-    sample_period_samples_4_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state10)
+    sample_period_samples_4_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state10)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
-            sample_period_samples_4_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_4_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_4_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3647,10 +3650,10 @@ begin
     end process;
 
 
-    sample_period_samples_5_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state10)
+    sample_period_samples_5_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state10)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
-            sample_period_samples_5_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_5_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_5_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3761,10 +3764,10 @@ begin
     end process;
 
 
-    sample_period_samples_5_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state10)
+    sample_period_samples_5_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state10)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
-            sample_period_samples_5_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_5_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_5_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3875,10 +3878,10 @@ begin
     end process;
 
 
-    sample_period_samples_6_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state11)
+    sample_period_samples_6_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state11)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state11)) then 
-            sample_period_samples_6_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_6_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_6_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -3989,10 +3992,10 @@ begin
     end process;
 
 
-    sample_period_samples_6_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state11)
+    sample_period_samples_6_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state11)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state11)) then 
-            sample_period_samples_6_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_6_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_6_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -4103,10 +4106,10 @@ begin
     end process;
 
 
-    sample_period_samples_7_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state11)
+    sample_period_samples_7_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state11)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state11)) then 
-            sample_period_samples_7_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_7_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_7_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -4217,10 +4220,10 @@ begin
     end process;
 
 
-    sample_period_samples_7_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state11)
+    sample_period_samples_7_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state11)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state11)) then 
-            sample_period_samples_7_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_7_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_7_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -4331,10 +4334,10 @@ begin
     end process;
 
 
-    sample_period_samples_8_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state12)
+    sample_period_samples_8_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state12)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
-            sample_period_samples_8_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_8_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_8_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -4445,10 +4448,10 @@ begin
     end process;
 
 
-    sample_period_samples_8_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state12)
+    sample_period_samples_8_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state12)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
-            sample_period_samples_8_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_8_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_8_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -4559,10 +4562,10 @@ begin
     end process;
 
 
-    sample_period_samples_9_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state12)
+    sample_period_samples_9_sample_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state12)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
-            sample_period_samples_9_sample_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_9_sample_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_9_sample_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -4673,10 +4676,10 @@ begin
     end process;
 
 
-    sample_period_samples_9_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9712, ap_CS_fsm_state12)
+    sample_period_samples_9_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, zext_ln40_reg_9720, ap_CS_fsm_state12)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
-            sample_period_samples_9_timestamp_V_address0 <= zext_ln40_reg_9712(4 - 1 downto 0);
+            sample_period_samples_9_timestamp_V_address0 <= zext_ln40_reg_9720(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
             sample_period_samples_9_timestamp_V_address0 <= ap_const_lv64_9(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -4787,10 +4790,10 @@ begin
     end process;
 
 
-    sample_sample_V_address0_assign_proc : process(ap_CS_fsm_state9, ap_CS_fsm_state10, ap_CS_fsm_state11, ap_CS_fsm_state12, ap_CS_fsm_state13, ap_CS_fsm_state14, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, k_cast_fu_6897_p1, ap_block_pp0_stage0)
+    sample_sample_V_address0_assign_proc : process(ap_CS_fsm_state9, ap_CS_fsm_state10, ap_CS_fsm_state11, ap_CS_fsm_state12, ap_CS_fsm_state13, ap_CS_fsm_state14, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, k_cast_fu_6899_p1, ap_block_pp0_stage0)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            sample_sample_V_address0 <= k_cast_fu_6897_p1(4 - 1 downto 0);
+            sample_sample_V_address0 <= k_cast_fu_6899_p1(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
             sample_sample_V_address0 <= ap_const_lv64_B(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
@@ -4909,10 +4912,10 @@ begin
     end process;
 
 
-    sample_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state9, ap_CS_fsm_state10, ap_CS_fsm_state11, ap_CS_fsm_state12, ap_CS_fsm_state13, ap_CS_fsm_state14, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, k_cast_fu_6897_p1, ap_block_pp0_stage0)
+    sample_timestamp_V_address0_assign_proc : process(ap_CS_fsm_state9, ap_CS_fsm_state10, ap_CS_fsm_state11, ap_CS_fsm_state12, ap_CS_fsm_state13, ap_CS_fsm_state14, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, k_cast_fu_6899_p1, ap_block_pp0_stage0)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            sample_timestamp_V_address0 <= k_cast_fu_6897_p1(4 - 1 downto 0);
+            sample_timestamp_V_address0 <= k_cast_fu_6899_p1(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
             sample_timestamp_V_address0 <= ap_const_lv64_B(4 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
@@ -5030,18 +5033,18 @@ begin
         end if; 
     end process;
 
-    select_ln34_fu_6829_p3 <= 
-        ap_const_lv4_9 when (icmp_ln34_fu_6823_p2(0) = '1') else 
-        trunc_ln161_fu_6814_p1;
-        sext_ln161_fu_6873_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sub_ln161_fu_6867_p2),32));
+    select_ln34_fu_6831_p3 <= 
+        ap_const_lv4_9 when (icmp_ln34_fu_6825_p2(0) = '1') else 
+        trunc_ln162_fu_6816_p1;
+        sext_ln162_fu_6875_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sub_ln162_fu_6869_p2),32));
 
-        sext_ln168_fu_6887_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(idx_2_reg_6658),33));
+        sext_ln169_fu_6889_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(idx_2_reg_6660),33));
 
-        sext_ln34_fu_6696_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sliding_window_front_ptr_s),32));
+        sext_ln34_fu_6698_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sliding_window_front_ptr_s),32));
 
-    shl_ln161_1_fu_6856_p3 <= (sample_period_count_s_reg_9693 & ap_const_lv2_0);
-    shl_ln_fu_6845_p3 <= (sample_period_count_s_reg_9693 & ap_const_lv4_0);
-    sliding_window_buffer_count_s_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    shl_ln162_1_fu_6858_p3 <= (sample_period_count_s_reg_9701 & ap_const_lv2_0);
+    shl_ln_fu_6847_p3 <= (sample_period_count_s_reg_9701 & ap_const_lv4_0);
+    sliding_window_buffer_count_s_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_count_s_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -5052,7 +5055,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_0_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_0_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_0_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5063,7 +5066,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_10_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_10_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_10_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5074,7 +5077,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_11_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_11_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_11_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5085,7 +5088,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_1_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_1_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_1_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5096,7 +5099,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_2_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_2_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_2_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5107,7 +5110,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_3_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_3_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_3_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5118,7 +5121,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_4_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_4_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_4_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5129,7 +5132,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_5_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_5_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_5_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5140,7 +5143,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_6_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_6_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_6_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5151,7 +5154,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_7_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_7_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_7_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5162,7 +5165,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_8_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_8_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_8_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5173,7 +5176,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_0_9_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_0_9_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_0_9_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5184,7 +5187,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_0_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_0_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_0_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5195,7 +5198,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_10_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_10_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_10_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5206,7 +5209,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_11_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_11_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_11_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5217,7 +5220,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_1_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_1_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_1_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5228,7 +5231,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_2_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_2_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_2_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5239,7 +5242,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_3_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_3_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_3_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5250,7 +5253,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_4_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_4_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_4_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5261,7 +5264,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_5_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_5_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_5_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5272,7 +5275,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_6_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_6_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_6_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5283,7 +5286,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_7_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_7_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_7_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5294,7 +5297,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_8_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_8_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_8_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5305,7 +5308,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_1_9_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_1_9_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_1_9_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -5316,7 +5319,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_0_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5327,7 +5330,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_10_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5338,7 +5341,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_11_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5349,7 +5352,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_1_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5360,7 +5363,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_2_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5371,7 +5374,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_3_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5382,7 +5385,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_4_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5393,7 +5396,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_5_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5404,7 +5407,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_6_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5415,7 +5418,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_7_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5426,7 +5429,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_8_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5437,7 +5440,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_2_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_2_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_2_9_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5448,7 +5451,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_0_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5459,7 +5462,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_10_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5470,7 +5473,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_11_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5481,7 +5484,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_1_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5492,7 +5495,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_2_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5503,7 +5506,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_3_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5514,7 +5517,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_4_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5525,7 +5528,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_5_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5536,7 +5539,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_6_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5547,7 +5550,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_7_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5558,7 +5561,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_8_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5569,7 +5572,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_3_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_3_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_3_9_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -5580,7 +5583,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_0_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5591,7 +5594,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_10_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5602,7 +5605,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_11_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5613,7 +5616,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_1_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5624,7 +5627,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_2_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5635,7 +5638,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_3_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5646,7 +5649,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_4_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5657,7 +5660,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_5_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5668,7 +5671,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_6_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5679,7 +5682,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_7_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5690,7 +5693,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_8_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5701,7 +5704,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_4_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_4_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_4_9_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5712,7 +5715,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_0_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5723,7 +5726,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_10_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5734,7 +5737,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_11_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5745,7 +5748,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_1_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5756,7 +5759,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_2_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5767,7 +5770,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_3_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5778,7 +5781,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_4_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5789,7 +5792,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_5_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5800,7 +5803,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_6_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5811,7 +5814,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_7_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5822,7 +5825,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_8_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5833,7 +5836,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_5_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_5_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_5_9_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -5844,7 +5847,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_0_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5855,7 +5858,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_10_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5866,7 +5869,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_11_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5877,7 +5880,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_1_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5888,7 +5891,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_2_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5899,7 +5902,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_3_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5910,7 +5913,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_4_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5921,7 +5924,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_5_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5932,7 +5935,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_6_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5943,7 +5946,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_7_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5954,7 +5957,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_8_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5965,7 +5968,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_6_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_6_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_6_9_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5976,7 +5979,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_0_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5987,7 +5990,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_10_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -5998,7 +6001,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_11_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6009,7 +6012,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_1_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6020,7 +6023,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_2_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6031,7 +6034,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_3_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6042,7 +6045,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_4_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6053,7 +6056,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_5_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6064,7 +6067,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_6_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6075,7 +6078,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_7_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6086,7 +6089,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_8_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6097,7 +6100,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_7_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_7_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_7_9_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -6108,7 +6111,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_0_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6119,7 +6122,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_10_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6130,7 +6133,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_11_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6141,7 +6144,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_1_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6152,7 +6155,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_2_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6163,7 +6166,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_3_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6174,7 +6177,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_4_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6185,7 +6188,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_5_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6196,7 +6199,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_6_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6207,7 +6210,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_7_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6218,7 +6221,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_8_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6229,7 +6232,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_8_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_8_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_8_9_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6240,7 +6243,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_0_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6251,7 +6254,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_10_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6262,7 +6265,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_11_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6273,7 +6276,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_1_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6284,7 +6287,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_2_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6295,7 +6298,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_3_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6306,7 +6309,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_4_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6317,7 +6320,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_5_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6328,7 +6331,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_6_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6339,7 +6342,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_7_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6350,7 +6353,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_8_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6361,7 +6364,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_sample_V_9_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_sample_V_9_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_sample_V_9_9_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -6372,7 +6375,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_0_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_0_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_0_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6383,7 +6386,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_10_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_10_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_10_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6394,7 +6397,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_11_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_11_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_11_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6405,7 +6408,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_1_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_1_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_1_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6416,7 +6419,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_2_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_2_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_2_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6427,7 +6430,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_3_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_3_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_3_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6438,7 +6441,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_4_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_4_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_4_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6449,7 +6452,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_5_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_5_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_5_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6460,7 +6463,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_6_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_6_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_6_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6471,7 +6474,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_7_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_7_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_7_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6482,7 +6485,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_8_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_8_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_8_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6493,7 +6496,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_0_9_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_0_9_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_0_9_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6504,7 +6507,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_0_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_0_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_0_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6515,7 +6518,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_10_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_10_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_10_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6526,7 +6529,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_11_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_11_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_11_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6537,7 +6540,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_1_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_1_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_1_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6548,7 +6551,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_2_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_2_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_2_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6559,7 +6562,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_3_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_3_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_3_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6570,7 +6573,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_4_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_4_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_4_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6581,7 +6584,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_5_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_5_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_5_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6592,7 +6595,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_6_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_6_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_6_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6603,7 +6606,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_7_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_7_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_7_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6614,7 +6617,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_8_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_8_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_8_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6625,7 +6628,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_1_9_address0 <= zext_ln46_fu_6750_p1(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_1_9_address0 <= zext_ln46_fu_6752_p1(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_1_9_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
@@ -6636,7 +6639,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_0_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6647,7 +6650,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_10_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6658,7 +6661,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_11_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6669,7 +6672,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_1_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6680,7 +6683,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_2_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6691,7 +6694,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_3_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6702,7 +6705,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_4_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6713,7 +6716,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_5_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6724,7 +6727,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_6_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6735,7 +6738,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_7_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6746,7 +6749,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_8_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6757,7 +6760,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_2_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_2_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_2_9_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6768,7 +6771,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_0_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6779,7 +6782,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_10_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6790,7 +6793,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_11_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6801,7 +6804,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_1_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6812,7 +6815,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_2_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6823,7 +6826,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_3_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6834,7 +6837,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_4_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6845,7 +6848,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_5_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6856,7 +6859,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_6_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6867,7 +6870,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_7_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6878,7 +6881,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_8_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6889,7 +6892,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_3_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_3_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_3_9_ce0_assign_proc : process(ap_CS_fsm_state3)
     begin
@@ -6900,7 +6903,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_0_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6911,7 +6914,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_10_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6922,7 +6925,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_11_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6933,7 +6936,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_1_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6944,7 +6947,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_2_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6955,7 +6958,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_3_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6966,7 +6969,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_4_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6977,7 +6980,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_5_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6988,7 +6991,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_6_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -6999,7 +7002,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_7_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7010,7 +7013,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_8_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7021,7 +7024,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_4_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_4_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_4_9_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7032,7 +7035,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_0_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7043,7 +7046,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_10_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7054,7 +7057,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_11_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7065,7 +7068,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_1_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7076,7 +7079,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_2_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7087,7 +7090,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_3_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7098,7 +7101,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_4_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7109,7 +7112,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_5_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7120,7 +7123,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_6_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7131,7 +7134,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_7_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7142,7 +7145,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_8_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7153,7 +7156,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_5_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_5_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_5_9_ce0_assign_proc : process(ap_CS_fsm_state4)
     begin
@@ -7164,7 +7167,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_0_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7175,7 +7178,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_10_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7186,7 +7189,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_11_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7197,7 +7200,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_1_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7208,7 +7211,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_2_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7219,7 +7222,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_3_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7230,7 +7233,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_4_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7241,7 +7244,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_5_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7252,7 +7255,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_6_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7263,7 +7266,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_7_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7274,7 +7277,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_8_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7285,7 +7288,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_6_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_6_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_6_9_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7296,7 +7299,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_0_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7307,7 +7310,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_10_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7318,7 +7321,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_11_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7329,7 +7332,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_1_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7340,7 +7343,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_2_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7351,7 +7354,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_3_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7362,7 +7365,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_4_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7373,7 +7376,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_5_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7384,7 +7387,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_6_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7395,7 +7398,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_7_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7406,7 +7409,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_8_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7417,7 +7420,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_7_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_7_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_7_9_ce0_assign_proc : process(ap_CS_fsm_state5)
     begin
@@ -7428,7 +7431,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_0_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7439,7 +7442,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_10_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7450,7 +7453,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_11_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7461,7 +7464,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_1_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7472,7 +7475,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_2_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7483,7 +7486,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_3_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7494,7 +7497,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_4_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7505,7 +7508,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_5_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7516,7 +7519,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_6_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7527,7 +7530,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_7_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7538,7 +7541,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_8_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7549,7 +7552,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_8_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_8_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_8_9_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7560,7 +7563,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_0_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_0_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_0_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7571,7 +7574,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_10_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_10_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_10_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7582,7 +7585,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_11_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_11_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_11_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7593,7 +7596,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_1_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_1_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_1_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7604,7 +7607,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_2_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_2_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_2_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7615,7 +7618,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_3_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_3_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_3_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7626,7 +7629,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_4_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_4_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_4_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7637,7 +7640,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_5_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_5_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_5_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7648,7 +7651,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_6_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_6_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_6_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7659,7 +7662,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_7_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_7_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_7_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7670,7 +7673,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_8_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_8_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_8_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7681,7 +7684,7 @@ begin
         end if; 
     end process;
 
-    sliding_window_buffer_samples_timestamp_V_9_9_address0 <= zext_ln46_reg_8291(5 - 1 downto 0);
+    sliding_window_buffer_samples_timestamp_V_9_9_address0 <= zext_ln46_reg_8299(5 - 1 downto 0);
 
     sliding_window_buffer_samples_timestamp_V_9_9_ce0_assign_proc : process(ap_CS_fsm_state6)
     begin
@@ -7692,13 +7695,13 @@ begin
         end if; 
     end process;
 
-    sub_ln161_fu_6867_p2 <= std_logic_vector(unsigned(zext_ln161_fu_6852_p1) - unsigned(zext_ln161_1_fu_6863_p1));
-    trunc_ln161_fu_6814_p1 <= j_reg_6647(4 - 1 downto 0);
-    trunc_ln177_fu_6915_p1 <= idx_4_reg_6668(12 - 1 downto 0);
-    trunc_ln22_fu_6704_p1 <= sliding_window_back_ptr_s(5 - 1 downto 0);
-    zext_ln161_1_fu_6863_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(shl_ln161_1_fu_6856_p3),11));
-    zext_ln161_fu_6852_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(shl_ln_fu_6845_p3),11));
-    zext_ln177_fu_6928_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(trunc_ln177_reg_9885),64));
-    zext_ln40_fu_6837_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(select_ln34_fu_6829_p3),64));
-    zext_ln46_fu_6750_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(buffer_idx_3_fu_6743_p3),64));
+    sub_ln162_fu_6869_p2 <= std_logic_vector(unsigned(zext_ln162_fu_6854_p1) - unsigned(zext_ln162_1_fu_6865_p1));
+    trunc_ln162_fu_6816_p1 <= j_reg_6649(4 - 1 downto 0);
+    trunc_ln178_fu_6911_p1 <= idx_4_reg_6670(12 - 1 downto 0);
+    trunc_ln22_fu_6706_p1 <= sliding_window_back_ptr_s(5 - 1 downto 0);
+    zext_ln162_1_fu_6865_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(shl_ln162_1_fu_6858_p3),11));
+    zext_ln162_fu_6854_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(shl_ln_fu_6847_p3),11));
+    zext_ln178_fu_6935_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln178_1_fu_6930_p2),64));
+    zext_ln40_fu_6839_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(select_ln34_fu_6831_p3),64));
+    zext_ln46_fu_6752_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(buffer_idx_3_fu_6745_p3),64));
 end behav;

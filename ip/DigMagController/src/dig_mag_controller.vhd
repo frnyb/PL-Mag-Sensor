@@ -47,9 +47,9 @@ entity dig_mag_controller is
 
         -- Output ports:
         irq_out     :   out STD_LOGIC_VECTOR(2 downto 0)    :=  "000";
-        x_dout      :   out STD_LOGIC_VECTOR(15 downto 0);
-        y_dout      :   out STD_LOGIC_VECTOR(15 downto 0);
-        z_dout      :   out STD_LOGIC_VECTOR(15 downto 0);
+        x_dout      :   out STD_LOGIC_VECTOR(11 downto 0);
+        y_dout      :   out STD_LOGIC_VECTOR(11 downto 0);
+        z_dout      :   out STD_LOGIC_VECTOR(11 downto 0);
 
         -- Ctl ports:
         start       :   in  STD_LOGIC;
@@ -68,11 +68,10 @@ architecture Behavioral of dig_mag_controller is
 
     constant    MAG_CMD_START       :   STD_LOGIC_VECTOR(7 downto 0)    :=  X"01";
     constant    MAG_CTL_12_BITS     :   STD_LOGIC_VECTOR(7 downto 0)    :=  X"03";
-    constant    MAG_CTL_16_BITS     :   STD_LOGIC_VECTOR(7 downto 0)    :=  X"01";
     constant    MAG_STATUS_DONE     :   STD_LOGIC_VECTOR(7 downto 0)    :=  X"01";
 
     type        CONFIG_DATA_TYPE    is  ARRAY(0 to 1) of STD_LOGIC_VECTOR(7 downto 0);
-    constant    CONFIG_DATA         :   CONFIG_DATA_TYPE                := (MAG_REG_INT_CTL_1, MAG_CTL_16_BITS);
+    constant    CONFIG_DATA         :   CONFIG_DATA_TYPE                := (MAG_REG_INT_CTL_1, MAG_CTL_12_BITS);
     signal      config_ptr          :   UNSIGNED(1 downto 0)            :=  (others => '0');
     constant    CONFIG_MAX          :   UNSIGNED(1 downto 0)            :=  "01";
 
@@ -103,9 +102,9 @@ begin
     i2c_data_wr     <=  CONFIG_DATA(to_integer(config_ptr)) when config_ptr <= CONFIG_MAX else
                         CMD_DATA(to_integer(cmd_ptr));
 
-    x_dout          <=  data_rd(1) & data_rd(0); --(7 downto 4);
-    y_dout          <=  data_rd(3) & data_rd(2); --(7 downto 4);
-    z_dout          <=  data_rd(5) & data_rd(4); --(7 downto 4);
+    x_dout          <=  data_rd(1) & data_rd(0)(7 downto 4);
+    y_dout          <=  data_rd(3) & data_rd(2)(7 downto 4);
+    z_dout          <=  data_rd(5) & data_rd(4)(7 downto 4);
 
     ------------------------------------------------------------------------------
     current_state_logic :   process(clk, rst_n)

@@ -20,20 +20,20 @@
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
             <Best-caseLatency>93</Best-caseLatency>
-            <Average-caseLatency>1051</Average-caseLatency>
-            <Worst-caseLatency>14001</Worst-caseLatency>
+            <Average-caseLatency>1052</Average-caseLatency>
+            <Worst-caseLatency>14002</Worst-caseLatency>
             <Best-caseRealTimeLatency>0.930 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>10.510 us</Average-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>10.520 us</Average-caseRealTimeLatency>
             <Worst-caseRealTimeLatency>0.140 ms</Worst-caseRealTimeLatency>
             <Interval-min>94</Interval-min>
-            <Interval-max>14002</Interval-max>
+            <Interval-max>14003</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>2</BRAM_18K>
-            <FF>13630</FF>
-            <LUT>21108</LUT>
+            <FF>13721</FF>
+            <LUT>21323</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
@@ -47,6 +47,227 @@
     </AreaEstimates>
     <InterfaceSummary>
         <RtlPorts>
+            <name>s_axi_axi_AWVALID</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_AWREADY</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_AWADDR</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>5</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_WVALID</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_WREADY</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_WDATA</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_WSTRB</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_ARVALID</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_ARREADY</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_ARADDR</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>5</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_RVALID</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_RREADY</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_RDATA</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_RRESP</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_BVALID</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_BREADY</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_axi_BRESP</name>
+            <Object>axi</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>s_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
             <name>ap_clk</name>
             <Object>SlidingWindowMagSampleFetcher</Object>
             <Type>return value</Type>
@@ -58,7 +279,7 @@
             <Attribute>control</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>ap_rst</name>
+            <name>ap_rst_n</name>
             <Object>SlidingWindowMagSampleFetcher</Object>
             <Type>return value</Type>
             <Scope/>
@@ -593,6 +814,18 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
+            <name>buffer_out_q0</name>
+            <Object>buffer_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
             <name>n_samples</name>
             <Object>n_samples</Object>
             <Type>scalar</Type>
@@ -616,94 +849,22 @@
             <Attribute>control</Attribute>
             <CType>int</CType>
         </RtlPorts>
-        <RtlPorts>
-            <name>n_periods</name>
-            <Object>n_periods</Object>
-            <Type>scalar</Type>
-            <Scope/>
-            <IOProtocol>ap_none</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>8</Bits>
-            <Attribute>data</Attribute>
-            <CType>uint</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>n_samples_out</name>
-            <Object>n_samples_out</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_vld</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>32</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>n_samples_out_ap_vld</name>
-            <Object>n_samples_out</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_vld</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>start_write_i</name>
-            <Object>start_write</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_ovld</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>data</Attribute>
-            <CType>bool</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>start_write_o</name>
-            <Object>start_write</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_ovld</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>data</Attribute>
-            <CType>bool</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>start_write_o_ap_vld</name>
-            <Object>start_write</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_ovld</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>bool</CType>
-        </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
         <TopModule>
             <ModuleName>SlidingWindowMagSampleFetcher</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_loadSlidingWindow_fu_601</InstName>
+                    <InstName>grp_loadSlidingWindow_fu_604</InstName>
                     <ModuleName>loadSlidingWindow</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>601</ID>
+                    <ID>604</ID>
                 </Instance>
                 <Instance>
-                    <InstName>grp_writeToRAM_fu_1119</InstName>
+                    <InstName>grp_writeToRAM_fu_1122</InstName>
                     <ModuleName>writeToRAM</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>1119</ID>
+                    <ID>1122</ID>
                 </Instance>
             </InstancesList>
         </TopModule>
@@ -11989,7 +12150,7 @@
                     <FF>1093</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>3987</LUT>
+                    <LUT>4006</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
                     <UTIL_LUT>5</UTIL_LUT>
                     <DSP>0</DSP>
@@ -20120,12 +20281,12 @@
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>93</Best-caseLatency>
-                    <Average-caseLatency>1051</Average-caseLatency>
-                    <Worst-caseLatency>14001</Worst-caseLatency>
+                    <Average-caseLatency>1052</Average-caseLatency>
+                    <Worst-caseLatency>14002</Worst-caseLatency>
                     <Best-caseRealTimeLatency>0.930 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>10.510 us</Average-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>10.520 us</Average-caseRealTimeLatency>
                     <Worst-caseRealTimeLatency>0.140 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>94 ~ 14002</PipelineInitiationInterval>
+                    <PipelineInitiationInterval>94 ~ 14003</PipelineInitiationInterval>
                     <PipelineType>none</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -20134,12 +20295,12 @@
                     <BRAM_18K>2</BRAM_18K>
                     <AVAIL_BRAM>432</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>13630</FF>
+                    <FF>13721</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>9</UTIL_FF>
-                    <LUT>21108</LUT>
+                    <LUT>21323</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
-                    <UTIL_LUT>29</UTIL_LUT>
+                    <UTIL_LUT>30</UTIL_LUT>
                     <DSP>0</DSP>
                     <AVAIL_DSP>360</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
@@ -20149,6 +20310,227 @@
                 </Resources>
             </AreaEstimates>
             <InterfaceSummary>
+                <RtlPorts>
+                    <name>s_axi_axi_AWVALID</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_AWREADY</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_AWADDR</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>5</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_WVALID</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_WREADY</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_WDATA</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_WSTRB</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_ARVALID</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_ARREADY</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_ARADDR</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>5</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_RVALID</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_RREADY</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_RDATA</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_RRESP</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>2</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_BVALID</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_BREADY</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>s_axi_axi_BRESP</name>
+                    <Object>axi</Object>
+                    <Type>pointer</Type>
+                    <Scope/>
+                    <IOProtocol>s_axi</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>2</Bits>
+                    <Attribute>unknown</Attribute>
+                    <CType>int</CType>
+                    <HasCtrl>0</HasCtrl>
+                </RtlPorts>
                 <RtlPorts>
                     <name>ap_clk</name>
                     <Object>SlidingWindowMagSampleFetcher</Object>
@@ -20161,7 +20543,7 @@
                     <Attribute>control</Attribute>
                 </RtlPorts>
                 <RtlPorts>
-                    <name>ap_rst</name>
+                    <name>ap_rst_n</name>
                     <Object>SlidingWindowMagSampleFetcher</Object>
                     <Type>return value</Type>
                     <Scope/>
@@ -20696,6 +21078,18 @@
                     <CType>int</CType>
                 </RtlPorts>
                 <RtlPorts>
+                    <name>buffer_out_q0</name>
+                    <Object>buffer_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
                     <name>n_samples</name>
                     <Object>n_samples</Object>
                     <Type>scalar</Type>
@@ -20718,78 +21112,6 @@
                     <Bits>1</Bits>
                     <Attribute>control</Attribute>
                     <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n_periods</name>
-                    <Object>n_periods</Object>
-                    <Type>scalar</Type>
-                    <Scope/>
-                    <IOProtocol>ap_none</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>8</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>uint</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n_samples_out</name>
-                    <Object>n_samples_out</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_vld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>32</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n_samples_out_ap_vld</name>
-                    <Object>n_samples_out</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_vld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>start_write_i</name>
-                    <Object>start_write</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ovld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>bool</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>start_write_o</name>
-                    <Object>start_write</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ovld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>bool</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>start_write_o_ap_vld</name>
-                    <Object>start_write</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ovld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                    <CType>bool</CType>
                 </RtlPorts>
             </InterfaceSummary>
         </Module>
@@ -20880,12 +21202,13 @@
                 <hwRef type="port" interface="buffer_in_11_q0" name="buffer_in_11_q0" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="buffer_out" index="12" direction="out" srcType="unsigned int*" srcSize="32">
+        <Arg ArgName="buffer_out" index="12" direction="inout" srcType="unsigned int*" srcSize="32">
             <hwRefs>
                 <hwRef type="port" interface="buffer_out_address0" name="buffer_out_address0" usage="address" direction="out"/>
-                <hwRef type="port" interface="buffer_out_ce0" name="buffer_out_ce0" usage="control" direction="out"/>
-                <hwRef type="port" interface="buffer_out_we0" name="buffer_out_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="buffer_out_ce0" name="buffer_out_ce0" usage="control" direction="inout"/>
+                <hwRef type="port" interface="buffer_out_we0" name="buffer_out_we0" usage="control" direction="inout"/>
                 <hwRef type="port" interface="buffer_out_d0" name="buffer_out_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="buffer_out_q0" name="buffer_out_q0" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
         <Arg ArgName="n_samples" index="13" direction="in" srcType="ap_uint&lt;6&gt;" srcSize="8">
@@ -20896,27 +21219,21 @@
         </Arg>
         <Arg ArgName="n_periods" index="14" direction="in" srcType="unsigned char" srcSize="8">
             <hwRefs>
-                <hwRef type="port" interface="n_periods" name="n_periods" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_axi" name="n_periods" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
         <Arg ArgName="n_samples_out" index="15" direction="out" srcType="unsigned int*" srcSize="32">
             <hwRefs>
-                <hwRef type="port" interface="n_samples_out" name="n_samples_out" usage="data" direction="out"/>
-                <hwRef type="port" interface="n_samples_out_ap_vld" name="n_samples_out_ap_vld" usage="control" direction="out"/>
-            </hwRefs>
-        </Arg>
-        <Arg ArgName="start_write" index="16" direction="inout" srcType="*" srcSize="1">
-            <hwRefs>
-                <hwRef type="port" interface="start_write_i" name="start_write_i" usage="data" direction="in"/>
-                <hwRef type="port" interface="start_write_o" name="start_write_o" usage="data" direction="out"/>
-                <hwRef type="port" interface="start_write_o_ap_vld" name="start_write_o_ap_vld" usage="control" direction="inout"/>
+                <hwRef type="register" interface="s_axi_axi" name="n_samples_out" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_axi" name="n_samples_out_ctrl" usage="control" direction="out"/>
             </hwRefs>
         </Arg>
     </Args>
     <Interfaces>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
             <busParams>
-                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_axi</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
             </busParams>
             <portMaps>
                 <portMap portMapName="ap_clk">CLK</portMap>
@@ -20939,15 +21256,15 @@
                 <port>ap_start</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
             <busParams>
-                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
             </busParams>
             <portMaps>
-                <portMap portMapName="ap_rst">RST</portMap>
+                <portMap portMapName="ap_rst_n">RST</portMap>
             </portMaps>
             <ports>
-                <port>ap_rst</port>
+                <port>ap_rst_n</port>
             </ports>
         </Interface>
         <Interface InterfaceName="buffer_in_0_address0" type="data" busTypeName="data" mode="master" dataWidth="4">
@@ -21236,15 +21553,15 @@
                 <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="buffer_out"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="n_periods" type="data" busTypeName="data" mode="slave" dataWidth="8">
+        <Interface InterfaceName="buffer_out_q0" type="data" busTypeName="data" mode="slave" dataWidth="32">
             <portMaps>
-                <portMap portMapName="n_periods">DATA</portMap>
+                <portMap portMapName="buffer_out_q0">DATA</portMap>
             </portMaps>
             <ports>
-                <port>n_periods</port>
+                <port>buffer_out_q0</port>
             </ports>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="n_periods"/>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="buffer_out"/>
             </constraints>
         </Interface>
         <Interface InterfaceName="n_samples" type="data" busTypeName="data" mode="slave" dataWidth="6">
@@ -21258,42 +21575,58 @@
                 <constraint constraint_type="pragma interface" mode="ap_vld" register_option="0" argName="n_samples"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="n_samples_out" type="data" busTypeName="data" mode="master" dataWidth="32">
-            <portMaps>
-                <portMap portMapName="n_samples_out">DATA</portMap>
-            </portMaps>
+        <Interface InterfaceName="s_axi_axi" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="5" portPrefix="s_axi_axi_" paramPrefix="C_S_AXI_AXI_">
             <ports>
-                <port>n_samples_out</port>
+                <port>s_axi_axi_ARADDR</port>
+                <port>s_axi_axi_ARREADY</port>
+                <port>s_axi_axi_ARVALID</port>
+                <port>s_axi_axi_AWADDR</port>
+                <port>s_axi_axi_AWREADY</port>
+                <port>s_axi_axi_AWVALID</port>
+                <port>s_axi_axi_BREADY</port>
+                <port>s_axi_axi_BRESP</port>
+                <port>s_axi_axi_BVALID</port>
+                <port>s_axi_axi_RDATA</port>
+                <port>s_axi_axi_RREADY</port>
+                <port>s_axi_axi_RRESP</port>
+                <port>s_axi_axi_RVALID</port>
+                <port>s_axi_axi_WDATA</port>
+                <port>s_axi_axi_WREADY</port>
+                <port>s_axi_axi_WSTRB</port>
+                <port>s_axi_axi_WVALID</port>
             </ports>
+            <registers>
+                <register offset="0x10" name="n_periods" access="W" resetValue="0x0" description="Data signal of n_periods" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="n_periods" access="W" resetValue="0" description="Bit 7 to 0 of n_periods"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x18" name="n_samples_out" access="R" resetValue="0x0" description="Data signal of n_samples_out" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="n_samples_out" access="R" resetValue="0" description="Bit 31 to 0 of n_samples_out"/>
+                    </fields>
+                </register>
+                <register offset="0x1c" name="n_samples_out_ctrl" access="R" resetValue="0x0" description="Control signal of n_samples_out" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="n_samples_out_ap_vld" access="R" resetValue="0" description="Control signal n_samples_out_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="n_samples_out"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="start_write_i" type="data" busTypeName="data" mode="slave" dataWidth="1">
-            <portMaps>
-                <portMap portMapName="start_write_i">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>start_write_i</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="start_write"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="start_write_o" type="data" busTypeName="data" mode="master" dataWidth="1">
-            <portMaps>
-                <portMap portMapName="start_write_o">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>start_write_o</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="start_write"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="n_periods"/>
             </constraints>
         </Interface>
     </Interfaces>
     <ReportHWInterface>
         <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE">
+                <table>
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_axi">32, 5, 16, 0</column>
+                </table>
+            </item>
             <item name="AP_MEMORY">
                 <table>
                     <keys size="2">Interface, Bitwidth</keys>
@@ -21323,23 +21656,20 @@
                     <column name="buffer_in_9_q0">32</column>
                     <column name="buffer_out_address0">12</column>
                     <column name="buffer_out_d0">32</column>
+                    <column name="buffer_out_q0">32</column>
                 </table>
             </item>
             <item name="REGISTER">
                 <table>
                     <keys size="3">Interface, Mode, Bitwidth</keys>
-                    <column name="n_periods">ap_none, 8</column>
                     <column name="n_samples">ap_vld, 6</column>
-                    <column name="n_samples_out">ap_none, 32</column>
-                    <column name="start_write_i">ap_none, 1</column>
-                    <column name="start_write_o">ap_none, 1</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
                 <table>
                     <keys size="3">Interface, Type, Ports</keys>
                     <column name="ap_clk">clock, ap_clk</column>
-                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
                     <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
                 </table>
             </item>
@@ -21362,64 +21692,61 @@
                     <column name="buffer_in_9">in, unsigned int*</column>
                     <column name="buffer_in_10">in, unsigned int*</column>
                     <column name="buffer_in_11">in, unsigned int*</column>
-                    <column name="buffer_out">out, unsigned int*</column>
+                    <column name="buffer_out">inout, unsigned int*</column>
                     <column name="n_samples">in, ap_uint&lt;6&gt;</column>
                     <column name="n_periods">in, unsigned char</column>
                     <column name="n_samples_out">out, unsigned int*</column>
-                    <column name="start_write">inout, pointer</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
                 <table isCollapsed="1">
-                    <keys size="4">Argument, HW Name, HW Type, HW Usage</keys>
-                    <column name="buffer_in_0">buffer_in_0_address0, port, offset</column>
-                    <column name="buffer_in_0">buffer_in_0_ce0, port, </column>
-                    <column name="buffer_in_0">buffer_in_0_q0, port, </column>
-                    <column name="buffer_in_1">buffer_in_1_address0, port, offset</column>
-                    <column name="buffer_in_1">buffer_in_1_ce0, port, </column>
-                    <column name="buffer_in_1">buffer_in_1_q0, port, </column>
-                    <column name="buffer_in_2">buffer_in_2_address0, port, offset</column>
-                    <column name="buffer_in_2">buffer_in_2_ce0, port, </column>
-                    <column name="buffer_in_2">buffer_in_2_q0, port, </column>
-                    <column name="buffer_in_3">buffer_in_3_address0, port, offset</column>
-                    <column name="buffer_in_3">buffer_in_3_ce0, port, </column>
-                    <column name="buffer_in_3">buffer_in_3_q0, port, </column>
-                    <column name="buffer_in_4">buffer_in_4_address0, port, offset</column>
-                    <column name="buffer_in_4">buffer_in_4_ce0, port, </column>
-                    <column name="buffer_in_4">buffer_in_4_q0, port, </column>
-                    <column name="buffer_in_5">buffer_in_5_address0, port, offset</column>
-                    <column name="buffer_in_5">buffer_in_5_ce0, port, </column>
-                    <column name="buffer_in_5">buffer_in_5_q0, port, </column>
-                    <column name="buffer_in_6">buffer_in_6_address0, port, offset</column>
-                    <column name="buffer_in_6">buffer_in_6_ce0, port, </column>
-                    <column name="buffer_in_6">buffer_in_6_q0, port, </column>
-                    <column name="buffer_in_7">buffer_in_7_address0, port, offset</column>
-                    <column name="buffer_in_7">buffer_in_7_ce0, port, </column>
-                    <column name="buffer_in_7">buffer_in_7_q0, port, </column>
-                    <column name="buffer_in_8">buffer_in_8_address0, port, offset</column>
-                    <column name="buffer_in_8">buffer_in_8_ce0, port, </column>
-                    <column name="buffer_in_8">buffer_in_8_q0, port, </column>
-                    <column name="buffer_in_9">buffer_in_9_address0, port, offset</column>
-                    <column name="buffer_in_9">buffer_in_9_ce0, port, </column>
-                    <column name="buffer_in_9">buffer_in_9_q0, port, </column>
-                    <column name="buffer_in_10">buffer_in_10_address0, port, offset</column>
-                    <column name="buffer_in_10">buffer_in_10_ce0, port, </column>
-                    <column name="buffer_in_10">buffer_in_10_q0, port, </column>
-                    <column name="buffer_in_11">buffer_in_11_address0, port, offset</column>
-                    <column name="buffer_in_11">buffer_in_11_ce0, port, </column>
-                    <column name="buffer_in_11">buffer_in_11_q0, port, </column>
-                    <column name="buffer_out">buffer_out_address0, port, offset</column>
-                    <column name="buffer_out">buffer_out_ce0, port, </column>
-                    <column name="buffer_out">buffer_out_we0, port, </column>
-                    <column name="buffer_out">buffer_out_d0, port, </column>
-                    <column name="n_samples">n_samples, port, </column>
-                    <column name="n_samples">n_samples_ap_vld, port, </column>
-                    <column name="n_periods">n_periods, port, </column>
-                    <column name="n_samples_out">n_samples_out, port, </column>
-                    <column name="n_samples_out">n_samples_out_ap_vld, port, </column>
-                    <column name="start_write">start_write_i, port, </column>
-                    <column name="start_write">start_write_o, port, </column>
-                    <column name="start_write">start_write_o_ap_vld, port, </column>
+                    <keys size="5">Argument, HW Name, HW Type, HW Usage, HW Info</keys>
+                    <column name="buffer_in_0">buffer_in_0_address0, port, offset, </column>
+                    <column name="buffer_in_0">buffer_in_0_ce0, port, , </column>
+                    <column name="buffer_in_0">buffer_in_0_q0, port, , </column>
+                    <column name="buffer_in_1">buffer_in_1_address0, port, offset, </column>
+                    <column name="buffer_in_1">buffer_in_1_ce0, port, , </column>
+                    <column name="buffer_in_1">buffer_in_1_q0, port, , </column>
+                    <column name="buffer_in_2">buffer_in_2_address0, port, offset, </column>
+                    <column name="buffer_in_2">buffer_in_2_ce0, port, , </column>
+                    <column name="buffer_in_2">buffer_in_2_q0, port, , </column>
+                    <column name="buffer_in_3">buffer_in_3_address0, port, offset, </column>
+                    <column name="buffer_in_3">buffer_in_3_ce0, port, , </column>
+                    <column name="buffer_in_3">buffer_in_3_q0, port, , </column>
+                    <column name="buffer_in_4">buffer_in_4_address0, port, offset, </column>
+                    <column name="buffer_in_4">buffer_in_4_ce0, port, , </column>
+                    <column name="buffer_in_4">buffer_in_4_q0, port, , </column>
+                    <column name="buffer_in_5">buffer_in_5_address0, port, offset, </column>
+                    <column name="buffer_in_5">buffer_in_5_ce0, port, , </column>
+                    <column name="buffer_in_5">buffer_in_5_q0, port, , </column>
+                    <column name="buffer_in_6">buffer_in_6_address0, port, offset, </column>
+                    <column name="buffer_in_6">buffer_in_6_ce0, port, , </column>
+                    <column name="buffer_in_6">buffer_in_6_q0, port, , </column>
+                    <column name="buffer_in_7">buffer_in_7_address0, port, offset, </column>
+                    <column name="buffer_in_7">buffer_in_7_ce0, port, , </column>
+                    <column name="buffer_in_7">buffer_in_7_q0, port, , </column>
+                    <column name="buffer_in_8">buffer_in_8_address0, port, offset, </column>
+                    <column name="buffer_in_8">buffer_in_8_ce0, port, , </column>
+                    <column name="buffer_in_8">buffer_in_8_q0, port, , </column>
+                    <column name="buffer_in_9">buffer_in_9_address0, port, offset, </column>
+                    <column name="buffer_in_9">buffer_in_9_ce0, port, , </column>
+                    <column name="buffer_in_9">buffer_in_9_q0, port, , </column>
+                    <column name="buffer_in_10">buffer_in_10_address0, port, offset, </column>
+                    <column name="buffer_in_10">buffer_in_10_ce0, port, , </column>
+                    <column name="buffer_in_10">buffer_in_10_q0, port, , </column>
+                    <column name="buffer_in_11">buffer_in_11_address0, port, offset, </column>
+                    <column name="buffer_in_11">buffer_in_11_ce0, port, , </column>
+                    <column name="buffer_in_11">buffer_in_11_q0, port, , </column>
+                    <column name="buffer_out">buffer_out_address0, port, offset, </column>
+                    <column name="buffer_out">buffer_out_ce0, port, , </column>
+                    <column name="buffer_out">buffer_out_we0, port, , </column>
+                    <column name="buffer_out">buffer_out_d0, port, , </column>
+                    <column name="buffer_out">buffer_out_q0, port, , </column>
+                    <column name="n_samples">n_samples, port, , </column>
+                    <column name="n_samples">n_samples_ap_vld, port, , </column>
+                    <column name="n_periods">s_axi_axi n_periods, register, , offset=0x10 range=32</column>
+                    <column name="n_samples_out">s_axi_axi n_samples_out, register, , offset=0x18 range=32</column>
+                    <column name="n_samples_out">s_axi_axi n_samples_out_ctrl, register, , offset=0x1c range=32</column>
                 </table>
             </item>
         </section>

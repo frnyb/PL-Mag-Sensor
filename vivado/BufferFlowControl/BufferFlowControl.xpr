@@ -245,11 +245,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="BufferControlSimConst_inst_0.bd" FileRelPathName="ip/BufferControlSimConst_inst_0_buffer_flow_control_0_0/BufferControlSimConst_inst_0_buffer_flow_control_0_0.xci">
-          <Proxy FileSetName="BufferControlSimConst_inst_0_buffer_flow_control_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BufferControlSimConst_inst_0.bd" FileRelPathName="ip/BufferControlSimConst_inst_0_buffer_flow_control_1_0/BufferControlSimConst_inst_0_buffer_flow_control_1_0.xci">
           <Proxy FileSetName="BufferControlSimConst_inst_0_buffer_flow_control_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BufferControlSimConst_inst_0.bd" FileRelPathName="ip/BufferControlSimConst_inst_0_buffer_flow_control_0_0/BufferControlSimConst_inst_0_buffer_flow_control_0_0.xci">
+          <Proxy FileSetName="BufferControlSimConst_inst_0_buffer_flow_control_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <Config>

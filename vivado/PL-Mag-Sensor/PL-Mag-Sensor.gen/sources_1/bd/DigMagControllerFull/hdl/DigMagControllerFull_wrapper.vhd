@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Tue Apr 19 15:50:52 2022
+--Date        : Sat Apr 30 16:10:01 2022
 --Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target DigMagControllerFull_wrapper.bd
 --Design      : DigMagControllerFull_wrapper
@@ -43,7 +43,7 @@ entity DigMagControllerFull_wrapper is
     bfr_rd_dout_9 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    data_out : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    data_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
     irq_out : out STD_LOGIC;
     mag0_scl_i : in STD_LOGIC;
     mag0_scl_o : out STD_LOGIC;
@@ -106,7 +106,7 @@ architecture STRUCTURE of DigMagControllerFull_wrapper is
     bfr_rd_dout_9 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    data_out : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    data_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
     irq_out : out STD_LOGIC;
     rst_n : in STD_LOGIC;
     mag2_scl_t : out STD_LOGIC;
@@ -168,7 +168,7 @@ DigMagControllerFull_i: component DigMagControllerFull
       bfr_rd_dout_9(31 downto 0) => bfr_rd_dout_9(31 downto 0),
       ch_out(3 downto 0) => ch_out(3 downto 0),
       clk => clk,
-      data_out(11 downto 0) => data_out(11 downto 0),
+      data_out(15 downto 0) => data_out(15 downto 0),
       irq_out => irq_out,
       mag0_scl_i => mag0_scl_i,
       mag0_scl_o => mag0_scl_o,
