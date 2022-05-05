@@ -855,16 +855,16 @@
             <ModuleName>SlidingWindowMagSampleFetcher</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_loadSlidingWindow_fu_604</InstName>
+                    <InstName>grp_loadSlidingWindow_fu_606</InstName>
                     <ModuleName>loadSlidingWindow</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>604</ID>
+                    <ID>606</ID>
                 </Instance>
                 <Instance>
-                    <InstName>grp_writeToRAM_fu_1122</InstName>
+                    <InstName>grp_writeToRAM_fu_1124</InstName>
                     <ModuleName>writeToRAM</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>1122</ID>
+                    <ID>1124</ID>
                 </Instance>
             </InstancesList>
         </TopModule>
@@ -21202,7 +21202,7 @@
                 <hwRef type="port" interface="buffer_in_11_q0" name="buffer_in_11_q0" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="buffer_out" index="12" direction="inout" srcType="unsigned int*" srcSize="32">
+        <Arg ArgName="buffer_out" index="12" direction="inout" srcType="*" srcSize="32">
             <hwRefs>
                 <hwRef type="port" interface="buffer_out_address0" name="buffer_out_address0" usage="address" direction="out"/>
                 <hwRef type="port" interface="buffer_out_ce0" name="buffer_out_ce0" usage="control" direction="inout"/>
@@ -21692,7 +21692,7 @@
                     <column name="buffer_in_9">in, unsigned int*</column>
                     <column name="buffer_in_10">in, unsigned int*</column>
                     <column name="buffer_in_11">in, unsigned int*</column>
-                    <column name="buffer_out">inout, unsigned int*</column>
+                    <column name="buffer_out">inout, pointer</column>
                     <column name="n_samples">in, ap_uint&lt;6&gt;</column>
                     <column name="n_periods">in, unsigned char</column>
                     <column name="n_samples_out">out, unsigned int*</column>

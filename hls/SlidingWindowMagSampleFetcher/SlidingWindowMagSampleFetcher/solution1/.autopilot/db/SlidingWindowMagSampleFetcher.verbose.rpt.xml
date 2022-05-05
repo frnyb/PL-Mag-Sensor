@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'SlidingWindowMagSampleFetcher'" level="0">
-<item name = "Date">Sat Apr 30 14:36:39 2022
+<item name = "Date">Sun May  1 13:11:30 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">SlidingWindowMagSampleFetcher</item>
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_loadSlidingWindow_fu_604">loadSlidingWindow, 91, 333, 0.910 us, 3.330 us, 91, 333, none</column>
-<column name="grp_writeToRAM_fu_1122">writeToRAM, 8, 13665, 80.000 ns, 0.137 ms, 8, 13665, none</column>
+<column name="grp_loadSlidingWindow_fu_606">loadSlidingWindow, 91, 333, 0.910 us, 3.330 us, 91, 333, none</column>
+<column name="grp_writeToRAM_fu_1124">writeToRAM, 8, 13665, 80.000 ns, 0.137 ms, 8, 13665, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -64,8 +64,8 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="axi_s_axi_U">axi_s_axi, 0, 0, 82, 120, 0</column>
-<column name="grp_loadSlidingWindow_fu_604">loadSlidingWindow, 2, 0, 4819, 6206, 0</column>
-<column name="grp_writeToRAM_fu_1122">writeToRAM, 0, 0, 1093, 4006, 0</column>
+<column name="grp_loadSlidingWindow_fu_606">loadSlidingWindow, 2, 0, 4819, 6206, 0</column>
+<column name="grp_writeToRAM_fu_1124">writeToRAM, 0, 0, 1093, 4006, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -323,7 +323,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="start_write_fu_1616_p2">icmp, 0, 0, 20, 32, 1</column>
+<column name="icmp_ln67_fu_1618_p2">icmp, 0, 0, 20, 32, 1</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
@@ -1066,14 +1066,14 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">5, 0, 5, 0</column>
-<column name="grp_loadSlidingWindow_fu_604_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_writeToRAM_fu_1122_ap_start_reg">1, 0, 1, 0</column>
-<column name="n_periods_read_reg_1622">8, 0, 8, 0</column>
+<column name="grp_loadSlidingWindow_fu_606_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_writeToRAM_fu_1124_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln67_reg_1639">1, 0, 1, 0</column>
+<column name="n_periods_read_reg_1624">8, 0, 8, 0</column>
 <column name="n_samples_ap_vld_preg">1, 0, 1, 0</column>
 <column name="n_samples_preg">6, 0, 6, 0</column>
 <column name="sliding_window_back_ptr_s">6, 0, 6, 0</column>
 <column name="sliding_window_front_ptr_s">6, 0, 6, 0</column>
-<column name="start_write_reg_1637">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

@@ -31,7 +31,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM_1P</coreName>
-						<coreId>1</coreId>
+						<coreId>97</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -64,7 +64,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3415064256</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -97,7 +97,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>100</coreId>
+						<coreId>129</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -130,7 +130,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>129</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -163,7 +163,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>100</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -196,7 +196,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>161</coreId>
+						<coreId>177</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -229,7 +229,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>225</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -262,7 +262,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>225</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -295,7 +295,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>4</coreId>
+						<coreId>225</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -328,7 +328,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>257</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -361,7 +361,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>362</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -394,7 +394,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>337</coreId>
+						<coreId>225</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -427,7 +427,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>337</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -493,7 +493,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>433</coreId>
+						<coreId>4</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -526,7 +526,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>481</coreId>
+						<coreId>529</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -559,7 +559,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>129</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -592,7 +592,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2518</coreId>
+						<coreId>561</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -625,7 +625,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420627600</coreId>
+						<coreId>3552230368</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -658,7 +658,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -691,7 +691,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1089</coreId>
+						<coreId>433</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -724,7 +724,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -757,7 +757,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>68</coreId>
+						<coreId>3554460592</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -790,7 +790,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1089</coreId>
+						<coreId>4093641136</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -823,7 +823,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420753552</coreId>
+						<coreId>3554308016</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -856,7 +856,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>100</coreId>
+						<coreId>3554804896</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -922,7 +922,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3551028704</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -955,7 +955,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>3554794784</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -988,7 +988,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1345</coreId>
+						<coreId>343597384</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1021,7 +1021,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>1073</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1054,7 +1054,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1087,7 +1087,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>1121</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1120,7 +1120,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3555028512</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1153,7 +1153,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>1297</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1186,7 +1186,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1219,7 +1219,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1252,7 +1252,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>441</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1285,7 +1285,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1318,7 +1318,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1351,7 +1351,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1384,7 +1384,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3418275888</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1417,7 +1417,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>441</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1450,7 +1450,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1563439405</coreId>
+						<coreId>161</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1483,7 +1483,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>961</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1516,7 +1516,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1549,7 +1549,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1582,7 +1582,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>825307437</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1615,7 +1615,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>913</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1648,7 +1648,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>385</coreId>
+						<coreId>3555005984</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1681,7 +1681,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1714,7 +1714,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3555005488</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1747,7 +1747,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -1780,7 +1780,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1813,7 +1813,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1846,7 +1846,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1879,7 +1879,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1912,7 +1912,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1945,7 +1945,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -1978,7 +1978,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1563439405</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2011,7 +2011,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1441</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2044,7 +2044,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420742176</coreId>
+						<coreId>3554787296</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2077,7 +2077,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>3554467312</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2110,7 +2110,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2609</coreId>
+						<coreId>3554783648</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2143,7 +2143,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420775088</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2176,7 +2176,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2209,7 +2209,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420738320</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2242,7 +2242,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>7</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2275,7 +2275,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2721</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2308,7 +2308,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420737584</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2374,7 +2374,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420739232</coreId>
+						<coreId>3552261584</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2407,7 +2407,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>30</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2440,7 +2440,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420442512</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2473,7 +2473,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420640016</coreId>
+						<coreId>3554978864</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2506,7 +2506,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420139056</coreId>
+						<coreId>1425</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2539,7 +2539,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420643520</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -2572,7 +2572,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420255184</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2605,7 +2605,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420625824</coreId>
+						<coreId>2481</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2638,7 +2638,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3137</coreId>
+						<coreId>3555016752</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2671,7 +2671,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>7</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2704,7 +2704,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417937656</coreId>
+						<coreId>3555018208</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2737,7 +2737,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>33</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2770,7 +2770,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417937352</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2803,7 +2803,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2869,7 +2869,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420743952</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2935,7 +2935,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420745616</coreId>
+						<coreId>257</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -2968,7 +2968,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>970</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3001,7 +3001,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420746256</coreId>
+						<coreId>958</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3034,7 +3034,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3067,7 +3067,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>970</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3100,7 +3100,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>958</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3199,7 +3199,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3232,7 +3232,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3265,7 +3265,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3298,7 +3298,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420772256</coreId>
+						<coreId>3554979760</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3331,7 +3331,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>7</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3364,7 +3364,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554972768</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3397,7 +3397,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3430,7 +3430,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>3554975504</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3463,7 +3463,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3</coreId>
+						<coreId>1</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3496,7 +3496,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554976896</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3529,7 +3529,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3595,7 +3595,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1</coreId>
+						<coreId>3</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3628,7 +3628,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3661,7 +3661,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417378864</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3694,7 +3694,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3727,7 +3727,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417379952</coreId>
+						<coreId>68</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -3760,7 +3760,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3793,7 +3793,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417380848</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3826,7 +3826,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1521</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3859,7 +3859,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417382256</coreId>
+						<coreId>3554793712</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3892,7 +3892,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>343597384</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3925,7 +3925,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>721</coreId>
+						<coreId>3554805280</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3958,7 +3958,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>3554494192</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3991,7 +3991,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>697</coreId>
+						<coreId>3554808416</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4024,7 +4024,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>3554563968</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4057,7 +4057,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>673</coreId>
+						<coreId>3554804896</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4090,7 +4090,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4123,7 +4123,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>3554797280</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4156,7 +4156,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4189,7 +4189,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>4210135320</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4222,7 +4222,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1125</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4255,7 +4255,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>2147483647</coreId>
+						<coreId>3554994601</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4288,7 +4288,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3421029312</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4321,7 +4321,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3421029864</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4387,7 +4387,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3421030040</coreId>
+						<coreId>3555000216</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4420,7 +4420,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417987312</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4453,7 +4453,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420642704</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4486,7 +4486,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417976944</coreId>
+						<coreId>28271</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4519,7 +4519,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420638928</coreId>
+						<coreId>3555001432</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4552,7 +4552,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420639232</coreId>
+						<coreId>7137</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4585,7 +4585,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420623184</coreId>
+						<coreId>3555019920</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4618,7 +4618,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>343597384</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4651,7 +4651,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420632768</coreId>
+						<coreId>3555021008</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4684,7 +4684,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>343597384</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4717,7 +4717,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420631168</coreId>
+						<coreId>3555021968</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4750,7 +4750,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420145776</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4783,7 +4783,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420630912</coreId>
+						<coreId>3555022992</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4816,7 +4816,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4849,7 +4849,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420642496</coreId>
+						<coreId>3555024336</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4882,7 +4882,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4915,7 +4915,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423664</coreId>
+						<coreId>3555025232</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4948,7 +4948,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>609</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -4981,7 +4981,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420638224</coreId>
+						<coreId>3554986384</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5014,7 +5014,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>721</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5047,7 +5047,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5080,7 +5080,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1919950882</coreId>
+						<coreId>697</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5113,7 +5113,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5146,7 +5146,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1852403305</coreId>
+						<coreId>673</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5179,7 +5179,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>49</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5212,7 +5212,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1701669236</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5245,7 +5245,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5278,7 +5278,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>776097056</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5311,7 +5311,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>1125</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5344,7 +5344,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1853187616</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5377,7 +5377,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>5793</coreId>
+						<coreId>1101</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5410,7 +5410,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1702043749</coreId>
+						<coreId>2147483647</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5443,7 +5443,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>1077</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5476,7 +5476,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>574451311</coreId>
+						<coreId>553</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5509,7 +5509,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3617</coreId>
+						<coreId>3555269144</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5542,7 +5542,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420786032</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5575,7 +5575,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>3555266448</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5608,7 +5608,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420787344</coreId>
+						<coreId>3555270056</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5641,7 +5641,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1441</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5674,7 +5674,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420788192</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5707,7 +5707,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -5740,7 +5740,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420144816</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5773,7 +5773,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420621888</coreId>
+						<coreId>3554795568</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5806,7 +5806,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554796208</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5839,7 +5839,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420774240</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5872,7 +5872,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554799984</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5905,7 +5905,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3421093728</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5938,7 +5938,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554651376</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -5971,7 +5971,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420636752</coreId>
+						<coreId>3552206112</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6004,7 +6004,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554792368</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6037,7 +6037,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1073</coreId>
+						<coreId>3552206816</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6070,7 +6070,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417962960</coreId>
+						<coreId>3554793200</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6103,7 +6103,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3421092528</coreId>
+						<coreId>343597384</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6136,7 +6136,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417963792</coreId>
+						<coreId>3554797232</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6169,7 +6169,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3959424720</coreId>
+						<coreId>343597384</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6202,7 +6202,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554793248</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6235,7 +6235,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3421096176</coreId>
+						<coreId>3554273712</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6268,7 +6268,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420253264</coreId>
+						<coreId>3554803808</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6301,7 +6301,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420773536</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6334,7 +6334,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6367,7 +6367,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420648528</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6400,7 +6400,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>779119988</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6433,7 +6433,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420649488</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6466,7 +6466,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3417966288</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6499,7 +6499,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420650640</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6532,7 +6532,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420956224</coreId>
+						<coreId>825045808</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6565,7 +6565,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>5617</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6598,7 +6598,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420955616</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6631,7 +6631,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6664,7 +6664,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420958400</coreId>
+						<coreId>576533040</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6697,7 +6697,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3441</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6730,7 +6730,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420959792</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6763,7 +6763,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6796,7 +6796,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420960704</coreId>
+						<coreId>3554968208</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6829,7 +6829,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>1265</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6862,7 +6862,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420961968</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6895,7 +6895,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6928,7 +6928,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420962880</coreId>
+						<coreId>2177</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6961,7 +6961,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>68</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6994,7 +6994,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7027,7 +7027,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>132</coreId>
+						<coreId>68</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7060,7 +7060,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420964928</coreId>
+						<coreId>68</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7093,7 +7093,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7126,7 +7126,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554971920</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7159,7 +7159,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>31</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7192,7 +7192,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420967104</coreId>
+						<coreId>3554280144</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7225,7 +7225,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3555339504</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7258,7 +7258,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>343597384</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7291,7 +7291,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3555034960</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7324,7 +7324,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420969280</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7357,7 +7357,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554802672</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7390,7 +7390,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>6</coreId>
+						<coreId>3554813360</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7423,7 +7423,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420970600</coreId>
+						<coreId>3554813616</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7489,7 +7489,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554815016</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7522,7 +7522,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>1</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7555,7 +7555,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420974040</coreId>
+						<coreId>3554815792</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7621,7 +7621,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554817192</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7687,7 +7687,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554815184</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -7720,7 +7720,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554818537</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7753,7 +7753,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420976344</coreId>
+						<coreId>3554819368</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7819,7 +7819,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554822320</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7852,7 +7852,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554820585</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7885,7 +7885,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420978520</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7951,7 +7951,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554822928</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7984,7 +7984,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>62</coreId>
+						<coreId>3554823497</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -8017,7 +8017,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>3420980696</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -8083,7 +8083,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName>RAM</coreName>
-						<coreId>0</coreId>
+						<coreId>3554824496</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -8159,7 +8159,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3403573040</coreId>
+						<coreId>3536807168</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -8199,7 +8199,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>113</coreId>
+						<coreId>3536809680</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -8225,7 +8225,7 @@
 						<name>sample_period_samples_0_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8241,7 +8241,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8278,7 +8278,7 @@
 						<name>sample_period_samples_1_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8294,7 +8294,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8331,7 +8331,7 @@
 						<name>sample_period_samples_2_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8347,7 +8347,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8384,7 +8384,7 @@
 						<name>sample_period_samples_3_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8400,7 +8400,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8437,7 +8437,7 @@
 						<name>sample_period_samples_4_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8453,7 +8453,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8490,7 +8490,7 @@
 						<name>sample_period_samples_5_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8506,7 +8506,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8543,7 +8543,7 @@
 						<name>sample_period_samples_6_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8559,7 +8559,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8596,7 +8596,7 @@
 						<name>sample_period_samples_7_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8612,7 +8612,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8649,7 +8649,7 @@
 						<name>sample_period_samples_8_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8665,7 +8665,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8702,7 +8702,7 @@
 						<name>sample_period_samples_9_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8718,7 +8718,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8755,7 +8755,7 @@
 						<name>sample_period_samples_10_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8771,7 +8771,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8808,7 +8808,7 @@
 						<name>sample_period_samples_11_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8824,7 +8824,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8861,7 +8861,7 @@
 						<name>sample_period_samples_0_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8877,7 +8877,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8914,7 +8914,7 @@
 						<name>sample_period_samples_1_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8930,7 +8930,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -8967,7 +8967,7 @@
 						<name>sample_period_samples_2_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -8983,7 +8983,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9020,7 +9020,7 @@
 						<name>sample_period_samples_3_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9036,7 +9036,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9073,7 +9073,7 @@
 						<name>sample_period_samples_4_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9089,7 +9089,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9126,7 +9126,7 @@
 						<name>sample_period_samples_5_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9142,7 +9142,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9179,7 +9179,7 @@
 						<name>sample_period_samples_6_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9195,7 +9195,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9232,7 +9232,7 @@
 						<name>sample_period_samples_7_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9248,7 +9248,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9285,7 +9285,7 @@
 						<name>sample_period_samples_8_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9301,7 +9301,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9338,7 +9338,7 @@
 						<name>sample_period_samples_9_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9354,7 +9354,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9391,7 +9391,7 @@
 						<name>sample_period_samples_10_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9407,7 +9407,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9444,7 +9444,7 @@
 						<name>sample_period_samples_11_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9460,7 +9460,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -9497,7 +9497,7 @@
 						<name>sample_sample_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9513,7 +9513,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -9550,7 +9550,7 @@
 						<name>sample_timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -9566,7 +9566,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -9616,7 +9616,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421004496</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -9657,7 +9657,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>31</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -9698,7 +9698,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421005368</coreId>
+						<coreId>3554738384</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -9739,7 +9739,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421006408</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -9780,7 +9780,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -9862,7 +9862,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554741056</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -9903,7 +9903,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>62</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -9944,7 +9944,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>9</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -9985,7 +9985,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>5185</coreId>
+						<coreId>1265</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10026,7 +10026,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554743120</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10067,7 +10067,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421010984</coreId>
+						<coreId>2481</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10108,7 +10108,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10149,7 +10149,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1265</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10190,7 +10190,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>657</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10272,7 +10272,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421014840</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10313,7 +10313,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10354,7 +10354,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10395,7 +10395,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10436,7 +10436,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420652952</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10477,7 +10477,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420653288</coreId>
+						<coreId>3555180936</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10518,7 +10518,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420654040</coreId>
+						<coreId>3555179632</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10559,7 +10559,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420618723</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10600,7 +10600,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10641,7 +10641,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420655976</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10682,7 +10682,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10723,7 +10723,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420620045</coreId>
+						<coreId>6</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10764,7 +10764,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>8</coreId>
+						<coreId>3555185456</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10805,7 +10805,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420620595</coreId>
+						<coreId>3555185416</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10846,7 +10846,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420620955</coreId>
+						<coreId>68241</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10887,7 +10887,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420621213</coreId>
+						<coreId>3555187680</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10928,7 +10928,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420621501</coreId>
+						<coreId>3555188136</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11010,7 +11010,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420622286</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11051,7 +11051,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420622684</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11092,7 +11092,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420663432</coreId>
+						<coreId>3555183696</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11133,7 +11133,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>10</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11174,7 +11174,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3</coreId>
+						<coreId>9</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11215,7 +11215,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11256,7 +11256,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420665968</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11297,7 +11297,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420624695</coreId>
+						<coreId>3555194616</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11338,7 +11338,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420667208</coreId>
+						<coreId>3555195352</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11379,7 +11379,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420667544</coreId>
+						<coreId>3555195832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11420,7 +11420,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420668296</coreId>
+						<coreId>3555196440</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11461,7 +11461,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420625721</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11502,7 +11502,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11543,7 +11543,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420669704</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11584,7 +11584,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420670832</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11625,7 +11625,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420671320</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11666,7 +11666,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420672016</coreId>
+						<coreId>3555200352</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11707,7 +11707,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420672504</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11748,7 +11748,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4182046840</coreId>
+						<coreId>3555201600</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11789,7 +11789,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420673688</coreId>
+						<coreId>129</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11830,7 +11830,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>36</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11871,7 +11871,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420633872</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11912,7 +11912,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>16</coreId>
+						<coreId>51585</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11953,7 +11953,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -11994,7 +11994,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12035,7 +12035,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420676848</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12076,7 +12076,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12117,7 +12117,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3419860880</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12158,7 +12158,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12199,7 +12199,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12240,7 +12240,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>241</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12281,7 +12281,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>16</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12322,7 +12322,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12363,7 +12363,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3419883392</coreId>
+						<coreId>3555209840</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12404,7 +12404,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12445,7 +12445,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12486,7 +12486,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>513</coreId>
+						<coreId>3555214152</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12527,7 +12527,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>16</coreId>
+						<coreId>3555214760</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12568,7 +12568,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3555216456</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12609,7 +12609,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12650,7 +12650,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420688536</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12691,7 +12691,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>241</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12732,7 +12732,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420689720</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12773,7 +12773,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12814,7 +12814,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12855,7 +12855,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12896,7 +12896,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>36</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12937,7 +12937,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420633872</coreId>
+						<coreId>3555221008</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -12978,7 +12978,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>16</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13019,7 +13019,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>96</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13060,7 +13060,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13101,7 +13101,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13142,7 +13142,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420695704</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13183,7 +13183,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13224,7 +13224,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3555223272</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13265,7 +13265,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>36</coreId>
+						<coreId>3555225433</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13306,7 +13306,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555225737</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13347,7 +13347,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13388,7 +13388,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13429,7 +13429,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420699960</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13470,7 +13470,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420633872</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13511,7 +13511,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3419995968</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13552,7 +13552,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13593,7 +13593,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13634,7 +13634,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>36</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13675,7 +13675,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420633872</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13716,7 +13716,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420705680</coreId>
+						<coreId>3555233945</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13757,7 +13757,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>513</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13798,7 +13798,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420707400</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13839,7 +13839,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13880,7 +13880,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13921,7 +13921,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13962,7 +13962,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>36</coreId>
+						<coreId>1852795251</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14003,7 +14003,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420710864</coreId>
+						<coreId>3555238520</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14044,7 +14044,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3555239000</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14085,7 +14085,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3555239608</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14126,7 +14126,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420711664</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14167,7 +14167,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3555243424</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14208,7 +14208,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420044272</coreId>
+						<coreId>3555241744</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14249,7 +14249,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3555242400</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14372,7 +14372,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555244312</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14536,7 +14536,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>16908804</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14577,7 +14577,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420718824</coreId>
+						<coreId>3555246473</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14618,7 +14618,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14659,7 +14659,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>7121</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14782,7 +14782,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555249536</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14823,7 +14823,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420724873</coreId>
+						<coreId>3555249800</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14864,7 +14864,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3872138656</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14905,7 +14905,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>31</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14946,7 +14946,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420724160</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -14987,7 +14987,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420724768</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15028,7 +15028,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420725504</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15069,7 +15069,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420725984</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15110,7 +15110,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>36</coreId>
+						<coreId>825045808</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15151,7 +15151,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420727456</coreId>
+						<coreId>3554779943</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15192,7 +15192,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3554780251</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15233,7 +15233,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15274,7 +15274,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554830056</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15315,7 +15315,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554830768</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15356,7 +15356,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15397,7 +15397,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15438,7 +15438,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420723824</coreId>
+						<coreId>4210063480</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15479,7 +15479,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420731744</coreId>
+						<coreId>3554782468</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15520,7 +15520,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420734528</coreId>
+						<coreId>3554783018</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15561,7 +15561,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15602,7 +15602,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3554783545</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15643,7 +15643,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554783890</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15684,7 +15684,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>3554784117</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15725,7 +15725,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420478064</coreId>
+						<coreId>3554784383</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15766,7 +15766,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>51</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15807,7 +15807,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554784980</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15848,7 +15848,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>8</coreId>
+						<coreId>3554838544</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15889,7 +15889,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>33201</coreId>
+						<coreId>3554785416</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15930,7 +15930,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1769239916</coreId>
+						<coreId>3554839728</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -15971,7 +15971,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>574454132</coreId>
+						<coreId>3554785868</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16012,7 +16012,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1030185332</coreId>
+						<coreId>14</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16053,7 +16053,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1920151152</coreId>
+						<coreId>3554841192</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16094,7 +16094,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554786626</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16135,7 +16135,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554786831</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16176,7 +16176,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16217,7 +16217,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554843880</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16258,7 +16258,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420477904</coreId>
+						<coreId>3554844592</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16463,7 +16463,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>513</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16504,7 +16504,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>16</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16545,7 +16545,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16586,7 +16586,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16627,7 +16627,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420493552</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16709,7 +16709,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420494745</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16750,7 +16750,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1886216531</coreId>
+						<coreId>3551885680</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16791,7 +16791,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>17665</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16832,7 +16832,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420496208</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16873,7 +16873,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420497880</coreId>
+						<coreId>3554855880</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16914,7 +16914,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>241</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16955,7 +16955,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>16</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -16996,7 +16996,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17037,7 +17037,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17078,7 +17078,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2455</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17119,7 +17119,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554859512</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17160,7 +17160,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554855704</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17201,7 +17201,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>6</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17242,7 +17242,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>36</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17283,7 +17283,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420503168</coreId>
+						<coreId>3554862976</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17324,7 +17324,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420501776</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17365,7 +17365,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420503952</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17406,7 +17406,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420504992</coreId>
+						<coreId>3554863768</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17447,7 +17447,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>539111474</coreId>
+						<coreId>3554787584</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17488,7 +17488,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1634693747</coreId>
+						<coreId>3552124192</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17529,7 +17529,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17570,7 +17570,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17611,7 +17611,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554866224</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17652,7 +17652,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>513</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17693,7 +17693,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1634693747</coreId>
+						<coreId>3554867944</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17734,7 +17734,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1852795252</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17775,7 +17775,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17816,7 +17816,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420510320</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17857,7 +17857,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>36</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17898,7 +17898,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420512128</coreId>
+						<coreId>3554787584</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17939,7 +17939,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420512784</coreId>
+						<coreId>3552002304</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -17980,7 +17980,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1096764754</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18021,7 +18021,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2177</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18062,7 +18062,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>513</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18103,7 +18103,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>961</coreId>
+						<coreId>16</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18144,7 +18144,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18185,7 +18185,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18226,7 +18226,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>2590218019</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18267,7 +18267,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554876376</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18308,7 +18308,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420510144</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18349,7 +18349,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420516888</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18390,7 +18390,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420519001</coreId>
+						<coreId>36</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18431,7 +18431,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420519305</coreId>
+						<coreId>3554883104</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18472,7 +18472,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18513,7 +18513,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420624336</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18554,7 +18554,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420521672</coreId>
+						<coreId>3554880632</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18595,7 +18595,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420522152</coreId>
+						<coreId>3554787584</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18636,7 +18636,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420522760</coreId>
+						<coreId>3552043040</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18677,7 +18677,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>541938255</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18718,7 +18718,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18759,7 +18759,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>513</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18800,7 +18800,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>16</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18841,7 +18841,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420526176</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18882,7 +18882,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18923,7 +18923,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -18964,7 +18964,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420531872</coreId>
+						<coreId>3554890824</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19005,7 +19005,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420532352</coreId>
+						<coreId>657</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19046,7 +19046,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420532960</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19087,7 +19087,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19128,7 +19128,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19169,7 +19169,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19210,7 +19210,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>3554894112</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19251,7 +19251,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>3554746793</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19292,7 +19292,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3554895961</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19333,7 +19333,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554895961</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19374,7 +19374,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>241</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19415,7 +19415,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554897464</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19456,7 +19456,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554899160</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19497,7 +19497,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19538,7 +19538,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19579,7 +19579,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3</coreId>
+						<coreId>3554784816</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19661,7 +19661,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>3554897632</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19702,7 +19702,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3554901049</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19743,7 +19743,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>961</coreId>
+						<coreId>3554901880</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19784,7 +19784,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554902048</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19825,7 +19825,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>3554902857</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19866,7 +19866,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19907,7 +19907,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19948,7 +19948,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>3554904288</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -19989,7 +19989,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420546528</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20030,7 +20030,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20071,7 +20071,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>8</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20112,7 +20112,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>961</coreId>
+						<coreId>3554906968</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20153,7 +20153,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20194,7 +20194,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20235,7 +20235,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420551632</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20276,7 +20276,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20317,7 +20317,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420633872</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20358,7 +20358,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20399,7 +20399,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420552200</coreId>
+						<coreId>3554911120</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -20454,7 +20454,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554911704</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -20507,7 +20507,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420557312</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -20560,7 +20560,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3554917296</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -20613,7 +20613,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420558896</coreId>
+						<coreId>3554915401</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -20636,10 +20636,10 @@
 					<Obj>
 						<type>0</type>
 						<id>549</id>
-						<name>idx_write_ln153</name>
+						<name>idx_write_ln151</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<lineNumber>151</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -20655,7 +20655,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>153</second>
+										<second>151</second>
 									</item>
 								</second>
 							</item>
@@ -20666,7 +20666,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1265</coreId>
+						<coreId>3554919184</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -20690,10 +20690,10 @@
 					<Obj>
 						<type>0</type>
 						<id>550</id>
-						<name>br_ln153</name>
+						<name>br_ln151</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<lineNumber>151</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -20709,7 +20709,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>153</second>
+										<second>151</second>
 									</item>
 								</second>
 							</item>
@@ -20720,7 +20720,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -20759,7 +20759,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -20788,7 +20788,7 @@
 						<name>idx_1</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -20804,7 +20804,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -20815,7 +20815,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420563024</coreId>
+						<coreId>961</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -20842,7 +20842,7 @@
 						<name>i</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<lineNumber>151</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -20858,7 +20858,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>153</second>
+										<second>151</second>
 									</item>
 								</second>
 							</item>
@@ -20893,10 +20893,10 @@
 					<Obj>
 						<type>0</type>
 						<id>555</id>
-						<name>icmp_ln153</name>
+						<name>icmp_ln151</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<lineNumber>151</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -20912,7 +20912,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>153</second>
+										<second>151</second>
 									</item>
 								</second>
 							</item>
@@ -20923,7 +20923,7 @@
 						<opType>icmp</opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -20947,10 +20947,10 @@
 					<Obj>
 						<type>0</type>
 						<id>556</id>
-						<name>br_ln153</name>
+						<name>br_ln151</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<lineNumber>151</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -20966,7 +20966,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>153</second>
+										<second>151</second>
 									</item>
 								</second>
 							</item>
@@ -20977,7 +20977,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420566880</coreId>
+						<coreId>3</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -21086,7 +21086,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420570008</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -21139,7 +21139,7 @@
 						<opType>icmp</opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420571296</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -21248,7 +21248,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -21274,7 +21274,7 @@
 						<name>sliding_window_buffer_count_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21290,7 +21290,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21301,7 +21301,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>3554931272</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -21329,7 +21329,7 @@
 						<name>sample_period_count_s</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21345,7 +21345,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21382,7 +21382,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21398,7 +21398,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21409,7 +21409,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3554934160</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -21437,7 +21437,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21453,7 +21453,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21490,7 +21490,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21506,7 +21506,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21517,7 +21517,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>657</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -21545,7 +21545,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21561,7 +21561,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21598,7 +21598,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21614,7 +21614,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21625,7 +21625,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420580793</coreId>
+						<coreId>3554939104</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -21653,7 +21653,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21669,7 +21669,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21706,7 +21706,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21722,7 +21722,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21733,7 +21733,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420582905</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -21761,7 +21761,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21777,7 +21777,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21814,7 +21814,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21830,7 +21830,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21841,7 +21841,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420585881</coreId>
+						<coreId>3555037888</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -21869,7 +21869,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21885,7 +21885,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21922,7 +21922,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21938,7 +21938,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -21949,7 +21949,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>31</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -21977,7 +21977,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -21993,7 +21993,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22030,7 +22030,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22046,7 +22046,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22057,7 +22057,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -22085,7 +22085,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22101,7 +22101,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22138,7 +22138,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22154,7 +22154,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22165,7 +22165,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>3555044416</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -22193,7 +22193,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22209,7 +22209,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22246,7 +22246,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22262,7 +22262,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22273,7 +22273,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555046656</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -22301,7 +22301,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22317,7 +22317,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22354,7 +22354,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22370,7 +22370,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22381,7 +22381,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1599296852</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -22409,7 +22409,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22425,7 +22425,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22462,7 +22462,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22478,7 +22478,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22517,7 +22517,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22533,7 +22533,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22570,7 +22570,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22586,7 +22586,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22625,7 +22625,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_9_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22641,7 +22641,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22678,7 +22678,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22694,7 +22694,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22733,7 +22733,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22749,7 +22749,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22786,7 +22786,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22802,7 +22802,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22813,7 +22813,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>62</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -22841,7 +22841,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22857,7 +22857,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22894,7 +22894,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22910,7 +22910,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -22921,7 +22921,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420816736</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -22949,7 +22949,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -22965,7 +22965,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23002,7 +23002,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23018,7 +23018,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23029,7 +23029,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420811472</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -23057,7 +23057,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23073,7 +23073,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23110,7 +23110,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23126,7 +23126,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23137,7 +23137,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -23165,7 +23165,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23181,7 +23181,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23218,7 +23218,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23234,7 +23234,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23245,7 +23245,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1599296852</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -23273,7 +23273,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23289,7 +23289,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23326,7 +23326,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23342,7 +23342,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23353,7 +23353,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -23381,7 +23381,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23397,7 +23397,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23434,7 +23434,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23450,7 +23450,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23461,7 +23461,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -23489,7 +23489,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23505,7 +23505,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23542,7 +23542,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23558,7 +23558,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23597,7 +23597,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23613,7 +23613,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23650,7 +23650,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23666,7 +23666,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23677,7 +23677,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>3555076024</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -23705,7 +23705,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23721,7 +23721,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23758,7 +23758,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23774,7 +23774,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23785,7 +23785,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -23813,7 +23813,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23829,7 +23829,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23866,7 +23866,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23882,7 +23882,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23893,7 +23893,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555081896</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -23921,7 +23921,7 @@
 						<name>sliding_window_buffer_samples_sample_V_9_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23937,7 +23937,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -23974,7 +23974,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -23990,7 +23990,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24001,7 +24001,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420841049</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -24029,7 +24029,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24045,7 +24045,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24082,7 +24082,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24098,7 +24098,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24109,7 +24109,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1265</coreId>
+						<coreId>3555087184</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -24137,7 +24137,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24153,7 +24153,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24190,7 +24190,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24206,7 +24206,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24245,7 +24245,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24261,7 +24261,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24298,7 +24298,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24314,7 +24314,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24325,7 +24325,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420845696</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -24353,7 +24353,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24369,7 +24369,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24406,7 +24406,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24422,7 +24422,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24433,7 +24433,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -24461,7 +24461,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24477,7 +24477,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24514,7 +24514,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24530,7 +24530,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24541,7 +24541,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420853920</coreId>
+						<coreId>3555096376</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -24569,7 +24569,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24585,7 +24585,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24622,7 +24622,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24638,7 +24638,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24649,7 +24649,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -24677,7 +24677,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24693,7 +24693,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24730,7 +24730,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24746,7 +24746,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24757,7 +24757,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -24785,7 +24785,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24801,7 +24801,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24838,7 +24838,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24854,7 +24854,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24893,7 +24893,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24909,7 +24909,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24946,7 +24946,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -24962,7 +24962,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -24973,7 +24973,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420863768</coreId>
+						<coreId>3555106857</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25001,7 +25001,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25017,7 +25017,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25054,7 +25054,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25070,7 +25070,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25081,7 +25081,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25109,7 +25109,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25125,7 +25125,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25162,7 +25162,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25178,7 +25178,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25189,7 +25189,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420871120</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25217,7 +25217,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_8_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25233,7 +25233,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25270,7 +25270,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25286,7 +25286,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25297,7 +25297,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555115856</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25325,7 +25325,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25341,7 +25341,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25378,7 +25378,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25394,7 +25394,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25433,7 +25433,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25449,7 +25449,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25486,7 +25486,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25502,7 +25502,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25513,7 +25513,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420880472</coreId>
+						<coreId>3555113184</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25541,7 +25541,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25557,7 +25557,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25594,7 +25594,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25610,7 +25610,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25621,7 +25621,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>68</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25649,7 +25649,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25665,7 +25665,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25702,7 +25702,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25718,7 +25718,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25729,7 +25729,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420885712</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25757,7 +25757,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25773,7 +25773,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25810,7 +25810,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25826,7 +25826,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25837,7 +25837,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555130448</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25865,7 +25865,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25881,7 +25881,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25918,7 +25918,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25934,7 +25934,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -25945,7 +25945,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>657</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -25973,7 +25973,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -25989,7 +25989,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26026,7 +26026,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26042,7 +26042,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26053,7 +26053,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555135696</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26081,7 +26081,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26097,7 +26097,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26134,7 +26134,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26150,7 +26150,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26161,7 +26161,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420894944</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26189,7 +26189,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26205,7 +26205,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26242,7 +26242,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26258,7 +26258,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26269,7 +26269,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26297,7 +26297,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26313,7 +26313,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26350,7 +26350,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26366,7 +26366,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26377,7 +26377,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420900192</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26405,7 +26405,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26421,7 +26421,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26458,7 +26458,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26474,7 +26474,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26485,7 +26485,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4093640832</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26513,7 +26513,7 @@
 						<name>sliding_window_buffer_samples_sample_V_8_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26529,7 +26529,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26566,7 +26566,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26582,7 +26582,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26593,7 +26593,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26621,7 +26621,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26637,7 +26637,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26674,7 +26674,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26690,7 +26690,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26701,7 +26701,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>15</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26729,7 +26729,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26745,7 +26745,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26782,7 +26782,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26798,7 +26798,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26809,7 +26809,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420910040</coreId>
+						<coreId>3555152649</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26837,7 +26837,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26853,7 +26853,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26890,7 +26890,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26906,7 +26906,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26917,7 +26917,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3959423104</coreId>
+						<coreId>961</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -26945,7 +26945,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -26961,7 +26961,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -26998,7 +26998,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27014,7 +27014,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27025,7 +27025,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420915280</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -27053,7 +27053,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27069,7 +27069,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27106,7 +27106,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27122,7 +27122,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27133,7 +27133,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3555160016</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -27161,7 +27161,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27177,7 +27177,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27214,7 +27214,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27230,7 +27230,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27241,7 +27241,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420920344</coreId>
+						<coreId>825045808</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -27269,7 +27269,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27285,7 +27285,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27322,7 +27322,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27338,7 +27338,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27349,7 +27349,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>3555165264</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -27377,7 +27377,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27393,7 +27393,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27430,7 +27430,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27446,7 +27446,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27485,7 +27485,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27501,7 +27501,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27538,7 +27538,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27554,7 +27554,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27565,7 +27565,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>9</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -27593,7 +27593,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27609,7 +27609,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27646,7 +27646,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27662,7 +27662,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27673,7 +27673,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -27701,7 +27701,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27717,7 +27717,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27754,7 +27754,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27770,7 +27770,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27781,7 +27781,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1</coreId>
+						<coreId>3555176200</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -27809,7 +27809,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_7_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27825,7 +27825,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27862,7 +27862,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27878,7 +27878,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27889,7 +27889,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420955113</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -27917,7 +27917,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27933,7 +27933,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27970,7 +27970,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -27986,7 +27986,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -27997,7 +27997,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2177</coreId>
+						<coreId>1869</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28025,7 +28025,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28041,7 +28041,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28078,7 +28078,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28094,7 +28094,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28105,7 +28105,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2141</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28133,7 +28133,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28149,7 +28149,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28186,7 +28186,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28202,7 +28202,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28213,7 +28213,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2413</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28241,7 +28241,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28257,7 +28257,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28294,7 +28294,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28310,7 +28310,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28321,7 +28321,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2685</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28349,7 +28349,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28365,7 +28365,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28402,7 +28402,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28418,7 +28418,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28429,7 +28429,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2957</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28457,7 +28457,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28473,7 +28473,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28510,7 +28510,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28526,7 +28526,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28537,7 +28537,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>165</coreId>
+						<coreId>3229</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28565,7 +28565,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28581,7 +28581,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28618,7 +28618,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28634,7 +28634,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28645,7 +28645,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>555</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28673,7 +28673,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28689,7 +28689,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28726,7 +28726,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28742,7 +28742,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28753,7 +28753,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>279</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28781,7 +28781,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28797,7 +28797,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28834,7 +28834,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28850,7 +28850,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28861,7 +28861,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>551</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -28889,7 +28889,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28905,7 +28905,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28942,7 +28942,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -28958,7 +28958,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -28997,7 +28997,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29013,7 +29013,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29050,7 +29050,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29066,7 +29066,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29105,7 +29105,7 @@
 						<name>sliding_window_buffer_samples_sample_V_7_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29121,7 +29121,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29158,7 +29158,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29174,7 +29174,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29185,7 +29185,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>338</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -29213,7 +29213,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29229,7 +29229,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29266,7 +29266,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29282,7 +29282,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29293,7 +29293,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>540</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -29321,7 +29321,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29337,7 +29337,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29374,7 +29374,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29390,7 +29390,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29401,7 +29401,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>9339</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -29429,7 +29429,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29445,7 +29445,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29482,7 +29482,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29498,7 +29498,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29537,7 +29537,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29553,7 +29553,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29590,7 +29590,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29606,7 +29606,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29645,7 +29645,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29661,7 +29661,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29698,7 +29698,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29714,7 +29714,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29753,7 +29753,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29769,7 +29769,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29806,7 +29806,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29822,7 +29822,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29861,7 +29861,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29877,7 +29877,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29914,7 +29914,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29930,7 +29930,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -29941,7 +29941,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>465</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -29969,7 +29969,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -29985,7 +29985,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30022,7 +30022,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30038,7 +30038,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30049,7 +30049,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -30077,7 +30077,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30093,7 +30093,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30130,7 +30130,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30146,7 +30146,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30157,7 +30157,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2</coreId>
+						<coreId>142</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -30185,7 +30185,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30201,7 +30201,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30238,7 +30238,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30254,7 +30254,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30265,7 +30265,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2</coreId>
+						<coreId>62</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -30293,7 +30293,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30309,7 +30309,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30346,7 +30346,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30362,7 +30362,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30373,7 +30373,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1</coreId>
+						<coreId>320</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -30401,7 +30401,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_6_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30417,7 +30417,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30454,7 +30454,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30470,7 +30470,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30481,7 +30481,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>591</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -30509,7 +30509,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30525,7 +30525,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30562,7 +30562,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30578,7 +30578,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30589,7 +30589,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3404340768</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -30617,7 +30617,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30633,7 +30633,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30670,7 +30670,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30686,7 +30686,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30697,7 +30697,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1012</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -30725,7 +30725,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30741,7 +30741,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30778,7 +30778,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30794,7 +30794,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30805,7 +30805,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -30833,7 +30833,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30849,7 +30849,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30886,7 +30886,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30902,7 +30902,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30941,7 +30941,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -30957,7 +30957,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -30994,7 +30994,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31010,7 +31010,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31049,7 +31049,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31065,7 +31065,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31102,7 +31102,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31118,7 +31118,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31129,7 +31129,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -31157,7 +31157,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31173,7 +31173,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31210,7 +31210,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31226,7 +31226,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31265,7 +31265,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31281,7 +31281,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31318,7 +31318,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31334,7 +31334,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31373,7 +31373,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31389,7 +31389,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31426,7 +31426,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31442,7 +31442,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31453,7 +31453,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>946</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -31481,7 +31481,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31497,7 +31497,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31534,7 +31534,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31550,7 +31550,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31589,7 +31589,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31605,7 +31605,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31642,7 +31642,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31658,7 +31658,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31669,7 +31669,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>293</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -31697,7 +31697,7 @@
 						<name>sliding_window_buffer_samples_sample_V_6_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31713,7 +31713,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31750,7 +31750,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31766,7 +31766,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31777,7 +31777,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>371</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -31805,7 +31805,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31821,7 +31821,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31858,7 +31858,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31874,7 +31874,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31885,7 +31885,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>244</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -31913,7 +31913,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31929,7 +31929,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31966,7 +31966,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -31982,7 +31982,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -31993,7 +31993,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1474</coreId>
+						<coreId>1170</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -32021,7 +32021,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32037,7 +32037,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32074,7 +32074,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32090,7 +32090,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32129,7 +32129,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32145,7 +32145,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32182,7 +32182,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32198,7 +32198,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32209,7 +32209,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -32237,7 +32237,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32253,7 +32253,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32290,7 +32290,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32306,7 +32306,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32317,7 +32317,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420654928</coreId>
+						<coreId>3555182992</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -32345,7 +32345,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32361,7 +32361,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32398,7 +32398,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32414,7 +32414,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32425,7 +32425,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420853376</coreId>
+						<coreId>3555086416</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -32453,7 +32453,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32469,7 +32469,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32506,7 +32506,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32522,7 +32522,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32533,7 +32533,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -32561,7 +32561,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32577,7 +32577,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32614,7 +32614,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32630,7 +32630,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32641,7 +32641,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -32669,7 +32669,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32685,7 +32685,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32722,7 +32722,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32738,7 +32738,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32749,7 +32749,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2489</coreId>
+						<coreId>1</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -32777,7 +32777,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32793,7 +32793,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32830,7 +32830,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32846,7 +32846,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32857,7 +32857,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -32885,7 +32885,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32901,7 +32901,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32938,7 +32938,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -32954,7 +32954,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -32993,7 +32993,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_5_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33009,7 +33009,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33046,7 +33046,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33062,7 +33062,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33073,7 +33073,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>622</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -33101,7 +33101,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33117,7 +33117,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33154,7 +33154,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33170,7 +33170,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33181,7 +33181,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3549760592</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -33209,7 +33209,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33225,7 +33225,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33262,7 +33262,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33278,7 +33278,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33289,7 +33289,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -33317,7 +33317,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33333,7 +33333,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33370,7 +33370,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33386,7 +33386,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33397,7 +33397,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3549485744</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -33425,7 +33425,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33441,7 +33441,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33478,7 +33478,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33494,7 +33494,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33533,7 +33533,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33549,7 +33549,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33586,7 +33586,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33602,7 +33602,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33641,7 +33641,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33657,7 +33657,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33694,7 +33694,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33710,7 +33710,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33749,7 +33749,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33765,7 +33765,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33802,7 +33802,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33818,7 +33818,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33857,7 +33857,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33873,7 +33873,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33910,7 +33910,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33926,7 +33926,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -33937,7 +33937,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -33965,7 +33965,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -33981,7 +33981,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34018,7 +34018,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34034,7 +34034,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34045,7 +34045,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>512</coreId>
+						<coreId>1004</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -34073,7 +34073,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34089,7 +34089,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34126,7 +34126,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34142,7 +34142,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34181,7 +34181,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34197,7 +34197,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34234,7 +34234,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34250,7 +34250,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34289,7 +34289,7 @@
 						<name>sliding_window_buffer_samples_sample_V_5_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34305,7 +34305,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34342,7 +34342,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34358,7 +34358,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34369,7 +34369,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1061</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -34397,7 +34397,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34413,7 +34413,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34450,7 +34450,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34466,7 +34466,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34477,7 +34477,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -34505,7 +34505,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34521,7 +34521,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34558,7 +34558,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34574,7 +34574,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34585,7 +34585,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1516</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -34613,7 +34613,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34629,7 +34629,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34666,7 +34666,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34682,7 +34682,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34693,7 +34693,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1587</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -34721,7 +34721,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34737,7 +34737,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34774,7 +34774,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34790,7 +34790,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34801,7 +34801,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -34829,7 +34829,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34845,7 +34845,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34882,7 +34882,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34898,7 +34898,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34909,7 +34909,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -34937,7 +34937,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -34953,7 +34953,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -34990,7 +34990,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35006,7 +35006,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35017,7 +35017,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3849</coreId>
+						<coreId>2049</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -35045,7 +35045,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35061,7 +35061,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35098,7 +35098,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35114,7 +35114,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35153,7 +35153,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35169,7 +35169,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35206,7 +35206,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35222,7 +35222,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35261,7 +35261,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35277,7 +35277,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35314,7 +35314,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35330,7 +35330,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35341,7 +35341,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4952</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -35369,7 +35369,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35385,7 +35385,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35422,7 +35422,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35438,7 +35438,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35449,7 +35449,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -35477,7 +35477,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35493,7 +35493,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35530,7 +35530,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35546,7 +35546,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35557,7 +35557,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>330993</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -35585,7 +35585,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_4_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35601,7 +35601,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35638,7 +35638,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35654,7 +35654,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35693,7 +35693,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35709,7 +35709,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35746,7 +35746,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35762,7 +35762,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35801,7 +35801,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35817,7 +35817,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35854,7 +35854,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35870,7 +35870,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35909,7 +35909,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35925,7 +35925,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -35962,7 +35962,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -35978,7 +35978,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36017,7 +36017,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36033,7 +36033,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36070,7 +36070,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36086,7 +36086,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36125,7 +36125,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36141,7 +36141,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36178,7 +36178,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36194,7 +36194,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36233,7 +36233,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36249,7 +36249,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36286,7 +36286,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36302,7 +36302,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36341,7 +36341,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36357,7 +36357,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36394,7 +36394,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36410,7 +36410,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36449,7 +36449,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36465,7 +36465,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36502,7 +36502,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36518,7 +36518,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36557,7 +36557,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36573,7 +36573,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36610,7 +36610,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36626,7 +36626,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36637,7 +36637,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>304</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -36665,7 +36665,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36681,7 +36681,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36718,7 +36718,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36734,7 +36734,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36773,7 +36773,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36789,7 +36789,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36826,7 +36826,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36842,7 +36842,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36853,7 +36853,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -36881,7 +36881,7 @@
 						<name>sliding_window_buffer_samples_sample_V_4_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36897,7 +36897,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36934,7 +36934,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -36950,7 +36950,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -36961,7 +36961,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>875</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -36989,7 +36989,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37005,7 +37005,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37042,7 +37042,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37058,7 +37058,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37097,7 +37097,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37113,7 +37113,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37150,7 +37150,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37166,7 +37166,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37205,7 +37205,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37221,7 +37221,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37258,7 +37258,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37274,7 +37274,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37285,7 +37285,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1387</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -37313,7 +37313,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37329,7 +37329,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37366,7 +37366,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37382,7 +37382,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37421,7 +37421,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37437,7 +37437,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37474,7 +37474,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37490,7 +37490,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37529,7 +37529,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37545,7 +37545,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37582,7 +37582,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37598,7 +37598,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37609,7 +37609,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2889</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -37637,7 +37637,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37653,7 +37653,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37690,7 +37690,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37706,7 +37706,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37745,7 +37745,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37761,7 +37761,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37798,7 +37798,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37814,7 +37814,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37825,7 +37825,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3843</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -37853,7 +37853,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37869,7 +37869,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37906,7 +37906,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37922,7 +37922,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -37961,7 +37961,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -37977,7 +37977,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38014,7 +38014,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38030,7 +38030,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38069,7 +38069,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38085,7 +38085,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38122,7 +38122,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38138,7 +38138,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38149,7 +38149,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4946</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -38177,7 +38177,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_3_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38193,7 +38193,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38230,7 +38230,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38246,7 +38246,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38285,7 +38285,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38301,7 +38301,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38338,7 +38338,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38354,7 +38354,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38393,7 +38393,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38409,7 +38409,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38446,7 +38446,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38462,7 +38462,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38501,7 +38501,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38517,7 +38517,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38554,7 +38554,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38570,7 +38570,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38609,7 +38609,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38625,7 +38625,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38662,7 +38662,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38678,7 +38678,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38717,7 +38717,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38733,7 +38733,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38770,7 +38770,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38786,7 +38786,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38825,7 +38825,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38841,7 +38841,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38878,7 +38878,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38894,7 +38894,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38933,7 +38933,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -38949,7 +38949,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -38986,7 +38986,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39002,7 +39002,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39041,7 +39041,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39057,7 +39057,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39094,7 +39094,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39110,7 +39110,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39149,7 +39149,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39165,7 +39165,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39202,7 +39202,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39218,7 +39218,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39257,7 +39257,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39273,7 +39273,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39310,7 +39310,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39326,7 +39326,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39365,7 +39365,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39381,7 +39381,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39418,7 +39418,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39434,7 +39434,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39473,7 +39473,7 @@
 						<name>sliding_window_buffer_samples_sample_V_3_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39489,7 +39489,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39526,7 +39526,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39542,7 +39542,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39581,7 +39581,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39597,7 +39597,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39634,7 +39634,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39650,7 +39650,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39689,7 +39689,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39705,7 +39705,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39742,7 +39742,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39758,7 +39758,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39797,7 +39797,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39813,7 +39813,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39850,7 +39850,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39866,7 +39866,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39905,7 +39905,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39921,7 +39921,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -39958,7 +39958,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -39974,7 +39974,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40013,7 +40013,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40029,7 +40029,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40066,7 +40066,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40082,7 +40082,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40121,7 +40121,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40137,7 +40137,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40174,7 +40174,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40190,7 +40190,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40229,7 +40229,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40245,7 +40245,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40282,7 +40282,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40298,7 +40298,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40337,7 +40337,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40353,7 +40353,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40390,7 +40390,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40406,7 +40406,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40417,7 +40417,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2879</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -40445,7 +40445,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40461,7 +40461,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40498,7 +40498,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40514,7 +40514,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40525,7 +40525,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1991</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -40553,7 +40553,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40569,7 +40569,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40606,7 +40606,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40622,7 +40622,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40633,7 +40633,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>851</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -40661,7 +40661,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40677,7 +40677,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40714,7 +40714,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40730,7 +40730,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40769,7 +40769,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_2_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40785,7 +40785,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40822,7 +40822,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40838,7 +40838,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40877,7 +40877,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40893,7 +40893,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40930,7 +40930,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -40946,7 +40946,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -40985,7 +40985,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41001,7 +41001,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41038,7 +41038,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41054,7 +41054,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41093,7 +41093,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41109,7 +41109,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41146,7 +41146,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41162,7 +41162,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41201,7 +41201,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41217,7 +41217,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41254,7 +41254,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41270,7 +41270,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41309,7 +41309,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41325,7 +41325,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41362,7 +41362,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41378,7 +41378,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41417,7 +41417,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41433,7 +41433,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41470,7 +41470,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41486,7 +41486,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41525,7 +41525,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41541,7 +41541,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41578,7 +41578,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41594,7 +41594,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41633,7 +41633,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41649,7 +41649,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41686,7 +41686,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41702,7 +41702,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41741,7 +41741,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41757,7 +41757,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41794,7 +41794,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41810,7 +41810,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41849,7 +41849,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41865,7 +41865,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41902,7 +41902,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41918,7 +41918,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -41957,7 +41957,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -41973,7 +41973,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42010,7 +42010,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42026,7 +42026,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42065,7 +42065,7 @@
 						<name>sliding_window_buffer_samples_sample_V_2_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42081,7 +42081,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42118,7 +42118,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42134,7 +42134,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42173,7 +42173,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42189,7 +42189,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42226,7 +42226,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42242,7 +42242,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42281,7 +42281,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42297,7 +42297,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42334,7 +42334,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42350,7 +42350,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42361,7 +42361,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2792</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -42389,7 +42389,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42405,7 +42405,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42442,7 +42442,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42458,7 +42458,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42469,7 +42469,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1578</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -42497,7 +42497,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42513,7 +42513,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42550,7 +42550,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42566,7 +42566,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42577,7 +42577,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>389</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -42605,7 +42605,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42621,7 +42621,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42658,7 +42658,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42674,7 +42674,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42685,7 +42685,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -42713,7 +42713,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42729,7 +42729,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42766,7 +42766,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42782,7 +42782,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42793,7 +42793,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -42821,7 +42821,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42837,7 +42837,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42874,7 +42874,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42890,7 +42890,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42901,7 +42901,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2285</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -42929,7 +42929,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42945,7 +42945,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -42982,7 +42982,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -42998,7 +42998,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43009,7 +43009,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -43037,7 +43037,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43053,7 +43053,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43090,7 +43090,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43106,7 +43106,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43145,7 +43145,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43161,7 +43161,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43198,7 +43198,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43214,7 +43214,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43225,7 +43225,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2915</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -43253,7 +43253,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43269,7 +43269,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43306,7 +43306,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43322,7 +43322,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43333,7 +43333,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>2262</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -43361,7 +43361,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_1_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43377,7 +43377,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43414,7 +43414,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43430,7 +43430,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43441,7 +43441,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>923</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -43469,7 +43469,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43485,7 +43485,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43522,7 +43522,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43538,7 +43538,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43577,7 +43577,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43593,7 +43593,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43630,7 +43630,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43646,7 +43646,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43657,7 +43657,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>379</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -43685,7 +43685,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43701,7 +43701,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43738,7 +43738,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43754,7 +43754,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43765,7 +43765,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1011</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -43793,7 +43793,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43809,7 +43809,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43846,7 +43846,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43862,7 +43862,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43873,7 +43873,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4228300630</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -43901,7 +43901,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43917,7 +43917,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43954,7 +43954,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -43970,7 +43970,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -43981,7 +43981,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2275</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44009,7 +44009,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44025,7 +44025,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44062,7 +44062,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44078,7 +44078,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44089,7 +44089,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2907</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44117,7 +44117,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44133,7 +44133,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44170,7 +44170,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44186,7 +44186,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44197,7 +44197,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>8093</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44225,7 +44225,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44241,7 +44241,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44278,7 +44278,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44294,7 +44294,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44305,7 +44305,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4169</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44333,7 +44333,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44349,7 +44349,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44386,7 +44386,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44402,7 +44402,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44413,7 +44413,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4228300630</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44441,7 +44441,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44457,7 +44457,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44494,7 +44494,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44510,7 +44510,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44521,7 +44521,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>5435</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44549,7 +44549,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44565,7 +44565,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44602,7 +44602,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44618,7 +44618,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44629,7 +44629,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>6067</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44657,7 +44657,7 @@
 						<name>sliding_window_buffer_samples_sample_V_1_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44673,7 +44673,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44710,7 +44710,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44726,7 +44726,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44737,7 +44737,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>6699</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44765,7 +44765,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44781,7 +44781,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44818,7 +44818,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44834,7 +44834,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44845,7 +44845,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7331</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44873,7 +44873,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44889,7 +44889,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44926,7 +44926,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44942,7 +44942,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -44953,7 +44953,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4228300630</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -44981,7 +44981,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -44997,7 +44997,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45034,7 +45034,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45050,7 +45050,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45061,7 +45061,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>8593</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45089,7 +45089,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45105,7 +45105,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45142,7 +45142,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45158,7 +45158,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45169,7 +45169,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>9223</coreId>
+						<coreId>2828</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45197,7 +45197,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45213,7 +45213,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45250,7 +45250,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45266,7 +45266,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45277,7 +45277,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>8166</coreId>
+						<coreId>1560</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45305,7 +45305,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45321,7 +45321,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45358,7 +45358,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45374,7 +45374,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45385,7 +45385,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4382</coreId>
+						<coreId>353</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45413,7 +45413,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45429,7 +45429,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45466,7 +45466,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45482,7 +45482,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45493,7 +45493,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>9854</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45521,7 +45521,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45537,7 +45537,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45574,7 +45574,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45590,7 +45590,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45601,7 +45601,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>11755</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45629,7 +45629,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45645,7 +45645,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45682,7 +45682,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45698,7 +45698,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45709,7 +45709,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>12387</coreId>
+						<coreId>2249</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45737,7 +45737,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45753,7 +45753,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45790,7 +45790,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45806,7 +45806,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45817,7 +45817,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>13019</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45845,7 +45845,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45861,7 +45861,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45898,7 +45898,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45914,7 +45914,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -45925,7 +45925,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>13651</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -45953,7 +45953,7 @@
 						<name>sliding_window_buffer_samples_timestamp_V_0_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -45969,7 +45969,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46006,7 +46006,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_11_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46022,7 +46022,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46033,7 +46033,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>14283</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46061,7 +46061,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_11_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46077,7 +46077,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46114,7 +46114,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_10_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46130,7 +46130,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46141,7 +46141,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2147483647</coreId>
+						<coreId>587</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46169,7 +46169,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_10_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46185,7 +46185,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46222,7 +46222,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_9_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46238,7 +46238,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46249,7 +46249,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>623</coreId>
+						<coreId>983</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46277,7 +46277,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_9_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46293,7 +46293,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46330,7 +46330,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_8_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46346,7 +46346,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46357,7 +46357,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1019</coreId>
+						<coreId>355</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46385,7 +46385,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_8_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46401,7 +46401,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46438,7 +46438,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_7_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46454,7 +46454,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46465,7 +46465,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>18691</coreId>
+						<coreId>2395</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46493,7 +46493,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_7_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46509,7 +46509,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46546,7 +46546,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_6_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46562,7 +46562,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46573,7 +46573,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>19267</coreId>
+						<coreId>3027</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46601,7 +46601,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_6_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46617,7 +46617,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46654,7 +46654,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_5_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46670,7 +46670,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46681,7 +46681,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>19899</coreId>
+						<coreId>8073</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46709,7 +46709,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_5_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46725,7 +46725,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46762,7 +46762,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_4_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46778,7 +46778,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46789,7 +46789,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>20531</coreId>
+						<coreId>4289</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46817,7 +46817,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_4_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46833,7 +46833,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46870,7 +46870,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_3_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46886,7 +46886,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46897,7 +46897,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>21163</coreId>
+						<coreId>4228300630</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -46925,7 +46925,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_3_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46941,7 +46941,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -46978,7 +46978,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_2_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -46994,7 +46994,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47005,7 +47005,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>21795</coreId>
+						<coreId>5555</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -47033,7 +47033,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_2_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47049,7 +47049,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47086,7 +47086,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_1_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47102,7 +47102,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47113,7 +47113,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>22427</coreId>
+						<coreId>6187</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -47141,7 +47141,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_1_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47157,7 +47157,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47194,7 +47194,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_0_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47210,7 +47210,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47221,7 +47221,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>23059</coreId>
+						<coreId>6819</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -47249,7 +47249,7 @@
 						<name>sliding_window_buffer_samples_sample_V_0_0_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47265,7 +47265,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47299,10 +47299,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1047</id>
-						<name>sample_period_samples_0_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47318,7 +47318,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47353,10 +47353,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1048</id>
-						<name>sample_period_samples_1_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47372,7 +47372,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47407,10 +47407,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1049</id>
-						<name>sample_period_samples_2_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47426,7 +47426,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47461,10 +47461,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1050</id>
-						<name>sample_period_samples_3_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47480,7 +47480,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47515,10 +47515,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1051</id>
-						<name>sample_period_samples_4_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47534,7 +47534,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47569,10 +47569,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1052</id>
-						<name>sample_period_samples_5_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47588,7 +47588,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47623,10 +47623,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1053</id>
-						<name>sample_period_samples_6_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47642,7 +47642,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47677,10 +47677,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1054</id>
-						<name>sample_period_samples_7_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47696,7 +47696,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47731,10 +47731,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1055</id>
-						<name>sample_period_samples_8_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47750,7 +47750,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47785,10 +47785,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1056</id>
-						<name>sample_period_samples_9_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47804,7 +47804,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47839,10 +47839,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1057</id>
-						<name>sample_period_samples_10_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47858,7 +47858,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47893,10 +47893,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1058</id>
-						<name>sample_period_samples_11_sample_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47912,7 +47912,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -47947,10 +47947,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1059</id>
-						<name>sample_period_samples_0_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -47966,7 +47966,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48001,10 +48001,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1060</id>
-						<name>sample_period_samples_1_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48020,7 +48020,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48055,10 +48055,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1061</id>
-						<name>sample_period_samples_2_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48074,7 +48074,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48109,10 +48109,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1062</id>
-						<name>sample_period_samples_3_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48128,7 +48128,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48163,10 +48163,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1063</id>
-						<name>sample_period_samples_4_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48182,7 +48182,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48217,10 +48217,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1064</id>
-						<name>sample_period_samples_5_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48236,7 +48236,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48271,10 +48271,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1065</id>
-						<name>sample_period_samples_6_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48290,7 +48290,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48325,10 +48325,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1066</id>
-						<name>sample_period_samples_7_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48344,7 +48344,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48379,10 +48379,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1067</id>
-						<name>sample_period_samples_8_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48398,7 +48398,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48433,10 +48433,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1068</id>
-						<name>sample_period_samples_9_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48452,7 +48452,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48487,10 +48487,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1069</id>
-						<name>sample_period_samples_10_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48506,7 +48506,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48541,10 +48541,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1070</id>
-						<name>sample_period_samples_11_timestamp_V_addr_1_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_1_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48560,7 +48560,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48595,10 +48595,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1071</id>
-						<name>sample_period_samples_0_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48614,7 +48614,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48649,10 +48649,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1072</id>
-						<name>sample_period_samples_1_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48668,7 +48668,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48703,10 +48703,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1073</id>
-						<name>sample_period_samples_2_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48722,7 +48722,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48757,10 +48757,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1074</id>
-						<name>sample_period_samples_3_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48776,7 +48776,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48811,10 +48811,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1075</id>
-						<name>sample_period_samples_4_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48830,7 +48830,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48865,10 +48865,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1076</id>
-						<name>sample_period_samples_5_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48884,7 +48884,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48919,10 +48919,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1077</id>
-						<name>sample_period_samples_6_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48938,7 +48938,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -48973,10 +48973,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1078</id>
-						<name>sample_period_samples_7_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -48992,7 +48992,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49027,10 +49027,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1079</id>
-						<name>sample_period_samples_8_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49046,7 +49046,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49081,10 +49081,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1080</id>
-						<name>sample_period_samples_9_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49100,7 +49100,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49135,10 +49135,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1081</id>
-						<name>sample_period_samples_10_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49154,7 +49154,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49189,10 +49189,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1082</id>
-						<name>sample_period_samples_11_sample_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49208,7 +49208,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49243,10 +49243,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1083</id>
-						<name>sample_period_samples_0_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49262,7 +49262,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49297,10 +49297,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1084</id>
-						<name>sample_period_samples_1_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49316,7 +49316,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49351,10 +49351,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1085</id>
-						<name>sample_period_samples_2_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49370,7 +49370,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49405,10 +49405,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1086</id>
-						<name>sample_period_samples_3_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49424,7 +49424,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49459,10 +49459,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1087</id>
-						<name>sample_period_samples_4_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49478,7 +49478,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49513,10 +49513,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1088</id>
-						<name>sample_period_samples_5_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49532,7 +49532,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49567,10 +49567,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1089</id>
-						<name>sample_period_samples_6_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49586,7 +49586,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49621,10 +49621,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1090</id>
-						<name>sample_period_samples_7_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49640,7 +49640,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49675,10 +49675,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1091</id>
-						<name>sample_period_samples_8_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49694,7 +49694,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49729,10 +49729,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1092</id>
-						<name>sample_period_samples_9_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49748,7 +49748,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49783,10 +49783,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1093</id>
-						<name>sample_period_samples_10_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49802,7 +49802,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49837,10 +49837,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1094</id>
-						<name>sample_period_samples_11_timestamp_V_addr_2_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_2_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49856,7 +49856,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49891,10 +49891,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1095</id>
-						<name>sample_period_samples_0_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49910,7 +49910,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49945,10 +49945,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1096</id>
-						<name>sample_period_samples_1_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -49964,7 +49964,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -49999,10 +49999,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1097</id>
-						<name>sample_period_samples_2_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50018,7 +50018,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50053,10 +50053,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1098</id>
-						<name>sample_period_samples_3_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50072,7 +50072,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50107,10 +50107,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1099</id>
-						<name>sample_period_samples_4_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50126,7 +50126,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50161,10 +50161,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1100</id>
-						<name>sample_period_samples_5_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50180,7 +50180,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50215,10 +50215,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1101</id>
-						<name>sample_period_samples_6_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50234,7 +50234,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50269,10 +50269,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1102</id>
-						<name>sample_period_samples_7_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50288,7 +50288,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50323,10 +50323,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1103</id>
-						<name>sample_period_samples_8_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50342,7 +50342,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50377,10 +50377,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1104</id>
-						<name>sample_period_samples_9_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50396,7 +50396,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50431,10 +50431,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1105</id>
-						<name>sample_period_samples_10_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50450,7 +50450,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50485,10 +50485,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1106</id>
-						<name>sample_period_samples_11_sample_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50504,7 +50504,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50539,10 +50539,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1107</id>
-						<name>sample_period_samples_0_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50558,7 +50558,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50593,10 +50593,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1108</id>
-						<name>sample_period_samples_1_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50612,7 +50612,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50647,10 +50647,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1109</id>
-						<name>sample_period_samples_2_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50666,7 +50666,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50701,10 +50701,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1110</id>
-						<name>sample_period_samples_3_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50720,7 +50720,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50755,10 +50755,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1111</id>
-						<name>sample_period_samples_4_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50774,7 +50774,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50809,10 +50809,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1112</id>
-						<name>sample_period_samples_5_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50828,7 +50828,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50863,10 +50863,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1113</id>
-						<name>sample_period_samples_6_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50882,7 +50882,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50917,10 +50917,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1114</id>
-						<name>sample_period_samples_7_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50936,7 +50936,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -50971,10 +50971,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1115</id>
-						<name>sample_period_samples_8_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -50990,7 +50990,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51025,10 +51025,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1116</id>
-						<name>sample_period_samples_9_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51044,7 +51044,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51079,10 +51079,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1117</id>
-						<name>sample_period_samples_10_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51098,7 +51098,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51133,10 +51133,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1118</id>
-						<name>sample_period_samples_11_timestamp_V_addr_3_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_3_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51152,7 +51152,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51187,10 +51187,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1119</id>
-						<name>sample_period_samples_0_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51206,7 +51206,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51241,10 +51241,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1120</id>
-						<name>sample_period_samples_1_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51260,7 +51260,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51295,10 +51295,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1121</id>
-						<name>sample_period_samples_2_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51314,7 +51314,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51349,10 +51349,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1122</id>
-						<name>sample_period_samples_3_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51368,7 +51368,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51403,10 +51403,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1123</id>
-						<name>sample_period_samples_4_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51422,7 +51422,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51457,10 +51457,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1124</id>
-						<name>sample_period_samples_5_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51476,7 +51476,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51511,10 +51511,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1125</id>
-						<name>sample_period_samples_6_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51530,7 +51530,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51565,10 +51565,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1126</id>
-						<name>sample_period_samples_7_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51584,7 +51584,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51619,10 +51619,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1127</id>
-						<name>sample_period_samples_8_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51638,7 +51638,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51673,10 +51673,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1128</id>
-						<name>sample_period_samples_9_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51692,7 +51692,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51727,10 +51727,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1129</id>
-						<name>sample_period_samples_10_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51746,7 +51746,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51781,10 +51781,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1130</id>
-						<name>sample_period_samples_11_sample_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51800,7 +51800,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51835,10 +51835,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1131</id>
-						<name>sample_period_samples_0_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51854,7 +51854,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51889,10 +51889,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1132</id>
-						<name>sample_period_samples_1_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51908,7 +51908,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51943,10 +51943,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1133</id>
-						<name>sample_period_samples_2_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -51962,7 +51962,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -51997,10 +51997,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1134</id>
-						<name>sample_period_samples_3_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52016,7 +52016,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52051,10 +52051,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1135</id>
-						<name>sample_period_samples_4_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52070,7 +52070,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52105,10 +52105,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1136</id>
-						<name>sample_period_samples_5_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52124,7 +52124,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52159,10 +52159,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1137</id>
-						<name>sample_period_samples_6_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52178,7 +52178,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52213,10 +52213,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1138</id>
-						<name>sample_period_samples_7_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52232,7 +52232,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52267,10 +52267,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1139</id>
-						<name>sample_period_samples_8_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52286,7 +52286,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52321,10 +52321,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1140</id>
-						<name>sample_period_samples_9_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52340,7 +52340,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52375,10 +52375,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1141</id>
-						<name>sample_period_samples_10_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52394,7 +52394,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52429,10 +52429,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1142</id>
-						<name>sample_period_samples_11_timestamp_V_addr_4_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_4_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52448,7 +52448,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52483,10 +52483,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1143</id>
-						<name>sample_period_samples_0_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52502,7 +52502,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52537,10 +52537,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1144</id>
-						<name>sample_period_samples_1_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52556,7 +52556,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52591,10 +52591,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1145</id>
-						<name>sample_period_samples_2_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52610,7 +52610,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52645,10 +52645,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1146</id>
-						<name>sample_period_samples_3_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52664,7 +52664,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52699,10 +52699,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1147</id>
-						<name>sample_period_samples_4_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52718,7 +52718,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52753,10 +52753,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1148</id>
-						<name>sample_period_samples_5_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52772,7 +52772,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52807,10 +52807,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1149</id>
-						<name>sample_period_samples_6_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52826,7 +52826,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52861,10 +52861,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1150</id>
-						<name>sample_period_samples_7_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52880,7 +52880,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52915,10 +52915,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1151</id>
-						<name>sample_period_samples_8_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52934,7 +52934,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -52969,10 +52969,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1152</id>
-						<name>sample_period_samples_9_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -52988,7 +52988,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53023,10 +53023,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1153</id>
-						<name>sample_period_samples_10_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53042,7 +53042,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53077,10 +53077,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1154</id>
-						<name>sample_period_samples_11_sample_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53096,7 +53096,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53131,10 +53131,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1155</id>
-						<name>sample_period_samples_0_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53150,7 +53150,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53185,10 +53185,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1156</id>
-						<name>sample_period_samples_1_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53204,7 +53204,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53239,10 +53239,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1157</id>
-						<name>sample_period_samples_2_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53258,7 +53258,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53293,10 +53293,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1158</id>
-						<name>sample_period_samples_3_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53312,7 +53312,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53347,10 +53347,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1159</id>
-						<name>sample_period_samples_4_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53366,7 +53366,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53401,10 +53401,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1160</id>
-						<name>sample_period_samples_5_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53420,7 +53420,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53455,10 +53455,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1161</id>
-						<name>sample_period_samples_6_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53474,7 +53474,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53509,10 +53509,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1162</id>
-						<name>sample_period_samples_7_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53528,7 +53528,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53563,10 +53563,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1163</id>
-						<name>sample_period_samples_8_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53582,7 +53582,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53617,10 +53617,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1164</id>
-						<name>sample_period_samples_9_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53636,7 +53636,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53671,10 +53671,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1165</id>
-						<name>sample_period_samples_10_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53690,7 +53690,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53725,10 +53725,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1166</id>
-						<name>sample_period_samples_11_timestamp_V_addr_5_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_5_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53744,7 +53744,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53779,10 +53779,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1167</id>
-						<name>sample_period_samples_0_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53798,7 +53798,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53833,10 +53833,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1168</id>
-						<name>sample_period_samples_1_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53852,7 +53852,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53887,10 +53887,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1169</id>
-						<name>sample_period_samples_2_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53906,7 +53906,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53941,10 +53941,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1170</id>
-						<name>sample_period_samples_3_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -53960,7 +53960,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -53995,10 +53995,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1171</id>
-						<name>sample_period_samples_4_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54014,7 +54014,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54049,10 +54049,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1172</id>
-						<name>sample_period_samples_5_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54068,7 +54068,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54103,10 +54103,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1173</id>
-						<name>sample_period_samples_6_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54122,7 +54122,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54157,10 +54157,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1174</id>
-						<name>sample_period_samples_7_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54176,7 +54176,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54211,10 +54211,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1175</id>
-						<name>sample_period_samples_8_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54230,7 +54230,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54265,10 +54265,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1176</id>
-						<name>sample_period_samples_9_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54284,7 +54284,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54319,10 +54319,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1177</id>
-						<name>sample_period_samples_10_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54338,7 +54338,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54373,10 +54373,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1178</id>
-						<name>sample_period_samples_11_sample_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54392,7 +54392,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54427,10 +54427,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1179</id>
-						<name>sample_period_samples_0_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54446,7 +54446,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54481,10 +54481,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1180</id>
-						<name>sample_period_samples_1_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54500,7 +54500,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54535,10 +54535,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1181</id>
-						<name>sample_period_samples_2_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54554,7 +54554,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54589,10 +54589,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1182</id>
-						<name>sample_period_samples_3_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54608,7 +54608,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54643,10 +54643,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1183</id>
-						<name>sample_period_samples_4_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54662,7 +54662,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54697,10 +54697,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1184</id>
-						<name>sample_period_samples_5_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54716,7 +54716,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54751,10 +54751,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1185</id>
-						<name>sample_period_samples_6_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54770,7 +54770,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54805,10 +54805,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1186</id>
-						<name>sample_period_samples_7_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54824,7 +54824,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54859,10 +54859,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1187</id>
-						<name>sample_period_samples_8_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54878,7 +54878,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54913,10 +54913,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1188</id>
-						<name>sample_period_samples_9_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54932,7 +54932,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -54967,10 +54967,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1189</id>
-						<name>sample_period_samples_10_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -54986,7 +54986,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55021,10 +55021,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1190</id>
-						<name>sample_period_samples_11_timestamp_V_addr_6_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_6_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55040,7 +55040,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55075,10 +55075,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1191</id>
-						<name>sample_period_samples_0_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55094,7 +55094,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55129,10 +55129,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1192</id>
-						<name>sample_period_samples_1_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55148,7 +55148,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55183,10 +55183,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1193</id>
-						<name>sample_period_samples_2_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55202,7 +55202,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55237,10 +55237,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1194</id>
-						<name>sample_period_samples_3_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55256,7 +55256,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55291,10 +55291,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1195</id>
-						<name>sample_period_samples_4_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55310,7 +55310,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55345,10 +55345,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1196</id>
-						<name>sample_period_samples_5_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55364,7 +55364,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55399,10 +55399,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1197</id>
-						<name>sample_period_samples_6_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55418,7 +55418,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55453,10 +55453,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1198</id>
-						<name>sample_period_samples_7_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55472,7 +55472,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55507,10 +55507,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1199</id>
-						<name>sample_period_samples_8_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55526,7 +55526,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55561,10 +55561,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1200</id>
-						<name>sample_period_samples_9_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55580,7 +55580,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55615,10 +55615,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1201</id>
-						<name>sample_period_samples_10_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55634,7 +55634,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55669,10 +55669,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1202</id>
-						<name>sample_period_samples_11_sample_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55688,7 +55688,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55723,10 +55723,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1203</id>
-						<name>sample_period_samples_0_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55742,7 +55742,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55777,10 +55777,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1204</id>
-						<name>sample_period_samples_1_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55796,7 +55796,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55831,10 +55831,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1205</id>
-						<name>sample_period_samples_2_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55850,7 +55850,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55885,10 +55885,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1206</id>
-						<name>sample_period_samples_3_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55904,7 +55904,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55939,10 +55939,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1207</id>
-						<name>sample_period_samples_4_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -55958,7 +55958,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -55993,10 +55993,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1208</id>
-						<name>sample_period_samples_5_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56012,7 +56012,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56047,10 +56047,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1209</id>
-						<name>sample_period_samples_6_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56066,7 +56066,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56101,10 +56101,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1210</id>
-						<name>sample_period_samples_7_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56120,7 +56120,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56155,10 +56155,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1211</id>
-						<name>sample_period_samples_8_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56174,7 +56174,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56209,10 +56209,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1212</id>
-						<name>sample_period_samples_9_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56228,7 +56228,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56263,10 +56263,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1213</id>
-						<name>sample_period_samples_10_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56282,7 +56282,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56317,10 +56317,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1214</id>
-						<name>sample_period_samples_11_timestamp_V_addr_7_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_7_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56336,7 +56336,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56371,10 +56371,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1215</id>
-						<name>sample_period_samples_0_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56390,7 +56390,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56425,10 +56425,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1216</id>
-						<name>sample_period_samples_1_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56444,7 +56444,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56479,10 +56479,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1217</id>
-						<name>sample_period_samples_2_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56498,7 +56498,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56533,10 +56533,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1218</id>
-						<name>sample_period_samples_3_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56552,7 +56552,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56587,10 +56587,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1219</id>
-						<name>sample_period_samples_4_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56606,7 +56606,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56641,10 +56641,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1220</id>
-						<name>sample_period_samples_5_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56660,7 +56660,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56695,10 +56695,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1221</id>
-						<name>sample_period_samples_6_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56714,7 +56714,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56749,10 +56749,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1222</id>
-						<name>sample_period_samples_7_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56768,7 +56768,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56803,10 +56803,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1223</id>
-						<name>sample_period_samples_8_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56822,7 +56822,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56857,10 +56857,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1224</id>
-						<name>sample_period_samples_9_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56876,7 +56876,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56911,10 +56911,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1225</id>
-						<name>sample_period_samples_10_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56930,7 +56930,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -56965,10 +56965,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1226</id>
-						<name>sample_period_samples_11_sample_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -56984,7 +56984,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57019,10 +57019,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1227</id>
-						<name>sample_period_samples_0_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57038,7 +57038,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57073,10 +57073,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1228</id>
-						<name>sample_period_samples_1_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57092,7 +57092,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57127,10 +57127,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1229</id>
-						<name>sample_period_samples_2_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57146,7 +57146,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57181,10 +57181,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1230</id>
-						<name>sample_period_samples_3_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57200,7 +57200,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57235,10 +57235,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1231</id>
-						<name>sample_period_samples_4_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57254,7 +57254,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57289,10 +57289,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1232</id>
-						<name>sample_period_samples_5_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57308,7 +57308,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57343,10 +57343,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1233</id>
-						<name>sample_period_samples_6_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57362,7 +57362,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57397,10 +57397,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1234</id>
-						<name>sample_period_samples_7_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57416,7 +57416,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57451,10 +57451,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1235</id>
-						<name>sample_period_samples_8_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57470,7 +57470,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57505,10 +57505,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1236</id>
-						<name>sample_period_samples_9_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57524,7 +57524,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57559,10 +57559,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1237</id>
-						<name>sample_period_samples_10_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57578,7 +57578,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57613,10 +57613,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1238</id>
-						<name>sample_period_samples_11_timestamp_V_addr_8_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_8_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57632,7 +57632,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57667,10 +57667,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1239</id>
-						<name>sample_period_samples_0_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57686,7 +57686,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57721,10 +57721,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1240</id>
-						<name>sample_period_samples_1_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57740,7 +57740,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57775,10 +57775,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1241</id>
-						<name>sample_period_samples_2_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57794,7 +57794,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57829,10 +57829,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1242</id>
-						<name>sample_period_samples_3_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57848,7 +57848,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57883,10 +57883,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1243</id>
-						<name>sample_period_samples_4_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57902,7 +57902,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57937,10 +57937,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1244</id>
-						<name>sample_period_samples_5_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -57956,7 +57956,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -57991,10 +57991,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1245</id>
-						<name>sample_period_samples_6_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58010,7 +58010,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58045,10 +58045,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1246</id>
-						<name>sample_period_samples_7_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58064,7 +58064,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58099,10 +58099,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1247</id>
-						<name>sample_period_samples_8_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58118,7 +58118,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58153,10 +58153,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1248</id>
-						<name>sample_period_samples_9_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58172,7 +58172,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58207,10 +58207,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1249</id>
-						<name>sample_period_samples_10_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58226,7 +58226,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58261,10 +58261,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1250</id>
-						<name>sample_period_samples_11_sample_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58280,7 +58280,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58315,10 +58315,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1251</id>
-						<name>sample_period_samples_0_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58334,7 +58334,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58369,10 +58369,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1252</id>
-						<name>sample_period_samples_1_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58388,7 +58388,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58423,10 +58423,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1253</id>
-						<name>sample_period_samples_2_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58442,7 +58442,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58477,10 +58477,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1254</id>
-						<name>sample_period_samples_3_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58496,7 +58496,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58531,10 +58531,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1255</id>
-						<name>sample_period_samples_4_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58550,7 +58550,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58585,10 +58585,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1256</id>
-						<name>sample_period_samples_5_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58604,7 +58604,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58639,10 +58639,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1257</id>
-						<name>sample_period_samples_6_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58658,7 +58658,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58693,10 +58693,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1258</id>
-						<name>sample_period_samples_7_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58712,7 +58712,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58747,10 +58747,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1259</id>
-						<name>sample_period_samples_8_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58766,7 +58766,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58801,10 +58801,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1260</id>
-						<name>sample_period_samples_9_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58820,7 +58820,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58855,10 +58855,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1261</id>
-						<name>sample_period_samples_10_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58874,7 +58874,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58909,10 +58909,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1262</id>
-						<name>sample_period_samples_11_timestamp_V_addr_9_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_9_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58928,7 +58928,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -58963,10 +58963,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1263</id>
-						<name>sample_period_samples_0_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_0_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -58982,7 +58982,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59017,10 +59017,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1264</id>
-						<name>sample_period_samples_1_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_1_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59036,7 +59036,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59071,10 +59071,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1265</id>
-						<name>sample_period_samples_2_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_2_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59090,7 +59090,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59125,10 +59125,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1266</id>
-						<name>sample_period_samples_3_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_3_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59144,7 +59144,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59179,10 +59179,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1267</id>
-						<name>sample_period_samples_4_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_4_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59198,7 +59198,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59233,10 +59233,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1268</id>
-						<name>sample_period_samples_5_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_5_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59252,7 +59252,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59287,10 +59287,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1269</id>
-						<name>sample_period_samples_6_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_6_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59306,7 +59306,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59341,10 +59341,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1270</id>
-						<name>sample_period_samples_7_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_7_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59360,7 +59360,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59395,10 +59395,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1271</id>
-						<name>sample_period_samples_8_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_8_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59414,7 +59414,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59449,10 +59449,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1272</id>
-						<name>sample_period_samples_9_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_9_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59468,7 +59468,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59503,10 +59503,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1273</id>
-						<name>sample_period_samples_10_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_10_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59522,7 +59522,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59557,10 +59557,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1274</id>
-						<name>sample_period_samples_11_sample_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_11_sample_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59576,7 +59576,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59611,10 +59611,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1275</id>
-						<name>sample_period_samples_0_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_0_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59630,7 +59630,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59665,10 +59665,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1276</id>
-						<name>sample_period_samples_1_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_1_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59684,7 +59684,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59719,10 +59719,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1277</id>
-						<name>sample_period_samples_2_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_2_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59738,7 +59738,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59773,10 +59773,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1278</id>
-						<name>sample_period_samples_3_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_3_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59792,7 +59792,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59827,10 +59827,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1279</id>
-						<name>sample_period_samples_4_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_4_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59846,7 +59846,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59881,10 +59881,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1280</id>
-						<name>sample_period_samples_5_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_5_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59900,7 +59900,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59935,10 +59935,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1281</id>
-						<name>sample_period_samples_6_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_6_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -59954,7 +59954,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -59989,10 +59989,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1282</id>
-						<name>sample_period_samples_7_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_7_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60008,7 +60008,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -60043,10 +60043,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1283</id>
-						<name>sample_period_samples_8_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_8_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60062,7 +60062,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -60097,10 +60097,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1284</id>
-						<name>sample_period_samples_9_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_9_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60116,7 +60116,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -60151,10 +60151,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1285</id>
-						<name>sample_period_samples_10_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_10_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60170,7 +60170,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -60205,10 +60205,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1286</id>
-						<name>sample_period_samples_11_timestamp_V_addr_10_write_ln157</name>
+						<name>sample_period_samples_11_timestamp_V_addr_10_write_ln155</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>157</lineNumber>
+						<lineNumber>155</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60224,7 +60224,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>157</second>
+										<second>155</second>
 									</item>
 								</second>
 							</item>
@@ -60259,10 +60259,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1287</id>
-						<name>icmp_ln162</name>
+						<name>icmp_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60278,7 +60278,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -60289,7 +60289,7 @@
 						<opType>icmp</opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421804736</coreId>
+						<coreId>3556029008</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -60313,10 +60313,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1288</id>
-						<name>br_ln162</name>
+						<name>br_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60332,7 +60332,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -60343,7 +60343,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3464</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -60368,10 +60368,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1290</id>
-						<name>br_ln162</name>
+						<name>br_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60387,7 +60387,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -60398,7 +60398,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3482</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -60437,7 +60437,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3459</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -60479,7 +60479,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3484</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -60508,7 +60508,7 @@
 						<name>j_1</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60524,7 +60524,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -60559,10 +60559,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1295</id>
-						<name>trunc_ln162</name>
+						<name>trunc_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60578,7 +60578,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -60589,7 +60589,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3462</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -60612,10 +60612,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1296</id>
-						<name>icmp_ln162_1</name>
+						<name>icmp_ln160_1</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60631,7 +60631,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -60642,7 +60642,7 @@
 						<opType>icmp</opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3421</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -60666,10 +60666,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1297</id>
-						<name>br_ln162</name>
+						<name>br_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60685,7 +60685,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -60696,7 +60696,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3406</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -60751,7 +60751,7 @@
 						<opType>icmp</opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3430</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -60860,7 +60860,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3464</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -60886,7 +60886,7 @@
 						<name>sample_period_samples_0_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60902,7 +60902,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -60913,7 +60913,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3452</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -60941,7 +60941,7 @@
 						<name>sample_period_samples_0_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -60957,7 +60957,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -60994,7 +60994,7 @@
 						<name>sample_period_samples_1_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61010,7 +61010,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61021,7 +61021,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3408</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61049,7 +61049,7 @@
 						<name>sample_period_samples_1_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61065,7 +61065,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61102,7 +61102,7 @@
 						<name>sample_period_samples_2_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61118,7 +61118,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61129,7 +61129,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3474</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61157,7 +61157,7 @@
 						<name>sample_period_samples_2_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61173,7 +61173,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61210,7 +61210,7 @@
 						<name>sample_period_samples_3_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61226,7 +61226,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61237,7 +61237,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3472</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61265,7 +61265,7 @@
 						<name>sample_period_samples_3_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61281,7 +61281,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61318,7 +61318,7 @@
 						<name>sample_period_samples_4_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61334,7 +61334,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61345,7 +61345,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3430</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61373,7 +61373,7 @@
 						<name>sample_period_samples_4_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61389,7 +61389,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61426,7 +61426,7 @@
 						<name>sample_period_samples_5_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61442,7 +61442,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61453,7 +61453,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3417</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61481,7 +61481,7 @@
 						<name>sample_period_samples_5_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61497,7 +61497,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61534,7 +61534,7 @@
 						<name>sample_period_samples_6_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61550,7 +61550,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61561,7 +61561,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3441</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61589,7 +61589,7 @@
 						<name>sample_period_samples_6_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61605,7 +61605,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61642,7 +61642,7 @@
 						<name>sample_period_samples_7_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61658,7 +61658,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61669,7 +61669,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3463</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61697,7 +61697,7 @@
 						<name>sample_period_samples_7_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61713,7 +61713,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61750,7 +61750,7 @@
 						<name>sample_period_samples_8_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61766,7 +61766,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61777,7 +61777,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3381</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61805,7 +61805,7 @@
 						<name>sample_period_samples_8_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61821,7 +61821,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61858,7 +61858,7 @@
 						<name>sample_period_samples_9_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61874,7 +61874,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61885,7 +61885,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3454</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -61913,7 +61913,7 @@
 						<name>sample_period_samples_9_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61929,7 +61929,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61966,7 +61966,7 @@
 						<name>sample_period_samples_10_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -61982,7 +61982,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -61993,7 +61993,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3463</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62021,7 +62021,7 @@
 						<name>sample_period_samples_10_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62037,7 +62037,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62074,7 +62074,7 @@
 						<name>sample_period_samples_11_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62090,7 +62090,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62101,7 +62101,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3416</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62129,7 +62129,7 @@
 						<name>sample_period_samples_11_sample_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62145,7 +62145,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62182,7 +62182,7 @@
 						<name>sample_period_samples_0_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62198,7 +62198,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62209,7 +62209,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3418</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62237,7 +62237,7 @@
 						<name>sample_period_samples_0_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62253,7 +62253,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62290,7 +62290,7 @@
 						<name>sample_period_samples_1_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62306,7 +62306,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62317,7 +62317,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3400</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62345,7 +62345,7 @@
 						<name>sample_period_samples_1_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62361,7 +62361,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62398,7 +62398,7 @@
 						<name>sample_period_samples_2_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62414,7 +62414,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62425,7 +62425,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3456</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62453,7 +62453,7 @@
 						<name>sample_period_samples_2_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62469,7 +62469,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62506,7 +62506,7 @@
 						<name>sample_period_samples_3_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62522,7 +62522,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62533,7 +62533,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3438</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62561,7 +62561,7 @@
 						<name>sample_period_samples_3_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62577,7 +62577,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62614,7 +62614,7 @@
 						<name>sample_period_samples_4_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62630,7 +62630,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62641,7 +62641,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3444</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62669,7 +62669,7 @@
 						<name>sample_period_samples_4_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62685,7 +62685,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62722,7 +62722,7 @@
 						<name>sample_period_samples_5_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62738,7 +62738,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62749,7 +62749,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3440</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62777,7 +62777,7 @@
 						<name>sample_period_samples_5_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62793,7 +62793,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62830,7 +62830,7 @@
 						<name>sample_period_samples_6_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62846,7 +62846,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62857,7 +62857,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3456</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62885,7 +62885,7 @@
 						<name>sample_period_samples_6_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62901,7 +62901,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62938,7 +62938,7 @@
 						<name>sample_period_samples_7_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -62954,7 +62954,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -62965,7 +62965,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>3448</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -62993,7 +62993,7 @@
 						<name>sample_period_samples_7_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63009,7 +63009,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63046,7 +63046,7 @@
 						<name>sample_period_samples_8_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63062,7 +63062,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63101,7 +63101,7 @@
 						<name>sample_period_samples_8_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63117,7 +63117,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63154,7 +63154,7 @@
 						<name>sample_period_samples_9_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63170,7 +63170,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63209,7 +63209,7 @@
 						<name>sample_period_samples_9_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63225,7 +63225,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63262,7 +63262,7 @@
 						<name>sample_period_samples_10_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63278,7 +63278,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63317,7 +63317,7 @@
 						<name>sample_period_samples_10_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63333,7 +63333,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63370,7 +63370,7 @@
 						<name>sample_period_samples_11_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63386,7 +63386,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63425,7 +63425,7 @@
 						<name>sample_period_samples_11_timestamp_V_load</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63441,7 +63441,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63475,10 +63475,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1352</id>
-						<name>sample_sample_V_addr_1_write_ln166</name>
+						<name>sample_sample_V_addr_1_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63494,7 +63494,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63529,10 +63529,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1353</id>
-						<name>sample_sample_V_addr_2_write_ln166</name>
+						<name>sample_sample_V_addr_2_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63548,7 +63548,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63583,10 +63583,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1354</id>
-						<name>sample_sample_V_addr_3_write_ln166</name>
+						<name>sample_sample_V_addr_3_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63602,7 +63602,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63637,10 +63637,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1355</id>
-						<name>sample_sample_V_addr_4_write_ln166</name>
+						<name>sample_sample_V_addr_4_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63656,7 +63656,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63691,10 +63691,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1356</id>
-						<name>sample_sample_V_addr_5_write_ln166</name>
+						<name>sample_sample_V_addr_5_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63710,7 +63710,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63745,10 +63745,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1357</id>
-						<name>sample_sample_V_addr_6_write_ln166</name>
+						<name>sample_sample_V_addr_6_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63764,7 +63764,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63799,10 +63799,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1358</id>
-						<name>sample_sample_V_addr_7_write_ln166</name>
+						<name>sample_sample_V_addr_7_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63818,7 +63818,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63853,10 +63853,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1359</id>
-						<name>sample_sample_V_addr_8_write_ln166</name>
+						<name>sample_sample_V_addr_8_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63872,7 +63872,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63907,10 +63907,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1360</id>
-						<name>sample_sample_V_addr_9_write_ln166</name>
+						<name>sample_sample_V_addr_9_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63926,7 +63926,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -63961,10 +63961,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1361</id>
-						<name>sample_sample_V_addr_10_write_ln166</name>
+						<name>sample_sample_V_addr_10_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -63980,7 +63980,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64015,10 +64015,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1362</id>
-						<name>sample_sample_V_addr_11_write_ln166</name>
+						<name>sample_sample_V_addr_11_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64034,7 +64034,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64069,10 +64069,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1363</id>
-						<name>sample_sample_V_addr_12_write_ln166</name>
+						<name>sample_sample_V_addr_12_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64088,7 +64088,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64123,10 +64123,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1364</id>
-						<name>sample_timestamp_V_addr_1_write_ln166</name>
+						<name>sample_timestamp_V_addr_1_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64142,7 +64142,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64177,10 +64177,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1365</id>
-						<name>sample_timestamp_V_addr_2_write_ln166</name>
+						<name>sample_timestamp_V_addr_2_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64196,7 +64196,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64231,10 +64231,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1366</id>
-						<name>sample_timestamp_V_addr_3_write_ln166</name>
+						<name>sample_timestamp_V_addr_3_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64250,7 +64250,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64285,10 +64285,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1367</id>
-						<name>sample_timestamp_V_addr_4_write_ln166</name>
+						<name>sample_timestamp_V_addr_4_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64304,7 +64304,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64339,10 +64339,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1368</id>
-						<name>sample_timestamp_V_addr_5_write_ln166</name>
+						<name>sample_timestamp_V_addr_5_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64358,7 +64358,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64393,10 +64393,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1369</id>
-						<name>sample_timestamp_V_addr_6_write_ln166</name>
+						<name>sample_timestamp_V_addr_6_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64412,7 +64412,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64447,10 +64447,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1370</id>
-						<name>sample_timestamp_V_addr_7_write_ln166</name>
+						<name>sample_timestamp_V_addr_7_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64466,7 +64466,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64501,10 +64501,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1371</id>
-						<name>sample_timestamp_V_addr_8_write_ln166</name>
+						<name>sample_timestamp_V_addr_8_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64520,7 +64520,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64555,10 +64555,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1372</id>
-						<name>sample_timestamp_V_addr_9_write_ln166</name>
+						<name>sample_timestamp_V_addr_9_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64574,7 +64574,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64609,10 +64609,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1373</id>
-						<name>sample_timestamp_V_addr_10_write_ln166</name>
+						<name>sample_timestamp_V_addr_10_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64628,7 +64628,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64663,10 +64663,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1374</id>
-						<name>sample_timestamp_V_addr_11_write_ln166</name>
+						<name>sample_timestamp_V_addr_11_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64682,7 +64682,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64717,10 +64717,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1375</id>
-						<name>sample_timestamp_V_addr_12_write_ln166</name>
+						<name>sample_timestamp_V_addr_12_write_ln164</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>166</lineNumber>
+						<lineNumber>164</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64736,7 +64736,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>166</second>
+										<second>164</second>
 									</item>
 								</second>
 							</item>
@@ -64771,10 +64771,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1376</id>
-						<name>sext_ln169</name>
+						<name>sext_ln167</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>169</lineNumber>
+						<lineNumber>167</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64790,7 +64790,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>169</second>
+										<second>167</second>
 									</item>
 								</second>
 							</item>
@@ -64824,10 +64824,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1377</id>
-						<name>br_ln169</name>
+						<name>br_ln167</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>169</lineNumber>
+						<lineNumber>167</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64843,7 +64843,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>169</second>
+										<second>167</second>
 									</item>
 								</second>
 							</item>
@@ -64880,7 +64880,7 @@
 						<name>idx_4</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>178</lineNumber>
+						<lineNumber>176</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64896,7 +64896,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>178</second>
+										<second>176</second>
 									</item>
 								</second>
 							</item>
@@ -64936,7 +64936,7 @@
 						<name>k</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>169</lineNumber>
+						<lineNumber>167</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -64952,7 +64952,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>169</second>
+										<second>167</second>
 									</item>
 								</second>
 							</item>
@@ -64989,10 +64989,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1381</id>
-						<name>add_ln169</name>
+						<name>add_ln167</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>169</lineNumber>
+						<lineNumber>167</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65008,7 +65008,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>169</second>
+										<second>167</second>
 									</item>
 								</second>
 							</item>
@@ -65046,7 +65046,7 @@
 						<name>k_cast</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>169</lineNumber>
+						<lineNumber>167</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65062,7 +65062,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>169</second>
+										<second>167</second>
 									</item>
 								</second>
 							</item>
@@ -65096,10 +65096,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1384</id>
-						<name>icmp_ln169</name>
+						<name>icmp_ln167</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>169</lineNumber>
+						<lineNumber>167</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65115,7 +65115,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>169</second>
+										<second>167</second>
 									</item>
 								</second>
 							</item>
@@ -65150,10 +65150,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1386</id>
-						<name>br_ln169</name>
+						<name>br_ln167</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>169</lineNumber>
+						<lineNumber>167</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65169,7 +65169,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>169</second>
+										<second>167</second>
 									</item>
 								</second>
 							</item>
@@ -65208,7 +65208,7 @@
 						<name>sample_timestamp_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>173</lineNumber>
+						<lineNumber>171</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65224,7 +65224,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>173</second>
+										<second>171</second>
 									</item>
 								</second>
 							</item>
@@ -65263,7 +65263,7 @@
 						<name>timestamp_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>173</lineNumber>
+						<lineNumber>171</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65279,7 +65279,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>173</second>
+										<second>171</second>
 									</item>
 								</second>
 							</item>
@@ -65316,7 +65316,7 @@
 						<name>sample_sample_V_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>174</lineNumber>
+						<lineNumber>172</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65332,7 +65332,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>174</second>
+										<second>172</second>
 									</item>
 								</second>
 							</item>
@@ -65371,7 +65371,7 @@
 						<name>data_V</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>174</lineNumber>
+						<lineNumber>172</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65387,7 +65387,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>174</second>
+										<second>172</second>
 									</item>
 								</second>
 							</item>
@@ -65424,7 +65424,7 @@
 						<name>item</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>176</lineNumber>
+						<lineNumber>174</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65440,7 +65440,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>176</second>
+										<second>174</second>
 									</item>
 								</second>
 							</item>
@@ -65476,10 +65476,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1394</id>
-						<name>trunc_ln178</name>
+						<name>trunc_ln176</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>178</lineNumber>
+						<lineNumber>176</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65495,7 +65495,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>178</second>
+										<second>176</second>
 									</item>
 								</second>
 							</item>
@@ -65529,10 +65529,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1395</id>
-						<name>add_ln178</name>
+						<name>add_ln176</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>178</lineNumber>
+						<lineNumber>176</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65548,7 +65548,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>178</second>
+										<second>176</second>
 									</item>
 								</second>
 							</item>
@@ -65583,10 +65583,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1396</id>
-						<name>add_ln178_1</name>
+						<name>add_ln176_1</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>178</lineNumber>
+						<lineNumber>176</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65602,7 +65602,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>178</second>
+										<second>176</second>
 									</item>
 								</second>
 							</item>
@@ -65637,10 +65637,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1397</id>
-						<name>zext_ln178</name>
+						<name>zext_ln176</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>178</lineNumber>
+						<lineNumber>176</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65656,7 +65656,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>178</second>
+										<second>176</second>
 									</item>
 								</second>
 							</item>
@@ -65693,7 +65693,7 @@
 						<name>buffer_out_addr</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>178</lineNumber>
+						<lineNumber>176</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65709,7 +65709,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>178</second>
+										<second>176</second>
 									</item>
 								</second>
 							</item>
@@ -65745,10 +65745,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1399</id>
-						<name>buffer_out_addr_write_ln178</name>
+						<name>buffer_out_addr_write_ln176</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>178</lineNumber>
+						<lineNumber>176</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65764,7 +65764,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>178</second>
+										<second>176</second>
 									</item>
 								</second>
 							</item>
@@ -65838,10 +65838,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1402</id>
-						<name>add_ln162_1</name>
+						<name>add_ln160_1</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65857,7 +65857,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -65934,7 +65934,7 @@
 						<name>shl_ln</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -65950,7 +65950,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -65986,10 +65986,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1406</id>
-						<name>zext_ln162</name>
+						<name>zext_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66005,7 +66005,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -66039,10 +66039,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1407</id>
-						<name>shl_ln162_1</name>
+						<name>shl_ln160_1</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66058,7 +66058,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -66094,10 +66094,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1408</id>
-						<name>zext_ln162_1</name>
+						<name>zext_ln160_1</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66113,7 +66113,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -66147,10 +66147,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1409</id>
-						<name>sub_ln162</name>
+						<name>sub_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66166,7 +66166,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -66201,10 +66201,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1410</id>
-						<name>sext_ln162</name>
+						<name>sext_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66220,7 +66220,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -66254,10 +66254,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1411</id>
-						<name>add_ln162</name>
+						<name>add_ln160</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>162</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66273,7 +66273,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>162</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -66308,10 +66308,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1412</id>
-						<name>idx_write_ln153</name>
+						<name>idx_write_ln151</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<lineNumber>151</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66327,7 +66327,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>153</second>
+										<second>151</second>
 									</item>
 								</second>
 							</item>
@@ -66364,10 +66364,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1413</id>
-						<name>br_ln153</name>
+						<name>br_ln151</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<lineNumber>151</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66383,7 +66383,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>153</second>
+										<second>151</second>
 									</item>
 								</second>
 							</item>
@@ -66456,10 +66456,10 @@
 					<Obj>
 						<type>0</type>
 						<id>1417</id>
-						<name>_ln184</name>
+						<name>_ln182</name>
 						<fileName>../src/SlidingWindowMagSampleFetcher.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher</fileDirectory>
-						<lineNumber>184</lineNumber>
+						<lineNumber>182</lineNumber>
 						<contextFuncName>writeToRAM</contextFuncName>
 						<contextNormFuncName>writeToRAM</contextNormFuncName>
 						<inlineStackInfo>
@@ -66475,7 +66475,7 @@
 											<first>../src/SlidingWindowMagSampleFetcher.cpp</first>
 											<second>writeToRAM</second>
 										</first>
-										<second>184</second>
+										<second>182</second>
 									</item>
 								</second>
 							</item>
@@ -66613,7 +66613,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1600613993</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -66669,7 +66669,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422024272</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -66753,7 +66753,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422024272</coreId>
+						<coreId>3556218912</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -66781,7 +66781,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422034416</coreId>
+						<coreId>3556234944</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -66977,7 +66977,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422024272</coreId>
+						<coreId>3556235776</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -67005,7 +67005,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421076592</coreId>
+						<coreId>3556239680</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -67033,7 +67033,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421073008</coreId>
+						<coreId>3556242816</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -67061,7 +67061,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422028048</coreId>
+						<coreId>3556278112</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -67089,7 +67089,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422024272</coreId>
+						<coreId>3556300064</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -67117,7 +67117,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3420742848</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -67145,7 +67145,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421075456</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -67173,7 +67173,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422027792</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>33</bitwidth>
 				</Value>
@@ -67201,7 +67201,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422034800</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -67229,7 +67229,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3421069408</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -67257,7 +67257,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3422032224</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>2</bitwidth>
 				</Value>
@@ -67288,7 +67288,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>3420819776</coreId>
+					<coreId>33</coreId>
 				</Obj>
 				<node_objs>
 					<count>299</count>
@@ -67646,7 +67646,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>3959423104</coreId>
+					<coreId>3554928120</coreId>
 				</Obj>
 				<node_objs>
 					<count>729</count>
@@ -68402,7 +68402,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>0</coreId>
+					<coreId>3470</coreId>
 				</Obj>
 				<node_objs>
 					<count>1</count>
@@ -68430,7 +68430,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>0</coreId>
+					<coreId>3478</coreId>
 				</Obj>
 				<node_objs>
 					<count>6</count>
@@ -68463,7 +68463,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>0</coreId>
+					<coreId>3409</coreId>
 				</Obj>
 				<node_objs>
 					<count>77</count>
@@ -110060,7 +110060,7 @@
 		<count>598</count>
 		<item_version>0</item_version>
 		<item class_id="49" tracking_level="0" version="0">
-			<first>add_ln162_1_fu_6940</first>
+			<first>add_ln160_1_fu_6940</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -110068,7 +110068,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln162_fu_6879</first>
+			<first>add_ln160_fu_6879</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -110076,7 +110076,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln169_fu_6893</first>
+			<first>add_ln167_fu_6893</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -110084,7 +110084,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln178_1_fu_6930</first>
+			<first>add_ln176_1_fu_6930</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -110092,7 +110092,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln178_fu_6915</first>
+			<first>add_ln176_fu_6915</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -110148,7 +110148,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln153_fu_6724</first>
+			<first>icmp_ln151_fu_6724</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -110156,7 +110156,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln162_1_fu_6820</first>
+			<first>icmp_ln160_1_fu_6820</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -110164,7 +110164,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln162_fu_6804</first>
+			<first>icmp_ln160_fu_6804</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -110172,7 +110172,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln169_fu_6905</first>
+			<first>icmp_ln167_fu_6905</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -112804,7 +112804,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln162_fu_6875</first>
+			<first>sext_ln160_fu_6875</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -112812,7 +112812,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln169_fu_6889</first>
+			<first>sext_ln167_fu_6889</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -112828,7 +112828,7 @@
 			</second>
 		</item>
 		<item>
-			<first>shl_ln162_1_fu_6858</first>
+			<first>shl_ln160_1_fu_6858</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -114772,7 +114772,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sub_ln162_fu_6869</first>
+			<first>sub_ln160_fu_6869</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -114780,7 +114780,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln162_fu_6816</first>
+			<first>trunc_ln160_fu_6816</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -114788,7 +114788,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln178_fu_6911</first>
+			<first>trunc_ln176_fu_6911</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -114804,7 +114804,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln162_1_fu_6865</first>
+			<first>zext_ln160_1_fu_6865</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -114812,7 +114812,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln162_fu_6854</first>
+			<first>zext_ln160_fu_6854</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -114820,7 +114820,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln178_fu_6935</first>
+			<first>zext_ln176_fu_6935</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -114884,7 +114884,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln153_store_fu_6710</first>
+			<first>store_ln151_store_fu_6710</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -114892,7 +114892,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln153_store_fu_6884</first>
+			<first>store_ln151_store_fu_6884</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -123071,7 +123071,7 @@
 		<count>552</count>
 		<item_version>0</item_version>
 		<item>
-			<first>add_ln162_1_reg_9898</first>
+			<first>add_ln160_1_reg_9898</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -123079,7 +123079,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln169_reg_9869</first>
+			<first>add_ln167_reg_9869</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -123087,7 +123087,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln178_reg_9893</first>
+			<first>add_ln176_reg_9893</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -123111,7 +123111,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln162_reg_9708</first>
+			<first>icmp_ln160_reg_9708</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -123119,7 +123119,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln169_reg_9874</first>
+			<first>icmp_ln167_reg_9874</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -125511,7 +125511,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln169_reg_9864</first>
+			<first>sext_ln167_reg_9864</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -127455,7 +127455,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln178_reg_9888</first>
+			<first>trunc_ln176_reg_9888</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

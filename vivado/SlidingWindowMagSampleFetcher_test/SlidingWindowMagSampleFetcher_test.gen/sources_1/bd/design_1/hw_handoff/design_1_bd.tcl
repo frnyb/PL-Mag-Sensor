@@ -155,16 +155,44 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
+  set s_axi_axi_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi_axi_0 ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {5} \
+   CONFIG.ARUSER_WIDTH {0} \
+   CONFIG.AWUSER_WIDTH {0} \
+   CONFIG.BUSER_WIDTH {0} \
+   CONFIG.DATA_WIDTH {32} \
+   CONFIG.HAS_BRESP {1} \
+   CONFIG.HAS_BURST {0} \
+   CONFIG.HAS_CACHE {0} \
+   CONFIG.HAS_LOCK {0} \
+   CONFIG.HAS_PROT {0} \
+   CONFIG.HAS_QOS {0} \
+   CONFIG.HAS_REGION {0} \
+   CONFIG.HAS_RRESP {1} \
+   CONFIG.HAS_WSTRB {1} \
+   CONFIG.ID_WIDTH {0} \
+   CONFIG.MAX_BURST_LENGTH {1} \
+   CONFIG.NUM_READ_OUTSTANDING {1} \
+   CONFIG.NUM_READ_THREADS {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {1} \
+   CONFIG.NUM_WRITE_THREADS {1} \
+   CONFIG.PROTOCOL {AXI4LITE} \
+   CONFIG.READ_WRITE_MODE {READ_WRITE} \
+   CONFIG.RUSER_BITS_PER_BYTE {0} \
+   CONFIG.RUSER_WIDTH {0} \
+   CONFIG.SUPPORTS_NARROW_BURST {0} \
+   CONFIG.WUSER_BITS_PER_BYTE {0} \
+   CONFIG.WUSER_WIDTH {0} \
+   ] $s_axi_axi_0
+
 
   # Create ports
   set ap_clk_0 [ create_bd_port -dir I -type clk ap_clk_0 ]
   set ap_done_0 [ create_bd_port -dir O ap_done_0 ]
   set ap_idle_0 [ create_bd_port -dir O ap_idle_0 ]
   set ap_ready_0 [ create_bd_port -dir O ap_ready_0 ]
-  set ap_rst_0 [ create_bd_port -dir I -type rst ap_rst_0 ]
-  set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
- ] $ap_rst_0
+  set ap_rst_n_0 [ create_bd_port -dir I -type rst ap_rst_n_0 ]
   set buffer_in_0_address0_0 [ create_bd_port -dir O -from 3 -to 0 -type data buffer_in_0_address0_0 ]
   set buffer_in_0_ce0_0 [ create_bd_port -dir O buffer_in_0_ce0_0 ]
   set buffer_in_0_q0_0 [ create_bd_port -dir I -from 31 -to 0 -type data buffer_in_0_q0_0 ]
@@ -204,18 +232,18 @@ proc create_root_design { parentCell } {
   set buffer_out_address0_0 [ create_bd_port -dir O -from 11 -to 0 -type data buffer_out_address0_0 ]
   set buffer_out_ce0_0 [ create_bd_port -dir O buffer_out_ce0_0 ]
   set buffer_out_d0_0 [ create_bd_port -dir O -from 31 -to 0 -type data buffer_out_d0_0 ]
+  set buffer_out_q0_0 [ create_bd_port -dir I -from 31 -to 0 -type data buffer_out_q0_0 ]
   set buffer_out_we0_0 [ create_bd_port -dir O buffer_out_we0_0 ]
   set irq [ create_bd_port -dir I irq ]
-  set n_periods_0 [ create_bd_port -dir I -from 7 -to 0 -type data n_periods_0 ]
   set n_samples_0 [ create_bd_port -dir I -from 5 -to 0 -type data n_samples_0 ]
-  set n_samples_out_0 [ create_bd_port -dir O -from 31 -to 0 -type data n_samples_out_0 ]
   set n_samples_out_ap_vld_0 [ create_bd_port -dir O n_samples_out_ap_vld_0 ]
-  set start_write_i_0 [ create_bd_port -dir I -type data start_write_i_0 ]
-  set start_write_o_0 [ create_bd_port -dir O -type data start_write_o_0 ]
   set start_write_o_ap_vld_0 [ create_bd_port -dir O start_write_o_ap_vld_0 ]
 
   # Create instance: SlidingWindowMagSamp_0, and set properties
   set SlidingWindowMagSamp_0 [ create_bd_cell -type ip -vlnv DIII:hls:SlidingWindowMagSampleFetcher:1.0 SlidingWindowMagSamp_0 ]
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net s_axi_axi_0_1 [get_bd_intf_ports s_axi_axi_0] [get_bd_intf_pins SlidingWindowMagSamp_0/s_axi_axi]
 
   # Create port connections
   connect_bd_net -net SlidingWindowMagSamp_0_ap_done [get_bd_ports ap_done_0] [get_bd_pins SlidingWindowMagSamp_0/ap_done]
@@ -249,12 +277,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net SlidingWindowMagSamp_0_buffer_out_ce0 [get_bd_ports buffer_out_ce0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_out_ce0]
   connect_bd_net -net SlidingWindowMagSamp_0_buffer_out_d0 [get_bd_ports buffer_out_d0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_out_d0]
   connect_bd_net -net SlidingWindowMagSamp_0_buffer_out_we0 [get_bd_ports buffer_out_we0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_out_we0]
-  connect_bd_net -net SlidingWindowMagSamp_0_n_samples_out [get_bd_ports n_samples_out_0] [get_bd_pins SlidingWindowMagSamp_0/n_samples_out]
-  connect_bd_net -net SlidingWindowMagSamp_0_n_samples_out_ap_vld [get_bd_ports n_samples_out_ap_vld_0] [get_bd_pins SlidingWindowMagSamp_0/n_samples_out_ap_vld]
-  connect_bd_net -net SlidingWindowMagSamp_0_start_write_o [get_bd_ports start_write_o_0] [get_bd_pins SlidingWindowMagSamp_0/start_write_o]
-  connect_bd_net -net SlidingWindowMagSamp_0_start_write_o_ap_vld [get_bd_ports start_write_o_ap_vld_0] [get_bd_pins SlidingWindowMagSamp_0/start_write_o_ap_vld]
+  connect_bd_net -net SlidingWindowMagSamp_0_n_samples_out_ap_vld [get_bd_ports n_samples_out_ap_vld_0]
+  connect_bd_net -net SlidingWindowMagSamp_0_start_write_o_ap_vld [get_bd_ports start_write_o_ap_vld_0]
   connect_bd_net -net ap_clk_0_1 [get_bd_ports ap_clk_0] [get_bd_pins SlidingWindowMagSamp_0/ap_clk]
-  connect_bd_net -net ap_rst_0_1 [get_bd_ports ap_rst_0] [get_bd_pins SlidingWindowMagSamp_0/ap_rst]
+  connect_bd_net -net ap_rst_n_0_1 [get_bd_ports ap_rst_n_0] [get_bd_pins SlidingWindowMagSamp_0/ap_rst_n]
   connect_bd_net -net buffer_in_0_q0_0_1 [get_bd_ports buffer_in_0_q0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_in_0_q0]
   connect_bd_net -net buffer_in_10_q0_0_1 [get_bd_ports buffer_in_10_q0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_in_10_q0]
   connect_bd_net -net buffer_in_11_q0_0_1 [get_bd_ports buffer_in_11_q0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_in_11_q0]
@@ -267,10 +293,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net buffer_in_7_q0_0_1 [get_bd_ports buffer_in_7_q0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_in_7_q0]
   connect_bd_net -net buffer_in_8_q0_0_1 [get_bd_ports buffer_in_8_q0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_in_8_q0]
   connect_bd_net -net buffer_in_9_q0_0_1 [get_bd_ports buffer_in_9_q0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_in_9_q0]
-  connect_bd_net -net n_periods_0_1 [get_bd_ports n_periods_0] [get_bd_pins SlidingWindowMagSamp_0/n_periods]
+  connect_bd_net -net buffer_out_q0_0_1 [get_bd_ports buffer_out_q0_0] [get_bd_pins SlidingWindowMagSamp_0/buffer_out_q0]
   connect_bd_net -net n_samples_0_1 [get_bd_ports n_samples_0] [get_bd_pins SlidingWindowMagSamp_0/n_samples]
   connect_bd_net -net n_samples_ap_vld_0_1 [get_bd_ports irq] [get_bd_pins SlidingWindowMagSamp_0/ap_start] [get_bd_pins SlidingWindowMagSamp_0/n_samples_ap_vld]
-  connect_bd_net -net start_write_i_0_1 [get_bd_ports start_write_i_0] [get_bd_pins SlidingWindowMagSamp_0/start_write_i]
 
   # Create address segments
 

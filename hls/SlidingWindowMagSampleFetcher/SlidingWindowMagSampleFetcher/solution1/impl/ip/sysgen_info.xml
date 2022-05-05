@@ -193,12 +193,12 @@
       </RtlPort>
       <RtlPort>
         <name>buffer_out_d0</name>
-        <type>Unsigned</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>buffer_out_q0</name>
-        <type>Unsigned</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>

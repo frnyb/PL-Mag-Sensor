@@ -11,14 +11,14 @@
 
 <trans id="58" from="2" to="3">
 <condition id="-1">
-<or_exp><and_exp><literal name="start_write" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln67" val="1"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
 <trans id="59" from="2" to="5">
 <condition id="-1">
-<or_exp><and_exp><literal name="start_write" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln67" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
@@ -699,10 +699,10 @@
 
 <Node id="307" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:41 %start_write = icmp_eq  i32 %buffer_out_load, i32 0
+:41 %icmp_ln67 = icmp_eq  i32 %buffer_out_load, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="start_write"/></StgValue>
+<StgValue><ssdm name="icmp_ln67"/></StgValue>
 </operation>
 
 <operation id="50" st_id="2" stage="1" lat="1">
@@ -714,10 +714,10 @@
 
 <Node id="308" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:42 %br_ln69 = br i1 %start_write, void, void %._crit_edge
+:42 %br_ln67 = br i1 %icmp_ln67, void %._crit_edge, void
 
 ]]></Node>
-<StgValue><ssdm name="br_ln69"/></StgValue>
+<StgValue><ssdm name="br_ln67"/></StgValue>
 </operation>
 </state>
 
@@ -765,10 +765,10 @@
 
 <Node id="311" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-:1 %write_ln77 = write void @_ssdm_op_Write.s_axilite.i32P0A, i32 %n_samples_out, i32 %tmp
+:1 %write_ln75 = write void @_ssdm_op_Write.s_axilite.i32P0A, i32 %n_samples_out, i32 %tmp
 
 ]]></Node>
-<StgValue><ssdm name="write_ln77"/></StgValue>
+<StgValue><ssdm name="write_ln75"/></StgValue>
 </operation>
 </state>
 
@@ -778,32 +778,32 @@
 <core>RAM_1P</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="start_write" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln67" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="312" bw="0" op_0_bw="32" op_1_bw="12" op_2_bw="0">
 <![CDATA[
-:2 %store_ln81 = store i32 0, i12 %buffer_out_addr
+:2 %store_ln79 = store i32 0, i12 %buffer_out_addr
 
 ]]></Node>
-<StgValue><ssdm name="store_ln81"/></StgValue>
+<StgValue><ssdm name="store_ln79"/></StgValue>
 </operation>
 
 <operation id="55" st_id="5" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="start_write" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln67" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="313" bw="0" op_0_bw="0">
 <![CDATA[
-:3 %br_ln83 = br void %._crit_edge
+:3 %br_ln81 = br void %._crit_edge
 
 ]]></Node>
-<StgValue><ssdm name="br_ln83"/></StgValue>
+<StgValue><ssdm name="br_ln81"/></StgValue>
 </operation>
 
 <operation id="56" st_id="5" stage="1" lat="1">
@@ -815,10 +815,10 @@
 
 <Node id="315" bw="0">
 <![CDATA[
-._crit_edge:0 %ret_ln84 = ret
+._crit_edge:0 %ret_ln82 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln84"/></StgValue>
+<StgValue><ssdm name="ret_ln82"/></StgValue>
 </operation>
 </state>
 </state_list>

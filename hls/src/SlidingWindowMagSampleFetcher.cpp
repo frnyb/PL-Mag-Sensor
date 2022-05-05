@@ -21,7 +21,7 @@ void SlidingWindowMagSampleFetcher(
 		uint32_t buffer_in_9[N_SAMPLES_MAX],
 		uint32_t buffer_in_10[N_SAMPLES_MAX],
 		uint32_t buffer_in_11[N_SAMPLES_MAX],
-		uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
+		volatile uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
 		ap_uint<6> n_samples,
 		uint8_t n_periods,
 		uint32_t *n_samples_out
@@ -64,9 +64,7 @@ void SlidingWindowMagSampleFetcher(
 			buffer_in_9, buffer_in_10, buffer_in_11,
 			&sliding_window, n_samples);
 
-	bool start_write = (bool)buffer_out[0];
-
-	if (start_write) {
+	if (buffer_out[0] == 1) {
 
 //		if (n_periods > sliding_window.Size()) {
 //
@@ -78,7 +76,7 @@ void SlidingWindowMagSampleFetcher(
 
 //		}
 
-		buffer_out[0] = (uint32_t)false;
+		buffer_out[0] = 0;
 
 	}
 }
@@ -143,7 +141,7 @@ void loadSlidingWindow(
 }
 
 uint32_t writeToRAM(
-		uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
+		volatile uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
 		CyclicBuffer<SamplePeriod<N_SAMPLES_MAX>, N_PERIODS_MAX> *sliding_window,
 		int n_periods) {
 

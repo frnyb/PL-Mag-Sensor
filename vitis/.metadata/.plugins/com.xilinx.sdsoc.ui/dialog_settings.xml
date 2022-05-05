@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="sdx.custom.platform.repository.locations" value="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vitis/ADC_gain_settle_test_wrapper/export/ADC_gain_settle_test_wrapper;/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vitis/dig_mag_tester/export/dig_mag_tester;/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vitis/sliding_window_dig_mag_platform/export/sliding_window_dig_mag_platform"/>
+	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vitis/sliding_window_dig_mag_platform/export/sliding_window_dig_mag_platform"/>
+</section>

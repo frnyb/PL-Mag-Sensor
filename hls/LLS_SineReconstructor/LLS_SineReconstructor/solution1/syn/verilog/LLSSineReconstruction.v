@@ -14,8 +14,37 @@ module LLSSineReconstruction (
         ap_done,
         ap_idle,
         ap_ready,
-        input_int,
-        output_int
+        din_address0,
+        din_ce0,
+        din_we0,
+        din_d0,
+        din_q0,
+        din_address1,
+        din_ce1,
+        din_we1,
+        din_d1,
+        din_q1,
+        n_samples,
+        amplitudes_out_address0,
+        amplitudes_out_ce0,
+        amplitudes_out_we0,
+        amplitudes_out_d0,
+        amplitudes_out_q0,
+        amplitudes_out_address1,
+        amplitudes_out_ce1,
+        amplitudes_out_we1,
+        amplitudes_out_d1,
+        amplitudes_out_q1,
+        phases_out_address0,
+        phases_out_ce0,
+        phases_out_we0,
+        phases_out_d0,
+        phases_out_q0,
+        phases_out_address1,
+        phases_out_ce1,
+        phases_out_we1,
+        phases_out_d1,
+        phases_out_q1
 );
 
 
@@ -23,13 +52,90 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [7:0] input_int;
-input  [7:0] output_int;
+output  [11:0] din_address0;
+output   din_ce0;
+output   din_we0;
+output  [31:0] din_d0;
+input  [31:0] din_q0;
+output  [11:0] din_address1;
+output   din_ce1;
+output   din_we1;
+output  [31:0] din_d1;
+input  [31:0] din_q1;
+input  [31:0] n_samples;
+output  [3:0] amplitudes_out_address0;
+output   amplitudes_out_ce0;
+output   amplitudes_out_we0;
+output  [31:0] amplitudes_out_d0;
+input  [31:0] amplitudes_out_q0;
+output  [3:0] amplitudes_out_address1;
+output   amplitudes_out_ce1;
+output   amplitudes_out_we1;
+output  [31:0] amplitudes_out_d1;
+input  [31:0] amplitudes_out_q1;
+output  [3:0] phases_out_address0;
+output   phases_out_ce0;
+output   phases_out_we0;
+output  [31:0] phases_out_d0;
+input  [31:0] phases_out_q0;
+output  [3:0] phases_out_address1;
+output   phases_out_ce1;
+output   phases_out_we1;
+output  [31:0] phases_out_d1;
+input  [31:0] phases_out_q1;
+
+assign amplitudes_out_address0 = 4'd0;
+
+assign amplitudes_out_address1 = 4'd0;
+
+assign amplitudes_out_ce0 = 1'b0;
+
+assign amplitudes_out_ce1 = 1'b0;
+
+assign amplitudes_out_d0 = 32'd0;
+
+assign amplitudes_out_d1 = 32'd0;
+
+assign amplitudes_out_we0 = 1'b0;
+
+assign amplitudes_out_we1 = 1'b0;
 
 assign ap_done = ap_start;
 
 assign ap_idle = 1'b1;
 
 assign ap_ready = ap_start;
+
+assign din_address0 = 12'd0;
+
+assign din_address1 = 12'd0;
+
+assign din_ce0 = 1'b0;
+
+assign din_ce1 = 1'b0;
+
+assign din_d0 = 32'd0;
+
+assign din_d1 = 32'd0;
+
+assign din_we0 = 1'b0;
+
+assign din_we1 = 1'b0;
+
+assign phases_out_address0 = 4'd0;
+
+assign phases_out_address1 = 4'd0;
+
+assign phases_out_ce0 = 1'b0;
+
+assign phases_out_ce1 = 1'b0;
+
+assign phases_out_d0 = 32'd0;
+
+assign phases_out_d1 = 32'd0;
+
+assign phases_out_we0 = 1'b0;
+
+assign phases_out_we1 = 1'b0;
 
 endmodule //LLSSineReconstruction

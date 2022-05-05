@@ -47,9 +47,9 @@
 			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.cpp</location>
 		</link>
 		<link>
-			<name>source/cyclic_buffer.cpp</name>
+			<name>source/LLS_SineReconstructor.h</name>
 			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.cpp</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.h</location>
 		</link>
 		<link>
 			<name>source/cyclic_buffer.h</name>
@@ -60,11 +60,6 @@
 			<name>source/sample.h</name>
 			<type>1</type>
 			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h</location>
-		</link>
-		<link>
-			<name>source/sample_period.cpp</name>
-			<type>1</type>
-			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.cpp</location>
 		</link>
 		<link>
 			<name>source/sample_period.h</name>

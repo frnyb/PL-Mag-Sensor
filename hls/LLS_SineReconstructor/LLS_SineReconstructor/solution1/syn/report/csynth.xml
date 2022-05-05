@@ -91,26 +91,374 @@
             <Attribute>control</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>input_int</name>
-            <Object>input_int</Object>
+            <name>din_address0</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>12</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_ce0</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_we0</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_d0</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_q0</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_address1</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>12</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_ce1</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_we1</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_d1</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>din_q1</name>
+            <Object>din</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>n_samples</name>
+            <Object>n_samples</Object>
             <Type>scalar</Type>
             <Scope/>
             <IOProtocol>ap_none</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>8</Bits>
+            <Bits>32</Bits>
             <Attribute>data</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>output_int</name>
-            <Object>output_int</Object>
-            <Type>pointer</Type>
+            <name>amplitudes_out_address0</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
             <Scope/>
-            <IOProtocol>ap_none</IOProtocol>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_ce0</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_we0</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_d0</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_q0</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>8</Bits>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_address1</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_ce1</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_we1</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_d1</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>amplitudes_out_q1</name>
+            <Object>amplitudes_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_address0</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_ce0</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_we0</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_d0</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_q0</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_address1</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_ce1</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_we1</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_d1</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>phases_out_q1</name>
+            <Object>phases_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -205,26 +553,374 @@
                     <Attribute>control</Attribute>
                 </RtlPorts>
                 <RtlPorts>
-                    <name>input_int</name>
-                    <Object>input_int</Object>
+                    <name>din_address0</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>12</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_ce0</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_we0</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_d0</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_q0</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_address1</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>12</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_ce1</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_we1</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_d1</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>din_q1</name>
+                    <Object>din</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>n_samples</name>
+                    <Object>n_samples</Object>
                     <Type>scalar</Type>
                     <Scope/>
                     <IOProtocol>ap_none</IOProtocol>
                     <IOConfig/>
                     <Dir>in</Dir>
-                    <Bits>8</Bits>
+                    <Bits>32</Bits>
                     <Attribute>data</Attribute>
-                    <CType>uint</CType>
+                    <CType>int</CType>
                 </RtlPorts>
                 <RtlPorts>
-                    <name>output_int</name>
-                    <Object>output_int</Object>
-                    <Type>pointer</Type>
+                    <name>amplitudes_out_address0</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
                     <Scope/>
-                    <IOProtocol>ap_none</IOProtocol>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_ce0</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_we0</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_d0</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_q0</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
                     <IOConfig/>
                     <Dir>in</Dir>
-                    <Bits>8</Bits>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_address1</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_ce1</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_we1</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_d1</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>amplitudes_out_q1</name>
+                    <Object>amplitudes_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_address0</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_ce0</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_we0</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_d0</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_q0</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_address1</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>address</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_ce1</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_we1</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_d1</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>32</Bits>
+                    <Attribute>data</Attribute>
+                    <CType>int</CType>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>phases_out_q1</name>
+                    <Object>phases_out</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>32</Bits>
                     <Attribute>data</Attribute>
                     <CType>int</CType>
                 </RtlPorts>
@@ -233,18 +929,121 @@
     </ModuleInformation>
     <FIFOInformation/>
     <Args>
-        <Arg ArgName="input_int" index="0" direction="in" srcType="unsigned char" srcSize="8">
+        <Arg ArgName="din" index="0" direction="unused" srcType="unsigned int*" srcSize="32">
             <hwRefs>
-                <hwRef type="port" interface="input_int" name="input_int" usage="data" direction="in"/>
+                <hwRef type="port" interface="din_address0" name="din_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="din_ce0" name="din_ce0" usage="control" direction="unused"/>
+                <hwRef type="port" interface="din_we0" name="din_we0" usage="control" direction="unused"/>
+                <hwRef type="port" interface="din_d0" name="din_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="din_q0" name="din_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="din_address1" name="din_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="din_ce1" name="din_ce1" usage="control" direction="unused"/>
+                <hwRef type="port" interface="din_we1" name="din_we1" usage="control" direction="unused"/>
+                <hwRef type="port" interface="din_d1" name="din_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="din_q1" name="din_q1" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="output_int" index="1" direction="unused" srcType="unsigned char*" srcSize="8">
+        <Arg ArgName="n_samples" index="1" direction="in" srcType="unsigned int" srcSize="32">
             <hwRefs>
-                <hwRef type="port" interface="output_int" name="output_int" usage="data" direction="in"/>
+                <hwRef type="port" interface="n_samples" name="n_samples" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="amplitudes_out" index="2" direction="unused" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="amplitudes_out_address0" name="amplitudes_out_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="amplitudes_out_ce0" name="amplitudes_out_ce0" usage="control" direction="unused"/>
+                <hwRef type="port" interface="amplitudes_out_we0" name="amplitudes_out_we0" usage="control" direction="unused"/>
+                <hwRef type="port" interface="amplitudes_out_d0" name="amplitudes_out_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="amplitudes_out_q0" name="amplitudes_out_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="amplitudes_out_address1" name="amplitudes_out_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="amplitudes_out_ce1" name="amplitudes_out_ce1" usage="control" direction="unused"/>
+                <hwRef type="port" interface="amplitudes_out_we1" name="amplitudes_out_we1" usage="control" direction="unused"/>
+                <hwRef type="port" interface="amplitudes_out_d1" name="amplitudes_out_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="amplitudes_out_q1" name="amplitudes_out_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="phases_out" index="3" direction="unused" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="phases_out_address0" name="phases_out_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="phases_out_ce0" name="phases_out_ce0" usage="control" direction="unused"/>
+                <hwRef type="port" interface="phases_out_we0" name="phases_out_we0" usage="control" direction="unused"/>
+                <hwRef type="port" interface="phases_out_d0" name="phases_out_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="phases_out_q0" name="phases_out_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="phases_out_address1" name="phases_out_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="phases_out_ce1" name="phases_out_ce1" usage="control" direction="unused"/>
+                <hwRef type="port" interface="phases_out_we1" name="phases_out_we1" usage="control" direction="unused"/>
+                <hwRef type="port" interface="phases_out_d1" name="phases_out_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="phases_out_q1" name="phases_out_q1" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
     </Args>
     <Interfaces>
+        <Interface InterfaceName="amplitudes_out_address0" type="data" busTypeName="data" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="amplitudes_out_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>amplitudes_out_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="amplitudes_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="amplitudes_out_address1" type="data" busTypeName="data" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="amplitudes_out_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>amplitudes_out_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="amplitudes_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="amplitudes_out_d0" type="data" busTypeName="data" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="amplitudes_out_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>amplitudes_out_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="amplitudes_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="amplitudes_out_d1" type="data" busTypeName="data" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="amplitudes_out_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>amplitudes_out_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="amplitudes_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="amplitudes_out_q0" type="data" busTypeName="data" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="amplitudes_out_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>amplitudes_out_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="amplitudes_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="amplitudes_out_q1" type="data" busTypeName="data" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="amplitudes_out_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>amplitudes_out_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="amplitudes_out"/>
+            </constraints>
+        </Interface>
         <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
             <portMaps>
                 <portMap portMapName="ap_start">start</portMap>
@@ -259,36 +1058,179 @@
                 <port>ap_start</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="input_int" type="data" busTypeName="data" mode="slave" dataWidth="8">
+        <Interface InterfaceName="din_address0" type="data" busTypeName="data" mode="master" dataWidth="12">
             <portMaps>
-                <portMap portMapName="input_int">DATA</portMap>
+                <portMap portMapName="din_address0">DATA</portMap>
             </portMaps>
             <ports>
-                <port>input_int</port>
+                <port>din_address0</port>
             </ports>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="input_int"/>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="din"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="output_int" type="data" busTypeName="data" mode="slave" dataWidth="8">
+        <Interface InterfaceName="din_address1" type="data" busTypeName="data" mode="master" dataWidth="12">
             <portMaps>
-                <portMap portMapName="output_int">DATA</portMap>
+                <portMap portMapName="din_address1">DATA</portMap>
             </portMaps>
             <ports>
-                <port>output_int</port>
+                <port>din_address1</port>
             </ports>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="output_int"/>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="din"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="din_d0" type="data" busTypeName="data" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="din_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>din_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="din"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="din_d1" type="data" busTypeName="data" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="din_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>din_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="din"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="din_q0" type="data" busTypeName="data" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="din_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>din_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="din"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="din_q1" type="data" busTypeName="data" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="din_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>din_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="din"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="n_samples" type="data" busTypeName="data" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="n_samples">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>n_samples</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="n_samples"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="phases_out_address0" type="data" busTypeName="data" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="phases_out_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>phases_out_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="phases_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="phases_out_address1" type="data" busTypeName="data" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="phases_out_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>phases_out_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="phases_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="phases_out_d0" type="data" busTypeName="data" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="phases_out_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>phases_out_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="phases_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="phases_out_d1" type="data" busTypeName="data" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="phases_out_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>phases_out_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="phases_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="phases_out_q0" type="data" busTypeName="data" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="phases_out_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>phases_out_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="phases_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="phases_out_q1" type="data" busTypeName="data" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="phases_out_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>phases_out_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="phases_out"/>
             </constraints>
         </Interface>
     </Interfaces>
     <ReportHWInterface>
         <section name="HW Interfaces" level="0">
+            <item name="AP_MEMORY">
+                <table>
+                    <keys size="2">Interface, Bitwidth</keys>
+                    <column name="amplitudes_out_address0">4</column>
+                    <column name="amplitudes_out_address1">4</column>
+                    <column name="amplitudes_out_d0">32</column>
+                    <column name="amplitudes_out_d1">32</column>
+                    <column name="amplitudes_out_q0">32</column>
+                    <column name="amplitudes_out_q1">32</column>
+                    <column name="din_address0">12</column>
+                    <column name="din_address1">12</column>
+                    <column name="din_d0">32</column>
+                    <column name="din_d1">32</column>
+                    <column name="din_q0">32</column>
+                    <column name="din_q1">32</column>
+                    <column name="phases_out_address0">4</column>
+                    <column name="phases_out_address1">4</column>
+                    <column name="phases_out_d0">32</column>
+                    <column name="phases_out_d1">32</column>
+                    <column name="phases_out_q0">32</column>
+                    <column name="phases_out_q1">32</column>
+                </table>
+            </item>
             <item name="REGISTER">
                 <table>
                     <keys size="3">Interface, Mode, Bitwidth</keys>
-                    <column name="input_int">ap_none, 8</column>
-                    <column name="output_int">ap_none, 8</column>
+                    <column name="n_samples">ap_none, 32</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -304,15 +1246,46 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="input_int">in, unsigned char</column>
-                    <column name="output_int">unused, unsigned char*</column>
+                    <column name="din">unused, unsigned int*</column>
+                    <column name="n_samples">in, unsigned int</column>
+                    <column name="amplitudes_out">unused, float*</column>
+                    <column name="phases_out">unused, float*</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
                 <table isCollapsed="1">
-                    <keys size="3">Argument, HW Name, HW Type</keys>
-                    <column name="input_int">input_int, port</column>
-                    <column name="output_int">output_int, port</column>
+                    <keys size="4">Argument, HW Name, HW Type, HW Usage</keys>
+                    <column name="din">din_address0, port, offset</column>
+                    <column name="din">din_ce0, port, </column>
+                    <column name="din">din_we0, port, </column>
+                    <column name="din">din_d0, port, </column>
+                    <column name="din">din_q0, port, </column>
+                    <column name="din">din_address1, port, offset</column>
+                    <column name="din">din_ce1, port, </column>
+                    <column name="din">din_we1, port, </column>
+                    <column name="din">din_d1, port, </column>
+                    <column name="din">din_q1, port, </column>
+                    <column name="n_samples">n_samples, port, </column>
+                    <column name="amplitudes_out">amplitudes_out_address0, port, offset</column>
+                    <column name="amplitudes_out">amplitudes_out_ce0, port, </column>
+                    <column name="amplitudes_out">amplitudes_out_we0, port, </column>
+                    <column name="amplitudes_out">amplitudes_out_d0, port, </column>
+                    <column name="amplitudes_out">amplitudes_out_q0, port, </column>
+                    <column name="amplitudes_out">amplitudes_out_address1, port, offset</column>
+                    <column name="amplitudes_out">amplitudes_out_ce1, port, </column>
+                    <column name="amplitudes_out">amplitudes_out_we1, port, </column>
+                    <column name="amplitudes_out">amplitudes_out_d1, port, </column>
+                    <column name="amplitudes_out">amplitudes_out_q1, port, </column>
+                    <column name="phases_out">phases_out_address0, port, offset</column>
+                    <column name="phases_out">phases_out_ce0, port, </column>
+                    <column name="phases_out">phases_out_we0, port, </column>
+                    <column name="phases_out">phases_out_d0, port, </column>
+                    <column name="phases_out">phases_out_q0, port, </column>
+                    <column name="phases_out">phases_out_address1, port, offset</column>
+                    <column name="phases_out">phases_out_ce1, port, </column>
+                    <column name="phases_out">phases_out_we1, port, </column>
+                    <column name="phases_out">phases_out_d1, port, </column>
+                    <column name="phases_out">phases_out_q1, port, </column>
                 </table>
             </item>
         </section>

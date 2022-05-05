@@ -18,25 +18,37 @@ using namespace sc_core;
 using namespace sc_dt;
 
 // wrapc file define:
-#define AUTOTB_TVIN_input_int "../tv/cdatafile/c.LLSSineReconstruction.autotvin_input_int.dat"
-#define AUTOTB_TVOUT_input_int "../tv/cdatafile/c.LLSSineReconstruction.autotvout_input_int.dat"
+#define AUTOTB_TVIN_din "../tv/cdatafile/c.LLSSineReconstruction.autotvin_din.dat"
+#define AUTOTB_TVOUT_din "../tv/cdatafile/c.LLSSineReconstruction.autotvout_din.dat"
 // wrapc file define:
-#define AUTOTB_TVIN_output_int "../tv/cdatafile/c.LLSSineReconstruction.autotvin_output_int.dat"
-#define AUTOTB_TVOUT_output_int "../tv/cdatafile/c.LLSSineReconstruction.autotvout_output_int.dat"
+#define AUTOTB_TVIN_n_samples "../tv/cdatafile/c.LLSSineReconstruction.autotvin_n_samples.dat"
+#define AUTOTB_TVOUT_n_samples "../tv/cdatafile/c.LLSSineReconstruction.autotvout_n_samples.dat"
+// wrapc file define:
+#define AUTOTB_TVIN_amplitudes_out "../tv/cdatafile/c.LLSSineReconstruction.autotvin_amplitudes_out.dat"
+#define AUTOTB_TVOUT_amplitudes_out "../tv/cdatafile/c.LLSSineReconstruction.autotvout_amplitudes_out.dat"
+// wrapc file define:
+#define AUTOTB_TVIN_phases_out "../tv/cdatafile/c.LLSSineReconstruction.autotvin_phases_out.dat"
+#define AUTOTB_TVOUT_phases_out "../tv/cdatafile/c.LLSSineReconstruction.autotvout_phases_out.dat"
 
 #define INTER_TCL "../tv/cdatafile/ref.tcl"
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_input_int "../tv/rtldatafile/rtl.LLSSineReconstruction.autotvout_input_int.dat"
+#define AUTOTB_TVOUT_PC_din "../tv/rtldatafile/rtl.LLSSineReconstruction.autotvout_din.dat"
 // tvout file define:
-#define AUTOTB_TVOUT_PC_output_int "../tv/rtldatafile/rtl.LLSSineReconstruction.autotvout_output_int.dat"
+#define AUTOTB_TVOUT_PC_n_samples "../tv/rtldatafile/rtl.LLSSineReconstruction.autotvout_n_samples.dat"
+// tvout file define:
+#define AUTOTB_TVOUT_PC_amplitudes_out "../tv/rtldatafile/rtl.LLSSineReconstruction.autotvout_amplitudes_out.dat"
+// tvout file define:
+#define AUTOTB_TVOUT_PC_phases_out "../tv/rtldatafile/rtl.LLSSineReconstruction.autotvout_phases_out.dat"
 
 class INTER_TCL_FILE {
   public:
 INTER_TCL_FILE(const char* name) {
   mName = name; 
-  input_int_depth = 0;
-  output_int_depth = 0;
+  din_depth = 0;
+  n_samples_depth = 0;
+  amplitudes_out_depth = 0;
+  phases_out_depth = 0;
   trans_num =0;
 }
 ~INTER_TCL_FILE() {
@@ -54,8 +66,10 @@ INTER_TCL_FILE(const char* name) {
 }
 string get_depth_list () {
   stringstream total_list;
-  total_list << "{input_int " << input_int_depth << "}\n";
-  total_list << "{output_int " << output_int_depth << "}\n";
+  total_list << "{din " << din_depth << "}\n";
+  total_list << "{n_samples " << n_samples_depth << "}\n";
+  total_list << "{amplitudes_out " << amplitudes_out_depth << "}\n";
+  total_list << "{phases_out " << phases_out_depth << "}\n";
   return total_list.str();
 }
 void set_num (int num , int* class_num) {
@@ -65,8 +79,10 @@ void set_string(std::string list, std::string* class_list) {
   (*class_list) = list;
 }
   public:
-    int input_int_depth;
-    int output_int_depth;
+    int din_depth;
+    int n_samples_depth;
+    int amplitudes_out_depth;
+    int phases_out_depth;
     int trans_num;
   private:
     ofstream mFile;
@@ -108,9 +124,9 @@ static void RTLOutputCheckAndReplacement(std::string &AESL_token, std::string Po
       no_x = true;
   }
 }
-extern "C" void LLSSineReconstruction_hw_stub_wrapper(char, volatile void *);
+extern "C" void LLSSineReconstruction_hw_stub_wrapper(volatile void *, int, volatile void *, volatile void *);
 
-extern "C" void apatb_LLSSineReconstruction_hw(char __xlx_apatb_param_input_int, volatile void * __xlx_apatb_param_output_int) {
+extern "C" void apatb_LLSSineReconstruction_hw(volatile void * __xlx_apatb_param_din, int __xlx_apatb_param_n_samples, volatile void * __xlx_apatb_param_amplitudes_out, volatile void * __xlx_apatb_param_phases_out) {
   refine_signal_handler();
   fstream wrapc_switch_file_token;
   wrapc_switch_file_token.open(".hls_cosim_wrapc_switch.log");
@@ -130,43 +146,92 @@ static AESL_FILE_HANDLER aesl_fh;
 static INTER_TCL_FILE tcl_file(INTER_TCL);
 std::vector<char> __xlx_sprintf_buffer(1024);
 CodeState = ENTER_WRAPC;
-//input_int
-aesl_fh.touch(AUTOTB_TVIN_input_int);
-aesl_fh.touch(AUTOTB_TVOUT_input_int);
-//output_int
-aesl_fh.touch(AUTOTB_TVIN_output_int);
-aesl_fh.touch(AUTOTB_TVOUT_output_int);
+//din
+aesl_fh.touch(AUTOTB_TVIN_din);
+aesl_fh.touch(AUTOTB_TVOUT_din);
+//n_samples
+aesl_fh.touch(AUTOTB_TVIN_n_samples);
+aesl_fh.touch(AUTOTB_TVOUT_n_samples);
+//amplitudes_out
+aesl_fh.touch(AUTOTB_TVIN_amplitudes_out);
+aesl_fh.touch(AUTOTB_TVOUT_amplitudes_out);
+//phases_out
+aesl_fh.touch(AUTOTB_TVIN_phases_out);
+aesl_fh.touch(AUTOTB_TVOUT_phases_out);
 CodeState = DUMP_INPUTS;
-// print input_int Transactions
+unsigned __xlx_offset_byte_param_din = 0;
+// print din Transactions
 {
   sprintf(__xlx_sprintf_buffer.data(), "[[transaction]] %d\n", AESL_transaction);
-  aesl_fh.write(AUTOTB_TVIN_input_int, __xlx_sprintf_buffer.data());
-  {
-    sc_bv<8> __xlx_tmp_lv = *((char*)&__xlx_apatb_param_input_int);
+  aesl_fh.write(AUTOTB_TVIN_din, __xlx_sprintf_buffer.data());
+  {  __xlx_offset_byte_param_din = 0*4;
+  if (__xlx_apatb_param_din) {
+    for (int j = 0  - 0, e = 3841 - 0; j != e; ++j) {
+sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_din)[j];
 
     sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
-    aesl_fh.write(AUTOTB_TVIN_input_int, __xlx_sprintf_buffer.data()); 
+    aesl_fh.write(AUTOTB_TVIN_din, __xlx_sprintf_buffer.data()); 
+      }
   }
-  tcl_file.set_num(1, &tcl_file.input_int_depth);
-  sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
-  aesl_fh.write(AUTOTB_TVIN_input_int, __xlx_sprintf_buffer.data());
 }
-// print output_int Transactions
+  tcl_file.set_num(3841, &tcl_file.din_depth);
+  sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
+  aesl_fh.write(AUTOTB_TVIN_din, __xlx_sprintf_buffer.data());
+}
+// print n_samples Transactions
 {
   sprintf(__xlx_sprintf_buffer.data(), "[[transaction]] %d\n", AESL_transaction);
-  aesl_fh.write(AUTOTB_TVIN_output_int, __xlx_sprintf_buffer.data());
+  aesl_fh.write(AUTOTB_TVIN_n_samples, __xlx_sprintf_buffer.data());
   {
-    sc_bv<8> __xlx_tmp_lv = *((char*)__xlx_apatb_param_output_int);
+    sc_bv<32> __xlx_tmp_lv = *((int*)&__xlx_apatb_param_n_samples);
 
     sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
-    aesl_fh.write(AUTOTB_TVIN_output_int, __xlx_sprintf_buffer.data()); 
+    aesl_fh.write(AUTOTB_TVIN_n_samples, __xlx_sprintf_buffer.data()); 
   }
-  tcl_file.set_num(1, &tcl_file.output_int_depth);
+  tcl_file.set_num(1, &tcl_file.n_samples_depth);
   sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
-  aesl_fh.write(AUTOTB_TVIN_output_int, __xlx_sprintf_buffer.data());
+  aesl_fh.write(AUTOTB_TVIN_n_samples, __xlx_sprintf_buffer.data());
+}
+unsigned __xlx_offset_byte_param_amplitudes_out = 0;
+// print amplitudes_out Transactions
+{
+  sprintf(__xlx_sprintf_buffer.data(), "[[transaction]] %d\n", AESL_transaction);
+  aesl_fh.write(AUTOTB_TVIN_amplitudes_out, __xlx_sprintf_buffer.data());
+  {  __xlx_offset_byte_param_amplitudes_out = 0*4;
+  if (__xlx_apatb_param_amplitudes_out) {
+    for (int j = 0  - 0, e = 12 - 0; j != e; ++j) {
+sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_amplitudes_out)[j];
+
+    sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
+    aesl_fh.write(AUTOTB_TVIN_amplitudes_out, __xlx_sprintf_buffer.data()); 
+      }
+  }
+}
+  tcl_file.set_num(12, &tcl_file.amplitudes_out_depth);
+  sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
+  aesl_fh.write(AUTOTB_TVIN_amplitudes_out, __xlx_sprintf_buffer.data());
+}
+unsigned __xlx_offset_byte_param_phases_out = 0;
+// print phases_out Transactions
+{
+  sprintf(__xlx_sprintf_buffer.data(), "[[transaction]] %d\n", AESL_transaction);
+  aesl_fh.write(AUTOTB_TVIN_phases_out, __xlx_sprintf_buffer.data());
+  {  __xlx_offset_byte_param_phases_out = 0*4;
+  if (__xlx_apatb_param_phases_out) {
+    for (int j = 0  - 0, e = 12 - 0; j != e; ++j) {
+sc_bv<32> __xlx_tmp_lv = ((int*)__xlx_apatb_param_phases_out)[j];
+
+    sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv.to_string(SC_HEX).c_str());
+    aesl_fh.write(AUTOTB_TVIN_phases_out, __xlx_sprintf_buffer.data()); 
+      }
+  }
+}
+  tcl_file.set_num(12, &tcl_file.phases_out_depth);
+  sprintf(__xlx_sprintf_buffer.data(), "[[/transaction]] \n");
+  aesl_fh.write(AUTOTB_TVIN_phases_out, __xlx_sprintf_buffer.data());
 }
 CodeState = CALL_C_DUT;
-LLSSineReconstruction_hw_stub_wrapper(__xlx_apatb_param_input_int, __xlx_apatb_param_output_int);
+LLSSineReconstruction_hw_stub_wrapper(__xlx_apatb_param_din, __xlx_apatb_param_n_samples, __xlx_apatb_param_amplitudes_out, __xlx_apatb_param_phases_out);
 CodeState = DUMP_OUTPUTS;
 CodeState = DELETE_CHAR_BUFFERS;
 AESL_transaction++;

@@ -32626,7 +32626,7 @@ __attribute__((sdx_kernel("SlidingWindowMagSampleFetcher", 0))) void SlidingWind
   uint32_t buffer_in_9[10],
   uint32_t buffer_in_10[10],
   uint32_t buffer_in_11[10],
-  uint32_t buffer_out[12*10*32 + 1],
+  volatile uint32_t buffer_out[12*10*32 + 1],
 
   ap_uint<6> n_samples,
   uint8_t n_periods,
@@ -32652,7 +32652,7 @@ void loadSlidingWindow(
   int n_samples);
 
 uint32_t writeToRAM(
-  uint32_t buffer_out[12*10*32 + 1],
+  volatile uint32_t buffer_out[12*10*32 + 1],
   CyclicBuffer<SamplePeriod<10>, 32> *sliding_window,
   int n_periods);
 # 6 "../src/SlidingWindowMagSampleFetcher.cpp" 2
@@ -32674,7 +32674,7 @@ __attribute__((sdx_kernel("SlidingWindowMagSampleFetcher", 0))) void SlidingWind
   uint32_t buffer_in_9[10],
   uint32_t buffer_in_10[10],
   uint32_t buffer_in_11[10],
-  uint32_t buffer_out[12*10*32 + 1],
+  volatile uint32_t buffer_out[12*10*32 + 1],
   ap_uint<6> n_samples,
   uint8_t n_periods,
   uint32_t *n_samples_out
@@ -32720,9 +32720,7 @@ __attribute__((sdx_kernel("SlidingWindowMagSampleFetcher", 0))) void SlidingWind
    buffer_in_9, buffer_in_10, buffer_in_11,
    &sliding_window, n_samples);
 
- bool start_write = (bool)buffer_out[0];
-
- if (start_write) {
+ if (buffer_out[0] == 1) {
 
 
 
@@ -32734,7 +32732,7 @@ __attribute__((sdx_kernel("SlidingWindowMagSampleFetcher", 0))) void SlidingWind
 
 
 
-  buffer_out[0] = (uint32_t)false;
+  buffer_out[0] = 0;
 
  }
 }
@@ -32799,7 +32797,7 @@ void loadSlidingWindow(
 }
 
 uint32_t writeToRAM(
-  uint32_t buffer_out[12*10*32 + 1],
+  volatile uint32_t buffer_out[12*10*32 + 1],
   CyclicBuffer<SamplePeriod<10>, 32> *sliding_window,
   int n_periods) {
 

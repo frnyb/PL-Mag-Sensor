@@ -15,36 +15,260 @@
     "Triple": "fpga64-xilinx-none"
   },
   "Args": {
-    "input_int": {
+    "din": {
       "index": "0",
+      "direction": "unused",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "din_address0",
+          "name": "din_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "din_ce0",
+          "name": "din_ce0",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "din_we0",
+          "name": "din_we0",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "din_d0",
+          "name": "din_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "din_q0",
+          "name": "din_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "din_address1",
+          "name": "din_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "din_ce1",
+          "name": "din_ce1",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "din_we1",
+          "name": "din_we1",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "din_d1",
+          "name": "din_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "din_q1",
+          "name": "din_q1",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "n_samples": {
+      "index": "1",
       "direction": "in",
-      "srcType": "unsigned char",
-      "srcSize": "8",
+      "srcType": "unsigned int",
+      "srcSize": "32",
       "hwRefs": [{
           "type": "port",
-          "interface": "input_int",
-          "name": "input_int",
+          "interface": "n_samples",
+          "name": "n_samples",
           "usage": "data",
           "direction": "in"
         }]
     },
-    "output_int": {
-      "index": "1",
+    "amplitudes_out": {
+      "index": "2",
       "direction": "unused",
-      "srcType": "unsigned char*",
-      "srcSize": "8",
-      "hwRefs": [{
+      "srcType": "float*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
           "type": "port",
-          "interface": "output_int",
-          "name": "output_int",
+          "interface": "amplitudes_out_address0",
+          "name": "amplitudes_out_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_ce0",
+          "name": "amplitudes_out_ce0",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_we0",
+          "name": "amplitudes_out_we0",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_d0",
+          "name": "amplitudes_out_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_q0",
+          "name": "amplitudes_out_q0",
           "usage": "data",
           "direction": "in"
-        }]
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_address1",
+          "name": "amplitudes_out_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_ce1",
+          "name": "amplitudes_out_ce1",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_we1",
+          "name": "amplitudes_out_we1",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_d1",
+          "name": "amplitudes_out_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "amplitudes_out_q1",
+          "name": "amplitudes_out_q1",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "phases_out": {
+      "index": "3",
+      "direction": "unused",
+      "srcType": "float*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "phases_out_address0",
+          "name": "phases_out_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_ce0",
+          "name": "phases_out_ce0",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_we0",
+          "name": "phases_out_we0",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_d0",
+          "name": "phases_out_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_q0",
+          "name": "phases_out_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_address1",
+          "name": "phases_out_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_ce1",
+          "name": "phases_out_ce1",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_we1",
+          "name": "phases_out_we1",
+          "usage": "control",
+          "direction": "unused"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_d1",
+          "name": "phases_out_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "phases_out_q1",
+          "name": "phases_out_q1",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
     }
   },
   "HlsSolution": {
     "FlowTarget": "vivado",
-    "DirectiveTcl": ["set_directive_top LLSSineReconstruction -name LLSSineReconstruction"],
+    "DirectiveTcl": [
+      "set_directive_top LLSSineReconstruction -name LLSSineReconstruction",
+      "set_directive_top LLSSineReconstruction -name LLSSineReconstruction"
+    ],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "LLSSineReconstruction"
@@ -73,7 +297,7 @@
     "ZipFile": "xilinx_com_hls_LLSSineReconstruction_1_0.zip"
   },
   "Files": {
-    "CSource": ["..\/..\/LLS_SineReconstructor.cpp"],
+    "CSource": ["..\/..\/..\/src\/LLS_SineReconstructor.cpp"],
     "Vhdl": ["impl\/vhdl\/LLSSineReconstruction.vhd"],
     "Verilog": ["impl\/verilog\/LLSSineReconstruction.v"],
     "IpMisc": ["impl\/misc\/logo.png"],
@@ -87,6 +311,90 @@
     "Ip": []
   },
   "Interfaces": {
+    "amplitudes_out_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"amplitudes_out_address0": "DATA"},
+      "ports": ["amplitudes_out_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "amplitudes_out"
+        }]
+    },
+    "amplitudes_out_address1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"amplitudes_out_address1": "DATA"},
+      "ports": ["amplitudes_out_address1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "amplitudes_out"
+        }]
+    },
+    "amplitudes_out_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"amplitudes_out_d0": "DATA"},
+      "ports": ["amplitudes_out_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "amplitudes_out"
+        }]
+    },
+    "amplitudes_out_d1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"amplitudes_out_d1": "DATA"},
+      "ports": ["amplitudes_out_d1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "amplitudes_out"
+        }]
+    },
+    "amplitudes_out_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"amplitudes_out_q0": "DATA"},
+      "ports": ["amplitudes_out_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "amplitudes_out"
+        }]
+    },
+    "amplitudes_out_q1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"amplitudes_out_q1": "DATA"},
+      "ports": ["amplitudes_out_q1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "amplitudes_out"
+        }]
+    },
     "ap_ctrl": {
       "type": "ap_ctrl",
       "busTypeName": "acc_handshake",
@@ -104,32 +412,186 @@
         "ap_start"
       ]
     },
-    "input_int": {
+    "din_address0": {
       "type": "data",
       "busTypeName": "data",
-      "mode": "slave",
-      "dataWidth": "8",
-      "portMap": {"input_int": "DATA"},
-      "ports": ["input_int"],
+      "mode": "master",
+      "dataWidth": "12",
+      "portMap": {"din_address0": "DATA"},
+      "ports": ["din_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
-          "mode": "ap_none",
+          "mode": "ap_memory",
           "register_option": "0",
-          "argName": "input_int"
+          "argName": "din"
         }]
     },
-    "output_int": {
+    "din_address1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "12",
+      "portMap": {"din_address1": "DATA"},
+      "ports": ["din_address1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "din"
+        }]
+    },
+    "din_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"din_d0": "DATA"},
+      "ports": ["din_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "din"
+        }]
+    },
+    "din_d1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"din_d1": "DATA"},
+      "ports": ["din_d1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "din"
+        }]
+    },
+    "din_q0": {
       "type": "data",
       "busTypeName": "data",
       "mode": "slave",
-      "dataWidth": "8",
-      "portMap": {"output_int": "DATA"},
-      "ports": ["output_int"],
+      "dataWidth": "32",
+      "portMap": {"din_q0": "DATA"},
+      "ports": ["din_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "din"
+        }]
+    },
+    "din_q1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"din_q1": "DATA"},
+      "ports": ["din_q1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "din"
+        }]
+    },
+    "n_samples": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"n_samples": "DATA"},
+      "ports": ["n_samples"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_none",
           "register_option": "0",
-          "argName": "output_int"
+          "argName": "n_samples"
+        }]
+    },
+    "phases_out_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"phases_out_address0": "DATA"},
+      "ports": ["phases_out_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "phases_out"
+        }]
+    },
+    "phases_out_address1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"phases_out_address1": "DATA"},
+      "ports": ["phases_out_address1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "phases_out"
+        }]
+    },
+    "phases_out_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"phases_out_d0": "DATA"},
+      "ports": ["phases_out_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "phases_out"
+        }]
+    },
+    "phases_out_d1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"phases_out_d1": "DATA"},
+      "ports": ["phases_out_d1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "phases_out"
+        }]
+    },
+    "phases_out_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"phases_out_q0": "DATA"},
+      "ports": ["phases_out_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "phases_out"
+        }]
+    },
+    "phases_out_q1": {
+      "type": "data",
+      "busTypeName": "data",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"phases_out_q1": "DATA"},
+      "ports": ["phases_out_q1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "phases_out"
         }]
     }
   },
@@ -150,13 +612,129 @@
       "dir": "out",
       "width": "1"
     },
-    "input_int": {
-      "dir": "in",
-      "width": "8"
+    "din_address0": {
+      "dir": "out",
+      "width": "12"
     },
-    "output_int": {
+    "din_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "din_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "din_d0": {
+      "dir": "out",
+      "width": "32"
+    },
+    "din_q0": {
       "dir": "in",
-      "width": "8"
+      "width": "32"
+    },
+    "din_address1": {
+      "dir": "out",
+      "width": "12"
+    },
+    "din_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "din_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "din_d1": {
+      "dir": "out",
+      "width": "32"
+    },
+    "din_q1": {
+      "dir": "in",
+      "width": "32"
+    },
+    "n_samples": {
+      "dir": "in",
+      "width": "32"
+    },
+    "amplitudes_out_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "amplitudes_out_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "amplitudes_out_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "amplitudes_out_d0": {
+      "dir": "out",
+      "width": "32"
+    },
+    "amplitudes_out_q0": {
+      "dir": "in",
+      "width": "32"
+    },
+    "amplitudes_out_address1": {
+      "dir": "out",
+      "width": "4"
+    },
+    "amplitudes_out_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "amplitudes_out_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "amplitudes_out_d1": {
+      "dir": "out",
+      "width": "32"
+    },
+    "amplitudes_out_q1": {
+      "dir": "in",
+      "width": "32"
+    },
+    "phases_out_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "phases_out_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "phases_out_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "phases_out_d0": {
+      "dir": "out",
+      "width": "32"
+    },
+    "phases_out_q0": {
+      "dir": "in",
+      "width": "32"
+    },
+    "phases_out_address1": {
+      "dir": "out",
+      "width": "4"
+    },
+    "phases_out_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "phases_out_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "phases_out_d1": {
+      "dir": "out",
+      "width": "32"
+    },
+    "phases_out_q1": {
+      "dir": "in",
+      "width": "32"
     }
   },
   "ModuleInfo": {
@@ -204,7 +782,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-04-29 14:20:40 CEST",
+    "Time": "2022-05-01 14:51:33 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

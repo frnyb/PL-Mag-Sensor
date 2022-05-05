@@ -3,6 +3,30 @@
 	"modules": {
 		"design_1": {
 			"proto_instances": {
+				"/SlidingWindowMagSamp_0/s_axi_axi": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARADDR": { "actual": "s_axi_axi_ARADDR"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"ARREADY": { "actual": "s_axi_axi_ARREADY"},
+						"ARVALID": { "actual": "s_axi_axi_ARVALID"},
+						"AWADDR": { "actual": "s_axi_axi_AWADDR"},
+						"AWREADY": { "actual": "s_axi_axi_AWREADY"},
+						"AWVALID": { "actual": "s_axi_axi_AWVALID"},
+						"BREADY": { "actual": "s_axi_axi_BREADY"},
+						"BRESP": { "actual": "s_axi_axi_BRESP"},
+						"BVALID": { "actual": "s_axi_axi_BVALID"},
+						"RDATA": { "actual": "s_axi_axi_RDATA"},
+						"RREADY": { "actual": "s_axi_axi_RREADY"},
+						"RRESP": { "actual": "s_axi_axi_RRESP"},
+						"RVALID": { "actual": "s_axi_axi_RVALID"},
+						"WDATA": { "actual": "s_axi_axi_WDATA"},
+						"WREADY": { "actual": "s_axi_axi_WREADY"},
+						"WSTRB": { "actual": "s_axi_axi_WSTRB"},
+						"WVALID": { "actual": "s_axi_axi_WVALID"}
+					}
+				}
 			}
 		}
 	}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="mag_controller_tester" location="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vitis/mag_controller_tester" platform="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vitis/U96_test/export/U96_test/U96_test.xpfm" platformUID="sdu.dk/diii:u96v2_sbc_mp4d:u96v2_sbc_mp4d:1.0(custom)" systemProject="mag_controller_tester_system" sysConfig="U96_test" runtime="cpp" cpu="standalone_domain" cpuInstance="psu_cortexa53_0" os="standalone" dimmRepoPath="" mssSignature="2368813d4f432d5b9e8cd1efa5a28e03">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.76799432">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.328460392" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'writeToRAM'" level="0">
-<item name = "Date">Sat Apr 30 14:36:37 2022
+<item name = "Date">Sun May  1 13:11:28 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">SlidingWindowMagSampleFetcher</item>
@@ -106,19 +106,19 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln162_1_fu_6940_p2">+, 0, 0, 39, 32, 4</column>
-<column name="add_ln162_fu_6879_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln169_fu_6893_p2">+, 0, 0, 12, 4, 1</column>
-<column name="add_ln178_1_fu_6930_p2">+, 0, 0, 19, 12, 1</column>
-<column name="add_ln178_fu_6915_p2">+, 0, 0, 40, 33, 1</column>
+<column name="add_ln160_1_fu_6940_p2">+, 0, 0, 39, 32, 4</column>
+<column name="add_ln160_fu_6879_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln167_fu_6893_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln176_1_fu_6930_p2">+, 0, 0, 19, 12, 1</column>
+<column name="add_ln176_fu_6915_p2">+, 0, 0, 40, 33, 1</column>
 <column name="i_fu_6718_p2">+, 0, 0, 39, 32, 2</column>
 <column name="j_1_fu_6810_p2">+, 0, 0, 13, 6, 1</column>
 <column name="buffer_idx_fu_6730_p2">-, 0, 0, 39, 32, 32</column>
-<column name="sub_ln162_fu_6869_p2">-, 0, 0, 18, 11, 11</column>
-<column name="icmp_ln153_fu_6724_p2">icmp, 0, 0, 20, 32, 1</column>
-<column name="icmp_ln162_1_fu_6820_p2">icmp, 0, 0, 10, 6, 6</column>
-<column name="icmp_ln162_fu_6804_p2">icmp, 0, 0, 10, 6, 1</column>
-<column name="icmp_ln169_fu_6905_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="sub_ln160_fu_6869_p2">-, 0, 0, 18, 11, 11</column>
+<column name="icmp_ln151_fu_6724_p2">icmp, 0, 0, 20, 32, 1</column>
+<column name="icmp_ln160_1_fu_6820_p2">icmp, 0, 0, 10, 6, 6</column>
+<column name="icmp_ln160_fu_6804_p2">icmp, 0, 0, 10, 6, 1</column>
+<column name="icmp_ln167_fu_6905_p2">icmp, 0, 0, 9, 4, 4</column>
 <column name="icmp_ln32_fu_6739_p2">icmp, 0, 0, 20, 32, 7</column>
 <column name="icmp_ln34_fu_6825_p2">icmp, 0, 0, 10, 6, 4</column>
 <column name="buffer_idx_3_fu_6745_p3">select, 0, 0, 5, 1, 5</column>
@@ -250,8 +250,8 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="i_08_in_reg_6640">32, 0, 32, 0</column>
 <column name="i_reg_8291">32, 0, 32, 0</column>
-<column name="icmp_ln162_reg_9708">1, 0, 1, 0</column>
-<column name="icmp_ln169_reg_9874">1, 0, 1, 0</column>
+<column name="icmp_ln160_reg_9708">1, 0, 1, 0</column>
+<column name="icmp_ln167_reg_9874">1, 0, 1, 0</column>
 <column name="idx_2_reg_6660">32, 0, 32, 0</column>
 <column name="idx_4_reg_6670">33, 0, 33, 0</column>
 <column name="idx_fu_588">32, 0, 32, 0</column>
@@ -260,7 +260,7 @@
 <column name="k_reg_6679">4, 0, 4, 0</column>
 <column name="sample_period_count_s_reg_9701">6, 0, 6, 0</column>
 <column name="sext_ln34_reg_8278">32, 0, 32, 0</column>
-<column name="trunc_ln178_reg_9888">12, 0, 12, 0</column>
+<column name="trunc_ln176_reg_9888">12, 0, 12, 0</column>
 <column name="trunc_ln22_reg_8283">5, 0, 5, 0</column>
 <column name="zext_ln40_reg_9720">4, 0, 64, 60</column>
 <column name="zext_ln46_reg_8299">5, 0, 64, 59</column>

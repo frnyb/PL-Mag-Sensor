@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="ADCGainTester" location="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vitis/ADCGainTester" platform="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/vitis/ADCGainTester_platform/export/ADCGainTester_platform/ADCGainTester_platform.xpfm" platformUID="sdu.dk/diii:u96v2_sbc_mp4d:u96v2_sbc_mp4d:1.0(custom)" systemProject="ADCGainTester_system" sysConfig="ADCGainTester_platform" runtime="cpp" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="1c841cbf17dc3e8bee51021f6300de8d">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1753563966">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.919069767" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

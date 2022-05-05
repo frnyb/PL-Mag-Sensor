@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: DIII:hls:SlidingWindowMagSampleFetcher:1.0
--- IP Revision: 2112484505
+-- IP Revision: 2112484538
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -70,10 +70,25 @@ ENTITY design_1_SlidingWindowMagSamp_0_0 IS
     buffer_out_ce0 : OUT STD_LOGIC;
     buffer_out_we0 : OUT STD_LOGIC;
     n_samples_ap_vld : IN STD_LOGIC;
-    n_samples_out_ap_vld : OUT STD_LOGIC;
-    start_write_o_ap_vld : OUT STD_LOGIC;
+    s_axi_axi_AWADDR : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    s_axi_axi_AWVALID : IN STD_LOGIC;
+    s_axi_axi_AWREADY : OUT STD_LOGIC;
+    s_axi_axi_WDATA : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axi_axi_WSTRB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    s_axi_axi_WVALID : IN STD_LOGIC;
+    s_axi_axi_WREADY : OUT STD_LOGIC;
+    s_axi_axi_BRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    s_axi_axi_BVALID : OUT STD_LOGIC;
+    s_axi_axi_BREADY : IN STD_LOGIC;
+    s_axi_axi_ARADDR : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    s_axi_axi_ARVALID : IN STD_LOGIC;
+    s_axi_axi_ARREADY : OUT STD_LOGIC;
+    s_axi_axi_RDATA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axi_axi_RRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    s_axi_axi_RVALID : OUT STD_LOGIC;
+    s_axi_axi_RREADY : IN STD_LOGIC;
     ap_clk : IN STD_LOGIC;
-    ap_rst : IN STD_LOGIC;
+    ap_rst_n : IN STD_LOGIC;
     ap_start : IN STD_LOGIC;
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
@@ -104,11 +119,8 @@ ENTITY design_1_SlidingWindowMagSamp_0_0 IS
     buffer_in_11_q0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     buffer_out_address0 : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     buffer_out_d0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    n_samples : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-    n_periods : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    n_samples_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    start_write_i : IN STD_LOGIC;
-    start_write_o : OUT STD_LOGIC
+    buffer_out_q0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    n_samples : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
   );
 END design_1_SlidingWindowMagSamp_0_0;
 
@@ -116,6 +128,10 @@ ARCHITECTURE design_1_SlidingWindowMagSamp_0_0_arch OF design_1_SlidingWindowMag
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_SlidingWindowMagSamp_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT SlidingWindowMagSampleFetcher IS
+    GENERIC (
+      C_S_AXI_AXI_ADDR_WIDTH : INTEGER;
+      C_S_AXI_AXI_DATA_WIDTH : INTEGER
+    );
     PORT (
       buffer_in_0_ce0 : OUT STD_LOGIC;
       buffer_in_1_ce0 : OUT STD_LOGIC;
@@ -132,10 +148,25 @@ ARCHITECTURE design_1_SlidingWindowMagSamp_0_0_arch OF design_1_SlidingWindowMag
       buffer_out_ce0 : OUT STD_LOGIC;
       buffer_out_we0 : OUT STD_LOGIC;
       n_samples_ap_vld : IN STD_LOGIC;
-      n_samples_out_ap_vld : OUT STD_LOGIC;
-      start_write_o_ap_vld : OUT STD_LOGIC;
+      s_axi_axi_AWADDR : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+      s_axi_axi_AWVALID : IN STD_LOGIC;
+      s_axi_axi_AWREADY : OUT STD_LOGIC;
+      s_axi_axi_WDATA : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s_axi_axi_WSTRB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      s_axi_axi_WVALID : IN STD_LOGIC;
+      s_axi_axi_WREADY : OUT STD_LOGIC;
+      s_axi_axi_BRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+      s_axi_axi_BVALID : OUT STD_LOGIC;
+      s_axi_axi_BREADY : IN STD_LOGIC;
+      s_axi_axi_ARADDR : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+      s_axi_axi_ARVALID : IN STD_LOGIC;
+      s_axi_axi_ARREADY : OUT STD_LOGIC;
+      s_axi_axi_RDATA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s_axi_axi_RRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+      s_axi_axi_RVALID : OUT STD_LOGIC;
+      s_axi_axi_RREADY : IN STD_LOGIC;
       ap_clk : IN STD_LOGIC;
-      ap_rst : IN STD_LOGIC;
+      ap_rst_n : IN STD_LOGIC;
       ap_start : IN STD_LOGIC;
       ap_done : OUT STD_LOGIC;
       ap_idle : OUT STD_LOGIC;
@@ -166,11 +197,8 @@ ARCHITECTURE design_1_SlidingWindowMagSamp_0_0_arch OF design_1_SlidingWindowMag
       buffer_in_11_q0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       buffer_out_address0 : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       buffer_out_d0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      n_samples : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-      n_periods : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      n_samples_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      start_write_i : IN STD_LOGIC;
-      start_write_o : OUT STD_LOGIC
+      buffer_out_q0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      n_samples : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
     );
   END COMPONENT SlidingWindowMagSampleFetcher;
   ATTRIBUTE SDX_KERNEL : STRING;
@@ -183,16 +211,10 @@ ARCHITECTURE design_1_SlidingWindowMagSamp_0_0_arch OF design_1_SlidingWindowMag
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_SlidingWindowMagSamp_0_0_arch: ARCHITECTURE IS "HLS";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF start_write_o: SIGNAL IS "XIL_INTERFACENAME start_write_o, LAYERED_METADATA undef";
-  ATTRIBUTE X_INTERFACE_INFO OF start_write_o: SIGNAL IS "xilinx.com:signal:data:1.0 start_write_o DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF start_write_i: SIGNAL IS "XIL_INTERFACENAME start_write_i, LAYERED_METADATA undef";
-  ATTRIBUTE X_INTERFACE_INFO OF start_write_i: SIGNAL IS "xilinx.com:signal:data:1.0 start_write_i DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF n_samples_out: SIGNAL IS "XIL_INTERFACENAME n_samples_out, LAYERED_METADATA undef";
-  ATTRIBUTE X_INTERFACE_INFO OF n_samples_out: SIGNAL IS "xilinx.com:signal:data:1.0 n_samples_out DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF n_periods: SIGNAL IS "XIL_INTERFACENAME n_periods, LAYERED_METADATA undef";
-  ATTRIBUTE X_INTERFACE_INFO OF n_periods: SIGNAL IS "xilinx.com:signal:data:1.0 n_periods DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF n_samples: SIGNAL IS "XIL_INTERFACENAME n_samples, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF n_samples: SIGNAL IS "xilinx.com:signal:data:1.0 n_samples DATA";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF buffer_out_q0: SIGNAL IS "XIL_INTERFACENAME buffer_out_q0, LAYERED_METADATA undef";
+  ATTRIBUTE X_INTERFACE_INFO OF buffer_out_q0: SIGNAL IS "xilinx.com:signal:data:1.0 buffer_out_q0 DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF buffer_out_d0: SIGNAL IS "XIL_INTERFACENAME buffer_out_d0, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF buffer_out_d0: SIGNAL IS "xilinx.com:signal:data:1.0 buffer_out_d0 DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF buffer_out_address0: SIGNAL IS "XIL_INTERFACENAME buffer_out_address0, LAYERED_METADATA undef";
@@ -249,12 +271,35 @@ ARCHITECTURE design_1_SlidingWindowMagSamp_0_0_arch OF design_1_SlidingWindowMag
   ATTRIBUTE X_INTERFACE_INFO OF ap_idle: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl idle";
   ATTRIBUTE X_INTERFACE_INFO OF ap_done: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done";
   ATTRIBUTE X_INTERFACE_INFO OF ap_start: SIGNAL IS "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF ap_rst: SIGNAL IS "XIL_INTERFACENAME ap_rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF ap_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 ap_rst RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF ap_clk: SIGNAL IS "XIL_INTERFACENAME ap_clk, ASSOCIATED_RESET ap_rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_ap_clk_0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF ap_rst_n: SIGNAL IS "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF ap_rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 ap_rst_n RST";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF ap_clk: SIGNAL IS "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_axi, ASSOCIATED_RESET ap_rst_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_ap_clk_0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF ap_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 ap_clk CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_RREADY: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi RREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_RVALID: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi RVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_RRESP: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi RRESP";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_RDATA: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi RDATA";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_ARREADY: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi ARREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_ARVALID: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi ARVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_ARADDR: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi ARADDR";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_BREADY: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi BREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_BVALID: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi BVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_BRESP: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi BRESP";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_WREADY: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi WREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_WVALID: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi WVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_WSTRB: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi WSTRB";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_WDATA: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi WDATA";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_AWREADY: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi AWREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_AWVALID: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi AWVALID";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_axi_AWADDR: SIGNAL IS "XIL_INTERFACENAME s_axi_axi, ADDR_WIDTH 5, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, FREQ_HZ 100000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREAD" & 
+"S 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_axi_AWADDR: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_axi AWADDR";
 BEGIN
   U0 : SlidingWindowMagSampleFetcher
+    GENERIC MAP (
+      C_S_AXI_AXI_ADDR_WIDTH => 5,
+      C_S_AXI_AXI_DATA_WIDTH => 32
+    )
     PORT MAP (
       buffer_in_0_ce0 => buffer_in_0_ce0,
       buffer_in_1_ce0 => buffer_in_1_ce0,
@@ -271,10 +316,25 @@ BEGIN
       buffer_out_ce0 => buffer_out_ce0,
       buffer_out_we0 => buffer_out_we0,
       n_samples_ap_vld => n_samples_ap_vld,
-      n_samples_out_ap_vld => n_samples_out_ap_vld,
-      start_write_o_ap_vld => start_write_o_ap_vld,
+      s_axi_axi_AWADDR => s_axi_axi_AWADDR,
+      s_axi_axi_AWVALID => s_axi_axi_AWVALID,
+      s_axi_axi_AWREADY => s_axi_axi_AWREADY,
+      s_axi_axi_WDATA => s_axi_axi_WDATA,
+      s_axi_axi_WSTRB => s_axi_axi_WSTRB,
+      s_axi_axi_WVALID => s_axi_axi_WVALID,
+      s_axi_axi_WREADY => s_axi_axi_WREADY,
+      s_axi_axi_BRESP => s_axi_axi_BRESP,
+      s_axi_axi_BVALID => s_axi_axi_BVALID,
+      s_axi_axi_BREADY => s_axi_axi_BREADY,
+      s_axi_axi_ARADDR => s_axi_axi_ARADDR,
+      s_axi_axi_ARVALID => s_axi_axi_ARVALID,
+      s_axi_axi_ARREADY => s_axi_axi_ARREADY,
+      s_axi_axi_RDATA => s_axi_axi_RDATA,
+      s_axi_axi_RRESP => s_axi_axi_RRESP,
+      s_axi_axi_RVALID => s_axi_axi_RVALID,
+      s_axi_axi_RREADY => s_axi_axi_RREADY,
       ap_clk => ap_clk,
-      ap_rst => ap_rst,
+      ap_rst_n => ap_rst_n,
       ap_start => ap_start,
       ap_done => ap_done,
       ap_idle => ap_idle,
@@ -305,10 +365,7 @@ BEGIN
       buffer_in_11_q0 => buffer_in_11_q0,
       buffer_out_address0 => buffer_out_address0,
       buffer_out_d0 => buffer_out_d0,
-      n_samples => n_samples,
-      n_periods => n_periods,
-      n_samples_out => n_samples_out,
-      start_write_i => start_write_i,
-      start_write_o => start_write_o
+      buffer_out_q0 => buffer_out_q0,
+      n_samples => n_samples
     );
 END design_1_SlidingWindowMagSamp_0_0_arch;

@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651234839772">
-  <ports id="1" name="input_int" type="PortType" originalName="input_int" coreId="543516513" bitwidth="8"/>
-  <ports id="2" name="output_int" type="PortType" originalName="output_int" coreId="3022257448" bitwidth="8"/>
-  <blocks id="9" name="LLSSineReconstruction" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="_ln9" lineNumber="9" fileName="LLS_SineReconstructor.cpp" fileDirectory=".." coreId="12" contextFuncName="LLSSineReconstruction" opcode="ret" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="LLS_SineReconstructor.cpp" linenumber="9" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651409493380">
+  <ports id="1" name="din" type="PortType" coreId="2196104056" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="3841"/>
+  <ports id="2" name="n_samples" type="PortType" originalName="n_samples" coreId="0" bitwidth="32"/>
+  <ports id="3" name="amplitudes_out" type="PortType" coreId="0" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="12"/>
+  <ports id="4" name="phases_out" type="PortType" coreId="0" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="12"/>
+  <blocks id="15" name="LLSSineReconstruction" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln45" lineNumber="45" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="8" contextFuncName="LLSSineReconstruction" opcode="ret" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="45" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
     </node_objs>
-    <fileValidLineNumbers fileName="LLS_SineReconstructor.cpp">
-      <validLinenumbers>9</validLinenumbers>
+    <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
+      <validLinenumbers>45</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
-  <ioPorts name="input_int"/>
-  <ioPorts name="output_int"/>
+  <ioPorts name="n_samples"/>
   <fsm>
     <states id="1">
-      <operations id="3" stage="1" latency="1"/>
-      <operations id="4" stage="1" latency="1"/>
       <operations id="5" stage="1" latency="1"/>
       <operations id="6" stage="1" latency="1"/>
       <operations id="7" stage="1" latency="1"/>
       <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
     </states>
   </fsm>
   <CFGRegionsRoot>
     <cfgRegions mId="1" mTag="LLSSineReconstruction" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>9</basicBlocks>
+      <basicBlocks>15</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>

@@ -366,7 +366,7 @@
     "buffer_out": {
       "index": "12",
       "direction": "inout",
-      "srcType": "unsigned int*",
+      "srcType": "*",
       "srcSize": "32",
       "hwRefs": [
         {
@@ -1363,11 +1363,11 @@
       "Instances": [
         {
           "ModuleName": "loadSlidingWindow",
-          "InstanceName": "grp_loadSlidingWindow_fu_604"
+          "InstanceName": "grp_loadSlidingWindow_fu_606"
         },
         {
           "ModuleName": "writeToRAM",
-          "InstanceName": "grp_writeToRAM_fu_1122"
+          "InstanceName": "grp_writeToRAM_fu_1124"
         }
       ]
     },
@@ -1549,7 +1549,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-04-30 14:38:21 CEST",
+    "Time": "2022-05-01 13:12:03 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

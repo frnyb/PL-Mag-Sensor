@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'LLSSineReconstruction'" level="0">
-<item name = "Date">Fri Apr 29 14:20:39 2022
+<item name = "Date">Sun May  1 14:51:33 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">LLS_SineReconstructor</item>
@@ -98,8 +98,37 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, LLSSineReconstruction, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, LLSSineReconstruction, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, LLSSineReconstruction, return value</column>
-<column name="input_int">in, 8, ap_none, input_int, scalar</column>
-<column name="output_int">in, 8, ap_none, output_int, pointer</column>
+<column name="din_address0">out, 12, ap_memory, din, array</column>
+<column name="din_ce0">out, 1, ap_memory, din, array</column>
+<column name="din_we0">out, 1, ap_memory, din, array</column>
+<column name="din_d0">out, 32, ap_memory, din, array</column>
+<column name="din_q0">in, 32, ap_memory, din, array</column>
+<column name="din_address1">out, 12, ap_memory, din, array</column>
+<column name="din_ce1">out, 1, ap_memory, din, array</column>
+<column name="din_we1">out, 1, ap_memory, din, array</column>
+<column name="din_d1">out, 32, ap_memory, din, array</column>
+<column name="din_q1">in, 32, ap_memory, din, array</column>
+<column name="n_samples">in, 32, ap_none, n_samples, scalar</column>
+<column name="amplitudes_out_address0">out, 4, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_ce0">out, 1, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_we0">out, 1, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_d0">out, 32, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_q0">in, 32, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_address1">out, 4, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_ce1">out, 1, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_we1">out, 1, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_d1">out, 32, ap_memory, amplitudes_out, array</column>
+<column name="amplitudes_out_q1">in, 32, ap_memory, amplitudes_out, array</column>
+<column name="phases_out_address0">out, 4, ap_memory, phases_out, array</column>
+<column name="phases_out_ce0">out, 1, ap_memory, phases_out, array</column>
+<column name="phases_out_we0">out, 1, ap_memory, phases_out, array</column>
+<column name="phases_out_d0">out, 32, ap_memory, phases_out, array</column>
+<column name="phases_out_q0">in, 32, ap_memory, phases_out, array</column>
+<column name="phases_out_address1">out, 4, ap_memory, phases_out, array</column>
+<column name="phases_out_ce1">out, 1, ap_memory, phases_out, array</column>
+<column name="phases_out_we1">out, 1, ap_memory, phases_out, array</column>
+<column name="phases_out_d1">out, 32, ap_memory, phases_out, array</column>
+<column name="phases_out_q1">in, 32, ap_memory, phases_out, array</column>
 </table>
 </item>
 </section>

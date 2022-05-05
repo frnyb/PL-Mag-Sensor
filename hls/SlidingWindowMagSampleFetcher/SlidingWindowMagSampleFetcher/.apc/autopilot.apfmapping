@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="sample_period.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h"/>
-    <originFiles name="sample.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h"/>
-    <originFiles name="cyclic_buffer.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h"/>
-    <originFiles name="SlidingWindowMagSampleFetcher.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/SlidingWindowMagSampleFetcher.h"/>
     <originFiles name="SlidingWindowMagSampleFetcher.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/SlidingWindowMagSampleFetcher.cpp"/>
+    <originFiles name="SlidingWindowMagSampleFetcher.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/SlidingWindowMagSampleFetcher.h"/>
+    <originFiles name="cyclic_buffer.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h"/>
+    <originFiles name="sample.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h"/>
+    <originFiles name="sample_period.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h"/>
   </source>
   <testbench>
     <originFiles name="sliding_window_mag_sample_fetcher_test_bench.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sliding_window_mag_sample_fetcher_test_bench.cpp"/>

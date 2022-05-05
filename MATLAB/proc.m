@@ -1,8 +1,8 @@
 %% Parameters
-yaw_mag0 = -deg2rad(90+45);
-yaw_mag1 = deg2rad(90+45);
-yaw_mag2 = deg2rad(45);
-yaw_mag3 = -deg2rad(45);
+yaw_mag0 = deg2rad(90+45);
+yaw_mag1 = -deg2rad(90+45);
+yaw_mag2 = -deg2rad(180+45);
+yaw_mag3 = deg2rad(45);
 
 R_mag0 = [  cos(yaw_mag0) -sin(yaw_mag0) 0;
             sin(yaw_mag0) cos(yaw_mag0) 0;
@@ -29,8 +29,25 @@ p_mag3 = [-1;-1;0]*0.17;
 
 positions = [p_mag0 p_mag1 p_mag2 p_mag3];
 
+u0 = 1.25663706 * 10^(-6);
+
+% %% Plot mag positions
+% 
+% % for i=1:4
+% for i=1:3
+%     plot3([positions(1,i) positions(1,i)+norm_mag_vecs(1,i)], ...
+%         [positions(2,i) positions(2,i)+norm_mag_vecs(2,i)], ...
+%         [positions(3,i) positions(3,i)+norm_mag_vecs(3,i)]);
+%     hold on;
+% end
+% 
+% hold off;
+% legend("mag0", "mag1", "mag2", "mag3");
+% title("Magnetic vectors");
+% axis equal;
+
 %% Load data
-mag_data = importdata('direction_test/0yz/1.txt');
+mag_data = importdata('old_test/airport1/1.txt');
 mag_data = mag_data.data;
 
 mag0_samples = mag_data(:,13:15);
@@ -88,6 +105,7 @@ mag_samples(:,7:9) = mag2_samples;
 mag_samples(:,10:12) = mag3_samples;
 
 %% Plot sampled data
+figure;
 for i=1:4
     subplot(4,1,i);
     hold on;
@@ -276,6 +294,17 @@ for i=1:2
 end
 
 pl_dir = mean(cross_vecs,2);
+pl_dir = pl_dir / norm(pl_dir);
+
+unit_x = [1;0;0];
+
+a = cross(pl_dir, unit_x);
+a = a / norm(a);
+
+q = [dot(unit_x, pl_dir) a(1) a(2) a(3)];
+pl_dir_q = q / norm(q);
+
+pl_dir_rpy = quat2eul(q, "xyz");
 
 %% Plot pl direction
 figure;
@@ -314,36 +343,41 @@ for i=1:4
     proj_mag_positions(:,i) = proj_mag_pos;
 end
 
-%% Powerline position LLS
-% A_pos = zeros(5, 3);
-A_pos = zeros(4, 3);
-% b_pos = zeros(5);
-b_pos = zeros(4, 1);
-
-A_pos(1,:) = pl_dir';
-
-% for i=1:4
-for i=1:3
-    A_pos(i+1,:) = norm_mag_vecs(:,i)';
-    b_pos(i+1) = dot(norm_mag_vecs(:,i), proj_mag_positions(:,i));
-end
-
-x_pos = (A_pos'*A_pos)\A_pos'*b_pos;
-
-x_pos
+%% Powerline position computation
+% x = optimizePositions();
 
 
 
-
-
-
-
-
-
-
-
-
-
+%% Functions
+% function x = optCostFunction()
+%     p1 = x(1:3);
+%     p2 = x(4:6);
+%     I = x(7);
+%     
+%     C = I*u0/(2*pi);
+%     
+%     SSE = 0;
+%     
+%     for j=1:3
+%         
+%         Bj = B_j(p1,p2,
+%         sum = sum + 
+%     end
+% end
+% 
+% function B = B_j(p1,p2,mj,C)
+%     B = B_ij(p1,mj,C) - B_ij(p2,mj,C);
+% end
+% 
+% function B = B_ij(pi,mj,C)
+%     B = zeros(3,1);
+%         
+%     B(1) = 0;
+%     B(2) = C * (pi(3)-mj(3))/(((pi(2)-mj(2))^2+(pi(3)-mj(3))^2)^2);
+%     B(2) = C * (-pi(2)+mj(2))/(((pi(2)-mj(2))^2+(pi(3)-mj(3))^2)^2);
+% end
+% 
+% 
 
 
 

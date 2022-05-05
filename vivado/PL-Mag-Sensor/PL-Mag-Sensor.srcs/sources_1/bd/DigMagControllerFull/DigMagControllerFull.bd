@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xDE88FC70C8FA8D7B",
+      "boundary_crc": "0xC2771937CDCDBB79",
       "device": "xczu3eg-sbva484-1-i",
       "gen_directory": "../../../../PL-Mag-Sensor.gen/sources_1/bd/DigMagControllerFull",
       "name": "DigMagControllerFull",
@@ -186,7 +186,7 @@
       },
       "data_out": {
         "direction": "O",
-        "left": "15",
+        "left": "11",
         "right": "0"
       },
       "irq_out": {
@@ -312,24 +312,6 @@
           "rst_n",
           "BufferFlowControl_0/rst_n",
           "DigMagController_0/rst_n"
-        ]
-      },
-      "DigMagController_0_ch_out": {
-        "ports": [
-          "ch_out",
-          "BufferFlowControl_0/adc_ch"
-        ]
-      },
-      "DigMagController_0_dout": {
-        "ports": [
-          "data_out",
-          "BufferFlowControl_0/adc_din"
-        ]
-      },
-      "DigMagController_0_irq_out": {
-        "ports": [
-          "irq_out",
-          "BufferFlowControl_0/adc_irq"
         ]
       },
       "BufferFlowControl_0_bfr_busy": {
@@ -648,6 +630,27 @@
         "ports": [
           "mag1_sda_i",
           "DigMagController_0/mag1_sda_i"
+        ]
+      },
+      "DigMagController_0_ch_out": {
+        "ports": [
+          "DigMagController_0/ch_out",
+          "BufferFlowControl_0/adc_ch",
+          "ch_out"
+        ]
+      },
+      "DigMagController_0_dout": {
+        "ports": [
+          "DigMagController_0/dout",
+          "BufferFlowControl_0/adc_din",
+          "data_out"
+        ]
+      },
+      "DigMagController_0_irq_out": {
+        "ports": [
+          "DigMagController_0/irq_out",
+          "BufferFlowControl_0/adc_irq",
+          "irq_out"
         ]
       }
     }

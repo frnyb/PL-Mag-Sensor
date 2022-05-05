@@ -5,6 +5,11 @@
                 <option name="name" value="LLSSineReconstruction"/>
             </pragma>
         </directive>
+        <directive functionName="LLSSineReconstruction" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="LLSSineReconstruction"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

@@ -840,7 +840,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>15f43de9</spirit:value>
+            <spirit:value>3e08088c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -856,7 +856,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>884a51d5</spirit:value>
+            <spirit:value>4bfbe2aa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -872,7 +872,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>baf213be</spirit:value>
+            <spirit:value>c6519f82</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -888,7 +888,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4bbde1af</spirit:value>
+            <spirit:value>30217c68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2192,7 +2192,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/SlidingWindowMagSampleFetcher.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9949433a</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_d52a83fc</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2372,8 +2372,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>SlidingWindowMagSampleFetcher</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112484538</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-04-30T12:38:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112485892</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-05-01T11:12:11Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2383,7 +2383,7 @@
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="e8ac6a3e"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="54c6be30"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a6fdd185"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1c73faa7"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c8e9e764"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="794791e9"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="790db684"/>

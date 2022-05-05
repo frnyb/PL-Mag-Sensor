@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651322200252">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651403491071">
   <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
@@ -69,16 +69,15 @@
   <edges id="338" source_obj="//@ports.12" sink_obj="//@blocks.0/@node_objs.3"/>
   <edges id="342" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
   <edges id="343" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
-  <edges id="345" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="346" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="346" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
   <edges id="347" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="350" source_obj="//@ports.12" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="351" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="354" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@ports.15"/>
-  <edges id="355" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="357" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="358" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
-  <edges id="359" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="348" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="351" source_obj="//@ports.12" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="352" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="355" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@ports.15"/>
+  <edges id="356" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="358" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="359" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
   <edges id="360" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="361" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="362" sink_obj="//@blocks.0/@node_objs.2"/>
@@ -322,7 +321,7 @@
   <edges id="600" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="601" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="602" sink_obj="//@blocks.0/@node_objs.2"/>
-  <edges id="603" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="603" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="604" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="605" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="606" sink_obj="//@blocks.1/@node_objs.0"/>
@@ -565,19 +564,20 @@
   <edges id="843" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="844" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="845" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="1219" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="846" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="1220" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
-  <edges id="1221" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
-  <edges id="1222" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="1223" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="1224" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="1225" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1221" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="1222" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="1223" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1224" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1225" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="1226" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1227" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
   <edges id="-338" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.12"/>
-  <edges id="-350" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.12"/>
+  <edges id="-351" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.12"/>
   <blocks id="309" name="block_309" type="BlockType">
-    <controlOutputObjs>._crit_edge</controlOutputObjs>
     <controlOutputObjs>block_314</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="302" name="n_periods_read" lineNumber="25" originalName="n_periods" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="25" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>n_periods</dataInputObjs>
@@ -588,7 +588,7 @@
       <dataInputObjs>n_samples</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="304" name="_ln60" lineNumber="60" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_604" coreId="0" contextFuncName="SlidingWindowMagSampleFetcher" opcode="call" nodeLatency="1" m_display="0" m_delay="0.87" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="304" name="_ln60" lineNumber="60" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_606" coreId="0" contextFuncName="SlidingWindowMagSampleFetcher" opcode="call" nodeLatency="1" m_display="0" m_delay="0.87" m_topoIndex="3" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="60" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>buffer_in_0</dataInputObjs>
       <dataInputObjs>buffer_in_1</dataInputObjs>
@@ -618,55 +618,54 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="307" name="start_write" lineNumber="67" originalName="start_write" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="start_write_fu_1616_p2" opType="icmp" coreId="113" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.11" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="307" name="icmp_ln67" lineNumber="67" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="icmp_ln67_fu_1618_p2" opType="icmp" coreId="113" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.11" m_topoIndex="6" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="67" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="308" name="br_ln69" lineNumber="69" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="113" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="69" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="308" name="br_ln67" lineNumber="67" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="113" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="67" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>block_314</controlInputObjs>
       <controlInputObjs>._crit_edge</controlInputObjs>
+      <controlInputObjs>block_314</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
       <validLinenumbers>25</validLinenumbers>
       <validLinenumbers>60</validLinenumbers>
       <validLinenumbers>67</validLinenumbers>
-      <validLinenumbers>69</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="314" name="block_314" type="BlockType">
     <controlInputObjs>block_309</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>._crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="310" name="tmp" lineNumber="77" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_writeToRAM_fu_1122" coreId="1599296852" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.48" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="77" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="310" name="tmp" lineNumber="75" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." rtlName="grp_writeToRAM_fu_1124" coreId="3355976512" contextFuncName="SlidingWindowMagSampleFetcher" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.48" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="75" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>buffer_out</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>buffer_out</dataOutputObjs>
       <constName>writeToRAM</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="311" name="n_samples_out_write_ln77" lineNumber="77" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="77" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="311" name="n_samples_out_write_ln75" lineNumber="75" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="SlidingWindowMagSampleFetcher" opcode="write" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="75" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>n_samples_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="312" name="buffer_out_addr_write_ln81" lineNumber="81" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="SlidingWindowMagSampleFetcher" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.35" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="81" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="312" name="buffer_out_addr_write_ln79" lineNumber="79" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="SlidingWindowMagSampleFetcher" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.35" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="79" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="313" name="br_ln83" lineNumber="83" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="0" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="83" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="313" name="br_ln81" lineNumber="81" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="SlidingWindowMagSampleFetcher" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="81" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
       <controlInputObjs>._crit_edge</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>77</validLinenumbers>
+      <validLinenumbers>75</validLinenumbers>
+      <validLinenumbers>79</validLinenumbers>
       <validLinenumbers>81</validLinenumbers>
-      <validLinenumbers>83</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="316" name="._crit_edge" type="BlockType">
@@ -674,11 +673,11 @@
     <controlInputObjs>block_314</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="315" name="_ln84" lineNumber="84" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="3422411408" contextFuncName="SlidingWindowMagSampleFetcher" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="84" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="315" name="_ln82" lineNumber="82" fileName="../src/SlidingWindowMagSampleFetcher.cpp" fileDirectory=".." coreId="49" contextFuncName="SlidingWindowMagSampleFetcher" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/SlidingWindowMagSampleFetcher.cpp" linenumber="82" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SlidingWindowMagSampleFetcher" functionName="SlidingWindowMagSampleFetcher"/>
     </node_objs>
     <fileValidLineNumbers fileName="../src/SlidingWindowMagSampleFetcher.cpp">
-      <validLinenumbers>84</validLinenumbers>
+      <validLinenumbers>82</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
@@ -686,37 +685,37 @@
   <ScheduleInfo time="2"/>
   <ScheduleInfo time="3"/>
   <ScheduleInfo time="4"/>
-  <regnodes realName="buffer_out_addr_reg_1632">
+  <regnodes realName="buffer_out_addr_reg_1634">
     <nodeIds>305</nodeIds>
   </regnodes>
-  <regnodes realName="start_write_reg_1637">
-    <nodeIds>307</nodeIds>
-  </regnodes>
-  <regnodes realName="n_periods_read_reg_1622">
-    <nodeIds>302</nodeIds>
-  </regnodes>
-  <regnodes realName="n_samples_read_reg_1627">
+  <regnodes realName="n_samples_read_reg_1629">
     <nodeIds>303</nodeIds>
   </regnodes>
-  <expressionNodes realName="start_write_fu_1616">
+  <regnodes realName="icmp_ln67_reg_1639">
+    <nodeIds>307</nodeIds>
+  </regnodes>
+  <regnodes realName="n_periods_read_reg_1624">
+    <nodeIds>302</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln67_fu_1618">
     <nodeIds>307</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="buffer_out_addr_gep_fu_589">
+  <expressionNodes realName="buffer_out_addr_gep_fu_591">
     <nodeIds>305</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_writeToRAM_fu_1122">
-    <nodeIds>310</nodeIds>
-  </moduleNodes>
-  <moduleNodes realName="grp_loadSlidingWindow_fu_604">
+  <moduleNodes realName="grp_loadSlidingWindow_fu_606">
     <nodeIds>304</nodeIds>
   </moduleNodes>
-  <ioNodes realName="n_periods_read_read_fu_570">
+  <moduleNodes realName="grp_writeToRAM_fu_1124">
+    <nodeIds>310</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="n_periods_read_read_fu_572">
     <nodeIds>302</nodeIds>
   </ioNodes>
-  <ioNodes realName="write_ln77_write_fu_582">
+  <ioNodes realName="write_ln75_write_fu_584">
     <nodeIds>311</nodeIds>
   </ioNodes>
-  <ioNodes realName="n_samples_read_read_fu_576">
+  <ioNodes realName="n_samples_read_read_fu_578">
     <nodeIds>303</nodeIds>
   </ioNodes>
   <memoryPorts dataString="buffer_out">

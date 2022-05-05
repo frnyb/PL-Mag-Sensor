@@ -42,7 +42,7 @@ void SlidingWindowMagSampleFetcher(
 		uint32_t buffer_in_9[N_SAMPLES_MAX],
 		uint32_t buffer_in_10[N_SAMPLES_MAX],
 		uint32_t buffer_in_11[N_SAMPLES_MAX],
-		uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
+		volatile uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
 //		volatile bool *bfr_irq,
 		ap_uint<6> n_samples,
 		uint8_t n_periods,
@@ -68,7 +68,7 @@ void loadSlidingWindow(
 		int n_samples);
 
 uint32_t writeToRAM(
-		uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
+		volatile uint32_t buffer_out[OUTPUT_BUFFER_SIZE_MAX],
 		CyclicBuffer<SamplePeriod<N_SAMPLES_MAX>, N_PERIODS_MAX> *sliding_window,
 		int n_periods);
 

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x23E49C85C71CC89",
+      "boundary_crc": "0xBCB8A6F5F7813D9A",
       "device": "xczu3eg-sbva484-1-i",
       "gen_directory": "../../../../SlidingWindowMagSampleFetcher_test.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -11,6 +11,101 @@
     },
     "design_tree": {
       "SlidingWindowMagSamp_0": ""
+    },
+    "interface_ports": {
+      "s_axi_axi_0": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+        "address_space_ref": "s_axi_axi_0",
+        "base_address": {
+          "minimum": "0x00000000",
+          "maximum": "0x0000001F",
+          "width": "5"
+        },
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "5"
+          },
+          "ARUSER_WIDTH": {
+            "value": "0"
+          },
+          "AWUSER_WIDTH": {
+            "value": "0"
+          },
+          "BUSER_WIDTH": {
+            "value": "0"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_BURST": {
+            "value": "0"
+          },
+          "HAS_CACHE": {
+            "value": "0"
+          },
+          "HAS_LOCK": {
+            "value": "0"
+          },
+          "HAS_PROT": {
+            "value": "0"
+          },
+          "HAS_QOS": {
+            "value": "0"
+          },
+          "HAS_REGION": {
+            "value": "0"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "ID_WIDTH": {
+            "value": "0"
+          },
+          "MAX_BURST_LENGTH": {
+            "value": "1"
+          },
+          "NUM_READ_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_READ_THREADS": {
+            "value": "1"
+          },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_WRITE_THREADS": {
+            "value": "1"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "RUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "RUSER_WIDTH": {
+            "value": "0"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0"
+          },
+          "WUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "WUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      }
     },
     "ports": {
       "ap_clk_0": {
@@ -221,32 +316,6 @@
         "left": "5",
         "right": "0"
       },
-      "ap_rst_0": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "POLARITY": {
-            "value": "ACTIVE_HIGH"
-          }
-        }
-      },
-      "n_periods_0": {
-        "type": "data",
-        "direction": "I",
-        "left": "7",
-        "right": "0"
-      },
-      "start_write_o_0": {
-        "type": "data",
-        "direction": "O"
-      },
-      "start_write_i_0": {
-        "type": "data",
-        "direction": "I"
-      },
-      "start_write_o_ap_vld_0": {
-        "direction": "O"
-      },
       "ap_done_0": {
         "direction": "O"
       },
@@ -259,14 +328,15 @@
       "irq": {
         "direction": "I"
       },
-      "n_samples_out_ap_vld_0": {
-        "direction": "O"
-      },
-      "n_samples_out_0": {
+      "buffer_out_q0_0": {
         "type": "data",
-        "direction": "O",
+        "direction": "I",
         "left": "31",
         "right": "0"
+      },
+      "ap_rst_n_0": {
+        "type": "rst",
+        "direction": "I"
       }
     },
     "components": {
@@ -275,6 +345,14 @@
         "xci_name": "design_1_SlidingWindowMagSamp_0_0",
         "xci_path": "ip/design_1_SlidingWindowMagSamp_0_0/design_1_SlidingWindowMagSamp_0_0.xci",
         "inst_hier_path": "SlidingWindowMagSamp_0"
+      }
+    },
+    "interface_nets": {
+      "s_axi_axi_0_1": {
+        "interface_ports": [
+          "s_axi_axi_0",
+          "SlidingWindowMagSamp_0/s_axi_axi"
+        ]
       }
     },
     "nets": {
@@ -530,36 +608,6 @@
           "SlidingWindowMagSamp_0/n_samples"
         ]
       },
-      "ap_rst_0_1": {
-        "ports": [
-          "ap_rst_0",
-          "SlidingWindowMagSamp_0/ap_rst"
-        ]
-      },
-      "n_periods_0_1": {
-        "ports": [
-          "n_periods_0",
-          "SlidingWindowMagSamp_0/n_periods"
-        ]
-      },
-      "SlidingWindowMagSamp_0_start_write_o": {
-        "ports": [
-          "SlidingWindowMagSamp_0/start_write_o",
-          "start_write_o_0"
-        ]
-      },
-      "start_write_i_0_1": {
-        "ports": [
-          "start_write_i_0",
-          "SlidingWindowMagSamp_0/start_write_i"
-        ]
-      },
-      "SlidingWindowMagSamp_0_start_write_o_ap_vld": {
-        "ports": [
-          "SlidingWindowMagSamp_0/start_write_o_ap_vld",
-          "start_write_o_ap_vld_0"
-        ]
-      },
       "SlidingWindowMagSamp_0_ap_done": {
         "ports": [
           "SlidingWindowMagSamp_0/ap_done",
@@ -585,17 +633,27 @@
           "SlidingWindowMagSamp_0/ap_start"
         ]
       },
-      "SlidingWindowMagSamp_0_n_samples_out_ap_vld": {
+      "buffer_out_q0_0_1": {
         "ports": [
-          "SlidingWindowMagSamp_0/n_samples_out_ap_vld",
-          "n_samples_out_ap_vld_0"
+          "buffer_out_q0_0",
+          "SlidingWindowMagSamp_0/buffer_out_q0"
         ]
       },
-      "SlidingWindowMagSamp_0_n_samples_out": {
+      "ap_rst_n_0_1": {
         "ports": [
-          "SlidingWindowMagSamp_0/n_samples_out",
-          "n_samples_out_0"
+          "ap_rst_n_0",
+          "SlidingWindowMagSamp_0/ap_rst_n"
         ]
+      }
+    },
+    "addressing": {
+      "/": {
+        "address_spaces": {
+          "s_axi_axi_0": {
+            "range": "64K",
+            "width": "16"
+          }
+        }
       }
     }
   }

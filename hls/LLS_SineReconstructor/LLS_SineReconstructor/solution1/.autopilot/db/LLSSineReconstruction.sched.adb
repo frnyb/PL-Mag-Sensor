@@ -8,14 +8,14 @@
 		<name>LLSSineReconstruction</name>
 		<ret_bitwidth>0</ret_bitwidth>
 		<ports class_id="2" tracking_level="0" version="0">
-			<count>2</count>
+			<count>4</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="1" version="0" object_id="_1">
 				<Value class_id="4" tracking_level="0" version="0">
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>input_int</name>
+						<name>din</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -25,19 +25,19 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>input_int</originalName>
+						<originalName></originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>543516513</coreId>
+						<coreId>2196104056</coreId>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
-				<direction>0</direction>
-				<if_type>0</if_type>
-				<array_size>0</array_size>
+				<direction>3</direction>
+				<if_type>1</if_type>
+				<array_size>3841</array_size>
 				<bit_vecs class_id="7" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -48,7 +48,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>output_int</name>
+						<name>n_samples</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -58,15 +58,15 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output_int</originalName>
+						<originalName>n_samples</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3022257448</coreId>
+						<coreId>0</coreId>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -76,19 +76,85 @@
 					<item_version>0</item_version>
 				</bit_vecs>
 			</item>
+			<item class_id_reference="3" object_id="_3">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>3</id>
+						<name>amplitudes_out</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>0</coreId>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>3</direction>
+				<if_type>1</if_type>
+				<array_size>12</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_4">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>4</id>
+						<name>phases_out</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>0</coreId>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>3</direction>
+				<if_type>1</if_type>
+				<array_size>12</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
 		</ports>
 		<nodes class_id="8" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="9" tracking_level="1" version="0" object_id="_3">
+			<item class_id="9" tracking_level="1" version="0" object_id="_5">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>8</id>
-						<name>_ln9</name>
-						<fileName>LLS_SineReconstructor.cpp</fileName>
+						<id>14</id>
+						<name>_ln45</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
 						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>9</lineNumber>
+						<lineNumber>45</lineNumber>
 						<contextFuncName>LLSSineReconstruction</contextFuncName>
 						<contextNormFuncName>LLSSineReconstruction</contextNormFuncName>
 						<inlineStackInfo>
@@ -101,10 +167,10 @@
 									<item_version>0</item_version>
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
-											<first>LLS_SineReconstructor.cpp</first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
 											<second>LLSSineReconstruction</second>
 										</first>
-										<second>9</second>
+										<second>45</second>
 									</item>
 								</second>
 							</item>
@@ -115,7 +181,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>12</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -140,10 +206,10 @@
 		<blocks class_id="16" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="17" tracking_level="1" version="0" object_id="_4">
+			<item class_id="17" tracking_level="1" version="0" object_id="_6">
 				<Obj>
 					<type>3</type>
-					<id>9</id>
+					<id>15</id>
 					<name>LLSSineReconstruction</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -160,12 +226,12 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>14</coreId>
+					<coreId>0</coreId>
 				</Obj>
 				<node_objs>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>8</item>
+					<item>14</item>
 				</node_objs>
 			</item>
 		</blocks>
@@ -177,7 +243,7 @@
 	<cdfg_regions class_id="19" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="20" tracking_level="1" version="0" object_id="_5">
+		<item class_id="20" tracking_level="1" version="0" object_id="_7">
 			<mId>1</mId>
 			<mTag>LLSSineReconstruction</mTag>
 			<mNormTag>LLSSineReconstruction</mNormTag>
@@ -189,7 +255,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>9</item>
+				<item>15</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -207,7 +273,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="25" tracking_level="0" version="0">
-			<first>8</first>
+			<first>14</first>
 			<second class_id="26" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>
@@ -218,7 +284,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="28" tracking_level="0" version="0">
-			<first>9</first>
+			<first>15</first>
 			<second class_id="29" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>

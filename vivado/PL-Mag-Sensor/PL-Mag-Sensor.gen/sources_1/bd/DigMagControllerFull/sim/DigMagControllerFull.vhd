@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Sat Apr 30 16:10:01 2022
+--Date        : Sun May  1 13:33:54 2022
 --Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target DigMagControllerFull.bd
 --Design      : DigMagControllerFull
@@ -43,7 +43,7 @@ entity DigMagControllerFull is
     bfr_rd_dout_9 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     ch_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    data_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    data_out : out STD_LOGIC_VECTOR ( 11 downto 0 );
     irq_out : out STD_LOGIC;
     mag0_scl_i : in STD_LOGIC;
     mag0_scl_o : out STD_LOGIC;
@@ -166,6 +166,9 @@ architecture STRUCTURE of DigMagControllerFull is
   signal BufferFlowControl_0_gain_ref : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal BufferFlowControl_0_irq_out : STD_LOGIC;
   signal BufferFlowControl_0_n_samples_out : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal DigMagController_0_ch_out : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal DigMagController_0_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal DigMagController_0_irq_out : STD_LOGIC;
   signal DigMagController_0_mag0_scl_o : STD_LOGIC;
   signal DigMagController_0_mag0_scl_t : STD_LOGIC;
   signal DigMagController_0_mag0_sda_o : STD_LOGIC;
@@ -205,12 +208,6 @@ architecture STRUCTURE of DigMagControllerFull is
   signal mag3_scl_i_1 : STD_LOGIC;
   signal mag3_sda_i_1 : STD_LOGIC;
   signal rst_n_1 : STD_LOGIC;
-  signal NLW_BufferFlowControl_0_adc_irq_UNCONNECTED : STD_LOGIC;
-  signal NLW_BufferFlowControl_0_adc_ch_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_BufferFlowControl_0_adc_din_UNCONNECTED : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal NLW_DigMagController_0_irq_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_DigMagController_0_ch_out_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_DigMagController_0_dout_UNCONNECTED : STD_LOGIC_VECTOR ( 11 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -246,7 +243,10 @@ begin
   bfr_rd_dout_7(31 downto 0) <= BufferFlowControl_0_bfr_rd_dout_7(31 downto 0);
   bfr_rd_dout_8(31 downto 0) <= BufferFlowControl_0_bfr_rd_dout_8(31 downto 0);
   bfr_rd_dout_9(31 downto 0) <= BufferFlowControl_0_bfr_rd_dout_9(31 downto 0);
+  ch_out(3 downto 0) <= DigMagController_0_ch_out(3 downto 0);
   clk_1 <= clk;
+  data_out(11 downto 0) <= DigMagController_0_dout(11 downto 0);
+  irq_out <= DigMagController_0_irq_out;
   mag0_scl_i_1 <= mag0_scl_i;
   mag0_scl_o <= DigMagController_0_mag0_scl_o;
   mag0_scl_t <= DigMagController_0_mag0_scl_t;
@@ -272,32 +272,11 @@ begin
   mag3_sda_o <= DigMagController_0_mag3_sda_o;
   mag3_sda_t <= DigMagController_0_mag3_sda_t;
   rst_n_1 <= rst_n;
-  irq_out <= 'Z';
-  ch_out(0) <= 'Z';
-  ch_out(1) <= 'Z';
-  ch_out(2) <= 'Z';
-  ch_out(3) <= 'Z';
-  data_out(0) <= 'Z';
-  data_out(1) <= 'Z';
-  data_out(2) <= 'Z';
-  data_out(3) <= 'Z';
-  data_out(4) <= 'Z';
-  data_out(5) <= 'Z';
-  data_out(6) <= 'Z';
-  data_out(7) <= 'Z';
-  data_out(8) <= 'Z';
-  data_out(9) <= 'Z';
-  data_out(10) <= 'Z';
-  data_out(11) <= 'Z';
-  data_out(12) <= 'Z';
-  data_out(13) <= 'Z';
-  data_out(14) <= 'Z';
-  data_out(15) <= 'Z';
 BufferFlowControl_0: component DigMagControllerFull_BufferFlowControl_0_1
      port map (
-      adc_ch(3 downto 0) => NLW_BufferFlowControl_0_adc_ch_UNCONNECTED(3 downto 0),
-      adc_din(11 downto 0) => NLW_BufferFlowControl_0_adc_din_UNCONNECTED(11 downto 0),
-      adc_irq => NLW_BufferFlowControl_0_adc_irq_UNCONNECTED,
+      adc_ch(3 downto 0) => DigMagController_0_ch_out(3 downto 0),
+      adc_din(11 downto 0) => DigMagController_0_dout(11 downto 0),
+      adc_irq => DigMagController_0_irq_out,
       bfr_busy(11 downto 0) => BufferFlowControl_0_bfr_busy(11 downto 0),
       bfr_hold(11 downto 0) => bfr_hold_1(11 downto 0),
       bfr_rd_addr_0(4 downto 0) => bfr_rd_addr_0_1(4 downto 0),
@@ -333,10 +312,10 @@ BufferFlowControl_0: component DigMagControllerFull_BufferFlowControl_0_1
     );
 DigMagController_0: component DigMagControllerFull_DigMagController_0_2
      port map (
-      ch_out(3 downto 0) => NLW_DigMagController_0_ch_out_UNCONNECTED(3 downto 0),
+      ch_out(3 downto 0) => DigMagController_0_ch_out(3 downto 0),
       clk => clk_1,
-      dout(11 downto 0) => NLW_DigMagController_0_dout_UNCONNECTED(11 downto 0),
-      irq_out => NLW_DigMagController_0_irq_out_UNCONNECTED,
+      dout(11 downto 0) => DigMagController_0_dout(11 downto 0),
+      irq_out => DigMagController_0_irq_out,
       mag0_scl_i => mag0_scl_i_1,
       mag0_scl_o => DigMagController_0_mag0_scl_o,
       mag0_scl_t => DigMagController_0_mag0_scl_t,

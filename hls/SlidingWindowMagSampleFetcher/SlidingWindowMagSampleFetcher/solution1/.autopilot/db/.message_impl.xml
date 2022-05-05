@@ -2,5 +2,5 @@
 <Messages>
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file /home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/SlidingWindowMagSampleFetcher.zip" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 13.05 seconds. CPU system time: 1.11 seconds. Elapsed time: 15.8 seconds; current allocated memory: 101.371 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 11.85 seconds. CPU system time: 0.75 seconds. Elapsed time: 13.31 seconds; current allocated memory: 101.384 MB." resolution=""/>
 </Messages>

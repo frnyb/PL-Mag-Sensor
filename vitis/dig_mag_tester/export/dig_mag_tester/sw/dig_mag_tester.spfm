@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="dig_mag_tester"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+dig_mag_tester
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="dig_mag_tester">
+        <sdx:configuration sdx:name="dig_mag_tester"
+                           sdx:displayName="dig_mag_tester"
+                           sdx:defaultProcessorGroup="standalone_psu_cortexa53_0"
+                           sdx:runtimes="cpp">
+            <sdx:description>dig_mag_tester</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="dig_mag_tester/boot/dig_mag_tester.bif"
+                            sdx:readme="dig_mag_tester/boot/generic.readme"
+                            sdx:qemuArguments="dig_mag_tester/qemu/pmu_args.txt:dig_mag_tester/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="standalone_psu_cortexa53_0"
+                            sdx:bif="dig_mag_tester/boot/dig_mag_tester.bif"
+                            sdx:readme="dig_mag_tester/boot/generic.readme"
+                            sdx:qemuArguments="dig_mag_tester/standalone_psu_cortexa53_0/qemu/pmu_args.txt:dig_mag_tester/standalone_psu_cortexa53_0/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_psu_cortexa53_0"
+                                sdx:displayName="standalone_psu_cortexa53_0"
+                                sdx:cpuType="cortex-a53"
+                                sdx:cpuInstance="psu_cortexa53_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="dig_mag_tester/standalone_psu_cortexa53_0/bsplib/lib"
+                        sdx:bspIncludePaths="dig_mag_tester/standalone_psu_cortexa53_0/bspinclude/include"
+                        sdx:bspConfig="dig_mag_tester/standalone_psu_cortexa53_0/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Apr 30 16:10:01 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun May  1 13:33:55 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="DigMagControllerFull" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -144,15 +144,27 @@
         <CONNECTION INSTANCE="BufferFlowControl_0" PORT="bfr_rd_dout_9"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_ch_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0" PORT="ch_out"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="BufferFlowControl_0" PORT="clk"/>
         <CONNECTION INSTANCE="DigMagController_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" NAME="irq_out" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="11" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="DigMagController_0_irq_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DigMagController_0" PORT="irq_out"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="BufferFlowControl_0" PORT="rst_n"/>
@@ -291,9 +303,21 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="adc_ch" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="11" NAME="adc_din" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="adc_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="I" LEFT="3" NAME="adc_ch" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_ch_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0" PORT="ch_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="adc_din" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="adc_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="DigMagController_0_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DigMagController_0" PORT="irq_out"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="11" NAME="bfr_busy" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_0_bfr_busy">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="bfr_busy"/>
@@ -464,14 +488,29 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_ch_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_0" PORT="adc_ch"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ch_out"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="irq_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="DigMagController_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_0" PORT="adc_din"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="DigMagController_0_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BufferFlowControl_0" PORT="adc_irq"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="irq_out"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="mag0_scl_i" SIGIS="undef" SIGNAME="External_Ports_mag0_scl_i">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="mag0_scl_i"/>

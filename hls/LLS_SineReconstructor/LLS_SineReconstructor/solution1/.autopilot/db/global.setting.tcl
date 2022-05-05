@@ -42,7 +42,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-i
-set SourceFiles {sc {} c ../../LLS_SineReconstructor.cpp}
+set SourceFiles {sc {} c ../../../src/LLS_SineReconstructor.cpp}
 set SourceFlags {sc {} c {{-I/home/ffn/Nextcloud/Workspace/HLS/libs/ac_math/include -I/home/ffn/Nextcloud/Workspace/HLS/libs/ac_types/include}}}
 set DirectiveFile /home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/solution1.directive
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
