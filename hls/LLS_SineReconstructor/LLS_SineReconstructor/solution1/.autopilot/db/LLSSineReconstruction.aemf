@@ -1,36 +1,2698 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1651409493380">
-  <ports id="1" name="din" type="PortType" coreId="2196104056" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="3841"/>
-  <ports id="2" name="n_samples" type="PortType" originalName="n_samples" coreId="0" bitwidth="32"/>
-  <ports id="3" name="amplitudes_out" type="PortType" coreId="0" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="12"/>
-  <ports id="4" name="phases_out" type="PortType" coreId="0" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="12"/>
-  <blocks id="15" name="LLSSineReconstruction" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln45" lineNumber="45" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="8" contextFuncName="LLSSineReconstruction" opcode="ret" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="45" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652002681940">
+  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM_1P" coreId="1702113134" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM_1P" coreId="774776864" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="buffer_in_2" type="PortType" coreName="RAM_1P" coreId="1698986089" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM_1P" coreId="1869366831" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM_1P" coreId="4294967295" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="buffer_in_5" type="PortType" coreName="RAM_1P" coreId="1702113134" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="buffer_in_6" type="PortType" coreName="RAM_1P" coreId="1702113134" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="buffer_in_7" type="PortType" coreName="RAM_1P" coreId="2379910608" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="9" name="buffer_in_8" type="PortType" coreName="RAM_1P" coreId="1766612851" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="10" name="buffer_in_9" type="PortType" coreName="RAM_1P" coreId="673195817" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM_1P" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="12" name="buffer_in_11" type="PortType" coreName="RAM_1P" coreId="132" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="13" name="buffer_out" type="PortType" coreName="RAM_1P" coreId="541673760" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="25">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="380" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="381" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="382" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="383" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="384" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="385" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="386" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="387" source_obj="//@ports.7" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="388" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="389" source_obj="//@ports.9" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="390" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="391" source_obj="//@ports.11" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="392" source_obj="//@ports.12" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="396" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="397" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="400" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="401" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="402" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="405" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="408" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="409" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="410" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="411" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="414" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="415" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="416" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="417" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="418" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="419" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="420" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="421" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="422" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="423" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="426" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="427" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="430" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="433" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="434" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="435" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="436" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="437" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="438" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="440" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="441" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="442" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="443" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="445" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="446" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="447" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="448" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="450" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="451" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="452" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="453" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="454" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="455" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="457" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
+  <edges id="458" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
+  <edges id="460" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="462" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="463" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="464" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="465" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="466" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="467" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="469" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="470" source_obj="//@regions.1/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="471" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.4"/>
+  <edges id="472" source_obj="//@ports.12" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="474" source_obj="//@regions.1/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="475" source_obj="//@regions.1/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="476" source_obj="//@regions.1/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="477" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
+  <edges id="479" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
+  <edges id="480" source_obj="//@regions.1/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.8"/>
+  <edges id="481" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.9"/>
+  <edges id="484" source_obj="//@regions.1/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.10"/>
+  <edges id="485" source_obj="//@ports.12" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.11"/>
+  <edges id="487" source_obj="//@regions.1/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.11"/>
+  <edges id="488" source_obj="//@regions.1/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.12"/>
+  <edges id="489" source_obj="//@regions.1/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.12"/>
+  <edges id="490" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.13"/>
+  <edges id="492" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="493" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="494" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="495" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="496" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="497" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="498" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="499" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="500" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="501" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="502" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="503" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="504" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="505" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="506" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="507" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="508" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="509" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="510" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="511" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="512" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="513" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="514" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="515" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="516" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="517" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="518" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="519" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="520" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="521" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="522" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="523" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="524" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="525" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="526" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="527" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="528" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="529" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="530" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="531" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="532" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="533" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="534" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="535" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="536" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="537" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="538" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="539" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="540" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="541" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="542" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="543" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="544" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="545" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="546" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="547" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="548" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="549" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="550" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="551" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="552" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="553" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="554" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="555" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="556" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="557" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="558" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="559" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="560" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="561" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="562" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="563" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="564" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="565" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="566" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="567" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="568" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="569" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="570" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="571" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="572" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="573" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="574" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="575" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="576" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="577" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="578" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="579" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="580" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="581" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="582" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="583" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="584" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="585" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="586" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="587" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="588" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="589" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="590" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="591" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="592" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="593" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="594" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="595" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="596" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="597" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="598" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="599" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="600" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="601" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="602" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="603" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="604" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="605" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="606" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="607" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="608" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="609" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="610" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="611" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="612" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="613" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="614" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="615" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="616" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="617" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="618" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="619" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="620" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="621" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="622" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="623" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="624" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="625" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="626" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="627" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="628" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="629" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="630" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="631" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="632" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="633" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="634" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="635" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="636" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="637" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="638" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="639" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="640" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="641" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="642" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="643" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="644" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="645" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="646" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="647" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="648" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="649" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="650" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="651" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="652" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="653" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="654" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="655" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="656" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="657" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="658" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="659" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="660" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="661" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="662" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="663" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="664" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="665" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="666" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="667" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="668" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="669" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="670" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="671" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="672" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="673" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="674" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="675" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="676" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="677" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="678" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="679" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="680" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="681" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="682" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="683" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="684" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="685" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="686" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="687" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="688" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="689" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="690" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="691" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="692" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="693" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="694" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="695" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="696" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="697" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="698" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="699" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="700" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="701" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="702" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="703" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="704" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="705" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="706" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="707" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="708" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="709" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="710" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="711" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="712" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="713" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="714" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="715" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="716" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="717" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="718" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="719" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="720" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="721" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="722" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="723" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="724" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="725" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="726" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="727" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="728" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="729" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="730" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="731" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="732" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="733" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="734" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="735" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="736" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="737" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="738" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="739" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="740" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="741" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="742" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="743" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="744" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="745" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="746" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="747" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="748" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="749" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="750" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="751" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="752" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="753" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="754" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="755" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="756" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="757" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="758" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="759" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="760" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="761" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="762" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="763" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="764" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="765" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="766" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="767" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="768" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="769" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="770" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="771" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="772" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="773" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="774" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="775" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="776" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="777" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="778" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="779" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="780" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="781" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="782" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="783" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="784" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="785" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="786" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="787" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="788" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="789" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="790" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="791" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="792" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="793" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="794" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="795" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="796" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="797" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="798" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="799" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="800" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="801" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="802" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="803" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="804" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="805" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="806" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="807" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="808" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="809" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="810" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="811" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="812" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="813" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="814" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="815" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="816" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="817" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="818" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="819" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="820" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="821" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="822" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="823" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="824" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="825" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="826" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="827" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="828" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="829" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="830" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="831" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="832" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="833" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="834" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="835" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="836" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="837" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="838" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="839" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="840" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="841" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="842" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="843" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="844" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="845" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="846" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="847" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="848" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="849" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="850" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="851" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="852" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="853" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="854" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="855" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="856" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="857" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="858" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="859" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="860" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="861" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="862" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="863" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="864" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="865" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="866" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="867" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="868" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="869" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="870" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="871" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="872" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="873" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="874" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="875" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="876" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="877" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="878" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="879" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="880" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="881" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="882" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="883" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="884" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="885" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="886" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="887" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="888" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="889" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="890" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="891" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="892" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="893" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="894" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="895" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="896" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="897" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="898" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="899" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="900" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="901" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="902" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="903" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="904" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="905" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="906" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="907" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="908" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="909" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="910" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="911" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="912" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="913" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="914" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="915" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="916" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="917" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="918" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="919" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="920" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="921" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="922" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="923" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="924" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="925" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="926" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="927" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="928" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="929" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="930" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="931" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="932" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="933" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="934" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="935" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="936" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="937" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="938" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="939" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="940" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="941" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="942" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="943" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="944" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="945" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="946" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="947" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="948" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="949" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="950" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="951" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="952" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="953" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="954" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="955" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="956" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="957" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="958" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="959" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="960" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="961" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="962" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="963" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="964" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="965" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="966" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="967" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="968" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="969" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="970" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="971" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="972" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="973" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="974" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="975" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="976" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="977" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="978" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="979" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="980" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="981" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="982" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="983" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="984" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="985" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="986" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="987" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="988" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="989" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="990" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="991" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="992" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="993" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="994" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="995" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="996" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="997" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="998" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="999" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1000" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1001" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1002" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1003" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1004" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1005" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1006" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1007" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1008" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1009" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1010" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1011" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1012" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1013" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1014" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1015" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1016" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1017" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1018" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1019" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1020" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1021" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1022" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1023" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1024" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1025" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1026" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1027" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1028" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1029" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1030" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1031" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1032" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1033" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1034" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1035" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1036" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1037" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1038" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1039" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1040" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1041" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1042" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1043" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1044" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1045" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1046" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1047" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1048" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1049" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1050" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1051" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1052" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1053" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1054" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1055" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1056" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1057" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1058" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1059" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1060" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1061" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1062" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1063" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1064" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1065" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1066" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1067" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1068" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1069" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1070" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1071" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1072" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1073" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1074" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1075" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1076" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1077" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1078" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1079" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1080" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1081" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1082" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1083" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1084" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1085" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1086" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1087" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1088" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1089" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1090" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1091" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1092" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1093" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1094" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1095" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1096" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1097" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1098" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1099" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1100" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1101" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1102" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1103" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1104" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1105" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1106" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1107" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1108" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1109" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1110" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1111" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1112" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1113" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1114" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1115" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1116" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1117" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1118" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1119" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1120" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1121" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1122" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1123" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1124" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1125" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1126" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1127" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1128" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1509" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="1510" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.4"/>
+  <edges id="1511" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="1512" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="1513" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="1514" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="1515" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.1/@basic_blocks.0"/>
+  <edges id="1516" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="1517" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1"/>
+  <edges id="1518" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="1519" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="1520" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1521" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1522" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1523" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1524" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1525" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1526" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1527" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="1528" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="1529" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="1530" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="-392" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@ports.12"/>
+  <edges id="-472" source_obj="//@regions.1/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.12"/>
+  <edges id="-485" source_obj="//@regions.1/@basic_blocks.1/@node_objs.11" sink_obj="//@ports.12"/>
+  <blocks id="315" name="block_315" type="BlockType">
+    <controlOutputObjs>block_321</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="303" name="phases_i" rtlName="phases_i_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="304" name="amplitudes_i" rtlName="amplitudes_i_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="305" name="sine_reconstructor_times_V" lineNumber="55" originalName="sine_reconstructor.times.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_times_V_U" coreId="1462725743" contextFuncName="LLSSineReconstruction" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="306" name="sine_reconstructor_3" rtlName="sine_reconstructor_3_U" coreId="1462725743" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="307" name="sine_reconstructor_4" rtlName="sine_reconstructor_4_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="308" name="sine_reconstructor_A_V" lineNumber="55" originalName="sine_reconstructor.A.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_A_V_U" coreId="746" contextFuncName="LLSSineReconstruction" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="309" name="sine_reconstructor_b_V" lineNumber="55" originalName="sine_reconstructor.b.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_b_V_U" coreId="0" contextFuncName="LLSSineReconstruction" bitwidth="55" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="310" name="_ln46" lineNumber="46" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_1180" coreId="1320154096" contextFuncName="LLSSineReconstruction" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="46" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataInputObjs>buffer_in_0</dataInputObjs>
+      <dataInputObjs>buffer_in_1</dataInputObjs>
+      <dataInputObjs>buffer_in_2</dataInputObjs>
+      <dataInputObjs>buffer_in_3</dataInputObjs>
+      <dataInputObjs>buffer_in_4</dataInputObjs>
+      <dataInputObjs>buffer_in_5</dataInputObjs>
+      <dataInputObjs>buffer_in_6</dataInputObjs>
+      <dataInputObjs>buffer_in_7</dataInputObjs>
+      <dataInputObjs>buffer_in_8</dataInputObjs>
+      <dataInputObjs>buffer_in_9</dataInputObjs>
+      <dataInputObjs>buffer_in_10</dataInputObjs>
+      <dataInputObjs>buffer_in_11</dataInputObjs>
+      <constName>loadSlidingWindow</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="311" name="buffer_out_addr" lineNumber="53" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="LLSSineReconstruction" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="53" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataInputObjs>buffer_out</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>buffer_out</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="312" name="buffer_out_load" lineNumber="53" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="LLSSineReconstruction" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="53" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="313" name="icmp_ln53" lineNumber="53" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln53_fu_1991_p2" opType="icmp" coreId="49" contextFuncName="LLSSineReconstruction" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.11" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="53" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="314" name="br_ln53" lineNumber="53" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="53" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <controlInputObjs>block_321</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
-      <validLinenumbers>45</validLinenumbers>
+      <validLinenumbers>55</validLinenumbers>
+      <validLinenumbers>46</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
+  <blocks id="321" name="block_321" type="BlockType">
+    <controlInputObjs>block_315</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_328</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="316" name="sine_reconstructor_phase_ref_idx_s" lineNumber="143" originalName="sine_reconstructor.phase_ref_idx_" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_loadData_fu_1598" coreId="0" contextFuncName="SineReconstructor" bitwidth="4" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="143" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>loadData</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="317" name="sine_reconstructor_fixed_phase_s" lineNumber="144" originalName="sine_reconstructor.fixed_phase_" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_computeFirstChannel_fu_670" coreId="0" contextFuncName="SineReconstructor" bitwidth="32" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="144" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>computeFirstChannel</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="318" name="_ln145" lineNumber="145" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_computeRemainingChannels_fu_928" coreId="0" contextFuncName="SineReconstructor" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="145" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>computeRemainingChannels</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="319" name="bitcast_ln154" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="bitcast_ln154_fu_1997_p1" coreId="0" contextFuncName="GetReconstructedSines" bitwidth="32" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="320" name="br_ln152" lineNumber="152" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="GetReconstructedSines" opcode="br" nodeLabel="7.0" m_display="0" m_delay="0.48" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="152" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+      <controlInputObjs>block_328</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
+      <validLinenumbers>143</validLinenumbers>
+      <validLinenumbers>144</validLinenumbers>
+      <validLinenumbers>145</validLinenumbers>
+      <validLinenumbers>154</validLinenumbers>
+      <validLinenumbers>152</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="341" name="_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i.preheader" type="BlockType">
+    <controlInputObjs>block_328</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="340" name="br_ln0" coreId="4026531968" opcode="br" nodeLabel="10.0" m_display="0" m_delay="0.48" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="367" name="_Z10writeToRAMPVjP17SineReconstructor.exit" type="BlockType">
+    <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="365" name="buffer_out_addr_write_ln59" lineNumber="59" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="LLSSineReconstruction" opcode="store" nodeLabel="14.0" m_display="0" m_delay="0.79" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="59" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="366" name="br_ln61" lineNumber="61" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="14.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="61" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
+      <validLinenumbers>59</validLinenumbers>
+      <validLinenumbers>61</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="369" name="._crit_edge" type="BlockType">
+    <controlInputObjs>block_315</controlInputObjs>
+    <controlInputObjs>_Z10writeToRAMPVjP17SineReconstructor.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="368" name="_ln64" lineNumber="64" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="LLSSineReconstruction" opcode="ret" nodeLabel="14.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="64" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
+      <validLinenumbers>64</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="1005" pipe_depth="2" RegionName="return_sine_params_loop">
+    <basic_blocks id="328" name="block_328" type="BlockType">
+      <controlInputObjs>block_321</controlInputObjs>
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i.preheader</controlOutputObjs>
+      <controlOutputObjs>.split2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="322" name="i" lineNumber="152" originalName="i" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="152" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>.split2</controlInputObjs>
+        <controlInputObjs>block_321</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="323" name="add_ln152" lineNumber="152" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln152_fu_2000_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="add" nodeLabel="8.0" m_display="0" m_delay="0.86" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="152" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="325" name="icmp_ln152" lineNumber="152" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln152_fu_2006_p2" opType="icmp" coreId="1313715072" contextFuncName="GetReconstructedSines" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="0.88" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="152" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="327" name="br_ln152" lineNumber="152" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="GetReconstructedSines" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="152" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split2</controlInputObjs>
+        <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i.preheader</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
+        <validLinenumbers>152</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="339" name=".split2" type="BlockType">
+      <controlInputObjs>block_328</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_328</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="329" name="i_cast" lineNumber="152" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_cast_fu_2012_p1" coreId="12" contextFuncName="GetReconstructedSines" bitwidth="64" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="152" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="331" name="phases_i_addr" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="332" name="phases_i_addr_write_ln154" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="GetReconstructedSines" opcode="store" nodeLabel="8.0" m_display="0" m_delay="0.79" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="333" name="sine_reconstructor_4_addr" lineNumber="155" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="155" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="334" name="sine_reconstructor_4_load" lineNumber="155" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="GetReconstructedSines" bitwidth="32" opcode="load" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="155" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="335" name="bitcast_ln155" lineNumber="155" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="amplitudes_i_d0" coreId="49" contextFuncName="GetReconstructedSines" bitwidth="32" opcode="bitcast" nodeLabel="9.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="155" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="336" name="amplitudes_i_addr" lineNumber="155" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="155" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="337" name="amplitudes_i_addr_write_ln155" lineNumber="155" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="GetReconstructedSines" opcode="store" nodeLabel="9.0" m_display="0" m_delay="0.79" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="155" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="338" name="br_ln0" coreId="0" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_328</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
+        <validLinenumbers>152</validLinenumbers>
+        <validLinenumbers>154</validLinenumbers>
+        <validLinenumbers>155</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" id="1006" pipe_depth="3" RegionName="write_output_loop">
+    <basic_blocks id="348" name="_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i" type="BlockType">
+      <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i.preheader</controlInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_Z10writeToRAMPVjP17SineReconstructor.exit</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="342" name="i_21" lineNumber="133" originalName="i" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeToRAM" bitwidth="4" opcode="phi" nodeLabel="11.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i.preheader</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="343" name="add_ln133" lineNumber="133" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln133_fu_2023_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeToRAM" bitwidth="4" opcode="add" nodeLabel="11.0" m_display="0" m_delay="0.86" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="345" name="icmp_ln131" lineNumber="131" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln131_fu_2029_p2" opType="icmp" coreId="1731161711" contextFuncName="writeToRAM" bitwidth="1" opcode="icmp" nodeLabel="11.0" m_display="0" m_delay="0.88" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="131" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="347" name="br_ln131" lineNumber="131" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="145" contextFuncName="writeToRAM" opcode="br" nodeLabel="11.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="131" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>_Z10writeToRAMPVjP17SineReconstructor.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
+        <validLinenumbers>133</validLinenumbers>
+        <validLinenumbers>131</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="364" name=".split" type="BlockType">
+      <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="349" name="i_21_cast6" lineNumber="133" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_21_cast6_fu_2035_p1" coreId="3905" contextFuncName="writeToRAM" bitwidth="64" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="350" name="i_21_cast" lineNumber="133" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_21_cast_fu_2041_p1" coreId="1601399156" contextFuncName="writeToRAM" bitwidth="5" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="352" name="amplitudes_i_addr_1" lineNumber="133" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="353" name="amplitudes_i_load" lineNumber="133" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeToRAM" bitwidth="32" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="354" name="zext_ln133" lineNumber="133" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln133_fu_2051_p1" coreId="1320257904" contextFuncName="writeToRAM" bitwidth="64" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="355" name="buffer_out_addr_1" lineNumber="133" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1320256968" contextFuncName="writeToRAM" bitwidth="5" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>buffer_out</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>buffer_out</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="356" name="buffer_out_addr_1_write_ln133" lineNumber="133" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="writeToRAM" opcode="store" nodeLabel="12.0" m_display="0" m_delay="0.79" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="133" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="357" name="phases_i_addr_1" lineNumber="134" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="134" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="358" name="phases_i_load" lineNumber="134" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeToRAM" bitwidth="32" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="134" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="359" name="add_ln134" lineNumber="134" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln134_fu_2045_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeToRAM" bitwidth="5" opcode="add" nodeLabel="11.0" m_display="0" m_delay="0.87" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="134" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="360" name="zext_ln134" lineNumber="134" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln134_fu_2055_p1" coreId="1982801952" contextFuncName="writeToRAM" bitwidth="64" opcode="zext" nodeLabel="13.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="134" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="361" name="buffer_out_addr_2" lineNumber="134" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeToRAM" bitwidth="5" opcode="getelementptr" nodeLabel="13.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="134" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>buffer_out</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>buffer_out</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="362" name="buffer_out_addr_2_write_ln134" lineNumber="134" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="writeToRAM" opcode="store" nodeLabel="13.0" m_display="0" m_delay="0.79" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="134" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeToRAM"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="363" name="br_ln0" coreId="1734439795" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
+        <validLinenumbers>133</validLinenumbers>
+        <validLinenumbers>134</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
   <ScheduleInfo time="0"/>
-  <ioPorts name="n_samples"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <regnodes realName="i_reg_648">
+    <nodeIds>322</nodeIds>
+  </regnodes>
+  <regnodes realName="sine_reconstructor_fixed_phase_s_reg_2073">
+    <nodeIds>317</nodeIds>
+  </regnodes>
+  <regnodes realName="buffer_out_addr_reg_2059">
+    <nodeIds>311</nodeIds>
+  </regnodes>
+  <regnodes realName="sine_reconstructor_4_addr_reg_2098">
+    <nodeIds>333</nodeIds>
+  </regnodes>
+  <regnodes realName="sine_reconstructor_phase_ref_idx_s_reg_2068">
+    <nodeIds>316</nodeIds>
+  </regnodes>
+  <regnodes realName="phases_i_load_reg_2128">
+    <nodeIds>358</nodeIds>
+  </regnodes>
+  <regnodes realName="i_cast_reg_2093">
+    <nodeIds>329</nodeIds>
+  </regnodes>
+  <regnodes realName="amplitudes_i_addr_1_reg_2113">
+    <nodeIds>352</nodeIds>
+  </regnodes>
+  <regnodes realName="phases_i_addr_1_reg_2118">
+    <nodeIds>357</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln134_reg_2123">
+    <nodeIds>359</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln133_reg_2103">
+    <nodeIds>343</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln154_reg_2079">
+    <nodeIds>319</nodeIds>
+  </regnodes>
+  <regnodes realName="i_21_reg_659">
+    <nodeIds>342</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln131_reg_2109">
+    <nodeIds>345</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln152_reg_2084">
+    <nodeIds>323</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln152_reg_2089">
+    <nodeIds>325</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln53_reg_2064">
+    <nodeIds>313</nodeIds>
+  </regnodes>
+  <expressionNodes realName="bitcast_ln155_fu_2018">
+    <nodeIds>335</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_out_addr_2_gep_fu_639">
+    <nodeIds>361</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sine_reconstructor_4_alloca_fu_554">
+    <nodeIds>307</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_out_addr_1_gep_fu_630">
+    <nodeIds>355</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sine_reconstructor_4_addr_gep_fu_592">
+    <nodeIds>333</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln133_fu_2051">
+    <nodeIds>354</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sine_reconstructor_A_V_alloca_fu_558">
+    <nodeIds>308</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln152_fu_2000">
+    <nodeIds>323</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln131_fu_2029">
+    <nodeIds>345</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_21_cast_fu_2041">
+    <nodeIds>350</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_cast_fu_2012">
+    <nodeIds>329</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sine_reconstructor_3_alloca_fu_550">
+    <nodeIds>306</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln134_fu_2055">
+    <nodeIds>360</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln152_fu_2006">
+    <nodeIds>325</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="amplitudes_i_alloca_fu_542">
+    <nodeIds>304</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="phases_i_alloca_fu_538">
+    <nodeIds>303</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sine_reconstructor_times_V_alloca_fu_546">
+    <nodeIds>305</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_21_phi_fu_663">
+    <nodeIds>342</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_21_cast6_fu_2035">
+    <nodeIds>349</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln133_fu_2023">
+    <nodeIds>343</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buffer_out_addr_gep_fu_566">
+    <nodeIds>311</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_652">
+    <nodeIds>322</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sine_reconstructor_b_V_alloca_fu_562">
+    <nodeIds>309</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln53_fu_1991">
+    <nodeIds>313</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="phases_i_addr_1_gep_fu_623">
+    <nodeIds>357</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln134_fu_2045">
+    <nodeIds>359</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="amplitudes_i_addr_1_gep_fu_616">
+    <nodeIds>352</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="amplitudes_i_addr_gep_fu_604">
+    <nodeIds>336</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln154_fu_1997">
+    <nodeIds>319</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="phases_i_addr_gep_fu_580">
+    <nodeIds>331</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_loadData_fu_1598">
+    <nodeIds>316</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_computeFirstChannel_fu_670">
+    <nodeIds>317</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_computeRemainingChannels_fu_928">
+    <nodeIds>318</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_loadSlidingWindow_fu_1180">
+    <nodeIds>310</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="A_i_V_0" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="A_i_V_1" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="A_j_V_0" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="A_j_V_1" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="A_pinv_V" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="S_V" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="UT_V" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="U_V" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_V" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_i_V_0" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_i_V_1" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_j_V_0" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="V_j_V_1" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="amplitudes_i">
+    <nodeIds>337</nodeIds>
+    <nodeIds>353</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buffer_out">
+    <nodeIds>312</nodeIds>
+    <nodeIds>356</nodeIds>
+    <nodeIds>362</nodeIds>
+    <nodeIds>365</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cordic_ctab_table_128_V" portID="100">
+    <nodeIds>317</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="matA_V_0" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="matA_V_1" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="matU_V" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="matV_V_0" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="matV_V_1" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="phases_i">
+    <nodeIds>332</nodeIds>
+    <nodeIds>358</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="ref_4oPi_table_100_V" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_cos_K0_V" portID="100">
+    <nodeIds>317</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_cos_K1_V" portID="100">
+    <nodeIds>317</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_cos_K2_V" portID="100">
+    <nodeIds>317</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_K0_V" portID="100">
+    <nodeIds>317</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_K1_V" portID="100">
+    <nodeIds>317</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_K2_V" portID="100">
+    <nodeIds>317</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_cos_K0_V" portID="100">
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_cos_K1_V" portID="100">
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_cos_K2_V" portID="100">
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sigma_V" portID="100">
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sine_reconstructor_4">
+    <nodeIds>334</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sine_reconstructor_4" portID="100">
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_0_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_1_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_2_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_3_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_4_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_5_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_6_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_sample_V_7_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+    <nodeIds>317</nodeIds>
+    <nodeIds>318</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_0_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_1_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_2_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_3_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_4_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_5_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_6_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_0" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_1" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_10" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_11" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_2" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_3" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_4" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_5" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_6" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_7" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_8" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sliding_window_buffer_samples_timestamp_V_7_9" portID="100">
+    <nodeIds>310</nodeIds>
+    <nodeIds>316</nodeIds>
+  </memoryPorts>
+  <ioPorts name="buffer_out(p0)">
+    <contents name="load">
+      <nodeIds>312</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>356</nodeIds>
+      <nodeIds>362</nodeIds>
+      <nodeIds>365</nodeIds>
+    </contents>
+  </ioPorts>
   <fsm>
     <states id="1">
-      <operations id="5" stage="1" latency="1"/>
-      <operations id="6" stage="1" latency="1"/>
-      <operations id="7" stage="1" latency="1"/>
-      <operations id="8" stage="1" latency="1"/>
-      <operations id="9" stage="1" latency="1"/>
-      <operations id="10" stage="1" latency="1"/>
-      <operations id="11" stage="1" latency="1"/>
-      <operations id="12" stage="1" latency="1"/>
-      <operations id="13" stage="1" latency="1"/>
-      <operations id="14" stage="1" latency="1"/>
+      <operations id="303" stage="1" latency="1"/>
+      <operations id="304" stage="1" latency="1"/>
+      <operations id="305" stage="1" latency="1"/>
+      <operations id="306" stage="1" latency="1"/>
+      <operations id="307" stage="1" latency="1"/>
+      <operations id="308" stage="1" latency="1"/>
+      <operations id="309" stage="1" latency="1"/>
+      <operations id="310" stage="2" latency="2"/>
+      <operations id="311" stage="1" latency="1"/>
+      <operations id="312" stage="2" latency="2"/>
     </states>
+    <states id="2">
+      <operations id="262" stage="1" latency="1"/>
+      <operations id="263" stage="1" latency="1"/>
+      <operations id="264" stage="1" latency="1"/>
+      <operations id="265" stage="1" latency="1"/>
+      <operations id="266" stage="1" latency="1"/>
+      <operations id="267" stage="1" latency="1"/>
+      <operations id="268" stage="1" latency="1"/>
+      <operations id="269" stage="1" latency="1"/>
+      <operations id="270" stage="1" latency="1"/>
+      <operations id="271" stage="1" latency="1"/>
+      <operations id="272" stage="1" latency="1"/>
+      <operations id="273" stage="1" latency="1"/>
+      <operations id="274" stage="1" latency="1"/>
+      <operations id="275" stage="1" latency="1"/>
+      <operations id="276" stage="1" latency="1"/>
+      <operations id="277" stage="1" latency="1"/>
+      <operations id="278" stage="1" latency="1"/>
+      <operations id="279" stage="1" latency="1"/>
+      <operations id="280" stage="1" latency="1"/>
+      <operations id="281" stage="1" latency="1"/>
+      <operations id="282" stage="1" latency="1"/>
+      <operations id="283" stage="1" latency="1"/>
+      <operations id="284" stage="1" latency="1"/>
+      <operations id="285" stage="1" latency="1"/>
+      <operations id="286" stage="1" latency="1"/>
+      <operations id="287" stage="1" latency="1"/>
+      <operations id="288" stage="1" latency="1"/>
+      <operations id="289" stage="1" latency="1"/>
+      <operations id="290" stage="1" latency="1"/>
+      <operations id="291" stage="1" latency="1"/>
+      <operations id="292" stage="1" latency="1"/>
+      <operations id="293" stage="1" latency="1"/>
+      <operations id="294" stage="1" latency="1"/>
+      <operations id="295" stage="1" latency="1"/>
+      <operations id="296" stage="1" latency="1"/>
+      <operations id="297" stage="1" latency="1"/>
+      <operations id="298" stage="1" latency="1"/>
+      <operations id="299" stage="1" latency="1"/>
+      <operations id="300" stage="1" latency="1"/>
+      <operations id="301" stage="1" latency="1"/>
+      <operations id="302" stage="1" latency="1"/>
+      <operations id="310" stage="1" latency="2"/>
+      <operations id="312" stage="1" latency="2"/>
+      <operations id="313" stage="1" latency="1"/>
+      <operations id="314" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="316" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="316" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="317" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="317" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="318" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="318" stage="1" latency="2"/>
+      <operations id="319" stage="1" latency="1"/>
+      <operations id="320" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="322" stage="1" latency="1"/>
+      <operations id="323" stage="1" latency="1"/>
+      <operations id="324" stage="1" latency="1"/>
+      <operations id="325" stage="1" latency="1"/>
+      <operations id="326" stage="1" latency="1"/>
+      <operations id="327" stage="1" latency="1"/>
+      <operations id="329" stage="1" latency="1"/>
+      <operations id="331" stage="1" latency="1"/>
+      <operations id="332" stage="1" latency="1"/>
+      <operations id="333" stage="1" latency="1"/>
+      <operations id="334" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="330" stage="1" latency="1"/>
+      <operations id="334" stage="1" latency="2"/>
+      <operations id="335" stage="1" latency="1"/>
+      <operations id="336" stage="1" latency="1"/>
+      <operations id="337" stage="1" latency="1"/>
+      <operations id="338" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="340" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="342" stage="1" latency="1"/>
+      <operations id="343" stage="1" latency="1"/>
+      <operations id="344" stage="1" latency="1"/>
+      <operations id="345" stage="1" latency="1"/>
+      <operations id="346" stage="1" latency="1"/>
+      <operations id="347" stage="1" latency="1"/>
+      <operations id="349" stage="1" latency="1"/>
+      <operations id="350" stage="1" latency="1"/>
+      <operations id="352" stage="1" latency="1"/>
+      <operations id="353" stage="2" latency="2"/>
+      <operations id="357" stage="1" latency="1"/>
+      <operations id="358" stage="2" latency="2"/>
+      <operations id="359" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="353" stage="1" latency="2"/>
+      <operations id="354" stage="1" latency="1"/>
+      <operations id="355" stage="1" latency="1"/>
+      <operations id="356" stage="1" latency="1"/>
+      <operations id="358" stage="1" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="351" stage="1" latency="1"/>
+      <operations id="360" stage="1" latency="1"/>
+      <operations id="361" stage="1" latency="1"/>
+      <operations id="362" stage="1" latency="1"/>
+      <operations id="363" stage="1" latency="1"/>
+    </states>
+    <states id="15">
+      <operations id="365" stage="1" latency="1"/>
+      <operations id="366" stage="1" latency="1"/>
+      <operations id="368" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="LLSSineReconstruction" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>15</basicBlocks>
+    <cfgRegions mId="1" mTag="LLSSineReconstruction" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="34" mMaxLatency="995207">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="33" mMaxLatency="995167">
+      <basicBlocks>315</basicBlocks>
+      <basicBlocks>321</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="return_sine_params_loop" mII="1" mDepth="2" mMinTripCount="12" mMaxTripCount="12" mMinLatency="12" mMaxLatency="12" mType="1">
+      <basicBlocks>328</basicBlocks>
+      <basicBlocks>339</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>341</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="write_output_loop" mII="2" mDepth="3" mMinTripCount="12" mMaxTripCount="12" mMinLatency="24" mMaxLatency="24" mType="1">
+      <basicBlocks>348</basicBlocks>
+      <basicBlocks>364</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>367</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>369</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>

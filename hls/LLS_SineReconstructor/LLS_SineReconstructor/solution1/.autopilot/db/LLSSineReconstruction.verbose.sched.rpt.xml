@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'LLSSineReconstruction'" level="0">
-<item name = "Date">Sun May  1 14:51:33 2022
+<item name = "Date">Sun May  8 11:37:24 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">LLS_SineReconstructor</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 0 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.288 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">0, 0, 0 ns, 0 ns, 1, 1, none</column>
+<column name="">34, 995207, 0.340 us, 9.952 ms, 35, 995208, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,6 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- return_sine_params_loop">12, 12, 2, 1, 1, 12, yes</column>
+<column name="- write_output_loop">24, 24, 3, 2, 1, 12, yes</column>
 </table>
 </item>
 </section>

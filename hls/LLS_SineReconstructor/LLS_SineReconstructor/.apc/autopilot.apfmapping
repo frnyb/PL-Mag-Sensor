@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="LLS_SineReconstructor.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.h"/>
-    <originFiles name="LLS_SineReconstructor.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.cpp"/>
-    <originFiles name="cyclic_buffer.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h"/>
-    <originFiles name="sample.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h"/>
-    <originFiles name="sample_period.h" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h"/>
+    <originFiles name="sample_period.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h"/>
+    <originFiles name="sample.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h"/>
+    <originFiles name="matrix_ops.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/matrix_ops.h"/>
+    <originFiles name="cyclic_buffer.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h"/>
+    <originFiles name="LLS_SineReconstructor.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.h"/>
+    <originFiles name="LLS_SineReconstructor.cpp" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.cpp"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="LLS_SineReconstructor_testbench.cpp" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor_testbench.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

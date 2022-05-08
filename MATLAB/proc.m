@@ -47,8 +47,8 @@ u0 = 1.25663706 * 10^(-6);
 % axis equal;
 
 %% Load data
-mag_data = importdata('old_test/airport1/1.txt');
-mag_data = mag_data.data;
+mag_data = importdata('second/1/1.txt');
+% mag_data = mag_data.data;
 
 mag0_samples = mag_data(:,13:15);
 mag0_ts = mag_data(:,1:3);
@@ -144,42 +144,42 @@ diffs = max_vals - min_vals;
 %% Find phase
 [max_diff, phase_ref_idx] = max(diffs);
 
-% max_time = mag_times(end, phase_ref_idx);
-% min_time = mag_times(1, phase_ref_idx);
-% 
-% max_point_offsets = [];
-% idx = 1;
-% 
-% while true
-%     next_time = min_time + 1/50;
-%     
-%     if (next_time > max_time)
-%         break;
-%     end
-%     
-%     one_period_idx = find(mag_times(idx:end,phase_ref_idx) < next_time);
-%     
-%     last_idx = one_period_idx(end) + idx - 1;
-%     
-%     one_period = mag_samples(idx:last_idx, phase_ref_idx);
-%     one_period_times = mag_times(idx:last_idx, phase_ref_idx);
-%     
-%     [max_val, max_idx] = max(one_period);
-%     
-%     max_idx = max_idx + idx - 1;
-%     
-%     max_val_time = mag_times(max_idx, phase_ref_idx);
-%     
-%     max_time_offset = max_val_time - min_time + mag_times(1, phase_ref_idx);
-%     
-%     max_point_offsets = [max_point_offsets;max_time_offset];
-%     
-%     min_time = next_time;
-%     idx = last_idx + 1;    
-% end
-% 
-% avg_offset = mean(max_point_offsets);
-% phase = (avg_offset/(1/50)) * 2*pi;
+max_time = mag_times(end, phase_ref_idx);
+min_time = mag_times(1, phase_ref_idx);
+
+max_point_offsets = [];
+idx = 1;
+
+while true
+    next_time = min_time + 1/50;
+    
+    if (next_time > max_time)
+        break;
+    end
+    
+    one_period_idx = find(mag_times(idx:end,phase_ref_idx) < next_time);
+    
+    last_idx = one_period_idx(end) + idx - 1;
+    
+    one_period = mag_samples(idx:last_idx, phase_ref_idx);
+    one_period_times = mag_times(idx:last_idx, phase_ref_idx);
+    
+    [max_val, max_idx] = max(one_period);
+    
+    max_idx = max_idx + idx - 1;
+    
+    max_val_time = mag_times(max_idx, phase_ref_idx);
+    
+    max_time_offset = max_val_time - min_time + mag_times(1, phase_ref_idx);
+    
+    max_point_offsets = [max_point_offsets;max_time_offset];
+    
+    min_time = next_time;
+    idx = last_idx + 1;    
+end
+
+avg_offset = mean(max_point_offsets);
+phase = (avg_offset/(1/50)) * 2*pi;
 
 A_phase = zeros(size(mag_samples,1), 3);
 b_phase = zeros(size(mag_samples,1), 1);
@@ -195,8 +195,9 @@ end
 x_phase = (A_phase'*A_phase)\A_phase'*b_phase;
 
 phase = atan(x_phase(3)/x_phase(2));
+ampl = sqrt(x_phase(3)^2 + x_phase(2)^2);
 
-%% Sine LLS
+% Sine LLS
 n_samples = length(mag_samples(:,1));
 
 A_sine = zeros(n_samples*12, 12+12);

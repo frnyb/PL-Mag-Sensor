@@ -28,7 +28,7 @@ void SlidingWindowMagSampleFetcher(
 //		volatile bool *start_write
 //		bool *write_finished
 		) {
-#pragma HLS TOP name=MagStreamer
+#pragma HLS TOP name=SlidingWindowMagSampleFetcher
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 
 #pragma HLS INTERFACE ap_memory storage_type=ram_1p port=buffer_out

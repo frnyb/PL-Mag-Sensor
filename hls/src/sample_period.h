@@ -18,7 +18,7 @@ public:
 		sample_period_init_loop:
 		for (int i = 0; i < count; i++) {
 #pragma HLS PIPELINE off
-#pragma HLS loop_tripcount min=1 max=max_n_samples
+//#pragma HLS loop_tripcount min=1 max=max_n_samples
 
 
 			samples_[i] = samples[i];
