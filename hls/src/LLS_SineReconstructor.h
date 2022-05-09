@@ -83,7 +83,7 @@ private:
 
 	void computeRemainingChannels();
 
-	template<int M_MAX, int N_MAX>
+//	template<int M_MAX, int N_MAX>
 	void computeLeastSquaresSolution(
 			int M,
 			int N,

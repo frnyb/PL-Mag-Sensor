@@ -286,7 +286,7 @@ void SineReconstructor::computeFirstChannel() {
 	}
 
 	fixed_t x[3];
-	computeLeastSquaresSolution<N_SAMPLES, 3>(N_SAMPLES, 3, (fixed_t *)A, (fixed_t *)b, (fixed_t *)x);
+	computeLeastSquaresSolution(N_SAMPLES, 3, (fixed_t *)A, (fixed_t *)b, (fixed_t *)x);
 
 	fixed_phase_ = hls::atan2((float)(x[2]), (float)(x[1]));
 
@@ -325,7 +325,7 @@ void SineReconstructor::computeRemainingChannels() {
 		}
 
 		fixed_t x[2];
-		computeLeastSquaresSolution<N_SAMPLES, 3>(N_SAMPLES, 2, (fixed_t *)A, (fixed_t *)b, (fixed_t *)x);
+		computeLeastSquaresSolution(N_SAMPLES, 2, (fixed_t *)A, (fixed_t *)b, (fixed_t *)x);
 
 		offsets_[k] = (float)(x[0]);
 		amplitudes_[k] = (float)(x[1]);
@@ -333,7 +333,7 @@ void SineReconstructor::computeRemainingChannels() {
 	}
 }
 
-template<int M_MAX, int N_MAX>
+//template<int M_MAX, int N_MAX>
 void SineReconstructor::computeLeastSquaresSolution(
 		int M,
 		int N,
@@ -341,6 +341,9 @@ void SineReconstructor::computeLeastSquaresSolution(
 		fixed_t *b,
 		fixed_t *x
 ) {
+
+	const int M_MAX = N_SAMPLES;
+	const int N_MAX = 3;
 
 	static fixed_t U[M_MAX*M_MAX];
 	static fixed_t V[N_MAX*N_MAX];
