@@ -5,7 +5,7 @@
 
 `timescale 1 ns / 1 ps
 
-module LLSSineReconstruction_mul_30s_29ns_58_1_1_Multiplier_11(a, b, p);
+module LLSSineReconstruction_mul_30s_29ns_58_1_1_Multiplier_3(a, b, p);
 input[30 - 1 : 0] a; 
 input[29 - 1 : 0] b; 
 output[58 - 1 : 0] p;
@@ -29,7 +29,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-LLSSineReconstruction_mul_30s_29ns_58_1_1_Multiplier_11 LLSSineReconstruction_mul_30s_29ns_58_1_1_Multiplier_11_U(
+LLSSineReconstruction_mul_30s_29ns_58_1_1_Multiplier_3 LLSSineReconstruction_mul_30s_29ns_58_1_1_Multiplier_3_U(
     .a( din0 ),
     .b( din1 ),
     .p( dout ));

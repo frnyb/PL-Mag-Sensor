@@ -7,7 +7,7 @@ use ieee.std_logic_1164.all;
 
 entity LLSSineReconstruction_dcmp_64ns_64ns_1_2_no_dsp_1 is
     generic (
-        ID         : integer := 529;
+        ID         : integer := 196;
         NUM_STAGE  : integer := 2;
         din0_WIDTH : integer := 64;
         din1_WIDTH : integer := 64;

@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 714
+set id 361
 set name LLSSineReconstruction_fsub_32ns_32ns_32_5_full_dsp_1
 set corename simcore_fsub
 set op fsub
@@ -91,7 +91,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 715
+set id 362
 set name LLSSineReconstruction_fcmp_32ns_32ns_1_2_no_dsp_1
 set corename simcore_fcmp
 set op fcmp
@@ -198,7 +198,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 718 \
+    id 365 \
     name y_in \
     type other \
     dir I \
@@ -213,7 +213,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 719 \
+    id 366 \
     name x_in \
     type other \
     dir I \

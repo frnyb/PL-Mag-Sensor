@@ -22,14 +22,14 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>34</Best-caseLatency>
-<Average-caseLatency>457239</Average-caseLatency>
-<Worst-caseLatency>995207</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.340 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>4.572 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>9.952 ms</Worst-caseRealTimeLatency>
-<Interval-min>35</Interval-min>
-<Interval-max>995208</Interval-max>
+<Best-caseLatency>83</Best-caseLatency>
+<Average-caseLatency>358352</Average-caseLatency>
+<Worst-caseLatency>1078458</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.830 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>3.584 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>10.785 ms</Worst-caseRealTimeLatency>
+<Interval-min>84</Interval-min>
+<Interval-max>1078459</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <return_sine_params_loop>
@@ -51,10 +51,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>280</BRAM_18K>
-<DSP>514</DSP>
-<FF>105513</FF>
-<LUT>147745</LUT>
+<BRAM_18K>95</BRAM_18K>
+<DSP>149</DSP>
+<FF>32189</FF>
+<LUT>79160</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -566,8 +566,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>buffer_out_address0</name>
-<Object>buffer_out</Object>
+<name>sines_buffer_out_address0</name>
+<Object>sines_buffer_out</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -578,8 +578,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>buffer_out_ce0</name>
-<Object>buffer_out</Object>
+<name>sines_buffer_out_ce0</name>
+<Object>sines_buffer_out</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -590,8 +590,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>buffer_out_we0</name>
-<Object>buffer_out</Object>
+<name>sines_buffer_out_we0</name>
+<Object>sines_buffer_out</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -602,8 +602,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>buffer_out_d0</name>
-<Object>buffer_out</Object>
+<name>sines_buffer_out_d0</name>
+<Object>sines_buffer_out</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -614,8 +614,68 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>buffer_out_q0</name>
-<Object>buffer_out</Object>
+<name>sines_buffer_out_q0</name>
+<Object>sines_buffer_out</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>samples_buffer_out_address0</name>
+<Object>samples_buffer_out</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>10</Bits>
+<Attribute>address</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>samples_buffer_out_ce0</name>
+<Object>samples_buffer_out</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>samples_buffer_out_we0</name>
+<Object>samples_buffer_out</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>samples_buffer_out_d0</name>
+<Object>samples_buffer_out</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>samples_buffer_out_q0</name>
+<Object>samples_buffer_out</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>

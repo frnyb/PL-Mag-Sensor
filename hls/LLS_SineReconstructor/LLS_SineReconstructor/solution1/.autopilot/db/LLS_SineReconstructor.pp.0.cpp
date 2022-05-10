@@ -29388,569 +29388,611 @@ class stream : public stream<__STREAM_T__, 0> {
 # 29 "/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" 2
 
 
+
+
+
+
 namespace xf {
 namespace solver {
-namespace internal {
-
-union double_casting {
-    double d;
-    uint64_t i;
-};
 
 
+template <typename T, int NRMAX, int NCMAX, int MCU, int NCU, int ACUM, int ACUN>
+class gesvjComputer {
+public:
+    gesvjComputer() {
+# 58 "/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp"
+#pragma HLS STREAM variable = alpha_strm depth = 16 dim = 1
+#pragma HLS STREAM variable = beta_strm depth = 16 dim = 1
+#pragma HLS STREAM variable = gamma_strm depth = 16 dim = 1
+#pragma HLS STREAM variable = s_strm depth = 16 dim = 1
+#pragma HLS STREAM variable = c_strm depth = 16 dim = 1
+#pragma HLS STREAM variable = conv_strm depth = 16 dim = 1
 
 
-template <typename T>
-void jacobi_rotation_2x2(T alpha, T beta, T gamma, hls::stream<T>& s_strm, hls::stream<T>& c_strm) {
 
 
 
 
 
-#pragma HLS inline off
-
-#pragma HLS PIPELINE II = 1
- double m00, m01, m11;
-
-    m00 = beta;
-    m01 = gamma;
-    m11 = alpha;
-    double d;
-#pragma HLS RESOURCE variable = d core = DAddSub_nodsp
- d = m00 - m11;
-    ap_uint<11> exp1;
-    ap_uint<52> sig1;
-    union double_casting dc;
-
-    dc.d = m01;
-    ap_uint<64> data = dc.i;
-    exp1(10, 0) = data(62, 52);
-    exp1 = exp1 + ap_uint<11>(1);
-    data(62, 52) = exp1(10, 0);
-    dc.i = data;
-    double deno = dc.d;
-
-
-    dc.d = d;
-    data = dc.i;
-    exp1(10, 0) = data(62, 52);
-    exp1 = exp1 + ap_uint<11>(1);
-    data(62, 52) = exp1(10, 0);
-    data[63] = 0;
-    dc.i = data;
-    double KK = dc.d;
-
-
-    double deno2, d2;
-#pragma HLS RESOURCE variable = d2 core = DMul_maxdsp
-#pragma HLS RESOURCE variable = deno2 core = DMul_maxdsp
- d2 = d * d;
-    deno2 = deno * deno;
-    double m;
-#pragma HLS RESOURCE variable = m core = DAddSub_nodsp
- m = deno2 + d2;
-    double sqrtM = hls::sqrt(m);
-
-
-    dc.d = m;
-    data = dc.i;
-    exp1(10, 0) = data(62, 52);
-    exp1 = exp1 + ap_uint<11>(1);
-    data(62, 52) = exp1(10, 0);
-    dc.i = data;
-    double M2 = dc.d;
-
-    double tmpMul, tmpSum, tmpSub;
-#pragma HLS RESOURCE variable = tmpMul core = DMul_maxdsp
- tmpMul = KK * sqrtM;
-#pragma HLS RESOURCE variable = tmpSum core = DAddSub_nodsp
- tmpSum = tmpMul + M2;
-    double tmpDivider = deno2 / tmpSum;
-#pragma HLS RESOURCE variable = tmpSub core = DAddSub_nodsp
- tmpSub = 1 - tmpDivider;
-    T c_right = hls::sqrt(tmpSub);
-    double tmp = hls::sqrt(tmpDivider);
-    T s_right = (((d > 0) && (deno > 0)) | ((d < 0) && (deno < 0))) ? tmp : -tmp;
-
-    s_strm.write(s_right);
-    c_strm.write(c_right);
-}
-
-template <typename T>
-void calc_converge(T alpha, T beta, T gamma, hls::stream<T>& conv_strm) {
-    T converge = (T)hls::abs((float)gamma) / (T)hls::sqrt((float)(alpha * beta));
-    conv_strm.write(converge);
-}
-
-template <typename T>
-void svd_and_conv(T alpha, T beta, T gamma, hls::stream<T>& conv_strm, hls::stream<T>& s_strm, hls::stream<T>& c_strm) {
-#pragma HLS DATAFLOW
- jacobi_rotation_2x2<T>(alpha, beta, gamma, s_strm, c_strm);
-    calc_converge(alpha, beta, gamma, conv_strm);
-}
-
-template <typename T, int NRMAX, int NCMAX, int MCU, int ACUM>
-void update_A(
-    T matA[MCU][ACUM][NCMAX], T A_i[MCU][ACUM], T A_j[MCU][ACUM], int m, int n, int col_i, int col_j, T s, T c) {
-#pragma HLS inline off
-UPDATE_A:
-    for (int k = 0; k < ACUM; k++) {
-#pragma HLS PIPELINE II = 1
-#pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
- VITIS_LOOP_140_1: for (int itm = 0; itm < MCU; itm++) {
-#pragma HLS UNROLL
- T tki = A_i[itm][k];
-            T tkj = A_j[itm][k];
-            matA[itm][k][col_i] = c * tki - s * tkj;
-            matA[itm][k][col_j] = s * tki + c * tkj;
-        }
-    }
-}
-
-template <typename T, int NCMAX, int NCU, int ACUN>
-void update_V(T matV[NCU][ACUN][NCMAX], T V_i[NCU][ACUN], T V_j[NCU][ACUN], int n, int col_i, int col_j, T s, T c) {
-#pragma HLS inline off
-CALC_V:
-
-    for (int k = 0; k < ACUN; k++) {
-#pragma HLS PIPELINE II = 1
-#pragma HLS LOOP_TRIPCOUNT min = ACUN max = ACUN
- VITIS_LOOP_158_1: for (int itn = 0; itn < NCU; itn++) {
-#pragma HLS UNROLL
- T tki = V_i[itn][k];
-            T tkj = V_j[itn][k];
-            matV[itn][k][col_i] = c * tki - s * tkj;
-            matV[itn][k][col_j] = s * tki + c * tkj;
-        }
-    }
-}
-
-template <typename T, int NRMAX, int NCMAX, int MCU, int ACUM, int NCU, int ACUN>
-void update_AV(T matA[MCU][ACUM][NCMAX],
-               T matV[NCU][ACUN][NCMAX],
-               T A_i[MCU][ACUM],
-               T A_j[MCU][ACUM],
-               T V_i[NCU][ACUN],
-               T V_j[NCU][ACUN],
-               int m,
-               int n,
-               int col_i,
-               int col_j,
-               T s,
-               T c) {
-#pragma HLS DATAFLOW
- update_A<T, NRMAX, NCMAX, MCU, ACUM>(matA, A_i, A_j, m, n, col_i, col_j, s, c);
-    update_V<T, NCMAX, NCU, ACUN>(matV, V_i, V_j, n, col_i, col_j, s, c);
-}
-
-
-template <typename T, int NRMAX, int NCMAX, int MCU, int ACUM>
-void read_and_gen_2x2(T matA[MCU][ACUM][NCMAX],
-                      T A_i[MCU][ACUM],
-                      T A_j[MCU][ACUM],
-                      int m,
-                      int n,
-                      int col_i,
-                      int col_j,
-                      hls::stream<T>& alpha_strm,
-                      hls::stream<T>& beta_strm,
-                      hls::stream<T>& gamma_strm) {
-#pragma HLS inline off
- T alpha = 0;
-    T beta = 0;
-    T gamma = 0;
-
-    const int DEP = 16;
-
-    T alpha_acc[MCU][DEP];
-#pragma HLS resource variable = alpha_acc core = RAM_2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = alpha_acc complete dim = 0
- T beta_acc[MCU][DEP];
-#pragma HLS resource variable = beta_acc core = RAM_2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = beta_acc complete dim = 0
- T gamma_acc[MCU][DEP];
-#pragma HLS resource variable = gamma_acc core = RAM_2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = gamma_acc complete dim = 0
-
- T alpha_sum[DEP];
-    T beta_sum[DEP];
-    T gamma_sum[DEP];
-
-INIT_ACC:
-    for (int t = 0; t < DEP; t++) {
-#pragma HLS PIPELINE II = 1
-#pragma HLS LOOP_TRIPCOUNT min = 8 max = 8
- VITIS_LOOP_223_1: for (int itm = 0; itm < MCU; itm++) {
-#pragma HLS UNROLL
- alpha_acc[itm][t] = 0;
-            beta_acc[itm][t] = 0;
-            gamma_acc[itm][t] = 0;
-        }
-
-        alpha_sum[t] = 0;
-        beta_sum[t] = 0;
-        gamma_sum[t] = 0;
-    }
-
-CALC_ELEMENTS:
-    for (int k = 0; k < ACUM; k++) {
-#pragma HLS PIPELINE II = 1
-#pragma HLS LOOP_TRIPCOUNT min = ACUM max = ACUM
-#pragma HLS dependence variable = alpha_acc inter false
-#pragma HLS dependence variable = beta_acc inter false
-#pragma HLS dependence variable = gamma_acc inter false
- VITIS_LOOP_242_2: for (int itm = 0; itm < MCU; itm++) {
-#pragma HLS UNROLL
- if (k * MCU + itm < m) {
-                T Aki = matA[itm][k][col_i];
-                T Akj = matA[itm][k][col_j];
-                A_i[itm][k] = Aki;
-                A_j[itm][k] = Akj;
-                alpha_acc[itm][k % DEP] += Aki * Aki;
-                beta_acc[itm][k % DEP] += Akj * Akj;
-                gamma_acc[itm][k % DEP] += Aki * Akj;
-            }
-        }
-    }
-
-    ap_uint<4> idx = 0;
-ACCU:
-    for (int k = 0; k < DEP; k++) {
-#pragma HLS LOOP_TRIPCOUNT min = 8 max = 8
-#pragma HLS PIPELINE II = MCU
- VITIS_LOOP_261_3: for (int itm = 0; itm < MCU; itm++) {
-#pragma HLS LOOP_TRIPCOUNT min = MCU max = MCU
-#pragma HLS PIPELINE II = 1
-#pragma HLS dependence variable = alpha_acc inter false
-#pragma HLS dependence variable = beta_acc inter false
-#pragma HLS dependence variable = gamma_acc inter false
- alpha_sum[idx] += alpha_acc[itm][k];
-            beta_sum[idx] += beta_acc[itm][k];
-            gamma_sum[idx] += gamma_acc[itm][k];
-            idx++;
-        }
-    }
-
-
-    T alpha_sum_tmp0[8];
-    T beta_sum_tmp0[8];
-    T gamma_sum_tmp0[8];
-    VITIS_LOOP_278_4: for (int k = 0; k < 8; k++) {
-#pragma HLS PIPELINE
- alpha_sum_tmp0[k] = alpha_sum[2 * k] + alpha_sum[2 * k + 1];
-        beta_sum_tmp0[k] = beta_sum[2 * k] + beta_sum[2 * k + 1];
-        gamma_sum_tmp0[k] = gamma_sum[2 * k] + gamma_sum[2 * k + 1];
-    }
-
-
-    T alpha_sum_tmp1[4];
-    T beta_sum_tmp1[4];
-    T gamma_sum_tmp1[4];
-    VITIS_LOOP_289_5: for (int k = 0; k < 4; k++) {
-#pragma HLS PIPELINE
- alpha_sum_tmp1[k] = alpha_sum_tmp0[2 * k] + alpha_sum_tmp0[2 * k + 1];
-        beta_sum_tmp1[k] = beta_sum_tmp0[2 * k] + beta_sum_tmp0[2 * k + 1];
-        gamma_sum_tmp1[k] = gamma_sum_tmp0[2 * k] + gamma_sum_tmp0[2 * k + 1];
-    }
-
-    T alpha_sum_tmp2[2];
-    T beta_sum_tmp2[2];
-    T gamma_sum_tmp2[2];
-    VITIS_LOOP_299_6: for (int k = 0; k < 2; k++) {
-#pragma HLS PIPELINE
- alpha_sum_tmp2[k] = alpha_sum_tmp1[2 * k] + alpha_sum_tmp1[2 * k + 1];
-        beta_sum_tmp2[k] = beta_sum_tmp1[2 * k] + beta_sum_tmp1[2 * k + 1];
-        gamma_sum_tmp2[k] = gamma_sum_tmp1[2 * k] + gamma_sum_tmp1[2 * k + 1];
-    }
-
-    alpha = alpha_sum_tmp2[0] + alpha_sum_tmp2[1];
-    beta = beta_sum_tmp2[0] + beta_sum_tmp2[1];
-    gamma = gamma_sum_tmp2[0] + gamma_sum_tmp2[1];
-
-    alpha_strm.write(alpha);
-    beta_strm.write(beta);
-    gamma_strm.write(gamma);
-}
-
-
-template <typename T, int NCMAX, int NCU, int ACUN>
-void read_V_2cols(T matV[NCU][ACUN][NCMAX], T V_i[NCU][ACUN], T V_j[NCU][ACUN], int n, int col_i, int col_j) {
-#pragma HLS inline off
- VITIS_LOOP_319_1: for (int k = 0; k < ACUN; k++) {
-#pragma HLS PIPELINE
-#pragma HLS LOOP_TRIPCOUNT min = ACUN max = ACUN
- VITIS_LOOP_322_2: for (int itn = 0; itn < NCU; itn++) {
-#pragma HLS UNROLL
- if (k * NCU + itn < n) {
-                V_i[itn][k] = matV[itn][k][col_i];
-                V_j[itn][k] = matV[itn][k][col_j];
-            }
-        }
-    }
-}
-
-
-template <typename T, int NRMAX, int NCMAX, int MCU, int ACUM, int NCU, int ACUN>
-void read_to_2cols(T matA[MCU][ACUM][NCMAX],
-                   T matV[NCU][ACUN][NCMAX],
-                   T A_i[MCU][ACUM],
-                   T A_j[MCU][ACUM],
-                   T V_i[NCU][ACUN],
-                   T V_j[NCU][ACUN],
-                   int m,
-                   int n,
-                   int col_i,
-                   int col_j,
-                   hls::stream<T>& alpha_strm,
-                   hls::stream<T>& beta_strm,
-                   hls::stream<T>& gamma_strm) {
-#pragma HLS DATAFLOW
- read_and_gen_2x2<T, NRMAX, NCMAX, MCU, ACUM>(matA, A_i, A_j, m, n, col_i, col_j, alpha_strm, beta_strm, gamma_strm);
-    read_V_2cols<T, NCMAX, NCU, ACUN>(matV, V_i, V_j, n, col_i, col_j);
-}
-
-}
-# 374 "/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp"
-template <typename T, int NRMAX, int NCMAX, int MCU, int NCU>
-void gesvj(int m, int n, T* A, T* U, T* S, T* V) {
-
-    const int ACUM = (NRMAX + MCU - 1) / MCU;
-
-    const int ACUN = (NCMAX + NCU - 1) / NCU;
-
-    static T matA[MCU][ACUM][NCMAX];
-#pragma HLS RESOURCE variable = matA core = RAM_T2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = matA dim = 1
- static T matU[NRMAX][NRMAX];
-#pragma HLS RESOURCE variable = matU core = RAM_T2P_BRAM
- static T matV[NCU][ACUN][NCMAX];
-#pragma HLS RESOURCE variable = matV core = RAM_T2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = matV dim = 1
- static T A_i[MCU][ACUM];
-#pragma HLS RESOURCE variable = A_i core = RAM_S2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = A_i dim = 1
- static T A_j[MCU][ACUM];
-#pragma HLS RESOURCE variable = A_j core = RAM_S2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = A_j dim = 1
- static T V_i[NCU][ACUN];
-#pragma HLS RESOURCE variable = V_i core = RAM_S2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = V_i dim = 1
- static T V_j[NCU][ACUN];
-#pragma HLS RESOURCE variable = V_j core = RAM_S2P_BRAM
-#pragma HLS ARRAY_PARTITION variable = V_j dim = 1
-
- static T sigma[NCMAX];
-#pragma HLS RESOURCE variable = sigma core = RAM_S2P_BRAM
-
-INIT_S:
-    for (int j = 0; j < n; j++) {
+ }
+# 95 "/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp"
+    void gesvj(int m, int n, T* A, T* U, T* S, T* V) {
+# 125 "/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp"
+    INIT_S:
+        for (int j = 0; j < n; j++) {
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
-#pragma HLS PIPELINE II = 1
+
+#pragma HLS PIPELINE off
  sigma[j] = 0.0;
-    }
+        }
 
-INIT_U:
-    for (int i = 0; i < m; i++) {
+    INIT_U:
+        for (int i = 0; i < m; i++) {
 #pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
- VITIS_LOOP_415_1: for (int j = 0; j < m; j++) {
-#pragma HLS PIPELINE II = 1
+ VITIS_LOOP_136_1: for (int j = 0; j < m; j++) {
+
+#pragma HLS PIPELINE off
 #pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
  if (i == j) {
-                matU[i][j] = 1.0;
-            } else {
-                matU[i][j] = 0.0;
+                    matU[i][j] = 1.0;
+                } else {
+                    matU[i][j] = 0.0;
+                }
             }
         }
-    }
 
-INIT_V:
-    for (int i = 0; i < n; i++) {
+    INIT_V:
+        for (int i = 0; i < n; i++) {
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
- VITIS_LOOP_429_2: for (int j = 0; j < n; j++) {
-#pragma HLS PIPELINE II = 1
+ VITIS_LOOP_151_2: for (int j = 0; j < n; j++) {
+
+#pragma HLS PIPELINE off
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
  if (i == j) {
-                matV[i % NCU][i / NCU][j] = 1.0;
-            } else {
-                matV[i % NCU][i / NCU][j] = 0.0;
+                    matV[i % NCU][i / NCU][j] = 1.0;
+                } else {
+                    matV[i % NCU][i / NCU][j] = 0.0;
+                }
             }
         }
-    }
 
 
-READ_A:
-    for (int i = 0; i < m; i++) {
+    READ_A:
+        for (int i = 0; i < m; i++) {
 #pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
- VITIS_LOOP_444_3: for (int j = 0; j < n; j++) {
+ VITIS_LOOP_167_3: for (int j = 0; j < n; j++) {
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
-#pragma HLS PIPELINE II = 1
+
+#pragma HLS PIPELINE off
  matA[i % MCU][i / MCU][j] = A[i * n + j];
 
 
 
 
 
+            }
+
+
+
+
+
+        }
+# 198 "/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp"
+        T converge = 1.0;
+
+        T epsilon = 1.e-8;
+        if (sizeof(T) == sizeof(float)) {
+            epsilon = 1.e-7;
         }
 
+        int sweep_loop = 0;
 
-
-
-
-    }
-
-    hls::stream<T> alpha_strm;
-#pragma HLS STREAM variable = alpha_strm depth = 16 dim = 1
- hls::stream<T> beta_strm;
-#pragma HLS STREAM variable = beta_strm depth = 16 dim = 1
- hls::stream<T> gamma_strm;
-#pragma HLS STREAM variable = gamma_strm depth = 16 dim = 1
- hls::stream<T> s_strm;
-#pragma HLS STREAM variable = s_strm depth = 16 dim = 1
- hls::stream<T> c_strm;
-#pragma HLS STREAM variable = c_strm depth = 16 dim = 1
- hls::stream<T> conv_strm;
-#pragma HLS STREAM variable = conv_strm depth = 16 dim = 1
-
- T converge = 1.0;
-
-    T epsilon = 1.e-8;
-    if (sizeof(T) == sizeof(float)) {
-        epsilon = 1.e-7;
-    }
-
-    int sweep_loop = 0;
-
-CONV_WHILE:
-    while (converge > epsilon) {
+    CONV_WHILE:
+        while (converge > epsilon) {
 #pragma HLS LOOP_TRIPCOUNT min = 5 max = 15
+#pragma HLS PIPELINE off
  converge = 0.0;
-        sweep_loop++;
+            sweep_loop++;
 
-    LOOP_COLS:
-        for (int i = 1; i < n; i++) {
+        LOOP_COLS:
+            for (int i = 1; i < n; i++) {
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
+#pragma HLS PIPELINE off
  LOOP_i:
-            for (int j = 0; j < i; j++) {
+                for (int j = 0; j < i; j++) {
 
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX/2 max = NCMAX/2
+#pragma HLS PIPELINE off
 
- internal::read_to_2cols<T, NRMAX, NCMAX, MCU, ACUM, NCU, ACUN>(matA, matV, A_i, A_j, V_i, V_j, m, n, i,
-                                                                               j, alpha_strm, beta_strm, gamma_strm);
 
-                T alpha = alpha_strm.read();
-                T beta = beta_strm.read();
-                T gamma = gamma_strm.read();
-                internal::svd_and_conv(alpha, beta, gamma, conv_strm, s_strm, c_strm);
 
-                T s = s_strm.read();
-                T c = c_strm.read();
-                T conv_tmp = conv_strm.read();
-                if (c == 1 && s == 0) {
-                    conv_tmp = 0;
+ read_to_2cols(matA, matV, A_i, A_j, V_i, V_j, m, n, i, j, alpha_strm, beta_strm, gamma_strm);
+
+                    T alpha = alpha_strm.read();
+                    T beta = beta_strm.read();
+                    T gamma = gamma_strm.read();
+
+                    svd_and_conv(alpha, beta, gamma, conv_strm, s_strm, c_strm);
+
+                    T s = s_strm.read();
+                    T c = c_strm.read();
+                    T conv_tmp = conv_strm.read();
+                    if (c == 1 && s == 0) {
+                        conv_tmp = 0;
+                    }
+                    converge = hls::max(converge, conv_tmp);
+
+
+
+                    update_AV(matA, matV, A_i, A_j, V_i, V_j, m, n, i, j, s, c);
                 }
-                converge = hls::max(converge, conv_tmp);
-
-                internal::update_AV<T, NRMAX, NCMAX, MCU, ACUM, NCU, ACUN>(matA, matV, A_i, A_j, V_i, V_j, m, n, i, j,
-                                                                           s, c);
             }
         }
-    }
 
 
-    const int DEP = 16;
-    T accu_s = 0;
-    T AUS_accu[DEP];
-    int jj = 0;
-CALC_US:
-    for (int j = 0; j < n; j++) {
+
+        T accu_s = 0;
+        T AUS_accu[16];
+        int jj = 0;
+    CALC_US:
+        for (int j = 0; j < n; j++) {
+#pragma HLS PIPELINE off
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
  accu_s = 0;
-        VITIS_LOOP_528_4: for (int t = 0; t < DEP; t++) {
-#pragma HLS UNROLL
- AUS_accu[t] = 0;
-        }
-        VITIS_LOOP_532_5: for (int i = 0; i < m; i++) {
-#pragma HLS PIPELINE II = 1
+            VITIS_LOOP_259_4: for (int t = 0; t < 16; t++) {
+
+
+                AUS_accu[t] = 0;
+            }
+            VITIS_LOOP_264_5: for (int i = 0; i < m; i++) {
+
+#pragma HLS PIPELINE off
 #pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
  T Aij = matA[i % MCU][i / MCU][j];
-            AUS_accu[i % DEP] += Aij * Aij;
-        }
+                AUS_accu[i % 16] += Aij * Aij;
+            }
 
 
 
-        T AUS_accu_tmp0[8];
-        VITIS_LOOP_542_6: for (int t = 0; t < 8; t++) {
-#pragma HLS PIPELINE
+            T AUS_accu_tmp0[8];
+            VITIS_LOOP_275_6: for (int t = 0; t < 8; t++) {
+
+#pragma HLS PIPELINE off
  AUS_accu_tmp0[t] = AUS_accu[2 * t] + AUS_accu[2 * t + 1];
-        }
+            }
 
-        T AUS_accu_tmp1[4];
-        VITIS_LOOP_548_7: for (int t = 0; t < 4; t++) {
-#pragma HLS PIPELINE
+            T AUS_accu_tmp1[4];
+            VITIS_LOOP_282_7: for (int t = 0; t < 4; t++) {
+
+#pragma HLS PIPELINE off
  AUS_accu_tmp1[t] = AUS_accu_tmp0[2 * t] + AUS_accu_tmp0[2 * t + 1];
-        }
+            }
 
-        T AUS_accu_tmp2[2];
-        VITIS_LOOP_554_8: for (int t = 0; t < 2; t++) {
-#pragma HLS PIPELINE
+            T AUS_accu_tmp2[2];
+            VITIS_LOOP_289_8: for (int t = 0; t < 2; t++) {
+
+#pragma HLS PIPELINE off
  AUS_accu_tmp2[t] = AUS_accu_tmp1[2 * t] + AUS_accu_tmp1[2 * t + 1];
-        }
+            }
 
-        accu_s = AUS_accu_tmp2[0] + AUS_accu_tmp2[1];
+            accu_s = AUS_accu_tmp2[0] + AUS_accu_tmp2[1];
 
-        accu_s = (T)(hls::sqrt((float)accu_s));
-
-
+            accu_s = (T)(hls::sqrt((float)accu_s));
 
 
-        sigma[j] = accu_s;
 
-        if (accu_s > 1.e-15) {
-            VITIS_LOOP_569_9: for (int i = 0; i < m; i++) {
-#pragma HLS PIPELINE II = 1
+
+            sigma[j] = accu_s;
+
+            if (accu_s > 1.e-15) {
+                VITIS_LOOP_305_9: for (int i = 0; i < m; i++) {
+
+#pragma HLS PIPELINE off
 #pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
  matU[i][jj] = matA[i % MCU][i / MCU][j] / accu_s;
+                }
+                jj++;
             }
-            jj++;
         }
-    }
 
 
 
-OUT_U:
-    for (int i = 0; i < m; i++) {
+    OUT_U:
+        for (int i = 0; i < m; i++) {
 #pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
- VITIS_LOOP_583_10: for (int j = 0; j < m; j++) {
+ VITIS_LOOP_320_10: for (int j = 0; j < m; j++) {
 #pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
-#pragma HLS PIPELINE II = 1
+
+#pragma HLS PIPELINE off
  U[i * m + j] = matU[i][j];
+            }
         }
-    }
 
-OUT_S:
-    for (int i = 0; i < n; i++) {
-#pragma HLS PIPELINE II = 1
+    OUT_S:
+        for (int i = 0; i < n; i++) {
+
+#pragma HLS PIPELINE off
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
  S[i] = sigma[i];
-    }
+        }
 
-OUT_V:
-    for (int i = 0; i < n; i++) {
+    OUT_V:
+        for (int i = 0; i < n; i++) {
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
- VITIS_LOOP_600_11: for (int j = 0; j < n; j++) {
-#pragma HLS PIPELINE II = 1
+ VITIS_LOOP_339_11: for (int j = 0; j < n; j++) {
+
+#pragma HLS PIPELINE off
 #pragma HLS LOOP_TRIPCOUNT min = NCMAX max = NCMAX
  V[i * n + j] = matV[i % NCU][i / NCU][j];
+            }
+        }
+
+
+
+
+
+
+    }
+
+private:
+
+
+
+
+
+    T matA[MCU][ACUM][NCMAX];
+    T matU[NRMAX][NRMAX];
+    T matV[NCU][ACUN][NCMAX];
+    T A_i[MCU][ACUM];
+    T A_j[MCU][ACUM];
+    T V_i[NCU][ACUN];
+    T V_j[NCU][ACUN];
+    T sigma[NCMAX];
+
+    hls::stream<T> alpha_strm;
+    hls::stream<T> beta_strm;
+    hls::stream<T> gamma_strm;
+    hls::stream<T> s_strm;
+    hls::stream<T> c_strm;
+    hls::stream<T> conv_strm;
+
+
+
+
+    T alpha_acc[MCU][16];
+    T beta_acc[MCU][16];
+    T gamma_acc[MCU][16];
+
+    T alpha_sum[16];
+    T beta_sum[16];
+    T gamma_sum[16];
+
+    union double_casting {
+        double d;
+        uint64_t i;
+    };
+
+
+
+
+
+    void jacobi_rotation_2x2(T alpha, T beta, T gamma, hls::stream<T>& s_strm, hls::stream<T>& c_strm) {
+
+
+
+
+
+#pragma HLS inline off
+
+
+#pragma HLS PIPELINE off
+ double m00, m01, m11;
+
+        m00 = beta;
+        m01 = gamma;
+        m11 = alpha;
+        double d;
+#pragma HLS RESOURCE variable = d core = DAddSub_nodsp
+ d = m00 - m11;
+        ap_uint<11> exp1;
+        ap_uint<52> sig1;
+        union double_casting dc;
+
+        dc.d = m01;
+        ap_uint<64> data = dc.i;
+        exp1(10, 0) = data(62, 52);
+        exp1 = exp1 + ap_uint<11>(1);
+        data(62, 52) = exp1(10, 0);
+        dc.i = data;
+        double deno = dc.d;
+
+
+        dc.d = d;
+        data = dc.i;
+        exp1(10, 0) = data(62, 52);
+        exp1 = exp1 + ap_uint<11>(1);
+        data(62, 52) = exp1(10, 0);
+        data[63] = 0;
+        dc.i = data;
+        double KK = dc.d;
+
+
+        double deno2, d2;
+#pragma HLS RESOURCE variable = d2 core = DMul_maxdsp
+#pragma HLS RESOURCE variable = deno2 core = DMul_maxdsp
+ d2 = d * d;
+        deno2 = deno * deno;
+        double m;
+#pragma HLS RESOURCE variable = m core = DAddSub_nodsp
+ m = deno2 + d2;
+        double sqrtM = hls::sqrt(m);
+
+
+        dc.d = m;
+        data = dc.i;
+        exp1(10, 0) = data(62, 52);
+        exp1 = exp1 + ap_uint<11>(1);
+        data(62, 52) = exp1(10, 0);
+        dc.i = data;
+        double M2 = dc.d;
+
+        double tmpMul, tmpSum, tmpSub;
+#pragma HLS RESOURCE variable = tmpMul core = DMul_maxdsp
+ tmpMul = KK * sqrtM;
+#pragma HLS RESOURCE variable = tmpSum core = DAddSub_nodsp
+ tmpSum = tmpMul + M2;
+        double tmpDivider = deno2 / tmpSum;
+#pragma HLS RESOURCE variable = tmpSub core = DAddSub_nodsp
+ tmpSub = 1 - tmpDivider;
+        T c_right = hls::sqrt(tmpSub);
+        double tmp = hls::sqrt(tmpDivider);
+        T s_right = (((d > 0) && (deno > 0)) | ((d < 0) && (deno < 0))) ? tmp : -tmp;
+
+        s_strm.write(s_right);
+        c_strm.write(c_right);
+    }
+
+
+    void calc_converge(T alpha, T beta, T gamma, hls::stream<T>& conv_strm) {
+        T converge = (T)hls::abs((float)gamma) / (T)hls::sqrt((float)(alpha * beta));
+        conv_strm.write(converge);
+    }
+
+
+    void svd_and_conv(T alpha, T beta, T gamma, hls::stream<T>& conv_strm, hls::stream<T>& s_strm, hls::stream<T>& c_strm) {
+#pragma HLS DATAFLOW
+
+ jacobi_rotation_2x2(alpha, beta, gamma, s_strm, c_strm);
+        calc_converge(alpha, beta, gamma, conv_strm);
+    }
+
+
+    void update_A(
+        T matA[MCU][ACUM][NCMAX], T A_i[MCU][ACUM], T A_j[MCU][ACUM], int m, int n, int col_i, int col_j, T s, T c) {
+#pragma HLS inline off
+ UPDATE_A:
+        for (int k = 0; k < ACUM; k++) {
+
+#pragma HLS PIPELINE off
+#pragma HLS LOOP_TRIPCOUNT min = NRMAX max = NRMAX
+ VITIS_LOOP_495_1: for (int itm = 0; itm < MCU; itm++) {
+
+#pragma HLS PIPELINE off
+ T tki = A_i[itm][k];
+                T tkj = A_j[itm][k];
+                matA[itm][k][col_i] = c * tki - s * tkj;
+                matA[itm][k][col_j] = s * tki + c * tkj;
+            }
+        }
+    }
+
+
+    void update_V(T matV[NCU][ACUN][NCMAX], T V_i[NCU][ACUN], T V_j[NCU][ACUN], int n, int col_i, int col_j, T s, T c) {
+#pragma HLS inline off
+ CALC_V:
+
+        for (int k = 0; k < ACUN; k++) {
+
+#pragma HLS PIPELINE off
+#pragma HLS LOOP_TRIPCOUNT min = ACUN max = ACUN
+ VITIS_LOOP_515_1: for (int itn = 0; itn < NCU; itn++) {
+
+#pragma HLS PIPELINE off
+ T tki = V_i[itn][k];
+                T tkj = V_j[itn][k];
+                matV[itn][k][col_i] = c * tki - s * tkj;
+                matV[itn][k][col_j] = s * tki + c * tkj;
+            }
+        }
+    }
+
+
+    void update_AV(T matA[MCU][ACUM][NCMAX],
+                T matV[NCU][ACUN][NCMAX],
+                T A_i[MCU][ACUM],
+                T A_j[MCU][ACUM],
+                T V_i[NCU][ACUN],
+                T V_j[NCU][ACUN],
+                int m,
+                int n,
+                int col_i,
+                int col_j,
+                T s,
+                T c) {
+#pragma HLS DATAFLOW
+
+
+
+ update_A(matA, A_i, A_j, m, n, col_i, col_j, s, c);
+        update_V(matV, V_i, V_j, n, col_i, col_j, s, c);
+    }
+
+
+
+    void read_and_gen_2x2(T matA[MCU][ACUM][NCMAX],
+                        T A_i[MCU][ACUM],
+                        T A_j[MCU][ACUM],
+                        int m,
+                        int n,
+                        int col_i,
+                        int col_j,
+                        hls::stream<T>& alpha_strm,
+                        hls::stream<T>& beta_strm,
+                        hls::stream<T>& gamma_strm) {
+#pragma HLS inline off
+ T alpha = 0;
+        T beta = 0;
+        T gamma = 0;
+# 580 "/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp"
+    INIT_ACC:
+        for (int t = 0; t < 16; t++) {
+
+#pragma HLS PIPELINE off
+#pragma HLS LOOP_TRIPCOUNT min = 8 max = 8
+ VITIS_LOOP_585_1: for (int itm = 0; itm < MCU; itm++) {
+
+#pragma HLS PIPELINE off
+ alpha_acc[itm][t] = 0;
+                beta_acc[itm][t] = 0;
+                gamma_acc[itm][t] = 0;
+            }
+
+            alpha_sum[t] = 0;
+            beta_sum[t] = 0;
+            gamma_sum[t] = 0;
+        }
+
+    CALC_ELEMENTS:
+        for (int k = 0; k < ACUM; k++) {
+
+#pragma HLS PIPELINE off
+#pragma HLS LOOP_TRIPCOUNT min = ACUM max = ACUM
+#pragma HLS dependence variable = alpha_acc inter false
+#pragma HLS dependence variable = beta_acc inter false
+#pragma HLS dependence variable = gamma_acc inter false
+ VITIS_LOOP_606_2: for (int itm = 0; itm < MCU; itm++) {
+
+#pragma HLS PIPELINE off
+ if (k * MCU + itm < m) {
+                    T Aki = matA[itm][k][col_i];
+                    T Akj = matA[itm][k][col_j];
+                    A_i[itm][k] = Aki;
+                    A_j[itm][k] = Akj;
+                    alpha_acc[itm][k % 16] += Aki * Aki;
+                    beta_acc[itm][k % 16] += Akj * Akj;
+                    gamma_acc[itm][k % 16] += Aki * Akj;
+                }
+            }
+        }
+
+        ap_uint<4> idx = 0;
+    ACCU:
+        for (int k = 0; k < 16; k++) {
+#pragma HLS LOOP_TRIPCOUNT min = 8 max = 8
+
+#pragma HLS PIPELINE off
+ VITIS_LOOP_627_3: for (int itm = 0; itm < MCU; itm++) {
+#pragma HLS LOOP_TRIPCOUNT min = MCU max = MCU
+
+#pragma HLS PIPELINE off
+#pragma HLS dependence variable = alpha_acc inter false
+#pragma HLS dependence variable = beta_acc inter false
+#pragma HLS dependence variable = gamma_acc inter false
+ alpha_sum[idx] += alpha_acc[itm][k];
+                beta_sum[idx] += beta_acc[itm][k];
+                gamma_sum[idx] += gamma_acc[itm][k];
+                idx++;
+            }
+        }
+
+
+        T alpha_sum_tmp0[8];
+        T beta_sum_tmp0[8];
+        T gamma_sum_tmp0[8];
+        VITIS_LOOP_645_4: for (int k = 0; k < 8; k++) {
+
+#pragma HLS PIPELINE off
+ alpha_sum_tmp0[k] = alpha_sum[2 * k] + alpha_sum[2 * k + 1];
+            beta_sum_tmp0[k] = beta_sum[2 * k] + beta_sum[2 * k + 1];
+            gamma_sum_tmp0[k] = gamma_sum[2 * k] + gamma_sum[2 * k + 1];
+        }
+
+
+        T alpha_sum_tmp1[4];
+        T beta_sum_tmp1[4];
+        T gamma_sum_tmp1[4];
+        VITIS_LOOP_657_5: for (int k = 0; k < 4; k++) {
+
+#pragma HLS PIPELINE off
+ alpha_sum_tmp1[k] = alpha_sum_tmp0[2 * k] + alpha_sum_tmp0[2 * k + 1];
+            beta_sum_tmp1[k] = beta_sum_tmp0[2 * k] + beta_sum_tmp0[2 * k + 1];
+            gamma_sum_tmp1[k] = gamma_sum_tmp0[2 * k] + gamma_sum_tmp0[2 * k + 1];
+        }
+
+        T alpha_sum_tmp2[2];
+        T beta_sum_tmp2[2];
+        T gamma_sum_tmp2[2];
+        VITIS_LOOP_668_6: for (int k = 0; k < 2; k++) {
+
+#pragma HLS PIPELINE off
+ alpha_sum_tmp2[k] = alpha_sum_tmp1[2 * k] + alpha_sum_tmp1[2 * k + 1];
+            beta_sum_tmp2[k] = beta_sum_tmp1[2 * k] + beta_sum_tmp1[2 * k + 1];
+            gamma_sum_tmp2[k] = gamma_sum_tmp1[2 * k] + gamma_sum_tmp1[2 * k + 1];
+        }
+
+        alpha = alpha_sum_tmp2[0] + alpha_sum_tmp2[1];
+        beta = beta_sum_tmp2[0] + beta_sum_tmp2[1];
+        gamma = gamma_sum_tmp2[0] + gamma_sum_tmp2[1];
+
+        alpha_strm.write(alpha);
+        beta_strm.write(beta);
+        gamma_strm.write(gamma);
+    }
+
+
+
+    void read_V_2cols(T matV[NCU][ACUN][NCMAX], T V_i[NCU][ACUN], T V_j[NCU][ACUN], int n, int col_i, int col_j) {
+#pragma HLS inline off
+ VITIS_LOOP_689_1: for (int k = 0; k < ACUN; k++) {
+
+#pragma HLS PIPELINE off
+#pragma HLS LOOP_TRIPCOUNT min = ACUN max = ACUN
+ VITIS_LOOP_693_2: for (int itn = 0; itn < NCU; itn++) {
+
+#pragma HLS PIPELINE off
+ if (k * NCU + itn < n) {
+                    V_i[itn][k] = matV[itn][k][col_i];
+                    V_j[itn][k] = matV[itn][k][col_j];
+                }
+            }
         }
     }
 
 
 
+    void read_to_2cols(T matA[MCU][ACUM][NCMAX],
+                    T matV[NCU][ACUN][NCMAX],
+                    T A_i[MCU][ACUM],
+                    T A_j[MCU][ACUM],
+                    T V_i[NCU][ACUN],
+                    T V_j[NCU][ACUN],
+                    int m,
+                    int n,
+                    int col_i,
+                    int col_j,
+                    hls::stream<T>& alpha_strm,
+                    hls::stream<T>& beta_strm,
+                    hls::stream<T>& gamma_strm) {
+#pragma HLS DATAFLOW
+
+
+ read_and_gen_2x2(matA, A_i, A_j, m, n, col_i, col_j, alpha_strm, beta_strm, gamma_strm);
+        read_V_2cols(matV, V_i, V_j, n, col_i, col_j);
+    }
 
 
 
-}
-
+};
 }
 }
 # 33 "/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/xf_solver_L2.hpp" 2
@@ -58026,20 +58068,22 @@ private:
 };
 # 19 "../src/LLS_SineReconstructor.h" 2
 # 1 "../src/matrix_ops.h" 1
-template<typename T>
+template<typename T, int M, int N, int O>
 
 
 
 
-void matMul(int M, int N, int O, T *mat1, T *mat2, T *mat_o) {
+void matMul(T *mat1, T *mat2, T *mat_o) {
 
  mat_mul_N_loop:
  for (int i = 0; i < M; i++) {
+
 #pragma HLS PIPELINE off
 #pragma HLS UNROLL factor=1
 
  mat_mul_L_loop:
   for (int j = 0; j < O; j++) {
+
 #pragma HLS PIPELINE off
 #pragma HLS UNROLL factor=1
 
@@ -58047,6 +58091,7 @@ void matMul(int M, int N, int O, T *mat1, T *mat2, T *mat_o) {
 
    mat_mul_M_loop:
    for (int k = 0; k < N; k++) {
+
 #pragma HLS PIPELINE off
 #pragma HLS UNROLL factor=1
 
@@ -58060,16 +58105,20 @@ void matMul(int M, int N, int O, T *mat1, T *mat2, T *mat_o) {
  }
 }
 
-template<typename T>
-void matTranspose(int M, int N, T *mat_i, T *mat_o) {
+template<typename T, int M, int N>
+void matTranspose(T *mat_i, T *mat_o) {
 
  mat_transpose_N_loop:
  for (int i = 0; i < M; i++) {
+#pragma HLS PIPELINE off
 
-  mat_transpose_M_loop:
+
+ mat_transpose_M_loop:
   for (int j = 0; j < N; j++) {
+#pragma HLS PIPELINE off
 
-   mat_o[j*M+i] = mat_i[i*N+j];
+
+ mat_o[j*M+i] = mat_i[i*N+j];
 
   }
  }
@@ -58078,39 +58127,46 @@ void matTranspose(int M, int N, T *mat_i, T *mat_o) {
 
 
 using namespace std;
-# 39 "../src/LLS_SineReconstructor.h"
-typedef ap_fixed<64, 21, AP_RND> fixed_t;
-typedef ap_fixed<64, 48> large_fixed_t;
-# 50 "../src/LLS_SineReconstructor.h"
-const int n_periods = 20;
-
-
-
-
-
+# 49 "../src/LLS_SineReconstructor.h"
+typedef ap_fixed<60, 21, AP_RND> fixed_t;
+# 63 "../src/LLS_SineReconstructor.h"
 class SineReconstructor {
 
 public:
- SineReconstructor(CyclicBuffer<SamplePeriod<8>, 20> *sliding_window);
+ SineReconstructor(CyclicBuffer<SamplePeriod<8>, 10> *sliding_window);
 
  void GetReconstructedSines(float phases[12], float amplitudes[12]);
 
 private:
- CyclicBuffer<SamplePeriod<8>, 20> *sliding_window_;
+ CyclicBuffer<SamplePeriod<8>, 10> *sliding_window_;
 
 
 
 
- fixed_t times[8*20];
+ fixed_t times[8*10];
 
  int phase_ref_idx_;
+ int max_period_index_;
+ int max_sample_index_;
 
  float offsets_[12];
  float amplitudes_[12];
- float fixed_phase_;
+ fixed_t fixed_phase_;
 
- fixed_t A[8*20*3];
- fixed_t b[8*20];
+ fixed_t A[8*10*3];
+ fixed_t b[8*10];
+ fixed_t x[3];
+
+
+
+
+ fixed_t U[8*10*8*10];
+ fixed_t V[3*3];
+ fixed_t S[3];
+ fixed_t UT[3*8*10];
+ fixed_t A_pinv[3*8*10];
+
+ xf::solver::gesvjComputer<fixed_t, 8*10, 3, 1, 1, (8*10 +1 -1)/1, (3 +1 -1)/1> gesvj;
 
  void loadData();
 
@@ -58118,7 +58174,7 @@ private:
 
  void computeRemainingChannels();
 
- template<int M_MAX, int N_MAX>
+
  void computeLeastSquaresSolution(
    int M,
    int N,
@@ -58127,6 +58183,7 @@ private:
    fixed_t *x
  );
 
+ fixed_t remapAmplitude(fixed_t offset, fixed_t amplitude, fixed_t phase);
 };
 
 
@@ -58146,7 +58203,8 @@ __attribute__((sdx_kernel("LLSSineReconstruction", 0))) void LLSSineReconstructi
   uint32_t buffer_in_9[8],
   uint32_t buffer_in_10[8],
   uint32_t buffer_in_11[8],
-  volatile uint32_t buffer_out[12*2+1]);
+  volatile uint32_t sines_buffer_out[12*2+1],
+  volatile uint32_t samples_buffer_out[8*10*12 +1]);
 
 void loadSlidingWindow(
   uint32_t buffer_in_0[8],
@@ -58161,11 +58219,15 @@ void loadSlidingWindow(
   uint32_t buffer_in_9[8],
   uint32_t buffer_in_10[8],
   uint32_t buffer_in_11[8],
-  CyclicBuffer<SamplePeriod<8>, 20> *sliding_window);
+  CyclicBuffer<SamplePeriod<8>, 10> *sliding_window);
 
-void writeToRAM(
+void writeSinesToRAM(
   volatile uint32_t buffer_out[12*2+1],
   SineReconstructor *sine_reconstructor);
+
+void writeSamplesToRAM(
+  volatile uint32_t buffer_out[8*10*12 +1],
+  CyclicBuffer<SamplePeriod<8>, 10> *sliding_window);
 # 6 "../src/LLS_SineReconstructor.cpp" 2
 
 
@@ -58185,16 +58247,18 @@ __attribute__((sdx_kernel("LLSSineReconstruction", 0))) void LLSSineReconstructi
   uint32_t buffer_in_9[8],
   uint32_t buffer_in_10[8],
   uint32_t buffer_in_11[8],
-  volatile uint32_t buffer_out[12*2+1]
-) {_ssdm_SpecArrayDimSize(buffer_in_0, 8);_ssdm_SpecArrayDimSize(buffer_in_1, 8);_ssdm_SpecArrayDimSize(buffer_in_2, 8);_ssdm_SpecArrayDimSize(buffer_in_3, 8);_ssdm_SpecArrayDimSize(buffer_in_4, 8);_ssdm_SpecArrayDimSize(buffer_in_5, 8);_ssdm_SpecArrayDimSize(buffer_in_6, 8);_ssdm_SpecArrayDimSize(buffer_in_7, 8);_ssdm_SpecArrayDimSize(buffer_in_8, 8);_ssdm_SpecArrayDimSize(buffer_in_9, 8);_ssdm_SpecArrayDimSize(buffer_in_10, 8);_ssdm_SpecArrayDimSize(buffer_in_11, 8);_ssdm_SpecArrayDimSize(buffer_out, 25);
+  volatile uint32_t sines_buffer_out[12*2+1],
+  volatile uint32_t samples_buffer_out[8*10*12 +1]
+) {_ssdm_SpecArrayDimSize(buffer_in_0, 8);_ssdm_SpecArrayDimSize(buffer_in_1, 8);_ssdm_SpecArrayDimSize(buffer_in_2, 8);_ssdm_SpecArrayDimSize(buffer_in_3, 8);_ssdm_SpecArrayDimSize(buffer_in_4, 8);_ssdm_SpecArrayDimSize(buffer_in_5, 8);_ssdm_SpecArrayDimSize(buffer_in_6, 8);_ssdm_SpecArrayDimSize(buffer_in_7, 8);_ssdm_SpecArrayDimSize(buffer_in_8, 8);_ssdm_SpecArrayDimSize(buffer_in_9, 8);_ssdm_SpecArrayDimSize(buffer_in_10, 8);_ssdm_SpecArrayDimSize(buffer_in_11, 8);_ssdm_SpecArrayDimSize(sines_buffer_out, 25);_ssdm_SpecArrayDimSize(samples_buffer_out, 961);
 #pragma HLS TOP name=LLSSineReconstruction
-# 25 "../src/LLS_SineReconstructor.cpp"
+# 26 "../src/LLS_SineReconstructor.cpp"
 
 #pragma HLS TOP name=LLSSineReconstruction
 
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 
-#pragma HLS INTERFACE ap_memory storage_type=ram_1p port=buffer_out
+#pragma HLS INTERFACE ap_memory storage_type=ram_1p port=sines_buffer_out
+#pragma HLS INTERFACE ap_memory storage_type=ram_1p port=samples_buffer_out
 #pragma HLS INTERFACE ap_memory port=buffer_in_0 storage_type=ram_1p
 #pragma HLS INTERFACE ap_memory port=buffer_in_1 storage_type=ram_1p
 #pragma HLS INTERFACE ap_memory port=buffer_in_2 storage_type=ram_1p
@@ -58208,7 +58272,7 @@ __attribute__((sdx_kernel("LLSSineReconstruction", 0))) void LLSSineReconstructi
 #pragma HLS INTERFACE ap_memory port=buffer_in_10 storage_type=ram_1p
 #pragma HLS INTERFACE ap_memory port=buffer_in_11 storage_type=ram_1p
 
- static CyclicBuffer<SamplePeriod<8>, 20> sliding_window;
+ static CyclicBuffer<SamplePeriod<8>, 10> sliding_window;
 
  loadSlidingWindow(
    buffer_in_0, buffer_in_1, buffer_in_2,
@@ -58217,17 +58281,23 @@ __attribute__((sdx_kernel("LLSSineReconstruction", 0))) void LLSSineReconstructi
    buffer_in_9, buffer_in_10, buffer_in_11,
    &sliding_window);
 
- if (buffer_out[0] == 1) {
+ if (samples_buffer_out[0] == 1) {
 
-  SineReconstructor sine_reconstructor(&sliding_window);
+  writeSamplesToRAM(samples_buffer_out, &sliding_window);
 
-  writeToRAM(buffer_out, &sine_reconstructor);
-
-  buffer_out[0] = 0;
+  samples_buffer_out[0] = 0;
 
  }
 
+ if (sines_buffer_out[0] == 1) {
 
+  SineReconstructor sine_reconstructor(&sliding_window);
+
+  writeSinesToRAM(sines_buffer_out, &sine_reconstructor);
+
+  sines_buffer_out[0] = 0;
+
+ }
 }
 
 void loadSlidingWindow(
@@ -58243,7 +58313,7 @@ void loadSlidingWindow(
   uint32_t buffer_in_9[8],
   uint32_t buffer_in_10[8],
   uint32_t buffer_in_11[8],
-  CyclicBuffer<SamplePeriod<8>, 20> *sliding_window) {
+  CyclicBuffer<SamplePeriod<8>, 10> *sliding_window) {
 
  sample_t samples[8];
 
@@ -58287,7 +58357,7 @@ void loadSlidingWindow(
 
 }
 
-void writeToRAM(volatile uint32_t buffer_out[12*2+1], SineReconstructor *sine_reconstructor) {
+void writeSinesToRAM(volatile uint32_t buffer_out[12*2+1], SineReconstructor *sine_reconstructor) {
 
  float phases[12];
  float amplitudes[12];
@@ -58303,22 +58373,56 @@ void writeToRAM(volatile uint32_t buffer_out[12*2+1], SineReconstructor *sine_re
  }
 }
 
-SineReconstructor::SineReconstructor(CyclicBuffer<SamplePeriod<8>, 20> *sliding_window) {
+void writeSamplesToRAM(
+  volatile uint32_t buffer_out[8*10*12 +1],
+  CyclicBuffer<SamplePeriod<8>, 10> *sliding_window) {
+
+ int idx = 0;
+
+ write_data_period_loop:
+ for (int i = 10 -1; i >= 0; i--) {
+#pragma HLS LOOP_FLATTEN off
+
+ write_data_sample_loop:
+  for (int j = 0; j < 8; j++) {
+#pragma HLS LOOP_FLATTEN off
+
+ sample_t sample = (*sliding_window)[i][j];
+
+   write_data_channel_loop:
+   for (int k = 0; k < 12; k++) {
+#pragma HLS LOOP_FLATTEN off
+
+ ap_uint<20> timestamp = sample.timestamp[k];
+    ap_uint<12> data = sample.sample[k];
+
+    uint32_t item = ((((uint32_t)timestamp) << 12) & 0xFFFFF000) | ((uint32_t)data);
+
+    buffer_out[1+idx++] = item;
+
+   }
+  }
+ }
+}
+
+SineReconstructor::SineReconstructor(CyclicBuffer<SamplePeriod<8>, 10> *sliding_window) : gesvj() {
 
  sliding_window_ = sliding_window;
 
  loadData();
- computeFirstChannel();
+
  computeRemainingChannels();
 
 }
 
 void SineReconstructor::GetReconstructedSines(float phases[12], float amplitudes[12]) {
 
+ float phase = (float)(fixed_phase_);
+
  return_sine_params_loop:
  for (int i = 0; i < 12; i++) {
 
-  phases[i] = fixed_phase_;
+  phases[i] = phase;
   amplitudes[i] = amplitudes_[i];
 
  }
@@ -58330,14 +58434,19 @@ void SineReconstructor::loadData() {
 #pragma HLS ARRAY_PARTITION variable=max_vals dim=1 complete
  ap_uint<12> min_vals[12];
 #pragma HLS ARRAY_PARTITION variable=min_vals dim=1 complete
+ int max_period_indices[12];
+#pragma HLS ARRAY_PARTITION variable=max_period_indices dim=1 complete
+ int max_sample_indices[12];
+#pragma HLS ARRAY_PARTITION variable=max_sample_indices dim=1 complete
+
 
  fixed_t mag_time_ch0 = 0;
 
  load_data_periods_loop:
- for (int i = 0; i < 20; i++) {
+ for (int i = 0; i < 10; i++) {
 #pragma HLS LOOP_FLATTEN off
 
- SamplePeriod<8> sample_period = (*sliding_window_)[20 -1-i];
+ SamplePeriod<8> sample_period = (*sliding_window_)[10 -1-i];
 
   load_data_sample_loop:
   for (int j = 0; j < 8; j++) {
@@ -58356,15 +58465,23 @@ void SineReconstructor::loadData() {
 
     ap_uint<12> max_val = max_vals[k];
     ap_uint<12> min_val = min_vals[k];
+    int max_period_index;
+    int max_sample_index;
 
     if (sample_idx == 0) {
 
      max_val = sample_data;
      min_val = sample_data;
 
+     max_period_index = i;
+     max_sample_index = j;
+
     } else if (sample_data > max_val) {
 
      max_val = sample_data;
+
+     max_period_index = i;
+     max_sample_index = j;
 
     } else if (sample_data < min_val) {
 
@@ -58374,6 +58491,9 @@ void SineReconstructor::loadData() {
 
     max_vals[k] = max_val;
     min_vals[k] = min_val;
+
+    max_period_indices[k] = max_period_index;
+    max_sample_indices[k] = max_sample_index;
 
     if (k == 0) {
 
@@ -58402,6 +58522,8 @@ void SineReconstructor::loadData() {
  }
 
  phase_ref_idx_ = 0;
+ max_period_index_ = max_period_indices[0];
+ max_sample_index_ = max_sample_indices[0];
  ap_uint<12> max_diff = max_vals[0] - min_vals[0];
 
  load_data_min_max_diff_loop:
@@ -58413,6 +58535,8 @@ void SineReconstructor::loadData() {
 
    phase_ref_idx_ = i;
    max_diff = diff;
+   max_period_index_ = max_period_indices[i];
+   max_sample_index_ = max_sample_indices[i];
 
   }
  }
@@ -58421,10 +58545,10 @@ void SineReconstructor::loadData() {
 void SineReconstructor::computeFirstChannel() {
 
  load_data_periods_loop:
- for (int i = 0; i < 20; i++) {
+ for (int i = 0; i < 10; i++) {
 #pragma HLS LOOP_FLATTEN off
 
- SamplePeriod<8> sample_period = (*sliding_window_)[20 -1-i];
+ SamplePeriod<8> sample_period = (*sliding_window_)[10 -1-i];
 
   load_data_sample_loop:
   for (int j = 0; j < 8; j++) {
@@ -58453,54 +58577,117 @@ void SineReconstructor::computeFirstChannel() {
  }
 
  fixed_t x[3];
- computeLeastSquaresSolution<8*20, 3>(8*20, 3, (fixed_t *)A, (fixed_t *)b, (fixed_t *)x);
+ computeLeastSquaresSolution(8*10, 3, (fixed_t *)A, (fixed_t *)b, (fixed_t *)x);
 
- fixed_phase_ = hls::atan2((float)(x[2]), (float)(x[1]));
+ fixed_phase_ = (fixed_t)(hls::atan2((float)(x[2]), (float)(x[1])));
 
 }
 
 void SineReconstructor::computeRemainingChannels() {
 
+ int channels[12];
+ channels[0] = phase_ref_idx_;
+
+ VITIS_LOOP_362_1: for (int i = 1; i < 12; i++) {
+#pragma HLS PIPELINE off
+
+ if (i <= phase_ref_idx_) {
+
+   channels[i] = i - 1;
+
+  } else {
+
+   channels[i] = i;
+
+  }
+ }
+
+ int N = 3;
+
  compute_rem_channel_ch_loop:
  for (int k = 0; k < 12; k++) {
+#pragma HLS PIPELINE off
+
+ int ch = channels[k];
 
   load_data_periods_loop:
-  for (int i = 0; i < 20; i++) {
+  for (int i = 0; i < 10; i++) {
 #pragma HLS LOOP_FLATTEN off
+#pragma HLS PIPELINE off
 
- SamplePeriod<8> sample_period = (*sliding_window_)[20 -1-i];
 
-   load_data_sample_loop:
+
+ load_data_sample_loop:
    for (int j = 0; j < 8; j++) {
 #pragma HLS LOOP_FLATTEN off
+#pragma HLS PIPELINE off
 
  int sample_idx = i*8 +j;
 
-    sample_t mag_samples = sample_period[j];
 
-    fixed_t sample = (fixed_t)(mag_samples.sample[k]);
+
+    fixed_t sample = (fixed_t)((*sliding_window_)[10 -1-i][j].sample[ch]);
     fixed_t time = times[sample_idx];
 
-    fixed_t angle = (fixed_t)(2. * 3.14159265358979323846 * 50.) * time + (fixed_t)(fixed_phase_);
+    fixed_t sin_val;
+    fixed_t cos_val;
+    fixed_t angle;
 
-    A[sample_idx*2] = (fixed_t)1.;
-    A[sample_idx*2+1] = (fixed_t)hls::sin((float)angle);
+    if (k == 0) {
+
+     angle = (fixed_t)2. * (fixed_t)3.14159265358979323846 * (fixed_t)50. * time;
+
+     float sin_val_f;
+     float cos_val_f;
+     hls::sincos((float)angle, &sin_val_f, &cos_val_f);
+
+     sin_val = (fixed_t)sin_val_f;
+     cos_val = (fixed_t)cos_val_f;
+
+    } else {
+
+     angle = (fixed_t)2. * (fixed_t)3.14159265358979323846 * (fixed_t)50. * time + fixed_phase_;
+     sin_val = (fixed_t)hls::sin((float)angle);
+
+    }
+
+    A[sample_idx*N] = (fixed_t)1.;
+    A[sample_idx*N+1] = sin_val;
+
+    if (k == 0) {
+
+     A[sample_idx*N+2] = cos_val;
+
+    }
 
     b[sample_idx] = sample;
 
    }
   }
 
-  fixed_t x[2];
-  computeLeastSquaresSolution<8*20, 3>(8*20, 2, (fixed_t *)A, (fixed_t *)b, (fixed_t *)x);
+  computeLeastSquaresSolution(8*10, N, (fixed_t *)A, (fixed_t *)b, (fixed_t *)x);
 
-  offsets_[k] = (float)(x[0]);
-  amplitudes_[k] = (float)(x[1]);
+  fixed_t offset = x[0];
+  fixed_t amplitude = x[1];
+
+  if (k == 0) {
+
+   fixed_phase_ = (fixed_t)(hls::atan2((float)(x[2]), (float)(amplitude)));
+   amplitude = (fixed_t)(hls::sqrt((float)(x[2]*x[2] + amplitude*amplitude)));
+
+   amplitude = remapAmplitude(offset, amplitude, fixed_phase_);
+
+  }
+
+  offsets_[ch] = (float)(offset);
+  amplitudes_[ch] = (float)(amplitude);
+
+  N = 2;
 
  }
 }
 
-template<int M_MAX, int N_MAX>
+
 void SineReconstructor::computeLeastSquaresSolution(
   int M,
   int N,
@@ -58509,32 +58696,78 @@ void SineReconstructor::computeLeastSquaresSolution(
   fixed_t *x
 ) {
 
- static fixed_t U[M_MAX*M_MAX];
- static fixed_t V[N_MAX*N_MAX];
- static fixed_t S[N_MAX];
 
- xf::solver::gesvj<fixed_t, M_MAX, N_MAX, 2, 2>(M, N, A, (fixed_t *)U, (fixed_t *)S, (fixed_t *)V);
+ gesvj.gesvj(M, N, A, (fixed_t *)U, (fixed_t *)S, (fixed_t *)V);
 
- VITIS_LOOP_351_1: for (int i = 0; i < M; i++) {
-  VITIS_LOOP_352_2: for (int j = 0; j < N; j++) {
-   U[i*N+j] = U[i*M+j];
-  }
- }
+ reload_U_outer_loop:
+ for (int i = 0; i < M; i++) {
+#pragma HLS LOOP_TRIPCOUNT avg=160 max=160 min=160
+ reload_U_inner_loop:
+  for (int j = 0; j < N; j++) {
+#pragma HLS LOOP_TRIPCOUNT max=3 min=2
 
- static fixed_t UT[N_MAX*M_MAX];
- matTranspose<fixed_t>(M, N, (fixed_t *)U, (fixed_t *)UT);
-
- VITIS_LOOP_360_3: for (int i = 0; i < N; i++) {
-  VITIS_LOOP_361_4: for (int j = 0; j < N; j++) {
-
-   V[i*N+j] = V[i*N+j] / S[j];
+ U[i*N+j] = U[i*M+j];
 
   }
  }
 
- static fixed_t A_pinv[N_MAX*M_MAX];
- matMul<fixed_t>(N, N, M, (fixed_t *)V, (fixed_t *)UT, (fixed_t *)A_pinv);
+ if (N == 3) {
+  matTranspose<fixed_t, 8*10, 3>((fixed_t *)U, (fixed_t *)UT);
+ } else {
+  matTranspose<fixed_t, 8*10, 2>((fixed_t *)U, (fixed_t *)UT);
+ }
 
- matMul<fixed_t>(N, M, 1, (fixed_t *)A_pinv, b, x);
+
+ multiply_V_S_outer_loop:
+ for (int i = 0; i < N; i++) {
+#pragma HLS LOOP_TRIPCOUNT max=3 min=2
+#pragma HLS pipeline off
+ multiply_V_S_inner_loop:
+  for (int j = 0; j < N; j++) {
+#pragma HLS LOOP_TRIPCOUNT max=3 min=2
+#pragma HLS pipeline off
+
+ V[i*N+j] = V[i*N+j] / S[j];
+
+  }
+ }
+
+
+ if (N == 3) {
+  matMul<fixed_t, 3, 3, 8*10>((fixed_t *)V, (fixed_t *)UT, (fixed_t *)A_pinv);
+  matMul<fixed_t, 3, 8*10, 1>((fixed_t *)A_pinv, (fixed_t *)b, (fixed_t *)x);
+ } else {
+  matMul<fixed_t, 2, 2, 8*10>((fixed_t *)V, (fixed_t *)UT, (fixed_t *)A_pinv);
+  matMul<fixed_t, 2, 8*10, 1>((fixed_t *)A_pinv, (fixed_t *)b, (fixed_t *)x);
+ }
+
+
+}
+
+fixed_t SineReconstructor::remapAmplitude(fixed_t offset, fixed_t amplitude, fixed_t phase) {
+
+
+
+
+ fixed_t max_val = (*sliding_window_)[10 -1-max_period_index_][max_sample_index_].sample[phase_ref_idx_];
+ fixed_t max_time = times[max_period_index_*8 +max_sample_index_];
+
+ fixed_t angle = (fixed_t)2. * (fixed_t)3.14159265358979323846 * (fixed_t)50. * max_time + phase;
+
+ fixed_t sine_val = offset + amplitude * (fixed_t)hls::sin((float)angle);
+
+ fixed_t return_amplitude;
+
+ if (sine_val < offset) {
+
+  return_amplitude = -amplitude;
+
+ } else {
+
+  return_amplitude = amplitude;
+
+ }
+
+ return return_amplitude;
 
 }

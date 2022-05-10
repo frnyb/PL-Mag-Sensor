@@ -5,9 +5,9 @@
 `timescale 1 ns / 1 ps
 module LLSSineReconstruction_sine_reconstructor_times_V_ram (addr0, ce0, d0, we0, q0,  clk);
 
-parameter DWIDTH = 64;
-parameter AWIDTH = 8;
-parameter MEM_SIZE = 160;
+parameter DWIDTH = 60;
+parameter AWIDTH = 7;
+parameter MEM_SIZE = 80;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -43,9 +43,9 @@ module LLSSineReconstruction_sine_reconstructor_times_V(
     d0,
     q0);
 
-parameter DataWidth = 32'd64;
-parameter AddressRange = 32'd160;
-parameter AddressWidth = 32'd8;
+parameter DataWidth = 32'd60;
+parameter AddressRange = 32'd80;
+parameter AddressWidth = 32'd7;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

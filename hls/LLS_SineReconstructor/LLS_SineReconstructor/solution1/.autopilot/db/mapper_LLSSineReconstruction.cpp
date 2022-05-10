@@ -32,8 +32,8 @@ class AESL_RUNTIME_BC {
     fstream file_token;
     string mName;
 };
-extern "C" void LLSSineReconstruction(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*);
-extern "C" void apatb_LLSSineReconstruction_hw(volatile void * __xlx_apatb_param_buffer_in_0, volatile void * __xlx_apatb_param_buffer_in_1, volatile void * __xlx_apatb_param_buffer_in_2, volatile void * __xlx_apatb_param_buffer_in_3, volatile void * __xlx_apatb_param_buffer_in_4, volatile void * __xlx_apatb_param_buffer_in_5, volatile void * __xlx_apatb_param_buffer_in_6, volatile void * __xlx_apatb_param_buffer_in_7, volatile void * __xlx_apatb_param_buffer_in_8, volatile void * __xlx_apatb_param_buffer_in_9, volatile void * __xlx_apatb_param_buffer_in_10, volatile void * __xlx_apatb_param_buffer_in_11, volatile void * __xlx_apatb_param_buffer_out) {
+extern "C" void LLSSineReconstruction(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int*);
+extern "C" void apatb_LLSSineReconstruction_hw(volatile void * __xlx_apatb_param_buffer_in_0, volatile void * __xlx_apatb_param_buffer_in_1, volatile void * __xlx_apatb_param_buffer_in_2, volatile void * __xlx_apatb_param_buffer_in_3, volatile void * __xlx_apatb_param_buffer_in_4, volatile void * __xlx_apatb_param_buffer_in_5, volatile void * __xlx_apatb_param_buffer_in_6, volatile void * __xlx_apatb_param_buffer_in_7, volatile void * __xlx_apatb_param_buffer_in_8, volatile void * __xlx_apatb_param_buffer_in_9, volatile void * __xlx_apatb_param_buffer_in_10, volatile void * __xlx_apatb_param_buffer_in_11, volatile void * __xlx_apatb_param_sines_buffer_out, volatile void * __xlx_apatb_param_samples_buffer_out) {
   // Collect __xlx_buffer_in_0__tmp_vec
   vector<sc_bv<32> >__xlx_buffer_in_0__tmp_vec;
   for (int j = 0, e = 8; j != e; ++j) {
@@ -178,20 +178,32 @@ extern "C" void apatb_LLSSineReconstruction_hw(volatile void * __xlx_apatb_param
   for (int i = 0; i < __xlx_buffer_in_11__tmp_vec.size(); ++i) {
     __xlx_buffer_in_11__input_buffer[i] = __xlx_buffer_in_11__tmp_vec[i].range(31, 0).to_uint64();
   }
-  // Collect __xlx_buffer_out__tmp_vec
-  vector<sc_bv<32> >__xlx_buffer_out__tmp_vec;
+  // Collect __xlx_sines_buffer_out__tmp_vec
+  vector<sc_bv<32> >__xlx_sines_buffer_out__tmp_vec;
   for (int j = 0, e = 25; j != e; ++j) {
-    __xlx_buffer_out__tmp_vec.push_back(((int*)__xlx_apatb_param_buffer_out)[j]);
+    __xlx_sines_buffer_out__tmp_vec.push_back(((int*)__xlx_apatb_param_sines_buffer_out)[j]);
   }
-  int __xlx_size_param_buffer_out = 25;
-  int __xlx_offset_param_buffer_out = 0;
-  int __xlx_offset_byte_param_buffer_out = 0*4;
-  int* __xlx_buffer_out__input_buffer= new int[__xlx_buffer_out__tmp_vec.size()];
-  for (int i = 0; i < __xlx_buffer_out__tmp_vec.size(); ++i) {
-    __xlx_buffer_out__input_buffer[i] = __xlx_buffer_out__tmp_vec[i].range(31, 0).to_uint64();
+  int __xlx_size_param_sines_buffer_out = 25;
+  int __xlx_offset_param_sines_buffer_out = 0;
+  int __xlx_offset_byte_param_sines_buffer_out = 0*4;
+  int* __xlx_sines_buffer_out__input_buffer= new int[__xlx_sines_buffer_out__tmp_vec.size()];
+  for (int i = 0; i < __xlx_sines_buffer_out__tmp_vec.size(); ++i) {
+    __xlx_sines_buffer_out__input_buffer[i] = __xlx_sines_buffer_out__tmp_vec[i].range(31, 0).to_uint64();
+  }
+  // Collect __xlx_samples_buffer_out__tmp_vec
+  vector<sc_bv<32> >__xlx_samples_buffer_out__tmp_vec;
+  for (int j = 0, e = 961; j != e; ++j) {
+    __xlx_samples_buffer_out__tmp_vec.push_back(((int*)__xlx_apatb_param_samples_buffer_out)[j]);
+  }
+  int __xlx_size_param_samples_buffer_out = 961;
+  int __xlx_offset_param_samples_buffer_out = 0;
+  int __xlx_offset_byte_param_samples_buffer_out = 0*4;
+  int* __xlx_samples_buffer_out__input_buffer= new int[__xlx_samples_buffer_out__tmp_vec.size()];
+  for (int i = 0; i < __xlx_samples_buffer_out__tmp_vec.size(); ++i) {
+    __xlx_samples_buffer_out__input_buffer[i] = __xlx_samples_buffer_out__tmp_vec[i].range(31, 0).to_uint64();
   }
   // DUT call
-  LLSSineReconstruction(__xlx_buffer_in_0__input_buffer, __xlx_buffer_in_1__input_buffer, __xlx_buffer_in_2__input_buffer, __xlx_buffer_in_3__input_buffer, __xlx_buffer_in_4__input_buffer, __xlx_buffer_in_5__input_buffer, __xlx_buffer_in_6__input_buffer, __xlx_buffer_in_7__input_buffer, __xlx_buffer_in_8__input_buffer, __xlx_buffer_in_9__input_buffer, __xlx_buffer_in_10__input_buffer, __xlx_buffer_in_11__input_buffer, __xlx_buffer_out__input_buffer);
+  LLSSineReconstruction(__xlx_buffer_in_0__input_buffer, __xlx_buffer_in_1__input_buffer, __xlx_buffer_in_2__input_buffer, __xlx_buffer_in_3__input_buffer, __xlx_buffer_in_4__input_buffer, __xlx_buffer_in_5__input_buffer, __xlx_buffer_in_6__input_buffer, __xlx_buffer_in_7__input_buffer, __xlx_buffer_in_8__input_buffer, __xlx_buffer_in_9__input_buffer, __xlx_buffer_in_10__input_buffer, __xlx_buffer_in_11__input_buffer, __xlx_sines_buffer_out__input_buffer, __xlx_samples_buffer_out__input_buffer);
 // print __xlx_apatb_param_buffer_in_0
   sc_bv<32>*__xlx_buffer_in_0_output_buffer = new sc_bv<32>[__xlx_size_param_buffer_in_0];
   for (int i = 0; i < __xlx_size_param_buffer_in_0; ++i) {
@@ -288,12 +300,20 @@ extern "C" void apatb_LLSSineReconstruction_hw(volatile void * __xlx_apatb_param
   for (int i = 0; i < __xlx_size_param_buffer_in_11; ++i) {
     ((int*)__xlx_apatb_param_buffer_in_11)[i] = __xlx_buffer_in_11_output_buffer[i].to_uint64();
   }
-// print __xlx_apatb_param_buffer_out
-  sc_bv<32>*__xlx_buffer_out_output_buffer = new sc_bv<32>[__xlx_size_param_buffer_out];
-  for (int i = 0; i < __xlx_size_param_buffer_out; ++i) {
-    __xlx_buffer_out_output_buffer[i] = __xlx_buffer_out__input_buffer[i+__xlx_offset_param_buffer_out];
+// print __xlx_apatb_param_sines_buffer_out
+  sc_bv<32>*__xlx_sines_buffer_out_output_buffer = new sc_bv<32>[__xlx_size_param_sines_buffer_out];
+  for (int i = 0; i < __xlx_size_param_sines_buffer_out; ++i) {
+    __xlx_sines_buffer_out_output_buffer[i] = __xlx_sines_buffer_out__input_buffer[i+__xlx_offset_param_sines_buffer_out];
   }
-  for (int i = 0; i < __xlx_size_param_buffer_out; ++i) {
-    ((int*)__xlx_apatb_param_buffer_out)[i] = __xlx_buffer_out_output_buffer[i].to_uint64();
+  for (int i = 0; i < __xlx_size_param_sines_buffer_out; ++i) {
+    ((int*)__xlx_apatb_param_sines_buffer_out)[i] = __xlx_sines_buffer_out_output_buffer[i].to_uint64();
+  }
+// print __xlx_apatb_param_samples_buffer_out
+  sc_bv<32>*__xlx_samples_buffer_out_output_buffer = new sc_bv<32>[__xlx_size_param_samples_buffer_out];
+  for (int i = 0; i < __xlx_size_param_samples_buffer_out; ++i) {
+    __xlx_samples_buffer_out_output_buffer[i] = __xlx_samples_buffer_out__input_buffer[i+__xlx_offset_param_samples_buffer_out];
+  }
+  for (int i = 0; i < __xlx_size_param_samples_buffer_out; ++i) {
+    ((int*)__xlx_apatb_param_samples_buffer_out)[i] = __xlx_samples_buffer_out_output_buffer[i].to_uint64();
   }
 }

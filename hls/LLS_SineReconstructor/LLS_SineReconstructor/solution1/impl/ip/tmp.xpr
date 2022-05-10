@@ -6,7 +6,7 @@
 <Project Version="7" Minor="54" Path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="30dd0c16ae004fcd986b29805b3d9929"/>
+    <Option Name="Id" Val="ea75f330ef0e401195a0c49e4491fc12"/>
     <Option Name="Part" Val="xczu3eg-sbva484-1-i"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -74,7 +74,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/LLSSineReconstruction_ap_dadd_3_no_dsp_64/LLSSineReconstruction_ap_dadd_3_no_dsp_64.xci">
+      <File Path="$PSRCDIR/sources_1/ip/LLSSineReconstruction_ap_dadddsub_3_no_dsp_64/LLSSineReconstruction_ap_dadddsub_3_no_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -103,13 +103,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/LLSSineReconstruction_ap_dsqrt_28_no_dsp_64/LLSSineReconstruction_ap_dsqrt_28_no_dsp_64.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/LLSSineReconstruction_ap_dsub_3_no_dsp_64/LLSSineReconstruction_ap_dsub_3_no_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

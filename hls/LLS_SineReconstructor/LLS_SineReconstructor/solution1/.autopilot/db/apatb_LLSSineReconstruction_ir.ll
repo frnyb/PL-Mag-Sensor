@@ -4,7 +4,7 @@ target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:20
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: noinline
-define void @apatb_LLSSineReconstruction_ir(i32* %buffer_in_0, i32* %buffer_in_1, i32* %buffer_in_2, i32* %buffer_in_3, i32* %buffer_in_4, i32* %buffer_in_5, i32* %buffer_in_6, i32* %buffer_in_7, i32* %buffer_in_8, i32* %buffer_in_9, i32* %buffer_in_10, i32* %buffer_in_11, i32* %buffer_out) local_unnamed_addr #0 {
+define void @apatb_LLSSineReconstruction_ir(i32* %buffer_in_0, i32* %buffer_in_1, i32* %buffer_in_2, i32* %buffer_in_3, i32* %buffer_in_4, i32* %buffer_in_5, i32* %buffer_in_6, i32* %buffer_in_7, i32* %buffer_in_8, i32* %buffer_in_9, i32* %buffer_in_10, i32* %buffer_in_11, i32* %sines_buffer_out, i32* %samples_buffer_out) local_unnamed_addr #0 {
 entry:
   %buffer_in_0_copy = alloca [8 x i32], align 512
   %buffer_in_1_copy = alloca [8 x i32], align 512
@@ -18,7 +18,8 @@ entry:
   %buffer_in_9_copy = alloca [8 x i32], align 512
   %buffer_in_10_copy = alloca [8 x i32], align 512
   %buffer_in_11_copy = alloca [8 x i32], align 512
-  %buffer_out_copy = alloca [25 x i32], align 512
+  %sines_buffer_out_copy = alloca [25 x i32], align 512
+  %samples_buffer_out_copy = alloca [961 x i32], align 512
   %0 = bitcast i32* %buffer_in_0 to [8 x i32]*
   %1 = bitcast i32* %buffer_in_1 to [8 x i32]*
   %2 = bitcast i32* %buffer_in_2 to [8 x i32]*
@@ -31,28 +32,30 @@ entry:
   %9 = bitcast i32* %buffer_in_9 to [8 x i32]*
   %10 = bitcast i32* %buffer_in_10 to [8 x i32]*
   %11 = bitcast i32* %buffer_in_11 to [8 x i32]*
-  %12 = bitcast i32* %buffer_out to [25 x i32]*
-  call fastcc void @copy_in([8 x i32]* %0, [8 x i32]* nonnull align 512 %buffer_in_0_copy, [8 x i32]* %1, [8 x i32]* nonnull align 512 %buffer_in_1_copy, [8 x i32]* %2, [8 x i32]* nonnull align 512 %buffer_in_2_copy, [8 x i32]* %3, [8 x i32]* nonnull align 512 %buffer_in_3_copy, [8 x i32]* %4, [8 x i32]* nonnull align 512 %buffer_in_4_copy, [8 x i32]* %5, [8 x i32]* nonnull align 512 %buffer_in_5_copy, [8 x i32]* %6, [8 x i32]* nonnull align 512 %buffer_in_6_copy, [8 x i32]* %7, [8 x i32]* nonnull align 512 %buffer_in_7_copy, [8 x i32]* %8, [8 x i32]* nonnull align 512 %buffer_in_8_copy, [8 x i32]* %9, [8 x i32]* nonnull align 512 %buffer_in_9_copy, [8 x i32]* %10, [8 x i32]* nonnull align 512 %buffer_in_10_copy, [8 x i32]* %11, [8 x i32]* nonnull align 512 %buffer_in_11_copy, [25 x i32]* %12, [25 x i32]* nonnull align 512 %buffer_out_copy)
-  %13 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_0_copy, i32 0, i32 0
-  %14 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_1_copy, i32 0, i32 0
-  %15 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_2_copy, i32 0, i32 0
-  %16 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_3_copy, i32 0, i32 0
-  %17 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_4_copy, i32 0, i32 0
-  %18 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_5_copy, i32 0, i32 0
-  %19 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_6_copy, i32 0, i32 0
-  %20 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_7_copy, i32 0, i32 0
-  %21 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_8_copy, i32 0, i32 0
-  %22 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_9_copy, i32 0, i32 0
-  %23 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_10_copy, i32 0, i32 0
-  %24 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_11_copy, i32 0, i32 0
-  %25 = getelementptr inbounds [25 x i32], [25 x i32]* %buffer_out_copy, i32 0, i32 0
-  call void @apatb_LLSSineReconstruction_hw(i32* %13, i32* %14, i32* %15, i32* %16, i32* %17, i32* %18, i32* %19, i32* %20, i32* %21, i32* %22, i32* %23, i32* %24, i32* %25)
-  call fastcc void @copy_out([8 x i32]* %0, [8 x i32]* nonnull align 512 %buffer_in_0_copy, [8 x i32]* %1, [8 x i32]* nonnull align 512 %buffer_in_1_copy, [8 x i32]* %2, [8 x i32]* nonnull align 512 %buffer_in_2_copy, [8 x i32]* %3, [8 x i32]* nonnull align 512 %buffer_in_3_copy, [8 x i32]* %4, [8 x i32]* nonnull align 512 %buffer_in_4_copy, [8 x i32]* %5, [8 x i32]* nonnull align 512 %buffer_in_5_copy, [8 x i32]* %6, [8 x i32]* nonnull align 512 %buffer_in_6_copy, [8 x i32]* %7, [8 x i32]* nonnull align 512 %buffer_in_7_copy, [8 x i32]* %8, [8 x i32]* nonnull align 512 %buffer_in_8_copy, [8 x i32]* %9, [8 x i32]* nonnull align 512 %buffer_in_9_copy, [8 x i32]* %10, [8 x i32]* nonnull align 512 %buffer_in_10_copy, [8 x i32]* %11, [8 x i32]* nonnull align 512 %buffer_in_11_copy, [25 x i32]* %12, [25 x i32]* nonnull align 512 %buffer_out_copy)
+  %12 = bitcast i32* %sines_buffer_out to [25 x i32]*
+  %13 = bitcast i32* %samples_buffer_out to [961 x i32]*
+  call fastcc void @copy_in([8 x i32]* %0, [8 x i32]* nonnull align 512 %buffer_in_0_copy, [8 x i32]* %1, [8 x i32]* nonnull align 512 %buffer_in_1_copy, [8 x i32]* %2, [8 x i32]* nonnull align 512 %buffer_in_2_copy, [8 x i32]* %3, [8 x i32]* nonnull align 512 %buffer_in_3_copy, [8 x i32]* %4, [8 x i32]* nonnull align 512 %buffer_in_4_copy, [8 x i32]* %5, [8 x i32]* nonnull align 512 %buffer_in_5_copy, [8 x i32]* %6, [8 x i32]* nonnull align 512 %buffer_in_6_copy, [8 x i32]* %7, [8 x i32]* nonnull align 512 %buffer_in_7_copy, [8 x i32]* %8, [8 x i32]* nonnull align 512 %buffer_in_8_copy, [8 x i32]* %9, [8 x i32]* nonnull align 512 %buffer_in_9_copy, [8 x i32]* %10, [8 x i32]* nonnull align 512 %buffer_in_10_copy, [8 x i32]* %11, [8 x i32]* nonnull align 512 %buffer_in_11_copy, [25 x i32]* %12, [25 x i32]* nonnull align 512 %sines_buffer_out_copy, [961 x i32]* %13, [961 x i32]* nonnull align 512 %samples_buffer_out_copy)
+  %14 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_0_copy, i32 0, i32 0
+  %15 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_1_copy, i32 0, i32 0
+  %16 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_2_copy, i32 0, i32 0
+  %17 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_3_copy, i32 0, i32 0
+  %18 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_4_copy, i32 0, i32 0
+  %19 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_5_copy, i32 0, i32 0
+  %20 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_6_copy, i32 0, i32 0
+  %21 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_7_copy, i32 0, i32 0
+  %22 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_8_copy, i32 0, i32 0
+  %23 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_9_copy, i32 0, i32 0
+  %24 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_10_copy, i32 0, i32 0
+  %25 = getelementptr inbounds [8 x i32], [8 x i32]* %buffer_in_11_copy, i32 0, i32 0
+  %26 = getelementptr inbounds [25 x i32], [25 x i32]* %sines_buffer_out_copy, i32 0, i32 0
+  %27 = getelementptr inbounds [961 x i32], [961 x i32]* %samples_buffer_out_copy, i32 0, i32 0
+  call void @apatb_LLSSineReconstruction_hw(i32* %14, i32* %15, i32* %16, i32* %17, i32* %18, i32* %19, i32* %20, i32* %21, i32* %22, i32* %23, i32* %24, i32* %25, i32* %26, i32* %27)
+  call fastcc void @copy_out([8 x i32]* %0, [8 x i32]* nonnull align 512 %buffer_in_0_copy, [8 x i32]* %1, [8 x i32]* nonnull align 512 %buffer_in_1_copy, [8 x i32]* %2, [8 x i32]* nonnull align 512 %buffer_in_2_copy, [8 x i32]* %3, [8 x i32]* nonnull align 512 %buffer_in_3_copy, [8 x i32]* %4, [8 x i32]* nonnull align 512 %buffer_in_4_copy, [8 x i32]* %5, [8 x i32]* nonnull align 512 %buffer_in_5_copy, [8 x i32]* %6, [8 x i32]* nonnull align 512 %buffer_in_6_copy, [8 x i32]* %7, [8 x i32]* nonnull align 512 %buffer_in_7_copy, [8 x i32]* %8, [8 x i32]* nonnull align 512 %buffer_in_8_copy, [8 x i32]* %9, [8 x i32]* nonnull align 512 %buffer_in_9_copy, [8 x i32]* %10, [8 x i32]* nonnull align 512 %buffer_in_10_copy, [8 x i32]* %11, [8 x i32]* nonnull align 512 %buffer_in_11_copy, [25 x i32]* %12, [25 x i32]* nonnull align 512 %sines_buffer_out_copy, [961 x i32]* %13, [961 x i32]* nonnull align 512 %samples_buffer_out_copy)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @copy_in([8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [25 x i32]* readonly, [25 x i32]* noalias align 512) unnamed_addr #1 {
+define internal fastcc void @copy_in([8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [8 x i32]* readonly, [8 x i32]* noalias align 512, [25 x i32]* readonly, [25 x i32]* noalias align 512, [961 x i32]* readonly, [961 x i32]* noalias align 512) unnamed_addr #1 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a8i32([8 x i32]* align 512 %1, [8 x i32]* %0)
   call fastcc void @onebyonecpy_hls.p0a8i32([8 x i32]* align 512 %3, [8 x i32]* %2)
@@ -67,6 +70,7 @@ entry:
   call fastcc void @onebyonecpy_hls.p0a8i32([8 x i32]* align 512 %21, [8 x i32]* %20)
   call fastcc void @onebyonecpy_hls.p0a8i32([8 x i32]* align 512 %23, [8 x i32]* %22)
   call fastcc void @onebyonecpy_hls.p0a25i32([25 x i32]* align 512 %25, [25 x i32]* %24)
+  call fastcc void @onebyonecpy_hls.p0a961i32([961 x i32]* align 512 %27, [961 x i32]* %26)
   ret void
 }
 
@@ -126,7 +130,33 @@ ret:                                              ; preds = %for.loop, %entry
 }
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @copy_out([8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [25 x i32]*, [25 x i32]* noalias readonly align 512) unnamed_addr #4 {
+define internal fastcc void @onebyonecpy_hls.p0a961i32([961 x i32]* noalias align 512, [961 x i32]* noalias readonly) unnamed_addr #2 {
+entry:
+  %2 = icmp eq [961 x i32]* %0, null
+  %3 = icmp eq [961 x i32]* %1, null
+  %4 = or i1 %2, %3
+  br i1 %4, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %copy
+  %for.loop.idx3 = phi i64 [ 0, %copy ], [ %for.loop.idx.next, %for.loop ]
+  %dst.addr.gep1 = getelementptr [961 x i32], [961 x i32]* %0, i64 0, i64 %for.loop.idx3
+  %5 = bitcast i32* %dst.addr.gep1 to i8*
+  %src.addr.gep2 = getelementptr [961 x i32], [961 x i32]* %1, i64 0, i64 %for.loop.idx3
+  %6 = bitcast i32* %src.addr.gep2 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %5, i8* align 1 %6, i64 4, i1 false)
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx3, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, 961
+  br i1 %exitcond, label %for.loop, label %ret
+
+ret:                                              ; preds = %for.loop, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline
+define internal fastcc void @copy_out([8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [8 x i32]*, [8 x i32]* noalias readonly align 512, [25 x i32]*, [25 x i32]* noalias readonly align 512, [961 x i32]*, [961 x i32]* noalias readonly align 512) unnamed_addr #4 {
 entry:
   call fastcc void @onebyonecpy_hls.p0a8i32([8 x i32]* %0, [8 x i32]* align 512 %1)
   call fastcc void @onebyonecpy_hls.p0a8i32([8 x i32]* %2, [8 x i32]* align 512 %3)
@@ -141,46 +171,49 @@ entry:
   call fastcc void @onebyonecpy_hls.p0a8i32([8 x i32]* %20, [8 x i32]* align 512 %21)
   call fastcc void @onebyonecpy_hls.p0a8i32([8 x i32]* %22, [8 x i32]* align 512 %23)
   call fastcc void @onebyonecpy_hls.p0a25i32([25 x i32]* %24, [25 x i32]* align 512 %25)
+  call fastcc void @onebyonecpy_hls.p0a961i32([961 x i32]* %26, [961 x i32]* align 512 %27)
   ret void
 }
 
-declare void @apatb_LLSSineReconstruction_hw(i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*)
+declare void @apatb_LLSSineReconstruction_hw(i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*)
 
-define void @LLSSineReconstruction_hw_stub_wrapper(i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*) #5 {
+define void @LLSSineReconstruction_hw_stub_wrapper(i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*) #5 {
 entry:
-  %13 = bitcast i32* %0 to [8 x i32]*
-  %14 = bitcast i32* %1 to [8 x i32]*
-  %15 = bitcast i32* %2 to [8 x i32]*
-  %16 = bitcast i32* %3 to [8 x i32]*
-  %17 = bitcast i32* %4 to [8 x i32]*
-  %18 = bitcast i32* %5 to [8 x i32]*
-  %19 = bitcast i32* %6 to [8 x i32]*
-  %20 = bitcast i32* %7 to [8 x i32]*
-  %21 = bitcast i32* %8 to [8 x i32]*
-  %22 = bitcast i32* %9 to [8 x i32]*
-  %23 = bitcast i32* %10 to [8 x i32]*
-  %24 = bitcast i32* %11 to [8 x i32]*
-  %25 = bitcast i32* %12 to [25 x i32]*
-  call void @copy_out([8 x i32]* null, [8 x i32]* %13, [8 x i32]* null, [8 x i32]* %14, [8 x i32]* null, [8 x i32]* %15, [8 x i32]* null, [8 x i32]* %16, [8 x i32]* null, [8 x i32]* %17, [8 x i32]* null, [8 x i32]* %18, [8 x i32]* null, [8 x i32]* %19, [8 x i32]* null, [8 x i32]* %20, [8 x i32]* null, [8 x i32]* %21, [8 x i32]* null, [8 x i32]* %22, [8 x i32]* null, [8 x i32]* %23, [8 x i32]* null, [8 x i32]* %24, [25 x i32]* null, [25 x i32]* %25)
-  %26 = bitcast [8 x i32]* %13 to i32*
-  %27 = bitcast [8 x i32]* %14 to i32*
-  %28 = bitcast [8 x i32]* %15 to i32*
-  %29 = bitcast [8 x i32]* %16 to i32*
-  %30 = bitcast [8 x i32]* %17 to i32*
-  %31 = bitcast [8 x i32]* %18 to i32*
-  %32 = bitcast [8 x i32]* %19 to i32*
-  %33 = bitcast [8 x i32]* %20 to i32*
-  %34 = bitcast [8 x i32]* %21 to i32*
-  %35 = bitcast [8 x i32]* %22 to i32*
-  %36 = bitcast [8 x i32]* %23 to i32*
-  %37 = bitcast [8 x i32]* %24 to i32*
-  %38 = bitcast [25 x i32]* %25 to i32*
-  call void @LLSSineReconstruction_hw_stub(i32* %26, i32* %27, i32* %28, i32* %29, i32* %30, i32* %31, i32* %32, i32* %33, i32* %34, i32* %35, i32* %36, i32* %37, i32* %38)
-  call void @copy_in([8 x i32]* null, [8 x i32]* %13, [8 x i32]* null, [8 x i32]* %14, [8 x i32]* null, [8 x i32]* %15, [8 x i32]* null, [8 x i32]* %16, [8 x i32]* null, [8 x i32]* %17, [8 x i32]* null, [8 x i32]* %18, [8 x i32]* null, [8 x i32]* %19, [8 x i32]* null, [8 x i32]* %20, [8 x i32]* null, [8 x i32]* %21, [8 x i32]* null, [8 x i32]* %22, [8 x i32]* null, [8 x i32]* %23, [8 x i32]* null, [8 x i32]* %24, [25 x i32]* null, [25 x i32]* %25)
+  %14 = bitcast i32* %0 to [8 x i32]*
+  %15 = bitcast i32* %1 to [8 x i32]*
+  %16 = bitcast i32* %2 to [8 x i32]*
+  %17 = bitcast i32* %3 to [8 x i32]*
+  %18 = bitcast i32* %4 to [8 x i32]*
+  %19 = bitcast i32* %5 to [8 x i32]*
+  %20 = bitcast i32* %6 to [8 x i32]*
+  %21 = bitcast i32* %7 to [8 x i32]*
+  %22 = bitcast i32* %8 to [8 x i32]*
+  %23 = bitcast i32* %9 to [8 x i32]*
+  %24 = bitcast i32* %10 to [8 x i32]*
+  %25 = bitcast i32* %11 to [8 x i32]*
+  %26 = bitcast i32* %12 to [25 x i32]*
+  %27 = bitcast i32* %13 to [961 x i32]*
+  call void @copy_out([8 x i32]* null, [8 x i32]* %14, [8 x i32]* null, [8 x i32]* %15, [8 x i32]* null, [8 x i32]* %16, [8 x i32]* null, [8 x i32]* %17, [8 x i32]* null, [8 x i32]* %18, [8 x i32]* null, [8 x i32]* %19, [8 x i32]* null, [8 x i32]* %20, [8 x i32]* null, [8 x i32]* %21, [8 x i32]* null, [8 x i32]* %22, [8 x i32]* null, [8 x i32]* %23, [8 x i32]* null, [8 x i32]* %24, [8 x i32]* null, [8 x i32]* %25, [25 x i32]* null, [25 x i32]* %26, [961 x i32]* null, [961 x i32]* %27)
+  %28 = bitcast [8 x i32]* %14 to i32*
+  %29 = bitcast [8 x i32]* %15 to i32*
+  %30 = bitcast [8 x i32]* %16 to i32*
+  %31 = bitcast [8 x i32]* %17 to i32*
+  %32 = bitcast [8 x i32]* %18 to i32*
+  %33 = bitcast [8 x i32]* %19 to i32*
+  %34 = bitcast [8 x i32]* %20 to i32*
+  %35 = bitcast [8 x i32]* %21 to i32*
+  %36 = bitcast [8 x i32]* %22 to i32*
+  %37 = bitcast [8 x i32]* %23 to i32*
+  %38 = bitcast [8 x i32]* %24 to i32*
+  %39 = bitcast [8 x i32]* %25 to i32*
+  %40 = bitcast [25 x i32]* %26 to i32*
+  %41 = bitcast [961 x i32]* %27 to i32*
+  call void @LLSSineReconstruction_hw_stub(i32* %28, i32* %29, i32* %30, i32* %31, i32* %32, i32* %33, i32* %34, i32* %35, i32* %36, i32* %37, i32* %38, i32* %39, i32* %40, i32* %41)
+  call void @copy_in([8 x i32]* null, [8 x i32]* %14, [8 x i32]* null, [8 x i32]* %15, [8 x i32]* null, [8 x i32]* %16, [8 x i32]* null, [8 x i32]* %17, [8 x i32]* null, [8 x i32]* %18, [8 x i32]* null, [8 x i32]* %19, [8 x i32]* null, [8 x i32]* %20, [8 x i32]* null, [8 x i32]* %21, [8 x i32]* null, [8 x i32]* %22, [8 x i32]* null, [8 x i32]* %23, [8 x i32]* null, [8 x i32]* %24, [8 x i32]* null, [8 x i32]* %25, [25 x i32]* null, [25 x i32]* %26, [961 x i32]* null, [961 x i32]* %27)
   ret void
 }
 
-declare void @LLSSineReconstruction_hw_stub(i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*)
+declare void @LLSSineReconstruction_hw_stub(i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*, i32*)
 
 attributes #0 = { noinline "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly noinline "fpga.wrapper.func"="copyin" }

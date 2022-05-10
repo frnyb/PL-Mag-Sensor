@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'LLSSineReconstruction'" level="0">
-<item name = "Date">Sun May  8 11:37:29 2022
+<item name = "Date">Mon May  9 14:48:06 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">LLS_SineReconstructor</item>
@@ -24,17 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">34, 995207, 0.340 us, 9.952 ms, 35, 995208, none</column>
+<column name="">83, 1078458, 0.830 us, 10.785 ms, 84, 1078459, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_computeFirstChannel_fu_670">computeFirstChannel, 67389, 79598, 0.674 ms, 0.796 ms, 67389, 79598, none</column>
-<column name="grp_computeRemainingChannels_fu_928">computeRemainingChannels, 766070, 911858, 7.661 ms, 9.119 ms, 766070, 911858, none</column>
-<column name="grp_loadSlidingWindow_fu_1180">loadSlidingWindow, 32, 50, 0.320 us, 0.500 us, 32, 50, none</column>
-<column name="grp_loadData_fu_1598">loadData, 3654, 3654, 36.540 us, 36.540 us, 3654, 3654, none</column>
+<column name="grp_computeRemainingChannels_fu_467">computeRemainingChannels, 459783, 1074339, 4.598 ms, 10.743 ms, 459783, 1074339, none</column>
+<column name="grp_loadSlidingWindow_fu_533">loadSlidingWindow, 79, 95, 0.790 us, 0.950 us, 79, 95, none</column>
+<column name="grp_loadData_fu_593">loadData, 2274, 2274, 22.740 us, 22.740 us, 2274, 2274, none</column>
+<column name="grp_writeSamplesToRAM_fu_628">writeSamplesToRAM, 1701, 1701, 17.010 us, 17.010 us, 1701, 1701, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

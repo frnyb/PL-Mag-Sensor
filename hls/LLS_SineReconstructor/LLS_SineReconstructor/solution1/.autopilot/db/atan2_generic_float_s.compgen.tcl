@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 709
+set id 356
 set name LLSSineReconstruction_fdiv_32ns_32ns_32_10_no_dsp_1
 set corename simcore_fdiv
 set op fdiv
@@ -92,7 +92,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 711
+set ID 358
 set hasByteEnable 0
 set MemName LLSSineReconstruction_atan2_generic_float_s_cordic_ctab_table_128_V
 set CoreName ap_simcore_mem
@@ -187,7 +187,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 712 \
+    id 359 \
     name y_in \
     type other \
     dir I \
@@ -202,7 +202,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 713 \
+    id 360 \
     name x_in \
     type other \
     dir I \

@@ -3,7 +3,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_1 is
+entity LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_2 is
 port (
     clk: in std_logic;
     rst: in std_logic;
@@ -14,7 +14,7 @@ port (
 
 end entity;
 
-architecture behav of LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_1 is
+architecture behav of LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_2 is
     signal a_cvt: unsigned(15 - 1 downto 0);
     signal b_cvt: unsigned(14 - 1 downto 0);
     signal p_cvt: unsigned(29 - 1 downto 0);
@@ -65,7 +65,7 @@ entity LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1 is
 end entity;
 
 architecture arch of LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1 is
-    component LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_1 is
+    component LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_2 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -78,7 +78,7 @@ architecture arch of LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1 is
 
 
 begin
-    LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_1_U :  component LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_1
+    LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_2_U :  component LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_2
     port map (
         clk => clk,
         rst => reset,

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'computeRemainingChannels'" level="0">
-<item name = "Date">Sun May  8 11:37:22 2022
+<item name = "Date">Mon May  9 14:48:00 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">LLS_SineReconstructor</item>
@@ -24,22 +24,25 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">766070, 911858, 7.661 ms, 9.119 ms, 766070, 911858, none</column>
+<column name="">459783, 1074339, 4.598 ms, 10.743 ms, 459783, 1074339, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_computeLeastSquaresSolution_160_3_1_fu_2942">computeLeastSquaresSolution_160_3_1, 62333, 74482, 0.623 ms, 0.745 ms, 62333, 74482, none</column>
-<column name="grp_sin_or_cos_float_s_fu_2989">sin_or_cos_float_s, 10, 10, 0.100 us, 0.100 us, 1, 1, yes</column>
+<column name="grp_computeLeastSquaresSolution_fu_631">computeLeastSquaresSolution, 35885, 86477, 0.359 ms, 0.865 ms, 35885, 86477, none</column>
+<column name="grp_generic_sincos_float_s_fu_693">generic_sincos_float_s, 20, 24, 0.200 us, 0.240 us, 20, 24, none</column>
+<column name="grp_atan2_cordic_float_s_fu_712">atan2_cordic_float_s, 1, 102, 10.000 ns, 1.020 us, 1, 102, none</column>
+<column name="grp_sin_or_cos_float_s_fu_720">sin_or_cos_float_s, 18, 22, 0.180 us, 0.220 us, 18, 22, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- compute_rem_channel_ch_loop">766068, 911856, 63839 ~ 75988, -, -, 12, no</column>
-<column name=" + load_data_periods_loop">1500, 1500, 75, -, -, 20, no</column>
-<column name="  ++ load_data_sample_loop">68, 68, 20, 7, 1, 8, yes</column>
+<column name="- VITIS_LOOP_362_1">11, 11, 1, -, -, 11, no</column>
+<column name="- compute_rem_channel_ch_loop">459768, 1074324, 38314 ~ 89527, -, -, 12, no</column>
+<column name=" + load_data_periods_loop">2420, 2900, 242 ~ 290, -, -, 10, no</column>
+<column name="  ++ load_data_sample_loop">240, 288, 30 ~ 36, -, -, 8, no</column>
 </table>
 </item>
 </section>

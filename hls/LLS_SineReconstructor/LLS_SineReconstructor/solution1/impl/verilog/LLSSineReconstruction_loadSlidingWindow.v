@@ -53,807 +53,235 @@ module LLSSineReconstruction_loadSlidingWindow (
         sliding_window_front_ptr_s_i,
         sliding_window_front_ptr_s_o,
         sliding_window_front_ptr_s_o_ap_vld,
-        sliding_window_buffer_samples_sample_V_0_0_address0,
-        sliding_window_buffer_samples_sample_V_0_0_ce0,
-        sliding_window_buffer_samples_sample_V_0_0_we0,
-        sliding_window_buffer_samples_sample_V_0_0_d0,
-        sliding_window_buffer_samples_sample_V_0_1_address0,
-        sliding_window_buffer_samples_sample_V_0_1_ce0,
-        sliding_window_buffer_samples_sample_V_0_1_we0,
-        sliding_window_buffer_samples_sample_V_0_1_d0,
-        sliding_window_buffer_samples_sample_V_0_2_address0,
-        sliding_window_buffer_samples_sample_V_0_2_ce0,
-        sliding_window_buffer_samples_sample_V_0_2_we0,
-        sliding_window_buffer_samples_sample_V_0_2_d0,
-        sliding_window_buffer_samples_sample_V_0_3_address0,
-        sliding_window_buffer_samples_sample_V_0_3_ce0,
-        sliding_window_buffer_samples_sample_V_0_3_we0,
-        sliding_window_buffer_samples_sample_V_0_3_d0,
-        sliding_window_buffer_samples_sample_V_0_4_address0,
-        sliding_window_buffer_samples_sample_V_0_4_ce0,
-        sliding_window_buffer_samples_sample_V_0_4_we0,
-        sliding_window_buffer_samples_sample_V_0_4_d0,
-        sliding_window_buffer_samples_sample_V_0_5_address0,
-        sliding_window_buffer_samples_sample_V_0_5_ce0,
-        sliding_window_buffer_samples_sample_V_0_5_we0,
-        sliding_window_buffer_samples_sample_V_0_5_d0,
-        sliding_window_buffer_samples_sample_V_0_6_address0,
-        sliding_window_buffer_samples_sample_V_0_6_ce0,
-        sliding_window_buffer_samples_sample_V_0_6_we0,
-        sliding_window_buffer_samples_sample_V_0_6_d0,
-        sliding_window_buffer_samples_sample_V_0_7_address0,
-        sliding_window_buffer_samples_sample_V_0_7_ce0,
-        sliding_window_buffer_samples_sample_V_0_7_we0,
-        sliding_window_buffer_samples_sample_V_0_7_d0,
-        sliding_window_buffer_samples_sample_V_0_8_address0,
-        sliding_window_buffer_samples_sample_V_0_8_ce0,
-        sliding_window_buffer_samples_sample_V_0_8_we0,
-        sliding_window_buffer_samples_sample_V_0_8_d0,
-        sliding_window_buffer_samples_sample_V_0_9_address0,
-        sliding_window_buffer_samples_sample_V_0_9_ce0,
-        sliding_window_buffer_samples_sample_V_0_9_we0,
-        sliding_window_buffer_samples_sample_V_0_9_d0,
-        sliding_window_buffer_samples_sample_V_0_10_address0,
-        sliding_window_buffer_samples_sample_V_0_10_ce0,
-        sliding_window_buffer_samples_sample_V_0_10_we0,
-        sliding_window_buffer_samples_sample_V_0_10_d0,
-        sliding_window_buffer_samples_sample_V_0_11_address0,
-        sliding_window_buffer_samples_sample_V_0_11_ce0,
-        sliding_window_buffer_samples_sample_V_0_11_we0,
-        sliding_window_buffer_samples_sample_V_0_11_d0,
-        sliding_window_buffer_samples_timestamp_V_0_0_address0,
-        sliding_window_buffer_samples_timestamp_V_0_0_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_0_we0,
-        sliding_window_buffer_samples_timestamp_V_0_0_d0,
-        sliding_window_buffer_samples_timestamp_V_0_1_address0,
-        sliding_window_buffer_samples_timestamp_V_0_1_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_1_we0,
-        sliding_window_buffer_samples_timestamp_V_0_1_d0,
-        sliding_window_buffer_samples_timestamp_V_0_2_address0,
-        sliding_window_buffer_samples_timestamp_V_0_2_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_2_we0,
-        sliding_window_buffer_samples_timestamp_V_0_2_d0,
-        sliding_window_buffer_samples_timestamp_V_0_3_address0,
-        sliding_window_buffer_samples_timestamp_V_0_3_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_3_we0,
-        sliding_window_buffer_samples_timestamp_V_0_3_d0,
-        sliding_window_buffer_samples_timestamp_V_0_4_address0,
-        sliding_window_buffer_samples_timestamp_V_0_4_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_4_we0,
-        sliding_window_buffer_samples_timestamp_V_0_4_d0,
-        sliding_window_buffer_samples_timestamp_V_0_5_address0,
-        sliding_window_buffer_samples_timestamp_V_0_5_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_5_we0,
-        sliding_window_buffer_samples_timestamp_V_0_5_d0,
-        sliding_window_buffer_samples_timestamp_V_0_6_address0,
-        sliding_window_buffer_samples_timestamp_V_0_6_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_6_we0,
-        sliding_window_buffer_samples_timestamp_V_0_6_d0,
-        sliding_window_buffer_samples_timestamp_V_0_7_address0,
-        sliding_window_buffer_samples_timestamp_V_0_7_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_7_we0,
-        sliding_window_buffer_samples_timestamp_V_0_7_d0,
-        sliding_window_buffer_samples_timestamp_V_0_8_address0,
-        sliding_window_buffer_samples_timestamp_V_0_8_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_8_we0,
-        sliding_window_buffer_samples_timestamp_V_0_8_d0,
-        sliding_window_buffer_samples_timestamp_V_0_9_address0,
-        sliding_window_buffer_samples_timestamp_V_0_9_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_9_we0,
-        sliding_window_buffer_samples_timestamp_V_0_9_d0,
-        sliding_window_buffer_samples_timestamp_V_0_10_address0,
-        sliding_window_buffer_samples_timestamp_V_0_10_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_10_we0,
-        sliding_window_buffer_samples_timestamp_V_0_10_d0,
-        sliding_window_buffer_samples_timestamp_V_0_11_address0,
-        sliding_window_buffer_samples_timestamp_V_0_11_ce0,
-        sliding_window_buffer_samples_timestamp_V_0_11_we0,
-        sliding_window_buffer_samples_timestamp_V_0_11_d0,
-        sliding_window_buffer_samples_sample_V_1_0_address0,
-        sliding_window_buffer_samples_sample_V_1_0_ce0,
-        sliding_window_buffer_samples_sample_V_1_0_we0,
-        sliding_window_buffer_samples_sample_V_1_0_d0,
-        sliding_window_buffer_samples_sample_V_1_1_address0,
-        sliding_window_buffer_samples_sample_V_1_1_ce0,
-        sliding_window_buffer_samples_sample_V_1_1_we0,
-        sliding_window_buffer_samples_sample_V_1_1_d0,
-        sliding_window_buffer_samples_sample_V_1_2_address0,
-        sliding_window_buffer_samples_sample_V_1_2_ce0,
-        sliding_window_buffer_samples_sample_V_1_2_we0,
-        sliding_window_buffer_samples_sample_V_1_2_d0,
-        sliding_window_buffer_samples_sample_V_1_3_address0,
-        sliding_window_buffer_samples_sample_V_1_3_ce0,
-        sliding_window_buffer_samples_sample_V_1_3_we0,
-        sliding_window_buffer_samples_sample_V_1_3_d0,
-        sliding_window_buffer_samples_sample_V_1_4_address0,
-        sliding_window_buffer_samples_sample_V_1_4_ce0,
-        sliding_window_buffer_samples_sample_V_1_4_we0,
-        sliding_window_buffer_samples_sample_V_1_4_d0,
-        sliding_window_buffer_samples_sample_V_1_5_address0,
-        sliding_window_buffer_samples_sample_V_1_5_ce0,
-        sliding_window_buffer_samples_sample_V_1_5_we0,
-        sliding_window_buffer_samples_sample_V_1_5_d0,
-        sliding_window_buffer_samples_sample_V_1_6_address0,
-        sliding_window_buffer_samples_sample_V_1_6_ce0,
-        sliding_window_buffer_samples_sample_V_1_6_we0,
-        sliding_window_buffer_samples_sample_V_1_6_d0,
-        sliding_window_buffer_samples_sample_V_1_7_address0,
-        sliding_window_buffer_samples_sample_V_1_7_ce0,
-        sliding_window_buffer_samples_sample_V_1_7_we0,
-        sliding_window_buffer_samples_sample_V_1_7_d0,
-        sliding_window_buffer_samples_sample_V_1_8_address0,
-        sliding_window_buffer_samples_sample_V_1_8_ce0,
-        sliding_window_buffer_samples_sample_V_1_8_we0,
-        sliding_window_buffer_samples_sample_V_1_8_d0,
-        sliding_window_buffer_samples_sample_V_1_9_address0,
-        sliding_window_buffer_samples_sample_V_1_9_ce0,
-        sliding_window_buffer_samples_sample_V_1_9_we0,
-        sliding_window_buffer_samples_sample_V_1_9_d0,
-        sliding_window_buffer_samples_sample_V_1_10_address0,
-        sliding_window_buffer_samples_sample_V_1_10_ce0,
-        sliding_window_buffer_samples_sample_V_1_10_we0,
-        sliding_window_buffer_samples_sample_V_1_10_d0,
-        sliding_window_buffer_samples_sample_V_1_11_address0,
-        sliding_window_buffer_samples_sample_V_1_11_ce0,
-        sliding_window_buffer_samples_sample_V_1_11_we0,
-        sliding_window_buffer_samples_sample_V_1_11_d0,
-        sliding_window_buffer_samples_timestamp_V_1_0_address0,
-        sliding_window_buffer_samples_timestamp_V_1_0_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_0_we0,
-        sliding_window_buffer_samples_timestamp_V_1_0_d0,
-        sliding_window_buffer_samples_timestamp_V_1_1_address0,
-        sliding_window_buffer_samples_timestamp_V_1_1_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_1_we0,
-        sliding_window_buffer_samples_timestamp_V_1_1_d0,
-        sliding_window_buffer_samples_timestamp_V_1_2_address0,
-        sliding_window_buffer_samples_timestamp_V_1_2_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_2_we0,
-        sliding_window_buffer_samples_timestamp_V_1_2_d0,
-        sliding_window_buffer_samples_timestamp_V_1_3_address0,
-        sliding_window_buffer_samples_timestamp_V_1_3_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_3_we0,
-        sliding_window_buffer_samples_timestamp_V_1_3_d0,
-        sliding_window_buffer_samples_timestamp_V_1_4_address0,
-        sliding_window_buffer_samples_timestamp_V_1_4_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_4_we0,
-        sliding_window_buffer_samples_timestamp_V_1_4_d0,
-        sliding_window_buffer_samples_timestamp_V_1_5_address0,
-        sliding_window_buffer_samples_timestamp_V_1_5_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_5_we0,
-        sliding_window_buffer_samples_timestamp_V_1_5_d0,
-        sliding_window_buffer_samples_timestamp_V_1_6_address0,
-        sliding_window_buffer_samples_timestamp_V_1_6_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_6_we0,
-        sliding_window_buffer_samples_timestamp_V_1_6_d0,
-        sliding_window_buffer_samples_timestamp_V_1_7_address0,
-        sliding_window_buffer_samples_timestamp_V_1_7_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_7_we0,
-        sliding_window_buffer_samples_timestamp_V_1_7_d0,
-        sliding_window_buffer_samples_timestamp_V_1_8_address0,
-        sliding_window_buffer_samples_timestamp_V_1_8_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_8_we0,
-        sliding_window_buffer_samples_timestamp_V_1_8_d0,
-        sliding_window_buffer_samples_timestamp_V_1_9_address0,
-        sliding_window_buffer_samples_timestamp_V_1_9_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_9_we0,
-        sliding_window_buffer_samples_timestamp_V_1_9_d0,
-        sliding_window_buffer_samples_timestamp_V_1_10_address0,
-        sliding_window_buffer_samples_timestamp_V_1_10_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_10_we0,
-        sliding_window_buffer_samples_timestamp_V_1_10_d0,
-        sliding_window_buffer_samples_timestamp_V_1_11_address0,
-        sliding_window_buffer_samples_timestamp_V_1_11_ce0,
-        sliding_window_buffer_samples_timestamp_V_1_11_we0,
-        sliding_window_buffer_samples_timestamp_V_1_11_d0,
-        sliding_window_buffer_samples_sample_V_2_0_address0,
-        sliding_window_buffer_samples_sample_V_2_0_ce0,
-        sliding_window_buffer_samples_sample_V_2_0_we0,
-        sliding_window_buffer_samples_sample_V_2_0_d0,
-        sliding_window_buffer_samples_sample_V_2_1_address0,
-        sliding_window_buffer_samples_sample_V_2_1_ce0,
-        sliding_window_buffer_samples_sample_V_2_1_we0,
-        sliding_window_buffer_samples_sample_V_2_1_d0,
-        sliding_window_buffer_samples_sample_V_2_2_address0,
-        sliding_window_buffer_samples_sample_V_2_2_ce0,
-        sliding_window_buffer_samples_sample_V_2_2_we0,
-        sliding_window_buffer_samples_sample_V_2_2_d0,
-        sliding_window_buffer_samples_sample_V_2_3_address0,
-        sliding_window_buffer_samples_sample_V_2_3_ce0,
-        sliding_window_buffer_samples_sample_V_2_3_we0,
-        sliding_window_buffer_samples_sample_V_2_3_d0,
-        sliding_window_buffer_samples_sample_V_2_4_address0,
-        sliding_window_buffer_samples_sample_V_2_4_ce0,
-        sliding_window_buffer_samples_sample_V_2_4_we0,
-        sliding_window_buffer_samples_sample_V_2_4_d0,
-        sliding_window_buffer_samples_sample_V_2_5_address0,
-        sliding_window_buffer_samples_sample_V_2_5_ce0,
-        sliding_window_buffer_samples_sample_V_2_5_we0,
-        sliding_window_buffer_samples_sample_V_2_5_d0,
-        sliding_window_buffer_samples_sample_V_2_6_address0,
-        sliding_window_buffer_samples_sample_V_2_6_ce0,
-        sliding_window_buffer_samples_sample_V_2_6_we0,
-        sliding_window_buffer_samples_sample_V_2_6_d0,
-        sliding_window_buffer_samples_sample_V_2_7_address0,
-        sliding_window_buffer_samples_sample_V_2_7_ce0,
-        sliding_window_buffer_samples_sample_V_2_7_we0,
-        sliding_window_buffer_samples_sample_V_2_7_d0,
-        sliding_window_buffer_samples_sample_V_2_8_address0,
-        sliding_window_buffer_samples_sample_V_2_8_ce0,
-        sliding_window_buffer_samples_sample_V_2_8_we0,
-        sliding_window_buffer_samples_sample_V_2_8_d0,
-        sliding_window_buffer_samples_sample_V_2_9_address0,
-        sliding_window_buffer_samples_sample_V_2_9_ce0,
-        sliding_window_buffer_samples_sample_V_2_9_we0,
-        sliding_window_buffer_samples_sample_V_2_9_d0,
-        sliding_window_buffer_samples_sample_V_2_10_address0,
-        sliding_window_buffer_samples_sample_V_2_10_ce0,
-        sliding_window_buffer_samples_sample_V_2_10_we0,
-        sliding_window_buffer_samples_sample_V_2_10_d0,
-        sliding_window_buffer_samples_sample_V_2_11_address0,
-        sliding_window_buffer_samples_sample_V_2_11_ce0,
-        sliding_window_buffer_samples_sample_V_2_11_we0,
-        sliding_window_buffer_samples_sample_V_2_11_d0,
-        sliding_window_buffer_samples_timestamp_V_2_0_address0,
-        sliding_window_buffer_samples_timestamp_V_2_0_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_0_we0,
-        sliding_window_buffer_samples_timestamp_V_2_0_d0,
-        sliding_window_buffer_samples_timestamp_V_2_1_address0,
-        sliding_window_buffer_samples_timestamp_V_2_1_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_1_we0,
-        sliding_window_buffer_samples_timestamp_V_2_1_d0,
-        sliding_window_buffer_samples_timestamp_V_2_2_address0,
-        sliding_window_buffer_samples_timestamp_V_2_2_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_2_we0,
-        sliding_window_buffer_samples_timestamp_V_2_2_d0,
-        sliding_window_buffer_samples_timestamp_V_2_3_address0,
-        sliding_window_buffer_samples_timestamp_V_2_3_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_3_we0,
-        sliding_window_buffer_samples_timestamp_V_2_3_d0,
-        sliding_window_buffer_samples_timestamp_V_2_4_address0,
-        sliding_window_buffer_samples_timestamp_V_2_4_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_4_we0,
-        sliding_window_buffer_samples_timestamp_V_2_4_d0,
-        sliding_window_buffer_samples_timestamp_V_2_5_address0,
-        sliding_window_buffer_samples_timestamp_V_2_5_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_5_we0,
-        sliding_window_buffer_samples_timestamp_V_2_5_d0,
-        sliding_window_buffer_samples_timestamp_V_2_6_address0,
-        sliding_window_buffer_samples_timestamp_V_2_6_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_6_we0,
-        sliding_window_buffer_samples_timestamp_V_2_6_d0,
-        sliding_window_buffer_samples_timestamp_V_2_7_address0,
-        sliding_window_buffer_samples_timestamp_V_2_7_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_7_we0,
-        sliding_window_buffer_samples_timestamp_V_2_7_d0,
-        sliding_window_buffer_samples_timestamp_V_2_8_address0,
-        sliding_window_buffer_samples_timestamp_V_2_8_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_8_we0,
-        sliding_window_buffer_samples_timestamp_V_2_8_d0,
-        sliding_window_buffer_samples_timestamp_V_2_9_address0,
-        sliding_window_buffer_samples_timestamp_V_2_9_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_9_we0,
-        sliding_window_buffer_samples_timestamp_V_2_9_d0,
-        sliding_window_buffer_samples_timestamp_V_2_10_address0,
-        sliding_window_buffer_samples_timestamp_V_2_10_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_10_we0,
-        sliding_window_buffer_samples_timestamp_V_2_10_d0,
-        sliding_window_buffer_samples_timestamp_V_2_11_address0,
-        sliding_window_buffer_samples_timestamp_V_2_11_ce0,
-        sliding_window_buffer_samples_timestamp_V_2_11_we0,
-        sliding_window_buffer_samples_timestamp_V_2_11_d0,
-        sliding_window_buffer_samples_sample_V_3_0_address0,
-        sliding_window_buffer_samples_sample_V_3_0_ce0,
-        sliding_window_buffer_samples_sample_V_3_0_we0,
-        sliding_window_buffer_samples_sample_V_3_0_d0,
-        sliding_window_buffer_samples_sample_V_3_1_address0,
-        sliding_window_buffer_samples_sample_V_3_1_ce0,
-        sliding_window_buffer_samples_sample_V_3_1_we0,
-        sliding_window_buffer_samples_sample_V_3_1_d0,
-        sliding_window_buffer_samples_sample_V_3_2_address0,
-        sliding_window_buffer_samples_sample_V_3_2_ce0,
-        sliding_window_buffer_samples_sample_V_3_2_we0,
-        sliding_window_buffer_samples_sample_V_3_2_d0,
-        sliding_window_buffer_samples_sample_V_3_3_address0,
-        sliding_window_buffer_samples_sample_V_3_3_ce0,
-        sliding_window_buffer_samples_sample_V_3_3_we0,
-        sliding_window_buffer_samples_sample_V_3_3_d0,
-        sliding_window_buffer_samples_sample_V_3_4_address0,
-        sliding_window_buffer_samples_sample_V_3_4_ce0,
-        sliding_window_buffer_samples_sample_V_3_4_we0,
-        sliding_window_buffer_samples_sample_V_3_4_d0,
-        sliding_window_buffer_samples_sample_V_3_5_address0,
-        sliding_window_buffer_samples_sample_V_3_5_ce0,
-        sliding_window_buffer_samples_sample_V_3_5_we0,
-        sliding_window_buffer_samples_sample_V_3_5_d0,
-        sliding_window_buffer_samples_sample_V_3_6_address0,
-        sliding_window_buffer_samples_sample_V_3_6_ce0,
-        sliding_window_buffer_samples_sample_V_3_6_we0,
-        sliding_window_buffer_samples_sample_V_3_6_d0,
-        sliding_window_buffer_samples_sample_V_3_7_address0,
-        sliding_window_buffer_samples_sample_V_3_7_ce0,
-        sliding_window_buffer_samples_sample_V_3_7_we0,
-        sliding_window_buffer_samples_sample_V_3_7_d0,
-        sliding_window_buffer_samples_sample_V_3_8_address0,
-        sliding_window_buffer_samples_sample_V_3_8_ce0,
-        sliding_window_buffer_samples_sample_V_3_8_we0,
-        sliding_window_buffer_samples_sample_V_3_8_d0,
-        sliding_window_buffer_samples_sample_V_3_9_address0,
-        sliding_window_buffer_samples_sample_V_3_9_ce0,
-        sliding_window_buffer_samples_sample_V_3_9_we0,
-        sliding_window_buffer_samples_sample_V_3_9_d0,
-        sliding_window_buffer_samples_sample_V_3_10_address0,
-        sliding_window_buffer_samples_sample_V_3_10_ce0,
-        sliding_window_buffer_samples_sample_V_3_10_we0,
-        sliding_window_buffer_samples_sample_V_3_10_d0,
-        sliding_window_buffer_samples_sample_V_3_11_address0,
-        sliding_window_buffer_samples_sample_V_3_11_ce0,
-        sliding_window_buffer_samples_sample_V_3_11_we0,
-        sliding_window_buffer_samples_sample_V_3_11_d0,
-        sliding_window_buffer_samples_timestamp_V_3_0_address0,
-        sliding_window_buffer_samples_timestamp_V_3_0_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_0_we0,
-        sliding_window_buffer_samples_timestamp_V_3_0_d0,
-        sliding_window_buffer_samples_timestamp_V_3_1_address0,
-        sliding_window_buffer_samples_timestamp_V_3_1_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_1_we0,
-        sliding_window_buffer_samples_timestamp_V_3_1_d0,
-        sliding_window_buffer_samples_timestamp_V_3_2_address0,
-        sliding_window_buffer_samples_timestamp_V_3_2_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_2_we0,
-        sliding_window_buffer_samples_timestamp_V_3_2_d0,
-        sliding_window_buffer_samples_timestamp_V_3_3_address0,
-        sliding_window_buffer_samples_timestamp_V_3_3_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_3_we0,
-        sliding_window_buffer_samples_timestamp_V_3_3_d0,
-        sliding_window_buffer_samples_timestamp_V_3_4_address0,
-        sliding_window_buffer_samples_timestamp_V_3_4_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_4_we0,
-        sliding_window_buffer_samples_timestamp_V_3_4_d0,
-        sliding_window_buffer_samples_timestamp_V_3_5_address0,
-        sliding_window_buffer_samples_timestamp_V_3_5_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_5_we0,
-        sliding_window_buffer_samples_timestamp_V_3_5_d0,
-        sliding_window_buffer_samples_timestamp_V_3_6_address0,
-        sliding_window_buffer_samples_timestamp_V_3_6_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_6_we0,
-        sliding_window_buffer_samples_timestamp_V_3_6_d0,
-        sliding_window_buffer_samples_timestamp_V_3_7_address0,
-        sliding_window_buffer_samples_timestamp_V_3_7_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_7_we0,
-        sliding_window_buffer_samples_timestamp_V_3_7_d0,
-        sliding_window_buffer_samples_timestamp_V_3_8_address0,
-        sliding_window_buffer_samples_timestamp_V_3_8_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_8_we0,
-        sliding_window_buffer_samples_timestamp_V_3_8_d0,
-        sliding_window_buffer_samples_timestamp_V_3_9_address0,
-        sliding_window_buffer_samples_timestamp_V_3_9_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_9_we0,
-        sliding_window_buffer_samples_timestamp_V_3_9_d0,
-        sliding_window_buffer_samples_timestamp_V_3_10_address0,
-        sliding_window_buffer_samples_timestamp_V_3_10_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_10_we0,
-        sliding_window_buffer_samples_timestamp_V_3_10_d0,
-        sliding_window_buffer_samples_timestamp_V_3_11_address0,
-        sliding_window_buffer_samples_timestamp_V_3_11_ce0,
-        sliding_window_buffer_samples_timestamp_V_3_11_we0,
-        sliding_window_buffer_samples_timestamp_V_3_11_d0,
-        sliding_window_buffer_samples_sample_V_4_0_address0,
-        sliding_window_buffer_samples_sample_V_4_0_ce0,
-        sliding_window_buffer_samples_sample_V_4_0_we0,
-        sliding_window_buffer_samples_sample_V_4_0_d0,
-        sliding_window_buffer_samples_sample_V_4_1_address0,
-        sliding_window_buffer_samples_sample_V_4_1_ce0,
-        sliding_window_buffer_samples_sample_V_4_1_we0,
-        sliding_window_buffer_samples_sample_V_4_1_d0,
-        sliding_window_buffer_samples_sample_V_4_2_address0,
-        sliding_window_buffer_samples_sample_V_4_2_ce0,
-        sliding_window_buffer_samples_sample_V_4_2_we0,
-        sliding_window_buffer_samples_sample_V_4_2_d0,
-        sliding_window_buffer_samples_sample_V_4_3_address0,
-        sliding_window_buffer_samples_sample_V_4_3_ce0,
-        sliding_window_buffer_samples_sample_V_4_3_we0,
-        sliding_window_buffer_samples_sample_V_4_3_d0,
-        sliding_window_buffer_samples_sample_V_4_4_address0,
-        sliding_window_buffer_samples_sample_V_4_4_ce0,
-        sliding_window_buffer_samples_sample_V_4_4_we0,
-        sliding_window_buffer_samples_sample_V_4_4_d0,
-        sliding_window_buffer_samples_sample_V_4_5_address0,
-        sliding_window_buffer_samples_sample_V_4_5_ce0,
-        sliding_window_buffer_samples_sample_V_4_5_we0,
-        sliding_window_buffer_samples_sample_V_4_5_d0,
-        sliding_window_buffer_samples_sample_V_4_6_address0,
-        sliding_window_buffer_samples_sample_V_4_6_ce0,
-        sliding_window_buffer_samples_sample_V_4_6_we0,
-        sliding_window_buffer_samples_sample_V_4_6_d0,
-        sliding_window_buffer_samples_sample_V_4_7_address0,
-        sliding_window_buffer_samples_sample_V_4_7_ce0,
-        sliding_window_buffer_samples_sample_V_4_7_we0,
-        sliding_window_buffer_samples_sample_V_4_7_d0,
-        sliding_window_buffer_samples_sample_V_4_8_address0,
-        sliding_window_buffer_samples_sample_V_4_8_ce0,
-        sliding_window_buffer_samples_sample_V_4_8_we0,
-        sliding_window_buffer_samples_sample_V_4_8_d0,
-        sliding_window_buffer_samples_sample_V_4_9_address0,
-        sliding_window_buffer_samples_sample_V_4_9_ce0,
-        sliding_window_buffer_samples_sample_V_4_9_we0,
-        sliding_window_buffer_samples_sample_V_4_9_d0,
-        sliding_window_buffer_samples_sample_V_4_10_address0,
-        sliding_window_buffer_samples_sample_V_4_10_ce0,
-        sliding_window_buffer_samples_sample_V_4_10_we0,
-        sliding_window_buffer_samples_sample_V_4_10_d0,
-        sliding_window_buffer_samples_sample_V_4_11_address0,
-        sliding_window_buffer_samples_sample_V_4_11_ce0,
-        sliding_window_buffer_samples_sample_V_4_11_we0,
-        sliding_window_buffer_samples_sample_V_4_11_d0,
-        sliding_window_buffer_samples_timestamp_V_4_0_address0,
-        sliding_window_buffer_samples_timestamp_V_4_0_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_0_we0,
-        sliding_window_buffer_samples_timestamp_V_4_0_d0,
-        sliding_window_buffer_samples_timestamp_V_4_1_address0,
-        sliding_window_buffer_samples_timestamp_V_4_1_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_1_we0,
-        sliding_window_buffer_samples_timestamp_V_4_1_d0,
-        sliding_window_buffer_samples_timestamp_V_4_2_address0,
-        sliding_window_buffer_samples_timestamp_V_4_2_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_2_we0,
-        sliding_window_buffer_samples_timestamp_V_4_2_d0,
-        sliding_window_buffer_samples_timestamp_V_4_3_address0,
-        sliding_window_buffer_samples_timestamp_V_4_3_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_3_we0,
-        sliding_window_buffer_samples_timestamp_V_4_3_d0,
-        sliding_window_buffer_samples_timestamp_V_4_4_address0,
-        sliding_window_buffer_samples_timestamp_V_4_4_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_4_we0,
-        sliding_window_buffer_samples_timestamp_V_4_4_d0,
-        sliding_window_buffer_samples_timestamp_V_4_5_address0,
-        sliding_window_buffer_samples_timestamp_V_4_5_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_5_we0,
-        sliding_window_buffer_samples_timestamp_V_4_5_d0,
-        sliding_window_buffer_samples_timestamp_V_4_6_address0,
-        sliding_window_buffer_samples_timestamp_V_4_6_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_6_we0,
-        sliding_window_buffer_samples_timestamp_V_4_6_d0,
-        sliding_window_buffer_samples_timestamp_V_4_7_address0,
-        sliding_window_buffer_samples_timestamp_V_4_7_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_7_we0,
-        sliding_window_buffer_samples_timestamp_V_4_7_d0,
-        sliding_window_buffer_samples_timestamp_V_4_8_address0,
-        sliding_window_buffer_samples_timestamp_V_4_8_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_8_we0,
-        sliding_window_buffer_samples_timestamp_V_4_8_d0,
-        sliding_window_buffer_samples_timestamp_V_4_9_address0,
-        sliding_window_buffer_samples_timestamp_V_4_9_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_9_we0,
-        sliding_window_buffer_samples_timestamp_V_4_9_d0,
-        sliding_window_buffer_samples_timestamp_V_4_10_address0,
-        sliding_window_buffer_samples_timestamp_V_4_10_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_10_we0,
-        sliding_window_buffer_samples_timestamp_V_4_10_d0,
-        sliding_window_buffer_samples_timestamp_V_4_11_address0,
-        sliding_window_buffer_samples_timestamp_V_4_11_ce0,
-        sliding_window_buffer_samples_timestamp_V_4_11_we0,
-        sliding_window_buffer_samples_timestamp_V_4_11_d0,
-        sliding_window_buffer_samples_sample_V_5_0_address0,
-        sliding_window_buffer_samples_sample_V_5_0_ce0,
-        sliding_window_buffer_samples_sample_V_5_0_we0,
-        sliding_window_buffer_samples_sample_V_5_0_d0,
-        sliding_window_buffer_samples_sample_V_5_1_address0,
-        sliding_window_buffer_samples_sample_V_5_1_ce0,
-        sliding_window_buffer_samples_sample_V_5_1_we0,
-        sliding_window_buffer_samples_sample_V_5_1_d0,
-        sliding_window_buffer_samples_sample_V_5_2_address0,
-        sliding_window_buffer_samples_sample_V_5_2_ce0,
-        sliding_window_buffer_samples_sample_V_5_2_we0,
-        sliding_window_buffer_samples_sample_V_5_2_d0,
-        sliding_window_buffer_samples_sample_V_5_3_address0,
-        sliding_window_buffer_samples_sample_V_5_3_ce0,
-        sliding_window_buffer_samples_sample_V_5_3_we0,
-        sliding_window_buffer_samples_sample_V_5_3_d0,
-        sliding_window_buffer_samples_sample_V_5_4_address0,
-        sliding_window_buffer_samples_sample_V_5_4_ce0,
-        sliding_window_buffer_samples_sample_V_5_4_we0,
-        sliding_window_buffer_samples_sample_V_5_4_d0,
-        sliding_window_buffer_samples_sample_V_5_5_address0,
-        sliding_window_buffer_samples_sample_V_5_5_ce0,
-        sliding_window_buffer_samples_sample_V_5_5_we0,
-        sliding_window_buffer_samples_sample_V_5_5_d0,
-        sliding_window_buffer_samples_sample_V_5_6_address0,
-        sliding_window_buffer_samples_sample_V_5_6_ce0,
-        sliding_window_buffer_samples_sample_V_5_6_we0,
-        sliding_window_buffer_samples_sample_V_5_6_d0,
-        sliding_window_buffer_samples_sample_V_5_7_address0,
-        sliding_window_buffer_samples_sample_V_5_7_ce0,
-        sliding_window_buffer_samples_sample_V_5_7_we0,
-        sliding_window_buffer_samples_sample_V_5_7_d0,
-        sliding_window_buffer_samples_sample_V_5_8_address0,
-        sliding_window_buffer_samples_sample_V_5_8_ce0,
-        sliding_window_buffer_samples_sample_V_5_8_we0,
-        sliding_window_buffer_samples_sample_V_5_8_d0,
-        sliding_window_buffer_samples_sample_V_5_9_address0,
-        sliding_window_buffer_samples_sample_V_5_9_ce0,
-        sliding_window_buffer_samples_sample_V_5_9_we0,
-        sliding_window_buffer_samples_sample_V_5_9_d0,
-        sliding_window_buffer_samples_sample_V_5_10_address0,
-        sliding_window_buffer_samples_sample_V_5_10_ce0,
-        sliding_window_buffer_samples_sample_V_5_10_we0,
-        sliding_window_buffer_samples_sample_V_5_10_d0,
-        sliding_window_buffer_samples_sample_V_5_11_address0,
-        sliding_window_buffer_samples_sample_V_5_11_ce0,
-        sliding_window_buffer_samples_sample_V_5_11_we0,
-        sliding_window_buffer_samples_sample_V_5_11_d0,
-        sliding_window_buffer_samples_timestamp_V_5_0_address0,
-        sliding_window_buffer_samples_timestamp_V_5_0_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_0_we0,
-        sliding_window_buffer_samples_timestamp_V_5_0_d0,
-        sliding_window_buffer_samples_timestamp_V_5_1_address0,
-        sliding_window_buffer_samples_timestamp_V_5_1_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_1_we0,
-        sliding_window_buffer_samples_timestamp_V_5_1_d0,
-        sliding_window_buffer_samples_timestamp_V_5_2_address0,
-        sliding_window_buffer_samples_timestamp_V_5_2_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_2_we0,
-        sliding_window_buffer_samples_timestamp_V_5_2_d0,
-        sliding_window_buffer_samples_timestamp_V_5_3_address0,
-        sliding_window_buffer_samples_timestamp_V_5_3_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_3_we0,
-        sliding_window_buffer_samples_timestamp_V_5_3_d0,
-        sliding_window_buffer_samples_timestamp_V_5_4_address0,
-        sliding_window_buffer_samples_timestamp_V_5_4_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_4_we0,
-        sliding_window_buffer_samples_timestamp_V_5_4_d0,
-        sliding_window_buffer_samples_timestamp_V_5_5_address0,
-        sliding_window_buffer_samples_timestamp_V_5_5_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_5_we0,
-        sliding_window_buffer_samples_timestamp_V_5_5_d0,
-        sliding_window_buffer_samples_timestamp_V_5_6_address0,
-        sliding_window_buffer_samples_timestamp_V_5_6_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_6_we0,
-        sliding_window_buffer_samples_timestamp_V_5_6_d0,
-        sliding_window_buffer_samples_timestamp_V_5_7_address0,
-        sliding_window_buffer_samples_timestamp_V_5_7_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_7_we0,
-        sliding_window_buffer_samples_timestamp_V_5_7_d0,
-        sliding_window_buffer_samples_timestamp_V_5_8_address0,
-        sliding_window_buffer_samples_timestamp_V_5_8_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_8_we0,
-        sliding_window_buffer_samples_timestamp_V_5_8_d0,
-        sliding_window_buffer_samples_timestamp_V_5_9_address0,
-        sliding_window_buffer_samples_timestamp_V_5_9_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_9_we0,
-        sliding_window_buffer_samples_timestamp_V_5_9_d0,
-        sliding_window_buffer_samples_timestamp_V_5_10_address0,
-        sliding_window_buffer_samples_timestamp_V_5_10_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_10_we0,
-        sliding_window_buffer_samples_timestamp_V_5_10_d0,
-        sliding_window_buffer_samples_timestamp_V_5_11_address0,
-        sliding_window_buffer_samples_timestamp_V_5_11_ce0,
-        sliding_window_buffer_samples_timestamp_V_5_11_we0,
-        sliding_window_buffer_samples_timestamp_V_5_11_d0,
-        sliding_window_buffer_samples_sample_V_6_0_address0,
-        sliding_window_buffer_samples_sample_V_6_0_ce0,
-        sliding_window_buffer_samples_sample_V_6_0_we0,
-        sliding_window_buffer_samples_sample_V_6_0_d0,
-        sliding_window_buffer_samples_sample_V_6_1_address0,
-        sliding_window_buffer_samples_sample_V_6_1_ce0,
-        sliding_window_buffer_samples_sample_V_6_1_we0,
-        sliding_window_buffer_samples_sample_V_6_1_d0,
-        sliding_window_buffer_samples_sample_V_6_2_address0,
-        sliding_window_buffer_samples_sample_V_6_2_ce0,
-        sliding_window_buffer_samples_sample_V_6_2_we0,
-        sliding_window_buffer_samples_sample_V_6_2_d0,
-        sliding_window_buffer_samples_sample_V_6_3_address0,
-        sliding_window_buffer_samples_sample_V_6_3_ce0,
-        sliding_window_buffer_samples_sample_V_6_3_we0,
-        sliding_window_buffer_samples_sample_V_6_3_d0,
-        sliding_window_buffer_samples_sample_V_6_4_address0,
-        sliding_window_buffer_samples_sample_V_6_4_ce0,
-        sliding_window_buffer_samples_sample_V_6_4_we0,
-        sliding_window_buffer_samples_sample_V_6_4_d0,
-        sliding_window_buffer_samples_sample_V_6_5_address0,
-        sliding_window_buffer_samples_sample_V_6_5_ce0,
-        sliding_window_buffer_samples_sample_V_6_5_we0,
-        sliding_window_buffer_samples_sample_V_6_5_d0,
-        sliding_window_buffer_samples_sample_V_6_6_address0,
-        sliding_window_buffer_samples_sample_V_6_6_ce0,
-        sliding_window_buffer_samples_sample_V_6_6_we0,
-        sliding_window_buffer_samples_sample_V_6_6_d0,
-        sliding_window_buffer_samples_sample_V_6_7_address0,
-        sliding_window_buffer_samples_sample_V_6_7_ce0,
-        sliding_window_buffer_samples_sample_V_6_7_we0,
-        sliding_window_buffer_samples_sample_V_6_7_d0,
-        sliding_window_buffer_samples_sample_V_6_8_address0,
-        sliding_window_buffer_samples_sample_V_6_8_ce0,
-        sliding_window_buffer_samples_sample_V_6_8_we0,
-        sliding_window_buffer_samples_sample_V_6_8_d0,
-        sliding_window_buffer_samples_sample_V_6_9_address0,
-        sliding_window_buffer_samples_sample_V_6_9_ce0,
-        sliding_window_buffer_samples_sample_V_6_9_we0,
-        sliding_window_buffer_samples_sample_V_6_9_d0,
-        sliding_window_buffer_samples_sample_V_6_10_address0,
-        sliding_window_buffer_samples_sample_V_6_10_ce0,
-        sliding_window_buffer_samples_sample_V_6_10_we0,
-        sliding_window_buffer_samples_sample_V_6_10_d0,
-        sliding_window_buffer_samples_sample_V_6_11_address0,
-        sliding_window_buffer_samples_sample_V_6_11_ce0,
-        sliding_window_buffer_samples_sample_V_6_11_we0,
-        sliding_window_buffer_samples_sample_V_6_11_d0,
-        sliding_window_buffer_samples_timestamp_V_6_0_address0,
-        sliding_window_buffer_samples_timestamp_V_6_0_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_0_we0,
-        sliding_window_buffer_samples_timestamp_V_6_0_d0,
-        sliding_window_buffer_samples_timestamp_V_6_1_address0,
-        sliding_window_buffer_samples_timestamp_V_6_1_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_1_we0,
-        sliding_window_buffer_samples_timestamp_V_6_1_d0,
-        sliding_window_buffer_samples_timestamp_V_6_2_address0,
-        sliding_window_buffer_samples_timestamp_V_6_2_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_2_we0,
-        sliding_window_buffer_samples_timestamp_V_6_2_d0,
-        sliding_window_buffer_samples_timestamp_V_6_3_address0,
-        sliding_window_buffer_samples_timestamp_V_6_3_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_3_we0,
-        sliding_window_buffer_samples_timestamp_V_6_3_d0,
-        sliding_window_buffer_samples_timestamp_V_6_4_address0,
-        sliding_window_buffer_samples_timestamp_V_6_4_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_4_we0,
-        sliding_window_buffer_samples_timestamp_V_6_4_d0,
-        sliding_window_buffer_samples_timestamp_V_6_5_address0,
-        sliding_window_buffer_samples_timestamp_V_6_5_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_5_we0,
-        sliding_window_buffer_samples_timestamp_V_6_5_d0,
-        sliding_window_buffer_samples_timestamp_V_6_6_address0,
-        sliding_window_buffer_samples_timestamp_V_6_6_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_6_we0,
-        sliding_window_buffer_samples_timestamp_V_6_6_d0,
-        sliding_window_buffer_samples_timestamp_V_6_7_address0,
-        sliding_window_buffer_samples_timestamp_V_6_7_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_7_we0,
-        sliding_window_buffer_samples_timestamp_V_6_7_d0,
-        sliding_window_buffer_samples_timestamp_V_6_8_address0,
-        sliding_window_buffer_samples_timestamp_V_6_8_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_8_we0,
-        sliding_window_buffer_samples_timestamp_V_6_8_d0,
-        sliding_window_buffer_samples_timestamp_V_6_9_address0,
-        sliding_window_buffer_samples_timestamp_V_6_9_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_9_we0,
-        sliding_window_buffer_samples_timestamp_V_6_9_d0,
-        sliding_window_buffer_samples_timestamp_V_6_10_address0,
-        sliding_window_buffer_samples_timestamp_V_6_10_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_10_we0,
-        sliding_window_buffer_samples_timestamp_V_6_10_d0,
-        sliding_window_buffer_samples_timestamp_V_6_11_address0,
-        sliding_window_buffer_samples_timestamp_V_6_11_ce0,
-        sliding_window_buffer_samples_timestamp_V_6_11_we0,
-        sliding_window_buffer_samples_timestamp_V_6_11_d0,
-        sliding_window_buffer_samples_sample_V_7_0_address0,
-        sliding_window_buffer_samples_sample_V_7_0_ce0,
-        sliding_window_buffer_samples_sample_V_7_0_we0,
-        sliding_window_buffer_samples_sample_V_7_0_d0,
-        sliding_window_buffer_samples_sample_V_7_1_address0,
-        sliding_window_buffer_samples_sample_V_7_1_ce0,
-        sliding_window_buffer_samples_sample_V_7_1_we0,
-        sliding_window_buffer_samples_sample_V_7_1_d0,
-        sliding_window_buffer_samples_sample_V_7_2_address0,
-        sliding_window_buffer_samples_sample_V_7_2_ce0,
-        sliding_window_buffer_samples_sample_V_7_2_we0,
-        sliding_window_buffer_samples_sample_V_7_2_d0,
-        sliding_window_buffer_samples_sample_V_7_3_address0,
-        sliding_window_buffer_samples_sample_V_7_3_ce0,
-        sliding_window_buffer_samples_sample_V_7_3_we0,
-        sliding_window_buffer_samples_sample_V_7_3_d0,
-        sliding_window_buffer_samples_sample_V_7_4_address0,
-        sliding_window_buffer_samples_sample_V_7_4_ce0,
-        sliding_window_buffer_samples_sample_V_7_4_we0,
-        sliding_window_buffer_samples_sample_V_7_4_d0,
-        sliding_window_buffer_samples_sample_V_7_5_address0,
-        sliding_window_buffer_samples_sample_V_7_5_ce0,
-        sliding_window_buffer_samples_sample_V_7_5_we0,
-        sliding_window_buffer_samples_sample_V_7_5_d0,
-        sliding_window_buffer_samples_sample_V_7_6_address0,
-        sliding_window_buffer_samples_sample_V_7_6_ce0,
-        sliding_window_buffer_samples_sample_V_7_6_we0,
-        sliding_window_buffer_samples_sample_V_7_6_d0,
-        sliding_window_buffer_samples_sample_V_7_7_address0,
-        sliding_window_buffer_samples_sample_V_7_7_ce0,
-        sliding_window_buffer_samples_sample_V_7_7_we0,
-        sliding_window_buffer_samples_sample_V_7_7_d0,
-        sliding_window_buffer_samples_sample_V_7_8_address0,
-        sliding_window_buffer_samples_sample_V_7_8_ce0,
-        sliding_window_buffer_samples_sample_V_7_8_we0,
-        sliding_window_buffer_samples_sample_V_7_8_d0,
-        sliding_window_buffer_samples_sample_V_7_9_address0,
-        sliding_window_buffer_samples_sample_V_7_9_ce0,
-        sliding_window_buffer_samples_sample_V_7_9_we0,
-        sliding_window_buffer_samples_sample_V_7_9_d0,
-        sliding_window_buffer_samples_sample_V_7_10_address0,
-        sliding_window_buffer_samples_sample_V_7_10_ce0,
-        sliding_window_buffer_samples_sample_V_7_10_we0,
-        sliding_window_buffer_samples_sample_V_7_10_d0,
-        sliding_window_buffer_samples_sample_V_7_11_address0,
-        sliding_window_buffer_samples_sample_V_7_11_ce0,
-        sliding_window_buffer_samples_sample_V_7_11_we0,
-        sliding_window_buffer_samples_sample_V_7_11_d0,
-        sliding_window_buffer_samples_timestamp_V_7_0_address0,
-        sliding_window_buffer_samples_timestamp_V_7_0_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_0_we0,
-        sliding_window_buffer_samples_timestamp_V_7_0_d0,
-        sliding_window_buffer_samples_timestamp_V_7_1_address0,
-        sliding_window_buffer_samples_timestamp_V_7_1_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_1_we0,
-        sliding_window_buffer_samples_timestamp_V_7_1_d0,
-        sliding_window_buffer_samples_timestamp_V_7_2_address0,
-        sliding_window_buffer_samples_timestamp_V_7_2_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_2_we0,
-        sliding_window_buffer_samples_timestamp_V_7_2_d0,
-        sliding_window_buffer_samples_timestamp_V_7_3_address0,
-        sliding_window_buffer_samples_timestamp_V_7_3_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_3_we0,
-        sliding_window_buffer_samples_timestamp_V_7_3_d0,
-        sliding_window_buffer_samples_timestamp_V_7_4_address0,
-        sliding_window_buffer_samples_timestamp_V_7_4_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_4_we0,
-        sliding_window_buffer_samples_timestamp_V_7_4_d0,
-        sliding_window_buffer_samples_timestamp_V_7_5_address0,
-        sliding_window_buffer_samples_timestamp_V_7_5_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_5_we0,
-        sliding_window_buffer_samples_timestamp_V_7_5_d0,
-        sliding_window_buffer_samples_timestamp_V_7_6_address0,
-        sliding_window_buffer_samples_timestamp_V_7_6_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_6_we0,
-        sliding_window_buffer_samples_timestamp_V_7_6_d0,
-        sliding_window_buffer_samples_timestamp_V_7_7_address0,
-        sliding_window_buffer_samples_timestamp_V_7_7_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_7_we0,
-        sliding_window_buffer_samples_timestamp_V_7_7_d0,
-        sliding_window_buffer_samples_timestamp_V_7_8_address0,
-        sliding_window_buffer_samples_timestamp_V_7_8_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_8_we0,
-        sliding_window_buffer_samples_timestamp_V_7_8_d0,
-        sliding_window_buffer_samples_timestamp_V_7_9_address0,
-        sliding_window_buffer_samples_timestamp_V_7_9_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_9_we0,
-        sliding_window_buffer_samples_timestamp_V_7_9_d0,
-        sliding_window_buffer_samples_timestamp_V_7_10_address0,
-        sliding_window_buffer_samples_timestamp_V_7_10_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_10_we0,
-        sliding_window_buffer_samples_timestamp_V_7_10_d0,
-        sliding_window_buffer_samples_timestamp_V_7_11_address0,
-        sliding_window_buffer_samples_timestamp_V_7_11_ce0,
-        sliding_window_buffer_samples_timestamp_V_7_11_we0,
-        sliding_window_buffer_samples_timestamp_V_7_11_d0,
+        sliding_window_buffer_samples_sample_V_address0,
+        sliding_window_buffer_samples_sample_V_ce0,
+        sliding_window_buffer_samples_sample_V_we0,
+        sliding_window_buffer_samples_sample_V_d0,
+        sliding_window_buffer_samples_sample_V_address1,
+        sliding_window_buffer_samples_sample_V_ce1,
+        sliding_window_buffer_samples_sample_V_we1,
+        sliding_window_buffer_samples_sample_V_d1,
+        sliding_window_buffer_samples_timestamp_V_0_address0,
+        sliding_window_buffer_samples_timestamp_V_0_ce0,
+        sliding_window_buffer_samples_timestamp_V_0_we0,
+        sliding_window_buffer_samples_timestamp_V_0_d0,
+        sliding_window_buffer_samples_timestamp_V_0_address1,
+        sliding_window_buffer_samples_timestamp_V_0_ce1,
+        sliding_window_buffer_samples_timestamp_V_0_we1,
+        sliding_window_buffer_samples_timestamp_V_0_d1,
+        sliding_window_buffer_samples_timestamp_V_1_address0,
+        sliding_window_buffer_samples_timestamp_V_1_ce0,
+        sliding_window_buffer_samples_timestamp_V_1_we0,
+        sliding_window_buffer_samples_timestamp_V_1_d0,
+        sliding_window_buffer_samples_timestamp_V_1_address1,
+        sliding_window_buffer_samples_timestamp_V_1_ce1,
+        sliding_window_buffer_samples_timestamp_V_1_we1,
+        sliding_window_buffer_samples_timestamp_V_1_d1,
+        sliding_window_buffer_samples_timestamp_V_2_address0,
+        sliding_window_buffer_samples_timestamp_V_2_ce0,
+        sliding_window_buffer_samples_timestamp_V_2_we0,
+        sliding_window_buffer_samples_timestamp_V_2_d0,
+        sliding_window_buffer_samples_timestamp_V_2_address1,
+        sliding_window_buffer_samples_timestamp_V_2_ce1,
+        sliding_window_buffer_samples_timestamp_V_2_we1,
+        sliding_window_buffer_samples_timestamp_V_2_d1,
+        sliding_window_buffer_samples_timestamp_V_3_address0,
+        sliding_window_buffer_samples_timestamp_V_3_ce0,
+        sliding_window_buffer_samples_timestamp_V_3_we0,
+        sliding_window_buffer_samples_timestamp_V_3_d0,
+        sliding_window_buffer_samples_timestamp_V_3_address1,
+        sliding_window_buffer_samples_timestamp_V_3_ce1,
+        sliding_window_buffer_samples_timestamp_V_3_we1,
+        sliding_window_buffer_samples_timestamp_V_3_d1,
+        sliding_window_buffer_samples_timestamp_V_4_address0,
+        sliding_window_buffer_samples_timestamp_V_4_ce0,
+        sliding_window_buffer_samples_timestamp_V_4_we0,
+        sliding_window_buffer_samples_timestamp_V_4_d0,
+        sliding_window_buffer_samples_timestamp_V_4_address1,
+        sliding_window_buffer_samples_timestamp_V_4_ce1,
+        sliding_window_buffer_samples_timestamp_V_4_we1,
+        sliding_window_buffer_samples_timestamp_V_4_d1,
+        sliding_window_buffer_samples_timestamp_V_5_address0,
+        sliding_window_buffer_samples_timestamp_V_5_ce0,
+        sliding_window_buffer_samples_timestamp_V_5_we0,
+        sliding_window_buffer_samples_timestamp_V_5_d0,
+        sliding_window_buffer_samples_timestamp_V_5_address1,
+        sliding_window_buffer_samples_timestamp_V_5_ce1,
+        sliding_window_buffer_samples_timestamp_V_5_we1,
+        sliding_window_buffer_samples_timestamp_V_5_d1,
+        sliding_window_buffer_samples_timestamp_V_6_address0,
+        sliding_window_buffer_samples_timestamp_V_6_ce0,
+        sliding_window_buffer_samples_timestamp_V_6_we0,
+        sliding_window_buffer_samples_timestamp_V_6_d0,
+        sliding_window_buffer_samples_timestamp_V_6_address1,
+        sliding_window_buffer_samples_timestamp_V_6_ce1,
+        sliding_window_buffer_samples_timestamp_V_6_we1,
+        sliding_window_buffer_samples_timestamp_V_6_d1,
+        sliding_window_buffer_samples_timestamp_V_7_address0,
+        sliding_window_buffer_samples_timestamp_V_7_ce0,
+        sliding_window_buffer_samples_timestamp_V_7_we0,
+        sliding_window_buffer_samples_timestamp_V_7_d0,
+        sliding_window_buffer_samples_timestamp_V_7_address1,
+        sliding_window_buffer_samples_timestamp_V_7_ce1,
+        sliding_window_buffer_samples_timestamp_V_7_we1,
+        sliding_window_buffer_samples_timestamp_V_7_d1,
+        sliding_window_buffer_samples_timestamp_V_8_address0,
+        sliding_window_buffer_samples_timestamp_V_8_ce0,
+        sliding_window_buffer_samples_timestamp_V_8_we0,
+        sliding_window_buffer_samples_timestamp_V_8_d0,
+        sliding_window_buffer_samples_timestamp_V_8_address1,
+        sliding_window_buffer_samples_timestamp_V_8_ce1,
+        sliding_window_buffer_samples_timestamp_V_8_we1,
+        sliding_window_buffer_samples_timestamp_V_8_d1,
+        sliding_window_buffer_samples_timestamp_V_9_address0,
+        sliding_window_buffer_samples_timestamp_V_9_ce0,
+        sliding_window_buffer_samples_timestamp_V_9_we0,
+        sliding_window_buffer_samples_timestamp_V_9_d0,
+        sliding_window_buffer_samples_timestamp_V_9_address1,
+        sliding_window_buffer_samples_timestamp_V_9_ce1,
+        sliding_window_buffer_samples_timestamp_V_9_we1,
+        sliding_window_buffer_samples_timestamp_V_9_d1,
+        sliding_window_buffer_samples_timestamp_V_10_address0,
+        sliding_window_buffer_samples_timestamp_V_10_ce0,
+        sliding_window_buffer_samples_timestamp_V_10_we0,
+        sliding_window_buffer_samples_timestamp_V_10_d0,
+        sliding_window_buffer_samples_timestamp_V_10_address1,
+        sliding_window_buffer_samples_timestamp_V_10_ce1,
+        sliding_window_buffer_samples_timestamp_V_10_we1,
+        sliding_window_buffer_samples_timestamp_V_10_d1,
+        sliding_window_buffer_samples_timestamp_V_11_address0,
+        sliding_window_buffer_samples_timestamp_V_11_ce0,
+        sliding_window_buffer_samples_timestamp_V_11_we0,
+        sliding_window_buffer_samples_timestamp_V_11_d0,
+        sliding_window_buffer_samples_timestamp_V_11_address1,
+        sliding_window_buffer_samples_timestamp_V_11_ce1,
+        sliding_window_buffer_samples_timestamp_V_11_we1,
+        sliding_window_buffer_samples_timestamp_V_11_d1,
         sliding_window_back_ptr_s_i,
         sliding_window_back_ptr_s_o,
         sliding_window_back_ptr_s_o_ap_vld
 );
 
-parameter    ap_ST_fsm_state1 = 28'd1;
-parameter    ap_ST_fsm_pp0_stage0 = 28'd2;
-parameter    ap_ST_fsm_state4 = 28'd4;
-parameter    ap_ST_fsm_state5 = 28'd8;
-parameter    ap_ST_fsm_state6 = 28'd16;
-parameter    ap_ST_fsm_state7 = 28'd32;
-parameter    ap_ST_fsm_state8 = 28'd64;
-parameter    ap_ST_fsm_state9 = 28'd128;
-parameter    ap_ST_fsm_state10 = 28'd256;
-parameter    ap_ST_fsm_state11 = 28'd512;
-parameter    ap_ST_fsm_state12 = 28'd1024;
-parameter    ap_ST_fsm_state13 = 28'd2048;
-parameter    ap_ST_fsm_state14 = 28'd4096;
-parameter    ap_ST_fsm_state15 = 28'd8192;
-parameter    ap_ST_fsm_state16 = 28'd16384;
-parameter    ap_ST_fsm_state17 = 28'd32768;
-parameter    ap_ST_fsm_state18 = 28'd65536;
-parameter    ap_ST_fsm_state19 = 28'd131072;
-parameter    ap_ST_fsm_state20 = 28'd262144;
-parameter    ap_ST_fsm_state21 = 28'd524288;
-parameter    ap_ST_fsm_state22 = 28'd1048576;
-parameter    ap_ST_fsm_state23 = 28'd2097152;
-parameter    ap_ST_fsm_state24 = 28'd4194304;
-parameter    ap_ST_fsm_state25 = 28'd8388608;
-parameter    ap_ST_fsm_state26 = 28'd16777216;
-parameter    ap_ST_fsm_state27 = 28'd33554432;
-parameter    ap_ST_fsm_state28 = 28'd67108864;
-parameter    ap_ST_fsm_state29 = 28'd134217728;
+parameter    ap_ST_fsm_state1 = 120'd1;
+parameter    ap_ST_fsm_pp0_stage0 = 120'd2;
+parameter    ap_ST_fsm_state4 = 120'd4;
+parameter    ap_ST_fsm_state5 = 120'd8;
+parameter    ap_ST_fsm_state6 = 120'd16;
+parameter    ap_ST_fsm_state7 = 120'd32;
+parameter    ap_ST_fsm_state8 = 120'd64;
+parameter    ap_ST_fsm_state9 = 120'd128;
+parameter    ap_ST_fsm_state10 = 120'd256;
+parameter    ap_ST_fsm_state11 = 120'd512;
+parameter    ap_ST_fsm_state12 = 120'd1024;
+parameter    ap_ST_fsm_state13 = 120'd2048;
+parameter    ap_ST_fsm_state14 = 120'd4096;
+parameter    ap_ST_fsm_state15 = 120'd8192;
+parameter    ap_ST_fsm_state16 = 120'd16384;
+parameter    ap_ST_fsm_state17 = 120'd32768;
+parameter    ap_ST_fsm_state18 = 120'd65536;
+parameter    ap_ST_fsm_state19 = 120'd131072;
+parameter    ap_ST_fsm_state20 = 120'd262144;
+parameter    ap_ST_fsm_state21 = 120'd524288;
+parameter    ap_ST_fsm_state22 = 120'd1048576;
+parameter    ap_ST_fsm_state23 = 120'd2097152;
+parameter    ap_ST_fsm_state24 = 120'd4194304;
+parameter    ap_ST_fsm_state25 = 120'd8388608;
+parameter    ap_ST_fsm_state26 = 120'd16777216;
+parameter    ap_ST_fsm_state27 = 120'd33554432;
+parameter    ap_ST_fsm_state28 = 120'd67108864;
+parameter    ap_ST_fsm_state29 = 120'd134217728;
+parameter    ap_ST_fsm_state30 = 120'd268435456;
+parameter    ap_ST_fsm_state31 = 120'd536870912;
+parameter    ap_ST_fsm_state32 = 120'd1073741824;
+parameter    ap_ST_fsm_state33 = 120'd2147483648;
+parameter    ap_ST_fsm_state34 = 120'd4294967296;
+parameter    ap_ST_fsm_state35 = 120'd8589934592;
+parameter    ap_ST_fsm_state36 = 120'd17179869184;
+parameter    ap_ST_fsm_state37 = 120'd34359738368;
+parameter    ap_ST_fsm_state38 = 120'd68719476736;
+parameter    ap_ST_fsm_state39 = 120'd137438953472;
+parameter    ap_ST_fsm_state40 = 120'd274877906944;
+parameter    ap_ST_fsm_state41 = 120'd549755813888;
+parameter    ap_ST_fsm_state42 = 120'd1099511627776;
+parameter    ap_ST_fsm_state43 = 120'd2199023255552;
+parameter    ap_ST_fsm_state44 = 120'd4398046511104;
+parameter    ap_ST_fsm_state45 = 120'd8796093022208;
+parameter    ap_ST_fsm_state46 = 120'd17592186044416;
+parameter    ap_ST_fsm_state47 = 120'd35184372088832;
+parameter    ap_ST_fsm_state48 = 120'd70368744177664;
+parameter    ap_ST_fsm_state49 = 120'd140737488355328;
+parameter    ap_ST_fsm_state50 = 120'd281474976710656;
+parameter    ap_ST_fsm_state51 = 120'd562949953421312;
+parameter    ap_ST_fsm_state52 = 120'd1125899906842624;
+parameter    ap_ST_fsm_state53 = 120'd2251799813685248;
+parameter    ap_ST_fsm_state54 = 120'd4503599627370496;
+parameter    ap_ST_fsm_state55 = 120'd9007199254740992;
+parameter    ap_ST_fsm_state56 = 120'd18014398509481984;
+parameter    ap_ST_fsm_state57 = 120'd36028797018963968;
+parameter    ap_ST_fsm_state58 = 120'd72057594037927936;
+parameter    ap_ST_fsm_state59 = 120'd144115188075855872;
+parameter    ap_ST_fsm_state60 = 120'd288230376151711744;
+parameter    ap_ST_fsm_state61 = 120'd576460752303423488;
+parameter    ap_ST_fsm_state62 = 120'd1152921504606846976;
+parameter    ap_ST_fsm_state63 = 120'd2305843009213693952;
+parameter    ap_ST_fsm_state64 = 120'd4611686018427387904;
+parameter    ap_ST_fsm_state65 = 120'd9223372036854775808;
+parameter    ap_ST_fsm_state66 = 120'd18446744073709551616;
+parameter    ap_ST_fsm_state67 = 120'd36893488147419103232;
+parameter    ap_ST_fsm_state68 = 120'd73786976294838206464;
+parameter    ap_ST_fsm_state69 = 120'd147573952589676412928;
+parameter    ap_ST_fsm_state70 = 120'd295147905179352825856;
+parameter    ap_ST_fsm_state71 = 120'd590295810358705651712;
+parameter    ap_ST_fsm_state72 = 120'd1180591620717411303424;
+parameter    ap_ST_fsm_state73 = 120'd2361183241434822606848;
+parameter    ap_ST_fsm_state74 = 120'd4722366482869645213696;
+parameter    ap_ST_fsm_state75 = 120'd9444732965739290427392;
+parameter    ap_ST_fsm_state76 = 120'd18889465931478580854784;
+parameter    ap_ST_fsm_state77 = 120'd37778931862957161709568;
+parameter    ap_ST_fsm_state78 = 120'd75557863725914323419136;
+parameter    ap_ST_fsm_state79 = 120'd151115727451828646838272;
+parameter    ap_ST_fsm_state80 = 120'd302231454903657293676544;
+parameter    ap_ST_fsm_state81 = 120'd604462909807314587353088;
+parameter    ap_ST_fsm_state82 = 120'd1208925819614629174706176;
+parameter    ap_ST_fsm_state83 = 120'd2417851639229258349412352;
+parameter    ap_ST_fsm_state84 = 120'd4835703278458516698824704;
+parameter    ap_ST_fsm_state85 = 120'd9671406556917033397649408;
+parameter    ap_ST_fsm_state86 = 120'd19342813113834066795298816;
+parameter    ap_ST_fsm_state87 = 120'd38685626227668133590597632;
+parameter    ap_ST_fsm_state88 = 120'd77371252455336267181195264;
+parameter    ap_ST_fsm_state89 = 120'd154742504910672534362390528;
+parameter    ap_ST_fsm_state90 = 120'd309485009821345068724781056;
+parameter    ap_ST_fsm_state91 = 120'd618970019642690137449562112;
+parameter    ap_ST_fsm_state92 = 120'd1237940039285380274899124224;
+parameter    ap_ST_fsm_state93 = 120'd2475880078570760549798248448;
+parameter    ap_ST_fsm_state94 = 120'd4951760157141521099596496896;
+parameter    ap_ST_fsm_state95 = 120'd9903520314283042199192993792;
+parameter    ap_ST_fsm_state96 = 120'd19807040628566084398385987584;
+parameter    ap_ST_fsm_state97 = 120'd39614081257132168796771975168;
+parameter    ap_ST_fsm_state98 = 120'd79228162514264337593543950336;
+parameter    ap_ST_fsm_state99 = 120'd158456325028528675187087900672;
+parameter    ap_ST_fsm_state100 = 120'd316912650057057350374175801344;
+parameter    ap_ST_fsm_state101 = 120'd633825300114114700748351602688;
+parameter    ap_ST_fsm_state102 = 120'd1267650600228229401496703205376;
+parameter    ap_ST_fsm_state103 = 120'd2535301200456458802993406410752;
+parameter    ap_ST_fsm_state104 = 120'd5070602400912917605986812821504;
+parameter    ap_ST_fsm_state105 = 120'd10141204801825835211973625643008;
+parameter    ap_ST_fsm_state106 = 120'd20282409603651670423947251286016;
+parameter    ap_ST_fsm_state107 = 120'd40564819207303340847894502572032;
+parameter    ap_ST_fsm_state108 = 120'd81129638414606681695789005144064;
+parameter    ap_ST_fsm_state109 = 120'd162259276829213363391578010288128;
+parameter    ap_ST_fsm_state110 = 120'd324518553658426726783156020576256;
+parameter    ap_ST_fsm_state111 = 120'd649037107316853453566312041152512;
+parameter    ap_ST_fsm_state112 = 120'd1298074214633706907132624082305024;
+parameter    ap_ST_fsm_state113 = 120'd2596148429267413814265248164610048;
+parameter    ap_ST_fsm_state114 = 120'd5192296858534827628530496329220096;
+parameter    ap_ST_fsm_state115 = 120'd10384593717069655257060992658440192;
+parameter    ap_ST_fsm_state116 = 120'd20769187434139310514121985316880384;
+parameter    ap_ST_fsm_state117 = 120'd41538374868278621028243970633760768;
+parameter    ap_ST_fsm_state118 = 120'd83076749736557242056487941267521536;
+parameter    ap_ST_fsm_state119 = 120'd166153499473114484112975882535043072;
+parameter    ap_ST_fsm_state120 = 120'd332306998946228968225951765070086144;
+parameter    ap_ST_fsm_state121 = 120'd664613997892457936451903530140172288;
 
 input   ap_clk;
 input   ap_rst;
@@ -897,779 +325,115 @@ input  [31:0] buffer_in_10_q0;
 output  [2:0] buffer_in_11_address0;
 output   buffer_in_11_ce0;
 input  [31:0] buffer_in_11_q0;
-input  [5:0] sliding_window_front_ptr_s_i;
-output  [5:0] sliding_window_front_ptr_s_o;
+input  [4:0] sliding_window_front_ptr_s_i;
+output  [4:0] sliding_window_front_ptr_s_o;
 output   sliding_window_front_ptr_s_o_ap_vld;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_0_address0;
-output   sliding_window_buffer_samples_sample_V_0_0_ce0;
-output   sliding_window_buffer_samples_sample_V_0_0_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_0_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_1_address0;
-output   sliding_window_buffer_samples_sample_V_0_1_ce0;
-output   sliding_window_buffer_samples_sample_V_0_1_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_1_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_2_address0;
-output   sliding_window_buffer_samples_sample_V_0_2_ce0;
-output   sliding_window_buffer_samples_sample_V_0_2_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_2_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_3_address0;
-output   sliding_window_buffer_samples_sample_V_0_3_ce0;
-output   sliding_window_buffer_samples_sample_V_0_3_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_3_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_4_address0;
-output   sliding_window_buffer_samples_sample_V_0_4_ce0;
-output   sliding_window_buffer_samples_sample_V_0_4_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_4_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_5_address0;
-output   sliding_window_buffer_samples_sample_V_0_5_ce0;
-output   sliding_window_buffer_samples_sample_V_0_5_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_5_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_6_address0;
-output   sliding_window_buffer_samples_sample_V_0_6_ce0;
-output   sliding_window_buffer_samples_sample_V_0_6_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_6_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_7_address0;
-output   sliding_window_buffer_samples_sample_V_0_7_ce0;
-output   sliding_window_buffer_samples_sample_V_0_7_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_7_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_8_address0;
-output   sliding_window_buffer_samples_sample_V_0_8_ce0;
-output   sliding_window_buffer_samples_sample_V_0_8_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_8_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_9_address0;
-output   sliding_window_buffer_samples_sample_V_0_9_ce0;
-output   sliding_window_buffer_samples_sample_V_0_9_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_9_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_10_address0;
-output   sliding_window_buffer_samples_sample_V_0_10_ce0;
-output   sliding_window_buffer_samples_sample_V_0_10_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_10_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_0_11_address0;
-output   sliding_window_buffer_samples_sample_V_0_11_ce0;
-output   sliding_window_buffer_samples_sample_V_0_11_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_0_11_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_0_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_0_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_0_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_0_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_1_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_1_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_1_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_1_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_2_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_2_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_2_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_2_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_3_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_3_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_3_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_3_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_4_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_4_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_4_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_4_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_5_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_5_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_5_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_5_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_6_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_6_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_6_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_6_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_7_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_7_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_7_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_7_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_8_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_8_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_8_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_8_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_9_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_9_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_9_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_9_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_10_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_10_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_10_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_10_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_0_11_address0;
-output   sliding_window_buffer_samples_timestamp_V_0_11_ce0;
-output   sliding_window_buffer_samples_timestamp_V_0_11_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_0_11_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_0_address0;
-output   sliding_window_buffer_samples_sample_V_1_0_ce0;
-output   sliding_window_buffer_samples_sample_V_1_0_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_0_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_1_address0;
-output   sliding_window_buffer_samples_sample_V_1_1_ce0;
-output   sliding_window_buffer_samples_sample_V_1_1_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_1_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_2_address0;
-output   sliding_window_buffer_samples_sample_V_1_2_ce0;
-output   sliding_window_buffer_samples_sample_V_1_2_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_2_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_3_address0;
-output   sliding_window_buffer_samples_sample_V_1_3_ce0;
-output   sliding_window_buffer_samples_sample_V_1_3_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_3_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_4_address0;
-output   sliding_window_buffer_samples_sample_V_1_4_ce0;
-output   sliding_window_buffer_samples_sample_V_1_4_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_4_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_5_address0;
-output   sliding_window_buffer_samples_sample_V_1_5_ce0;
-output   sliding_window_buffer_samples_sample_V_1_5_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_5_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_6_address0;
-output   sliding_window_buffer_samples_sample_V_1_6_ce0;
-output   sliding_window_buffer_samples_sample_V_1_6_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_6_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_7_address0;
-output   sliding_window_buffer_samples_sample_V_1_7_ce0;
-output   sliding_window_buffer_samples_sample_V_1_7_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_7_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_8_address0;
-output   sliding_window_buffer_samples_sample_V_1_8_ce0;
-output   sliding_window_buffer_samples_sample_V_1_8_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_8_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_9_address0;
-output   sliding_window_buffer_samples_sample_V_1_9_ce0;
-output   sliding_window_buffer_samples_sample_V_1_9_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_9_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_10_address0;
-output   sliding_window_buffer_samples_sample_V_1_10_ce0;
-output   sliding_window_buffer_samples_sample_V_1_10_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_10_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_1_11_address0;
-output   sliding_window_buffer_samples_sample_V_1_11_ce0;
-output   sliding_window_buffer_samples_sample_V_1_11_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_1_11_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_0_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_0_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_0_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_0_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_1_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_1_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_1_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_1_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_2_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_2_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_2_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_2_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_3_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_3_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_3_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_3_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_4_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_4_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_4_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_4_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_5_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_5_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_5_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_5_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_6_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_6_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_6_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_6_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_7_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_7_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_7_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_7_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_8_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_8_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_8_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_8_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_9_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_9_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_9_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_9_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_10_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_10_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_10_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_10_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_1_11_address0;
-output   sliding_window_buffer_samples_timestamp_V_1_11_ce0;
-output   sliding_window_buffer_samples_timestamp_V_1_11_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_1_11_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_0_address0;
-output   sliding_window_buffer_samples_sample_V_2_0_ce0;
-output   sliding_window_buffer_samples_sample_V_2_0_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_0_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_1_address0;
-output   sliding_window_buffer_samples_sample_V_2_1_ce0;
-output   sliding_window_buffer_samples_sample_V_2_1_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_1_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_2_address0;
-output   sliding_window_buffer_samples_sample_V_2_2_ce0;
-output   sliding_window_buffer_samples_sample_V_2_2_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_2_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_3_address0;
-output   sliding_window_buffer_samples_sample_V_2_3_ce0;
-output   sliding_window_buffer_samples_sample_V_2_3_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_3_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_4_address0;
-output   sliding_window_buffer_samples_sample_V_2_4_ce0;
-output   sliding_window_buffer_samples_sample_V_2_4_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_4_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_5_address0;
-output   sliding_window_buffer_samples_sample_V_2_5_ce0;
-output   sliding_window_buffer_samples_sample_V_2_5_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_5_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_6_address0;
-output   sliding_window_buffer_samples_sample_V_2_6_ce0;
-output   sliding_window_buffer_samples_sample_V_2_6_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_6_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_7_address0;
-output   sliding_window_buffer_samples_sample_V_2_7_ce0;
-output   sliding_window_buffer_samples_sample_V_2_7_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_7_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_8_address0;
-output   sliding_window_buffer_samples_sample_V_2_8_ce0;
-output   sliding_window_buffer_samples_sample_V_2_8_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_8_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_9_address0;
-output   sliding_window_buffer_samples_sample_V_2_9_ce0;
-output   sliding_window_buffer_samples_sample_V_2_9_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_9_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_10_address0;
-output   sliding_window_buffer_samples_sample_V_2_10_ce0;
-output   sliding_window_buffer_samples_sample_V_2_10_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_10_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_2_11_address0;
-output   sliding_window_buffer_samples_sample_V_2_11_ce0;
-output   sliding_window_buffer_samples_sample_V_2_11_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_2_11_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_0_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_0_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_0_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_0_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_1_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_1_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_1_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_1_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_2_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_2_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_2_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_2_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_3_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_3_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_3_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_3_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_4_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_4_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_4_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_4_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_5_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_5_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_5_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_5_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_6_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_6_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_6_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_6_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_7_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_7_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_7_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_7_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_8_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_8_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_8_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_8_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_9_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_9_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_9_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_9_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_10_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_10_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_10_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_10_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_2_11_address0;
-output   sliding_window_buffer_samples_timestamp_V_2_11_ce0;
-output   sliding_window_buffer_samples_timestamp_V_2_11_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_2_11_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_0_address0;
-output   sliding_window_buffer_samples_sample_V_3_0_ce0;
-output   sliding_window_buffer_samples_sample_V_3_0_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_0_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_1_address0;
-output   sliding_window_buffer_samples_sample_V_3_1_ce0;
-output   sliding_window_buffer_samples_sample_V_3_1_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_1_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_2_address0;
-output   sliding_window_buffer_samples_sample_V_3_2_ce0;
-output   sliding_window_buffer_samples_sample_V_3_2_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_2_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_3_address0;
-output   sliding_window_buffer_samples_sample_V_3_3_ce0;
-output   sliding_window_buffer_samples_sample_V_3_3_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_3_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_4_address0;
-output   sliding_window_buffer_samples_sample_V_3_4_ce0;
-output   sliding_window_buffer_samples_sample_V_3_4_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_4_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_5_address0;
-output   sliding_window_buffer_samples_sample_V_3_5_ce0;
-output   sliding_window_buffer_samples_sample_V_3_5_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_5_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_6_address0;
-output   sliding_window_buffer_samples_sample_V_3_6_ce0;
-output   sliding_window_buffer_samples_sample_V_3_6_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_6_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_7_address0;
-output   sliding_window_buffer_samples_sample_V_3_7_ce0;
-output   sliding_window_buffer_samples_sample_V_3_7_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_7_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_8_address0;
-output   sliding_window_buffer_samples_sample_V_3_8_ce0;
-output   sliding_window_buffer_samples_sample_V_3_8_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_8_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_9_address0;
-output   sliding_window_buffer_samples_sample_V_3_9_ce0;
-output   sliding_window_buffer_samples_sample_V_3_9_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_9_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_10_address0;
-output   sliding_window_buffer_samples_sample_V_3_10_ce0;
-output   sliding_window_buffer_samples_sample_V_3_10_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_10_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_3_11_address0;
-output   sliding_window_buffer_samples_sample_V_3_11_ce0;
-output   sliding_window_buffer_samples_sample_V_3_11_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_3_11_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_0_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_0_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_0_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_0_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_1_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_1_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_1_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_1_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_2_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_2_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_2_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_2_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_3_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_3_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_3_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_3_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_4_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_4_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_4_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_4_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_5_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_5_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_5_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_5_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_6_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_6_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_6_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_6_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_7_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_7_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_7_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_7_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_8_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_8_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_8_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_8_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_9_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_9_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_9_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_9_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_10_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_10_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_10_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_10_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_3_11_address0;
-output   sliding_window_buffer_samples_timestamp_V_3_11_ce0;
-output   sliding_window_buffer_samples_timestamp_V_3_11_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_3_11_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_0_address0;
-output   sliding_window_buffer_samples_sample_V_4_0_ce0;
-output   sliding_window_buffer_samples_sample_V_4_0_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_0_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_1_address0;
-output   sliding_window_buffer_samples_sample_V_4_1_ce0;
-output   sliding_window_buffer_samples_sample_V_4_1_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_1_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_2_address0;
-output   sliding_window_buffer_samples_sample_V_4_2_ce0;
-output   sliding_window_buffer_samples_sample_V_4_2_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_2_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_3_address0;
-output   sliding_window_buffer_samples_sample_V_4_3_ce0;
-output   sliding_window_buffer_samples_sample_V_4_3_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_3_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_4_address0;
-output   sliding_window_buffer_samples_sample_V_4_4_ce0;
-output   sliding_window_buffer_samples_sample_V_4_4_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_4_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_5_address0;
-output   sliding_window_buffer_samples_sample_V_4_5_ce0;
-output   sliding_window_buffer_samples_sample_V_4_5_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_5_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_6_address0;
-output   sliding_window_buffer_samples_sample_V_4_6_ce0;
-output   sliding_window_buffer_samples_sample_V_4_6_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_6_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_7_address0;
-output   sliding_window_buffer_samples_sample_V_4_7_ce0;
-output   sliding_window_buffer_samples_sample_V_4_7_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_7_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_8_address0;
-output   sliding_window_buffer_samples_sample_V_4_8_ce0;
-output   sliding_window_buffer_samples_sample_V_4_8_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_8_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_9_address0;
-output   sliding_window_buffer_samples_sample_V_4_9_ce0;
-output   sliding_window_buffer_samples_sample_V_4_9_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_9_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_10_address0;
-output   sliding_window_buffer_samples_sample_V_4_10_ce0;
-output   sliding_window_buffer_samples_sample_V_4_10_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_10_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_4_11_address0;
-output   sliding_window_buffer_samples_sample_V_4_11_ce0;
-output   sliding_window_buffer_samples_sample_V_4_11_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_4_11_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_0_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_0_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_0_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_0_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_1_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_1_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_1_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_1_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_2_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_2_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_2_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_2_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_3_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_3_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_3_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_3_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_4_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_4_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_4_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_4_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_5_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_5_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_5_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_5_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_6_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_6_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_6_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_6_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_7_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_7_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_7_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_7_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_8_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_8_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_8_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_8_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_9_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_9_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_9_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_9_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_10_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_10_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_10_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_10_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_4_11_address0;
-output   sliding_window_buffer_samples_timestamp_V_4_11_ce0;
-output   sliding_window_buffer_samples_timestamp_V_4_11_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_4_11_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_0_address0;
-output   sliding_window_buffer_samples_sample_V_5_0_ce0;
-output   sliding_window_buffer_samples_sample_V_5_0_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_0_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_1_address0;
-output   sliding_window_buffer_samples_sample_V_5_1_ce0;
-output   sliding_window_buffer_samples_sample_V_5_1_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_1_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_2_address0;
-output   sliding_window_buffer_samples_sample_V_5_2_ce0;
-output   sliding_window_buffer_samples_sample_V_5_2_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_2_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_3_address0;
-output   sliding_window_buffer_samples_sample_V_5_3_ce0;
-output   sliding_window_buffer_samples_sample_V_5_3_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_3_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_4_address0;
-output   sliding_window_buffer_samples_sample_V_5_4_ce0;
-output   sliding_window_buffer_samples_sample_V_5_4_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_4_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_5_address0;
-output   sliding_window_buffer_samples_sample_V_5_5_ce0;
-output   sliding_window_buffer_samples_sample_V_5_5_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_5_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_6_address0;
-output   sliding_window_buffer_samples_sample_V_5_6_ce0;
-output   sliding_window_buffer_samples_sample_V_5_6_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_6_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_7_address0;
-output   sliding_window_buffer_samples_sample_V_5_7_ce0;
-output   sliding_window_buffer_samples_sample_V_5_7_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_7_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_8_address0;
-output   sliding_window_buffer_samples_sample_V_5_8_ce0;
-output   sliding_window_buffer_samples_sample_V_5_8_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_8_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_9_address0;
-output   sliding_window_buffer_samples_sample_V_5_9_ce0;
-output   sliding_window_buffer_samples_sample_V_5_9_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_9_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_10_address0;
-output   sliding_window_buffer_samples_sample_V_5_10_ce0;
-output   sliding_window_buffer_samples_sample_V_5_10_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_10_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_5_11_address0;
-output   sliding_window_buffer_samples_sample_V_5_11_ce0;
-output   sliding_window_buffer_samples_sample_V_5_11_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_5_11_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_0_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_0_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_0_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_0_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_1_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_1_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_1_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_1_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_2_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_2_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_2_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_2_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_3_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_3_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_3_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_3_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_4_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_4_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_4_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_4_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_5_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_5_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_5_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_5_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_6_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_6_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_6_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_6_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_7_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_7_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_7_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_7_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_8_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_8_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_8_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_8_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_9_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_9_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_9_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_9_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_10_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_10_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_10_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_10_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_5_11_address0;
-output   sliding_window_buffer_samples_timestamp_V_5_11_ce0;
-output   sliding_window_buffer_samples_timestamp_V_5_11_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_5_11_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_0_address0;
-output   sliding_window_buffer_samples_sample_V_6_0_ce0;
-output   sliding_window_buffer_samples_sample_V_6_0_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_0_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_1_address0;
-output   sliding_window_buffer_samples_sample_V_6_1_ce0;
-output   sliding_window_buffer_samples_sample_V_6_1_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_1_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_2_address0;
-output   sliding_window_buffer_samples_sample_V_6_2_ce0;
-output   sliding_window_buffer_samples_sample_V_6_2_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_2_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_3_address0;
-output   sliding_window_buffer_samples_sample_V_6_3_ce0;
-output   sliding_window_buffer_samples_sample_V_6_3_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_3_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_4_address0;
-output   sliding_window_buffer_samples_sample_V_6_4_ce0;
-output   sliding_window_buffer_samples_sample_V_6_4_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_4_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_5_address0;
-output   sliding_window_buffer_samples_sample_V_6_5_ce0;
-output   sliding_window_buffer_samples_sample_V_6_5_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_5_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_6_address0;
-output   sliding_window_buffer_samples_sample_V_6_6_ce0;
-output   sliding_window_buffer_samples_sample_V_6_6_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_6_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_7_address0;
-output   sliding_window_buffer_samples_sample_V_6_7_ce0;
-output   sliding_window_buffer_samples_sample_V_6_7_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_7_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_8_address0;
-output   sliding_window_buffer_samples_sample_V_6_8_ce0;
-output   sliding_window_buffer_samples_sample_V_6_8_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_8_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_9_address0;
-output   sliding_window_buffer_samples_sample_V_6_9_ce0;
-output   sliding_window_buffer_samples_sample_V_6_9_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_9_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_10_address0;
-output   sliding_window_buffer_samples_sample_V_6_10_ce0;
-output   sliding_window_buffer_samples_sample_V_6_10_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_10_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_6_11_address0;
-output   sliding_window_buffer_samples_sample_V_6_11_ce0;
-output   sliding_window_buffer_samples_sample_V_6_11_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_6_11_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_0_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_0_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_0_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_0_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_1_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_1_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_1_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_1_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_2_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_2_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_2_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_2_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_3_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_3_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_3_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_3_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_4_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_4_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_4_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_4_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_5_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_5_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_5_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_5_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_6_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_6_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_6_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_6_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_7_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_7_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_7_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_7_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_8_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_8_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_8_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_8_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_9_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_9_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_9_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_9_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_10_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_10_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_10_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_10_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_6_11_address0;
-output   sliding_window_buffer_samples_timestamp_V_6_11_ce0;
-output   sliding_window_buffer_samples_timestamp_V_6_11_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_6_11_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_0_address0;
-output   sliding_window_buffer_samples_sample_V_7_0_ce0;
-output   sliding_window_buffer_samples_sample_V_7_0_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_0_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_1_address0;
-output   sliding_window_buffer_samples_sample_V_7_1_ce0;
-output   sliding_window_buffer_samples_sample_V_7_1_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_1_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_2_address0;
-output   sliding_window_buffer_samples_sample_V_7_2_ce0;
-output   sliding_window_buffer_samples_sample_V_7_2_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_2_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_3_address0;
-output   sliding_window_buffer_samples_sample_V_7_3_ce0;
-output   sliding_window_buffer_samples_sample_V_7_3_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_3_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_4_address0;
-output   sliding_window_buffer_samples_sample_V_7_4_ce0;
-output   sliding_window_buffer_samples_sample_V_7_4_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_4_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_5_address0;
-output   sliding_window_buffer_samples_sample_V_7_5_ce0;
-output   sliding_window_buffer_samples_sample_V_7_5_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_5_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_6_address0;
-output   sliding_window_buffer_samples_sample_V_7_6_ce0;
-output   sliding_window_buffer_samples_sample_V_7_6_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_6_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_7_address0;
-output   sliding_window_buffer_samples_sample_V_7_7_ce0;
-output   sliding_window_buffer_samples_sample_V_7_7_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_7_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_8_address0;
-output   sliding_window_buffer_samples_sample_V_7_8_ce0;
-output   sliding_window_buffer_samples_sample_V_7_8_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_8_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_9_address0;
-output   sliding_window_buffer_samples_sample_V_7_9_ce0;
-output   sliding_window_buffer_samples_sample_V_7_9_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_9_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_10_address0;
-output   sliding_window_buffer_samples_sample_V_7_10_ce0;
-output   sliding_window_buffer_samples_sample_V_7_10_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_10_d0;
-output  [4:0] sliding_window_buffer_samples_sample_V_7_11_address0;
-output   sliding_window_buffer_samples_sample_V_7_11_ce0;
-output   sliding_window_buffer_samples_sample_V_7_11_we0;
-output  [11:0] sliding_window_buffer_samples_sample_V_7_11_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_0_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_0_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_0_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_0_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_1_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_1_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_1_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_1_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_2_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_2_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_2_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_2_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_3_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_3_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_3_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_3_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_4_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_4_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_4_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_4_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_5_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_5_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_5_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_5_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_6_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_6_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_6_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_6_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_7_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_7_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_7_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_7_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_8_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_8_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_8_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_8_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_9_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_9_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_9_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_9_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_10_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_10_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_10_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_10_d0;
-output  [4:0] sliding_window_buffer_samples_timestamp_V_7_11_address0;
-output   sliding_window_buffer_samples_timestamp_V_7_11_ce0;
-output   sliding_window_buffer_samples_timestamp_V_7_11_we0;
-output  [19:0] sliding_window_buffer_samples_timestamp_V_7_11_d0;
-input  [5:0] sliding_window_back_ptr_s_i;
-output  [5:0] sliding_window_back_ptr_s_o;
+output  [9:0] sliding_window_buffer_samples_sample_V_address0;
+output   sliding_window_buffer_samples_sample_V_ce0;
+output   sliding_window_buffer_samples_sample_V_we0;
+output  [11:0] sliding_window_buffer_samples_sample_V_d0;
+output  [9:0] sliding_window_buffer_samples_sample_V_address1;
+output   sliding_window_buffer_samples_sample_V_ce1;
+output   sliding_window_buffer_samples_sample_V_we1;
+output  [11:0] sliding_window_buffer_samples_sample_V_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_0_address0;
+output   sliding_window_buffer_samples_timestamp_V_0_ce0;
+output   sliding_window_buffer_samples_timestamp_V_0_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_0_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_0_address1;
+output   sliding_window_buffer_samples_timestamp_V_0_ce1;
+output   sliding_window_buffer_samples_timestamp_V_0_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_0_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_1_address0;
+output   sliding_window_buffer_samples_timestamp_V_1_ce0;
+output   sliding_window_buffer_samples_timestamp_V_1_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_1_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_1_address1;
+output   sliding_window_buffer_samples_timestamp_V_1_ce1;
+output   sliding_window_buffer_samples_timestamp_V_1_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_1_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_2_address0;
+output   sliding_window_buffer_samples_timestamp_V_2_ce0;
+output   sliding_window_buffer_samples_timestamp_V_2_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_2_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_2_address1;
+output   sliding_window_buffer_samples_timestamp_V_2_ce1;
+output   sliding_window_buffer_samples_timestamp_V_2_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_2_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_3_address0;
+output   sliding_window_buffer_samples_timestamp_V_3_ce0;
+output   sliding_window_buffer_samples_timestamp_V_3_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_3_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_3_address1;
+output   sliding_window_buffer_samples_timestamp_V_3_ce1;
+output   sliding_window_buffer_samples_timestamp_V_3_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_3_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_4_address0;
+output   sliding_window_buffer_samples_timestamp_V_4_ce0;
+output   sliding_window_buffer_samples_timestamp_V_4_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_4_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_4_address1;
+output   sliding_window_buffer_samples_timestamp_V_4_ce1;
+output   sliding_window_buffer_samples_timestamp_V_4_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_4_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_5_address0;
+output   sliding_window_buffer_samples_timestamp_V_5_ce0;
+output   sliding_window_buffer_samples_timestamp_V_5_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_5_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_5_address1;
+output   sliding_window_buffer_samples_timestamp_V_5_ce1;
+output   sliding_window_buffer_samples_timestamp_V_5_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_5_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_6_address0;
+output   sliding_window_buffer_samples_timestamp_V_6_ce0;
+output   sliding_window_buffer_samples_timestamp_V_6_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_6_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_6_address1;
+output   sliding_window_buffer_samples_timestamp_V_6_ce1;
+output   sliding_window_buffer_samples_timestamp_V_6_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_6_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_7_address0;
+output   sliding_window_buffer_samples_timestamp_V_7_ce0;
+output   sliding_window_buffer_samples_timestamp_V_7_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_7_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_7_address1;
+output   sliding_window_buffer_samples_timestamp_V_7_ce1;
+output   sliding_window_buffer_samples_timestamp_V_7_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_7_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_8_address0;
+output   sliding_window_buffer_samples_timestamp_V_8_ce0;
+output   sliding_window_buffer_samples_timestamp_V_8_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_8_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_8_address1;
+output   sliding_window_buffer_samples_timestamp_V_8_ce1;
+output   sliding_window_buffer_samples_timestamp_V_8_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_8_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_9_address0;
+output   sliding_window_buffer_samples_timestamp_V_9_ce0;
+output   sliding_window_buffer_samples_timestamp_V_9_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_9_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_9_address1;
+output   sliding_window_buffer_samples_timestamp_V_9_ce1;
+output   sliding_window_buffer_samples_timestamp_V_9_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_9_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_10_address0;
+output   sliding_window_buffer_samples_timestamp_V_10_ce0;
+output   sliding_window_buffer_samples_timestamp_V_10_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_10_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_10_address1;
+output   sliding_window_buffer_samples_timestamp_V_10_ce1;
+output   sliding_window_buffer_samples_timestamp_V_10_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_10_d1;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_11_address0;
+output   sliding_window_buffer_samples_timestamp_V_11_ce0;
+output   sliding_window_buffer_samples_timestamp_V_11_we0;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_11_d0;
+output  [6:0] sliding_window_buffer_samples_timestamp_V_11_address1;
+output   sliding_window_buffer_samples_timestamp_V_11_ce1;
+output   sliding_window_buffer_samples_timestamp_V_11_we1;
+output  [19:0] sliding_window_buffer_samples_timestamp_V_11_d1;
+input  [4:0] sliding_window_back_ptr_s_i;
+output  [4:0] sliding_window_back_ptr_s_o;
 output   sliding_window_back_ptr_s_o_ap_vld;
 
 reg ap_done;
@@ -1687,908 +451,433 @@ reg buffer_in_8_ce0;
 reg buffer_in_9_ce0;
 reg buffer_in_10_ce0;
 reg buffer_in_11_ce0;
-reg[5:0] sliding_window_front_ptr_s_o;
+reg[4:0] sliding_window_front_ptr_s_o;
 reg sliding_window_front_ptr_s_o_ap_vld;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_0_address0;
-reg sliding_window_buffer_samples_sample_V_0_0_ce0;
-reg sliding_window_buffer_samples_sample_V_0_0_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_1_address0;
-reg sliding_window_buffer_samples_sample_V_0_1_ce0;
-reg sliding_window_buffer_samples_sample_V_0_1_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_2_address0;
-reg sliding_window_buffer_samples_sample_V_0_2_ce0;
-reg sliding_window_buffer_samples_sample_V_0_2_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_3_address0;
-reg sliding_window_buffer_samples_sample_V_0_3_ce0;
-reg sliding_window_buffer_samples_sample_V_0_3_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_4_address0;
-reg sliding_window_buffer_samples_sample_V_0_4_ce0;
-reg sliding_window_buffer_samples_sample_V_0_4_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_5_address0;
-reg sliding_window_buffer_samples_sample_V_0_5_ce0;
-reg sliding_window_buffer_samples_sample_V_0_5_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_6_address0;
-reg sliding_window_buffer_samples_sample_V_0_6_ce0;
-reg sliding_window_buffer_samples_sample_V_0_6_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_7_address0;
-reg sliding_window_buffer_samples_sample_V_0_7_ce0;
-reg sliding_window_buffer_samples_sample_V_0_7_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_8_address0;
-reg sliding_window_buffer_samples_sample_V_0_8_ce0;
-reg sliding_window_buffer_samples_sample_V_0_8_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_9_address0;
-reg sliding_window_buffer_samples_sample_V_0_9_ce0;
-reg sliding_window_buffer_samples_sample_V_0_9_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_10_address0;
-reg sliding_window_buffer_samples_sample_V_0_10_ce0;
-reg sliding_window_buffer_samples_sample_V_0_10_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_0_11_address0;
-reg sliding_window_buffer_samples_sample_V_0_11_ce0;
-reg sliding_window_buffer_samples_sample_V_0_11_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_0_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_0_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_0_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_1_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_1_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_1_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_2_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_2_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_2_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_3_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_3_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_3_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_4_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_4_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_4_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_5_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_5_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_5_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_6_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_6_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_6_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_7_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_7_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_7_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_8_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_8_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_8_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_9_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_9_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_9_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_10_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_10_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_10_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_0_11_address0;
-reg sliding_window_buffer_samples_timestamp_V_0_11_ce0;
-reg sliding_window_buffer_samples_timestamp_V_0_11_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_0_address0;
-reg sliding_window_buffer_samples_sample_V_1_0_ce0;
-reg sliding_window_buffer_samples_sample_V_1_0_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_1_address0;
-reg sliding_window_buffer_samples_sample_V_1_1_ce0;
-reg sliding_window_buffer_samples_sample_V_1_1_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_2_address0;
-reg sliding_window_buffer_samples_sample_V_1_2_ce0;
-reg sliding_window_buffer_samples_sample_V_1_2_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_3_address0;
-reg sliding_window_buffer_samples_sample_V_1_3_ce0;
-reg sliding_window_buffer_samples_sample_V_1_3_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_4_address0;
-reg sliding_window_buffer_samples_sample_V_1_4_ce0;
-reg sliding_window_buffer_samples_sample_V_1_4_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_5_address0;
-reg sliding_window_buffer_samples_sample_V_1_5_ce0;
-reg sliding_window_buffer_samples_sample_V_1_5_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_6_address0;
-reg sliding_window_buffer_samples_sample_V_1_6_ce0;
-reg sliding_window_buffer_samples_sample_V_1_6_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_7_address0;
-reg sliding_window_buffer_samples_sample_V_1_7_ce0;
-reg sliding_window_buffer_samples_sample_V_1_7_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_8_address0;
-reg sliding_window_buffer_samples_sample_V_1_8_ce0;
-reg sliding_window_buffer_samples_sample_V_1_8_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_9_address0;
-reg sliding_window_buffer_samples_sample_V_1_9_ce0;
-reg sliding_window_buffer_samples_sample_V_1_9_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_10_address0;
-reg sliding_window_buffer_samples_sample_V_1_10_ce0;
-reg sliding_window_buffer_samples_sample_V_1_10_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_1_11_address0;
-reg sliding_window_buffer_samples_sample_V_1_11_ce0;
-reg sliding_window_buffer_samples_sample_V_1_11_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_0_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_0_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_0_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_1_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_1_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_1_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_2_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_2_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_2_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_3_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_3_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_3_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_4_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_4_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_4_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_5_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_5_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_5_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_6_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_6_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_6_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_7_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_7_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_7_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_8_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_8_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_8_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_9_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_9_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_9_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_10_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_10_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_10_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_1_11_address0;
-reg sliding_window_buffer_samples_timestamp_V_1_11_ce0;
-reg sliding_window_buffer_samples_timestamp_V_1_11_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_0_address0;
-reg sliding_window_buffer_samples_sample_V_2_0_ce0;
-reg sliding_window_buffer_samples_sample_V_2_0_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_1_address0;
-reg sliding_window_buffer_samples_sample_V_2_1_ce0;
-reg sliding_window_buffer_samples_sample_V_2_1_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_2_address0;
-reg sliding_window_buffer_samples_sample_V_2_2_ce0;
-reg sliding_window_buffer_samples_sample_V_2_2_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_3_address0;
-reg sliding_window_buffer_samples_sample_V_2_3_ce0;
-reg sliding_window_buffer_samples_sample_V_2_3_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_4_address0;
-reg sliding_window_buffer_samples_sample_V_2_4_ce0;
-reg sliding_window_buffer_samples_sample_V_2_4_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_5_address0;
-reg sliding_window_buffer_samples_sample_V_2_5_ce0;
-reg sliding_window_buffer_samples_sample_V_2_5_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_6_address0;
-reg sliding_window_buffer_samples_sample_V_2_6_ce0;
-reg sliding_window_buffer_samples_sample_V_2_6_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_7_address0;
-reg sliding_window_buffer_samples_sample_V_2_7_ce0;
-reg sliding_window_buffer_samples_sample_V_2_7_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_8_address0;
-reg sliding_window_buffer_samples_sample_V_2_8_ce0;
-reg sliding_window_buffer_samples_sample_V_2_8_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_9_address0;
-reg sliding_window_buffer_samples_sample_V_2_9_ce0;
-reg sliding_window_buffer_samples_sample_V_2_9_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_10_address0;
-reg sliding_window_buffer_samples_sample_V_2_10_ce0;
-reg sliding_window_buffer_samples_sample_V_2_10_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_2_11_address0;
-reg sliding_window_buffer_samples_sample_V_2_11_ce0;
-reg sliding_window_buffer_samples_sample_V_2_11_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_0_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_0_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_0_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_1_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_1_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_1_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_2_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_2_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_2_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_3_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_3_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_3_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_4_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_4_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_4_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_5_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_5_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_5_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_6_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_6_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_6_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_7_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_7_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_7_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_8_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_8_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_8_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_9_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_9_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_9_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_10_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_10_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_10_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_2_11_address0;
-reg sliding_window_buffer_samples_timestamp_V_2_11_ce0;
-reg sliding_window_buffer_samples_timestamp_V_2_11_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_0_address0;
-reg sliding_window_buffer_samples_sample_V_3_0_ce0;
-reg sliding_window_buffer_samples_sample_V_3_0_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_1_address0;
-reg sliding_window_buffer_samples_sample_V_3_1_ce0;
-reg sliding_window_buffer_samples_sample_V_3_1_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_2_address0;
-reg sliding_window_buffer_samples_sample_V_3_2_ce0;
-reg sliding_window_buffer_samples_sample_V_3_2_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_3_address0;
-reg sliding_window_buffer_samples_sample_V_3_3_ce0;
-reg sliding_window_buffer_samples_sample_V_3_3_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_4_address0;
-reg sliding_window_buffer_samples_sample_V_3_4_ce0;
-reg sliding_window_buffer_samples_sample_V_3_4_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_5_address0;
-reg sliding_window_buffer_samples_sample_V_3_5_ce0;
-reg sliding_window_buffer_samples_sample_V_3_5_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_6_address0;
-reg sliding_window_buffer_samples_sample_V_3_6_ce0;
-reg sliding_window_buffer_samples_sample_V_3_6_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_7_address0;
-reg sliding_window_buffer_samples_sample_V_3_7_ce0;
-reg sliding_window_buffer_samples_sample_V_3_7_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_8_address0;
-reg sliding_window_buffer_samples_sample_V_3_8_ce0;
-reg sliding_window_buffer_samples_sample_V_3_8_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_9_address0;
-reg sliding_window_buffer_samples_sample_V_3_9_ce0;
-reg sliding_window_buffer_samples_sample_V_3_9_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_10_address0;
-reg sliding_window_buffer_samples_sample_V_3_10_ce0;
-reg sliding_window_buffer_samples_sample_V_3_10_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_3_11_address0;
-reg sliding_window_buffer_samples_sample_V_3_11_ce0;
-reg sliding_window_buffer_samples_sample_V_3_11_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_0_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_0_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_0_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_1_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_1_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_1_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_2_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_2_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_2_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_3_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_3_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_3_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_4_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_4_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_4_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_5_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_5_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_5_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_6_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_6_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_6_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_7_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_7_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_7_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_8_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_8_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_8_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_9_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_9_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_9_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_10_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_10_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_10_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_3_11_address0;
-reg sliding_window_buffer_samples_timestamp_V_3_11_ce0;
-reg sliding_window_buffer_samples_timestamp_V_3_11_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_0_address0;
-reg sliding_window_buffer_samples_sample_V_4_0_ce0;
-reg sliding_window_buffer_samples_sample_V_4_0_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_1_address0;
-reg sliding_window_buffer_samples_sample_V_4_1_ce0;
-reg sliding_window_buffer_samples_sample_V_4_1_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_2_address0;
-reg sliding_window_buffer_samples_sample_V_4_2_ce0;
-reg sliding_window_buffer_samples_sample_V_4_2_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_3_address0;
-reg sliding_window_buffer_samples_sample_V_4_3_ce0;
-reg sliding_window_buffer_samples_sample_V_4_3_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_4_address0;
-reg sliding_window_buffer_samples_sample_V_4_4_ce0;
-reg sliding_window_buffer_samples_sample_V_4_4_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_5_address0;
-reg sliding_window_buffer_samples_sample_V_4_5_ce0;
-reg sliding_window_buffer_samples_sample_V_4_5_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_6_address0;
-reg sliding_window_buffer_samples_sample_V_4_6_ce0;
-reg sliding_window_buffer_samples_sample_V_4_6_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_7_address0;
-reg sliding_window_buffer_samples_sample_V_4_7_ce0;
-reg sliding_window_buffer_samples_sample_V_4_7_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_8_address0;
-reg sliding_window_buffer_samples_sample_V_4_8_ce0;
-reg sliding_window_buffer_samples_sample_V_4_8_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_9_address0;
-reg sliding_window_buffer_samples_sample_V_4_9_ce0;
-reg sliding_window_buffer_samples_sample_V_4_9_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_10_address0;
-reg sliding_window_buffer_samples_sample_V_4_10_ce0;
-reg sliding_window_buffer_samples_sample_V_4_10_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_4_11_address0;
-reg sliding_window_buffer_samples_sample_V_4_11_ce0;
-reg sliding_window_buffer_samples_sample_V_4_11_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_0_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_0_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_0_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_1_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_1_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_1_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_2_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_2_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_2_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_3_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_3_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_3_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_4_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_4_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_4_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_5_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_5_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_5_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_6_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_6_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_6_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_7_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_7_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_7_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_8_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_8_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_8_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_9_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_9_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_9_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_10_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_10_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_10_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_4_11_address0;
-reg sliding_window_buffer_samples_timestamp_V_4_11_ce0;
-reg sliding_window_buffer_samples_timestamp_V_4_11_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_0_address0;
-reg sliding_window_buffer_samples_sample_V_5_0_ce0;
-reg sliding_window_buffer_samples_sample_V_5_0_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_1_address0;
-reg sliding_window_buffer_samples_sample_V_5_1_ce0;
-reg sliding_window_buffer_samples_sample_V_5_1_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_2_address0;
-reg sliding_window_buffer_samples_sample_V_5_2_ce0;
-reg sliding_window_buffer_samples_sample_V_5_2_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_3_address0;
-reg sliding_window_buffer_samples_sample_V_5_3_ce0;
-reg sliding_window_buffer_samples_sample_V_5_3_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_4_address0;
-reg sliding_window_buffer_samples_sample_V_5_4_ce0;
-reg sliding_window_buffer_samples_sample_V_5_4_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_5_address0;
-reg sliding_window_buffer_samples_sample_V_5_5_ce0;
-reg sliding_window_buffer_samples_sample_V_5_5_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_6_address0;
-reg sliding_window_buffer_samples_sample_V_5_6_ce0;
-reg sliding_window_buffer_samples_sample_V_5_6_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_7_address0;
-reg sliding_window_buffer_samples_sample_V_5_7_ce0;
-reg sliding_window_buffer_samples_sample_V_5_7_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_8_address0;
-reg sliding_window_buffer_samples_sample_V_5_8_ce0;
-reg sliding_window_buffer_samples_sample_V_5_8_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_9_address0;
-reg sliding_window_buffer_samples_sample_V_5_9_ce0;
-reg sliding_window_buffer_samples_sample_V_5_9_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_10_address0;
-reg sliding_window_buffer_samples_sample_V_5_10_ce0;
-reg sliding_window_buffer_samples_sample_V_5_10_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_5_11_address0;
-reg sliding_window_buffer_samples_sample_V_5_11_ce0;
-reg sliding_window_buffer_samples_sample_V_5_11_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_0_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_0_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_0_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_1_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_1_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_1_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_2_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_2_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_2_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_3_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_3_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_3_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_4_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_4_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_4_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_5_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_5_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_5_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_6_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_6_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_6_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_7_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_7_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_7_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_8_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_8_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_8_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_9_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_9_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_9_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_10_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_10_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_10_we0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_5_11_address0;
-reg sliding_window_buffer_samples_timestamp_V_5_11_ce0;
-reg sliding_window_buffer_samples_timestamp_V_5_11_we0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_0_address0;
-reg sliding_window_buffer_samples_sample_V_6_0_ce0;
-reg sliding_window_buffer_samples_sample_V_6_0_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_0_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_1_address0;
-reg sliding_window_buffer_samples_sample_V_6_1_ce0;
-reg sliding_window_buffer_samples_sample_V_6_1_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_1_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_2_address0;
-reg sliding_window_buffer_samples_sample_V_6_2_ce0;
-reg sliding_window_buffer_samples_sample_V_6_2_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_2_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_3_address0;
-reg sliding_window_buffer_samples_sample_V_6_3_ce0;
-reg sliding_window_buffer_samples_sample_V_6_3_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_3_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_4_address0;
-reg sliding_window_buffer_samples_sample_V_6_4_ce0;
-reg sliding_window_buffer_samples_sample_V_6_4_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_4_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_5_address0;
-reg sliding_window_buffer_samples_sample_V_6_5_ce0;
-reg sliding_window_buffer_samples_sample_V_6_5_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_5_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_6_address0;
-reg sliding_window_buffer_samples_sample_V_6_6_ce0;
-reg sliding_window_buffer_samples_sample_V_6_6_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_6_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_7_address0;
-reg sliding_window_buffer_samples_sample_V_6_7_ce0;
-reg sliding_window_buffer_samples_sample_V_6_7_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_7_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_8_address0;
-reg sliding_window_buffer_samples_sample_V_6_8_ce0;
-reg sliding_window_buffer_samples_sample_V_6_8_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_8_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_9_address0;
-reg sliding_window_buffer_samples_sample_V_6_9_ce0;
-reg sliding_window_buffer_samples_sample_V_6_9_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_9_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_10_address0;
-reg sliding_window_buffer_samples_sample_V_6_10_ce0;
-reg sliding_window_buffer_samples_sample_V_6_10_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_10_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_6_11_address0;
-reg sliding_window_buffer_samples_sample_V_6_11_ce0;
-reg sliding_window_buffer_samples_sample_V_6_11_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_6_11_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_0_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_0_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_0_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_0_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_1_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_1_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_1_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_1_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_2_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_2_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_2_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_2_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_3_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_3_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_3_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_3_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_4_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_4_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_4_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_4_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_5_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_5_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_5_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_5_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_6_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_6_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_6_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_6_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_7_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_7_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_7_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_7_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_8_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_8_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_8_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_8_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_9_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_9_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_9_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_9_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_10_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_10_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_10_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_10_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_6_11_address0;
-reg sliding_window_buffer_samples_timestamp_V_6_11_ce0;
-reg sliding_window_buffer_samples_timestamp_V_6_11_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_6_11_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_0_address0;
-reg sliding_window_buffer_samples_sample_V_7_0_ce0;
-reg sliding_window_buffer_samples_sample_V_7_0_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_0_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_1_address0;
-reg sliding_window_buffer_samples_sample_V_7_1_ce0;
-reg sliding_window_buffer_samples_sample_V_7_1_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_1_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_2_address0;
-reg sliding_window_buffer_samples_sample_V_7_2_ce0;
-reg sliding_window_buffer_samples_sample_V_7_2_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_2_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_3_address0;
-reg sliding_window_buffer_samples_sample_V_7_3_ce0;
-reg sliding_window_buffer_samples_sample_V_7_3_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_3_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_4_address0;
-reg sliding_window_buffer_samples_sample_V_7_4_ce0;
-reg sliding_window_buffer_samples_sample_V_7_4_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_4_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_5_address0;
-reg sliding_window_buffer_samples_sample_V_7_5_ce0;
-reg sliding_window_buffer_samples_sample_V_7_5_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_5_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_6_address0;
-reg sliding_window_buffer_samples_sample_V_7_6_ce0;
-reg sliding_window_buffer_samples_sample_V_7_6_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_6_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_7_address0;
-reg sliding_window_buffer_samples_sample_V_7_7_ce0;
-reg sliding_window_buffer_samples_sample_V_7_7_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_7_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_8_address0;
-reg sliding_window_buffer_samples_sample_V_7_8_ce0;
-reg sliding_window_buffer_samples_sample_V_7_8_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_8_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_9_address0;
-reg sliding_window_buffer_samples_sample_V_7_9_ce0;
-reg sliding_window_buffer_samples_sample_V_7_9_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_9_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_10_address0;
-reg sliding_window_buffer_samples_sample_V_7_10_ce0;
-reg sliding_window_buffer_samples_sample_V_7_10_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_10_d0;
-reg[4:0] sliding_window_buffer_samples_sample_V_7_11_address0;
-reg sliding_window_buffer_samples_sample_V_7_11_ce0;
-reg sliding_window_buffer_samples_sample_V_7_11_we0;
-reg[11:0] sliding_window_buffer_samples_sample_V_7_11_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_0_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_0_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_0_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_0_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_1_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_1_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_1_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_1_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_2_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_2_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_2_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_2_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_3_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_3_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_3_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_3_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_4_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_4_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_4_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_4_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_5_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_5_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_5_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_5_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_6_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_6_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_6_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_6_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_7_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_7_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_7_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_7_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_8_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_8_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_8_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_8_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_9_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_9_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_9_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_9_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_10_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_10_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_10_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_10_d0;
-reg[4:0] sliding_window_buffer_samples_timestamp_V_7_11_address0;
-reg sliding_window_buffer_samples_timestamp_V_7_11_ce0;
-reg sliding_window_buffer_samples_timestamp_V_7_11_we0;
-reg[19:0] sliding_window_buffer_samples_timestamp_V_7_11_d0;
-reg[5:0] sliding_window_back_ptr_s_o;
+reg[9:0] sliding_window_buffer_samples_sample_V_address0;
+reg sliding_window_buffer_samples_sample_V_ce0;
+reg sliding_window_buffer_samples_sample_V_we0;
+reg[11:0] sliding_window_buffer_samples_sample_V_d0;
+reg[9:0] sliding_window_buffer_samples_sample_V_address1;
+reg sliding_window_buffer_samples_sample_V_ce1;
+reg sliding_window_buffer_samples_sample_V_we1;
+reg[11:0] sliding_window_buffer_samples_sample_V_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_0_address0;
+reg sliding_window_buffer_samples_timestamp_V_0_ce0;
+reg sliding_window_buffer_samples_timestamp_V_0_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_0_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_0_address1;
+reg sliding_window_buffer_samples_timestamp_V_0_ce1;
+reg sliding_window_buffer_samples_timestamp_V_0_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_0_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_1_address0;
+reg sliding_window_buffer_samples_timestamp_V_1_ce0;
+reg sliding_window_buffer_samples_timestamp_V_1_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_1_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_1_address1;
+reg sliding_window_buffer_samples_timestamp_V_1_ce1;
+reg sliding_window_buffer_samples_timestamp_V_1_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_1_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_2_address0;
+reg sliding_window_buffer_samples_timestamp_V_2_ce0;
+reg sliding_window_buffer_samples_timestamp_V_2_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_2_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_2_address1;
+reg sliding_window_buffer_samples_timestamp_V_2_ce1;
+reg sliding_window_buffer_samples_timestamp_V_2_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_2_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_3_address0;
+reg sliding_window_buffer_samples_timestamp_V_3_ce0;
+reg sliding_window_buffer_samples_timestamp_V_3_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_3_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_3_address1;
+reg sliding_window_buffer_samples_timestamp_V_3_ce1;
+reg sliding_window_buffer_samples_timestamp_V_3_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_3_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_4_address0;
+reg sliding_window_buffer_samples_timestamp_V_4_ce0;
+reg sliding_window_buffer_samples_timestamp_V_4_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_4_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_4_address1;
+reg sliding_window_buffer_samples_timestamp_V_4_ce1;
+reg sliding_window_buffer_samples_timestamp_V_4_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_4_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_5_address0;
+reg sliding_window_buffer_samples_timestamp_V_5_ce0;
+reg sliding_window_buffer_samples_timestamp_V_5_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_5_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_5_address1;
+reg sliding_window_buffer_samples_timestamp_V_5_ce1;
+reg sliding_window_buffer_samples_timestamp_V_5_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_5_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_6_address0;
+reg sliding_window_buffer_samples_timestamp_V_6_ce0;
+reg sliding_window_buffer_samples_timestamp_V_6_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_6_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_6_address1;
+reg sliding_window_buffer_samples_timestamp_V_6_ce1;
+reg sliding_window_buffer_samples_timestamp_V_6_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_6_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_7_address0;
+reg sliding_window_buffer_samples_timestamp_V_7_ce0;
+reg sliding_window_buffer_samples_timestamp_V_7_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_7_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_7_address1;
+reg sliding_window_buffer_samples_timestamp_V_7_ce1;
+reg sliding_window_buffer_samples_timestamp_V_7_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_7_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_8_address0;
+reg sliding_window_buffer_samples_timestamp_V_8_ce0;
+reg sliding_window_buffer_samples_timestamp_V_8_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_8_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_8_address1;
+reg sliding_window_buffer_samples_timestamp_V_8_ce1;
+reg sliding_window_buffer_samples_timestamp_V_8_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_8_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_9_address0;
+reg sliding_window_buffer_samples_timestamp_V_9_ce0;
+reg sliding_window_buffer_samples_timestamp_V_9_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_9_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_9_address1;
+reg sliding_window_buffer_samples_timestamp_V_9_ce1;
+reg sliding_window_buffer_samples_timestamp_V_9_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_9_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_10_address0;
+reg sliding_window_buffer_samples_timestamp_V_10_ce0;
+reg sliding_window_buffer_samples_timestamp_V_10_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_10_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_10_address1;
+reg sliding_window_buffer_samples_timestamp_V_10_ce1;
+reg sliding_window_buffer_samples_timestamp_V_10_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_10_d1;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_11_address0;
+reg sliding_window_buffer_samples_timestamp_V_11_ce0;
+reg sliding_window_buffer_samples_timestamp_V_11_we0;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_11_d0;
+reg[6:0] sliding_window_buffer_samples_timestamp_V_11_address1;
+reg sliding_window_buffer_samples_timestamp_V_11_ce1;
+reg sliding_window_buffer_samples_timestamp_V_11_we1;
+reg[19:0] sliding_window_buffer_samples_timestamp_V_11_d1;
+reg[4:0] sliding_window_back_ptr_s_o;
 reg sliding_window_back_ptr_s_o_ap_vld;
 
-(* fsm_encoding = "none" *) reg   [27:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [119:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg   [31:0] sliding_window_size_s;
-reg   [3:0] i_reg_7314;
-wire   [3:0] add_ln84_fu_7337_p2;
-reg   [3:0] add_ln84_reg_8113;
+reg   [3:0] i_reg_6149;
+wire   [3:0] add_ln92_fu_6172_p2;
+reg   [3:0] add_ln92_reg_9221;
 wire    ap_CS_fsm_pp0_stage0;
 reg    ap_enable_reg_pp0_iter0;
 wire    ap_block_state2_pp0_stage0_iter0;
 wire    ap_block_state3_pp0_stage0_iter1;
 wire    ap_block_pp0_stage0_11001;
-wire   [0:0] icmp_ln84_fu_7343_p2;
-reg   [0:0] icmp_ln84_reg_8118;
-wire   [3:0] add_ln19_fu_7589_p2;
-reg   [3:0] add_ln19_reg_8182;
+wire   [0:0] icmp_ln92_fu_6178_p2;
+reg   [0:0] icmp_ln92_reg_9226;
+wire   [3:0] add_ln19_fu_6424_p2;
+reg   [3:0] add_ln19_reg_9290;
 wire    ap_CS_fsm_state5;
-wire   [63:0] zext_ln19_fu_7595_p1;
-reg   [63:0] zext_ln19_reg_8187;
-wire   [0:0] icmp_ln19_fu_7623_p2;
+wire   [63:0] zext_ln19_fu_6430_p1;
+reg   [63:0] zext_ln19_reg_9295;
+wire   [0:0] icmp_ln19_fu_6458_p2;
 wire   [11:0] sample_period_samples_0_sample_V_q1;
-reg   [11:0] sample_period_samples_0_sample_V_load_reg_8578;
+reg   [11:0] sample_period_samples_0_sample_V_load_reg_9686;
 wire    ap_CS_fsm_state7;
 wire   [11:0] sample_period_samples_1_sample_V_q1;
-reg   [11:0] sample_period_samples_1_sample_V_load_reg_8583;
+reg   [11:0] sample_period_samples_1_sample_V_load_reg_9691;
 wire   [11:0] sample_period_samples_2_sample_V_q1;
-reg   [11:0] sample_period_samples_2_sample_V_load_reg_8588;
+reg   [11:0] sample_period_samples_2_sample_V_load_reg_9696;
 wire   [11:0] sample_period_samples_3_sample_V_q1;
-reg   [11:0] sample_period_samples_3_sample_V_load_reg_8593;
+reg   [11:0] sample_period_samples_3_sample_V_load_reg_9701;
 wire   [11:0] sample_period_samples_4_sample_V_q1;
-reg   [11:0] sample_period_samples_4_sample_V_load_reg_8598;
+reg   [11:0] sample_period_samples_4_sample_V_load_reg_9706;
 wire   [11:0] sample_period_samples_5_sample_V_q1;
-reg   [11:0] sample_period_samples_5_sample_V_load_reg_8603;
+reg   [11:0] sample_period_samples_5_sample_V_load_reg_9711;
 wire   [11:0] sample_period_samples_6_sample_V_q1;
-reg   [11:0] sample_period_samples_6_sample_V_load_reg_8608;
+reg   [11:0] sample_period_samples_6_sample_V_load_reg_9716;
 wire   [11:0] sample_period_samples_7_sample_V_q1;
-reg   [11:0] sample_period_samples_7_sample_V_load_reg_8613;
+reg   [11:0] sample_period_samples_7_sample_V_load_reg_9721;
 wire   [11:0] sample_period_samples_8_sample_V_q1;
-reg   [11:0] sample_period_samples_8_sample_V_load_reg_8618;
+reg   [11:0] sample_period_samples_8_sample_V_load_reg_9726;
 wire   [11:0] sample_period_samples_9_sample_V_q1;
-reg   [11:0] sample_period_samples_9_sample_V_load_reg_8623;
+reg   [11:0] sample_period_samples_9_sample_V_load_reg_9731;
 wire   [11:0] sample_period_samples_10_sample_V_q1;
-reg   [11:0] sample_period_samples_10_sample_V_load_reg_8628;
+reg   [11:0] sample_period_samples_10_sample_V_load_reg_9736;
 wire   [11:0] sample_period_samples_11_sample_V_q1;
-reg   [11:0] sample_period_samples_11_sample_V_load_reg_8633;
+reg   [11:0] sample_period_samples_11_sample_V_load_reg_9741;
 wire   [19:0] sample_period_samples_0_timestamp_V_q1;
-reg   [19:0] sample_period_samples_0_timestamp_V_load_reg_8638;
+reg   [19:0] sample_period_samples_0_timestamp_V_load_reg_9746;
 wire   [19:0] sample_period_samples_1_timestamp_V_q1;
-reg   [19:0] sample_period_samples_1_timestamp_V_load_reg_8643;
+reg   [19:0] sample_period_samples_1_timestamp_V_load_reg_9751;
 wire   [19:0] sample_period_samples_2_timestamp_V_q1;
-reg   [19:0] sample_period_samples_2_timestamp_V_load_reg_8648;
+reg   [19:0] sample_period_samples_2_timestamp_V_load_reg_9756;
 wire   [19:0] sample_period_samples_3_timestamp_V_q1;
-reg   [19:0] sample_period_samples_3_timestamp_V_load_reg_8653;
+reg   [19:0] sample_period_samples_3_timestamp_V_load_reg_9761;
 wire   [19:0] sample_period_samples_4_timestamp_V_q1;
-reg   [19:0] sample_period_samples_4_timestamp_V_load_reg_8658;
+reg   [19:0] sample_period_samples_4_timestamp_V_load_reg_9766;
 wire   [19:0] sample_period_samples_5_timestamp_V_q1;
-reg   [19:0] sample_period_samples_5_timestamp_V_load_reg_8663;
+reg   [19:0] sample_period_samples_5_timestamp_V_load_reg_9771;
 wire   [19:0] sample_period_samples_6_timestamp_V_q1;
-reg   [19:0] sample_period_samples_6_timestamp_V_load_reg_8668;
+reg   [19:0] sample_period_samples_6_timestamp_V_load_reg_9776;
 wire   [19:0] sample_period_samples_7_timestamp_V_q1;
-reg   [19:0] sample_period_samples_7_timestamp_V_load_reg_8673;
+reg   [19:0] sample_period_samples_7_timestamp_V_load_reg_9781;
 wire   [19:0] sample_period_samples_8_timestamp_V_q1;
-reg   [19:0] sample_period_samples_8_timestamp_V_load_reg_8678;
+reg   [19:0] sample_period_samples_8_timestamp_V_load_reg_9786;
 wire   [19:0] sample_period_samples_9_timestamp_V_q1;
-reg   [19:0] sample_period_samples_9_timestamp_V_load_reg_8683;
+reg   [19:0] sample_period_samples_9_timestamp_V_load_reg_9791;
 wire   [19:0] sample_period_samples_10_timestamp_V_q1;
-reg   [19:0] sample_period_samples_10_timestamp_V_load_reg_8688;
+reg   [19:0] sample_period_samples_10_timestamp_V_load_reg_9796;
 wire   [19:0] sample_period_samples_11_timestamp_V_q1;
-reg   [19:0] sample_period_samples_11_timestamp_V_load_reg_8693;
+reg   [19:0] sample_period_samples_11_timestamp_V_load_reg_9801;
 wire   [11:0] sample_period_samples_0_sample_V_q0;
-reg   [11:0] sample_period_samples_0_sample_V_load_1_reg_8698;
+reg   [11:0] sample_period_samples_0_sample_V_load_1_reg_9806;
 wire   [11:0] sample_period_samples_1_sample_V_q0;
-reg   [11:0] sample_period_samples_1_sample_V_load_1_reg_8703;
+reg   [11:0] sample_period_samples_1_sample_V_load_1_reg_9811;
 wire   [11:0] sample_period_samples_2_sample_V_q0;
-reg   [11:0] sample_period_samples_2_sample_V_load_1_reg_8708;
+reg   [11:0] sample_period_samples_2_sample_V_load_1_reg_9816;
 wire   [11:0] sample_period_samples_3_sample_V_q0;
-reg   [11:0] sample_period_samples_3_sample_V_load_1_reg_8713;
+reg   [11:0] sample_period_samples_3_sample_V_load_1_reg_9821;
 wire   [11:0] sample_period_samples_4_sample_V_q0;
-reg   [11:0] sample_period_samples_4_sample_V_load_1_reg_8718;
+reg   [11:0] sample_period_samples_4_sample_V_load_1_reg_9826;
 wire   [11:0] sample_period_samples_5_sample_V_q0;
-reg   [11:0] sample_period_samples_5_sample_V_load_1_reg_8723;
+reg   [11:0] sample_period_samples_5_sample_V_load_1_reg_9831;
 wire   [11:0] sample_period_samples_6_sample_V_q0;
-reg   [11:0] sample_period_samples_6_sample_V_load_1_reg_8728;
+reg   [11:0] sample_period_samples_6_sample_V_load_1_reg_9836;
 wire   [11:0] sample_period_samples_7_sample_V_q0;
-reg   [11:0] sample_period_samples_7_sample_V_load_1_reg_8733;
+reg   [11:0] sample_period_samples_7_sample_V_load_1_reg_9841;
 wire   [11:0] sample_period_samples_8_sample_V_q0;
-reg   [11:0] sample_period_samples_8_sample_V_load_1_reg_8738;
+reg   [11:0] sample_period_samples_8_sample_V_load_1_reg_9846;
 wire   [11:0] sample_period_samples_9_sample_V_q0;
-reg   [11:0] sample_period_samples_9_sample_V_load_1_reg_8743;
+reg   [11:0] sample_period_samples_9_sample_V_load_1_reg_9851;
 wire   [11:0] sample_period_samples_10_sample_V_q0;
-reg   [11:0] sample_period_samples_10_sample_V_load_1_reg_8748;
+reg   [11:0] sample_period_samples_10_sample_V_load_1_reg_9856;
 wire   [11:0] sample_period_samples_11_sample_V_q0;
-reg   [11:0] sample_period_samples_11_sample_V_load_1_reg_8753;
+reg   [11:0] sample_period_samples_11_sample_V_load_1_reg_9861;
 wire   [19:0] sample_period_samples_0_timestamp_V_q0;
-reg   [19:0] sample_period_samples_0_timestamp_V_load_1_reg_8758;
+reg   [19:0] sample_period_samples_0_timestamp_V_load_1_reg_9866;
 wire   [19:0] sample_period_samples_1_timestamp_V_q0;
-reg   [19:0] sample_period_samples_1_timestamp_V_load_1_reg_8763;
+reg   [19:0] sample_period_samples_1_timestamp_V_load_1_reg_9871;
 wire   [19:0] sample_period_samples_2_timestamp_V_q0;
-reg   [19:0] sample_period_samples_2_timestamp_V_load_1_reg_8768;
+reg   [19:0] sample_period_samples_2_timestamp_V_load_1_reg_9876;
 wire   [19:0] sample_period_samples_3_timestamp_V_q0;
-reg   [19:0] sample_period_samples_3_timestamp_V_load_1_reg_8773;
+reg   [19:0] sample_period_samples_3_timestamp_V_load_1_reg_9881;
 wire   [19:0] sample_period_samples_4_timestamp_V_q0;
-reg   [19:0] sample_period_samples_4_timestamp_V_load_1_reg_8778;
+reg   [19:0] sample_period_samples_4_timestamp_V_load_1_reg_9886;
 wire   [19:0] sample_period_samples_5_timestamp_V_q0;
-reg   [19:0] sample_period_samples_5_timestamp_V_load_1_reg_8783;
+reg   [19:0] sample_period_samples_5_timestamp_V_load_1_reg_9891;
 wire   [19:0] sample_period_samples_6_timestamp_V_q0;
-reg   [19:0] sample_period_samples_6_timestamp_V_load_1_reg_8788;
+reg   [19:0] sample_period_samples_6_timestamp_V_load_1_reg_9896;
 wire   [19:0] sample_period_samples_7_timestamp_V_q0;
-reg   [19:0] sample_period_samples_7_timestamp_V_load_1_reg_8793;
+reg   [19:0] sample_period_samples_7_timestamp_V_load_1_reg_9901;
 wire   [19:0] sample_period_samples_8_timestamp_V_q0;
-reg   [19:0] sample_period_samples_8_timestamp_V_load_1_reg_8798;
+reg   [19:0] sample_period_samples_8_timestamp_V_load_1_reg_9906;
 wire   [19:0] sample_period_samples_9_timestamp_V_q0;
-reg   [19:0] sample_period_samples_9_timestamp_V_load_1_reg_8803;
+reg   [19:0] sample_period_samples_9_timestamp_V_load_1_reg_9911;
 wire   [19:0] sample_period_samples_10_timestamp_V_q0;
-reg   [19:0] sample_period_samples_10_timestamp_V_load_1_reg_8808;
+reg   [19:0] sample_period_samples_10_timestamp_V_load_1_reg_9916;
 wire   [19:0] sample_period_samples_11_timestamp_V_q0;
-reg   [19:0] sample_period_samples_11_timestamp_V_load_1_reg_8813;
-reg   [11:0] sample_period_samples_0_sample_V_load_2_reg_9058;
+reg   [19:0] sample_period_samples_11_timestamp_V_load_1_reg_9921;
+reg   [11:0] sample_period_samples_0_sample_V_load_2_reg_10166;
 wire    ap_CS_fsm_state8;
-reg   [11:0] sample_period_samples_1_sample_V_load_2_reg_9063;
-reg   [11:0] sample_period_samples_2_sample_V_load_2_reg_9068;
-reg   [11:0] sample_period_samples_3_sample_V_load_2_reg_9073;
-reg   [11:0] sample_period_samples_4_sample_V_load_2_reg_9078;
-reg   [11:0] sample_period_samples_5_sample_V_load_2_reg_9083;
-reg   [11:0] sample_period_samples_6_sample_V_load_2_reg_9088;
-reg   [11:0] sample_period_samples_7_sample_V_load_2_reg_9093;
-reg   [11:0] sample_period_samples_8_sample_V_load_2_reg_9098;
-reg   [11:0] sample_period_samples_9_sample_V_load_2_reg_9103;
-reg   [11:0] sample_period_samples_10_sample_V_load_2_reg_9108;
-reg   [11:0] sample_period_samples_11_sample_V_load_2_reg_9113;
-reg   [19:0] sample_period_samples_0_timestamp_V_load_2_reg_9118;
-reg   [19:0] sample_period_samples_1_timestamp_V_load_2_reg_9123;
-reg   [19:0] sample_period_samples_2_timestamp_V_load_2_reg_9128;
-reg   [19:0] sample_period_samples_3_timestamp_V_load_2_reg_9133;
-reg   [19:0] sample_period_samples_4_timestamp_V_load_2_reg_9138;
-reg   [19:0] sample_period_samples_5_timestamp_V_load_2_reg_9143;
-reg   [19:0] sample_period_samples_6_timestamp_V_load_2_reg_9148;
-reg   [19:0] sample_period_samples_7_timestamp_V_load_2_reg_9153;
-reg   [19:0] sample_period_samples_8_timestamp_V_load_2_reg_9158;
-reg   [19:0] sample_period_samples_9_timestamp_V_load_2_reg_9163;
-reg   [19:0] sample_period_samples_10_timestamp_V_load_2_reg_9168;
-reg   [19:0] sample_period_samples_11_timestamp_V_load_2_reg_9173;
-reg   [11:0] sample_period_samples_0_sample_V_load_3_reg_9178;
-reg   [11:0] sample_period_samples_1_sample_V_load_3_reg_9183;
-reg   [11:0] sample_period_samples_2_sample_V_load_3_reg_9188;
-reg   [11:0] sample_period_samples_3_sample_V_load_3_reg_9193;
-reg   [11:0] sample_period_samples_4_sample_V_load_3_reg_9198;
-reg   [11:0] sample_period_samples_5_sample_V_load_3_reg_9203;
-reg   [11:0] sample_period_samples_6_sample_V_load_3_reg_9208;
-reg   [11:0] sample_period_samples_7_sample_V_load_3_reg_9213;
-reg   [11:0] sample_period_samples_8_sample_V_load_3_reg_9218;
-reg   [11:0] sample_period_samples_9_sample_V_load_3_reg_9223;
-reg   [11:0] sample_period_samples_10_sample_V_load_3_reg_9228;
-reg   [11:0] sample_period_samples_11_sample_V_load_3_reg_9233;
-reg   [19:0] sample_period_samples_0_timestamp_V_load_3_reg_9238;
-reg   [19:0] sample_period_samples_1_timestamp_V_load_3_reg_9243;
-reg   [19:0] sample_period_samples_2_timestamp_V_load_3_reg_9248;
-reg   [19:0] sample_period_samples_3_timestamp_V_load_3_reg_9253;
-reg   [19:0] sample_period_samples_4_timestamp_V_load_3_reg_9258;
-reg   [19:0] sample_period_samples_5_timestamp_V_load_3_reg_9263;
-reg   [19:0] sample_period_samples_6_timestamp_V_load_3_reg_9268;
-reg   [19:0] sample_period_samples_7_timestamp_V_load_3_reg_9273;
-reg   [19:0] sample_period_samples_8_timestamp_V_load_3_reg_9278;
-reg   [19:0] sample_period_samples_9_timestamp_V_load_3_reg_9283;
-reg   [19:0] sample_period_samples_10_timestamp_V_load_3_reg_9288;
-reg   [19:0] sample_period_samples_11_timestamp_V_load_3_reg_9293;
-reg   [11:0] sample_period_samples_0_sample_V_load_4_reg_9538;
+reg   [11:0] sample_period_samples_1_sample_V_load_2_reg_10171;
+reg   [11:0] sample_period_samples_2_sample_V_load_2_reg_10176;
+reg   [11:0] sample_period_samples_3_sample_V_load_2_reg_10181;
+reg   [11:0] sample_period_samples_4_sample_V_load_2_reg_10186;
+reg   [11:0] sample_period_samples_5_sample_V_load_2_reg_10191;
+reg   [11:0] sample_period_samples_6_sample_V_load_2_reg_10196;
+reg   [11:0] sample_period_samples_7_sample_V_load_2_reg_10201;
+reg   [11:0] sample_period_samples_8_sample_V_load_2_reg_10206;
+reg   [11:0] sample_period_samples_9_sample_V_load_2_reg_10211;
+reg   [11:0] sample_period_samples_10_sample_V_load_2_reg_10216;
+reg   [11:0] sample_period_samples_11_sample_V_load_2_reg_10221;
+reg   [19:0] sample_period_samples_0_timestamp_V_load_2_reg_10226;
+reg   [19:0] sample_period_samples_1_timestamp_V_load_2_reg_10232;
+reg   [19:0] sample_period_samples_2_timestamp_V_load_2_reg_10238;
+reg   [19:0] sample_period_samples_3_timestamp_V_load_2_reg_10244;
+reg   [19:0] sample_period_samples_4_timestamp_V_load_2_reg_10250;
+reg   [19:0] sample_period_samples_5_timestamp_V_load_2_reg_10256;
+reg   [19:0] sample_period_samples_6_timestamp_V_load_2_reg_10262;
+reg   [19:0] sample_period_samples_7_timestamp_V_load_2_reg_10268;
+reg   [19:0] sample_period_samples_8_timestamp_V_load_2_reg_10274;
+reg   [19:0] sample_period_samples_9_timestamp_V_load_2_reg_10280;
+reg   [19:0] sample_period_samples_10_timestamp_V_load_2_reg_10286;
+reg   [19:0] sample_period_samples_11_timestamp_V_load_2_reg_10292;
+reg   [11:0] sample_period_samples_0_sample_V_load_3_reg_10298;
+reg   [11:0] sample_period_samples_1_sample_V_load_3_reg_10303;
+reg   [11:0] sample_period_samples_2_sample_V_load_3_reg_10308;
+reg   [11:0] sample_period_samples_3_sample_V_load_3_reg_10313;
+reg   [11:0] sample_period_samples_4_sample_V_load_3_reg_10318;
+reg   [11:0] sample_period_samples_5_sample_V_load_3_reg_10323;
+reg   [11:0] sample_period_samples_6_sample_V_load_3_reg_10328;
+reg   [11:0] sample_period_samples_7_sample_V_load_3_reg_10333;
+reg   [11:0] sample_period_samples_8_sample_V_load_3_reg_10338;
+reg   [11:0] sample_period_samples_9_sample_V_load_3_reg_10343;
+reg   [11:0] sample_period_samples_10_sample_V_load_3_reg_10348;
+reg   [11:0] sample_period_samples_11_sample_V_load_3_reg_10353;
+reg   [19:0] sample_period_samples_0_timestamp_V_load_3_reg_10358;
+reg   [19:0] sample_period_samples_1_timestamp_V_load_3_reg_10364;
+reg   [19:0] sample_period_samples_2_timestamp_V_load_3_reg_10370;
+reg   [19:0] sample_period_samples_3_timestamp_V_load_3_reg_10376;
+reg   [19:0] sample_period_samples_4_timestamp_V_load_3_reg_10382;
+reg   [19:0] sample_period_samples_5_timestamp_V_load_3_reg_10388;
+reg   [19:0] sample_period_samples_6_timestamp_V_load_3_reg_10394;
+reg   [19:0] sample_period_samples_7_timestamp_V_load_3_reg_10400;
+reg   [19:0] sample_period_samples_8_timestamp_V_load_3_reg_10406;
+reg   [19:0] sample_period_samples_9_timestamp_V_load_3_reg_10412;
+reg   [19:0] sample_period_samples_10_timestamp_V_load_3_reg_10418;
+reg   [19:0] sample_period_samples_11_timestamp_V_load_3_reg_10424;
+reg   [11:0] sample_period_samples_0_sample_V_load_4_reg_10670;
 wire    ap_CS_fsm_state9;
-reg   [11:0] sample_period_samples_1_sample_V_load_4_reg_9543;
-reg   [11:0] sample_period_samples_2_sample_V_load_4_reg_9548;
-reg   [11:0] sample_period_samples_3_sample_V_load_4_reg_9553;
-reg   [11:0] sample_period_samples_4_sample_V_load_4_reg_9558;
-reg   [11:0] sample_period_samples_5_sample_V_load_4_reg_9563;
-reg   [11:0] sample_period_samples_6_sample_V_load_4_reg_9568;
-reg   [11:0] sample_period_samples_7_sample_V_load_4_reg_9573;
-reg   [11:0] sample_period_samples_8_sample_V_load_4_reg_9578;
-reg   [11:0] sample_period_samples_9_sample_V_load_4_reg_9583;
-reg   [11:0] sample_period_samples_10_sample_V_load_4_reg_9588;
-reg   [11:0] sample_period_samples_11_sample_V_load_4_reg_9593;
-reg   [19:0] sample_period_samples_0_timestamp_V_load_4_reg_9598;
-reg   [19:0] sample_period_samples_1_timestamp_V_load_4_reg_9603;
-reg   [19:0] sample_period_samples_2_timestamp_V_load_4_reg_9608;
-reg   [19:0] sample_period_samples_3_timestamp_V_load_4_reg_9613;
-reg   [19:0] sample_period_samples_4_timestamp_V_load_4_reg_9618;
-reg   [19:0] sample_period_samples_5_timestamp_V_load_4_reg_9623;
-reg   [19:0] sample_period_samples_6_timestamp_V_load_4_reg_9628;
-reg   [19:0] sample_period_samples_7_timestamp_V_load_4_reg_9633;
-reg   [19:0] sample_period_samples_8_timestamp_V_load_4_reg_9638;
-reg   [19:0] sample_period_samples_9_timestamp_V_load_4_reg_9643;
-reg   [19:0] sample_period_samples_10_timestamp_V_load_4_reg_9648;
-reg   [19:0] sample_period_samples_11_timestamp_V_load_4_reg_9653;
-reg   [11:0] sample_period_samples_0_sample_V_load_5_reg_9658;
-reg   [11:0] sample_period_samples_1_sample_V_load_5_reg_9663;
-reg   [11:0] sample_period_samples_2_sample_V_load_5_reg_9668;
-reg   [11:0] sample_period_samples_3_sample_V_load_5_reg_9673;
-reg   [11:0] sample_period_samples_4_sample_V_load_5_reg_9678;
-reg   [11:0] sample_period_samples_5_sample_V_load_5_reg_9683;
-reg   [11:0] sample_period_samples_6_sample_V_load_5_reg_9688;
-reg   [11:0] sample_period_samples_7_sample_V_load_5_reg_9693;
-reg   [11:0] sample_period_samples_8_sample_V_load_5_reg_9698;
-reg   [11:0] sample_period_samples_9_sample_V_load_5_reg_9703;
-reg   [11:0] sample_period_samples_10_sample_V_load_5_reg_9708;
-reg   [11:0] sample_period_samples_11_sample_V_load_5_reg_9713;
-reg   [19:0] sample_period_samples_0_timestamp_V_load_5_reg_9718;
-reg   [19:0] sample_period_samples_1_timestamp_V_load_5_reg_9723;
-reg   [19:0] sample_period_samples_2_timestamp_V_load_5_reg_9728;
-reg   [19:0] sample_period_samples_3_timestamp_V_load_5_reg_9733;
-reg   [19:0] sample_period_samples_4_timestamp_V_load_5_reg_9738;
-reg   [19:0] sample_period_samples_5_timestamp_V_load_5_reg_9743;
-reg   [19:0] sample_period_samples_6_timestamp_V_load_5_reg_9748;
-reg   [19:0] sample_period_samples_7_timestamp_V_load_5_reg_9753;
-reg   [19:0] sample_period_samples_8_timestamp_V_load_5_reg_9758;
-reg   [19:0] sample_period_samples_9_timestamp_V_load_5_reg_9763;
-reg   [19:0] sample_period_samples_10_timestamp_V_load_5_reg_9768;
-reg   [19:0] sample_period_samples_11_timestamp_V_load_5_reg_9773;
-reg   [11:0] sample_period_samples_0_sample_V_load_6_reg_10018;
+reg   [11:0] sample_period_samples_1_sample_V_load_4_reg_10675;
+reg   [11:0] sample_period_samples_2_sample_V_load_4_reg_10680;
+reg   [11:0] sample_period_samples_3_sample_V_load_4_reg_10685;
+reg   [11:0] sample_period_samples_4_sample_V_load_4_reg_10690;
+reg   [11:0] sample_period_samples_5_sample_V_load_4_reg_10695;
+reg   [11:0] sample_period_samples_6_sample_V_load_4_reg_10700;
+reg   [11:0] sample_period_samples_7_sample_V_load_4_reg_10705;
+reg   [11:0] sample_period_samples_8_sample_V_load_4_reg_10710;
+reg   [11:0] sample_period_samples_9_sample_V_load_4_reg_10715;
+reg   [11:0] sample_period_samples_10_sample_V_load_4_reg_10720;
+reg   [11:0] sample_period_samples_11_sample_V_load_4_reg_10725;
+reg   [19:0] sample_period_samples_0_timestamp_V_load_4_reg_10730;
+reg   [19:0] sample_period_samples_1_timestamp_V_load_4_reg_10735;
+reg   [19:0] sample_period_samples_2_timestamp_V_load_4_reg_10740;
+reg   [19:0] sample_period_samples_3_timestamp_V_load_4_reg_10745;
+reg   [19:0] sample_period_samples_4_timestamp_V_load_4_reg_10750;
+reg   [19:0] sample_period_samples_5_timestamp_V_load_4_reg_10755;
+reg   [19:0] sample_period_samples_6_timestamp_V_load_4_reg_10760;
+reg   [19:0] sample_period_samples_7_timestamp_V_load_4_reg_10765;
+reg   [19:0] sample_period_samples_8_timestamp_V_load_4_reg_10770;
+reg   [19:0] sample_period_samples_9_timestamp_V_load_4_reg_10775;
+reg   [19:0] sample_period_samples_10_timestamp_V_load_4_reg_10780;
+reg   [19:0] sample_period_samples_11_timestamp_V_load_4_reg_10785;
+reg   [11:0] sample_period_samples_0_sample_V_load_5_reg_10790;
+reg   [11:0] sample_period_samples_1_sample_V_load_5_reg_10795;
+reg   [11:0] sample_period_samples_2_sample_V_load_5_reg_10800;
+reg   [11:0] sample_period_samples_3_sample_V_load_5_reg_10805;
+reg   [11:0] sample_period_samples_4_sample_V_load_5_reg_10810;
+reg   [11:0] sample_period_samples_5_sample_V_load_5_reg_10815;
+reg   [11:0] sample_period_samples_6_sample_V_load_5_reg_10820;
+reg   [11:0] sample_period_samples_7_sample_V_load_5_reg_10825;
+reg   [11:0] sample_period_samples_8_sample_V_load_5_reg_10830;
+reg   [11:0] sample_period_samples_9_sample_V_load_5_reg_10835;
+reg   [11:0] sample_period_samples_10_sample_V_load_5_reg_10840;
+reg   [11:0] sample_period_samples_11_sample_V_load_5_reg_10845;
+reg   [19:0] sample_period_samples_0_timestamp_V_load_5_reg_10850;
+reg   [19:0] sample_period_samples_1_timestamp_V_load_5_reg_10855;
+reg   [19:0] sample_period_samples_2_timestamp_V_load_5_reg_10860;
+reg   [19:0] sample_period_samples_3_timestamp_V_load_5_reg_10865;
+reg   [19:0] sample_period_samples_4_timestamp_V_load_5_reg_10870;
+reg   [19:0] sample_period_samples_5_timestamp_V_load_5_reg_10875;
+reg   [19:0] sample_period_samples_6_timestamp_V_load_5_reg_10880;
+reg   [19:0] sample_period_samples_7_timestamp_V_load_5_reg_10885;
+reg   [19:0] sample_period_samples_8_timestamp_V_load_5_reg_10890;
+reg   [19:0] sample_period_samples_9_timestamp_V_load_5_reg_10895;
+reg   [19:0] sample_period_samples_10_timestamp_V_load_5_reg_10900;
+reg   [19:0] sample_period_samples_11_timestamp_V_load_5_reg_10905;
+reg   [11:0] sample_period_samples_0_sample_V_load_6_reg_11150;
 wire    ap_CS_fsm_state10;
-reg   [11:0] sample_period_samples_1_sample_V_load_6_reg_10023;
-reg   [11:0] sample_period_samples_2_sample_V_load_6_reg_10028;
-reg   [11:0] sample_period_samples_3_sample_V_load_6_reg_10033;
-reg   [11:0] sample_period_samples_4_sample_V_load_6_reg_10038;
-reg   [11:0] sample_period_samples_5_sample_V_load_6_reg_10043;
-reg   [11:0] sample_period_samples_6_sample_V_load_6_reg_10048;
-reg   [11:0] sample_period_samples_7_sample_V_load_6_reg_10053;
-reg   [11:0] sample_period_samples_8_sample_V_load_6_reg_10058;
-reg   [11:0] sample_period_samples_9_sample_V_load_6_reg_10063;
-reg   [11:0] sample_period_samples_10_sample_V_load_6_reg_10068;
-reg   [11:0] sample_period_samples_11_sample_V_load_6_reg_10073;
-reg   [19:0] sample_period_samples_0_timestamp_V_load_6_reg_10078;
-reg   [19:0] sample_period_samples_1_timestamp_V_load_6_reg_10083;
-reg   [19:0] sample_period_samples_2_timestamp_V_load_6_reg_10088;
-reg   [19:0] sample_period_samples_3_timestamp_V_load_6_reg_10093;
-reg   [19:0] sample_period_samples_4_timestamp_V_load_6_reg_10098;
-reg   [19:0] sample_period_samples_5_timestamp_V_load_6_reg_10103;
-reg   [19:0] sample_period_samples_6_timestamp_V_load_6_reg_10108;
-reg   [19:0] sample_period_samples_7_timestamp_V_load_6_reg_10113;
-reg   [19:0] sample_period_samples_8_timestamp_V_load_6_reg_10118;
-reg   [19:0] sample_period_samples_9_timestamp_V_load_6_reg_10123;
-reg   [19:0] sample_period_samples_10_timestamp_V_load_6_reg_10128;
-reg   [19:0] sample_period_samples_11_timestamp_V_load_6_reg_10133;
-reg   [11:0] sample_period_samples_0_sample_V_load_7_reg_10138;
-reg   [11:0] sample_period_samples_1_sample_V_load_7_reg_10143;
-reg   [11:0] sample_period_samples_2_sample_V_load_7_reg_10148;
-reg   [11:0] sample_period_samples_3_sample_V_load_7_reg_10153;
-reg   [11:0] sample_period_samples_4_sample_V_load_7_reg_10158;
-reg   [11:0] sample_period_samples_5_sample_V_load_7_reg_10163;
-reg   [11:0] sample_period_samples_6_sample_V_load_7_reg_10168;
-reg   [11:0] sample_period_samples_7_sample_V_load_7_reg_10173;
-reg   [11:0] sample_period_samples_8_sample_V_load_7_reg_10178;
-reg   [11:0] sample_period_samples_9_sample_V_load_7_reg_10183;
-reg   [11:0] sample_period_samples_10_sample_V_load_7_reg_10188;
-reg   [11:0] sample_period_samples_11_sample_V_load_7_reg_10193;
-reg   [19:0] sample_period_samples_0_timestamp_V_load_7_reg_10198;
-reg   [19:0] sample_period_samples_1_timestamp_V_load_7_reg_10203;
-reg   [19:0] sample_period_samples_2_timestamp_V_load_7_reg_10208;
-reg   [19:0] sample_period_samples_3_timestamp_V_load_7_reg_10213;
-reg   [19:0] sample_period_samples_4_timestamp_V_load_7_reg_10218;
-reg   [19:0] sample_period_samples_5_timestamp_V_load_7_reg_10223;
-reg   [19:0] sample_period_samples_6_timestamp_V_load_7_reg_10228;
-reg   [19:0] sample_period_samples_7_timestamp_V_load_7_reg_10233;
-reg   [19:0] sample_period_samples_8_timestamp_V_load_7_reg_10238;
-reg   [19:0] sample_period_samples_9_timestamp_V_load_7_reg_10243;
-reg   [19:0] sample_period_samples_10_timestamp_V_load_7_reg_10248;
-reg   [19:0] sample_period_samples_11_timestamp_V_load_7_reg_10253;
-reg   [31:0] sliding_window_size_load_reg_10258;
-wire   [0:0] icmp_ln52_fu_7633_p2;
-reg   [0:0] icmp_ln52_reg_10264;
-wire   [5:0] grp_fu_7653_p2;
-reg   [5:0] new_front_ptr_reg_10273;
-wire    ap_CS_fsm_state20;
-wire   [5:0] trunc_ln61_fu_7861_p1;
-reg   [5:0] trunc_ln61_reg_10278;
-wire   [0:0] icmp_ln63_fu_7869_p2;
-reg   [0:0] icmp_ln63_reg_10283;
+reg   [11:0] sample_period_samples_1_sample_V_load_6_reg_11155;
+reg   [11:0] sample_period_samples_2_sample_V_load_6_reg_11160;
+reg   [11:0] sample_period_samples_3_sample_V_load_6_reg_11165;
+reg   [11:0] sample_period_samples_4_sample_V_load_6_reg_11170;
+reg   [11:0] sample_period_samples_5_sample_V_load_6_reg_11175;
+reg   [11:0] sample_period_samples_6_sample_V_load_6_reg_11180;
+reg   [11:0] sample_period_samples_7_sample_V_load_6_reg_11185;
+reg   [11:0] sample_period_samples_8_sample_V_load_6_reg_11190;
+reg   [11:0] sample_period_samples_9_sample_V_load_6_reg_11195;
+reg   [11:0] sample_period_samples_10_sample_V_load_6_reg_11200;
+reg   [11:0] sample_period_samples_11_sample_V_load_6_reg_11205;
+reg   [19:0] sample_period_samples_0_timestamp_V_load_6_reg_11210;
+reg   [19:0] sample_period_samples_1_timestamp_V_load_6_reg_11215;
+reg   [19:0] sample_period_samples_2_timestamp_V_load_6_reg_11220;
+reg   [19:0] sample_period_samples_3_timestamp_V_load_6_reg_11225;
+reg   [19:0] sample_period_samples_4_timestamp_V_load_6_reg_11230;
+reg   [19:0] sample_period_samples_5_timestamp_V_load_6_reg_11235;
+reg   [19:0] sample_period_samples_6_timestamp_V_load_6_reg_11240;
+reg   [19:0] sample_period_samples_7_timestamp_V_load_6_reg_11245;
+reg   [19:0] sample_period_samples_8_timestamp_V_load_6_reg_11250;
+reg   [19:0] sample_period_samples_9_timestamp_V_load_6_reg_11255;
+reg   [19:0] sample_period_samples_10_timestamp_V_load_6_reg_11260;
+reg   [19:0] sample_period_samples_11_timestamp_V_load_6_reg_11265;
+reg   [11:0] sample_period_samples_0_sample_V_load_7_reg_11270;
+reg   [11:0] sample_period_samples_1_sample_V_load_7_reg_11275;
+reg   [11:0] sample_period_samples_2_sample_V_load_7_reg_11280;
+reg   [11:0] sample_period_samples_3_sample_V_load_7_reg_11285;
+reg   [11:0] sample_period_samples_4_sample_V_load_7_reg_11290;
+reg   [11:0] sample_period_samples_5_sample_V_load_7_reg_11295;
+reg   [11:0] sample_period_samples_6_sample_V_load_7_reg_11300;
+reg   [11:0] sample_period_samples_7_sample_V_load_7_reg_11305;
+reg   [11:0] sample_period_samples_8_sample_V_load_7_reg_11310;
+reg   [11:0] sample_period_samples_9_sample_V_load_7_reg_11315;
+reg   [11:0] sample_period_samples_10_sample_V_load_7_reg_11320;
+reg   [11:0] sample_period_samples_11_sample_V_load_7_reg_11325;
+reg   [19:0] sample_period_samples_0_timestamp_V_load_7_reg_11330;
+reg   [19:0] sample_period_samples_1_timestamp_V_load_7_reg_11335;
+reg   [19:0] sample_period_samples_2_timestamp_V_load_7_reg_11340;
+reg   [19:0] sample_period_samples_3_timestamp_V_load_7_reg_11345;
+reg   [19:0] sample_period_samples_4_timestamp_V_load_7_reg_11350;
+reg   [19:0] sample_period_samples_5_timestamp_V_load_7_reg_11355;
+reg   [19:0] sample_period_samples_6_timestamp_V_load_7_reg_11360;
+reg   [19:0] sample_period_samples_7_timestamp_V_load_7_reg_11365;
+reg   [19:0] sample_period_samples_8_timestamp_V_load_7_reg_11370;
+reg   [19:0] sample_period_samples_9_timestamp_V_load_7_reg_11375;
+reg   [19:0] sample_period_samples_10_timestamp_V_load_7_reg_11380;
+reg   [19:0] sample_period_samples_11_timestamp_V_load_7_reg_11385;
+wire   [0:0] icmp_ln52_fu_6468_p2;
+reg   [0:0] icmp_ln52_reg_11393;
+reg  signed [4:0] sliding_window_front_ptr_load_reg_11397;
+wire   [9:0] sub_ln54_fu_6514_p2;
+reg   [9:0] sub_ln54_reg_11407;
+wire   [4:0] grp_fu_6488_p2;
+reg   [4:0] new_front_ptr_reg_11421;
+wire    ap_CS_fsm_state19;
+wire   [4:0] trunc_ln61_fu_6536_p1;
+reg   [4:0] trunc_ln61_reg_11427;
+wire   [0:0] icmp_ln63_fu_6544_p2;
+reg   [0:0] icmp_ln63_reg_11432;
+wire   [6:0] tmp_10_fu_6587_p3;
+reg   [6:0] tmp_10_reg_11444;
+wire    ap_CS_fsm_state27;
+wire   [9:0] sub_ln75_fu_6634_p2;
+reg   [9:0] sub_ln75_reg_11454;
+wire   [9:0] sub_ln75_1_fu_6704_p2;
+reg   [9:0] sub_ln75_1_reg_11468;
+wire   [9:0] sub_ln75_2_fu_6782_p2;
+reg   [9:0] sub_ln75_2_reg_11484;
+wire    ap_CS_fsm_state28;
+wire   [9:0] sub_ln75_3_fu_6835_p2;
+reg   [9:0] sub_ln75_3_reg_11500;
+wire   [9:0] sub_ln75_4_fu_6908_p2;
+reg   [9:0] sub_ln75_4_reg_11516;
+wire    ap_CS_fsm_state29;
+wire   [9:0] sub_ln75_5_fu_6961_p2;
+reg   [9:0] sub_ln75_5_reg_11532;
+wire   [9:0] sub_ln75_6_fu_7034_p2;
+reg   [9:0] sub_ln75_6_reg_11548;
+wire    ap_CS_fsm_state30;
+wire   [9:0] sub_ln75_7_fu_7087_p2;
+reg   [9:0] sub_ln75_7_reg_11564;
+wire   [7:0] tmp_fu_8031_p3;
+reg   [7:0] tmp_reg_11580;
+wire    ap_CS_fsm_state80;
+wire   [9:0] sub_ln54_1_fu_8084_p2;
+reg   [9:0] sub_ln54_1_reg_11591;
+wire   [9:0] sub_ln54_2_fu_8266_p2;
+reg   [9:0] sub_ln54_2_reg_11605;
+wire    ap_CS_fsm_state86;
+wire   [9:0] sub_ln54_3_fu_8433_p2;
+reg   [9:0] sub_ln54_3_reg_11619;
+wire    ap_CS_fsm_state92;
+wire   [9:0] sub_ln54_4_fu_8520_p2;
+reg   [9:0] sub_ln54_4_reg_11633;
+wire    ap_CS_fsm_state93;
+wire   [9:0] sub_ln54_5_fu_8571_p2;
+reg   [9:0] sub_ln54_5_reg_11649;
+wire   [9:0] sub_ln54_6_fu_8642_p2;
+reg   [9:0] sub_ln54_6_reg_11665;
+wire    ap_CS_fsm_state94;
+wire   [9:0] sub_ln54_7_fu_8693_p2;
+reg   [9:0] sub_ln54_7_reg_11681;
 wire    ap_block_pp0_stage0_subdone;
 reg    ap_condition_pp0_exit_iter0_state2;
 reg    ap_enable_reg_pp0_iter1;
@@ -2832,39 +1121,570 @@ reg    sample_period_samples_11_timestamp_V_ce0;
 reg    sample_period_samples_11_timestamp_V_we0;
 reg   [2:0] sample_period_samples_11_timestamp_V_address1;
 reg    sample_period_samples_11_timestamp_V_ce1;
-reg   [3:0] ap_phi_mux_i_phi_fu_7318_p4;
+reg   [3:0] ap_phi_mux_i_phi_fu_6153_p4;
 wire    ap_block_pp0_stage0;
-reg   [3:0] i_1_reg_7326;
+reg   [3:0] i_4_reg_6161;
 wire    ap_CS_fsm_state6;
 wire    ap_CS_fsm_state4;
-wire   [63:0] zext_ln87_fu_7353_p1;
-wire   [63:0] i_cast_fu_7369_p1;
-wire   [63:0] zext_ln54_fu_7659_p1;
-wire   [63:0] zext_ln75_fu_7912_p1;
-wire    ap_CS_fsm_state29;
-wire   [31:0] add_ln71_fu_7898_p2;
-wire   [0:0] icmp_ln69_fu_7893_p2;
-wire   [5:0] grp_fu_7881_p2;
-wire   [2:0] trunc_ln87_fu_7349_p1;
-wire  signed [5:0] sext_ln52_fu_7643_p0;
-wire  signed [6:0] sext_ln52_fu_7643_p1;
-wire   [6:0] grp_fu_7653_p0;
-wire   [5:0] grp_fu_7653_p1;
-wire  signed [5:0] zext_ln54_fu_7659_p0;
-wire   [5:0] grp_fu_7881_p0;
-wire   [4:0] trunc_ln75_fu_7909_p1;
-reg    grp_fu_7653_ap_start;
-wire    grp_fu_7653_ap_done;
-reg    grp_fu_7881_ap_start;
-wire    grp_fu_7881_ap_done;
-reg   [27:0] ap_NS_fsm;
+wire   [63:0] zext_ln95_fu_6188_p1;
+wire   [63:0] i_cast_fu_6204_p1;
+wire   [63:0] zext_ln54_1_fu_6520_p1;
+wire   [63:0] zext_ln54_2_fu_6531_p1;
+wire   [63:0] zext_ln75_2_fu_6640_p1;
+wire   [63:0] zext_ln75_3_fu_6651_p1;
+wire   [63:0] zext_ln75_fu_6595_p1;
+wire   [63:0] tmp_12_fu_6662_p3;
+wire   [63:0] zext_ln75_4_fu_6720_p1;
+wire   [63:0] zext_ln75_5_fu_6730_p1;
+wire   [63:0] tmp_13_fu_6740_p3;
+wire   [63:0] tmp_14_fu_6793_p3;
+wire   [63:0] zext_ln75_6_fu_6846_p1;
+wire   [63:0] zext_ln75_7_fu_6856_p1;
+wire   [63:0] tmp_15_fu_6866_p3;
+wire   [63:0] tmp_16_fu_6919_p3;
+wire   [63:0] zext_ln75_8_fu_6972_p1;
+wire   [63:0] zext_ln75_9_fu_6982_p1;
+wire   [63:0] tmp_17_fu_6992_p3;
+wire   [63:0] tmp_18_fu_7045_p3;
+wire   [63:0] zext_ln75_10_fu_7098_p1;
+wire    ap_CS_fsm_state31;
+wire   [63:0] zext_ln75_11_fu_7108_p1;
+wire   [63:0] zext_ln75_12_fu_7118_p1;
+wire    ap_CS_fsm_state32;
+wire   [63:0] zext_ln75_13_fu_7128_p1;
+wire   [63:0] zext_ln75_14_fu_7133_p1;
+wire    ap_CS_fsm_state33;
+wire   [63:0] zext_ln75_15_fu_7142_p1;
+wire   [63:0] zext_ln75_16_fu_7152_p1;
+wire    ap_CS_fsm_state34;
+wire   [63:0] zext_ln75_17_fu_7162_p1;
+wire   [63:0] zext_ln75_18_fu_7172_p1;
+wire    ap_CS_fsm_state35;
+wire   [63:0] zext_ln75_19_fu_7182_p1;
+wire   [63:0] zext_ln75_20_fu_7192_p1;
+wire    ap_CS_fsm_state36;
+wire   [63:0] zext_ln75_21_fu_7202_p1;
+wire   [63:0] zext_ln75_22_fu_7212_p1;
+wire    ap_CS_fsm_state37;
+wire   [63:0] zext_ln75_23_fu_7222_p1;
+wire   [63:0] zext_ln75_24_fu_7232_p1;
+wire    ap_CS_fsm_state38;
+wire   [63:0] zext_ln75_25_fu_7242_p1;
+wire   [63:0] zext_ln75_26_fu_7247_p1;
+wire    ap_CS_fsm_state39;
+wire   [63:0] zext_ln75_27_fu_7256_p1;
+wire   [63:0] zext_ln75_28_fu_7266_p1;
+wire    ap_CS_fsm_state40;
+wire   [63:0] zext_ln75_29_fu_7276_p1;
+wire   [63:0] zext_ln75_30_fu_7286_p1;
+wire    ap_CS_fsm_state41;
+wire   [63:0] zext_ln75_31_fu_7296_p1;
+wire   [63:0] zext_ln75_32_fu_7306_p1;
+wire    ap_CS_fsm_state42;
+wire   [63:0] zext_ln75_33_fu_7316_p1;
+wire   [63:0] zext_ln75_34_fu_7326_p1;
+wire    ap_CS_fsm_state43;
+wire   [63:0] zext_ln75_35_fu_7336_p1;
+wire   [63:0] zext_ln75_36_fu_7346_p1;
+wire    ap_CS_fsm_state44;
+wire   [63:0] zext_ln75_37_fu_7356_p1;
+wire   [63:0] zext_ln75_38_fu_7361_p1;
+wire    ap_CS_fsm_state45;
+wire   [63:0] zext_ln75_39_fu_7370_p1;
+wire   [63:0] zext_ln75_40_fu_7380_p1;
+wire    ap_CS_fsm_state46;
+wire   [63:0] zext_ln75_41_fu_7390_p1;
+wire   [63:0] zext_ln75_42_fu_7400_p1;
+wire    ap_CS_fsm_state47;
+wire   [63:0] zext_ln75_43_fu_7410_p1;
+wire   [63:0] zext_ln75_44_fu_7420_p1;
+wire    ap_CS_fsm_state48;
+wire   [63:0] zext_ln75_45_fu_7430_p1;
+wire   [63:0] zext_ln75_46_fu_7440_p1;
+wire    ap_CS_fsm_state49;
+wire   [63:0] zext_ln75_47_fu_7450_p1;
+wire   [63:0] zext_ln75_48_fu_7460_p1;
+wire    ap_CS_fsm_state50;
+wire   [63:0] zext_ln75_49_fu_7470_p1;
+wire   [63:0] zext_ln75_50_fu_7475_p1;
+wire    ap_CS_fsm_state51;
+wire   [63:0] zext_ln75_51_fu_7484_p1;
+wire   [63:0] zext_ln75_52_fu_7494_p1;
+wire    ap_CS_fsm_state52;
+wire   [63:0] zext_ln75_53_fu_7504_p1;
+wire   [63:0] zext_ln75_54_fu_7514_p1;
+wire    ap_CS_fsm_state53;
+wire   [63:0] zext_ln75_55_fu_7524_p1;
+wire   [63:0] zext_ln75_56_fu_7534_p1;
+wire    ap_CS_fsm_state54;
+wire   [63:0] zext_ln75_57_fu_7544_p1;
+wire   [63:0] zext_ln75_58_fu_7554_p1;
+wire    ap_CS_fsm_state55;
+wire   [63:0] zext_ln75_59_fu_7564_p1;
+wire   [63:0] zext_ln75_60_fu_7574_p1;
+wire    ap_CS_fsm_state56;
+wire   [63:0] zext_ln75_61_fu_7584_p1;
+wire   [63:0] zext_ln75_62_fu_7589_p1;
+wire    ap_CS_fsm_state57;
+wire   [63:0] zext_ln75_63_fu_7598_p1;
+wire   [63:0] zext_ln75_64_fu_7608_p1;
+wire    ap_CS_fsm_state58;
+wire   [63:0] zext_ln75_65_fu_7618_p1;
+wire   [63:0] zext_ln75_66_fu_7628_p1;
+wire    ap_CS_fsm_state59;
+wire   [63:0] zext_ln75_67_fu_7638_p1;
+wire   [63:0] zext_ln75_68_fu_7648_p1;
+wire    ap_CS_fsm_state60;
+wire   [63:0] zext_ln75_69_fu_7658_p1;
+wire   [63:0] zext_ln75_70_fu_7668_p1;
+wire    ap_CS_fsm_state61;
+wire   [63:0] zext_ln75_71_fu_7678_p1;
+wire   [63:0] zext_ln75_72_fu_7688_p1;
+wire    ap_CS_fsm_state62;
+wire   [63:0] zext_ln75_73_fu_7698_p1;
+wire   [63:0] zext_ln75_74_fu_7703_p1;
+wire    ap_CS_fsm_state63;
+wire   [63:0] zext_ln75_75_fu_7712_p1;
+wire   [63:0] zext_ln75_76_fu_7722_p1;
+wire    ap_CS_fsm_state64;
+wire   [63:0] zext_ln75_77_fu_7732_p1;
+wire   [63:0] zext_ln75_78_fu_7742_p1;
+wire    ap_CS_fsm_state65;
+wire   [63:0] zext_ln75_79_fu_7752_p1;
+wire   [63:0] zext_ln75_80_fu_7762_p1;
+wire    ap_CS_fsm_state66;
+wire   [63:0] zext_ln75_81_fu_7772_p1;
+wire   [63:0] zext_ln75_82_fu_7782_p1;
+wire    ap_CS_fsm_state67;
+wire   [63:0] zext_ln75_83_fu_7792_p1;
+wire   [63:0] zext_ln75_84_fu_7802_p1;
+wire    ap_CS_fsm_state68;
+wire   [63:0] zext_ln75_85_fu_7812_p1;
+wire   [63:0] zext_ln75_86_fu_7817_p1;
+wire    ap_CS_fsm_state69;
+wire   [63:0] zext_ln75_87_fu_7826_p1;
+wire   [63:0] zext_ln75_88_fu_7836_p1;
+wire    ap_CS_fsm_state70;
+wire   [63:0] zext_ln75_89_fu_7846_p1;
+wire   [63:0] zext_ln75_90_fu_7856_p1;
+wire    ap_CS_fsm_state71;
+wire   [63:0] zext_ln75_91_fu_7866_p1;
+wire   [63:0] zext_ln75_92_fu_7876_p1;
+wire    ap_CS_fsm_state72;
+wire   [63:0] zext_ln75_93_fu_7886_p1;
+wire   [63:0] zext_ln75_94_fu_7896_p1;
+wire    ap_CS_fsm_state73;
+wire   [63:0] zext_ln75_95_fu_7906_p1;
+wire   [63:0] zext_ln75_96_fu_7916_p1;
+wire    ap_CS_fsm_state74;
+wire   [63:0] zext_ln75_97_fu_7926_p1;
+wire   [63:0] zext_ln54_3_fu_7936_p1;
+wire    ap_CS_fsm_state75;
+wire   [63:0] zext_ln54_4_fu_7946_p1;
+wire   [63:0] zext_ln54_5_fu_7956_p1;
+wire    ap_CS_fsm_state76;
+wire   [63:0] zext_ln54_6_fu_7966_p1;
+wire   [63:0] zext_ln54_7_fu_7976_p1;
+wire    ap_CS_fsm_state77;
+wire   [63:0] zext_ln54_8_fu_7986_p1;
+wire   [63:0] zext_ln54_9_fu_7996_p1;
+wire    ap_CS_fsm_state78;
+wire   [63:0] zext_ln54_10_fu_8006_p1;
+wire   [63:0] zext_ln54_11_fu_8016_p1;
+wire    ap_CS_fsm_state79;
+wire   [63:0] zext_ln54_12_fu_8026_p1;
+wire   [63:0] zext_ln54_13_fu_8090_p1;
+wire   [63:0] zext_ln54_14_fu_8101_p1;
+wire   [63:0] tmp_3_fu_8044_p3;
+wire   [63:0] zext_ln54_15_fu_8111_p1;
+wire    ap_CS_fsm_state81;
+wire   [63:0] zext_ln54_16_fu_8121_p1;
+wire   [63:0] zext_ln54_17_fu_8131_p1;
+wire    ap_CS_fsm_state82;
+wire   [63:0] zext_ln54_18_fu_8141_p1;
+wire   [63:0] zext_ln54_19_fu_8151_p1;
+wire    ap_CS_fsm_state83;
+wire   [63:0] zext_ln54_20_fu_8161_p1;
+wire   [63:0] zext_ln54_21_fu_8171_p1;
+wire    ap_CS_fsm_state84;
+wire   [63:0] zext_ln54_22_fu_8181_p1;
+wire   [63:0] zext_ln54_23_fu_8206_p1;
+wire    ap_CS_fsm_state85;
+wire   [63:0] zext_ln54_24_fu_8216_p1;
+wire   [63:0] zext_ln54_fu_8186_p1;
+wire   [63:0] zext_ln54_25_fu_8272_p1;
+wire   [63:0] zext_ln54_26_fu_8283_p1;
+wire   [63:0] tmp_4_fu_8226_p3;
+wire   [63:0] zext_ln54_27_fu_8293_p1;
+wire    ap_CS_fsm_state87;
+wire   [63:0] zext_ln54_28_fu_8303_p1;
+wire   [63:0] zext_ln54_29_fu_8313_p1;
+wire    ap_CS_fsm_state88;
+wire   [63:0] zext_ln54_30_fu_8323_p1;
+wire   [63:0] zext_ln54_31_fu_8333_p1;
+wire    ap_CS_fsm_state89;
+wire   [63:0] zext_ln54_32_fu_8343_p1;
+wire   [63:0] zext_ln54_33_fu_8353_p1;
+wire    ap_CS_fsm_state90;
+wire   [63:0] zext_ln54_34_fu_8363_p1;
+wire   [63:0] zext_ln54_35_fu_8373_p1;
+wire    ap_CS_fsm_state91;
+wire   [63:0] zext_ln54_36_fu_8383_p1;
+wire   [63:0] zext_ln54_37_fu_8439_p1;
+wire   [63:0] zext_ln54_38_fu_8450_p1;
+wire   [63:0] tmp_5_fu_8393_p3;
+wire   [63:0] zext_ln54_39_fu_8460_p1;
+wire   [63:0] zext_ln54_40_fu_8470_p1;
+wire   [63:0] tmp_6_fu_8480_p3;
+wire   [63:0] tmp_7_fu_8531_p3;
+wire   [63:0] zext_ln54_41_fu_8582_p1;
+wire   [63:0] zext_ln54_42_fu_8592_p1;
+wire   [63:0] tmp_8_fu_8602_p3;
+wire   [63:0] tmp_9_fu_8653_p3;
+wire   [63:0] zext_ln54_43_fu_8704_p1;
+wire    ap_CS_fsm_state95;
+wire   [63:0] zext_ln54_44_fu_8714_p1;
+wire   [63:0] zext_ln54_45_fu_8724_p1;
+wire    ap_CS_fsm_state96;
+wire   [63:0] zext_ln54_46_fu_8734_p1;
+wire   [63:0] zext_ln54_47_fu_8744_p1;
+wire    ap_CS_fsm_state97;
+wire   [63:0] zext_ln54_48_fu_8754_p1;
+wire   [63:0] zext_ln54_49_fu_8759_p1;
+wire    ap_CS_fsm_state98;
+wire   [63:0] zext_ln54_50_fu_8768_p1;
+wire   [63:0] zext_ln54_51_fu_8778_p1;
+wire    ap_CS_fsm_state99;
+wire   [63:0] zext_ln54_52_fu_8788_p1;
+wire   [63:0] zext_ln54_53_fu_8798_p1;
+wire    ap_CS_fsm_state100;
+wire   [63:0] zext_ln54_54_fu_8808_p1;
+wire   [63:0] zext_ln54_55_fu_8818_p1;
+wire    ap_CS_fsm_state101;
+wire   [63:0] zext_ln54_56_fu_8828_p1;
+wire   [63:0] zext_ln54_57_fu_8838_p1;
+wire    ap_CS_fsm_state102;
+wire   [63:0] zext_ln54_58_fu_8848_p1;
+wire   [63:0] zext_ln54_59_fu_8858_p1;
+wire    ap_CS_fsm_state103;
+wire   [63:0] zext_ln54_60_fu_8868_p1;
+wire   [63:0] zext_ln54_61_fu_8873_p1;
+wire    ap_CS_fsm_state104;
+wire   [63:0] zext_ln54_62_fu_8882_p1;
+wire   [63:0] zext_ln54_63_fu_8892_p1;
+wire    ap_CS_fsm_state105;
+wire   [63:0] zext_ln54_64_fu_8902_p1;
+wire   [63:0] zext_ln54_65_fu_8912_p1;
+wire    ap_CS_fsm_state106;
+wire   [63:0] zext_ln54_66_fu_8922_p1;
+wire   [63:0] zext_ln54_67_fu_8932_p1;
+wire    ap_CS_fsm_state107;
+wire   [63:0] zext_ln54_68_fu_8942_p1;
+wire   [63:0] zext_ln54_69_fu_8952_p1;
+wire    ap_CS_fsm_state108;
+wire   [63:0] zext_ln54_70_fu_8962_p1;
+wire   [63:0] zext_ln54_71_fu_8972_p1;
+wire    ap_CS_fsm_state109;
+wire   [63:0] zext_ln54_72_fu_8982_p1;
+wire   [63:0] zext_ln54_73_fu_8987_p1;
+wire    ap_CS_fsm_state110;
+wire   [63:0] zext_ln54_74_fu_8996_p1;
+wire   [63:0] zext_ln54_75_fu_9006_p1;
+wire    ap_CS_fsm_state111;
+wire   [63:0] zext_ln54_76_fu_9016_p1;
+wire   [63:0] zext_ln54_77_fu_9026_p1;
+wire    ap_CS_fsm_state112;
+wire   [63:0] zext_ln54_78_fu_9036_p1;
+wire   [63:0] zext_ln54_79_fu_9046_p1;
+wire    ap_CS_fsm_state113;
+wire   [63:0] zext_ln54_80_fu_9056_p1;
+wire   [63:0] zext_ln54_81_fu_9066_p1;
+wire    ap_CS_fsm_state114;
+wire   [63:0] zext_ln54_82_fu_9076_p1;
+wire   [63:0] zext_ln54_83_fu_9086_p1;
+wire    ap_CS_fsm_state115;
+wire   [63:0] zext_ln54_84_fu_9096_p1;
+wire   [63:0] zext_ln54_85_fu_9101_p1;
+wire    ap_CS_fsm_state116;
+wire   [63:0] zext_ln54_86_fu_9110_p1;
+wire   [63:0] zext_ln54_87_fu_9120_p1;
+wire    ap_CS_fsm_state117;
+wire   [63:0] zext_ln54_88_fu_9130_p1;
+wire   [63:0] zext_ln54_89_fu_9140_p1;
+wire    ap_CS_fsm_state118;
+wire   [63:0] zext_ln54_90_fu_9150_p1;
+wire   [63:0] zext_ln54_91_fu_9160_p1;
+wire    ap_CS_fsm_state119;
+wire   [63:0] zext_ln54_92_fu_9170_p1;
+wire   [63:0] zext_ln54_93_fu_9180_p1;
+wire    ap_CS_fsm_state120;
+wire   [63:0] zext_ln54_94_fu_9190_p1;
+wire   [63:0] zext_ln54_95_fu_9200_p1;
+wire    ap_CS_fsm_state121;
+wire   [63:0] zext_ln54_96_fu_9210_p1;
+wire   [31:0] add_ln71_fu_6573_p2;
+wire   [0:0] icmp_ln69_fu_6568_p2;
+wire   [4:0] grp_fu_6556_p2;
+wire   [2:0] trunc_ln95_fu_6184_p1;
+wire  signed [4:0] sext_ln52_fu_6478_p0;
+wire  signed [5:0] sext_ln52_fu_6478_p1;
+wire   [5:0] grp_fu_6488_p0;
+wire   [4:0] grp_fu_6488_p1;
+wire  signed [4:0] trunc_ln54_fu_6494_p0;
+wire   [2:0] trunc_ln54_fu_6494_p1;
+wire  signed [4:0] tmp_s_fu_6506_p1;
+wire   [9:0] tmp_19_cast_fu_6498_p3;
+wire   [9:0] tmp_s_fu_6506_p3;
+wire   [9:0] or_ln54_fu_6525_p2;
+wire   [4:0] grp_fu_6556_p0;
+wire   [3:0] trunc_ln75_fu_6584_p1;
+wire   [2:0] trunc_ln75_1_fu_6611_p1;
+wire   [8:0] tmp_11_fu_6622_p3;
+wire   [9:0] tmp_31_cast_fu_6614_p3;
+wire   [9:0] zext_ln75_1_fu_6630_p1;
+wire   [9:0] or_ln75_fu_6645_p2;
+wire   [6:0] or_ln75_11_fu_6656_p2;
+wire   [5:0] trunc_ln75_2_fu_6682_p1;
+wire   [9:0] p_shl14_cast_fu_6686_p3;
+wire   [9:0] p_shl15_cast_fu_6694_p4;
+wire   [9:0] or_ln75_1_fu_6715_p2;
+wire   [9:0] or_ln75_2_fu_6725_p2;
+wire   [6:0] or_ln75_15_fu_6735_p2;
+wire   [5:0] trunc_ln75_3_fu_6760_p1;
+wire   [9:0] p_shl26_cast_fu_6764_p3;
+wire   [9:0] p_shl27_cast_fu_6772_p4;
+wire   [6:0] or_ln75_23_fu_6788_p2;
+wire   [5:0] trunc_ln75_4_fu_6813_p1;
+wire   [9:0] p_shl24_cast_fu_6817_p3;
+wire   [9:0] p_shl25_cast_fu_6825_p4;
+wire   [9:0] or_ln75_3_fu_6841_p2;
+wire   [9:0] or_ln75_4_fu_6851_p2;
+wire   [6:0] or_ln75_27_fu_6861_p2;
+wire   [5:0] trunc_ln75_5_fu_6886_p1;
+wire   [9:0] p_shl22_cast_fu_6890_p3;
+wire   [9:0] p_shl23_cast_fu_6898_p4;
+wire   [6:0] or_ln75_39_fu_6914_p2;
+wire   [5:0] trunc_ln75_6_fu_6939_p1;
+wire   [9:0] p_shl20_cast_fu_6943_p3;
+wire   [9:0] p_shl21_cast_fu_6951_p4;
+wire   [9:0] or_ln75_5_fu_6967_p2;
+wire   [9:0] or_ln75_6_fu_6977_p2;
+wire   [6:0] or_ln75_43_fu_6987_p2;
+wire   [5:0] trunc_ln75_7_fu_7012_p1;
+wire   [9:0] p_shl18_cast_fu_7016_p3;
+wire   [9:0] p_shl19_cast_fu_7024_p4;
+wire   [6:0] or_ln75_51_fu_7040_p2;
+wire   [5:0] trunc_ln75_8_fu_7065_p1;
+wire   [9:0] p_shl16_cast_fu_7069_p3;
+wire   [9:0] p_shl17_cast_fu_7077_p4;
+wire   [9:0] or_ln75_7_fu_7093_p2;
+wire   [9:0] or_ln75_8_fu_7103_p2;
+wire   [9:0] or_ln75_9_fu_7113_p2;
+wire   [9:0] or_ln75_10_fu_7123_p2;
+wire   [9:0] or_ln75_12_fu_7137_p2;
+wire   [9:0] or_ln75_13_fu_7147_p2;
+wire   [9:0] or_ln75_14_fu_7157_p2;
+wire   [9:0] add_ln75_fu_7167_p2;
+wire   [9:0] add_ln75_1_fu_7177_p2;
+wire   [9:0] add_ln75_2_fu_7187_p2;
+wire   [9:0] add_ln75_3_fu_7197_p2;
+wire   [9:0] add_ln75_4_fu_7207_p2;
+wire   [9:0] add_ln75_5_fu_7217_p2;
+wire   [9:0] add_ln75_6_fu_7227_p2;
+wire   [9:0] add_ln75_7_fu_7237_p2;
+wire   [9:0] or_ln75_16_fu_7251_p2;
+wire   [9:0] or_ln75_17_fu_7261_p2;
+wire   [9:0] or_ln75_18_fu_7271_p2;
+wire   [9:0] or_ln75_19_fu_7281_p2;
+wire   [9:0] or_ln75_20_fu_7291_p2;
+wire   [9:0] or_ln75_21_fu_7301_p2;
+wire   [9:0] or_ln75_22_fu_7311_p2;
+wire   [9:0] add_ln75_8_fu_7321_p2;
+wire   [9:0] add_ln75_9_fu_7331_p2;
+wire   [9:0] add_ln75_10_fu_7341_p2;
+wire   [9:0] add_ln75_11_fu_7351_p2;
+wire   [9:0] or_ln75_24_fu_7365_p2;
+wire   [9:0] or_ln75_25_fu_7375_p2;
+wire   [9:0] or_ln75_26_fu_7385_p2;
+wire   [9:0] add_ln75_12_fu_7395_p2;
+wire   [9:0] add_ln75_13_fu_7405_p2;
+wire   [9:0] add_ln75_14_fu_7415_p2;
+wire   [9:0] add_ln75_15_fu_7425_p2;
+wire   [9:0] add_ln75_16_fu_7435_p2;
+wire   [9:0] add_ln75_17_fu_7445_p2;
+wire   [9:0] add_ln75_18_fu_7455_p2;
+wire   [9:0] add_ln75_19_fu_7465_p2;
+wire   [9:0] or_ln75_28_fu_7479_p2;
+wire   [9:0] or_ln75_29_fu_7489_p2;
+wire   [9:0] or_ln75_30_fu_7499_p2;
+wire   [9:0] or_ln75_31_fu_7509_p2;
+wire   [9:0] or_ln75_32_fu_7519_p2;
+wire   [9:0] or_ln75_33_fu_7529_p2;
+wire   [9:0] or_ln75_34_fu_7539_p2;
+wire   [9:0] or_ln75_35_fu_7549_p2;
+wire   [9:0] or_ln75_36_fu_7559_p2;
+wire   [9:0] or_ln75_37_fu_7569_p2;
+wire   [9:0] or_ln75_38_fu_7579_p2;
+wire   [9:0] or_ln75_40_fu_7593_p2;
+wire   [9:0] or_ln75_41_fu_7603_p2;
+wire   [9:0] or_ln75_42_fu_7613_p2;
+wire   [9:0] add_ln75_20_fu_7623_p2;
+wire   [9:0] add_ln75_21_fu_7633_p2;
+wire   [9:0] add_ln75_22_fu_7643_p2;
+wire   [9:0] add_ln75_23_fu_7653_p2;
+wire   [9:0] add_ln75_24_fu_7663_p2;
+wire   [9:0] add_ln75_25_fu_7673_p2;
+wire   [9:0] add_ln75_26_fu_7683_p2;
+wire   [9:0] add_ln75_27_fu_7693_p2;
+wire   [9:0] or_ln75_44_fu_7707_p2;
+wire   [9:0] or_ln75_45_fu_7717_p2;
+wire   [9:0] or_ln75_46_fu_7727_p2;
+wire   [9:0] or_ln75_47_fu_7737_p2;
+wire   [9:0] or_ln75_48_fu_7747_p2;
+wire   [9:0] or_ln75_49_fu_7757_p2;
+wire   [9:0] or_ln75_50_fu_7767_p2;
+wire   [9:0] add_ln75_28_fu_7777_p2;
+wire   [9:0] add_ln75_29_fu_7787_p2;
+wire   [9:0] add_ln75_30_fu_7797_p2;
+wire   [9:0] add_ln75_31_fu_7807_p2;
+wire   [9:0] or_ln75_52_fu_7821_p2;
+wire   [9:0] or_ln75_53_fu_7831_p2;
+wire   [9:0] or_ln75_54_fu_7841_p2;
+wire   [9:0] add_ln75_32_fu_7851_p2;
+wire   [9:0] add_ln75_33_fu_7861_p2;
+wire   [9:0] add_ln75_34_fu_7871_p2;
+wire   [9:0] add_ln75_35_fu_7881_p2;
+wire   [9:0] add_ln75_36_fu_7891_p2;
+wire   [9:0] add_ln75_37_fu_7901_p2;
+wire   [9:0] add_ln75_38_fu_7911_p2;
+wire   [9:0] add_ln75_39_fu_7921_p2;
+wire   [9:0] or_ln54_1_fu_7931_p2;
+wire   [9:0] or_ln54_2_fu_7941_p2;
+wire   [9:0] or_ln54_3_fu_7951_p2;
+wire   [9:0] or_ln54_4_fu_7961_p2;
+wire   [9:0] or_ln54_5_fu_7971_p2;
+wire   [9:0] or_ln54_6_fu_7981_p2;
+wire   [9:0] or_ln54_7_fu_7991_p2;
+wire   [9:0] or_ln54_8_fu_8001_p2;
+wire   [9:0] or_ln54_9_fu_8011_p2;
+wire   [9:0] or_ln54_10_fu_8021_p2;
+wire   [7:0] or_ln54_11_fu_8038_p2;
+wire   [5:0] trunc_ln54_1_fu_8064_p1;
+wire   [9:0] p_shl12_cast_fu_8068_p3;
+wire   [9:0] p_shl13_cast_fu_8076_p3;
+wire   [9:0] or_ln54_12_fu_8095_p2;
+wire   [9:0] or_ln54_13_fu_8106_p2;
+wire   [9:0] or_ln54_14_fu_8116_p2;
+wire   [9:0] add_ln54_fu_8126_p2;
+wire   [9:0] add_ln54_1_fu_8136_p2;
+wire   [9:0] add_ln54_2_fu_8146_p2;
+wire   [9:0] add_ln54_3_fu_8156_p2;
+wire   [9:0] add_ln54_4_fu_8166_p2;
+wire   [9:0] add_ln54_5_fu_8176_p2;
+wire   [9:0] add_ln54_6_fu_8201_p2;
+wire   [9:0] add_ln54_7_fu_8211_p2;
+wire   [7:0] or_ln54_15_fu_8221_p2;
+wire   [5:0] trunc_ln54_2_fu_8246_p1;
+wire   [9:0] p_shl10_cast_fu_8250_p3;
+wire   [9:0] p_shl11_cast_fu_8258_p3;
+wire   [9:0] or_ln54_16_fu_8277_p2;
+wire   [9:0] or_ln54_17_fu_8288_p2;
+wire   [9:0] or_ln54_18_fu_8298_p2;
+wire   [9:0] or_ln54_19_fu_8308_p2;
+wire   [9:0] or_ln54_20_fu_8318_p2;
+wire   [9:0] or_ln54_21_fu_8328_p2;
+wire   [9:0] or_ln54_22_fu_8338_p2;
+wire   [9:0] add_ln54_8_fu_8348_p2;
+wire   [9:0] add_ln54_9_fu_8358_p2;
+wire   [9:0] add_ln54_10_fu_8368_p2;
+wire   [9:0] add_ln54_11_fu_8378_p2;
+wire   [7:0] or_ln54_23_fu_8388_p2;
+wire   [5:0] trunc_ln54_3_fu_8413_p1;
+wire   [9:0] p_shl8_cast_fu_8417_p3;
+wire   [9:0] p_shl9_cast_fu_8425_p3;
+wire   [9:0] or_ln54_24_fu_8444_p2;
+wire   [9:0] or_ln54_25_fu_8455_p2;
+wire   [9:0] or_ln54_26_fu_8465_p2;
+wire   [7:0] or_ln54_27_fu_8475_p2;
+wire   [5:0] trunc_ln54_4_fu_8500_p1;
+wire   [9:0] p_shl6_cast_fu_8504_p3;
+wire   [9:0] p_shl7_cast_fu_8512_p3;
+wire   [7:0] or_ln54_39_fu_8526_p2;
+wire   [5:0] trunc_ln54_5_fu_8551_p1;
+wire   [9:0] p_shl4_cast_fu_8555_p3;
+wire   [9:0] p_shl5_cast_fu_8563_p3;
+wire   [9:0] add_ln54_12_fu_8577_p2;
+wire   [9:0] add_ln54_13_fu_8587_p2;
+wire   [7:0] or_ln54_43_fu_8597_p2;
+wire   [5:0] trunc_ln54_6_fu_8622_p1;
+wire   [9:0] p_shl2_cast_fu_8626_p3;
+wire   [9:0] p_shl3_cast_fu_8634_p3;
+wire   [7:0] or_ln54_51_fu_8648_p2;
+wire   [5:0] trunc_ln54_7_fu_8673_p1;
+wire   [9:0] p_shl_cast_fu_8677_p3;
+wire   [9:0] p_shl1_cast_fu_8685_p3;
+wire   [9:0] add_ln54_14_fu_8699_p2;
+wire   [9:0] add_ln54_15_fu_8709_p2;
+wire   [9:0] add_ln54_16_fu_8719_p2;
+wire   [9:0] add_ln54_17_fu_8729_p2;
+wire   [9:0] add_ln54_18_fu_8739_p2;
+wire   [9:0] add_ln54_19_fu_8749_p2;
+wire   [9:0] or_ln54_28_fu_8763_p2;
+wire   [9:0] or_ln54_29_fu_8773_p2;
+wire   [9:0] or_ln54_30_fu_8783_p2;
+wire   [9:0] or_ln54_31_fu_8793_p2;
+wire   [9:0] or_ln54_32_fu_8803_p2;
+wire   [9:0] or_ln54_33_fu_8813_p2;
+wire   [9:0] or_ln54_34_fu_8823_p2;
+wire   [9:0] or_ln54_35_fu_8833_p2;
+wire   [9:0] or_ln54_36_fu_8843_p2;
+wire   [9:0] or_ln54_37_fu_8853_p2;
+wire   [9:0] or_ln54_38_fu_8863_p2;
+wire   [9:0] or_ln54_40_fu_8877_p2;
+wire   [9:0] or_ln54_41_fu_8887_p2;
+wire   [9:0] or_ln54_42_fu_8897_p2;
+wire   [9:0] add_ln54_20_fu_8907_p2;
+wire   [9:0] add_ln54_21_fu_8917_p2;
+wire   [9:0] add_ln54_22_fu_8927_p2;
+wire   [9:0] add_ln54_23_fu_8937_p2;
+wire   [9:0] add_ln54_24_fu_8947_p2;
+wire   [9:0] add_ln54_25_fu_8957_p2;
+wire   [9:0] add_ln54_26_fu_8967_p2;
+wire   [9:0] add_ln54_27_fu_8977_p2;
+wire   [9:0] or_ln54_44_fu_8991_p2;
+wire   [9:0] or_ln54_45_fu_9001_p2;
+wire   [9:0] or_ln54_46_fu_9011_p2;
+wire   [9:0] or_ln54_47_fu_9021_p2;
+wire   [9:0] or_ln54_48_fu_9031_p2;
+wire   [9:0] or_ln54_49_fu_9041_p2;
+wire   [9:0] or_ln54_50_fu_9051_p2;
+wire   [9:0] add_ln54_28_fu_9061_p2;
+wire   [9:0] add_ln54_29_fu_9071_p2;
+wire   [9:0] add_ln54_30_fu_9081_p2;
+wire   [9:0] add_ln54_31_fu_9091_p2;
+wire   [9:0] or_ln54_52_fu_9105_p2;
+wire   [9:0] or_ln54_53_fu_9115_p2;
+wire   [9:0] or_ln54_54_fu_9125_p2;
+wire   [9:0] add_ln54_32_fu_9135_p2;
+wire   [9:0] add_ln54_33_fu_9145_p2;
+wire   [9:0] add_ln54_34_fu_9155_p2;
+wire   [9:0] add_ln54_35_fu_9165_p2;
+wire   [9:0] add_ln54_36_fu_9175_p2;
+wire   [9:0] add_ln54_37_fu_9185_p2;
+wire   [9:0] add_ln54_38_fu_9195_p2;
+wire   [9:0] add_ln54_39_fu_9205_p2;
+reg    grp_fu_6488_ap_start;
+wire    grp_fu_6488_ap_done;
+reg    grp_fu_6556_ap_start;
+wire    grp_fu_6556_ap_done;
+reg   [119:0] ap_NS_fsm;
 reg    ap_idle_pp0;
 wire    ap_enable_pp0;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 28'd1;
+#0 ap_CS_fsm = 120'd1;
 #0 sliding_window_size_s = 32'd0;
 #0 ap_enable_reg_pp0_iter0 = 1'b0;
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
@@ -3614,38 +2434,38 @@ sample_period_samples_11_timestamp_V_U(
     .q1(sample_period_samples_11_timestamp_V_q1)
 );
 
-LLSSineReconstruction_srem_7ns_6ns_6_11_seq_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 11 ),
-    .din0_WIDTH( 7 ),
-    .din1_WIDTH( 6 ),
-    .dout_WIDTH( 6 ))
-srem_7ns_6ns_6_11_seq_1_U1(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .start(grp_fu_7653_ap_start),
-    .done(grp_fu_7653_ap_done),
-    .din0(grp_fu_7653_p0),
-    .din1(grp_fu_7653_p1),
-    .ce(1'b1),
-    .dout(grp_fu_7653_p2)
-);
-
-LLSSineReconstruction_srem_6ns_6ns_6_10_seq_1 #(
+LLSSineReconstruction_srem_6ns_5ns_5_10_seq_1 #(
     .ID( 1 ),
     .NUM_STAGE( 10 ),
     .din0_WIDTH( 6 ),
-    .din1_WIDTH( 6 ),
-    .dout_WIDTH( 6 ))
-srem_6ns_6ns_6_10_seq_1_U2(
+    .din1_WIDTH( 5 ),
+    .dout_WIDTH( 5 ))
+srem_6ns_5ns_5_10_seq_1_U1(
     .clk(ap_clk),
     .reset(ap_rst),
-    .start(grp_fu_7881_ap_start),
-    .done(grp_fu_7881_ap_done),
-    .din0(grp_fu_7881_p0),
-    .din1(6'd20),
+    .start(grp_fu_6488_ap_start),
+    .done(grp_fu_6488_ap_done),
+    .din0(grp_fu_6488_p0),
+    .din1(grp_fu_6488_p1),
     .ce(1'b1),
-    .dout(grp_fu_7881_p2)
+    .dout(grp_fu_6488_p2)
+);
+
+LLSSineReconstruction_srem_5ns_5ns_5_9_seq_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 9 ),
+    .din0_WIDTH( 5 ),
+    .din1_WIDTH( 5 ),
+    .dout_WIDTH( 5 ))
+srem_5ns_5ns_5_9_seq_1_U2(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .start(grp_fu_6556_ap_start),
+    .done(grp_fu_6556_ap_done),
+    .din0(grp_fu_6556_p0),
+    .din1(5'd10),
+    .ce(1'b1),
+    .dout(grp_fu_6556_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -3660,9 +2480,9 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter0 <= 1'b0;
     end else begin
-        if (((1'b1 == ap_condition_pp0_exit_iter0_state2) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
+        if (((1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_condition_pp0_exit_iter0_state2))) begin
             ap_enable_reg_pp0_iter0 <= 1'b0;
-        end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+        end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
             ap_enable_reg_pp0_iter0 <= 1'b1;
         end
     end
@@ -3672,11 +2492,11 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter1 <= 1'b0;
     end else begin
-        if (((1'b1 == ap_condition_pp0_exit_iter0_state2) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
+        if (((1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_condition_pp0_exit_iter0_state2))) begin
             ap_enable_reg_pp0_iter1 <= (1'b1 ^ ap_condition_pp0_exit_iter0_state2);
         end else if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
             ap_enable_reg_pp0_iter1 <= ap_enable_reg_pp0_iter0;
-        end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+        end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
             ap_enable_reg_pp0_iter1 <= 1'b0;
         end
     end
@@ -3684,271 +2504,339 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        i_1_reg_7326 <= 4'd0;
+        i_4_reg_6161 <= 4'd0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        i_1_reg_7326 <= add_ln19_reg_8182;
+        i_4_reg_6161 <= add_ln19_reg_9290;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        i_reg_7314 <= 4'd0;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        i_reg_7314 <= add_ln84_reg_8113;
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+        i_reg_6149 <= 4'd0;
+    end else if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        i_reg_6149 <= add_ln92_reg_9221;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10))) begin
+    if (((icmp_ln69_fu_6568_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_size_s <= add_ln71_fu_6573_p2;
+    end else if ((1'b1 == ap_CS_fsm_state121)) begin
         sliding_window_size_s <= 32'd1;
-    end else if (((icmp_ln69_fu_7893_p2 == 1'd1) & (icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29))) begin
-        sliding_window_size_s <= add_ln71_fu_7898_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        add_ln19_reg_8182 <= add_ln19_fu_7589_p2;
-        zext_ln19_reg_8187[3 : 0] <= zext_ln19_fu_7595_p1[3 : 0];
+        add_ln19_reg_9290 <= add_ln19_fu_6424_p2;
+        zext_ln19_reg_9295[3 : 0] <= zext_ln19_fu_6430_p1[3 : 0];
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-        add_ln84_reg_8113 <= add_ln84_fu_7337_p2;
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        add_ln92_reg_9221 <= add_ln92_fu_6172_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        icmp_ln52_reg_10264 <= icmp_ln52_fu_7633_p2;
-        sample_period_samples_0_sample_V_load_6_reg_10018 <= sample_period_samples_0_sample_V_q0;
-        sample_period_samples_0_sample_V_load_7_reg_10138 <= sample_period_samples_0_sample_V_q1;
-        sample_period_samples_0_timestamp_V_load_6_reg_10078 <= sample_period_samples_0_timestamp_V_q0;
-        sample_period_samples_0_timestamp_V_load_7_reg_10198 <= sample_period_samples_0_timestamp_V_q1;
-        sample_period_samples_10_sample_V_load_6_reg_10068 <= sample_period_samples_10_sample_V_q0;
-        sample_period_samples_10_sample_V_load_7_reg_10188 <= sample_period_samples_10_sample_V_q1;
-        sample_period_samples_10_timestamp_V_load_6_reg_10128 <= sample_period_samples_10_timestamp_V_q0;
-        sample_period_samples_10_timestamp_V_load_7_reg_10248 <= sample_period_samples_10_timestamp_V_q1;
-        sample_period_samples_11_sample_V_load_6_reg_10073 <= sample_period_samples_11_sample_V_q0;
-        sample_period_samples_11_sample_V_load_7_reg_10193 <= sample_period_samples_11_sample_V_q1;
-        sample_period_samples_11_timestamp_V_load_6_reg_10133 <= sample_period_samples_11_timestamp_V_q0;
-        sample_period_samples_11_timestamp_V_load_7_reg_10253 <= sample_period_samples_11_timestamp_V_q1;
-        sample_period_samples_1_sample_V_load_6_reg_10023 <= sample_period_samples_1_sample_V_q0;
-        sample_period_samples_1_sample_V_load_7_reg_10143 <= sample_period_samples_1_sample_V_q1;
-        sample_period_samples_1_timestamp_V_load_6_reg_10083 <= sample_period_samples_1_timestamp_V_q0;
-        sample_period_samples_1_timestamp_V_load_7_reg_10203 <= sample_period_samples_1_timestamp_V_q1;
-        sample_period_samples_2_sample_V_load_6_reg_10028 <= sample_period_samples_2_sample_V_q0;
-        sample_period_samples_2_sample_V_load_7_reg_10148 <= sample_period_samples_2_sample_V_q1;
-        sample_period_samples_2_timestamp_V_load_6_reg_10088 <= sample_period_samples_2_timestamp_V_q0;
-        sample_period_samples_2_timestamp_V_load_7_reg_10208 <= sample_period_samples_2_timestamp_V_q1;
-        sample_period_samples_3_sample_V_load_6_reg_10033 <= sample_period_samples_3_sample_V_q0;
-        sample_period_samples_3_sample_V_load_7_reg_10153 <= sample_period_samples_3_sample_V_q1;
-        sample_period_samples_3_timestamp_V_load_6_reg_10093 <= sample_period_samples_3_timestamp_V_q0;
-        sample_period_samples_3_timestamp_V_load_7_reg_10213 <= sample_period_samples_3_timestamp_V_q1;
-        sample_period_samples_4_sample_V_load_6_reg_10038 <= sample_period_samples_4_sample_V_q0;
-        sample_period_samples_4_sample_V_load_7_reg_10158 <= sample_period_samples_4_sample_V_q1;
-        sample_period_samples_4_timestamp_V_load_6_reg_10098 <= sample_period_samples_4_timestamp_V_q0;
-        sample_period_samples_4_timestamp_V_load_7_reg_10218 <= sample_period_samples_4_timestamp_V_q1;
-        sample_period_samples_5_sample_V_load_6_reg_10043 <= sample_period_samples_5_sample_V_q0;
-        sample_period_samples_5_sample_V_load_7_reg_10163 <= sample_period_samples_5_sample_V_q1;
-        sample_period_samples_5_timestamp_V_load_6_reg_10103 <= sample_period_samples_5_timestamp_V_q0;
-        sample_period_samples_5_timestamp_V_load_7_reg_10223 <= sample_period_samples_5_timestamp_V_q1;
-        sample_period_samples_6_sample_V_load_6_reg_10048 <= sample_period_samples_6_sample_V_q0;
-        sample_period_samples_6_sample_V_load_7_reg_10168 <= sample_period_samples_6_sample_V_q1;
-        sample_period_samples_6_timestamp_V_load_6_reg_10108 <= sample_period_samples_6_timestamp_V_q0;
-        sample_period_samples_6_timestamp_V_load_7_reg_10228 <= sample_period_samples_6_timestamp_V_q1;
-        sample_period_samples_7_sample_V_load_6_reg_10053 <= sample_period_samples_7_sample_V_q0;
-        sample_period_samples_7_sample_V_load_7_reg_10173 <= sample_period_samples_7_sample_V_q1;
-        sample_period_samples_7_timestamp_V_load_6_reg_10113 <= sample_period_samples_7_timestamp_V_q0;
-        sample_period_samples_7_timestamp_V_load_7_reg_10233 <= sample_period_samples_7_timestamp_V_q1;
-        sample_period_samples_8_sample_V_load_6_reg_10058 <= sample_period_samples_8_sample_V_q0;
-        sample_period_samples_8_sample_V_load_7_reg_10178 <= sample_period_samples_8_sample_V_q1;
-        sample_period_samples_8_timestamp_V_load_6_reg_10118 <= sample_period_samples_8_timestamp_V_q0;
-        sample_period_samples_8_timestamp_V_load_7_reg_10238 <= sample_period_samples_8_timestamp_V_q1;
-        sample_period_samples_9_sample_V_load_6_reg_10063 <= sample_period_samples_9_sample_V_q0;
-        sample_period_samples_9_sample_V_load_7_reg_10183 <= sample_period_samples_9_sample_V_q1;
-        sample_period_samples_9_timestamp_V_load_6_reg_10123 <= sample_period_samples_9_timestamp_V_q0;
-        sample_period_samples_9_timestamp_V_load_7_reg_10243 <= sample_period_samples_9_timestamp_V_q1;
-        sliding_window_size_load_reg_10258 <= sliding_window_size_s;
+        icmp_ln52_reg_11393 <= icmp_ln52_fu_6468_p2;
+        sample_period_samples_0_sample_V_load_6_reg_11150 <= sample_period_samples_0_sample_V_q0;
+        sample_period_samples_0_sample_V_load_7_reg_11270 <= sample_period_samples_0_sample_V_q1;
+        sample_period_samples_0_timestamp_V_load_6_reg_11210 <= sample_period_samples_0_timestamp_V_q0;
+        sample_period_samples_0_timestamp_V_load_7_reg_11330 <= sample_period_samples_0_timestamp_V_q1;
+        sample_period_samples_10_sample_V_load_6_reg_11200 <= sample_period_samples_10_sample_V_q0;
+        sample_period_samples_10_sample_V_load_7_reg_11320 <= sample_period_samples_10_sample_V_q1;
+        sample_period_samples_10_timestamp_V_load_6_reg_11260 <= sample_period_samples_10_timestamp_V_q0;
+        sample_period_samples_10_timestamp_V_load_7_reg_11380 <= sample_period_samples_10_timestamp_V_q1;
+        sample_period_samples_11_sample_V_load_6_reg_11205 <= sample_period_samples_11_sample_V_q0;
+        sample_period_samples_11_sample_V_load_7_reg_11325 <= sample_period_samples_11_sample_V_q1;
+        sample_period_samples_11_timestamp_V_load_6_reg_11265 <= sample_period_samples_11_timestamp_V_q0;
+        sample_period_samples_11_timestamp_V_load_7_reg_11385 <= sample_period_samples_11_timestamp_V_q1;
+        sample_period_samples_1_sample_V_load_6_reg_11155 <= sample_period_samples_1_sample_V_q0;
+        sample_period_samples_1_sample_V_load_7_reg_11275 <= sample_period_samples_1_sample_V_q1;
+        sample_period_samples_1_timestamp_V_load_6_reg_11215 <= sample_period_samples_1_timestamp_V_q0;
+        sample_period_samples_1_timestamp_V_load_7_reg_11335 <= sample_period_samples_1_timestamp_V_q1;
+        sample_period_samples_2_sample_V_load_6_reg_11160 <= sample_period_samples_2_sample_V_q0;
+        sample_period_samples_2_sample_V_load_7_reg_11280 <= sample_period_samples_2_sample_V_q1;
+        sample_period_samples_2_timestamp_V_load_6_reg_11220 <= sample_period_samples_2_timestamp_V_q0;
+        sample_period_samples_2_timestamp_V_load_7_reg_11340 <= sample_period_samples_2_timestamp_V_q1;
+        sample_period_samples_3_sample_V_load_6_reg_11165 <= sample_period_samples_3_sample_V_q0;
+        sample_period_samples_3_sample_V_load_7_reg_11285 <= sample_period_samples_3_sample_V_q1;
+        sample_period_samples_3_timestamp_V_load_6_reg_11225 <= sample_period_samples_3_timestamp_V_q0;
+        sample_period_samples_3_timestamp_V_load_7_reg_11345 <= sample_period_samples_3_timestamp_V_q1;
+        sample_period_samples_4_sample_V_load_6_reg_11170 <= sample_period_samples_4_sample_V_q0;
+        sample_period_samples_4_sample_V_load_7_reg_11290 <= sample_period_samples_4_sample_V_q1;
+        sample_period_samples_4_timestamp_V_load_6_reg_11230 <= sample_period_samples_4_timestamp_V_q0;
+        sample_period_samples_4_timestamp_V_load_7_reg_11350 <= sample_period_samples_4_timestamp_V_q1;
+        sample_period_samples_5_sample_V_load_6_reg_11175 <= sample_period_samples_5_sample_V_q0;
+        sample_period_samples_5_sample_V_load_7_reg_11295 <= sample_period_samples_5_sample_V_q1;
+        sample_period_samples_5_timestamp_V_load_6_reg_11235 <= sample_period_samples_5_timestamp_V_q0;
+        sample_period_samples_5_timestamp_V_load_7_reg_11355 <= sample_period_samples_5_timestamp_V_q1;
+        sample_period_samples_6_sample_V_load_6_reg_11180 <= sample_period_samples_6_sample_V_q0;
+        sample_period_samples_6_sample_V_load_7_reg_11300 <= sample_period_samples_6_sample_V_q1;
+        sample_period_samples_6_timestamp_V_load_6_reg_11240 <= sample_period_samples_6_timestamp_V_q0;
+        sample_period_samples_6_timestamp_V_load_7_reg_11360 <= sample_period_samples_6_timestamp_V_q1;
+        sample_period_samples_7_sample_V_load_6_reg_11185 <= sample_period_samples_7_sample_V_q0;
+        sample_period_samples_7_sample_V_load_7_reg_11305 <= sample_period_samples_7_sample_V_q1;
+        sample_period_samples_7_timestamp_V_load_6_reg_11245 <= sample_period_samples_7_timestamp_V_q0;
+        sample_period_samples_7_timestamp_V_load_7_reg_11365 <= sample_period_samples_7_timestamp_V_q1;
+        sample_period_samples_8_sample_V_load_6_reg_11190 <= sample_period_samples_8_sample_V_q0;
+        sample_period_samples_8_sample_V_load_7_reg_11310 <= sample_period_samples_8_sample_V_q1;
+        sample_period_samples_8_timestamp_V_load_6_reg_11250 <= sample_period_samples_8_timestamp_V_q0;
+        sample_period_samples_8_timestamp_V_load_7_reg_11370 <= sample_period_samples_8_timestamp_V_q1;
+        sample_period_samples_9_sample_V_load_6_reg_11195 <= sample_period_samples_9_sample_V_q0;
+        sample_period_samples_9_sample_V_load_7_reg_11315 <= sample_period_samples_9_sample_V_q1;
+        sample_period_samples_9_timestamp_V_load_6_reg_11255 <= sample_period_samples_9_timestamp_V_q0;
+        sample_period_samples_9_timestamp_V_load_7_reg_11375 <= sample_period_samples_9_timestamp_V_q1;
+        sliding_window_front_ptr_load_reg_11397 <= sliding_window_front_ptr_s_i;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state20)) begin
-        icmp_ln63_reg_10283 <= icmp_ln63_fu_7869_p2;
-        new_front_ptr_reg_10273 <= grp_fu_7653_p2;
-        trunc_ln61_reg_10278 <= trunc_ln61_fu_7861_p1;
+    if ((1'b1 == ap_CS_fsm_state19)) begin
+        icmp_ln63_reg_11432 <= icmp_ln63_fu_6544_p2;
+        new_front_ptr_reg_11421 <= grp_fu_6488_p2;
+        trunc_ln61_reg_11427 <= trunc_ln61_fu_6536_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        icmp_ln84_reg_8118 <= icmp_ln84_fu_7343_p2;
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        icmp_ln92_reg_9226 <= icmp_ln92_fu_6178_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
-        sample_period_samples_0_sample_V_load_1_reg_8698 <= sample_period_samples_0_sample_V_q0;
-        sample_period_samples_0_sample_V_load_reg_8578 <= sample_period_samples_0_sample_V_q1;
-        sample_period_samples_0_timestamp_V_load_1_reg_8758 <= sample_period_samples_0_timestamp_V_q0;
-        sample_period_samples_0_timestamp_V_load_reg_8638 <= sample_period_samples_0_timestamp_V_q1;
-        sample_period_samples_10_sample_V_load_1_reg_8748 <= sample_period_samples_10_sample_V_q0;
-        sample_period_samples_10_sample_V_load_reg_8628 <= sample_period_samples_10_sample_V_q1;
-        sample_period_samples_10_timestamp_V_load_1_reg_8808 <= sample_period_samples_10_timestamp_V_q0;
-        sample_period_samples_10_timestamp_V_load_reg_8688 <= sample_period_samples_10_timestamp_V_q1;
-        sample_period_samples_11_sample_V_load_1_reg_8753 <= sample_period_samples_11_sample_V_q0;
-        sample_period_samples_11_sample_V_load_reg_8633 <= sample_period_samples_11_sample_V_q1;
-        sample_period_samples_11_timestamp_V_load_1_reg_8813 <= sample_period_samples_11_timestamp_V_q0;
-        sample_period_samples_11_timestamp_V_load_reg_8693 <= sample_period_samples_11_timestamp_V_q1;
-        sample_period_samples_1_sample_V_load_1_reg_8703 <= sample_period_samples_1_sample_V_q0;
-        sample_period_samples_1_sample_V_load_reg_8583 <= sample_period_samples_1_sample_V_q1;
-        sample_period_samples_1_timestamp_V_load_1_reg_8763 <= sample_period_samples_1_timestamp_V_q0;
-        sample_period_samples_1_timestamp_V_load_reg_8643 <= sample_period_samples_1_timestamp_V_q1;
-        sample_period_samples_2_sample_V_load_1_reg_8708 <= sample_period_samples_2_sample_V_q0;
-        sample_period_samples_2_sample_V_load_reg_8588 <= sample_period_samples_2_sample_V_q1;
-        sample_period_samples_2_timestamp_V_load_1_reg_8768 <= sample_period_samples_2_timestamp_V_q0;
-        sample_period_samples_2_timestamp_V_load_reg_8648 <= sample_period_samples_2_timestamp_V_q1;
-        sample_period_samples_3_sample_V_load_1_reg_8713 <= sample_period_samples_3_sample_V_q0;
-        sample_period_samples_3_sample_V_load_reg_8593 <= sample_period_samples_3_sample_V_q1;
-        sample_period_samples_3_timestamp_V_load_1_reg_8773 <= sample_period_samples_3_timestamp_V_q0;
-        sample_period_samples_3_timestamp_V_load_reg_8653 <= sample_period_samples_3_timestamp_V_q1;
-        sample_period_samples_4_sample_V_load_1_reg_8718 <= sample_period_samples_4_sample_V_q0;
-        sample_period_samples_4_sample_V_load_reg_8598 <= sample_period_samples_4_sample_V_q1;
-        sample_period_samples_4_timestamp_V_load_1_reg_8778 <= sample_period_samples_4_timestamp_V_q0;
-        sample_period_samples_4_timestamp_V_load_reg_8658 <= sample_period_samples_4_timestamp_V_q1;
-        sample_period_samples_5_sample_V_load_1_reg_8723 <= sample_period_samples_5_sample_V_q0;
-        sample_period_samples_5_sample_V_load_reg_8603 <= sample_period_samples_5_sample_V_q1;
-        sample_period_samples_5_timestamp_V_load_1_reg_8783 <= sample_period_samples_5_timestamp_V_q0;
-        sample_period_samples_5_timestamp_V_load_reg_8663 <= sample_period_samples_5_timestamp_V_q1;
-        sample_period_samples_6_sample_V_load_1_reg_8728 <= sample_period_samples_6_sample_V_q0;
-        sample_period_samples_6_sample_V_load_reg_8608 <= sample_period_samples_6_sample_V_q1;
-        sample_period_samples_6_timestamp_V_load_1_reg_8788 <= sample_period_samples_6_timestamp_V_q0;
-        sample_period_samples_6_timestamp_V_load_reg_8668 <= sample_period_samples_6_timestamp_V_q1;
-        sample_period_samples_7_sample_V_load_1_reg_8733 <= sample_period_samples_7_sample_V_q0;
-        sample_period_samples_7_sample_V_load_reg_8613 <= sample_period_samples_7_sample_V_q1;
-        sample_period_samples_7_timestamp_V_load_1_reg_8793 <= sample_period_samples_7_timestamp_V_q0;
-        sample_period_samples_7_timestamp_V_load_reg_8673 <= sample_period_samples_7_timestamp_V_q1;
-        sample_period_samples_8_sample_V_load_1_reg_8738 <= sample_period_samples_8_sample_V_q0;
-        sample_period_samples_8_sample_V_load_reg_8618 <= sample_period_samples_8_sample_V_q1;
-        sample_period_samples_8_timestamp_V_load_1_reg_8798 <= sample_period_samples_8_timestamp_V_q0;
-        sample_period_samples_8_timestamp_V_load_reg_8678 <= sample_period_samples_8_timestamp_V_q1;
-        sample_period_samples_9_sample_V_load_1_reg_8743 <= sample_period_samples_9_sample_V_q0;
-        sample_period_samples_9_sample_V_load_reg_8623 <= sample_period_samples_9_sample_V_q1;
-        sample_period_samples_9_timestamp_V_load_1_reg_8803 <= sample_period_samples_9_timestamp_V_q0;
-        sample_period_samples_9_timestamp_V_load_reg_8683 <= sample_period_samples_9_timestamp_V_q1;
+        sample_period_samples_0_sample_V_load_1_reg_9806 <= sample_period_samples_0_sample_V_q0;
+        sample_period_samples_0_sample_V_load_reg_9686 <= sample_period_samples_0_sample_V_q1;
+        sample_period_samples_0_timestamp_V_load_1_reg_9866 <= sample_period_samples_0_timestamp_V_q0;
+        sample_period_samples_0_timestamp_V_load_reg_9746 <= sample_period_samples_0_timestamp_V_q1;
+        sample_period_samples_10_sample_V_load_1_reg_9856 <= sample_period_samples_10_sample_V_q0;
+        sample_period_samples_10_sample_V_load_reg_9736 <= sample_period_samples_10_sample_V_q1;
+        sample_period_samples_10_timestamp_V_load_1_reg_9916 <= sample_period_samples_10_timestamp_V_q0;
+        sample_period_samples_10_timestamp_V_load_reg_9796 <= sample_period_samples_10_timestamp_V_q1;
+        sample_period_samples_11_sample_V_load_1_reg_9861 <= sample_period_samples_11_sample_V_q0;
+        sample_period_samples_11_sample_V_load_reg_9741 <= sample_period_samples_11_sample_V_q1;
+        sample_period_samples_11_timestamp_V_load_1_reg_9921 <= sample_period_samples_11_timestamp_V_q0;
+        sample_period_samples_11_timestamp_V_load_reg_9801 <= sample_period_samples_11_timestamp_V_q1;
+        sample_period_samples_1_sample_V_load_1_reg_9811 <= sample_period_samples_1_sample_V_q0;
+        sample_period_samples_1_sample_V_load_reg_9691 <= sample_period_samples_1_sample_V_q1;
+        sample_period_samples_1_timestamp_V_load_1_reg_9871 <= sample_period_samples_1_timestamp_V_q0;
+        sample_period_samples_1_timestamp_V_load_reg_9751 <= sample_period_samples_1_timestamp_V_q1;
+        sample_period_samples_2_sample_V_load_1_reg_9816 <= sample_period_samples_2_sample_V_q0;
+        sample_period_samples_2_sample_V_load_reg_9696 <= sample_period_samples_2_sample_V_q1;
+        sample_period_samples_2_timestamp_V_load_1_reg_9876 <= sample_period_samples_2_timestamp_V_q0;
+        sample_period_samples_2_timestamp_V_load_reg_9756 <= sample_period_samples_2_timestamp_V_q1;
+        sample_period_samples_3_sample_V_load_1_reg_9821 <= sample_period_samples_3_sample_V_q0;
+        sample_period_samples_3_sample_V_load_reg_9701 <= sample_period_samples_3_sample_V_q1;
+        sample_period_samples_3_timestamp_V_load_1_reg_9881 <= sample_period_samples_3_timestamp_V_q0;
+        sample_period_samples_3_timestamp_V_load_reg_9761 <= sample_period_samples_3_timestamp_V_q1;
+        sample_period_samples_4_sample_V_load_1_reg_9826 <= sample_period_samples_4_sample_V_q0;
+        sample_period_samples_4_sample_V_load_reg_9706 <= sample_period_samples_4_sample_V_q1;
+        sample_period_samples_4_timestamp_V_load_1_reg_9886 <= sample_period_samples_4_timestamp_V_q0;
+        sample_period_samples_4_timestamp_V_load_reg_9766 <= sample_period_samples_4_timestamp_V_q1;
+        sample_period_samples_5_sample_V_load_1_reg_9831 <= sample_period_samples_5_sample_V_q0;
+        sample_period_samples_5_sample_V_load_reg_9711 <= sample_period_samples_5_sample_V_q1;
+        sample_period_samples_5_timestamp_V_load_1_reg_9891 <= sample_period_samples_5_timestamp_V_q0;
+        sample_period_samples_5_timestamp_V_load_reg_9771 <= sample_period_samples_5_timestamp_V_q1;
+        sample_period_samples_6_sample_V_load_1_reg_9836 <= sample_period_samples_6_sample_V_q0;
+        sample_period_samples_6_sample_V_load_reg_9716 <= sample_period_samples_6_sample_V_q1;
+        sample_period_samples_6_timestamp_V_load_1_reg_9896 <= sample_period_samples_6_timestamp_V_q0;
+        sample_period_samples_6_timestamp_V_load_reg_9776 <= sample_period_samples_6_timestamp_V_q1;
+        sample_period_samples_7_sample_V_load_1_reg_9841 <= sample_period_samples_7_sample_V_q0;
+        sample_period_samples_7_sample_V_load_reg_9721 <= sample_period_samples_7_sample_V_q1;
+        sample_period_samples_7_timestamp_V_load_1_reg_9901 <= sample_period_samples_7_timestamp_V_q0;
+        sample_period_samples_7_timestamp_V_load_reg_9781 <= sample_period_samples_7_timestamp_V_q1;
+        sample_period_samples_8_sample_V_load_1_reg_9846 <= sample_period_samples_8_sample_V_q0;
+        sample_period_samples_8_sample_V_load_reg_9726 <= sample_period_samples_8_sample_V_q1;
+        sample_period_samples_8_timestamp_V_load_1_reg_9906 <= sample_period_samples_8_timestamp_V_q0;
+        sample_period_samples_8_timestamp_V_load_reg_9786 <= sample_period_samples_8_timestamp_V_q1;
+        sample_period_samples_9_sample_V_load_1_reg_9851 <= sample_period_samples_9_sample_V_q0;
+        sample_period_samples_9_sample_V_load_reg_9731 <= sample_period_samples_9_sample_V_q1;
+        sample_period_samples_9_timestamp_V_load_1_reg_9911 <= sample_period_samples_9_timestamp_V_q0;
+        sample_period_samples_9_timestamp_V_load_reg_9791 <= sample_period_samples_9_timestamp_V_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state8)) begin
-        sample_period_samples_0_sample_V_load_2_reg_9058 <= sample_period_samples_0_sample_V_q0;
-        sample_period_samples_0_sample_V_load_3_reg_9178 <= sample_period_samples_0_sample_V_q1;
-        sample_period_samples_0_timestamp_V_load_2_reg_9118 <= sample_period_samples_0_timestamp_V_q0;
-        sample_period_samples_0_timestamp_V_load_3_reg_9238 <= sample_period_samples_0_timestamp_V_q1;
-        sample_period_samples_10_sample_V_load_2_reg_9108 <= sample_period_samples_10_sample_V_q0;
-        sample_period_samples_10_sample_V_load_3_reg_9228 <= sample_period_samples_10_sample_V_q1;
-        sample_period_samples_10_timestamp_V_load_2_reg_9168 <= sample_period_samples_10_timestamp_V_q0;
-        sample_period_samples_10_timestamp_V_load_3_reg_9288 <= sample_period_samples_10_timestamp_V_q1;
-        sample_period_samples_11_sample_V_load_2_reg_9113 <= sample_period_samples_11_sample_V_q0;
-        sample_period_samples_11_sample_V_load_3_reg_9233 <= sample_period_samples_11_sample_V_q1;
-        sample_period_samples_11_timestamp_V_load_2_reg_9173 <= sample_period_samples_11_timestamp_V_q0;
-        sample_period_samples_11_timestamp_V_load_3_reg_9293 <= sample_period_samples_11_timestamp_V_q1;
-        sample_period_samples_1_sample_V_load_2_reg_9063 <= sample_period_samples_1_sample_V_q0;
-        sample_period_samples_1_sample_V_load_3_reg_9183 <= sample_period_samples_1_sample_V_q1;
-        sample_period_samples_1_timestamp_V_load_2_reg_9123 <= sample_period_samples_1_timestamp_V_q0;
-        sample_period_samples_1_timestamp_V_load_3_reg_9243 <= sample_period_samples_1_timestamp_V_q1;
-        sample_period_samples_2_sample_V_load_2_reg_9068 <= sample_period_samples_2_sample_V_q0;
-        sample_period_samples_2_sample_V_load_3_reg_9188 <= sample_period_samples_2_sample_V_q1;
-        sample_period_samples_2_timestamp_V_load_2_reg_9128 <= sample_period_samples_2_timestamp_V_q0;
-        sample_period_samples_2_timestamp_V_load_3_reg_9248 <= sample_period_samples_2_timestamp_V_q1;
-        sample_period_samples_3_sample_V_load_2_reg_9073 <= sample_period_samples_3_sample_V_q0;
-        sample_period_samples_3_sample_V_load_3_reg_9193 <= sample_period_samples_3_sample_V_q1;
-        sample_period_samples_3_timestamp_V_load_2_reg_9133 <= sample_period_samples_3_timestamp_V_q0;
-        sample_period_samples_3_timestamp_V_load_3_reg_9253 <= sample_period_samples_3_timestamp_V_q1;
-        sample_period_samples_4_sample_V_load_2_reg_9078 <= sample_period_samples_4_sample_V_q0;
-        sample_period_samples_4_sample_V_load_3_reg_9198 <= sample_period_samples_4_sample_V_q1;
-        sample_period_samples_4_timestamp_V_load_2_reg_9138 <= sample_period_samples_4_timestamp_V_q0;
-        sample_period_samples_4_timestamp_V_load_3_reg_9258 <= sample_period_samples_4_timestamp_V_q1;
-        sample_period_samples_5_sample_V_load_2_reg_9083 <= sample_period_samples_5_sample_V_q0;
-        sample_period_samples_5_sample_V_load_3_reg_9203 <= sample_period_samples_5_sample_V_q1;
-        sample_period_samples_5_timestamp_V_load_2_reg_9143 <= sample_period_samples_5_timestamp_V_q0;
-        sample_period_samples_5_timestamp_V_load_3_reg_9263 <= sample_period_samples_5_timestamp_V_q1;
-        sample_period_samples_6_sample_V_load_2_reg_9088 <= sample_period_samples_6_sample_V_q0;
-        sample_period_samples_6_sample_V_load_3_reg_9208 <= sample_period_samples_6_sample_V_q1;
-        sample_period_samples_6_timestamp_V_load_2_reg_9148 <= sample_period_samples_6_timestamp_V_q0;
-        sample_period_samples_6_timestamp_V_load_3_reg_9268 <= sample_period_samples_6_timestamp_V_q1;
-        sample_period_samples_7_sample_V_load_2_reg_9093 <= sample_period_samples_7_sample_V_q0;
-        sample_period_samples_7_sample_V_load_3_reg_9213 <= sample_period_samples_7_sample_V_q1;
-        sample_period_samples_7_timestamp_V_load_2_reg_9153 <= sample_period_samples_7_timestamp_V_q0;
-        sample_period_samples_7_timestamp_V_load_3_reg_9273 <= sample_period_samples_7_timestamp_V_q1;
-        sample_period_samples_8_sample_V_load_2_reg_9098 <= sample_period_samples_8_sample_V_q0;
-        sample_period_samples_8_sample_V_load_3_reg_9218 <= sample_period_samples_8_sample_V_q1;
-        sample_period_samples_8_timestamp_V_load_2_reg_9158 <= sample_period_samples_8_timestamp_V_q0;
-        sample_period_samples_8_timestamp_V_load_3_reg_9278 <= sample_period_samples_8_timestamp_V_q1;
-        sample_period_samples_9_sample_V_load_2_reg_9103 <= sample_period_samples_9_sample_V_q0;
-        sample_period_samples_9_sample_V_load_3_reg_9223 <= sample_period_samples_9_sample_V_q1;
-        sample_period_samples_9_timestamp_V_load_2_reg_9163 <= sample_period_samples_9_timestamp_V_q0;
-        sample_period_samples_9_timestamp_V_load_3_reg_9283 <= sample_period_samples_9_timestamp_V_q1;
+        sample_period_samples_0_sample_V_load_2_reg_10166 <= sample_period_samples_0_sample_V_q0;
+        sample_period_samples_0_sample_V_load_3_reg_10298 <= sample_period_samples_0_sample_V_q1;
+        sample_period_samples_0_timestamp_V_load_2_reg_10226 <= sample_period_samples_0_timestamp_V_q0;
+        sample_period_samples_0_timestamp_V_load_3_reg_10358 <= sample_period_samples_0_timestamp_V_q1;
+        sample_period_samples_10_sample_V_load_2_reg_10216 <= sample_period_samples_10_sample_V_q0;
+        sample_period_samples_10_sample_V_load_3_reg_10348 <= sample_period_samples_10_sample_V_q1;
+        sample_period_samples_10_timestamp_V_load_2_reg_10286 <= sample_period_samples_10_timestamp_V_q0;
+        sample_period_samples_10_timestamp_V_load_3_reg_10418 <= sample_period_samples_10_timestamp_V_q1;
+        sample_period_samples_11_sample_V_load_2_reg_10221 <= sample_period_samples_11_sample_V_q0;
+        sample_period_samples_11_sample_V_load_3_reg_10353 <= sample_period_samples_11_sample_V_q1;
+        sample_period_samples_11_timestamp_V_load_2_reg_10292 <= sample_period_samples_11_timestamp_V_q0;
+        sample_period_samples_11_timestamp_V_load_3_reg_10424 <= sample_period_samples_11_timestamp_V_q1;
+        sample_period_samples_1_sample_V_load_2_reg_10171 <= sample_period_samples_1_sample_V_q0;
+        sample_period_samples_1_sample_V_load_3_reg_10303 <= sample_period_samples_1_sample_V_q1;
+        sample_period_samples_1_timestamp_V_load_2_reg_10232 <= sample_period_samples_1_timestamp_V_q0;
+        sample_period_samples_1_timestamp_V_load_3_reg_10364 <= sample_period_samples_1_timestamp_V_q1;
+        sample_period_samples_2_sample_V_load_2_reg_10176 <= sample_period_samples_2_sample_V_q0;
+        sample_period_samples_2_sample_V_load_3_reg_10308 <= sample_period_samples_2_sample_V_q1;
+        sample_period_samples_2_timestamp_V_load_2_reg_10238 <= sample_period_samples_2_timestamp_V_q0;
+        sample_period_samples_2_timestamp_V_load_3_reg_10370 <= sample_period_samples_2_timestamp_V_q1;
+        sample_period_samples_3_sample_V_load_2_reg_10181 <= sample_period_samples_3_sample_V_q0;
+        sample_period_samples_3_sample_V_load_3_reg_10313 <= sample_period_samples_3_sample_V_q1;
+        sample_period_samples_3_timestamp_V_load_2_reg_10244 <= sample_period_samples_3_timestamp_V_q0;
+        sample_period_samples_3_timestamp_V_load_3_reg_10376 <= sample_period_samples_3_timestamp_V_q1;
+        sample_period_samples_4_sample_V_load_2_reg_10186 <= sample_period_samples_4_sample_V_q0;
+        sample_period_samples_4_sample_V_load_3_reg_10318 <= sample_period_samples_4_sample_V_q1;
+        sample_period_samples_4_timestamp_V_load_2_reg_10250 <= sample_period_samples_4_timestamp_V_q0;
+        sample_period_samples_4_timestamp_V_load_3_reg_10382 <= sample_period_samples_4_timestamp_V_q1;
+        sample_period_samples_5_sample_V_load_2_reg_10191 <= sample_period_samples_5_sample_V_q0;
+        sample_period_samples_5_sample_V_load_3_reg_10323 <= sample_period_samples_5_sample_V_q1;
+        sample_period_samples_5_timestamp_V_load_2_reg_10256 <= sample_period_samples_5_timestamp_V_q0;
+        sample_period_samples_5_timestamp_V_load_3_reg_10388 <= sample_period_samples_5_timestamp_V_q1;
+        sample_period_samples_6_sample_V_load_2_reg_10196 <= sample_period_samples_6_sample_V_q0;
+        sample_period_samples_6_sample_V_load_3_reg_10328 <= sample_period_samples_6_sample_V_q1;
+        sample_period_samples_6_timestamp_V_load_2_reg_10262 <= sample_period_samples_6_timestamp_V_q0;
+        sample_period_samples_6_timestamp_V_load_3_reg_10394 <= sample_period_samples_6_timestamp_V_q1;
+        sample_period_samples_7_sample_V_load_2_reg_10201 <= sample_period_samples_7_sample_V_q0;
+        sample_period_samples_7_sample_V_load_3_reg_10333 <= sample_period_samples_7_sample_V_q1;
+        sample_period_samples_7_timestamp_V_load_2_reg_10268 <= sample_period_samples_7_timestamp_V_q0;
+        sample_period_samples_7_timestamp_V_load_3_reg_10400 <= sample_period_samples_7_timestamp_V_q1;
+        sample_period_samples_8_sample_V_load_2_reg_10206 <= sample_period_samples_8_sample_V_q0;
+        sample_period_samples_8_sample_V_load_3_reg_10338 <= sample_period_samples_8_sample_V_q1;
+        sample_period_samples_8_timestamp_V_load_2_reg_10274 <= sample_period_samples_8_timestamp_V_q0;
+        sample_period_samples_8_timestamp_V_load_3_reg_10406 <= sample_period_samples_8_timestamp_V_q1;
+        sample_period_samples_9_sample_V_load_2_reg_10211 <= sample_period_samples_9_sample_V_q0;
+        sample_period_samples_9_sample_V_load_3_reg_10343 <= sample_period_samples_9_sample_V_q1;
+        sample_period_samples_9_timestamp_V_load_2_reg_10280 <= sample_period_samples_9_timestamp_V_q0;
+        sample_period_samples_9_timestamp_V_load_3_reg_10412 <= sample_period_samples_9_timestamp_V_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state9)) begin
-        sample_period_samples_0_sample_V_load_4_reg_9538 <= sample_period_samples_0_sample_V_q0;
-        sample_period_samples_0_sample_V_load_5_reg_9658 <= sample_period_samples_0_sample_V_q1;
-        sample_period_samples_0_timestamp_V_load_4_reg_9598 <= sample_period_samples_0_timestamp_V_q0;
-        sample_period_samples_0_timestamp_V_load_5_reg_9718 <= sample_period_samples_0_timestamp_V_q1;
-        sample_period_samples_10_sample_V_load_4_reg_9588 <= sample_period_samples_10_sample_V_q0;
-        sample_period_samples_10_sample_V_load_5_reg_9708 <= sample_period_samples_10_sample_V_q1;
-        sample_period_samples_10_timestamp_V_load_4_reg_9648 <= sample_period_samples_10_timestamp_V_q0;
-        sample_period_samples_10_timestamp_V_load_5_reg_9768 <= sample_period_samples_10_timestamp_V_q1;
-        sample_period_samples_11_sample_V_load_4_reg_9593 <= sample_period_samples_11_sample_V_q0;
-        sample_period_samples_11_sample_V_load_5_reg_9713 <= sample_period_samples_11_sample_V_q1;
-        sample_period_samples_11_timestamp_V_load_4_reg_9653 <= sample_period_samples_11_timestamp_V_q0;
-        sample_period_samples_11_timestamp_V_load_5_reg_9773 <= sample_period_samples_11_timestamp_V_q1;
-        sample_period_samples_1_sample_V_load_4_reg_9543 <= sample_period_samples_1_sample_V_q0;
-        sample_period_samples_1_sample_V_load_5_reg_9663 <= sample_period_samples_1_sample_V_q1;
-        sample_period_samples_1_timestamp_V_load_4_reg_9603 <= sample_period_samples_1_timestamp_V_q0;
-        sample_period_samples_1_timestamp_V_load_5_reg_9723 <= sample_period_samples_1_timestamp_V_q1;
-        sample_period_samples_2_sample_V_load_4_reg_9548 <= sample_period_samples_2_sample_V_q0;
-        sample_period_samples_2_sample_V_load_5_reg_9668 <= sample_period_samples_2_sample_V_q1;
-        sample_period_samples_2_timestamp_V_load_4_reg_9608 <= sample_period_samples_2_timestamp_V_q0;
-        sample_period_samples_2_timestamp_V_load_5_reg_9728 <= sample_period_samples_2_timestamp_V_q1;
-        sample_period_samples_3_sample_V_load_4_reg_9553 <= sample_period_samples_3_sample_V_q0;
-        sample_period_samples_3_sample_V_load_5_reg_9673 <= sample_period_samples_3_sample_V_q1;
-        sample_period_samples_3_timestamp_V_load_4_reg_9613 <= sample_period_samples_3_timestamp_V_q0;
-        sample_period_samples_3_timestamp_V_load_5_reg_9733 <= sample_period_samples_3_timestamp_V_q1;
-        sample_period_samples_4_sample_V_load_4_reg_9558 <= sample_period_samples_4_sample_V_q0;
-        sample_period_samples_4_sample_V_load_5_reg_9678 <= sample_period_samples_4_sample_V_q1;
-        sample_period_samples_4_timestamp_V_load_4_reg_9618 <= sample_period_samples_4_timestamp_V_q0;
-        sample_period_samples_4_timestamp_V_load_5_reg_9738 <= sample_period_samples_4_timestamp_V_q1;
-        sample_period_samples_5_sample_V_load_4_reg_9563 <= sample_period_samples_5_sample_V_q0;
-        sample_period_samples_5_sample_V_load_5_reg_9683 <= sample_period_samples_5_sample_V_q1;
-        sample_period_samples_5_timestamp_V_load_4_reg_9623 <= sample_period_samples_5_timestamp_V_q0;
-        sample_period_samples_5_timestamp_V_load_5_reg_9743 <= sample_period_samples_5_timestamp_V_q1;
-        sample_period_samples_6_sample_V_load_4_reg_9568 <= sample_period_samples_6_sample_V_q0;
-        sample_period_samples_6_sample_V_load_5_reg_9688 <= sample_period_samples_6_sample_V_q1;
-        sample_period_samples_6_timestamp_V_load_4_reg_9628 <= sample_period_samples_6_timestamp_V_q0;
-        sample_period_samples_6_timestamp_V_load_5_reg_9748 <= sample_period_samples_6_timestamp_V_q1;
-        sample_period_samples_7_sample_V_load_4_reg_9573 <= sample_period_samples_7_sample_V_q0;
-        sample_period_samples_7_sample_V_load_5_reg_9693 <= sample_period_samples_7_sample_V_q1;
-        sample_period_samples_7_timestamp_V_load_4_reg_9633 <= sample_period_samples_7_timestamp_V_q0;
-        sample_period_samples_7_timestamp_V_load_5_reg_9753 <= sample_period_samples_7_timestamp_V_q1;
-        sample_period_samples_8_sample_V_load_4_reg_9578 <= sample_period_samples_8_sample_V_q0;
-        sample_period_samples_8_sample_V_load_5_reg_9698 <= sample_period_samples_8_sample_V_q1;
-        sample_period_samples_8_timestamp_V_load_4_reg_9638 <= sample_period_samples_8_timestamp_V_q0;
-        sample_period_samples_8_timestamp_V_load_5_reg_9758 <= sample_period_samples_8_timestamp_V_q1;
-        sample_period_samples_9_sample_V_load_4_reg_9583 <= sample_period_samples_9_sample_V_q0;
-        sample_period_samples_9_sample_V_load_5_reg_9703 <= sample_period_samples_9_sample_V_q1;
-        sample_period_samples_9_timestamp_V_load_4_reg_9643 <= sample_period_samples_9_timestamp_V_q0;
-        sample_period_samples_9_timestamp_V_load_5_reg_9763 <= sample_period_samples_9_timestamp_V_q1;
+        sample_period_samples_0_sample_V_load_4_reg_10670 <= sample_period_samples_0_sample_V_q0;
+        sample_period_samples_0_sample_V_load_5_reg_10790 <= sample_period_samples_0_sample_V_q1;
+        sample_period_samples_0_timestamp_V_load_4_reg_10730 <= sample_period_samples_0_timestamp_V_q0;
+        sample_period_samples_0_timestamp_V_load_5_reg_10850 <= sample_period_samples_0_timestamp_V_q1;
+        sample_period_samples_10_sample_V_load_4_reg_10720 <= sample_period_samples_10_sample_V_q0;
+        sample_period_samples_10_sample_V_load_5_reg_10840 <= sample_period_samples_10_sample_V_q1;
+        sample_period_samples_10_timestamp_V_load_4_reg_10780 <= sample_period_samples_10_timestamp_V_q0;
+        sample_period_samples_10_timestamp_V_load_5_reg_10900 <= sample_period_samples_10_timestamp_V_q1;
+        sample_period_samples_11_sample_V_load_4_reg_10725 <= sample_period_samples_11_sample_V_q0;
+        sample_period_samples_11_sample_V_load_5_reg_10845 <= sample_period_samples_11_sample_V_q1;
+        sample_period_samples_11_timestamp_V_load_4_reg_10785 <= sample_period_samples_11_timestamp_V_q0;
+        sample_period_samples_11_timestamp_V_load_5_reg_10905 <= sample_period_samples_11_timestamp_V_q1;
+        sample_period_samples_1_sample_V_load_4_reg_10675 <= sample_period_samples_1_sample_V_q0;
+        sample_period_samples_1_sample_V_load_5_reg_10795 <= sample_period_samples_1_sample_V_q1;
+        sample_period_samples_1_timestamp_V_load_4_reg_10735 <= sample_period_samples_1_timestamp_V_q0;
+        sample_period_samples_1_timestamp_V_load_5_reg_10855 <= sample_period_samples_1_timestamp_V_q1;
+        sample_period_samples_2_sample_V_load_4_reg_10680 <= sample_period_samples_2_sample_V_q0;
+        sample_period_samples_2_sample_V_load_5_reg_10800 <= sample_period_samples_2_sample_V_q1;
+        sample_period_samples_2_timestamp_V_load_4_reg_10740 <= sample_period_samples_2_timestamp_V_q0;
+        sample_period_samples_2_timestamp_V_load_5_reg_10860 <= sample_period_samples_2_timestamp_V_q1;
+        sample_period_samples_3_sample_V_load_4_reg_10685 <= sample_period_samples_3_sample_V_q0;
+        sample_period_samples_3_sample_V_load_5_reg_10805 <= sample_period_samples_3_sample_V_q1;
+        sample_period_samples_3_timestamp_V_load_4_reg_10745 <= sample_period_samples_3_timestamp_V_q0;
+        sample_period_samples_3_timestamp_V_load_5_reg_10865 <= sample_period_samples_3_timestamp_V_q1;
+        sample_period_samples_4_sample_V_load_4_reg_10690 <= sample_period_samples_4_sample_V_q0;
+        sample_period_samples_4_sample_V_load_5_reg_10810 <= sample_period_samples_4_sample_V_q1;
+        sample_period_samples_4_timestamp_V_load_4_reg_10750 <= sample_period_samples_4_timestamp_V_q0;
+        sample_period_samples_4_timestamp_V_load_5_reg_10870 <= sample_period_samples_4_timestamp_V_q1;
+        sample_period_samples_5_sample_V_load_4_reg_10695 <= sample_period_samples_5_sample_V_q0;
+        sample_period_samples_5_sample_V_load_5_reg_10815 <= sample_period_samples_5_sample_V_q1;
+        sample_period_samples_5_timestamp_V_load_4_reg_10755 <= sample_period_samples_5_timestamp_V_q0;
+        sample_period_samples_5_timestamp_V_load_5_reg_10875 <= sample_period_samples_5_timestamp_V_q1;
+        sample_period_samples_6_sample_V_load_4_reg_10700 <= sample_period_samples_6_sample_V_q0;
+        sample_period_samples_6_sample_V_load_5_reg_10820 <= sample_period_samples_6_sample_V_q1;
+        sample_period_samples_6_timestamp_V_load_4_reg_10760 <= sample_period_samples_6_timestamp_V_q0;
+        sample_period_samples_6_timestamp_V_load_5_reg_10880 <= sample_period_samples_6_timestamp_V_q1;
+        sample_period_samples_7_sample_V_load_4_reg_10705 <= sample_period_samples_7_sample_V_q0;
+        sample_period_samples_7_sample_V_load_5_reg_10825 <= sample_period_samples_7_sample_V_q1;
+        sample_period_samples_7_timestamp_V_load_4_reg_10765 <= sample_period_samples_7_timestamp_V_q0;
+        sample_period_samples_7_timestamp_V_load_5_reg_10885 <= sample_period_samples_7_timestamp_V_q1;
+        sample_period_samples_8_sample_V_load_4_reg_10710 <= sample_period_samples_8_sample_V_q0;
+        sample_period_samples_8_sample_V_load_5_reg_10830 <= sample_period_samples_8_sample_V_q1;
+        sample_period_samples_8_timestamp_V_load_4_reg_10770 <= sample_period_samples_8_timestamp_V_q0;
+        sample_period_samples_8_timestamp_V_load_5_reg_10890 <= sample_period_samples_8_timestamp_V_q1;
+        sample_period_samples_9_sample_V_load_4_reg_10715 <= sample_period_samples_9_sample_V_q0;
+        sample_period_samples_9_sample_V_load_5_reg_10835 <= sample_period_samples_9_sample_V_q1;
+        sample_period_samples_9_timestamp_V_load_4_reg_10775 <= sample_period_samples_9_timestamp_V_q0;
+        sample_period_samples_9_timestamp_V_load_5_reg_10895 <= sample_period_samples_9_timestamp_V_q1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state80)) begin
+        sub_ln54_1_reg_11591[9 : 5] <= sub_ln54_1_fu_8084_p2[9 : 5];
+        tmp_reg_11580[7 : 3] <= tmp_fu_8031_p3[7 : 3];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sub_ln54_2_reg_11605[9 : 5] <= sub_ln54_2_fu_8266_p2[9 : 5];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sub_ln54_3_reg_11619[9 : 5] <= sub_ln54_3_fu_8433_p2[9 : 5];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state93)) begin
+        sub_ln54_4_reg_11633[9 : 5] <= sub_ln54_4_fu_8520_p2[9 : 5];
+        sub_ln54_5_reg_11649[9 : 5] <= sub_ln54_5_fu_8571_p2[9 : 5];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sub_ln54_6_reg_11665[9 : 5] <= sub_ln54_6_fu_8642_p2[9 : 5];
+        sub_ln54_7_reg_11681[9 : 5] <= sub_ln54_7_fu_8693_p2[9 : 5];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state10) & (icmp_ln52_fu_6468_p2 == 1'd1))) begin
+        sub_ln54_reg_11407[9 : 5] <= sub_ln54_fu_6514_p2[9 : 5];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state27)) begin
+        sub_ln75_1_reg_11468[9 : 5] <= sub_ln75_1_fu_6704_p2[9 : 5];
+        sub_ln75_reg_11454[9 : 5] <= sub_ln75_fu_6634_p2[9 : 5];
+        tmp_10_reg_11444[6 : 3] <= tmp_10_fu_6587_p3[6 : 3];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state28)) begin
+        sub_ln75_2_reg_11484[9 : 5] <= sub_ln75_2_fu_6782_p2[9 : 5];
+        sub_ln75_3_reg_11500[9 : 5] <= sub_ln75_3_fu_6835_p2[9 : 5];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state29)) begin
+        sub_ln75_4_reg_11516[9 : 5] <= sub_ln75_4_fu_6908_p2[9 : 5];
+        sub_ln75_5_reg_11532[9 : 5] <= sub_ln75_5_fu_6961_p2[9 : 5];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state30)) begin
+        sub_ln75_6_reg_11548[9 : 5] <= sub_ln75_6_fu_7034_p2[9 : 5];
+        sub_ln75_7_reg_11564[9 : 5] <= sub_ln75_7_fu_7087_p2[9 : 5];
     end
 end
 
 always @ (*) begin
-    if ((icmp_ln84_fu_7343_p2 == 1'd1)) begin
+    if ((icmp_ln92_fu_6178_p2 == 1'd1)) begin
         ap_condition_pp0_exit_iter0_state2 = 1'b1;
     end else begin
         ap_condition_pp0_exit_iter0_state2 = 1'b0;
@@ -3956,7 +2844,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | ((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if (((1'b1 == ap_CS_fsm_state74) | ((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -3964,7 +2852,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -3972,7 +2860,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+    if (((ap_enable_reg_pp0_iter0 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0))) begin
         ap_idle_pp0 = 1'b1;
     end else begin
         ap_idle_pp0 = 1'b0;
@@ -3980,15 +2868,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0))) begin
-        ap_phi_mux_i_phi_fu_7318_p4 = add_ln84_reg_8113;
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        ap_phi_mux_i_phi_fu_6153_p4 = add_ln92_reg_9221;
     end else begin
-        ap_phi_mux_i_phi_fu_7318_p4 = i_reg_7314;
+        ap_phi_mux_i_phi_fu_6153_p4 = i_reg_6149;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
+    if ((1'b1 == ap_CS_fsm_state74)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -3996,7 +2884,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_0_ce0 = 1'b1;
     end else begin
         buffer_in_0_ce0 = 1'b0;
@@ -4004,7 +2892,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_10_ce0 = 1'b1;
     end else begin
         buffer_in_10_ce0 = 1'b0;
@@ -4012,7 +2900,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_11_ce0 = 1'b1;
     end else begin
         buffer_in_11_ce0 = 1'b0;
@@ -4020,7 +2908,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_1_ce0 = 1'b1;
     end else begin
         buffer_in_1_ce0 = 1'b0;
@@ -4028,7 +2916,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_2_ce0 = 1'b1;
     end else begin
         buffer_in_2_ce0 = 1'b0;
@@ -4036,7 +2924,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_3_ce0 = 1'b1;
     end else begin
         buffer_in_3_ce0 = 1'b0;
@@ -4044,7 +2932,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_4_ce0 = 1'b1;
     end else begin
         buffer_in_4_ce0 = 1'b0;
@@ -4052,7 +2940,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_5_ce0 = 1'b1;
     end else begin
         buffer_in_5_ce0 = 1'b0;
@@ -4060,7 +2948,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_6_ce0 = 1'b1;
     end else begin
         buffer_in_6_ce0 = 1'b0;
@@ -4068,7 +2956,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_7_ce0 = 1'b1;
     end else begin
         buffer_in_7_ce0 = 1'b0;
@@ -4076,7 +2964,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_8_ce0 = 1'b1;
     end else begin
         buffer_in_8_ce0 = 1'b0;
@@ -4084,7 +2972,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buffer_in_9_ce0 = 1'b1;
     end else begin
         buffer_in_9_ce0 = 1'b0;
@@ -4092,18 +2980,18 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_fu_7633_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state10))) begin
-        grp_fu_7653_ap_start = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state10) & (icmp_ln52_fu_6468_p2 == 1'd0))) begin
+        grp_fu_6488_ap_start = 1'b1;
     end else begin
-        grp_fu_7653_ap_start = 1'b0;
+        grp_fu_6488_ap_start = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln63_fu_7869_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state20))) begin
-        grp_fu_7881_ap_start = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state19) & (icmp_ln63_fu_6544_p2 == 1'd1))) begin
+        grp_fu_6556_ap_start = 1'b1;
     end else begin
-        grp_fu_7881_ap_start = 1'b0;
+        grp_fu_6556_ap_start = 1'b0;
     end
 end
 
@@ -4115,7 +3003,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_0_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_0_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_0_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_0_sample_V_address0 = 64'd1;
     end else begin
@@ -4138,7 +3026,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_0_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_0_sample_V_ce0 = 1'b0;
@@ -4169,7 +3057,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_0_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_0_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_0_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_0_timestamp_V_address0 = 64'd1;
     end else begin
@@ -4192,7 +3080,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_0_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_0_timestamp_V_ce0 = 1'b0;
@@ -4223,7 +3111,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_10_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_10_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_10_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_10_sample_V_address0 = 64'd1;
     end else begin
@@ -4246,7 +3134,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_10_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_10_sample_V_ce0 = 1'b0;
@@ -4277,7 +3165,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_10_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_10_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_10_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_10_timestamp_V_address0 = 64'd1;
     end else begin
@@ -4300,7 +3188,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_10_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_10_timestamp_V_ce0 = 1'b0;
@@ -4331,7 +3219,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_11_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_11_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_11_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_11_sample_V_address0 = 64'd1;
     end else begin
@@ -4354,7 +3242,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_11_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_11_sample_V_ce0 = 1'b0;
@@ -4385,7 +3273,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_11_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_11_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_11_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_11_timestamp_V_address0 = 64'd1;
     end else begin
@@ -4408,7 +3296,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_11_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_11_timestamp_V_ce0 = 1'b0;
@@ -4439,7 +3327,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_1_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_1_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_1_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_1_sample_V_address0 = 64'd1;
     end else begin
@@ -4462,7 +3350,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_1_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_1_sample_V_ce0 = 1'b0;
@@ -4493,7 +3381,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_1_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_1_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_1_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_1_timestamp_V_address0 = 64'd1;
     end else begin
@@ -4516,7 +3404,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_1_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_1_timestamp_V_ce0 = 1'b0;
@@ -4547,7 +3435,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_2_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_2_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_2_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_2_sample_V_address0 = 64'd1;
     end else begin
@@ -4570,7 +3458,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_2_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_2_sample_V_ce0 = 1'b0;
@@ -4601,7 +3489,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_2_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_2_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_2_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_2_timestamp_V_address0 = 64'd1;
     end else begin
@@ -4624,7 +3512,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_2_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_2_timestamp_V_ce0 = 1'b0;
@@ -4655,7 +3543,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_3_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_3_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_3_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_3_sample_V_address0 = 64'd1;
     end else begin
@@ -4678,7 +3566,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_3_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_3_sample_V_ce0 = 1'b0;
@@ -4709,7 +3597,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_3_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_3_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_3_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_3_timestamp_V_address0 = 64'd1;
     end else begin
@@ -4732,7 +3620,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_3_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_3_timestamp_V_ce0 = 1'b0;
@@ -4763,7 +3651,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_4_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_4_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_4_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_4_sample_V_address0 = 64'd1;
     end else begin
@@ -4786,7 +3674,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_4_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_4_sample_V_ce0 = 1'b0;
@@ -4817,7 +3705,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_4_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_4_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_4_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_4_timestamp_V_address0 = 64'd1;
     end else begin
@@ -4840,7 +3728,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_4_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_4_timestamp_V_ce0 = 1'b0;
@@ -4871,7 +3759,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_5_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_5_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_5_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_5_sample_V_address0 = 64'd1;
     end else begin
@@ -4894,7 +3782,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_5_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_5_sample_V_ce0 = 1'b0;
@@ -4925,7 +3813,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_5_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_5_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_5_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_5_timestamp_V_address0 = 64'd1;
     end else begin
@@ -4948,7 +3836,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_5_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_5_timestamp_V_ce0 = 1'b0;
@@ -4979,7 +3867,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_6_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_6_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_6_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_6_sample_V_address0 = 64'd1;
     end else begin
@@ -5002,7 +3890,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_6_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_6_sample_V_ce0 = 1'b0;
@@ -5033,7 +3921,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_6_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_6_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_6_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_6_timestamp_V_address0 = 64'd1;
     end else begin
@@ -5056,7 +3944,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_6_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_6_timestamp_V_ce0 = 1'b0;
@@ -5087,7 +3975,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_7_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_7_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_7_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_7_sample_V_address0 = 64'd1;
     end else begin
@@ -5110,7 +3998,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_7_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_7_sample_V_ce0 = 1'b0;
@@ -5141,7 +4029,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_7_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_7_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_7_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_7_timestamp_V_address0 = 64'd1;
     end else begin
@@ -5164,7 +4052,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_7_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_7_timestamp_V_ce0 = 1'b0;
@@ -5195,7 +4083,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_8_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_8_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_8_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_8_sample_V_address0 = 64'd1;
     end else begin
@@ -5218,7 +4106,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_8_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_8_sample_V_ce0 = 1'b0;
@@ -5249,7 +4137,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_8_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_8_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_8_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_8_timestamp_V_address0 = 64'd1;
     end else begin
@@ -5272,7 +4160,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_8_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_8_timestamp_V_ce0 = 1'b0;
@@ -5303,7 +4191,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_9_sample_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_9_sample_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_9_sample_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_9_sample_V_address0 = 64'd1;
     end else begin
@@ -5326,7 +4214,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_9_sample_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_9_sample_V_ce0 = 1'b0;
@@ -5357,7 +4245,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         sample_period_samples_9_timestamp_V_address0 = 64'd2;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        sample_period_samples_9_timestamp_V_address0 = zext_ln19_reg_8187;
+        sample_period_samples_9_timestamp_V_address0 = zext_ln19_reg_9295;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
         sample_period_samples_9_timestamp_V_address0 = 64'd1;
     end else begin
@@ -5380,7 +4268,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
+    if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
         sample_period_samples_9_timestamp_V_ce0 = 1'b1;
     end else begin
         sample_period_samples_9_timestamp_V_ce0 = 1'b0;
@@ -5405,16 +4293,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_0_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_0_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_0_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_0_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_0_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_0_sample_V_ce0 = 1'b1;
     end else begin
         samples_0_sample_V_ce0 = 1'b0;
@@ -5422,7 +4310,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_0_sample_V_we0 = 1'b1;
     end else begin
         samples_0_sample_V_we0 = 1'b0;
@@ -5431,16 +4319,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_0_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_0_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_0_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_0_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_0_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_0_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_0_timestamp_V_ce0 = 1'b0;
@@ -5448,7 +4336,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_0_timestamp_V_we0 = 1'b1;
     end else begin
         samples_0_timestamp_V_we0 = 1'b0;
@@ -5457,16 +4345,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_10_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_10_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_10_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_10_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_10_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_10_sample_V_ce0 = 1'b1;
     end else begin
         samples_10_sample_V_ce0 = 1'b0;
@@ -5474,7 +4362,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_10_sample_V_we0 = 1'b1;
     end else begin
         samples_10_sample_V_we0 = 1'b0;
@@ -5483,16 +4371,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_10_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_10_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_10_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_10_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_10_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_10_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_10_timestamp_V_ce0 = 1'b0;
@@ -5500,7 +4388,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_10_timestamp_V_we0 = 1'b1;
     end else begin
         samples_10_timestamp_V_we0 = 1'b0;
@@ -5509,16 +4397,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_11_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_11_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_11_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_11_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_11_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_11_sample_V_ce0 = 1'b1;
     end else begin
         samples_11_sample_V_ce0 = 1'b0;
@@ -5526,7 +4414,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_11_sample_V_we0 = 1'b1;
     end else begin
         samples_11_sample_V_we0 = 1'b0;
@@ -5535,16 +4423,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_11_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_11_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_11_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_11_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_11_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_11_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_11_timestamp_V_ce0 = 1'b0;
@@ -5552,7 +4440,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_11_timestamp_V_we0 = 1'b1;
     end else begin
         samples_11_timestamp_V_we0 = 1'b0;
@@ -5561,16 +4449,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_1_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_1_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_1_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_1_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_1_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_1_sample_V_ce0 = 1'b1;
     end else begin
         samples_1_sample_V_ce0 = 1'b0;
@@ -5578,7 +4466,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_1_sample_V_we0 = 1'b1;
     end else begin
         samples_1_sample_V_we0 = 1'b0;
@@ -5587,16 +4475,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_1_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_1_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_1_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_1_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_1_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_1_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_1_timestamp_V_ce0 = 1'b0;
@@ -5604,7 +4492,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_1_timestamp_V_we0 = 1'b1;
     end else begin
         samples_1_timestamp_V_we0 = 1'b0;
@@ -5613,16 +4501,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_2_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_2_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_2_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_2_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_2_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_2_sample_V_ce0 = 1'b1;
     end else begin
         samples_2_sample_V_ce0 = 1'b0;
@@ -5630,7 +4518,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_2_sample_V_we0 = 1'b1;
     end else begin
         samples_2_sample_V_we0 = 1'b0;
@@ -5639,16 +4527,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_2_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_2_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_2_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_2_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_2_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_2_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_2_timestamp_V_ce0 = 1'b0;
@@ -5656,7 +4544,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_2_timestamp_V_we0 = 1'b1;
     end else begin
         samples_2_timestamp_V_we0 = 1'b0;
@@ -5665,16 +4553,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_3_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_3_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_3_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_3_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_3_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_3_sample_V_ce0 = 1'b1;
     end else begin
         samples_3_sample_V_ce0 = 1'b0;
@@ -5682,7 +4570,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_3_sample_V_we0 = 1'b1;
     end else begin
         samples_3_sample_V_we0 = 1'b0;
@@ -5691,16 +4579,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_3_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_3_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_3_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_3_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_3_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_3_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_3_timestamp_V_ce0 = 1'b0;
@@ -5708,7 +4596,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_3_timestamp_V_we0 = 1'b1;
     end else begin
         samples_3_timestamp_V_we0 = 1'b0;
@@ -5717,16 +4605,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_4_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_4_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_4_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_4_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_4_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_4_sample_V_ce0 = 1'b1;
     end else begin
         samples_4_sample_V_ce0 = 1'b0;
@@ -5734,7 +4622,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_4_sample_V_we0 = 1'b1;
     end else begin
         samples_4_sample_V_we0 = 1'b0;
@@ -5743,16 +4631,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_4_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_4_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_4_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_4_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_4_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_4_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_4_timestamp_V_ce0 = 1'b0;
@@ -5760,7 +4648,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_4_timestamp_V_we0 = 1'b1;
     end else begin
         samples_4_timestamp_V_we0 = 1'b0;
@@ -5769,16 +4657,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_5_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_5_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_5_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_5_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_5_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_5_sample_V_ce0 = 1'b1;
     end else begin
         samples_5_sample_V_ce0 = 1'b0;
@@ -5786,7 +4674,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_5_sample_V_we0 = 1'b1;
     end else begin
         samples_5_sample_V_we0 = 1'b0;
@@ -5795,16 +4683,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_5_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_5_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_5_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_5_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_5_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_5_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_5_timestamp_V_ce0 = 1'b0;
@@ -5812,7 +4700,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_5_timestamp_V_we0 = 1'b1;
     end else begin
         samples_5_timestamp_V_we0 = 1'b0;
@@ -5821,16 +4709,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_6_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_6_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_6_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_6_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_6_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_6_sample_V_ce0 = 1'b1;
     end else begin
         samples_6_sample_V_ce0 = 1'b0;
@@ -5838,7 +4726,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_6_sample_V_we0 = 1'b1;
     end else begin
         samples_6_sample_V_we0 = 1'b0;
@@ -5847,16 +4735,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_6_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_6_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_6_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_6_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_6_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_6_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_6_timestamp_V_ce0 = 1'b0;
@@ -5864,7 +4752,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_6_timestamp_V_we0 = 1'b1;
     end else begin
         samples_6_timestamp_V_we0 = 1'b0;
@@ -5873,16 +4761,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_7_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_7_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_7_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_7_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_7_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_7_sample_V_ce0 = 1'b1;
     end else begin
         samples_7_sample_V_ce0 = 1'b0;
@@ -5890,7 +4778,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_7_sample_V_we0 = 1'b1;
     end else begin
         samples_7_sample_V_we0 = 1'b0;
@@ -5899,16 +4787,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_7_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_7_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_7_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_7_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_7_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_7_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_7_timestamp_V_ce0 = 1'b0;
@@ -5916,7 +4804,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_7_timestamp_V_we0 = 1'b1;
     end else begin
         samples_7_timestamp_V_we0 = 1'b0;
@@ -5925,16 +4813,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_8_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_8_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_8_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_8_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_8_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_8_sample_V_ce0 = 1'b1;
     end else begin
         samples_8_sample_V_ce0 = 1'b0;
@@ -5942,7 +4830,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_8_sample_V_we0 = 1'b1;
     end else begin
         samples_8_sample_V_we0 = 1'b0;
@@ -5951,16 +4839,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_8_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_8_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_8_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_8_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_8_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_8_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_8_timestamp_V_ce0 = 1'b0;
@@ -5968,7 +4856,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_8_timestamp_V_we0 = 1'b1;
     end else begin
         samples_8_timestamp_V_we0 = 1'b0;
@@ -5977,16 +4865,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_9_sample_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_9_sample_V_address0 = i_cast_fu_7369_p1;
+        samples_9_sample_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_9_sample_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_9_sample_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_9_sample_V_ce0 = 1'b1;
     end else begin
         samples_9_sample_V_ce0 = 1'b0;
@@ -5994,7 +4882,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_9_sample_V_we0 = 1'b1;
     end else begin
         samples_9_sample_V_we0 = 1'b0;
@@ -6003,16 +4891,16 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        samples_9_timestamp_V_address0 = zext_ln19_fu_7595_p1;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        samples_9_timestamp_V_address0 = i_cast_fu_7369_p1;
+        samples_9_timestamp_V_address0 = zext_ln19_fu_6430_p1;
+    end else if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+        samples_9_timestamp_V_address0 = i_cast_fu_6204_p1;
     end else begin
         samples_9_timestamp_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1)))) begin
         samples_9_timestamp_V_ce0 = 1'b1;
     end else begin
         samples_9_timestamp_V_ce0 = 1'b0;
@@ -6020,7 +4908,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln84_reg_8118 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln92_reg_9226 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
         samples_9_timestamp_V_we0 = 1'b1;
     end else begin
         samples_9_timestamp_V_we0 = 1'b0;
@@ -6028,15 +4916,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln63_reg_10283 == 1'd1) & (icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29))) begin
-        sliding_window_back_ptr_s_o = grp_fu_7881_p2;
+    if (((1'b1 == ap_CS_fsm_state27) & (icmp_ln63_reg_11432 == 1'd1))) begin
+        sliding_window_back_ptr_s_o = grp_fu_6556_p2;
     end else begin
         sliding_window_back_ptr_s_o = sliding_window_back_ptr_s_i;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln63_reg_10283 == 1'd1) & (icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29))) begin
+    if (((1'b1 == ap_CS_fsm_state27) & (icmp_ln63_reg_11432 == 1'd1))) begin
         sliding_window_back_ptr_s_o_ap_vld = 1'b1;
     end else begin
         sliding_window_back_ptr_s_o_ap_vld = 1'b0;
@@ -6044,5487 +4932,1943 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_0_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_0_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_0_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_0_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_0_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_1_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_1_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_1_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_1_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_1_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_2_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_2_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_2_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_2_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_2_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_3_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_3_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_3_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_3_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_3_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_4_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_4_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_4_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_4_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_4_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_5_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_5_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_5_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_5_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_5_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_0_d0 = sample_period_samples_0_sample_V_load_6_reg_10018;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_0_d0 = sample_period_samples_0_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_0_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_10_d0 = sample_period_samples_10_sample_V_load_6_reg_10068;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_10_d0 = sample_period_samples_10_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_10_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_11_d0 = sample_period_samples_11_sample_V_load_6_reg_10073;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_11_d0 = sample_period_samples_11_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_11_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_1_d0 = sample_period_samples_1_sample_V_load_6_reg_10023;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_1_d0 = sample_period_samples_1_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_1_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_2_d0 = sample_period_samples_2_sample_V_load_6_reg_10028;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_2_d0 = sample_period_samples_2_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_2_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_3_d0 = sample_period_samples_3_sample_V_load_6_reg_10033;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_3_d0 = sample_period_samples_3_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_3_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_4_d0 = sample_period_samples_4_sample_V_load_6_reg_10038;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_4_d0 = sample_period_samples_4_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_4_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_5_d0 = sample_period_samples_5_sample_V_load_6_reg_10043;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_5_d0 = sample_period_samples_5_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_5_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_6_d0 = sample_period_samples_6_sample_V_load_6_reg_10048;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_6_d0 = sample_period_samples_6_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_6_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_7_d0 = sample_period_samples_7_sample_V_load_6_reg_10053;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_7_d0 = sample_period_samples_7_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_7_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_8_d0 = sample_period_samples_8_sample_V_load_6_reg_10058;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_8_d0 = sample_period_samples_8_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_8_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_6_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_6_9_d0 = sample_period_samples_9_sample_V_load_6_reg_10063;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_6_9_d0 = sample_period_samples_9_sample_V_q0;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_9_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_6_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_6_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_0_d0 = sample_period_samples_0_sample_V_load_7_reg_10138;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_0_d0 = sample_period_samples_0_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_0_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_10_d0 = sample_period_samples_10_sample_V_load_7_reg_10188;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_10_d0 = sample_period_samples_10_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_10_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_11_d0 = sample_period_samples_11_sample_V_load_7_reg_10193;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_11_d0 = sample_period_samples_11_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_11_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_1_d0 = sample_period_samples_1_sample_V_load_7_reg_10143;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_1_d0 = sample_period_samples_1_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_1_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_2_d0 = sample_period_samples_2_sample_V_load_7_reg_10148;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_2_d0 = sample_period_samples_2_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_2_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_3_d0 = sample_period_samples_3_sample_V_load_7_reg_10153;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_3_d0 = sample_period_samples_3_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_3_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_4_d0 = sample_period_samples_4_sample_V_load_7_reg_10158;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_4_d0 = sample_period_samples_4_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_4_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_5_d0 = sample_period_samples_5_sample_V_load_7_reg_10163;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_5_d0 = sample_period_samples_5_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_5_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_6_d0 = sample_period_samples_6_sample_V_load_7_reg_10168;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_6_d0 = sample_period_samples_6_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_6_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_7_d0 = sample_period_samples_7_sample_V_load_7_reg_10173;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_7_d0 = sample_period_samples_7_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_7_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_8_d0 = sample_period_samples_8_sample_V_load_7_reg_10178;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_8_d0 = sample_period_samples_8_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_8_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_sample_V_7_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_sample_V_7_9_d0 = sample_period_samples_9_sample_V_load_7_reg_10183;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_sample_V_7_9_d0 = sample_period_samples_9_sample_V_q1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_9_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_sample_V_7_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_sample_V_7_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_0_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_0_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_0_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_0_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_0_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_1_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_1_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_1_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_1_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_1_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_2_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_2_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_2_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_2_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_2_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_3_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_3_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_3_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_3_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_3_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_4_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_4_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_4_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_4_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_4_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_5_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_5_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_5_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_5_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_5_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_0_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_0_d0 = sample_period_samples_0_timestamp_V_load_6_reg_10078;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_0_d0 = sample_period_samples_0_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_0_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_10_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_10_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_10_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_10_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_10_d0 = sample_period_samples_10_timestamp_V_load_6_reg_10128;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_10_d0 = sample_period_samples_10_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_10_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_10_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_10_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_11_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_11_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_11_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_11_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_11_d0 = sample_period_samples_11_timestamp_V_load_6_reg_10133;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_11_d0 = sample_period_samples_11_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_11_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_11_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_11_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_1_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_1_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_1_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_1_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_1_d0 = sample_period_samples_1_timestamp_V_load_6_reg_10083;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_1_d0 = sample_period_samples_1_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_1_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_1_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_2_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_2_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_2_d0 = sample_period_samples_2_timestamp_V_load_6_reg_10088;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_2_d0 = sample_period_samples_2_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_2_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_2_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_3_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_3_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_3_d0 = sample_period_samples_3_timestamp_V_load_6_reg_10093;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_3_d0 = sample_period_samples_3_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_3_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_3_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_4_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_4_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_4_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_4_d0 = sample_period_samples_4_timestamp_V_load_6_reg_10098;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_4_d0 = sample_period_samples_4_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_4_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_4_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_4_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_5_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_5_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_5_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_5_d0 = sample_period_samples_5_timestamp_V_load_6_reg_10103;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_5_d0 = sample_period_samples_5_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_5_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_5_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_5_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_6_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_6_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_6_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_6_d0 = sample_period_samples_6_timestamp_V_load_6_reg_10108;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_6_d0 = sample_period_samples_6_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_6_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_6_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_6_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_7_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_7_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_7_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_7_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_7_d0 = sample_period_samples_7_timestamp_V_load_6_reg_10113;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_7_d0 = sample_period_samples_7_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_7_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_7_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_7_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_8_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_8_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_8_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_8_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_8_d0 = sample_period_samples_8_timestamp_V_load_6_reg_10118;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_8_d0 = sample_period_samples_8_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_8_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_8_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_8_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_9_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_9_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_6_9_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_9_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_6_9_d0 = sample_period_samples_9_timestamp_V_load_6_reg_10123;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_6_9_d0 = sample_period_samples_9_timestamp_V_q0;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_9_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_6_9_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_6_9_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_0_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_0_address0 = zext_ln54_fu_7659_p1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_7_0_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_0_ce0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_7_0_ce0 = 1'b0;
-    end
-end
+    if ((1'b1 == ap_CS_fsm_state121)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_96_fu_9210_p1;
+    end else if ((1'b1 == ap_CS_fsm_state120)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_94_fu_9190_p1;
+    end else if ((1'b1 == ap_CS_fsm_state119)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_92_fu_9170_p1;
+    end else if ((1'b1 == ap_CS_fsm_state118)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_90_fu_9150_p1;
+    end else if ((1'b1 == ap_CS_fsm_state117)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_88_fu_9130_p1;
+    end else if ((1'b1 == ap_CS_fsm_state116)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_86_fu_9110_p1;
+    end else if ((1'b1 == ap_CS_fsm_state115)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_84_fu_9096_p1;
+    end else if ((1'b1 == ap_CS_fsm_state114)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_82_fu_9076_p1;
+    end else if ((1'b1 == ap_CS_fsm_state113)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_80_fu_9056_p1;
+    end else if ((1'b1 == ap_CS_fsm_state112)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_78_fu_9036_p1;
+    end else if ((1'b1 == ap_CS_fsm_state111)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_76_fu_9016_p1;
+    end else if ((1'b1 == ap_CS_fsm_state110)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_74_fu_8996_p1;
+    end else if ((1'b1 == ap_CS_fsm_state109)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_72_fu_8982_p1;
+    end else if ((1'b1 == ap_CS_fsm_state108)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_70_fu_8962_p1;
+    end else if ((1'b1 == ap_CS_fsm_state107)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_68_fu_8942_p1;
+    end else if ((1'b1 == ap_CS_fsm_state106)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_66_fu_8922_p1;
+    end else if ((1'b1 == ap_CS_fsm_state105)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_64_fu_8902_p1;
+    end else if ((1'b1 == ap_CS_fsm_state104)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_62_fu_8882_p1;
+    end else if ((1'b1 == ap_CS_fsm_state103)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_60_fu_8868_p1;
+    end else if ((1'b1 == ap_CS_fsm_state102)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_58_fu_8848_p1;
+    end else if ((1'b1 == ap_CS_fsm_state101)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_56_fu_8828_p1;
+    end else if ((1'b1 == ap_CS_fsm_state100)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_54_fu_8808_p1;
+    end else if ((1'b1 == ap_CS_fsm_state99)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_52_fu_8788_p1;
+    end else if ((1'b1 == ap_CS_fsm_state98)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_50_fu_8768_p1;
+    end else if ((1'b1 == ap_CS_fsm_state97)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_48_fu_8754_p1;
+    end else if ((1'b1 == ap_CS_fsm_state96)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_46_fu_8734_p1;
+    end else if ((1'b1 == ap_CS_fsm_state95)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_44_fu_8714_p1;
+    end else if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_42_fu_8592_p1;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_40_fu_8470_p1;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_38_fu_8450_p1;
+    end else if ((1'b1 == ap_CS_fsm_state91)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_36_fu_8383_p1;
+    end else if ((1'b1 == ap_CS_fsm_state90)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_34_fu_8363_p1;
+    end else if ((1'b1 == ap_CS_fsm_state89)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_32_fu_8343_p1;
+    end else if ((1'b1 == ap_CS_fsm_state88)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_30_fu_8323_p1;
+    end else if ((1'b1 == ap_CS_fsm_state87)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_28_fu_8303_p1;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_26_fu_8283_p1;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_24_fu_8216_p1;
+    end else if ((1'b1 == ap_CS_fsm_state84)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_22_fu_8181_p1;
+    end else if ((1'b1 == ap_CS_fsm_state83)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_20_fu_8161_p1;
+    end else if ((1'b1 == ap_CS_fsm_state82)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_18_fu_8141_p1;
+    end else if ((1'b1 == ap_CS_fsm_state81)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_16_fu_8121_p1;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_14_fu_8101_p1;
+    end else if ((1'b1 == ap_CS_fsm_state79)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_12_fu_8026_p1;
+    end else if ((1'b1 == ap_CS_fsm_state78)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_10_fu_8006_p1;
+    end else if ((1'b1 == ap_CS_fsm_state77)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_8_fu_7986_p1;
+    end else if ((1'b1 == ap_CS_fsm_state76)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_6_fu_7966_p1;
+    end else if ((1'b1 == ap_CS_fsm_state75)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_4_fu_7946_p1;
+    end else if ((1'b1 == ap_CS_fsm_state74)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_97_fu_7926_p1;
+    end else if ((1'b1 == ap_CS_fsm_state73)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_95_fu_7906_p1;
+    end else if ((1'b1 == ap_CS_fsm_state72)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_93_fu_7886_p1;
+    end else if ((1'b1 == ap_CS_fsm_state71)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_91_fu_7866_p1;
+    end else if ((1'b1 == ap_CS_fsm_state70)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_89_fu_7846_p1;
+    end else if ((1'b1 == ap_CS_fsm_state69)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_87_fu_7826_p1;
+    end else if ((1'b1 == ap_CS_fsm_state68)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_85_fu_7812_p1;
+    end else if ((1'b1 == ap_CS_fsm_state67)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_83_fu_7792_p1;
+    end else if ((1'b1 == ap_CS_fsm_state66)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_81_fu_7772_p1;
+    end else if ((1'b1 == ap_CS_fsm_state65)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_79_fu_7752_p1;
+    end else if ((1'b1 == ap_CS_fsm_state64)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_77_fu_7732_p1;
+    end else if ((1'b1 == ap_CS_fsm_state63)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_75_fu_7712_p1;
+    end else if ((1'b1 == ap_CS_fsm_state62)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_73_fu_7698_p1;
+    end else if ((1'b1 == ap_CS_fsm_state61)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_71_fu_7678_p1;
+    end else if ((1'b1 == ap_CS_fsm_state60)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_69_fu_7658_p1;
+    end else if ((1'b1 == ap_CS_fsm_state59)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_67_fu_7638_p1;
+    end else if ((1'b1 == ap_CS_fsm_state58)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_65_fu_7618_p1;
+    end else if ((1'b1 == ap_CS_fsm_state57)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_63_fu_7598_p1;
+    end else if ((1'b1 == ap_CS_fsm_state56)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_61_fu_7584_p1;
+    end else if ((1'b1 == ap_CS_fsm_state55)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_59_fu_7564_p1;
+    end else if ((1'b1 == ap_CS_fsm_state54)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_57_fu_7544_p1;
+    end else if ((1'b1 == ap_CS_fsm_state53)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_55_fu_7524_p1;
+    end else if ((1'b1 == ap_CS_fsm_state52)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_53_fu_7504_p1;
+    end else if ((1'b1 == ap_CS_fsm_state51)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_51_fu_7484_p1;
+    end else if ((1'b1 == ap_CS_fsm_state50)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_49_fu_7470_p1;
+    end else if ((1'b1 == ap_CS_fsm_state49)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_47_fu_7450_p1;
+    end else if ((1'b1 == ap_CS_fsm_state48)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_45_fu_7430_p1;
+    end else if ((1'b1 == ap_CS_fsm_state47)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_43_fu_7410_p1;
+    end else if ((1'b1 == ap_CS_fsm_state46)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_41_fu_7390_p1;
+    end else if ((1'b1 == ap_CS_fsm_state45)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_39_fu_7370_p1;
+    end else if ((1'b1 == ap_CS_fsm_state44)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_37_fu_7356_p1;
+    end else if ((1'b1 == ap_CS_fsm_state43)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_35_fu_7336_p1;
+    end else if ((1'b1 == ap_CS_fsm_state42)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_33_fu_7316_p1;
+    end else if ((1'b1 == ap_CS_fsm_state41)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_31_fu_7296_p1;
+    end else if ((1'b1 == ap_CS_fsm_state40)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_29_fu_7276_p1;
+    end else if ((1'b1 == ap_CS_fsm_state39)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_27_fu_7256_p1;
+    end else if ((1'b1 == ap_CS_fsm_state38)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_25_fu_7242_p1;
+    end else if ((1'b1 == ap_CS_fsm_state37)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_23_fu_7222_p1;
+    end else if ((1'b1 == ap_CS_fsm_state36)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_21_fu_7202_p1;
+    end else if ((1'b1 == ap_CS_fsm_state35)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_19_fu_7182_p1;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_17_fu_7162_p1;
+    end else if ((1'b1 == ap_CS_fsm_state33)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_15_fu_7142_p1;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_13_fu_7128_p1;
+    end else if ((1'b1 == ap_CS_fsm_state31)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_11_fu_7108_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_9_fu_6982_p1;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_7_fu_6856_p1;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_5_fu_6730_p1;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln75_3_fu_6651_p1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        sliding_window_buffer_samples_sample_V_address0 = zext_ln54_2_fu_6531_p1;
+    end else begin
+        sliding_window_buffer_samples_sample_V_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state121)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_95_fu_9200_p1;
+    end else if ((1'b1 == ap_CS_fsm_state120)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_93_fu_9180_p1;
+    end else if ((1'b1 == ap_CS_fsm_state119)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_91_fu_9160_p1;
+    end else if ((1'b1 == ap_CS_fsm_state118)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_89_fu_9140_p1;
+    end else if ((1'b1 == ap_CS_fsm_state117)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_87_fu_9120_p1;
+    end else if ((1'b1 == ap_CS_fsm_state116)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_85_fu_9101_p1;
+    end else if ((1'b1 == ap_CS_fsm_state115)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_83_fu_9086_p1;
+    end else if ((1'b1 == ap_CS_fsm_state114)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_81_fu_9066_p1;
+    end else if ((1'b1 == ap_CS_fsm_state113)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_79_fu_9046_p1;
+    end else if ((1'b1 == ap_CS_fsm_state112)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_77_fu_9026_p1;
+    end else if ((1'b1 == ap_CS_fsm_state111)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_75_fu_9006_p1;
+    end else if ((1'b1 == ap_CS_fsm_state110)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_73_fu_8987_p1;
+    end else if ((1'b1 == ap_CS_fsm_state109)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_71_fu_8972_p1;
+    end else if ((1'b1 == ap_CS_fsm_state108)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_69_fu_8952_p1;
+    end else if ((1'b1 == ap_CS_fsm_state107)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_67_fu_8932_p1;
+    end else if ((1'b1 == ap_CS_fsm_state106)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_65_fu_8912_p1;
+    end else if ((1'b1 == ap_CS_fsm_state105)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_63_fu_8892_p1;
+    end else if ((1'b1 == ap_CS_fsm_state104)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_61_fu_8873_p1;
+    end else if ((1'b1 == ap_CS_fsm_state103)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_59_fu_8858_p1;
+    end else if ((1'b1 == ap_CS_fsm_state102)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_57_fu_8838_p1;
+    end else if ((1'b1 == ap_CS_fsm_state101)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_55_fu_8818_p1;
+    end else if ((1'b1 == ap_CS_fsm_state100)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_53_fu_8798_p1;
+    end else if ((1'b1 == ap_CS_fsm_state99)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_51_fu_8778_p1;
+    end else if ((1'b1 == ap_CS_fsm_state98)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_49_fu_8759_p1;
+    end else if ((1'b1 == ap_CS_fsm_state97)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_47_fu_8744_p1;
+    end else if ((1'b1 == ap_CS_fsm_state96)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_45_fu_8724_p1;
+    end else if ((1'b1 == ap_CS_fsm_state95)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_43_fu_8704_p1;
+    end else if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_41_fu_8582_p1;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_39_fu_8460_p1;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_37_fu_8439_p1;
+    end else if ((1'b1 == ap_CS_fsm_state91)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_35_fu_8373_p1;
+    end else if ((1'b1 == ap_CS_fsm_state90)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_33_fu_8353_p1;
+    end else if ((1'b1 == ap_CS_fsm_state89)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_31_fu_8333_p1;
+    end else if ((1'b1 == ap_CS_fsm_state88)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_29_fu_8313_p1;
+    end else if ((1'b1 == ap_CS_fsm_state87)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_27_fu_8293_p1;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_25_fu_8272_p1;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_23_fu_8206_p1;
+    end else if ((1'b1 == ap_CS_fsm_state84)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_21_fu_8171_p1;
+    end else if ((1'b1 == ap_CS_fsm_state83)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_19_fu_8151_p1;
+    end else if ((1'b1 == ap_CS_fsm_state82)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_17_fu_8131_p1;
+    end else if ((1'b1 == ap_CS_fsm_state81)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_15_fu_8111_p1;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_13_fu_8090_p1;
+    end else if ((1'b1 == ap_CS_fsm_state79)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_11_fu_8016_p1;
+    end else if ((1'b1 == ap_CS_fsm_state78)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_9_fu_7996_p1;
+    end else if ((1'b1 == ap_CS_fsm_state77)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_7_fu_7976_p1;
+    end else if ((1'b1 == ap_CS_fsm_state76)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_5_fu_7956_p1;
+    end else if ((1'b1 == ap_CS_fsm_state75)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_3_fu_7936_p1;
+    end else if ((1'b1 == ap_CS_fsm_state74)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_96_fu_7916_p1;
+    end else if ((1'b1 == ap_CS_fsm_state73)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_94_fu_7896_p1;
+    end else if ((1'b1 == ap_CS_fsm_state72)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_92_fu_7876_p1;
+    end else if ((1'b1 == ap_CS_fsm_state71)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_90_fu_7856_p1;
+    end else if ((1'b1 == ap_CS_fsm_state70)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_88_fu_7836_p1;
+    end else if ((1'b1 == ap_CS_fsm_state69)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_86_fu_7817_p1;
+    end else if ((1'b1 == ap_CS_fsm_state68)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_84_fu_7802_p1;
+    end else if ((1'b1 == ap_CS_fsm_state67)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_82_fu_7782_p1;
+    end else if ((1'b1 == ap_CS_fsm_state66)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_80_fu_7762_p1;
+    end else if ((1'b1 == ap_CS_fsm_state65)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_78_fu_7742_p1;
+    end else if ((1'b1 == ap_CS_fsm_state64)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_76_fu_7722_p1;
+    end else if ((1'b1 == ap_CS_fsm_state63)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_74_fu_7703_p1;
+    end else if ((1'b1 == ap_CS_fsm_state62)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_72_fu_7688_p1;
+    end else if ((1'b1 == ap_CS_fsm_state61)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_70_fu_7668_p1;
+    end else if ((1'b1 == ap_CS_fsm_state60)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_68_fu_7648_p1;
+    end else if ((1'b1 == ap_CS_fsm_state59)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_66_fu_7628_p1;
+    end else if ((1'b1 == ap_CS_fsm_state58)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_64_fu_7608_p1;
+    end else if ((1'b1 == ap_CS_fsm_state57)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_62_fu_7589_p1;
+    end else if ((1'b1 == ap_CS_fsm_state56)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_60_fu_7574_p1;
+    end else if ((1'b1 == ap_CS_fsm_state55)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_58_fu_7554_p1;
+    end else if ((1'b1 == ap_CS_fsm_state54)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_56_fu_7534_p1;
+    end else if ((1'b1 == ap_CS_fsm_state53)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_54_fu_7514_p1;
+    end else if ((1'b1 == ap_CS_fsm_state52)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_52_fu_7494_p1;
+    end else if ((1'b1 == ap_CS_fsm_state51)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_50_fu_7475_p1;
+    end else if ((1'b1 == ap_CS_fsm_state50)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_48_fu_7460_p1;
+    end else if ((1'b1 == ap_CS_fsm_state49)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_46_fu_7440_p1;
+    end else if ((1'b1 == ap_CS_fsm_state48)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_44_fu_7420_p1;
+    end else if ((1'b1 == ap_CS_fsm_state47)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_42_fu_7400_p1;
+    end else if ((1'b1 == ap_CS_fsm_state46)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_40_fu_7380_p1;
+    end else if ((1'b1 == ap_CS_fsm_state45)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_38_fu_7361_p1;
+    end else if ((1'b1 == ap_CS_fsm_state44)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_36_fu_7346_p1;
+    end else if ((1'b1 == ap_CS_fsm_state43)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_34_fu_7326_p1;
+    end else if ((1'b1 == ap_CS_fsm_state42)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_32_fu_7306_p1;
+    end else if ((1'b1 == ap_CS_fsm_state41)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_30_fu_7286_p1;
+    end else if ((1'b1 == ap_CS_fsm_state40)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_28_fu_7266_p1;
+    end else if ((1'b1 == ap_CS_fsm_state39)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_26_fu_7247_p1;
+    end else if ((1'b1 == ap_CS_fsm_state38)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_24_fu_7232_p1;
+    end else if ((1'b1 == ap_CS_fsm_state37)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_22_fu_7212_p1;
+    end else if ((1'b1 == ap_CS_fsm_state36)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_20_fu_7192_p1;
+    end else if ((1'b1 == ap_CS_fsm_state35)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_18_fu_7172_p1;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_16_fu_7152_p1;
+    end else if ((1'b1 == ap_CS_fsm_state33)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_14_fu_7133_p1;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_12_fu_7118_p1;
+    end else if ((1'b1 == ap_CS_fsm_state31)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_10_fu_7098_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_8_fu_6972_p1;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_6_fu_6846_p1;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_4_fu_6720_p1;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln75_2_fu_6640_p1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        sliding_window_buffer_samples_sample_V_address1 = zext_ln54_1_fu_6520_p1;
+    end else begin
+        sliding_window_buffer_samples_sample_V_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state121) | (1'b1 == ap_CS_fsm_state120) | (1'b1 == ap_CS_fsm_state119) | (1'b1 == ap_CS_fsm_state118) | (1'b1 == ap_CS_fsm_state117) | (1'b1 == ap_CS_fsm_state116) | (1'b1 == ap_CS_fsm_state115) | (1'b1 == ap_CS_fsm_state114) | (1'b1 == ap_CS_fsm_state113) | (1'b1 == ap_CS_fsm_state112) | (1'b1 == ap_CS_fsm_state111) | (1'b1 == ap_CS_fsm_state110) | (1'b1 == ap_CS_fsm_state109) | (1'b1 == ap_CS_fsm_state108) | (1'b1 == ap_CS_fsm_state107) | (1'b1 == ap_CS_fsm_state106) | (1'b1 == ap_CS_fsm_state105) | (1'b1 == ap_CS_fsm_state104) | (1'b1 == ap_CS_fsm_state103) | (1'b1 == ap_CS_fsm_state102) | (1'b1 == ap_CS_fsm_state101) | (1'b1 == ap_CS_fsm_state100) | (1'b1 == ap_CS_fsm_state99) | (1'b1 == ap_CS_fsm_state98) | (1'b1 == ap_CS_fsm_state97) | (1'b1 == ap_CS_fsm_state96) | (1'b1 == ap_CS_fsm_state95) | (1'b1 == ap_CS_fsm_state91) | (1'b1 == ap_CS_fsm_state90) | (1'b1 == ap_CS_fsm_state89) | (1'b1 == ap_CS_fsm_state88) | (1'b1 == ap_CS_fsm_state87) | (1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state84) | (1'b1 == ap_CS_fsm_state83) | (1'b1 == ap_CS_fsm_state82) | (1'b1 == ap_CS_fsm_state81) | (1'b1 == ap_CS_fsm_state79) | (1'b1 == ap_CS_fsm_state78) | (1'b1 == ap_CS_fsm_state77) | (1'b1 == ap_CS_fsm_state76) | (1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74) | (1'b1 == ap_CS_fsm_state73) | (1'b1 == ap_CS_fsm_state72) | (1'b1 == ap_CS_fsm_state71) | (1'b1 == ap_CS_fsm_state70) | (1'b1 == ap_CS_fsm_state69) | (1'b1 == ap_CS_fsm_state68) | (1'b1 == ap_CS_fsm_state67) | (1'b1 == ap_CS_fsm_state66) | (1'b1 == ap_CS_fsm_state65) | (1'b1 == ap_CS_fsm_state64) | (1'b1 == ap_CS_fsm_state63) | (1'b1 == ap_CS_fsm_state62) | (1'b1 == ap_CS_fsm_state61) | (1'b1 == ap_CS_fsm_state60) | (1'b1 == ap_CS_fsm_state59) | (1'b1 == ap_CS_fsm_state58) | (1'b1 == ap_CS_fsm_state57) | (1'b1 == ap_CS_fsm_state56) | (1'b1 == ap_CS_fsm_state55) | (1'b1 == ap_CS_fsm_state54) | (1'b1 == ap_CS_fsm_state53) | (1'b1 == ap_CS_fsm_state52) | (1'b1 == ap_CS_fsm_state51) | (1'b1 == ap_CS_fsm_state50) | (1'b1 == ap_CS_fsm_state49) | (1'b1 == ap_CS_fsm_state48) | (1'b1 == ap_CS_fsm_state47) | (1'b1 == ap_CS_fsm_state46) | (1'b1 == ap_CS_fsm_state45) | (1'b1 == ap_CS_fsm_state44) | (1'b1 == ap_CS_fsm_state43) | (1'b1 == ap_CS_fsm_state42) | (1'b1 == ap_CS_fsm_state41) | (1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state10))) begin
+        sliding_window_buffer_samples_sample_V_ce0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_sample_V_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state121) | (1'b1 == ap_CS_fsm_state120) | (1'b1 == ap_CS_fsm_state119) | (1'b1 == ap_CS_fsm_state118) | (1'b1 == ap_CS_fsm_state117) | (1'b1 == ap_CS_fsm_state116) | (1'b1 == ap_CS_fsm_state115) | (1'b1 == ap_CS_fsm_state114) | (1'b1 == ap_CS_fsm_state113) | (1'b1 == ap_CS_fsm_state112) | (1'b1 == ap_CS_fsm_state111) | (1'b1 == ap_CS_fsm_state110) | (1'b1 == ap_CS_fsm_state109) | (1'b1 == ap_CS_fsm_state108) | (1'b1 == ap_CS_fsm_state107) | (1'b1 == ap_CS_fsm_state106) | (1'b1 == ap_CS_fsm_state105) | (1'b1 == ap_CS_fsm_state104) | (1'b1 == ap_CS_fsm_state103) | (1'b1 == ap_CS_fsm_state102) | (1'b1 == ap_CS_fsm_state101) | (1'b1 == ap_CS_fsm_state100) | (1'b1 == ap_CS_fsm_state99) | (1'b1 == ap_CS_fsm_state98) | (1'b1 == ap_CS_fsm_state97) | (1'b1 == ap_CS_fsm_state96) | (1'b1 == ap_CS_fsm_state95) | (1'b1 == ap_CS_fsm_state91) | (1'b1 == ap_CS_fsm_state90) | (1'b1 == ap_CS_fsm_state89) | (1'b1 == ap_CS_fsm_state88) | (1'b1 == ap_CS_fsm_state87) | (1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state84) | (1'b1 == ap_CS_fsm_state83) | (1'b1 == ap_CS_fsm_state82) | (1'b1 == ap_CS_fsm_state81) | (1'b1 == ap_CS_fsm_state79) | (1'b1 == ap_CS_fsm_state78) | (1'b1 == ap_CS_fsm_state77) | (1'b1 == ap_CS_fsm_state76) | (1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74) | (1'b1 == ap_CS_fsm_state73) | (1'b1 == ap_CS_fsm_state72) | (1'b1 == ap_CS_fsm_state71) | (1'b1 == ap_CS_fsm_state70) | (1'b1 == ap_CS_fsm_state69) | (1'b1 == ap_CS_fsm_state68) | (1'b1 == ap_CS_fsm_state67) | (1'b1 == ap_CS_fsm_state66) | (1'b1 == ap_CS_fsm_state65) | (1'b1 == ap_CS_fsm_state64) | (1'b1 == ap_CS_fsm_state63) | (1'b1 == ap_CS_fsm_state62) | (1'b1 == ap_CS_fsm_state61) | (1'b1 == ap_CS_fsm_state60) | (1'b1 == ap_CS_fsm_state59) | (1'b1 == ap_CS_fsm_state58) | (1'b1 == ap_CS_fsm_state57) | (1'b1 == ap_CS_fsm_state56) | (1'b1 == ap_CS_fsm_state55) | (1'b1 == ap_CS_fsm_state54) | (1'b1 == ap_CS_fsm_state53) | (1'b1 == ap_CS_fsm_state52) | (1'b1 == ap_CS_fsm_state51) | (1'b1 == ap_CS_fsm_state50) | (1'b1 == ap_CS_fsm_state49) | (1'b1 == ap_CS_fsm_state48) | (1'b1 == ap_CS_fsm_state47) | (1'b1 == ap_CS_fsm_state46) | (1'b1 == ap_CS_fsm_state45) | (1'b1 == ap_CS_fsm_state44) | (1'b1 == ap_CS_fsm_state43) | (1'b1 == ap_CS_fsm_state42) | (1'b1 == ap_CS_fsm_state41) | (1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state10))) begin
+        sliding_window_buffer_samples_sample_V_ce1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_sample_V_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state121) | (1'b1 == ap_CS_fsm_state74))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_11_sample_V_load_7_reg_11325;
+    end else if (((1'b1 == ap_CS_fsm_state120) | (1'b1 == ap_CS_fsm_state73))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_9_sample_V_load_7_reg_11315;
+    end else if (((1'b1 == ap_CS_fsm_state119) | (1'b1 == ap_CS_fsm_state72))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_7_sample_V_load_7_reg_11305;
+    end else if (((1'b1 == ap_CS_fsm_state118) | (1'b1 == ap_CS_fsm_state71))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_5_sample_V_load_7_reg_11295;
+    end else if (((1'b1 == ap_CS_fsm_state117) | (1'b1 == ap_CS_fsm_state70))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_3_sample_V_load_7_reg_11285;
+    end else if (((1'b1 == ap_CS_fsm_state116) | (1'b1 == ap_CS_fsm_state69))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_1_sample_V_load_7_reg_11275;
+    end else if (((1'b1 == ap_CS_fsm_state115) | (1'b1 == ap_CS_fsm_state68))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_11_sample_V_load_6_reg_11205;
+    end else if (((1'b1 == ap_CS_fsm_state114) | (1'b1 == ap_CS_fsm_state67))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_9_sample_V_load_6_reg_11195;
+    end else if (((1'b1 == ap_CS_fsm_state113) | (1'b1 == ap_CS_fsm_state66))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_7_sample_V_load_6_reg_11185;
+    end else if (((1'b1 == ap_CS_fsm_state112) | (1'b1 == ap_CS_fsm_state65))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_5_sample_V_load_6_reg_11175;
+    end else if (((1'b1 == ap_CS_fsm_state111) | (1'b1 == ap_CS_fsm_state64))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_3_sample_V_load_6_reg_11165;
+    end else if (((1'b1 == ap_CS_fsm_state110) | (1'b1 == ap_CS_fsm_state63))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_1_sample_V_load_6_reg_11155;
+    end else if (((1'b1 == ap_CS_fsm_state109) | (1'b1 == ap_CS_fsm_state62))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_11_sample_V_load_5_reg_10845;
+    end else if (((1'b1 == ap_CS_fsm_state108) | (1'b1 == ap_CS_fsm_state61))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_9_sample_V_load_5_reg_10835;
+    end else if (((1'b1 == ap_CS_fsm_state107) | (1'b1 == ap_CS_fsm_state60))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_7_sample_V_load_5_reg_10825;
+    end else if (((1'b1 == ap_CS_fsm_state106) | (1'b1 == ap_CS_fsm_state59))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_5_sample_V_load_5_reg_10815;
+    end else if (((1'b1 == ap_CS_fsm_state105) | (1'b1 == ap_CS_fsm_state58))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_3_sample_V_load_5_reg_10805;
+    end else if (((1'b1 == ap_CS_fsm_state104) | (1'b1 == ap_CS_fsm_state57))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_1_sample_V_load_5_reg_10795;
+    end else if (((1'b1 == ap_CS_fsm_state103) | (1'b1 == ap_CS_fsm_state56))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_11_sample_V_load_4_reg_10725;
+    end else if (((1'b1 == ap_CS_fsm_state102) | (1'b1 == ap_CS_fsm_state55))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_9_sample_V_load_4_reg_10715;
+    end else if (((1'b1 == ap_CS_fsm_state101) | (1'b1 == ap_CS_fsm_state54))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_7_sample_V_load_4_reg_10705;
+    end else if (((1'b1 == ap_CS_fsm_state100) | (1'b1 == ap_CS_fsm_state53))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_5_sample_V_load_4_reg_10695;
+    end else if (((1'b1 == ap_CS_fsm_state99) | (1'b1 == ap_CS_fsm_state52))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_3_sample_V_load_4_reg_10685;
+    end else if (((1'b1 == ap_CS_fsm_state98) | (1'b1 == ap_CS_fsm_state51))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_1_sample_V_load_4_reg_10675;
+    end else if (((1'b1 == ap_CS_fsm_state97) | (1'b1 == ap_CS_fsm_state50))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_11_sample_V_load_3_reg_10353;
+    end else if (((1'b1 == ap_CS_fsm_state96) | (1'b1 == ap_CS_fsm_state49))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_9_sample_V_load_3_reg_10343;
+    end else if (((1'b1 == ap_CS_fsm_state95) | (1'b1 == ap_CS_fsm_state48))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_7_sample_V_load_3_reg_10333;
+    end else if (((1'b1 == ap_CS_fsm_state47) | (1'b1 == ap_CS_fsm_state94))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_5_sample_V_load_3_reg_10323;
+    end else if (((1'b1 == ap_CS_fsm_state46) | (1'b1 == ap_CS_fsm_state93))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_3_sample_V_load_3_reg_10313;
+    end else if (((1'b1 == ap_CS_fsm_state45) | (1'b1 == ap_CS_fsm_state92))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_1_sample_V_load_3_reg_10303;
+    end else if (((1'b1 == ap_CS_fsm_state91) | (1'b1 == ap_CS_fsm_state44))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_11_sample_V_load_2_reg_10221;
+    end else if (((1'b1 == ap_CS_fsm_state90) | (1'b1 == ap_CS_fsm_state43))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_9_sample_V_load_2_reg_10211;
+    end else if (((1'b1 == ap_CS_fsm_state89) | (1'b1 == ap_CS_fsm_state42))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_7_sample_V_load_2_reg_10201;
+    end else if (((1'b1 == ap_CS_fsm_state88) | (1'b1 == ap_CS_fsm_state41))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_5_sample_V_load_2_reg_10191;
+    end else if (((1'b1 == ap_CS_fsm_state87) | (1'b1 == ap_CS_fsm_state40))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_3_sample_V_load_2_reg_10181;
+    end else if (((1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state86))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_1_sample_V_load_2_reg_10171;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state38))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_11_sample_V_load_1_reg_9861;
+    end else if (((1'b1 == ap_CS_fsm_state84) | (1'b1 == ap_CS_fsm_state37))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_9_sample_V_load_1_reg_9851;
+    end else if (((1'b1 == ap_CS_fsm_state83) | (1'b1 == ap_CS_fsm_state36))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_7_sample_V_load_1_reg_9841;
+    end else if (((1'b1 == ap_CS_fsm_state82) | (1'b1 == ap_CS_fsm_state35))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_5_sample_V_load_1_reg_9831;
+    end else if (((1'b1 == ap_CS_fsm_state81) | (1'b1 == ap_CS_fsm_state34))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_3_sample_V_load_1_reg_9821;
+    end else if (((1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state80))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_1_sample_V_load_1_reg_9811;
+    end else if (((1'b1 == ap_CS_fsm_state79) | (1'b1 == ap_CS_fsm_state32))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_11_sample_V_load_reg_9741;
+    end else if (((1'b1 == ap_CS_fsm_state78) | (1'b1 == ap_CS_fsm_state31))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_9_sample_V_load_reg_9731;
+    end else if (((1'b1 == ap_CS_fsm_state77) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_7_sample_V_load_reg_9721;
+    end else if (((1'b1 == ap_CS_fsm_state76) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_5_sample_V_load_reg_9711;
+    end else if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state28))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_3_sample_V_load_reg_9701;
+    end else if (((1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state10))) begin
+        sliding_window_buffer_samples_sample_V_d0 = sample_period_samples_1_sample_V_load_reg_9691;
+    end else begin
+        sliding_window_buffer_samples_sample_V_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state121) | (1'b1 == ap_CS_fsm_state74))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_10_sample_V_load_7_reg_11320;
+    end else if (((1'b1 == ap_CS_fsm_state120) | (1'b1 == ap_CS_fsm_state73))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_8_sample_V_load_7_reg_11310;
+    end else if (((1'b1 == ap_CS_fsm_state119) | (1'b1 == ap_CS_fsm_state72))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_6_sample_V_load_7_reg_11300;
+    end else if (((1'b1 == ap_CS_fsm_state118) | (1'b1 == ap_CS_fsm_state71))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_4_sample_V_load_7_reg_11290;
+    end else if (((1'b1 == ap_CS_fsm_state117) | (1'b1 == ap_CS_fsm_state70))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_2_sample_V_load_7_reg_11280;
+    end else if (((1'b1 == ap_CS_fsm_state116) | (1'b1 == ap_CS_fsm_state69))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_0_sample_V_load_7_reg_11270;
+    end else if (((1'b1 == ap_CS_fsm_state115) | (1'b1 == ap_CS_fsm_state68))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_10_sample_V_load_6_reg_11200;
+    end else if (((1'b1 == ap_CS_fsm_state114) | (1'b1 == ap_CS_fsm_state67))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_8_sample_V_load_6_reg_11190;
+    end else if (((1'b1 == ap_CS_fsm_state113) | (1'b1 == ap_CS_fsm_state66))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_6_sample_V_load_6_reg_11180;
+    end else if (((1'b1 == ap_CS_fsm_state112) | (1'b1 == ap_CS_fsm_state65))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_4_sample_V_load_6_reg_11170;
+    end else if (((1'b1 == ap_CS_fsm_state111) | (1'b1 == ap_CS_fsm_state64))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_2_sample_V_load_6_reg_11160;
+    end else if (((1'b1 == ap_CS_fsm_state110) | (1'b1 == ap_CS_fsm_state63))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_0_sample_V_load_6_reg_11150;
+    end else if (((1'b1 == ap_CS_fsm_state109) | (1'b1 == ap_CS_fsm_state62))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_10_sample_V_load_5_reg_10840;
+    end else if (((1'b1 == ap_CS_fsm_state108) | (1'b1 == ap_CS_fsm_state61))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_8_sample_V_load_5_reg_10830;
+    end else if (((1'b1 == ap_CS_fsm_state107) | (1'b1 == ap_CS_fsm_state60))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_6_sample_V_load_5_reg_10820;
+    end else if (((1'b1 == ap_CS_fsm_state106) | (1'b1 == ap_CS_fsm_state59))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_4_sample_V_load_5_reg_10810;
+    end else if (((1'b1 == ap_CS_fsm_state105) | (1'b1 == ap_CS_fsm_state58))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_2_sample_V_load_5_reg_10800;
+    end else if (((1'b1 == ap_CS_fsm_state104) | (1'b1 == ap_CS_fsm_state57))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_0_sample_V_load_5_reg_10790;
+    end else if (((1'b1 == ap_CS_fsm_state103) | (1'b1 == ap_CS_fsm_state56))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_10_sample_V_load_4_reg_10720;
+    end else if (((1'b1 == ap_CS_fsm_state102) | (1'b1 == ap_CS_fsm_state55))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_8_sample_V_load_4_reg_10710;
+    end else if (((1'b1 == ap_CS_fsm_state101) | (1'b1 == ap_CS_fsm_state54))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_6_sample_V_load_4_reg_10700;
+    end else if (((1'b1 == ap_CS_fsm_state100) | (1'b1 == ap_CS_fsm_state53))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_4_sample_V_load_4_reg_10690;
+    end else if (((1'b1 == ap_CS_fsm_state99) | (1'b1 == ap_CS_fsm_state52))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_2_sample_V_load_4_reg_10680;
+    end else if (((1'b1 == ap_CS_fsm_state98) | (1'b1 == ap_CS_fsm_state51))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_0_sample_V_load_4_reg_10670;
+    end else if (((1'b1 == ap_CS_fsm_state97) | (1'b1 == ap_CS_fsm_state50))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_10_sample_V_load_3_reg_10348;
+    end else if (((1'b1 == ap_CS_fsm_state96) | (1'b1 == ap_CS_fsm_state49))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_8_sample_V_load_3_reg_10338;
+    end else if (((1'b1 == ap_CS_fsm_state95) | (1'b1 == ap_CS_fsm_state48))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_6_sample_V_load_3_reg_10328;
+    end else if (((1'b1 == ap_CS_fsm_state47) | (1'b1 == ap_CS_fsm_state94))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_4_sample_V_load_3_reg_10318;
+    end else if (((1'b1 == ap_CS_fsm_state46) | (1'b1 == ap_CS_fsm_state93))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_2_sample_V_load_3_reg_10308;
+    end else if (((1'b1 == ap_CS_fsm_state45) | (1'b1 == ap_CS_fsm_state92))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_0_sample_V_load_3_reg_10298;
+    end else if (((1'b1 == ap_CS_fsm_state91) | (1'b1 == ap_CS_fsm_state44))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_10_sample_V_load_2_reg_10216;
+    end else if (((1'b1 == ap_CS_fsm_state90) | (1'b1 == ap_CS_fsm_state43))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_8_sample_V_load_2_reg_10206;
+    end else if (((1'b1 == ap_CS_fsm_state89) | (1'b1 == ap_CS_fsm_state42))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_6_sample_V_load_2_reg_10196;
+    end else if (((1'b1 == ap_CS_fsm_state88) | (1'b1 == ap_CS_fsm_state41))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_4_sample_V_load_2_reg_10186;
+    end else if (((1'b1 == ap_CS_fsm_state87) | (1'b1 == ap_CS_fsm_state40))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_2_sample_V_load_2_reg_10176;
+    end else if (((1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state86))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_0_sample_V_load_2_reg_10166;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state38))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_10_sample_V_load_1_reg_9856;
+    end else if (((1'b1 == ap_CS_fsm_state84) | (1'b1 == ap_CS_fsm_state37))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_8_sample_V_load_1_reg_9846;
+    end else if (((1'b1 == ap_CS_fsm_state83) | (1'b1 == ap_CS_fsm_state36))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_6_sample_V_load_1_reg_9836;
+    end else if (((1'b1 == ap_CS_fsm_state82) | (1'b1 == ap_CS_fsm_state35))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_4_sample_V_load_1_reg_9826;
+    end else if (((1'b1 == ap_CS_fsm_state81) | (1'b1 == ap_CS_fsm_state34))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_2_sample_V_load_1_reg_9816;
+    end else if (((1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state80))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_0_sample_V_load_1_reg_9806;
+    end else if (((1'b1 == ap_CS_fsm_state79) | (1'b1 == ap_CS_fsm_state32))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_10_sample_V_load_reg_9736;
+    end else if (((1'b1 == ap_CS_fsm_state78) | (1'b1 == ap_CS_fsm_state31))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_8_sample_V_load_reg_9726;
+    end else if (((1'b1 == ap_CS_fsm_state77) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_6_sample_V_load_reg_9716;
+    end else if (((1'b1 == ap_CS_fsm_state76) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_4_sample_V_load_reg_9706;
+    end else if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state28))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_2_sample_V_load_reg_9696;
+    end else if (((1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state10))) begin
+        sliding_window_buffer_samples_sample_V_d1 = sample_period_samples_0_sample_V_load_reg_9686;
+    end else begin
+        sliding_window_buffer_samples_sample_V_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state121) | (1'b1 == ap_CS_fsm_state120) | (1'b1 == ap_CS_fsm_state119) | (1'b1 == ap_CS_fsm_state118) | (1'b1 == ap_CS_fsm_state117) | (1'b1 == ap_CS_fsm_state116) | (1'b1 == ap_CS_fsm_state115) | (1'b1 == ap_CS_fsm_state114) | (1'b1 == ap_CS_fsm_state113) | (1'b1 == ap_CS_fsm_state112) | (1'b1 == ap_CS_fsm_state111) | (1'b1 == ap_CS_fsm_state110) | (1'b1 == ap_CS_fsm_state109) | (1'b1 == ap_CS_fsm_state108) | (1'b1 == ap_CS_fsm_state107) | (1'b1 == ap_CS_fsm_state106) | (1'b1 == ap_CS_fsm_state105) | (1'b1 == ap_CS_fsm_state104) | (1'b1 == ap_CS_fsm_state103) | (1'b1 == ap_CS_fsm_state102) | (1'b1 == ap_CS_fsm_state101) | (1'b1 == ap_CS_fsm_state100) | (1'b1 == ap_CS_fsm_state99) | (1'b1 == ap_CS_fsm_state98) | (1'b1 == ap_CS_fsm_state97) | (1'b1 == ap_CS_fsm_state96) | (1'b1 == ap_CS_fsm_state95) | (1'b1 == ap_CS_fsm_state91) | (1'b1 == ap_CS_fsm_state90) | (1'b1 == ap_CS_fsm_state89) | (1'b1 == ap_CS_fsm_state88) | (1'b1 == ap_CS_fsm_state87) | (1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state84) | (1'b1 == ap_CS_fsm_state83) | (1'b1 == ap_CS_fsm_state82) | (1'b1 == ap_CS_fsm_state81) | (1'b1 == ap_CS_fsm_state79) | (1'b1 == ap_CS_fsm_state78) | (1'b1 == ap_CS_fsm_state77) | (1'b1 == ap_CS_fsm_state76) | (1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state73) | (1'b1 == ap_CS_fsm_state72) | (1'b1 == ap_CS_fsm_state71) | (1'b1 == ap_CS_fsm_state70) | (1'b1 == ap_CS_fsm_state69) | (1'b1 == ap_CS_fsm_state68) | (1'b1 == ap_CS_fsm_state67) | (1'b1 == ap_CS_fsm_state66) | (1'b1 == ap_CS_fsm_state65) | (1'b1 == ap_CS_fsm_state64) | (1'b1 == ap_CS_fsm_state63) | (1'b1 == ap_CS_fsm_state62) | (1'b1 == ap_CS_fsm_state61) | (1'b1 == ap_CS_fsm_state60) | (1'b1 == ap_CS_fsm_state59) | (1'b1 == ap_CS_fsm_state58) | (1'b1 == ap_CS_fsm_state57) | (1'b1 == ap_CS_fsm_state56) | (1'b1 == ap_CS_fsm_state55) | (1'b1 == ap_CS_fsm_state54) | (1'b1 == ap_CS_fsm_state53) | (1'b1 == ap_CS_fsm_state52) | (1'b1 == ap_CS_fsm_state51) | (1'b1 == ap_CS_fsm_state50) | (1'b1 == ap_CS_fsm_state49) | (1'b1 == ap_CS_fsm_state48) | (1'b1 == ap_CS_fsm_state47) | (1'b1 == ap_CS_fsm_state46) | (1'b1 == ap_CS_fsm_state45) | (1'b1 == ap_CS_fsm_state44) | (1'b1 == ap_CS_fsm_state43) | (1'b1 == ap_CS_fsm_state42) | (1'b1 == ap_CS_fsm_state41) | (1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27) | ((1'b1 == ap_CS_fsm_state74) & (icmp_ln52_reg_11393 == 1'd0)) | ((1'b1 == ap_CS_fsm_state10) & (icmp_ln52_fu_6468_p2 == 1'd1)))) begin
+        sliding_window_buffer_samples_sample_V_we0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_sample_V_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state121) | (1'b1 == ap_CS_fsm_state120) | (1'b1 == ap_CS_fsm_state119) | (1'b1 == ap_CS_fsm_state118) | (1'b1 == ap_CS_fsm_state117) | (1'b1 == ap_CS_fsm_state116) | (1'b1 == ap_CS_fsm_state115) | (1'b1 == ap_CS_fsm_state114) | (1'b1 == ap_CS_fsm_state113) | (1'b1 == ap_CS_fsm_state112) | (1'b1 == ap_CS_fsm_state111) | (1'b1 == ap_CS_fsm_state110) | (1'b1 == ap_CS_fsm_state109) | (1'b1 == ap_CS_fsm_state108) | (1'b1 == ap_CS_fsm_state107) | (1'b1 == ap_CS_fsm_state106) | (1'b1 == ap_CS_fsm_state105) | (1'b1 == ap_CS_fsm_state104) | (1'b1 == ap_CS_fsm_state103) | (1'b1 == ap_CS_fsm_state102) | (1'b1 == ap_CS_fsm_state101) | (1'b1 == ap_CS_fsm_state100) | (1'b1 == ap_CS_fsm_state99) | (1'b1 == ap_CS_fsm_state98) | (1'b1 == ap_CS_fsm_state97) | (1'b1 == ap_CS_fsm_state96) | (1'b1 == ap_CS_fsm_state95) | (1'b1 == ap_CS_fsm_state91) | (1'b1 == ap_CS_fsm_state90) | (1'b1 == ap_CS_fsm_state89) | (1'b1 == ap_CS_fsm_state88) | (1'b1 == ap_CS_fsm_state87) | (1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state84) | (1'b1 == ap_CS_fsm_state83) | (1'b1 == ap_CS_fsm_state82) | (1'b1 == ap_CS_fsm_state81) | (1'b1 == ap_CS_fsm_state79) | (1'b1 == ap_CS_fsm_state78) | (1'b1 == ap_CS_fsm_state77) | (1'b1 == ap_CS_fsm_state76) | (1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state73) | (1'b1 == ap_CS_fsm_state72) | (1'b1 == ap_CS_fsm_state71) | (1'b1 == ap_CS_fsm_state70) | (1'b1 == ap_CS_fsm_state69) | (1'b1 == ap_CS_fsm_state68) | (1'b1 == ap_CS_fsm_state67) | (1'b1 == ap_CS_fsm_state66) | (1'b1 == ap_CS_fsm_state65) | (1'b1 == ap_CS_fsm_state64) | (1'b1 == ap_CS_fsm_state63) | (1'b1 == ap_CS_fsm_state62) | (1'b1 == ap_CS_fsm_state61) | (1'b1 == ap_CS_fsm_state60) | (1'b1 == ap_CS_fsm_state59) | (1'b1 == ap_CS_fsm_state58) | (1'b1 == ap_CS_fsm_state57) | (1'b1 == ap_CS_fsm_state56) | (1'b1 == ap_CS_fsm_state55) | (1'b1 == ap_CS_fsm_state54) | (1'b1 == ap_CS_fsm_state53) | (1'b1 == ap_CS_fsm_state52) | (1'b1 == ap_CS_fsm_state51) | (1'b1 == ap_CS_fsm_state50) | (1'b1 == ap_CS_fsm_state49) | (1'b1 == ap_CS_fsm_state48) | (1'b1 == ap_CS_fsm_state47) | (1'b1 == ap_CS_fsm_state46) | (1'b1 == ap_CS_fsm_state45) | (1'b1 == ap_CS_fsm_state44) | (1'b1 == ap_CS_fsm_state43) | (1'b1 == ap_CS_fsm_state42) | (1'b1 == ap_CS_fsm_state41) | (1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27) | ((1'b1 == ap_CS_fsm_state74) & (icmp_ln52_reg_11393 == 1'd0)) | ((1'b1 == ap_CS_fsm_state10) & (icmp_ln52_fu_6468_p2 == 1'd1)))) begin
+        sliding_window_buffer_samples_sample_V_we1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_sample_V_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = tmp_12_fu_6662_p3;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = zext_ln75_fu_6595_p1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_0_ce0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_0_ce1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_0_d0 = sample_period_samples_0_timestamp_V_load_2_reg_10226;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_0_d0 = sample_period_samples_0_timestamp_V_load_7_reg_11330;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_0_d0 = sample_period_samples_0_timestamp_V_load_5_reg_10850;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_0_d0 = sample_period_samples_0_timestamp_V_load_3_reg_10358;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_0_d0 = sample_period_samples_0_timestamp_V_load_1_reg_9866;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_0_d1 = sample_period_samples_0_timestamp_V_load_3_reg_10358;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_0_d1 = sample_period_samples_0_timestamp_V_load_6_reg_11210;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_0_d1 = sample_period_samples_0_timestamp_V_load_4_reg_10730;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_0_d1 = sample_period_samples_0_timestamp_V_load_2_reg_10226;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_0_d1 = sample_period_samples_0_timestamp_V_load_reg_9746;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_0_we0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_0_we1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_0_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = tmp_12_fu_6662_p3;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = zext_ln75_fu_6595_p1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_10_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_10_ce0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_10_ce1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_10_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_10_d0 = sample_period_samples_10_timestamp_V_load_2_reg_10286;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_10_d0 = sample_period_samples_10_timestamp_V_load_7_reg_11380;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_10_d0 = sample_period_samples_10_timestamp_V_load_5_reg_10900;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_10_d0 = sample_period_samples_10_timestamp_V_load_3_reg_10418;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_10_d0 = sample_period_samples_10_timestamp_V_load_1_reg_9916;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_10_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_10_d1 = sample_period_samples_10_timestamp_V_load_3_reg_10418;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_10_d1 = sample_period_samples_10_timestamp_V_load_6_reg_11260;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_10_d1 = sample_period_samples_10_timestamp_V_load_4_reg_10780;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_10_d1 = sample_period_samples_10_timestamp_V_load_2_reg_10286;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_10_d1 = sample_period_samples_10_timestamp_V_load_reg_9796;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_10_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_10_we0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_10_we1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_10_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = tmp_12_fu_6662_p3;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = zext_ln75_fu_6595_p1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_11_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_11_ce0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_11_ce1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_11_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_11_d0 = sample_period_samples_11_timestamp_V_load_2_reg_10292;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_11_d0 = sample_period_samples_11_timestamp_V_load_7_reg_11385;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_11_d0 = sample_period_samples_11_timestamp_V_load_5_reg_10905;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_11_d0 = sample_period_samples_11_timestamp_V_load_3_reg_10424;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_11_d0 = sample_period_samples_11_timestamp_V_load_1_reg_9921;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_11_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_11_d1 = sample_period_samples_11_timestamp_V_load_3_reg_10424;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_11_d1 = sample_period_samples_11_timestamp_V_load_6_reg_11265;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_11_d1 = sample_period_samples_11_timestamp_V_load_4_reg_10785;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_11_d1 = sample_period_samples_11_timestamp_V_load_2_reg_10292;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_11_d1 = sample_period_samples_11_timestamp_V_load_reg_9801;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_11_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_11_we0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_11_we1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_11_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = tmp_12_fu_6662_p3;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = zext_ln75_fu_6595_p1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_1_ce0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_1_ce1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_1_d0 = sample_period_samples_1_timestamp_V_load_2_reg_10232;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_1_d0 = sample_period_samples_1_timestamp_V_load_7_reg_11335;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_1_d0 = sample_period_samples_1_timestamp_V_load_5_reg_10855;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_1_d0 = sample_period_samples_1_timestamp_V_load_3_reg_10364;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_1_d0 = sample_period_samples_1_timestamp_V_load_1_reg_9871;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_1_d1 = sample_period_samples_1_timestamp_V_load_3_reg_10364;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_1_d1 = sample_period_samples_1_timestamp_V_load_6_reg_11215;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_1_d1 = sample_period_samples_1_timestamp_V_load_4_reg_10735;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_1_d1 = sample_period_samples_1_timestamp_V_load_2_reg_10232;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_1_d1 = sample_period_samples_1_timestamp_V_load_reg_9751;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_1_we0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_1_we1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_1_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = tmp_12_fu_6662_p3;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = zext_ln75_fu_6595_p1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_2_ce0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_2_ce1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_2_d0 = sample_period_samples_2_timestamp_V_load_2_reg_10238;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_2_d0 = sample_period_samples_2_timestamp_V_load_7_reg_11340;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_2_d0 = sample_period_samples_2_timestamp_V_load_5_reg_10860;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_2_d0 = sample_period_samples_2_timestamp_V_load_3_reg_10370;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_2_d0 = sample_period_samples_2_timestamp_V_load_1_reg_9876;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_2_d1 = sample_period_samples_2_timestamp_V_load_3_reg_10370;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_2_d1 = sample_period_samples_2_timestamp_V_load_6_reg_11220;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_2_d1 = sample_period_samples_2_timestamp_V_load_4_reg_10740;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_2_d1 = sample_period_samples_2_timestamp_V_load_2_reg_10238;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_2_d1 = sample_period_samples_2_timestamp_V_load_reg_9756;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_2_we0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_2_we1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_2_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = tmp_12_fu_6662_p3;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = zext_ln75_fu_6595_p1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_3_ce0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_3_ce1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_3_d0 = sample_period_samples_3_timestamp_V_load_2_reg_10244;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_3_d0 = sample_period_samples_3_timestamp_V_load_7_reg_11345;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_3_d0 = sample_period_samples_3_timestamp_V_load_5_reg_10865;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_3_d0 = sample_period_samples_3_timestamp_V_load_3_reg_10376;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_3_d0 = sample_period_samples_3_timestamp_V_load_1_reg_9881;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_3_d1 = sample_period_samples_3_timestamp_V_load_3_reg_10376;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_3_d1 = sample_period_samples_3_timestamp_V_load_6_reg_11225;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_3_d1 = sample_period_samples_3_timestamp_V_load_4_reg_10745;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_3_d1 = sample_period_samples_3_timestamp_V_load_2_reg_10244;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_3_d1 = sample_period_samples_3_timestamp_V_load_reg_9761;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_3_we0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_3_we1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_3_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = tmp_12_fu_6662_p3;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = zext_ln75_fu_6595_p1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_4_ce0 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_4_ce1 = 1'b1;
+    end else begin
+        sliding_window_buffer_samples_timestamp_V_4_ce1 = 1'b0;
+    end
+end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_0_d0 = sample_period_samples_0_timestamp_V_load_7_reg_10198;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_0_d0 = sample_period_samples_0_timestamp_V_q1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_7_0_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_0_we0 = 1'b1;
-    end else begin
-        sliding_window_buffer_samples_timestamp_V_7_0_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_10_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_10_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_4_d0 = sample_period_samples_4_timestamp_V_load_2_reg_10250;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_4_d0 = sample_period_samples_4_timestamp_V_load_7_reg_11350;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_4_d0 = sample_period_samples_4_timestamp_V_load_5_reg_10870;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_4_d0 = sample_period_samples_4_timestamp_V_load_3_reg_10382;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_4_d0 = sample_period_samples_4_timestamp_V_load_1_reg_9886;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_10_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_4_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_10_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_4_d1 = sample_period_samples_4_timestamp_V_load_3_reg_10382;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_4_d1 = sample_period_samples_4_timestamp_V_load_6_reg_11230;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_4_d1 = sample_period_samples_4_timestamp_V_load_4_reg_10750;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_4_d1 = sample_period_samples_4_timestamp_V_load_2_reg_10250;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_4_d1 = sample_period_samples_4_timestamp_V_load_reg_9766;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_10_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_4_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_10_d0 = sample_period_samples_10_timestamp_V_load_7_reg_10248;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_10_d0 = sample_period_samples_10_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_4_we0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_10_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_4_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_10_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_4_we1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_10_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_4_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_11_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_11_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address0 = tmp_12_fu_6662_p3;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_11_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_5_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_11_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_5_address1 = zext_ln75_fu_6595_p1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_11_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_5_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_11_d0 = sample_period_samples_11_timestamp_V_load_7_reg_10253;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_11_d0 = sample_period_samples_11_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_5_ce0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_11_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_5_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_11_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_5_ce1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_11_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_5_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_1_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_1_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_5_d0 = sample_period_samples_5_timestamp_V_load_2_reg_10256;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_5_d0 = sample_period_samples_5_timestamp_V_load_7_reg_11355;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_5_d0 = sample_period_samples_5_timestamp_V_load_5_reg_10875;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_5_d0 = sample_period_samples_5_timestamp_V_load_3_reg_10388;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_5_d0 = sample_period_samples_5_timestamp_V_load_1_reg_9891;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_1_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_5_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_1_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_5_d1 = sample_period_samples_5_timestamp_V_load_3_reg_10388;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_5_d1 = sample_period_samples_5_timestamp_V_load_6_reg_11235;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_5_d1 = sample_period_samples_5_timestamp_V_load_4_reg_10755;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_5_d1 = sample_period_samples_5_timestamp_V_load_2_reg_10256;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_5_d1 = sample_period_samples_5_timestamp_V_load_reg_9771;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_1_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_5_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_1_d0 = sample_period_samples_1_timestamp_V_load_7_reg_10203;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_1_d0 = sample_period_samples_1_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_5_we0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_1_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_5_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_1_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_5_we1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_1_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_5_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_2_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_2_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address0 = tmp_12_fu_6662_p3;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_2_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_6_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_2_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_6_address1 = zext_ln75_fu_6595_p1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_2_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_6_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_2_d0 = sample_period_samples_2_timestamp_V_load_7_reg_10208;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_2_d0 = sample_period_samples_2_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_6_ce0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_2_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_6_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_2_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_6_ce1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_2_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_6_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_3_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_3_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_6_d0 = sample_period_samples_6_timestamp_V_load_2_reg_10262;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_6_d0 = sample_period_samples_6_timestamp_V_load_7_reg_11360;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_6_d0 = sample_period_samples_6_timestamp_V_load_5_reg_10880;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_6_d0 = sample_period_samples_6_timestamp_V_load_3_reg_10394;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_6_d0 = sample_period_samples_6_timestamp_V_load_1_reg_9896;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_3_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_6_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_3_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_6_d1 = sample_period_samples_6_timestamp_V_load_3_reg_10394;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_6_d1 = sample_period_samples_6_timestamp_V_load_6_reg_11240;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_6_d1 = sample_period_samples_6_timestamp_V_load_4_reg_10760;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_6_d1 = sample_period_samples_6_timestamp_V_load_2_reg_10262;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_6_d1 = sample_period_samples_6_timestamp_V_load_reg_9776;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_3_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_6_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_3_d0 = sample_period_samples_3_timestamp_V_load_7_reg_10213;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_3_d0 = sample_period_samples_3_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_6_we0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_3_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_6_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_3_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_6_we1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_3_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_6_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_4_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_4_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address0 = tmp_12_fu_6662_p3;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_4_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_7_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_4_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_7_address1 = zext_ln75_fu_6595_p1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_4_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_7_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_4_d0 = sample_period_samples_4_timestamp_V_load_7_reg_10218;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_4_d0 = sample_period_samples_4_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_7_ce0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_4_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_7_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_4_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_7_ce1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_4_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_7_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_5_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_5_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_7_d0 = sample_period_samples_7_timestamp_V_load_2_reg_10268;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_7_d0 = sample_period_samples_7_timestamp_V_load_7_reg_11365;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_7_d0 = sample_period_samples_7_timestamp_V_load_5_reg_10885;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_7_d0 = sample_period_samples_7_timestamp_V_load_3_reg_10400;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_7_d0 = sample_period_samples_7_timestamp_V_load_1_reg_9901;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_5_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_7_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_5_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_7_d1 = sample_period_samples_7_timestamp_V_load_3_reg_10400;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_7_d1 = sample_period_samples_7_timestamp_V_load_6_reg_11245;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_7_d1 = sample_period_samples_7_timestamp_V_load_4_reg_10765;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_7_d1 = sample_period_samples_7_timestamp_V_load_2_reg_10268;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_7_d1 = sample_period_samples_7_timestamp_V_load_reg_9781;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_5_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_7_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_5_d0 = sample_period_samples_5_timestamp_V_load_7_reg_10223;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_5_d0 = sample_period_samples_5_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_7_we0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_5_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_7_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_5_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_7_we1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_5_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_7_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_6_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_6_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address0 = tmp_12_fu_6662_p3;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_6_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_8_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_6_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_8_address1 = zext_ln75_fu_6595_p1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_6_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_8_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_6_d0 = sample_period_samples_6_timestamp_V_load_7_reg_10228;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_6_d0 = sample_period_samples_6_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_8_ce0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_6_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_8_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_6_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_8_ce1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_6_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_8_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_7_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_7_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_8_d0 = sample_period_samples_8_timestamp_V_load_2_reg_10274;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_8_d0 = sample_period_samples_8_timestamp_V_load_7_reg_11370;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_8_d0 = sample_period_samples_8_timestamp_V_load_5_reg_10890;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_8_d0 = sample_period_samples_8_timestamp_V_load_3_reg_10406;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_8_d0 = sample_period_samples_8_timestamp_V_load_1_reg_9906;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_7_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_8_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_7_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_8_d1 = sample_period_samples_8_timestamp_V_load_3_reg_10406;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_8_d1 = sample_period_samples_8_timestamp_V_load_6_reg_11250;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_8_d1 = sample_period_samples_8_timestamp_V_load_4_reg_10770;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_8_d1 = sample_period_samples_8_timestamp_V_load_2_reg_10274;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_8_d1 = sample_period_samples_8_timestamp_V_load_reg_9786;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_7_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_8_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_7_d0 = sample_period_samples_7_timestamp_V_load_7_reg_10233;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_7_d0 = sample_period_samples_7_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_8_we0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_7_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_8_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_7_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_8_we1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_7_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_8_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_8_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_8_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address0 = tmp_9_fu_8653_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address0 = tmp_7_fu_8531_p3;
+    end else if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address0 = tmp_4_fu_8226_p3;
+    end else if ((1'b1 == ap_CS_fsm_state80)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address0 = tmp_3_fu_8044_p3;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address0 = tmp_18_fu_7045_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address0 = tmp_16_fu_6919_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address0 = tmp_14_fu_6793_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address0 = tmp_12_fu_6662_p3;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_8_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_9_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_8_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state94)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address1 = tmp_8_fu_8602_p3;
+    end else if ((1'b1 == ap_CS_fsm_state93)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address1 = tmp_6_fu_8480_p3;
+    end else if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address1 = tmp_5_fu_8393_p3;
+    end else if ((1'b1 == ap_CS_fsm_state85)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address1 = zext_ln54_fu_8186_p1;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address1 = tmp_17_fu_6992_p3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address1 = tmp_15_fu_6866_p3;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address1 = tmp_13_fu_6740_p3;
+    end else if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_buffer_samples_timestamp_V_9_address1 = zext_ln75_fu_6595_p1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_8_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_9_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_8_d0 = sample_period_samples_8_timestamp_V_load_7_reg_10238;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_8_d0 = sample_period_samples_8_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_9_ce0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_8_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_9_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_8_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_9_ce1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_8_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_9_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_9_address0 = zext_ln75_fu_7912_p1;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_9_address0 = zext_ln54_fu_7659_p1;
+    if ((1'b1 == ap_CS_fsm_state86)) begin
+        sliding_window_buffer_samples_timestamp_V_9_d0 = sample_period_samples_9_timestamp_V_load_2_reg_10280;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_9_d0 = sample_period_samples_9_timestamp_V_load_7_reg_11375;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_9_d0 = sample_period_samples_9_timestamp_V_load_5_reg_10895;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_9_d0 = sample_period_samples_9_timestamp_V_load_3_reg_10412;
+    end else if (((1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_9_d0 = sample_period_samples_9_timestamp_V_load_1_reg_9911;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_9_address0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_9_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state10))) begin
-        sliding_window_buffer_samples_timestamp_V_7_9_ce0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state92)) begin
+        sliding_window_buffer_samples_timestamp_V_9_d1 = sample_period_samples_9_timestamp_V_load_3_reg_10412;
+    end else if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state30))) begin
+        sliding_window_buffer_samples_timestamp_V_9_d1 = sample_period_samples_9_timestamp_V_load_6_reg_11255;
+    end else if (((1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state29))) begin
+        sliding_window_buffer_samples_timestamp_V_9_d1 = sample_period_samples_9_timestamp_V_load_4_reg_10775;
+    end else if ((1'b1 == ap_CS_fsm_state28)) begin
+        sliding_window_buffer_samples_timestamp_V_9_d1 = sample_period_samples_9_timestamp_V_load_2_reg_10280;
+    end else if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_9_d1 = sample_period_samples_9_timestamp_V_load_reg_9791;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_9_ce0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_9_d1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state29)) begin
-        sliding_window_buffer_samples_timestamp_V_7_9_d0 = sample_period_samples_9_timestamp_V_load_7_reg_10243;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        sliding_window_buffer_samples_timestamp_V_7_9_d0 = sample_period_samples_9_timestamp_V_q1;
+    if (((1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state80) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_9_we0 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_9_d0 = 'bx;
+        sliding_window_buffer_samples_timestamp_V_9_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29)) | ((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10)))) begin
-        sliding_window_buffer_samples_timestamp_V_7_9_we0 = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state85) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27))) begin
+        sliding_window_buffer_samples_timestamp_V_9_we1 = 1'b1;
     end else begin
-        sliding_window_buffer_samples_timestamp_V_7_9_we0 = 1'b0;
+        sliding_window_buffer_samples_timestamp_V_9_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29))) begin
-        sliding_window_front_ptr_s_o = trunc_ln61_reg_10278;
+    if ((1'b1 == ap_CS_fsm_state27)) begin
+        sliding_window_front_ptr_s_o = trunc_ln61_reg_11427;
     end else begin
         sliding_window_front_ptr_s_o = sliding_window_front_ptr_s_i;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_10264 == 1'd0) & (1'b1 == ap_CS_fsm_state29))) begin
+    if ((1'b1 == ap_CS_fsm_state27)) begin
         sliding_window_front_ptr_s_o_ap_vld = 1'b1;
     end else begin
         sliding_window_front_ptr_s_o_ap_vld = 1'b0;
@@ -11534,16 +6878,16 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_pp0_stage0 : begin
-            if (~((icmp_ln84_fu_7343_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            if (~((icmp_ln92_fu_6178_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else if (((icmp_ln84_fu_7343_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            end else if (((icmp_ln92_fu_6178_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
@@ -11553,7 +6897,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state5;
         end
         ap_ST_fsm_state5 : begin
-            if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln19_fu_7623_p2 == 1'd1))) begin
+            if (((icmp_ln19_fu_6458_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
                 ap_NS_fsm = ap_ST_fsm_state7;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state6;
@@ -11572,8 +6916,8 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state10;
         end
         ap_ST_fsm_state10 : begin
-            if (((icmp_ln52_fu_7633_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10))) begin
-                ap_NS_fsm = ap_ST_fsm_state29;
+            if (((1'b1 == ap_CS_fsm_state10) & (icmp_ln52_fu_6468_p2 == 1'd1))) begin
+                ap_NS_fsm = ap_ST_fsm_state75;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state11;
             end
@@ -11603,14 +6947,14 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state19;
         end
         ap_ST_fsm_state19 : begin
-            ap_NS_fsm = ap_ST_fsm_state20;
+            if (((1'b1 == ap_CS_fsm_state19) & (icmp_ln63_fu_6544_p2 == 1'd0))) begin
+                ap_NS_fsm = ap_ST_fsm_state27;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state20;
+            end
         end
         ap_ST_fsm_state20 : begin
-            if (((icmp_ln63_fu_7869_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state20))) begin
-                ap_NS_fsm = ap_ST_fsm_state29;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state21;
-            end
+            ap_NS_fsm = ap_ST_fsm_state21;
         end
         ap_ST_fsm_state21 : begin
             ap_NS_fsm = ap_ST_fsm_state22;
@@ -11637,7 +6981,283 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state29;
         end
         ap_ST_fsm_state29 : begin
+            ap_NS_fsm = ap_ST_fsm_state30;
+        end
+        ap_ST_fsm_state30 : begin
+            ap_NS_fsm = ap_ST_fsm_state31;
+        end
+        ap_ST_fsm_state31 : begin
+            ap_NS_fsm = ap_ST_fsm_state32;
+        end
+        ap_ST_fsm_state32 : begin
+            ap_NS_fsm = ap_ST_fsm_state33;
+        end
+        ap_ST_fsm_state33 : begin
+            ap_NS_fsm = ap_ST_fsm_state34;
+        end
+        ap_ST_fsm_state34 : begin
+            ap_NS_fsm = ap_ST_fsm_state35;
+        end
+        ap_ST_fsm_state35 : begin
+            ap_NS_fsm = ap_ST_fsm_state36;
+        end
+        ap_ST_fsm_state36 : begin
+            ap_NS_fsm = ap_ST_fsm_state37;
+        end
+        ap_ST_fsm_state37 : begin
+            ap_NS_fsm = ap_ST_fsm_state38;
+        end
+        ap_ST_fsm_state38 : begin
+            ap_NS_fsm = ap_ST_fsm_state39;
+        end
+        ap_ST_fsm_state39 : begin
+            ap_NS_fsm = ap_ST_fsm_state40;
+        end
+        ap_ST_fsm_state40 : begin
+            ap_NS_fsm = ap_ST_fsm_state41;
+        end
+        ap_ST_fsm_state41 : begin
+            ap_NS_fsm = ap_ST_fsm_state42;
+        end
+        ap_ST_fsm_state42 : begin
+            ap_NS_fsm = ap_ST_fsm_state43;
+        end
+        ap_ST_fsm_state43 : begin
+            ap_NS_fsm = ap_ST_fsm_state44;
+        end
+        ap_ST_fsm_state44 : begin
+            ap_NS_fsm = ap_ST_fsm_state45;
+        end
+        ap_ST_fsm_state45 : begin
+            ap_NS_fsm = ap_ST_fsm_state46;
+        end
+        ap_ST_fsm_state46 : begin
+            ap_NS_fsm = ap_ST_fsm_state47;
+        end
+        ap_ST_fsm_state47 : begin
+            ap_NS_fsm = ap_ST_fsm_state48;
+        end
+        ap_ST_fsm_state48 : begin
+            ap_NS_fsm = ap_ST_fsm_state49;
+        end
+        ap_ST_fsm_state49 : begin
+            ap_NS_fsm = ap_ST_fsm_state50;
+        end
+        ap_ST_fsm_state50 : begin
+            ap_NS_fsm = ap_ST_fsm_state51;
+        end
+        ap_ST_fsm_state51 : begin
+            ap_NS_fsm = ap_ST_fsm_state52;
+        end
+        ap_ST_fsm_state52 : begin
+            ap_NS_fsm = ap_ST_fsm_state53;
+        end
+        ap_ST_fsm_state53 : begin
+            ap_NS_fsm = ap_ST_fsm_state54;
+        end
+        ap_ST_fsm_state54 : begin
+            ap_NS_fsm = ap_ST_fsm_state55;
+        end
+        ap_ST_fsm_state55 : begin
+            ap_NS_fsm = ap_ST_fsm_state56;
+        end
+        ap_ST_fsm_state56 : begin
+            ap_NS_fsm = ap_ST_fsm_state57;
+        end
+        ap_ST_fsm_state57 : begin
+            ap_NS_fsm = ap_ST_fsm_state58;
+        end
+        ap_ST_fsm_state58 : begin
+            ap_NS_fsm = ap_ST_fsm_state59;
+        end
+        ap_ST_fsm_state59 : begin
+            ap_NS_fsm = ap_ST_fsm_state60;
+        end
+        ap_ST_fsm_state60 : begin
+            ap_NS_fsm = ap_ST_fsm_state61;
+        end
+        ap_ST_fsm_state61 : begin
+            ap_NS_fsm = ap_ST_fsm_state62;
+        end
+        ap_ST_fsm_state62 : begin
+            ap_NS_fsm = ap_ST_fsm_state63;
+        end
+        ap_ST_fsm_state63 : begin
+            ap_NS_fsm = ap_ST_fsm_state64;
+        end
+        ap_ST_fsm_state64 : begin
+            ap_NS_fsm = ap_ST_fsm_state65;
+        end
+        ap_ST_fsm_state65 : begin
+            ap_NS_fsm = ap_ST_fsm_state66;
+        end
+        ap_ST_fsm_state66 : begin
+            ap_NS_fsm = ap_ST_fsm_state67;
+        end
+        ap_ST_fsm_state67 : begin
+            ap_NS_fsm = ap_ST_fsm_state68;
+        end
+        ap_ST_fsm_state68 : begin
+            ap_NS_fsm = ap_ST_fsm_state69;
+        end
+        ap_ST_fsm_state69 : begin
+            ap_NS_fsm = ap_ST_fsm_state70;
+        end
+        ap_ST_fsm_state70 : begin
+            ap_NS_fsm = ap_ST_fsm_state71;
+        end
+        ap_ST_fsm_state71 : begin
+            ap_NS_fsm = ap_ST_fsm_state72;
+        end
+        ap_ST_fsm_state72 : begin
+            ap_NS_fsm = ap_ST_fsm_state73;
+        end
+        ap_ST_fsm_state73 : begin
+            ap_NS_fsm = ap_ST_fsm_state74;
+        end
+        ap_ST_fsm_state74 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
+        end
+        ap_ST_fsm_state75 : begin
+            ap_NS_fsm = ap_ST_fsm_state76;
+        end
+        ap_ST_fsm_state76 : begin
+            ap_NS_fsm = ap_ST_fsm_state77;
+        end
+        ap_ST_fsm_state77 : begin
+            ap_NS_fsm = ap_ST_fsm_state78;
+        end
+        ap_ST_fsm_state78 : begin
+            ap_NS_fsm = ap_ST_fsm_state79;
+        end
+        ap_ST_fsm_state79 : begin
+            ap_NS_fsm = ap_ST_fsm_state80;
+        end
+        ap_ST_fsm_state80 : begin
+            ap_NS_fsm = ap_ST_fsm_state81;
+        end
+        ap_ST_fsm_state81 : begin
+            ap_NS_fsm = ap_ST_fsm_state82;
+        end
+        ap_ST_fsm_state82 : begin
+            ap_NS_fsm = ap_ST_fsm_state83;
+        end
+        ap_ST_fsm_state83 : begin
+            ap_NS_fsm = ap_ST_fsm_state84;
+        end
+        ap_ST_fsm_state84 : begin
+            ap_NS_fsm = ap_ST_fsm_state85;
+        end
+        ap_ST_fsm_state85 : begin
+            ap_NS_fsm = ap_ST_fsm_state86;
+        end
+        ap_ST_fsm_state86 : begin
+            ap_NS_fsm = ap_ST_fsm_state87;
+        end
+        ap_ST_fsm_state87 : begin
+            ap_NS_fsm = ap_ST_fsm_state88;
+        end
+        ap_ST_fsm_state88 : begin
+            ap_NS_fsm = ap_ST_fsm_state89;
+        end
+        ap_ST_fsm_state89 : begin
+            ap_NS_fsm = ap_ST_fsm_state90;
+        end
+        ap_ST_fsm_state90 : begin
+            ap_NS_fsm = ap_ST_fsm_state91;
+        end
+        ap_ST_fsm_state91 : begin
+            ap_NS_fsm = ap_ST_fsm_state92;
+        end
+        ap_ST_fsm_state92 : begin
+            ap_NS_fsm = ap_ST_fsm_state93;
+        end
+        ap_ST_fsm_state93 : begin
+            ap_NS_fsm = ap_ST_fsm_state94;
+        end
+        ap_ST_fsm_state94 : begin
+            ap_NS_fsm = ap_ST_fsm_state95;
+        end
+        ap_ST_fsm_state95 : begin
+            ap_NS_fsm = ap_ST_fsm_state96;
+        end
+        ap_ST_fsm_state96 : begin
+            ap_NS_fsm = ap_ST_fsm_state97;
+        end
+        ap_ST_fsm_state97 : begin
+            ap_NS_fsm = ap_ST_fsm_state98;
+        end
+        ap_ST_fsm_state98 : begin
+            ap_NS_fsm = ap_ST_fsm_state99;
+        end
+        ap_ST_fsm_state99 : begin
+            ap_NS_fsm = ap_ST_fsm_state100;
+        end
+        ap_ST_fsm_state100 : begin
+            ap_NS_fsm = ap_ST_fsm_state101;
+        end
+        ap_ST_fsm_state101 : begin
+            ap_NS_fsm = ap_ST_fsm_state102;
+        end
+        ap_ST_fsm_state102 : begin
+            ap_NS_fsm = ap_ST_fsm_state103;
+        end
+        ap_ST_fsm_state103 : begin
+            ap_NS_fsm = ap_ST_fsm_state104;
+        end
+        ap_ST_fsm_state104 : begin
+            ap_NS_fsm = ap_ST_fsm_state105;
+        end
+        ap_ST_fsm_state105 : begin
+            ap_NS_fsm = ap_ST_fsm_state106;
+        end
+        ap_ST_fsm_state106 : begin
+            ap_NS_fsm = ap_ST_fsm_state107;
+        end
+        ap_ST_fsm_state107 : begin
+            ap_NS_fsm = ap_ST_fsm_state108;
+        end
+        ap_ST_fsm_state108 : begin
+            ap_NS_fsm = ap_ST_fsm_state109;
+        end
+        ap_ST_fsm_state109 : begin
+            ap_NS_fsm = ap_ST_fsm_state110;
+        end
+        ap_ST_fsm_state110 : begin
+            ap_NS_fsm = ap_ST_fsm_state111;
+        end
+        ap_ST_fsm_state111 : begin
+            ap_NS_fsm = ap_ST_fsm_state112;
+        end
+        ap_ST_fsm_state112 : begin
+            ap_NS_fsm = ap_ST_fsm_state113;
+        end
+        ap_ST_fsm_state113 : begin
+            ap_NS_fsm = ap_ST_fsm_state114;
+        end
+        ap_ST_fsm_state114 : begin
+            ap_NS_fsm = ap_ST_fsm_state115;
+        end
+        ap_ST_fsm_state115 : begin
+            ap_NS_fsm = ap_ST_fsm_state116;
+        end
+        ap_ST_fsm_state116 : begin
+            ap_NS_fsm = ap_ST_fsm_state117;
+        end
+        ap_ST_fsm_state117 : begin
+            ap_NS_fsm = ap_ST_fsm_state118;
+        end
+        ap_ST_fsm_state118 : begin
+            ap_NS_fsm = ap_ST_fsm_state119;
+        end
+        ap_ST_fsm_state119 : begin
+            ap_NS_fsm = ap_ST_fsm_state120;
+        end
+        ap_ST_fsm_state120 : begin
+            ap_NS_fsm = ap_ST_fsm_state121;
+        end
+        ap_ST_fsm_state121 : begin
+            ap_NS_fsm = ap_ST_fsm_state74;
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -11645,11 +7265,171 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln19_fu_7589_p2 = (i_1_reg_7326 + 4'd1);
+assign add_ln19_fu_6424_p2 = (i_4_reg_6161 + 4'd1);
 
-assign add_ln71_fu_7898_p2 = (sliding_window_size_load_reg_10258 + 32'd1);
+assign add_ln54_10_fu_8368_p2 = (sub_ln54_2_reg_11605 + 10'd10);
 
-assign add_ln84_fu_7337_p2 = (ap_phi_mux_i_phi_fu_7318_p4 + 4'd1);
+assign add_ln54_11_fu_8378_p2 = (sub_ln54_2_reg_11605 + 10'd11);
+
+assign add_ln54_12_fu_8577_p2 = (sub_ln54_3_reg_11619 + 10'd4);
+
+assign add_ln54_13_fu_8587_p2 = (sub_ln54_3_reg_11619 + 10'd5);
+
+assign add_ln54_14_fu_8699_p2 = (sub_ln54_3_reg_11619 + 10'd6);
+
+assign add_ln54_15_fu_8709_p2 = (sub_ln54_3_reg_11619 + 10'd7);
+
+assign add_ln54_16_fu_8719_p2 = (sub_ln54_3_reg_11619 + 10'd8);
+
+assign add_ln54_17_fu_8729_p2 = (sub_ln54_3_reg_11619 + 10'd9);
+
+assign add_ln54_18_fu_8739_p2 = (sub_ln54_3_reg_11619 + 10'd10);
+
+assign add_ln54_19_fu_8749_p2 = (sub_ln54_3_reg_11619 + 10'd11);
+
+assign add_ln54_1_fu_8136_p2 = (sub_ln54_1_reg_11591 + 10'd5);
+
+assign add_ln54_20_fu_8907_p2 = (sub_ln54_5_reg_11649 + 10'd4);
+
+assign add_ln54_21_fu_8917_p2 = (sub_ln54_5_reg_11649 + 10'd5);
+
+assign add_ln54_22_fu_8927_p2 = (sub_ln54_5_reg_11649 + 10'd6);
+
+assign add_ln54_23_fu_8937_p2 = (sub_ln54_5_reg_11649 + 10'd7);
+
+assign add_ln54_24_fu_8947_p2 = (sub_ln54_5_reg_11649 + 10'd8);
+
+assign add_ln54_25_fu_8957_p2 = (sub_ln54_5_reg_11649 + 10'd9);
+
+assign add_ln54_26_fu_8967_p2 = (sub_ln54_5_reg_11649 + 10'd10);
+
+assign add_ln54_27_fu_8977_p2 = (sub_ln54_5_reg_11649 + 10'd11);
+
+assign add_ln54_28_fu_9061_p2 = (sub_ln54_6_reg_11665 + 10'd8);
+
+assign add_ln54_29_fu_9071_p2 = (sub_ln54_6_reg_11665 + 10'd9);
+
+assign add_ln54_2_fu_8146_p2 = (sub_ln54_1_reg_11591 + 10'd6);
+
+assign add_ln54_30_fu_9081_p2 = (sub_ln54_6_reg_11665 + 10'd10);
+
+assign add_ln54_31_fu_9091_p2 = (sub_ln54_6_reg_11665 + 10'd11);
+
+assign add_ln54_32_fu_9135_p2 = (sub_ln54_7_reg_11681 + 10'd4);
+
+assign add_ln54_33_fu_9145_p2 = (sub_ln54_7_reg_11681 + 10'd5);
+
+assign add_ln54_34_fu_9155_p2 = (sub_ln54_7_reg_11681 + 10'd6);
+
+assign add_ln54_35_fu_9165_p2 = (sub_ln54_7_reg_11681 + 10'd7);
+
+assign add_ln54_36_fu_9175_p2 = (sub_ln54_7_reg_11681 + 10'd8);
+
+assign add_ln54_37_fu_9185_p2 = (sub_ln54_7_reg_11681 + 10'd9);
+
+assign add_ln54_38_fu_9195_p2 = (sub_ln54_7_reg_11681 + 10'd10);
+
+assign add_ln54_39_fu_9205_p2 = (sub_ln54_7_reg_11681 + 10'd11);
+
+assign add_ln54_3_fu_8156_p2 = (sub_ln54_1_reg_11591 + 10'd7);
+
+assign add_ln54_4_fu_8166_p2 = (sub_ln54_1_reg_11591 + 10'd8);
+
+assign add_ln54_5_fu_8176_p2 = (sub_ln54_1_reg_11591 + 10'd9);
+
+assign add_ln54_6_fu_8201_p2 = (sub_ln54_1_reg_11591 + 10'd10);
+
+assign add_ln54_7_fu_8211_p2 = (sub_ln54_1_reg_11591 + 10'd11);
+
+assign add_ln54_8_fu_8348_p2 = (sub_ln54_2_reg_11605 + 10'd8);
+
+assign add_ln54_9_fu_8358_p2 = (sub_ln54_2_reg_11605 + 10'd9);
+
+assign add_ln54_fu_8126_p2 = (sub_ln54_1_reg_11591 + 10'd4);
+
+assign add_ln71_fu_6573_p2 = (sliding_window_size_s + 32'd1);
+
+assign add_ln75_10_fu_7341_p2 = (sub_ln75_2_reg_11484 + 10'd10);
+
+assign add_ln75_11_fu_7351_p2 = (sub_ln75_2_reg_11484 + 10'd11);
+
+assign add_ln75_12_fu_7395_p2 = (sub_ln75_3_reg_11500 + 10'd4);
+
+assign add_ln75_13_fu_7405_p2 = (sub_ln75_3_reg_11500 + 10'd5);
+
+assign add_ln75_14_fu_7415_p2 = (sub_ln75_3_reg_11500 + 10'd6);
+
+assign add_ln75_15_fu_7425_p2 = (sub_ln75_3_reg_11500 + 10'd7);
+
+assign add_ln75_16_fu_7435_p2 = (sub_ln75_3_reg_11500 + 10'd8);
+
+assign add_ln75_17_fu_7445_p2 = (sub_ln75_3_reg_11500 + 10'd9);
+
+assign add_ln75_18_fu_7455_p2 = (sub_ln75_3_reg_11500 + 10'd10);
+
+assign add_ln75_19_fu_7465_p2 = (sub_ln75_3_reg_11500 + 10'd11);
+
+assign add_ln75_1_fu_7177_p2 = (sub_ln75_1_reg_11468 + 10'd5);
+
+assign add_ln75_20_fu_7623_p2 = (sub_ln75_5_reg_11532 + 10'd4);
+
+assign add_ln75_21_fu_7633_p2 = (sub_ln75_5_reg_11532 + 10'd5);
+
+assign add_ln75_22_fu_7643_p2 = (sub_ln75_5_reg_11532 + 10'd6);
+
+assign add_ln75_23_fu_7653_p2 = (sub_ln75_5_reg_11532 + 10'd7);
+
+assign add_ln75_24_fu_7663_p2 = (sub_ln75_5_reg_11532 + 10'd8);
+
+assign add_ln75_25_fu_7673_p2 = (sub_ln75_5_reg_11532 + 10'd9);
+
+assign add_ln75_26_fu_7683_p2 = (sub_ln75_5_reg_11532 + 10'd10);
+
+assign add_ln75_27_fu_7693_p2 = (sub_ln75_5_reg_11532 + 10'd11);
+
+assign add_ln75_28_fu_7777_p2 = (sub_ln75_6_reg_11548 + 10'd8);
+
+assign add_ln75_29_fu_7787_p2 = (sub_ln75_6_reg_11548 + 10'd9);
+
+assign add_ln75_2_fu_7187_p2 = (sub_ln75_1_reg_11468 + 10'd6);
+
+assign add_ln75_30_fu_7797_p2 = (sub_ln75_6_reg_11548 + 10'd10);
+
+assign add_ln75_31_fu_7807_p2 = (sub_ln75_6_reg_11548 + 10'd11);
+
+assign add_ln75_32_fu_7851_p2 = (sub_ln75_7_reg_11564 + 10'd4);
+
+assign add_ln75_33_fu_7861_p2 = (sub_ln75_7_reg_11564 + 10'd5);
+
+assign add_ln75_34_fu_7871_p2 = (sub_ln75_7_reg_11564 + 10'd6);
+
+assign add_ln75_35_fu_7881_p2 = (sub_ln75_7_reg_11564 + 10'd7);
+
+assign add_ln75_36_fu_7891_p2 = (sub_ln75_7_reg_11564 + 10'd8);
+
+assign add_ln75_37_fu_7901_p2 = (sub_ln75_7_reg_11564 + 10'd9);
+
+assign add_ln75_38_fu_7911_p2 = (sub_ln75_7_reg_11564 + 10'd10);
+
+assign add_ln75_39_fu_7921_p2 = (sub_ln75_7_reg_11564 + 10'd11);
+
+assign add_ln75_3_fu_7197_p2 = (sub_ln75_1_reg_11468 + 10'd7);
+
+assign add_ln75_4_fu_7207_p2 = (sub_ln75_1_reg_11468 + 10'd8);
+
+assign add_ln75_5_fu_7217_p2 = (sub_ln75_1_reg_11468 + 10'd9);
+
+assign add_ln75_6_fu_7227_p2 = (sub_ln75_1_reg_11468 + 10'd10);
+
+assign add_ln75_7_fu_7237_p2 = (sub_ln75_1_reg_11468 + 10'd11);
+
+assign add_ln75_8_fu_7321_p2 = (sub_ln75_2_reg_11484 + 10'd8);
+
+assign add_ln75_9_fu_7331_p2 = (sub_ln75_2_reg_11484 + 10'd9);
+
+assign add_ln75_fu_7167_p2 = (sub_ln75_1_reg_11468 + 10'd4);
+
+assign add_ln92_fu_6172_p2 = (ap_phi_mux_i_phi_fu_6153_p4 + 4'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd1];
 
@@ -11657,21 +7437,209 @@ assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
 assign ap_CS_fsm_state10 = ap_CS_fsm[32'd8];
 
-assign ap_CS_fsm_state20 = ap_CS_fsm[32'd18];
+assign ap_CS_fsm_state100 = ap_CS_fsm[32'd98];
+
+assign ap_CS_fsm_state101 = ap_CS_fsm[32'd99];
+
+assign ap_CS_fsm_state102 = ap_CS_fsm[32'd100];
+
+assign ap_CS_fsm_state103 = ap_CS_fsm[32'd101];
+
+assign ap_CS_fsm_state104 = ap_CS_fsm[32'd102];
+
+assign ap_CS_fsm_state105 = ap_CS_fsm[32'd103];
+
+assign ap_CS_fsm_state106 = ap_CS_fsm[32'd104];
+
+assign ap_CS_fsm_state107 = ap_CS_fsm[32'd105];
+
+assign ap_CS_fsm_state108 = ap_CS_fsm[32'd106];
+
+assign ap_CS_fsm_state109 = ap_CS_fsm[32'd107];
+
+assign ap_CS_fsm_state110 = ap_CS_fsm[32'd108];
+
+assign ap_CS_fsm_state111 = ap_CS_fsm[32'd109];
+
+assign ap_CS_fsm_state112 = ap_CS_fsm[32'd110];
+
+assign ap_CS_fsm_state113 = ap_CS_fsm[32'd111];
+
+assign ap_CS_fsm_state114 = ap_CS_fsm[32'd112];
+
+assign ap_CS_fsm_state115 = ap_CS_fsm[32'd113];
+
+assign ap_CS_fsm_state116 = ap_CS_fsm[32'd114];
+
+assign ap_CS_fsm_state117 = ap_CS_fsm[32'd115];
+
+assign ap_CS_fsm_state118 = ap_CS_fsm[32'd116];
+
+assign ap_CS_fsm_state119 = ap_CS_fsm[32'd117];
+
+assign ap_CS_fsm_state120 = ap_CS_fsm[32'd118];
+
+assign ap_CS_fsm_state121 = ap_CS_fsm[32'd119];
+
+assign ap_CS_fsm_state19 = ap_CS_fsm[32'd17];
+
+assign ap_CS_fsm_state27 = ap_CS_fsm[32'd25];
+
+assign ap_CS_fsm_state28 = ap_CS_fsm[32'd26];
 
 assign ap_CS_fsm_state29 = ap_CS_fsm[32'd27];
 
+assign ap_CS_fsm_state30 = ap_CS_fsm[32'd28];
+
+assign ap_CS_fsm_state31 = ap_CS_fsm[32'd29];
+
+assign ap_CS_fsm_state32 = ap_CS_fsm[32'd30];
+
+assign ap_CS_fsm_state33 = ap_CS_fsm[32'd31];
+
+assign ap_CS_fsm_state34 = ap_CS_fsm[32'd32];
+
+assign ap_CS_fsm_state35 = ap_CS_fsm[32'd33];
+
+assign ap_CS_fsm_state36 = ap_CS_fsm[32'd34];
+
+assign ap_CS_fsm_state37 = ap_CS_fsm[32'd35];
+
+assign ap_CS_fsm_state38 = ap_CS_fsm[32'd36];
+
+assign ap_CS_fsm_state39 = ap_CS_fsm[32'd37];
+
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd2];
+
+assign ap_CS_fsm_state40 = ap_CS_fsm[32'd38];
+
+assign ap_CS_fsm_state41 = ap_CS_fsm[32'd39];
+
+assign ap_CS_fsm_state42 = ap_CS_fsm[32'd40];
+
+assign ap_CS_fsm_state43 = ap_CS_fsm[32'd41];
+
+assign ap_CS_fsm_state44 = ap_CS_fsm[32'd42];
+
+assign ap_CS_fsm_state45 = ap_CS_fsm[32'd43];
+
+assign ap_CS_fsm_state46 = ap_CS_fsm[32'd44];
+
+assign ap_CS_fsm_state47 = ap_CS_fsm[32'd45];
+
+assign ap_CS_fsm_state48 = ap_CS_fsm[32'd46];
+
+assign ap_CS_fsm_state49 = ap_CS_fsm[32'd47];
 
 assign ap_CS_fsm_state5 = ap_CS_fsm[32'd3];
 
+assign ap_CS_fsm_state50 = ap_CS_fsm[32'd48];
+
+assign ap_CS_fsm_state51 = ap_CS_fsm[32'd49];
+
+assign ap_CS_fsm_state52 = ap_CS_fsm[32'd50];
+
+assign ap_CS_fsm_state53 = ap_CS_fsm[32'd51];
+
+assign ap_CS_fsm_state54 = ap_CS_fsm[32'd52];
+
+assign ap_CS_fsm_state55 = ap_CS_fsm[32'd53];
+
+assign ap_CS_fsm_state56 = ap_CS_fsm[32'd54];
+
+assign ap_CS_fsm_state57 = ap_CS_fsm[32'd55];
+
+assign ap_CS_fsm_state58 = ap_CS_fsm[32'd56];
+
+assign ap_CS_fsm_state59 = ap_CS_fsm[32'd57];
+
 assign ap_CS_fsm_state6 = ap_CS_fsm[32'd4];
+
+assign ap_CS_fsm_state60 = ap_CS_fsm[32'd58];
+
+assign ap_CS_fsm_state61 = ap_CS_fsm[32'd59];
+
+assign ap_CS_fsm_state62 = ap_CS_fsm[32'd60];
+
+assign ap_CS_fsm_state63 = ap_CS_fsm[32'd61];
+
+assign ap_CS_fsm_state64 = ap_CS_fsm[32'd62];
+
+assign ap_CS_fsm_state65 = ap_CS_fsm[32'd63];
+
+assign ap_CS_fsm_state66 = ap_CS_fsm[32'd64];
+
+assign ap_CS_fsm_state67 = ap_CS_fsm[32'd65];
+
+assign ap_CS_fsm_state68 = ap_CS_fsm[32'd66];
+
+assign ap_CS_fsm_state69 = ap_CS_fsm[32'd67];
 
 assign ap_CS_fsm_state7 = ap_CS_fsm[32'd5];
 
+assign ap_CS_fsm_state70 = ap_CS_fsm[32'd68];
+
+assign ap_CS_fsm_state71 = ap_CS_fsm[32'd69];
+
+assign ap_CS_fsm_state72 = ap_CS_fsm[32'd70];
+
+assign ap_CS_fsm_state73 = ap_CS_fsm[32'd71];
+
+assign ap_CS_fsm_state74 = ap_CS_fsm[32'd72];
+
+assign ap_CS_fsm_state75 = ap_CS_fsm[32'd73];
+
+assign ap_CS_fsm_state76 = ap_CS_fsm[32'd74];
+
+assign ap_CS_fsm_state77 = ap_CS_fsm[32'd75];
+
+assign ap_CS_fsm_state78 = ap_CS_fsm[32'd76];
+
+assign ap_CS_fsm_state79 = ap_CS_fsm[32'd77];
+
 assign ap_CS_fsm_state8 = ap_CS_fsm[32'd6];
 
+assign ap_CS_fsm_state80 = ap_CS_fsm[32'd78];
+
+assign ap_CS_fsm_state81 = ap_CS_fsm[32'd79];
+
+assign ap_CS_fsm_state82 = ap_CS_fsm[32'd80];
+
+assign ap_CS_fsm_state83 = ap_CS_fsm[32'd81];
+
+assign ap_CS_fsm_state84 = ap_CS_fsm[32'd82];
+
+assign ap_CS_fsm_state85 = ap_CS_fsm[32'd83];
+
+assign ap_CS_fsm_state86 = ap_CS_fsm[32'd84];
+
+assign ap_CS_fsm_state87 = ap_CS_fsm[32'd85];
+
+assign ap_CS_fsm_state88 = ap_CS_fsm[32'd86];
+
+assign ap_CS_fsm_state89 = ap_CS_fsm[32'd87];
+
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd7];
+
+assign ap_CS_fsm_state90 = ap_CS_fsm[32'd88];
+
+assign ap_CS_fsm_state91 = ap_CS_fsm[32'd89];
+
+assign ap_CS_fsm_state92 = ap_CS_fsm[32'd90];
+
+assign ap_CS_fsm_state93 = ap_CS_fsm[32'd91];
+
+assign ap_CS_fsm_state94 = ap_CS_fsm[32'd92];
+
+assign ap_CS_fsm_state95 = ap_CS_fsm[32'd93];
+
+assign ap_CS_fsm_state96 = ap_CS_fsm[32'd94];
+
+assign ap_CS_fsm_state97 = ap_CS_fsm[32'd95];
+
+assign ap_CS_fsm_state98 = ap_CS_fsm[32'd96];
+
+assign ap_CS_fsm_state99 = ap_CS_fsm[32'd97];
 
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
@@ -11685,47 +7653,323 @@ assign ap_block_state3_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
-assign buffer_in_0_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_0_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_10_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_10_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_11_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_11_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_1_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_1_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_2_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_2_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_3_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_3_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_4_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_4_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_5_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_5_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_6_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_6_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_7_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_7_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_8_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_8_address0 = zext_ln95_fu_6188_p1;
 
-assign buffer_in_9_address0 = zext_ln87_fu_7353_p1;
+assign buffer_in_9_address0 = zext_ln95_fu_6188_p1;
 
-assign grp_fu_7653_p0 = ($signed(sext_ln52_fu_7643_p1) + $signed(7'd1));
+assign grp_fu_6488_p0 = ($signed(sext_ln52_fu_6478_p1) + $signed(6'd1));
 
-assign grp_fu_7653_p1 = 7'd20;
+assign grp_fu_6488_p1 = 6'd10;
 
-assign grp_fu_7881_p0 = (trunc_ln61_fu_7861_p1 + 6'd1);
+assign grp_fu_6556_p0 = (trunc_ln61_fu_6536_p1 + 5'd1);
 
-assign i_cast_fu_7369_p1 = i_reg_7314;
+assign i_cast_fu_6204_p1 = i_reg_6149;
 
-assign icmp_ln19_fu_7623_p2 = ((i_1_reg_7326 == 4'd8) ? 1'b1 : 1'b0);
+assign icmp_ln19_fu_6458_p2 = ((i_4_reg_6161 == 4'd8) ? 1'b1 : 1'b0);
 
-assign icmp_ln52_fu_7633_p2 = ((sliding_window_size_s == 32'd0) ? 1'b1 : 1'b0);
+assign icmp_ln52_fu_6468_p2 = ((sliding_window_size_s == 32'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln63_fu_7869_p2 = ((trunc_ln61_fu_7861_p1 == sliding_window_back_ptr_s_i) ? 1'b1 : 1'b0);
+assign icmp_ln63_fu_6544_p2 = ((trunc_ln61_fu_6536_p1 == sliding_window_back_ptr_s_i) ? 1'b1 : 1'b0);
 
-assign icmp_ln69_fu_7893_p2 = (($signed(sliding_window_size_load_reg_10258) < $signed(32'd20)) ? 1'b1 : 1'b0);
+assign icmp_ln69_fu_6568_p2 = (($signed(sliding_window_size_s) < $signed(32'd10)) ? 1'b1 : 1'b0);
 
-assign icmp_ln84_fu_7343_p2 = ((ap_phi_mux_i_phi_fu_7318_p4 == 4'd8) ? 1'b1 : 1'b0);
+assign icmp_ln92_fu_6178_p2 = ((ap_phi_mux_i_phi_fu_6153_p4 == 4'd8) ? 1'b1 : 1'b0);
+
+assign or_ln54_10_fu_8021_p2 = (sub_ln54_reg_11407 | 10'd11);
+
+assign or_ln54_11_fu_8038_p2 = (tmp_fu_8031_p3 | 8'd1);
+
+assign or_ln54_12_fu_8095_p2 = (sub_ln54_1_fu_8084_p2 | 10'd1);
+
+assign or_ln54_13_fu_8106_p2 = (sub_ln54_1_reg_11591 | 10'd2);
+
+assign or_ln54_14_fu_8116_p2 = (sub_ln54_1_reg_11591 | 10'd3);
+
+assign or_ln54_15_fu_8221_p2 = (tmp_reg_11580 | 8'd2);
+
+assign or_ln54_16_fu_8277_p2 = (sub_ln54_2_fu_8266_p2 | 10'd1);
+
+assign or_ln54_17_fu_8288_p2 = (sub_ln54_2_reg_11605 | 10'd2);
+
+assign or_ln54_18_fu_8298_p2 = (sub_ln54_2_reg_11605 | 10'd3);
+
+assign or_ln54_19_fu_8308_p2 = (sub_ln54_2_reg_11605 | 10'd4);
+
+assign or_ln54_1_fu_7931_p2 = (sub_ln54_reg_11407 | 10'd2);
+
+assign or_ln54_20_fu_8318_p2 = (sub_ln54_2_reg_11605 | 10'd5);
+
+assign or_ln54_21_fu_8328_p2 = (sub_ln54_2_reg_11605 | 10'd6);
+
+assign or_ln54_22_fu_8338_p2 = (sub_ln54_2_reg_11605 | 10'd7);
+
+assign or_ln54_23_fu_8388_p2 = (tmp_reg_11580 | 8'd3);
+
+assign or_ln54_24_fu_8444_p2 = (sub_ln54_3_fu_8433_p2 | 10'd1);
+
+assign or_ln54_25_fu_8455_p2 = (sub_ln54_3_reg_11619 | 10'd2);
+
+assign or_ln54_26_fu_8465_p2 = (sub_ln54_3_reg_11619 | 10'd3);
+
+assign or_ln54_27_fu_8475_p2 = (tmp_reg_11580 | 8'd4);
+
+assign or_ln54_28_fu_8763_p2 = (sub_ln54_4_reg_11633 | 10'd1);
+
+assign or_ln54_29_fu_8773_p2 = (sub_ln54_4_reg_11633 | 10'd2);
+
+assign or_ln54_2_fu_7941_p2 = (sub_ln54_reg_11407 | 10'd3);
+
+assign or_ln54_30_fu_8783_p2 = (sub_ln54_4_reg_11633 | 10'd3);
+
+assign or_ln54_31_fu_8793_p2 = (sub_ln54_4_reg_11633 | 10'd4);
+
+assign or_ln54_32_fu_8803_p2 = (sub_ln54_4_reg_11633 | 10'd5);
+
+assign or_ln54_33_fu_8813_p2 = (sub_ln54_4_reg_11633 | 10'd6);
+
+assign or_ln54_34_fu_8823_p2 = (sub_ln54_4_reg_11633 | 10'd7);
+
+assign or_ln54_35_fu_8833_p2 = (sub_ln54_4_reg_11633 | 10'd8);
+
+assign or_ln54_36_fu_8843_p2 = (sub_ln54_4_reg_11633 | 10'd9);
+
+assign or_ln54_37_fu_8853_p2 = (sub_ln54_4_reg_11633 | 10'd10);
+
+assign or_ln54_38_fu_8863_p2 = (sub_ln54_4_reg_11633 | 10'd11);
+
+assign or_ln54_39_fu_8526_p2 = (tmp_reg_11580 | 8'd5);
+
+assign or_ln54_3_fu_7951_p2 = (sub_ln54_reg_11407 | 10'd4);
+
+assign or_ln54_40_fu_8877_p2 = (sub_ln54_5_reg_11649 | 10'd1);
+
+assign or_ln54_41_fu_8887_p2 = (sub_ln54_5_reg_11649 | 10'd2);
+
+assign or_ln54_42_fu_8897_p2 = (sub_ln54_5_reg_11649 | 10'd3);
+
+assign or_ln54_43_fu_8597_p2 = (tmp_reg_11580 | 8'd6);
+
+assign or_ln54_44_fu_8991_p2 = (sub_ln54_6_reg_11665 | 10'd1);
+
+assign or_ln54_45_fu_9001_p2 = (sub_ln54_6_reg_11665 | 10'd2);
+
+assign or_ln54_46_fu_9011_p2 = (sub_ln54_6_reg_11665 | 10'd3);
+
+assign or_ln54_47_fu_9021_p2 = (sub_ln54_6_reg_11665 | 10'd4);
+
+assign or_ln54_48_fu_9031_p2 = (sub_ln54_6_reg_11665 | 10'd5);
+
+assign or_ln54_49_fu_9041_p2 = (sub_ln54_6_reg_11665 | 10'd6);
+
+assign or_ln54_4_fu_7961_p2 = (sub_ln54_reg_11407 | 10'd5);
+
+assign or_ln54_50_fu_9051_p2 = (sub_ln54_6_reg_11665 | 10'd7);
+
+assign or_ln54_51_fu_8648_p2 = (tmp_reg_11580 | 8'd7);
+
+assign or_ln54_52_fu_9105_p2 = (sub_ln54_7_reg_11681 | 10'd1);
+
+assign or_ln54_53_fu_9115_p2 = (sub_ln54_7_reg_11681 | 10'd2);
+
+assign or_ln54_54_fu_9125_p2 = (sub_ln54_7_reg_11681 | 10'd3);
+
+assign or_ln54_5_fu_7971_p2 = (sub_ln54_reg_11407 | 10'd6);
+
+assign or_ln54_6_fu_7981_p2 = (sub_ln54_reg_11407 | 10'd7);
+
+assign or_ln54_7_fu_7991_p2 = (sub_ln54_reg_11407 | 10'd8);
+
+assign or_ln54_8_fu_8001_p2 = (sub_ln54_reg_11407 | 10'd9);
+
+assign or_ln54_9_fu_8011_p2 = (sub_ln54_reg_11407 | 10'd10);
+
+assign or_ln54_fu_6525_p2 = (sub_ln54_fu_6514_p2 | 10'd1);
+
+assign or_ln75_10_fu_7123_p2 = (sub_ln75_reg_11454 | 10'd11);
+
+assign or_ln75_11_fu_6656_p2 = (tmp_10_fu_6587_p3 | 7'd1);
+
+assign or_ln75_12_fu_7137_p2 = (sub_ln75_1_reg_11468 | 10'd1);
+
+assign or_ln75_13_fu_7147_p2 = (sub_ln75_1_reg_11468 | 10'd2);
+
+assign or_ln75_14_fu_7157_p2 = (sub_ln75_1_reg_11468 | 10'd3);
+
+assign or_ln75_15_fu_6735_p2 = (tmp_10_reg_11444 | 7'd2);
+
+assign or_ln75_16_fu_7251_p2 = (sub_ln75_2_reg_11484 | 10'd1);
+
+assign or_ln75_17_fu_7261_p2 = (sub_ln75_2_reg_11484 | 10'd2);
+
+assign or_ln75_18_fu_7271_p2 = (sub_ln75_2_reg_11484 | 10'd3);
+
+assign or_ln75_19_fu_7281_p2 = (sub_ln75_2_reg_11484 | 10'd4);
+
+assign or_ln75_1_fu_6715_p2 = (sub_ln75_reg_11454 | 10'd2);
+
+assign or_ln75_20_fu_7291_p2 = (sub_ln75_2_reg_11484 | 10'd5);
+
+assign or_ln75_21_fu_7301_p2 = (sub_ln75_2_reg_11484 | 10'd6);
+
+assign or_ln75_22_fu_7311_p2 = (sub_ln75_2_reg_11484 | 10'd7);
+
+assign or_ln75_23_fu_6788_p2 = (tmp_10_reg_11444 | 7'd3);
+
+assign or_ln75_24_fu_7365_p2 = (sub_ln75_3_reg_11500 | 10'd1);
+
+assign or_ln75_25_fu_7375_p2 = (sub_ln75_3_reg_11500 | 10'd2);
+
+assign or_ln75_26_fu_7385_p2 = (sub_ln75_3_reg_11500 | 10'd3);
+
+assign or_ln75_27_fu_6861_p2 = (tmp_10_reg_11444 | 7'd4);
+
+assign or_ln75_28_fu_7479_p2 = (sub_ln75_4_reg_11516 | 10'd1);
+
+assign or_ln75_29_fu_7489_p2 = (sub_ln75_4_reg_11516 | 10'd2);
+
+assign or_ln75_2_fu_6725_p2 = (sub_ln75_reg_11454 | 10'd3);
+
+assign or_ln75_30_fu_7499_p2 = (sub_ln75_4_reg_11516 | 10'd3);
+
+assign or_ln75_31_fu_7509_p2 = (sub_ln75_4_reg_11516 | 10'd4);
+
+assign or_ln75_32_fu_7519_p2 = (sub_ln75_4_reg_11516 | 10'd5);
+
+assign or_ln75_33_fu_7529_p2 = (sub_ln75_4_reg_11516 | 10'd6);
+
+assign or_ln75_34_fu_7539_p2 = (sub_ln75_4_reg_11516 | 10'd7);
+
+assign or_ln75_35_fu_7549_p2 = (sub_ln75_4_reg_11516 | 10'd8);
+
+assign or_ln75_36_fu_7559_p2 = (sub_ln75_4_reg_11516 | 10'd9);
+
+assign or_ln75_37_fu_7569_p2 = (sub_ln75_4_reg_11516 | 10'd10);
+
+assign or_ln75_38_fu_7579_p2 = (sub_ln75_4_reg_11516 | 10'd11);
+
+assign or_ln75_39_fu_6914_p2 = (tmp_10_reg_11444 | 7'd5);
+
+assign or_ln75_3_fu_6841_p2 = (sub_ln75_reg_11454 | 10'd4);
+
+assign or_ln75_40_fu_7593_p2 = (sub_ln75_5_reg_11532 | 10'd1);
+
+assign or_ln75_41_fu_7603_p2 = (sub_ln75_5_reg_11532 | 10'd2);
+
+assign or_ln75_42_fu_7613_p2 = (sub_ln75_5_reg_11532 | 10'd3);
+
+assign or_ln75_43_fu_6987_p2 = (tmp_10_reg_11444 | 7'd6);
+
+assign or_ln75_44_fu_7707_p2 = (sub_ln75_6_reg_11548 | 10'd1);
+
+assign or_ln75_45_fu_7717_p2 = (sub_ln75_6_reg_11548 | 10'd2);
+
+assign or_ln75_46_fu_7727_p2 = (sub_ln75_6_reg_11548 | 10'd3);
+
+assign or_ln75_47_fu_7737_p2 = (sub_ln75_6_reg_11548 | 10'd4);
+
+assign or_ln75_48_fu_7747_p2 = (sub_ln75_6_reg_11548 | 10'd5);
+
+assign or_ln75_49_fu_7757_p2 = (sub_ln75_6_reg_11548 | 10'd6);
+
+assign or_ln75_4_fu_6851_p2 = (sub_ln75_reg_11454 | 10'd5);
+
+assign or_ln75_50_fu_7767_p2 = (sub_ln75_6_reg_11548 | 10'd7);
+
+assign or_ln75_51_fu_7040_p2 = (tmp_10_reg_11444 | 7'd7);
+
+assign or_ln75_52_fu_7821_p2 = (sub_ln75_7_reg_11564 | 10'd1);
+
+assign or_ln75_53_fu_7831_p2 = (sub_ln75_7_reg_11564 | 10'd2);
+
+assign or_ln75_54_fu_7841_p2 = (sub_ln75_7_reg_11564 | 10'd3);
+
+assign or_ln75_5_fu_6967_p2 = (sub_ln75_reg_11454 | 10'd6);
+
+assign or_ln75_6_fu_6977_p2 = (sub_ln75_reg_11454 | 10'd7);
+
+assign or_ln75_7_fu_7093_p2 = (sub_ln75_reg_11454 | 10'd8);
+
+assign or_ln75_8_fu_7103_p2 = (sub_ln75_reg_11454 | 10'd9);
+
+assign or_ln75_9_fu_7113_p2 = (sub_ln75_reg_11454 | 10'd10);
+
+assign or_ln75_fu_6645_p2 = (sub_ln75_fu_6634_p2 | 10'd1);
+
+assign p_shl10_cast_fu_8250_p3 = {{trunc_ln54_2_fu_8246_p1}, {4'd0}};
+
+assign p_shl11_cast_fu_8258_p3 = {{or_ln54_15_fu_8221_p2}, {2'd0}};
+
+assign p_shl12_cast_fu_8068_p3 = {{trunc_ln54_1_fu_8064_p1}, {4'd0}};
+
+assign p_shl13_cast_fu_8076_p3 = {{or_ln54_11_fu_8038_p2}, {2'd0}};
+
+assign p_shl14_cast_fu_6686_p3 = {{trunc_ln75_2_fu_6682_p1}, {4'd0}};
+
+assign p_shl15_cast_fu_6694_p4 = {{{{1'd0}, {or_ln75_11_fu_6656_p2}}}, {2'd0}};
+
+assign p_shl16_cast_fu_7069_p3 = {{trunc_ln75_8_fu_7065_p1}, {4'd0}};
+
+assign p_shl17_cast_fu_7077_p4 = {{{{1'd0}, {or_ln75_51_fu_7040_p2}}}, {2'd0}};
+
+assign p_shl18_cast_fu_7016_p3 = {{trunc_ln75_7_fu_7012_p1}, {4'd0}};
+
+assign p_shl19_cast_fu_7024_p4 = {{{{1'd0}, {or_ln75_43_fu_6987_p2}}}, {2'd0}};
+
+assign p_shl1_cast_fu_8685_p3 = {{or_ln54_51_fu_8648_p2}, {2'd0}};
+
+assign p_shl20_cast_fu_6943_p3 = {{trunc_ln75_6_fu_6939_p1}, {4'd0}};
+
+assign p_shl21_cast_fu_6951_p4 = {{{{1'd0}, {or_ln75_39_fu_6914_p2}}}, {2'd0}};
+
+assign p_shl22_cast_fu_6890_p3 = {{trunc_ln75_5_fu_6886_p1}, {4'd0}};
+
+assign p_shl23_cast_fu_6898_p4 = {{{{1'd0}, {or_ln75_27_fu_6861_p2}}}, {2'd0}};
+
+assign p_shl24_cast_fu_6817_p3 = {{trunc_ln75_4_fu_6813_p1}, {4'd0}};
+
+assign p_shl25_cast_fu_6825_p4 = {{{{1'd0}, {or_ln75_23_fu_6788_p2}}}, {2'd0}};
+
+assign p_shl26_cast_fu_6764_p3 = {{trunc_ln75_3_fu_6760_p1}, {4'd0}};
+
+assign p_shl27_cast_fu_6772_p4 = {{{{1'd0}, {or_ln75_15_fu_6735_p2}}}, {2'd0}};
+
+assign p_shl2_cast_fu_8626_p3 = {{trunc_ln54_6_fu_8622_p1}, {4'd0}};
+
+assign p_shl3_cast_fu_8634_p3 = {{or_ln54_43_fu_8597_p2}, {2'd0}};
+
+assign p_shl4_cast_fu_8555_p3 = {{trunc_ln54_5_fu_8551_p1}, {4'd0}};
+
+assign p_shl5_cast_fu_8563_p3 = {{or_ln54_39_fu_8526_p2}, {2'd0}};
+
+assign p_shl6_cast_fu_8504_p3 = {{trunc_ln54_4_fu_8500_p1}, {4'd0}};
+
+assign p_shl7_cast_fu_8512_p3 = {{or_ln54_27_fu_8475_p2}, {2'd0}};
+
+assign p_shl8_cast_fu_8417_p3 = {{trunc_ln54_3_fu_8413_p1}, {4'd0}};
+
+assign p_shl9_cast_fu_8425_p3 = {{or_ln54_23_fu_8388_p2}, {2'd0}};
+
+assign p_shl_cast_fu_8677_p3 = {{trunc_ln54_7_fu_8673_p1}, {4'd0}};
 
 assign samples_0_sample_V_d0 = buffer_in_0_q0[11:0];
 
@@ -11775,316 +8019,538 @@ assign samples_9_sample_V_d0 = buffer_in_9_q0[11:0];
 
 assign samples_9_timestamp_V_d0 = {{buffer_in_9_q0[31:12]}};
 
-assign sext_ln52_fu_7643_p0 = sliding_window_front_ptr_s_i;
+assign sext_ln52_fu_6478_p0 = sliding_window_front_ptr_s_i;
 
-assign sext_ln52_fu_7643_p1 = sext_ln52_fu_7643_p0;
+assign sext_ln52_fu_6478_p1 = sext_ln52_fu_6478_p0;
 
-assign sliding_window_buffer_samples_sample_V_0_0_d0 = sample_period_samples_0_sample_V_load_reg_8578;
+assign sub_ln54_1_fu_8084_p2 = (p_shl12_cast_fu_8068_p3 - p_shl13_cast_fu_8076_p3);
 
-assign sliding_window_buffer_samples_sample_V_0_10_d0 = sample_period_samples_10_sample_V_load_reg_8628;
+assign sub_ln54_2_fu_8266_p2 = (p_shl10_cast_fu_8250_p3 - p_shl11_cast_fu_8258_p3);
 
-assign sliding_window_buffer_samples_sample_V_0_11_d0 = sample_period_samples_11_sample_V_load_reg_8633;
+assign sub_ln54_3_fu_8433_p2 = (p_shl8_cast_fu_8417_p3 - p_shl9_cast_fu_8425_p3);
 
-assign sliding_window_buffer_samples_sample_V_0_1_d0 = sample_period_samples_1_sample_V_load_reg_8583;
+assign sub_ln54_4_fu_8520_p2 = (p_shl6_cast_fu_8504_p3 - p_shl7_cast_fu_8512_p3);
 
-assign sliding_window_buffer_samples_sample_V_0_2_d0 = sample_period_samples_2_sample_V_load_reg_8588;
+assign sub_ln54_5_fu_8571_p2 = (p_shl4_cast_fu_8555_p3 - p_shl5_cast_fu_8563_p3);
 
-assign sliding_window_buffer_samples_sample_V_0_3_d0 = sample_period_samples_3_sample_V_load_reg_8593;
+assign sub_ln54_6_fu_8642_p2 = (p_shl2_cast_fu_8626_p3 - p_shl3_cast_fu_8634_p3);
 
-assign sliding_window_buffer_samples_sample_V_0_4_d0 = sample_period_samples_4_sample_V_load_reg_8598;
+assign sub_ln54_7_fu_8693_p2 = (p_shl_cast_fu_8677_p3 - p_shl1_cast_fu_8685_p3);
 
-assign sliding_window_buffer_samples_sample_V_0_5_d0 = sample_period_samples_5_sample_V_load_reg_8603;
+assign sub_ln54_fu_6514_p2 = (tmp_19_cast_fu_6498_p3 - tmp_s_fu_6506_p3);
 
-assign sliding_window_buffer_samples_sample_V_0_6_d0 = sample_period_samples_6_sample_V_load_reg_8608;
+assign sub_ln75_1_fu_6704_p2 = (p_shl14_cast_fu_6686_p3 - p_shl15_cast_fu_6694_p4);
 
-assign sliding_window_buffer_samples_sample_V_0_7_d0 = sample_period_samples_7_sample_V_load_reg_8613;
+assign sub_ln75_2_fu_6782_p2 = (p_shl26_cast_fu_6764_p3 - p_shl27_cast_fu_6772_p4);
 
-assign sliding_window_buffer_samples_sample_V_0_8_d0 = sample_period_samples_8_sample_V_load_reg_8618;
+assign sub_ln75_3_fu_6835_p2 = (p_shl24_cast_fu_6817_p3 - p_shl25_cast_fu_6825_p4);
 
-assign sliding_window_buffer_samples_sample_V_0_9_d0 = sample_period_samples_9_sample_V_load_reg_8623;
+assign sub_ln75_4_fu_6908_p2 = (p_shl22_cast_fu_6890_p3 - p_shl23_cast_fu_6898_p4);
 
-assign sliding_window_buffer_samples_sample_V_1_0_d0 = sample_period_samples_0_sample_V_load_1_reg_8698;
+assign sub_ln75_5_fu_6961_p2 = (p_shl20_cast_fu_6943_p3 - p_shl21_cast_fu_6951_p4);
 
-assign sliding_window_buffer_samples_sample_V_1_10_d0 = sample_period_samples_10_sample_V_load_1_reg_8748;
+assign sub_ln75_6_fu_7034_p2 = (p_shl18_cast_fu_7016_p3 - p_shl19_cast_fu_7024_p4);
 
-assign sliding_window_buffer_samples_sample_V_1_11_d0 = sample_period_samples_11_sample_V_load_1_reg_8753;
+assign sub_ln75_7_fu_7087_p2 = (p_shl16_cast_fu_7069_p3 - p_shl17_cast_fu_7077_p4);
 
-assign sliding_window_buffer_samples_sample_V_1_1_d0 = sample_period_samples_1_sample_V_load_1_reg_8703;
+assign sub_ln75_fu_6634_p2 = (tmp_31_cast_fu_6614_p3 - zext_ln75_1_fu_6630_p1);
 
-assign sliding_window_buffer_samples_sample_V_1_2_d0 = sample_period_samples_2_sample_V_load_1_reg_8708;
+assign tmp_10_fu_6587_p3 = {{trunc_ln75_fu_6584_p1}, {3'd0}};
 
-assign sliding_window_buffer_samples_sample_V_1_3_d0 = sample_period_samples_3_sample_V_load_1_reg_8713;
+assign tmp_11_fu_6622_p3 = {{trunc_ln75_fu_6584_p1}, {5'd0}};
 
-assign sliding_window_buffer_samples_sample_V_1_4_d0 = sample_period_samples_4_sample_V_load_1_reg_8718;
+assign tmp_12_fu_6662_p3 = {{57'd0}, {or_ln75_11_fu_6656_p2}};
 
-assign sliding_window_buffer_samples_sample_V_1_5_d0 = sample_period_samples_5_sample_V_load_1_reg_8723;
+assign tmp_13_fu_6740_p3 = {{57'd0}, {or_ln75_15_fu_6735_p2}};
 
-assign sliding_window_buffer_samples_sample_V_1_6_d0 = sample_period_samples_6_sample_V_load_1_reg_8728;
+assign tmp_14_fu_6793_p3 = {{57'd0}, {or_ln75_23_fu_6788_p2}};
 
-assign sliding_window_buffer_samples_sample_V_1_7_d0 = sample_period_samples_7_sample_V_load_1_reg_8733;
+assign tmp_15_fu_6866_p3 = {{57'd0}, {or_ln75_27_fu_6861_p2}};
 
-assign sliding_window_buffer_samples_sample_V_1_8_d0 = sample_period_samples_8_sample_V_load_1_reg_8738;
+assign tmp_16_fu_6919_p3 = {{57'd0}, {or_ln75_39_fu_6914_p2}};
 
-assign sliding_window_buffer_samples_sample_V_1_9_d0 = sample_period_samples_9_sample_V_load_1_reg_8743;
+assign tmp_17_fu_6992_p3 = {{57'd0}, {or_ln75_43_fu_6987_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_0_d0 = sample_period_samples_0_sample_V_load_2_reg_9058;
+assign tmp_18_fu_7045_p3 = {{57'd0}, {or_ln75_51_fu_7040_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_10_d0 = sample_period_samples_10_sample_V_load_2_reg_9108;
+assign tmp_19_cast_fu_6498_p3 = {{trunc_ln54_fu_6494_p1}, {7'd0}};
 
-assign sliding_window_buffer_samples_sample_V_2_11_d0 = sample_period_samples_11_sample_V_load_2_reg_9113;
+assign tmp_31_cast_fu_6614_p3 = {{trunc_ln75_1_fu_6611_p1}, {7'd0}};
 
-assign sliding_window_buffer_samples_sample_V_2_1_d0 = sample_period_samples_1_sample_V_load_2_reg_9063;
+assign tmp_3_fu_8044_p3 = {{56'd0}, {or_ln54_11_fu_8038_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_2_d0 = sample_period_samples_2_sample_V_load_2_reg_9068;
+assign tmp_4_fu_8226_p3 = {{56'd0}, {or_ln54_15_fu_8221_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_3_d0 = sample_period_samples_3_sample_V_load_2_reg_9073;
+assign tmp_5_fu_8393_p3 = {{56'd0}, {or_ln54_23_fu_8388_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_4_d0 = sample_period_samples_4_sample_V_load_2_reg_9078;
+assign tmp_6_fu_8480_p3 = {{56'd0}, {or_ln54_27_fu_8475_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_5_d0 = sample_period_samples_5_sample_V_load_2_reg_9083;
+assign tmp_7_fu_8531_p3 = {{56'd0}, {or_ln54_39_fu_8526_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_6_d0 = sample_period_samples_6_sample_V_load_2_reg_9088;
+assign tmp_8_fu_8602_p3 = {{56'd0}, {or_ln54_43_fu_8597_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_7_d0 = sample_period_samples_7_sample_V_load_2_reg_9093;
+assign tmp_9_fu_8653_p3 = {{56'd0}, {or_ln54_51_fu_8648_p2}};
 
-assign sliding_window_buffer_samples_sample_V_2_8_d0 = sample_period_samples_8_sample_V_load_2_reg_9098;
+assign tmp_fu_8031_p3 = {{sliding_window_front_ptr_load_reg_11397}, {3'd0}};
 
-assign sliding_window_buffer_samples_sample_V_2_9_d0 = sample_period_samples_9_sample_V_load_2_reg_9103;
+assign tmp_s_fu_6506_p1 = sliding_window_front_ptr_s_i;
 
-assign sliding_window_buffer_samples_sample_V_3_0_d0 = sample_period_samples_0_sample_V_load_3_reg_9178;
+assign tmp_s_fu_6506_p3 = {{tmp_s_fu_6506_p1}, {5'd0}};
 
-assign sliding_window_buffer_samples_sample_V_3_10_d0 = sample_period_samples_10_sample_V_load_3_reg_9228;
+assign trunc_ln54_1_fu_8064_p1 = or_ln54_11_fu_8038_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_3_11_d0 = sample_period_samples_11_sample_V_load_3_reg_9233;
+assign trunc_ln54_2_fu_8246_p1 = or_ln54_15_fu_8221_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_3_1_d0 = sample_period_samples_1_sample_V_load_3_reg_9183;
+assign trunc_ln54_3_fu_8413_p1 = or_ln54_23_fu_8388_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_3_2_d0 = sample_period_samples_2_sample_V_load_3_reg_9188;
+assign trunc_ln54_4_fu_8500_p1 = or_ln54_27_fu_8475_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_3_3_d0 = sample_period_samples_3_sample_V_load_3_reg_9193;
+assign trunc_ln54_5_fu_8551_p1 = or_ln54_39_fu_8526_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_3_4_d0 = sample_period_samples_4_sample_V_load_3_reg_9198;
+assign trunc_ln54_6_fu_8622_p1 = or_ln54_43_fu_8597_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_3_5_d0 = sample_period_samples_5_sample_V_load_3_reg_9203;
+assign trunc_ln54_7_fu_8673_p1 = or_ln54_51_fu_8648_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_3_6_d0 = sample_period_samples_6_sample_V_load_3_reg_9208;
+assign trunc_ln54_fu_6494_p0 = sliding_window_front_ptr_s_i;
 
-assign sliding_window_buffer_samples_sample_V_3_7_d0 = sample_period_samples_7_sample_V_load_3_reg_9213;
+assign trunc_ln54_fu_6494_p1 = trunc_ln54_fu_6494_p0[2:0];
 
-assign sliding_window_buffer_samples_sample_V_3_8_d0 = sample_period_samples_8_sample_V_load_3_reg_9218;
+assign trunc_ln61_fu_6536_p1 = grp_fu_6488_p2[4:0];
 
-assign sliding_window_buffer_samples_sample_V_3_9_d0 = sample_period_samples_9_sample_V_load_3_reg_9223;
+assign trunc_ln75_1_fu_6611_p1 = new_front_ptr_reg_11421[2:0];
 
-assign sliding_window_buffer_samples_sample_V_4_0_d0 = sample_period_samples_0_sample_V_load_4_reg_9538;
+assign trunc_ln75_2_fu_6682_p1 = or_ln75_11_fu_6656_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_4_10_d0 = sample_period_samples_10_sample_V_load_4_reg_9588;
+assign trunc_ln75_3_fu_6760_p1 = or_ln75_15_fu_6735_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_4_11_d0 = sample_period_samples_11_sample_V_load_4_reg_9593;
+assign trunc_ln75_4_fu_6813_p1 = or_ln75_23_fu_6788_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_4_1_d0 = sample_period_samples_1_sample_V_load_4_reg_9543;
+assign trunc_ln75_5_fu_6886_p1 = or_ln75_27_fu_6861_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_4_2_d0 = sample_period_samples_2_sample_V_load_4_reg_9548;
+assign trunc_ln75_6_fu_6939_p1 = or_ln75_39_fu_6914_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_4_3_d0 = sample_period_samples_3_sample_V_load_4_reg_9553;
+assign trunc_ln75_7_fu_7012_p1 = or_ln75_43_fu_6987_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_4_4_d0 = sample_period_samples_4_sample_V_load_4_reg_9558;
+assign trunc_ln75_8_fu_7065_p1 = or_ln75_51_fu_7040_p2[5:0];
 
-assign sliding_window_buffer_samples_sample_V_4_5_d0 = sample_period_samples_5_sample_V_load_4_reg_9563;
+assign trunc_ln75_fu_6584_p1 = new_front_ptr_reg_11421[3:0];
 
-assign sliding_window_buffer_samples_sample_V_4_6_d0 = sample_period_samples_6_sample_V_load_4_reg_9568;
+assign trunc_ln95_fu_6184_p1 = ap_phi_mux_i_phi_fu_6153_p4[2:0];
 
-assign sliding_window_buffer_samples_sample_V_4_7_d0 = sample_period_samples_7_sample_V_load_4_reg_9573;
+assign zext_ln19_fu_6430_p1 = i_4_reg_6161;
 
-assign sliding_window_buffer_samples_sample_V_4_8_d0 = sample_period_samples_8_sample_V_load_4_reg_9578;
+assign zext_ln54_10_fu_8006_p1 = or_ln54_8_fu_8001_p2;
 
-assign sliding_window_buffer_samples_sample_V_4_9_d0 = sample_period_samples_9_sample_V_load_4_reg_9583;
+assign zext_ln54_11_fu_8016_p1 = or_ln54_9_fu_8011_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_0_d0 = sample_period_samples_0_sample_V_load_5_reg_9658;
+assign zext_ln54_12_fu_8026_p1 = or_ln54_10_fu_8021_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_10_d0 = sample_period_samples_10_sample_V_load_5_reg_9708;
+assign zext_ln54_13_fu_8090_p1 = sub_ln54_1_fu_8084_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_11_d0 = sample_period_samples_11_sample_V_load_5_reg_9713;
+assign zext_ln54_14_fu_8101_p1 = or_ln54_12_fu_8095_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_1_d0 = sample_period_samples_1_sample_V_load_5_reg_9663;
+assign zext_ln54_15_fu_8111_p1 = or_ln54_13_fu_8106_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_2_d0 = sample_period_samples_2_sample_V_load_5_reg_9668;
+assign zext_ln54_16_fu_8121_p1 = or_ln54_14_fu_8116_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_3_d0 = sample_period_samples_3_sample_V_load_5_reg_9673;
+assign zext_ln54_17_fu_8131_p1 = add_ln54_fu_8126_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_4_d0 = sample_period_samples_4_sample_V_load_5_reg_9678;
+assign zext_ln54_18_fu_8141_p1 = add_ln54_1_fu_8136_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_5_d0 = sample_period_samples_5_sample_V_load_5_reg_9683;
+assign zext_ln54_19_fu_8151_p1 = add_ln54_2_fu_8146_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_6_d0 = sample_period_samples_6_sample_V_load_5_reg_9688;
+assign zext_ln54_1_fu_6520_p1 = sub_ln54_fu_6514_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_7_d0 = sample_period_samples_7_sample_V_load_5_reg_9693;
+assign zext_ln54_20_fu_8161_p1 = add_ln54_3_fu_8156_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_8_d0 = sample_period_samples_8_sample_V_load_5_reg_9698;
+assign zext_ln54_21_fu_8171_p1 = add_ln54_4_fu_8166_p2;
 
-assign sliding_window_buffer_samples_sample_V_5_9_d0 = sample_period_samples_9_sample_V_load_5_reg_9703;
+assign zext_ln54_22_fu_8181_p1 = add_ln54_5_fu_8176_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_0_d0 = sample_period_samples_0_timestamp_V_load_reg_8638;
+assign zext_ln54_23_fu_8206_p1 = add_ln54_6_fu_8201_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_10_d0 = sample_period_samples_10_timestamp_V_load_reg_8688;
+assign zext_ln54_24_fu_8216_p1 = add_ln54_7_fu_8211_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_11_d0 = sample_period_samples_11_timestamp_V_load_reg_8693;
+assign zext_ln54_25_fu_8272_p1 = sub_ln54_2_fu_8266_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_1_d0 = sample_period_samples_1_timestamp_V_load_reg_8643;
+assign zext_ln54_26_fu_8283_p1 = or_ln54_16_fu_8277_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_2_d0 = sample_period_samples_2_timestamp_V_load_reg_8648;
+assign zext_ln54_27_fu_8293_p1 = or_ln54_17_fu_8288_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_3_d0 = sample_period_samples_3_timestamp_V_load_reg_8653;
+assign zext_ln54_28_fu_8303_p1 = or_ln54_18_fu_8298_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_4_d0 = sample_period_samples_4_timestamp_V_load_reg_8658;
+assign zext_ln54_29_fu_8313_p1 = or_ln54_19_fu_8308_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_5_d0 = sample_period_samples_5_timestamp_V_load_reg_8663;
+assign zext_ln54_2_fu_6531_p1 = or_ln54_fu_6525_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_6_d0 = sample_period_samples_6_timestamp_V_load_reg_8668;
+assign zext_ln54_30_fu_8323_p1 = or_ln54_20_fu_8318_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_7_d0 = sample_period_samples_7_timestamp_V_load_reg_8673;
+assign zext_ln54_31_fu_8333_p1 = or_ln54_21_fu_8328_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_8_d0 = sample_period_samples_8_timestamp_V_load_reg_8678;
+assign zext_ln54_32_fu_8343_p1 = or_ln54_22_fu_8338_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_0_9_d0 = sample_period_samples_9_timestamp_V_load_reg_8683;
+assign zext_ln54_33_fu_8353_p1 = add_ln54_8_fu_8348_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_0_d0 = sample_period_samples_0_timestamp_V_load_1_reg_8758;
+assign zext_ln54_34_fu_8363_p1 = add_ln54_9_fu_8358_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_10_d0 = sample_period_samples_10_timestamp_V_load_1_reg_8808;
+assign zext_ln54_35_fu_8373_p1 = add_ln54_10_fu_8368_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_11_d0 = sample_period_samples_11_timestamp_V_load_1_reg_8813;
+assign zext_ln54_36_fu_8383_p1 = add_ln54_11_fu_8378_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_1_d0 = sample_period_samples_1_timestamp_V_load_1_reg_8763;
+assign zext_ln54_37_fu_8439_p1 = sub_ln54_3_fu_8433_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_2_d0 = sample_period_samples_2_timestamp_V_load_1_reg_8768;
+assign zext_ln54_38_fu_8450_p1 = or_ln54_24_fu_8444_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_3_d0 = sample_period_samples_3_timestamp_V_load_1_reg_8773;
+assign zext_ln54_39_fu_8460_p1 = or_ln54_25_fu_8455_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_4_d0 = sample_period_samples_4_timestamp_V_load_1_reg_8778;
+assign zext_ln54_3_fu_7936_p1 = or_ln54_1_fu_7931_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_5_d0 = sample_period_samples_5_timestamp_V_load_1_reg_8783;
+assign zext_ln54_40_fu_8470_p1 = or_ln54_26_fu_8465_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_6_d0 = sample_period_samples_6_timestamp_V_load_1_reg_8788;
+assign zext_ln54_41_fu_8582_p1 = add_ln54_12_fu_8577_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_7_d0 = sample_period_samples_7_timestamp_V_load_1_reg_8793;
+assign zext_ln54_42_fu_8592_p1 = add_ln54_13_fu_8587_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_8_d0 = sample_period_samples_8_timestamp_V_load_1_reg_8798;
+assign zext_ln54_43_fu_8704_p1 = add_ln54_14_fu_8699_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_1_9_d0 = sample_period_samples_9_timestamp_V_load_1_reg_8803;
+assign zext_ln54_44_fu_8714_p1 = add_ln54_15_fu_8709_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_0_d0 = sample_period_samples_0_timestamp_V_load_2_reg_9118;
+assign zext_ln54_45_fu_8724_p1 = add_ln54_16_fu_8719_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_10_d0 = sample_period_samples_10_timestamp_V_load_2_reg_9168;
+assign zext_ln54_46_fu_8734_p1 = add_ln54_17_fu_8729_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_11_d0 = sample_period_samples_11_timestamp_V_load_2_reg_9173;
+assign zext_ln54_47_fu_8744_p1 = add_ln54_18_fu_8739_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_1_d0 = sample_period_samples_1_timestamp_V_load_2_reg_9123;
+assign zext_ln54_48_fu_8754_p1 = add_ln54_19_fu_8749_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_2_d0 = sample_period_samples_2_timestamp_V_load_2_reg_9128;
+assign zext_ln54_49_fu_8759_p1 = sub_ln54_4_reg_11633;
 
-assign sliding_window_buffer_samples_timestamp_V_2_3_d0 = sample_period_samples_3_timestamp_V_load_2_reg_9133;
+assign zext_ln54_4_fu_7946_p1 = or_ln54_2_fu_7941_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_4_d0 = sample_period_samples_4_timestamp_V_load_2_reg_9138;
+assign zext_ln54_50_fu_8768_p1 = or_ln54_28_fu_8763_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_5_d0 = sample_period_samples_5_timestamp_V_load_2_reg_9143;
+assign zext_ln54_51_fu_8778_p1 = or_ln54_29_fu_8773_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_6_d0 = sample_period_samples_6_timestamp_V_load_2_reg_9148;
+assign zext_ln54_52_fu_8788_p1 = or_ln54_30_fu_8783_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_7_d0 = sample_period_samples_7_timestamp_V_load_2_reg_9153;
+assign zext_ln54_53_fu_8798_p1 = or_ln54_31_fu_8793_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_8_d0 = sample_period_samples_8_timestamp_V_load_2_reg_9158;
+assign zext_ln54_54_fu_8808_p1 = or_ln54_32_fu_8803_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_2_9_d0 = sample_period_samples_9_timestamp_V_load_2_reg_9163;
+assign zext_ln54_55_fu_8818_p1 = or_ln54_33_fu_8813_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_0_d0 = sample_period_samples_0_timestamp_V_load_3_reg_9238;
+assign zext_ln54_56_fu_8828_p1 = or_ln54_34_fu_8823_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_10_d0 = sample_period_samples_10_timestamp_V_load_3_reg_9288;
+assign zext_ln54_57_fu_8838_p1 = or_ln54_35_fu_8833_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_11_d0 = sample_period_samples_11_timestamp_V_load_3_reg_9293;
+assign zext_ln54_58_fu_8848_p1 = or_ln54_36_fu_8843_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_1_d0 = sample_period_samples_1_timestamp_V_load_3_reg_9243;
+assign zext_ln54_59_fu_8858_p1 = or_ln54_37_fu_8853_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_2_d0 = sample_period_samples_2_timestamp_V_load_3_reg_9248;
+assign zext_ln54_5_fu_7956_p1 = or_ln54_3_fu_7951_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_3_d0 = sample_period_samples_3_timestamp_V_load_3_reg_9253;
+assign zext_ln54_60_fu_8868_p1 = or_ln54_38_fu_8863_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_4_d0 = sample_period_samples_4_timestamp_V_load_3_reg_9258;
+assign zext_ln54_61_fu_8873_p1 = sub_ln54_5_reg_11649;
 
-assign sliding_window_buffer_samples_timestamp_V_3_5_d0 = sample_period_samples_5_timestamp_V_load_3_reg_9263;
+assign zext_ln54_62_fu_8882_p1 = or_ln54_40_fu_8877_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_6_d0 = sample_period_samples_6_timestamp_V_load_3_reg_9268;
+assign zext_ln54_63_fu_8892_p1 = or_ln54_41_fu_8887_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_7_d0 = sample_period_samples_7_timestamp_V_load_3_reg_9273;
+assign zext_ln54_64_fu_8902_p1 = or_ln54_42_fu_8897_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_8_d0 = sample_period_samples_8_timestamp_V_load_3_reg_9278;
+assign zext_ln54_65_fu_8912_p1 = add_ln54_20_fu_8907_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_3_9_d0 = sample_period_samples_9_timestamp_V_load_3_reg_9283;
+assign zext_ln54_66_fu_8922_p1 = add_ln54_21_fu_8917_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_0_d0 = sample_period_samples_0_timestamp_V_load_4_reg_9598;
+assign zext_ln54_67_fu_8932_p1 = add_ln54_22_fu_8927_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_10_d0 = sample_period_samples_10_timestamp_V_load_4_reg_9648;
+assign zext_ln54_68_fu_8942_p1 = add_ln54_23_fu_8937_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_11_d0 = sample_period_samples_11_timestamp_V_load_4_reg_9653;
+assign zext_ln54_69_fu_8952_p1 = add_ln54_24_fu_8947_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_1_d0 = sample_period_samples_1_timestamp_V_load_4_reg_9603;
+assign zext_ln54_6_fu_7966_p1 = or_ln54_4_fu_7961_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_2_d0 = sample_period_samples_2_timestamp_V_load_4_reg_9608;
+assign zext_ln54_70_fu_8962_p1 = add_ln54_25_fu_8957_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_3_d0 = sample_period_samples_3_timestamp_V_load_4_reg_9613;
+assign zext_ln54_71_fu_8972_p1 = add_ln54_26_fu_8967_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_4_d0 = sample_period_samples_4_timestamp_V_load_4_reg_9618;
+assign zext_ln54_72_fu_8982_p1 = add_ln54_27_fu_8977_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_5_d0 = sample_period_samples_5_timestamp_V_load_4_reg_9623;
+assign zext_ln54_73_fu_8987_p1 = sub_ln54_6_reg_11665;
 
-assign sliding_window_buffer_samples_timestamp_V_4_6_d0 = sample_period_samples_6_timestamp_V_load_4_reg_9628;
+assign zext_ln54_74_fu_8996_p1 = or_ln54_44_fu_8991_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_7_d0 = sample_period_samples_7_timestamp_V_load_4_reg_9633;
+assign zext_ln54_75_fu_9006_p1 = or_ln54_45_fu_9001_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_8_d0 = sample_period_samples_8_timestamp_V_load_4_reg_9638;
+assign zext_ln54_76_fu_9016_p1 = or_ln54_46_fu_9011_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_4_9_d0 = sample_period_samples_9_timestamp_V_load_4_reg_9643;
+assign zext_ln54_77_fu_9026_p1 = or_ln54_47_fu_9021_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_0_d0 = sample_period_samples_0_timestamp_V_load_5_reg_9718;
+assign zext_ln54_78_fu_9036_p1 = or_ln54_48_fu_9031_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_10_d0 = sample_period_samples_10_timestamp_V_load_5_reg_9768;
+assign zext_ln54_79_fu_9046_p1 = or_ln54_49_fu_9041_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_11_d0 = sample_period_samples_11_timestamp_V_load_5_reg_9773;
+assign zext_ln54_7_fu_7976_p1 = or_ln54_5_fu_7971_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_1_d0 = sample_period_samples_1_timestamp_V_load_5_reg_9723;
+assign zext_ln54_80_fu_9056_p1 = or_ln54_50_fu_9051_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_2_d0 = sample_period_samples_2_timestamp_V_load_5_reg_9728;
+assign zext_ln54_81_fu_9066_p1 = add_ln54_28_fu_9061_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_3_d0 = sample_period_samples_3_timestamp_V_load_5_reg_9733;
+assign zext_ln54_82_fu_9076_p1 = add_ln54_29_fu_9071_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_4_d0 = sample_period_samples_4_timestamp_V_load_5_reg_9738;
+assign zext_ln54_83_fu_9086_p1 = add_ln54_30_fu_9081_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_5_d0 = sample_period_samples_5_timestamp_V_load_5_reg_9743;
+assign zext_ln54_84_fu_9096_p1 = add_ln54_31_fu_9091_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_6_d0 = sample_period_samples_6_timestamp_V_load_5_reg_9748;
+assign zext_ln54_85_fu_9101_p1 = sub_ln54_7_reg_11681;
 
-assign sliding_window_buffer_samples_timestamp_V_5_7_d0 = sample_period_samples_7_timestamp_V_load_5_reg_9753;
+assign zext_ln54_86_fu_9110_p1 = or_ln54_52_fu_9105_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_8_d0 = sample_period_samples_8_timestamp_V_load_5_reg_9758;
+assign zext_ln54_87_fu_9120_p1 = or_ln54_53_fu_9115_p2;
 
-assign sliding_window_buffer_samples_timestamp_V_5_9_d0 = sample_period_samples_9_timestamp_V_load_5_reg_9763;
+assign zext_ln54_88_fu_9130_p1 = or_ln54_54_fu_9125_p2;
 
-assign trunc_ln61_fu_7861_p1 = grp_fu_7653_p2[5:0];
+assign zext_ln54_89_fu_9140_p1 = add_ln54_32_fu_9135_p2;
 
-assign trunc_ln75_fu_7909_p1 = new_front_ptr_reg_10273[4:0];
+assign zext_ln54_8_fu_7986_p1 = or_ln54_6_fu_7981_p2;
 
-assign trunc_ln87_fu_7349_p1 = ap_phi_mux_i_phi_fu_7318_p4[2:0];
+assign zext_ln54_90_fu_9150_p1 = add_ln54_33_fu_9145_p2;
 
-assign zext_ln19_fu_7595_p1 = i_1_reg_7326;
+assign zext_ln54_91_fu_9160_p1 = add_ln54_34_fu_9155_p2;
 
-assign zext_ln54_fu_7659_p0 = sliding_window_front_ptr_s_i;
+assign zext_ln54_92_fu_9170_p1 = add_ln54_35_fu_9165_p2;
 
-assign zext_ln54_fu_7659_p1 = $unsigned(zext_ln54_fu_7659_p0);
+assign zext_ln54_93_fu_9180_p1 = add_ln54_36_fu_9175_p2;
 
-assign zext_ln75_fu_7912_p1 = trunc_ln75_fu_7909_p1;
+assign zext_ln54_94_fu_9190_p1 = add_ln54_37_fu_9185_p2;
 
-assign zext_ln87_fu_7353_p1 = trunc_ln87_fu_7349_p1;
+assign zext_ln54_95_fu_9200_p1 = add_ln54_38_fu_9195_p2;
+
+assign zext_ln54_96_fu_9210_p1 = add_ln54_39_fu_9205_p2;
+
+assign zext_ln54_9_fu_7996_p1 = or_ln54_7_fu_7991_p2;
+
+assign zext_ln54_fu_8186_p1 = tmp_reg_11580;
+
+assign zext_ln75_10_fu_7098_p1 = or_ln75_7_fu_7093_p2;
+
+assign zext_ln75_11_fu_7108_p1 = or_ln75_8_fu_7103_p2;
+
+assign zext_ln75_12_fu_7118_p1 = or_ln75_9_fu_7113_p2;
+
+assign zext_ln75_13_fu_7128_p1 = or_ln75_10_fu_7123_p2;
+
+assign zext_ln75_14_fu_7133_p1 = sub_ln75_1_reg_11468;
+
+assign zext_ln75_15_fu_7142_p1 = or_ln75_12_fu_7137_p2;
+
+assign zext_ln75_16_fu_7152_p1 = or_ln75_13_fu_7147_p2;
+
+assign zext_ln75_17_fu_7162_p1 = or_ln75_14_fu_7157_p2;
+
+assign zext_ln75_18_fu_7172_p1 = add_ln75_fu_7167_p2;
+
+assign zext_ln75_19_fu_7182_p1 = add_ln75_1_fu_7177_p2;
+
+assign zext_ln75_1_fu_6630_p1 = tmp_11_fu_6622_p3;
+
+assign zext_ln75_20_fu_7192_p1 = add_ln75_2_fu_7187_p2;
+
+assign zext_ln75_21_fu_7202_p1 = add_ln75_3_fu_7197_p2;
+
+assign zext_ln75_22_fu_7212_p1 = add_ln75_4_fu_7207_p2;
+
+assign zext_ln75_23_fu_7222_p1 = add_ln75_5_fu_7217_p2;
+
+assign zext_ln75_24_fu_7232_p1 = add_ln75_6_fu_7227_p2;
+
+assign zext_ln75_25_fu_7242_p1 = add_ln75_7_fu_7237_p2;
+
+assign zext_ln75_26_fu_7247_p1 = sub_ln75_2_reg_11484;
+
+assign zext_ln75_27_fu_7256_p1 = or_ln75_16_fu_7251_p2;
+
+assign zext_ln75_28_fu_7266_p1 = or_ln75_17_fu_7261_p2;
+
+assign zext_ln75_29_fu_7276_p1 = or_ln75_18_fu_7271_p2;
+
+assign zext_ln75_2_fu_6640_p1 = sub_ln75_fu_6634_p2;
+
+assign zext_ln75_30_fu_7286_p1 = or_ln75_19_fu_7281_p2;
+
+assign zext_ln75_31_fu_7296_p1 = or_ln75_20_fu_7291_p2;
+
+assign zext_ln75_32_fu_7306_p1 = or_ln75_21_fu_7301_p2;
+
+assign zext_ln75_33_fu_7316_p1 = or_ln75_22_fu_7311_p2;
+
+assign zext_ln75_34_fu_7326_p1 = add_ln75_8_fu_7321_p2;
+
+assign zext_ln75_35_fu_7336_p1 = add_ln75_9_fu_7331_p2;
+
+assign zext_ln75_36_fu_7346_p1 = add_ln75_10_fu_7341_p2;
+
+assign zext_ln75_37_fu_7356_p1 = add_ln75_11_fu_7351_p2;
+
+assign zext_ln75_38_fu_7361_p1 = sub_ln75_3_reg_11500;
+
+assign zext_ln75_39_fu_7370_p1 = or_ln75_24_fu_7365_p2;
+
+assign zext_ln75_3_fu_6651_p1 = or_ln75_fu_6645_p2;
+
+assign zext_ln75_40_fu_7380_p1 = or_ln75_25_fu_7375_p2;
+
+assign zext_ln75_41_fu_7390_p1 = or_ln75_26_fu_7385_p2;
+
+assign zext_ln75_42_fu_7400_p1 = add_ln75_12_fu_7395_p2;
+
+assign zext_ln75_43_fu_7410_p1 = add_ln75_13_fu_7405_p2;
+
+assign zext_ln75_44_fu_7420_p1 = add_ln75_14_fu_7415_p2;
+
+assign zext_ln75_45_fu_7430_p1 = add_ln75_15_fu_7425_p2;
+
+assign zext_ln75_46_fu_7440_p1 = add_ln75_16_fu_7435_p2;
+
+assign zext_ln75_47_fu_7450_p1 = add_ln75_17_fu_7445_p2;
+
+assign zext_ln75_48_fu_7460_p1 = add_ln75_18_fu_7455_p2;
+
+assign zext_ln75_49_fu_7470_p1 = add_ln75_19_fu_7465_p2;
+
+assign zext_ln75_4_fu_6720_p1 = or_ln75_1_fu_6715_p2;
+
+assign zext_ln75_50_fu_7475_p1 = sub_ln75_4_reg_11516;
+
+assign zext_ln75_51_fu_7484_p1 = or_ln75_28_fu_7479_p2;
+
+assign zext_ln75_52_fu_7494_p1 = or_ln75_29_fu_7489_p2;
+
+assign zext_ln75_53_fu_7504_p1 = or_ln75_30_fu_7499_p2;
+
+assign zext_ln75_54_fu_7514_p1 = or_ln75_31_fu_7509_p2;
+
+assign zext_ln75_55_fu_7524_p1 = or_ln75_32_fu_7519_p2;
+
+assign zext_ln75_56_fu_7534_p1 = or_ln75_33_fu_7529_p2;
+
+assign zext_ln75_57_fu_7544_p1 = or_ln75_34_fu_7539_p2;
+
+assign zext_ln75_58_fu_7554_p1 = or_ln75_35_fu_7549_p2;
+
+assign zext_ln75_59_fu_7564_p1 = or_ln75_36_fu_7559_p2;
+
+assign zext_ln75_5_fu_6730_p1 = or_ln75_2_fu_6725_p2;
+
+assign zext_ln75_60_fu_7574_p1 = or_ln75_37_fu_7569_p2;
+
+assign zext_ln75_61_fu_7584_p1 = or_ln75_38_fu_7579_p2;
+
+assign zext_ln75_62_fu_7589_p1 = sub_ln75_5_reg_11532;
+
+assign zext_ln75_63_fu_7598_p1 = or_ln75_40_fu_7593_p2;
+
+assign zext_ln75_64_fu_7608_p1 = or_ln75_41_fu_7603_p2;
+
+assign zext_ln75_65_fu_7618_p1 = or_ln75_42_fu_7613_p2;
+
+assign zext_ln75_66_fu_7628_p1 = add_ln75_20_fu_7623_p2;
+
+assign zext_ln75_67_fu_7638_p1 = add_ln75_21_fu_7633_p2;
+
+assign zext_ln75_68_fu_7648_p1 = add_ln75_22_fu_7643_p2;
+
+assign zext_ln75_69_fu_7658_p1 = add_ln75_23_fu_7653_p2;
+
+assign zext_ln75_6_fu_6846_p1 = or_ln75_3_fu_6841_p2;
+
+assign zext_ln75_70_fu_7668_p1 = add_ln75_24_fu_7663_p2;
+
+assign zext_ln75_71_fu_7678_p1 = add_ln75_25_fu_7673_p2;
+
+assign zext_ln75_72_fu_7688_p1 = add_ln75_26_fu_7683_p2;
+
+assign zext_ln75_73_fu_7698_p1 = add_ln75_27_fu_7693_p2;
+
+assign zext_ln75_74_fu_7703_p1 = sub_ln75_6_reg_11548;
+
+assign zext_ln75_75_fu_7712_p1 = or_ln75_44_fu_7707_p2;
+
+assign zext_ln75_76_fu_7722_p1 = or_ln75_45_fu_7717_p2;
+
+assign zext_ln75_77_fu_7732_p1 = or_ln75_46_fu_7727_p2;
+
+assign zext_ln75_78_fu_7742_p1 = or_ln75_47_fu_7737_p2;
+
+assign zext_ln75_79_fu_7752_p1 = or_ln75_48_fu_7747_p2;
+
+assign zext_ln75_7_fu_6856_p1 = or_ln75_4_fu_6851_p2;
+
+assign zext_ln75_80_fu_7762_p1 = or_ln75_49_fu_7757_p2;
+
+assign zext_ln75_81_fu_7772_p1 = or_ln75_50_fu_7767_p2;
+
+assign zext_ln75_82_fu_7782_p1 = add_ln75_28_fu_7777_p2;
+
+assign zext_ln75_83_fu_7792_p1 = add_ln75_29_fu_7787_p2;
+
+assign zext_ln75_84_fu_7802_p1 = add_ln75_30_fu_7797_p2;
+
+assign zext_ln75_85_fu_7812_p1 = add_ln75_31_fu_7807_p2;
+
+assign zext_ln75_86_fu_7817_p1 = sub_ln75_7_reg_11564;
+
+assign zext_ln75_87_fu_7826_p1 = or_ln75_52_fu_7821_p2;
+
+assign zext_ln75_88_fu_7836_p1 = or_ln75_53_fu_7831_p2;
+
+assign zext_ln75_89_fu_7846_p1 = or_ln75_54_fu_7841_p2;
+
+assign zext_ln75_8_fu_6972_p1 = or_ln75_5_fu_6967_p2;
+
+assign zext_ln75_90_fu_7856_p1 = add_ln75_32_fu_7851_p2;
+
+assign zext_ln75_91_fu_7866_p1 = add_ln75_33_fu_7861_p2;
+
+assign zext_ln75_92_fu_7876_p1 = add_ln75_34_fu_7871_p2;
+
+assign zext_ln75_93_fu_7886_p1 = add_ln75_35_fu_7881_p2;
+
+assign zext_ln75_94_fu_7896_p1 = add_ln75_36_fu_7891_p2;
+
+assign zext_ln75_95_fu_7906_p1 = add_ln75_37_fu_7901_p2;
+
+assign zext_ln75_96_fu_7916_p1 = add_ln75_38_fu_7911_p2;
+
+assign zext_ln75_97_fu_7926_p1 = add_ln75_39_fu_7921_p2;
+
+assign zext_ln75_9_fu_6982_p1 = or_ln75_6_fu_6977_p2;
+
+assign zext_ln75_fu_6595_p1 = tmp_10_fu_6587_p3;
+
+assign zext_ln95_fu_6188_p1 = trunc_ln95_fu_6184_p1;
 
 always @ (posedge ap_clk) begin
-    zext_ln19_reg_8187[63:4] <= 60'b000000000000000000000000000000000000000000000000000000000000;
+    zext_ln19_reg_9295[63:4] <= 60'b000000000000000000000000000000000000000000000000000000000000;
+    sub_ln54_reg_11407[4:0] <= 5'b00000;
+    tmp_10_reg_11444[2:0] <= 3'b000;
+    sub_ln75_reg_11454[4:0] <= 5'b00000;
+    sub_ln75_1_reg_11468[4:0] <= 5'b01100;
+    sub_ln75_2_reg_11484[4:0] <= 5'b11000;
+    sub_ln75_3_reg_11500[4:0] <= 5'b00100;
+    sub_ln75_4_reg_11516[4:0] <= 5'b10000;
+    sub_ln75_5_reg_11532[4:0] <= 5'b11100;
+    sub_ln75_6_reg_11548[4:0] <= 5'b01000;
+    sub_ln75_7_reg_11564[4:0] <= 5'b10100;
+    tmp_reg_11580[2:0] <= 3'b000;
+    sub_ln54_1_reg_11591[4:0] <= 5'b01100;
+    sub_ln54_2_reg_11605[4:0] <= 5'b11000;
+    sub_ln54_3_reg_11619[4:0] <= 5'b00100;
+    sub_ln54_4_reg_11633[4:0] <= 5'b10000;
+    sub_ln54_5_reg_11649[4:0] <= 5'b11100;
+    sub_ln54_6_reg_11665[4:0] <= 5'b01000;
+    sub_ln54_7_reg_11681[4:0] <= 5'b10100;
 end
 
 endmodule //LLSSineReconstruction_loadSlidingWindow

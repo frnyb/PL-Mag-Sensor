@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'loadData'" level="0">
-<item name = "Date">Sun May  8 11:36:58 2022
+<item name = "Date">Mon May  9 14:47:42 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">LLS_SineReconstructor</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.170 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.423 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3654, 3654, 36.540 us, 36.540 us, 3654, 3654, none</column>
+<column name="">2274, 2274, 22.740 us, 22.740 us, 2274, 2274, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- load_data_periods_loop">3640, 3640, 182, -, -, 20, no</column>
+<column name="- load_data_periods_loop">2260, 2260, 226, -, -, 10, no</column>
 <column name=" + load_data_sample_loop">176, 176, 22, -, -, 8, no</column>
 <column name="  ++ load_data_channels_loop">13, 13, 3, 1, 1, 12, yes</column>
 <column name="- load_data_min_max_diff_loop">11, 11, 1, 1, 1, 11, yes</column>

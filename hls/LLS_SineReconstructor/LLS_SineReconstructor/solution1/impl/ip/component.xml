@@ -474,7 +474,7 @@
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>buffer_out_address0</spirit:name>
+      <spirit:name>sines_buffer_out_address0</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
       <spirit:master/>
@@ -484,13 +484,13 @@
             <spirit:name>DATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>buffer_out_address0</spirit:name>
+            <spirit:name>sines_buffer_out_address0</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>buffer_out_d0</spirit:name>
+      <spirit:name>sines_buffer_out_d0</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
       <spirit:master/>
@@ -500,13 +500,13 @@
             <spirit:name>DATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>buffer_out_d0</spirit:name>
+            <spirit:name>sines_buffer_out_d0</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>buffer_out_q0</spirit:name>
+      <spirit:name>sines_buffer_out_q0</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -516,7 +516,55 @@
             <spirit:name>DATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>buffer_out_q0</spirit:name>
+            <spirit:name>sines_buffer_out_q0</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>samples_buffer_out_address0</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>samples_buffer_out_address0</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>samples_buffer_out_d0</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>samples_buffer_out_d0</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>samples_buffer_out_q0</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>samples_buffer_out_q0</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
@@ -539,7 +587,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>28d76a8e</spirit:value>
+            <spirit:value>91ad491a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -558,7 +606,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7ab54176</spirit:value>
+            <spirit:value>e6dcfb16</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -577,7 +625,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8aaf4257</spirit:value>
+            <spirit:value>903abcc2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -596,7 +644,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bc542e4c</spirit:value>
+            <spirit:value>141b829a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -809,7 +857,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>buffer_out_ce0</spirit:name>
+        <spirit:name>sines_buffer_out_ce0</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -822,7 +870,33 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>buffer_out_we0</spirit:name>
+        <spirit:name>sines_buffer_out_we0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>samples_buffer_out_ce0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>samples_buffer_out_we0</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1321,7 +1395,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>buffer_out_address0</spirit:name>
+        <spirit:name>sines_buffer_out_address0</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -1338,7 +1412,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>buffer_out_d0</spirit:name>
+        <spirit:name>sines_buffer_out_d0</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -1355,7 +1429,58 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>buffer_out_q0</spirit:name>
+        <spirit:name>sines_buffer_out_q0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>samples_buffer_out_address0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>samples_buffer_out_d0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>samples_buffer_out_q0</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -1377,7 +1502,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dadd_3_no_dsp_64.v</spirit:name>
+        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dadddsub_3_no_dsp_64.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1417,21 +1542,9 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dsub_3_no_dsp_64.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>constraints/LLSSineReconstruction_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_A_i_V_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_A_i_V_0_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_atan2_cordic_float_s.v</spirit:name>
@@ -1450,23 +1563,11 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_calc_converge_ap_fixed_64_21_0_3_0_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_calc_converge.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_computeFirstChannel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_computeFirstChannel_x_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_computeLeastSquaresSolution_160_3_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_computeLeastSquaresSolution_160_3_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_computeLeastSquaresSolution.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1474,7 +1575,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_dadd_64ns_64ns_64_5_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_computeRemainingChannels_channels.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_dadddsub_64ns_64ns_64_5_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1494,10 +1599,6 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_dsub_64ns_64ns_64_5_no_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_fcmp_32ns_32ns_1_2_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1514,15 +1615,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w64_d2_S.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w60_d2_S.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w64_d2_S_x.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w60_d2_S_x.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w64_d16_S.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w60_d16_S.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1540,14 +1641,6 @@
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_generic_sincos_float_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_generic_sincos_float_s_ref_4oPi_table_100_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_generic_sincos_float_s_ref_4oPi_table_100_V_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_generic_sincos_float_s_second_order_float_cos_K0_V.v</spirit:name>
@@ -1598,11 +1691,11 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_gesvj_ap_fixed_64_21_0_3_0_160_3_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_gesvj.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_gesvj_ap_fixed_64_21_0_3_0_160_3_2_2_s_AUS_accu_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_gesvj_AUS_accu_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1618,23 +1711,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_jacobi_rotation_2x2_ap_fixed_64_21_0_3_0_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_jacobi_rotation_2x2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_loadData.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_loadData_mag_samples_sample_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_loadData_mag_samples_timestamp_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_loadData_sample_period_samples_0_sample_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1662,35 +1743,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mac_muladd_8ns_2ns_2ns_9_4_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matA_V_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matA_V_0_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matU_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matU_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matV_V_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matV_V_0_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_2ns_2ns_4_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_7ns_2ns_9_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1714,23 +1767,23 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_63ns_18ns_80_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_59ns_14ns_72_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_64s_53ns_107_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_60s_51ns_99_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_64s_55ns_107_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_60s_60s_99_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_64s_64s_107_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_60s_60s_120_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_64s_64s_128_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_60s_127ns_177_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1774,68 +1827,60 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_acc_V_0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp0_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp0_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp1_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp1_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp2_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp2_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_to_2cols.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_to_2cols_entry508.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_to_2cols_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_entry57.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_V_2cols.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_to_2cols_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_scaled_fixed2ieee_29_1_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_V_2cols_ap_fixed_64_21_0_3_0_3_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sdiv_99ns_60s_60_103_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_S_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_S_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sdiv_107ns_64s_64_111_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sdiv_107ns_64s_64_111_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sigma_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sigma_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_c.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_out_bits_V.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_ref_4oPi_table_100_V.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_ref_4oPi_table_100_V_rom.dat</spirit:name>
+        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_second_order_float_sin_cos_K0_V.v</spirit:name>
@@ -1862,15 +1907,43 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_3.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_A_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_8.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_b_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_9.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_11.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_12.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_14.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_16_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_16_2_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_16_14_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_S_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1878,92 +1951,76 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_sample_V_0_0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_x_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_sample_V_0_0_ram.dat</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_sample_V.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_sample_V_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0_0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0_0_ram.dat</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_srem_6ns_6ns_6_10_seq_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_srem_5ns_5ns_5_9_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_srem_7ns_6ns_6_11_seq_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_srem_6ns_5ns_5_10_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_start_for_calc_converge_ap_fixed_64_21_0_3_0_U0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_start_for_calc_converge_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_start_for_jacobi_rotation_2x2_ap_fixed_64_21_0_3_0_U0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_start_for_jacobi_rotation_2x2_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_svd_and_conv_ap_fixed_64_21_0_3_0_entry61.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_svd_and_conv.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_svd_and_conv_ap_fixed_64_21_0_3_0_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_svd_and_conv_entry512.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_U_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_update_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_U_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_update_A_ap_fixed_64_21_0_3_0_160_3_2_80_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_update_AV.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_update_AV_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_entry65.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_update_AV_entry516.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_update_AV_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_update_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_update_V_ap_fixed_64_21_0_3_0_3_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_writeSamplesToRAM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_UT_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_writeSamplesToRAM_sample_sample_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_UT_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_V_i_V_0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_writeSamplesToRAM_sample_timestamp_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_V_i_V_0_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_V_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_V_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction.v</spirit:name>
@@ -1983,15 +2040,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_A_i_V_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_A_i_V_0_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_atan2_cordic_float_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -2011,27 +2059,12 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_calc_converge_ap_fixed_64_21_0_3_0_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_calc_converge.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_computeFirstChannel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_computeFirstChannel_x_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_computeLeastSquaresSolution_160_3_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_computeLeastSquaresSolution_160_3_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_computeLeastSquaresSolution.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2041,7 +2074,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_dadd_64ns_64ns_64_5_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_computeRemainingChannels_channels.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_dadddsub_64ns_64ns_64_5_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2066,11 +2104,6 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_dsub_64ns_64ns_64_5_no_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_fcmp_32ns_32ns_1_2_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -2091,17 +2124,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w64_d2_S.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w60_d2_S.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w64_d2_S_x.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w60_d2_S_x.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w64_d16_S.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_fifo_w60_d16_S.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2124,15 +2157,6 @@
         <spirit:name>hdl/verilog/LLSSineReconstruction_generic_sincos_float_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_generic_sincos_float_s_ref_4oPi_table_100_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_generic_sincos_float_s_ref_4oPi_table_100_V_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_generic_sincos_float_s_second_order_float_cos_K0_V.v</spirit:name>
@@ -2189,12 +2213,12 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_gesvj_ap_fixed_64_21_0_3_0_160_3_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_gesvj.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_gesvj_ap_fixed_64_21_0_3_0_160_3_2_2_s_AUS_accu_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_gesvj_AUS_accu_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2214,27 +2238,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_jacobi_rotation_2x2_ap_fixed_64_21_0_3_0_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_jacobi_rotation_2x2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_loadData.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_loadData_mag_samples_sample_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_loadData_mag_samples_timestamp_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_loadData_sample_period_samples_0_sample_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2269,39 +2278,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mac_muladd_8ns_2ns_2ns_9_4_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matA_V_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matA_V_0_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matU_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matU_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matV_V_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_matV_V_0_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_2ns_2ns_4_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_7ns_2ns_9_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2331,27 +2308,27 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_63ns_18ns_80_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_59ns_14ns_72_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_64s_53ns_107_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_60s_51ns_99_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_64s_55ns_107_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_60s_60s_99_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_64s_64s_107_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_60s_60s_120_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_64s_64s_128_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_mul_60s_127ns_177_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2406,82 +2383,73 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_acc_V_0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp0_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp0_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp1_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp1_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp2_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp2_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_to_2cols.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_to_2cols_entry508.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_to_2cols_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_entry57.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_read_V_2cols.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_to_2cols_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_scaled_fixed2ieee_29_1_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_read_V_2cols_ap_fixed_64_21_0_3_0_3_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sdiv_99ns_60s_60_103_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_S_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_S_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sdiv_107ns_64s_64_111_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sdiv_107ns_64s_64_111_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sigma_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sigma_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_c.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_out_bits_V.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_ref_4oPi_table_100_V.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_ref_4oPi_table_100_V_rom.dat</spirit:name>
+        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction_sin_or_cos_float_s_second_order_float_sin_cos_K0_V.v</spirit:name>
@@ -2511,17 +2479,52 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_3.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_A_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_8.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_b_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_9.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_11.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_12.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_14.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_16_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_16_2_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_16_14_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_S_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2531,108 +2534,92 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_sample_V_0_0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sine_reconstructor_x_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_sample_V_0_0_ram.dat</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_sample_V.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_sample_V_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0_0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0_0_ram.dat</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_srem_6ns_6ns_6_10_seq_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_srem_5ns_5ns_5_9_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_srem_7ns_6ns_6_11_seq_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_srem_6ns_5ns_5_10_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_start_for_calc_converge_ap_fixed_64_21_0_3_0_U0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_start_for_calc_converge_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_start_for_jacobi_rotation_2x2_ap_fixed_64_21_0_3_0_U0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_start_for_jacobi_rotation_2x2_U0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_svd_and_conv_ap_fixed_64_21_0_3_0_entry61.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_svd_and_conv.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_svd_and_conv_ap_fixed_64_21_0_3_0_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_svd_and_conv_entry512.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_U_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_update_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_U_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_update_A_ap_fixed_64_21_0_3_0_160_3_2_80_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_update_AV.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_update_AV_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_entry65.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_update_AV_entry516.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_update_AV_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_update_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_update_V_ap_fixed_64_21_0_3_0_3_2_2_s.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_writeSamplesToRAM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_UT_V.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_writeSamplesToRAM_sample_sample_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_UT_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_V_i_V_0.v</spirit:name>
+        <spirit:name>hdl/verilog/LLSSineReconstruction_writeSamplesToRAM_sample_timestamp_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_V_i_V_0_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_V_V.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LLSSineReconstruction_V_V_ram.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/LLSSineReconstruction.v</spirit:name>
@@ -2640,7 +2627,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dadd_3_no_dsp_64.v</spirit:name>
+        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dadddsub_3_no_dsp_64.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2686,11 +2673,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/LLSSineReconstruction_ap_dsqrt_28_no_dsp_64.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dsub_3_no_dsp_64.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2708,7 +2690,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dadd_3_no_dsp_64.v</spirit:name>
+        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dadddsub_3_no_dsp_64.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2748,17 +2730,9 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dsub_3_no_dsp_64.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>constraints/LLSSineReconstruction_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_A_i_V_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_atan2_cordic_float_s.vhd</spirit:name>
@@ -2773,23 +2747,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_calc_converge_ap_fixed_64_21_0_3_0_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_calc_converge.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeFirstChannel.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeFirstChannel_x_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeLeastSquaresSolution_160_3_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeLeastSquaresSolution_160_3_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeLeastSquaresSolution.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2797,7 +2759,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_dadd_64ns_64ns_64_5_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeRemainingChannels_channels.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_dadddsub_64ns_64ns_64_5_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2817,10 +2783,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_dsub_64ns_64ns_64_5_no_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_fcmp_32ns_32ns_1_2_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -2837,15 +2799,15 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w64_d2_S.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w60_d2_S.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w64_d2_S_x.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w60_d2_S_x.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w64_d16_S.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w60_d16_S.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2862,10 +2824,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_generic_sincos_float_s.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_generic_sincos_float_s_ref_4oPi_table_100_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2893,31 +2851,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_gesvj_ap_fixed_64_21_0_3_0_160_3_2_2_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_gesvj.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_gesvj_ap_fixed_64_21_0_3_0_160_3_2_2_s_AUS_accu_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_gesvj_AUS_accu_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_jacobi_rotation_2x2_ap_fixed_64_21_0_3_0_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_jacobi_rotation_2x2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_loadData.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_loadData_mag_samples_sample_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_loadData_mag_samples_timestamp_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_loadData_sample_period_samples_0_sample_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2945,23 +2891,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mac_muladd_8ns_2ns_2ns_9_4_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_matA_V_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_matU_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_matV_V_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_2ns_2ns_4_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_7ns_2ns_9_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2985,23 +2915,23 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_63ns_18ns_80_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_59ns_14ns_72_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_64s_53ns_107_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_60s_51ns_99_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_64s_55ns_107_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_60s_60s_99_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_64s_64s_107_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_60s_60s_120_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_64s_64s_128_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_60s_127ns_177_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3045,59 +2975,55 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_acc_V_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp0_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp0_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp1_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp1_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp2_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp2_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_to_2cols.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_to_2cols_entry508.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_to_2cols_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_entry57.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_V_2cols.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_to_2cols_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_scaled_fixed2ieee_29_1_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_V_2cols_ap_fixed_64_21_0_3_0_3_2_2_s.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_S_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sdiv_107ns_64s_64_111_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sdiv_107ns_64s_64_111_seq_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sigma_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sdiv_99ns_60s_60_103_seq_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_sin_or_cos_float_s.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sin_or_cos_float_s_c.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sin_or_cos_float_s_out_bits_V.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sin_or_cos_float_s_ref_4oPi_table_100_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3113,15 +3039,43 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_5.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_A_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_8.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_b_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_9.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_11.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_12.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_14.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_16_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_16_2_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_16_14_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_S_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3129,73 +3083,73 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sliding_window_buffer_samples_sample_V_0_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_x_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sliding_window_buffer_samples_sample_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_srem_6ns_6ns_6_10_seq_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_srem_7ns_6ns_6_11_seq_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_srem_5ns_5ns_5_9_seq_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_start_for_calc_converge_ap_fixed_64_21_0_3_0_U0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_srem_6ns_5ns_5_10_seq_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_start_for_jacobi_rotation_2x2_ap_fixed_64_21_0_3_0_U0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_start_for_calc_converge_U0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_svd_and_conv_ap_fixed_64_21_0_3_0_entry61.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_start_for_jacobi_rotation_2x2_U0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_svd_and_conv_ap_fixed_64_21_0_3_0_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_svd_and_conv.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_U_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_svd_and_conv_entry512.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_A_ap_fixed_64_21_0_3_0_160_3_2_80_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_AV_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_entry65.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_AV.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_AV_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_AV_entry516.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_V_ap_fixed_64_21_0_3_0_3_2_2_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_UT_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_writeSamplesToRAM.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_V_i_V_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_writeSamplesToRAM_sample_sample_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_V_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_writeSamplesToRAM_sample_timestamp_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a3e84e51</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_53023b40</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -3211,11 +3165,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_A_i_V_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_atan2_cordic_float_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -3231,27 +3180,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_calc_converge_ap_fixed_64_21_0_3_0_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_calc_converge.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeFirstChannel.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeFirstChannel_x_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeLeastSquaresSolution_160_3_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeLeastSquaresSolution_160_3_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeLeastSquaresSolution.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3261,7 +3195,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_dadd_64ns_64ns_64_5_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_computeRemainingChannels_channels.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_dadddsub_64ns_64ns_64_5_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3286,11 +3225,6 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_dsub_64ns_64ns_64_5_no_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_fcmp_32ns_32ns_1_2_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -3311,17 +3245,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w64_d2_S.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w60_d2_S.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w64_d2_S_x.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w60_d2_S_x.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w64_d16_S.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_fifo_w60_d16_S.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3342,11 +3276,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_generic_sincos_float_s.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_generic_sincos_float_s_ref_4oPi_table_100_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3381,37 +3310,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_gesvj_ap_fixed_64_21_0_3_0_160_3_2_2_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_gesvj.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_gesvj_ap_fixed_64_21_0_3_0_160_3_2_2_s_AUS_accu_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_gesvj_AUS_accu_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_jacobi_rotation_2x2_ap_fixed_64_21_0_3_0_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_jacobi_rotation_2x2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_loadData.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_loadData_mag_samples_sample_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_loadData_mag_samples_timestamp_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_loadData_sample_period_samples_0_sample_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3446,27 +3360,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mac_muladd_8ns_2ns_2ns_9_4_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_matA_V_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_matU_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_matV_V_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_2ns_2ns_4_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_7ns_2ns_9_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3496,27 +3390,27 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_63ns_18ns_80_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_59ns_14ns_72_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_64s_53ns_107_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_60s_51ns_99_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_64s_55ns_107_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_60s_60s_99_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_64s_64s_107_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_60s_60s_120_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_64s_64s_128_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_mul_60s_127ns_177_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3571,72 +3465,67 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_acc_V_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp0_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp0_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp1_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp1_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_alpha_sum_tmp2_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_tmp2_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_to_2cols.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_and_gen_2x2_ap_fixed_64_21_0_3_0_160_3_2_80_s_alpha_sum_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_to_2cols_entry508.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_to_2cols_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_entry57.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_V_2cols.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_to_2cols_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_scaled_fixed2ieee_29_1_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_read_V_2cols_ap_fixed_64_21_0_3_0_3_2_2_s.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_S_V.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sdiv_107ns_64s_64_111_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sdiv_107ns_64s_64_111_seq_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sigma_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sdiv_99ns_60s_60_103_seq_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LLSSineReconstruction_sin_or_cos_float_s.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sin_or_cos_float_s_c.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sin_or_cos_float_s_out_bits_V.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sin_or_cos_float_s_ref_4oPi_table_100_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3656,17 +3545,52 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_5.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_A_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_8.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_b_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_9.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_11.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_12.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_14.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_16_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_16_2_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_16_14_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_S_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3676,82 +3600,82 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sliding_window_buffer_samples_sample_V_0_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sine_reconstructor_x_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sliding_window_buffer_samples_sample_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_srem_6ns_6ns_6_10_seq_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_sliding_window_buffer_samples_timestamp_V_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_srem_7ns_6ns_6_11_seq_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_srem_5ns_5ns_5_9_seq_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_start_for_calc_converge_ap_fixed_64_21_0_3_0_U0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_srem_6ns_5ns_5_10_seq_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_start_for_jacobi_rotation_2x2_ap_fixed_64_21_0_3_0_U0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_start_for_calc_converge_U0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_svd_and_conv_ap_fixed_64_21_0_3_0_entry61.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_start_for_jacobi_rotation_2x2_U0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_svd_and_conv_ap_fixed_64_21_0_3_0_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_svd_and_conv.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_U_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_svd_and_conv_entry512.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_A_ap_fixed_64_21_0_3_0_160_3_2_80_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_AV_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_entry65.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_AV.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_AV_ap_fixed_64_21_0_3_0_160_3_2_80_2_2_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_AV_entry516.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_V_ap_fixed_64_21_0_3_0_3_2_2_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_update_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_UT_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_writeSamplesToRAM.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_V_i_V_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_writeSamplesToRAM_sample_sample_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LLSSineReconstruction_V_V.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LLSSineReconstruction_writeSamplesToRAM_sample_timestamp_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3761,7 +3685,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dadd_3_no_dsp_64.v</spirit:name>
+        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dadddsub_3_no_dsp_64.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3807,11 +3731,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/LLSSineReconstruction_ap_dsqrt_28_no_dsp_64.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/LLSSineReconstruction_ap_dsub_3_no_dsp_64.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3878,7 +3797,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">34</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">83</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -3895,8 +3814,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>LLSSineReconstructor</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112495900</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-05-08T10:01:11Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112497516</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-05-09T12:56:32Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -3904,10 +3823,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="07da5fdb"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="988103db"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="4e7ff228"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="f335b1a9"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="dc6b2359"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="769f4968"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="241b3b1a"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="73e6d552"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

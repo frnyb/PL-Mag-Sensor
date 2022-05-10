@@ -182,27 +182,52 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>buffer_out_address0</name>
+        <name>samples_buffer_out_address0</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>buffer_out_ce0</name>
+        <name>samples_buffer_out_ce0</name>
         <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>buffer_out_d0</name>
+        <name>samples_buffer_out_d0</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>buffer_out_q0</name>
+        <name>samples_buffer_out_q0</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>buffer_out_we0</name>
+        <name>samples_buffer_out_we0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>sines_buffer_out_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>sines_buffer_out_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>sines_buffer_out_d0</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>sines_buffer_out_q0</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>sines_buffer_out_we0</name>
         <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
@@ -213,7 +238,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>34</latency>
+    <latency>83</latency>
     <II>x</II>
   </modelParameters>
 </AdditionalInfo>

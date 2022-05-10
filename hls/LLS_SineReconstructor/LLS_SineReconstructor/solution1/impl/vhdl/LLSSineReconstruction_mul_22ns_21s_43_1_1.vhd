@@ -7,14 +7,14 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 
-entity LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_3 is
+entity LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_5 is
 port (
     a: in std_logic_vector(22 - 1 downto 0);
     b: in std_logic_vector(21 - 1 downto 0);
     p: out std_logic_vector(43 - 1 downto 0));
 end entity;
 
-architecture behav of LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_3 is
+architecture behav of LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_5 is
     signal a_i : std_logic_vector(22 - 1 downto 0);
     signal b_i : std_logic_vector(21 - 1 downto 0);
 begin
@@ -39,7 +39,7 @@ entity LLSSineReconstruction_mul_22ns_21s_43_1_1 is
 end entity;
 
 architecture arch of LLSSineReconstruction_mul_22ns_21s_43_1_1 is
-    component LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_3 is
+    component LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_5 is
         port (
             a : IN STD_LOGIC_VECTOR;
             b : IN STD_LOGIC_VECTOR;
@@ -49,7 +49,7 @@ architecture arch of LLSSineReconstruction_mul_22ns_21s_43_1_1 is
 
 
 begin
-    LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_3_U :  component LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_3
+    LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_5_U :  component LLSSineReconstruction_mul_22ns_21s_43_1_1_Multiplier_5
     port map (
         a => din0,
         b => din1,

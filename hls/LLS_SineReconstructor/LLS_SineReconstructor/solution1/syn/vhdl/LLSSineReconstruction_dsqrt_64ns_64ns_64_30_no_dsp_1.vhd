@@ -7,7 +7,7 @@ use ieee.std_logic_1164.all;
 
 entity LLSSineReconstruction_dsqrt_64ns_64ns_64_30_no_dsp_1 is
     generic (
-        ID         : integer := 533;
+        ID         : integer := 200;
         NUM_STAGE  : integer := 30;
         din0_WIDTH : integer := 64;
         din1_WIDTH : integer := 64;

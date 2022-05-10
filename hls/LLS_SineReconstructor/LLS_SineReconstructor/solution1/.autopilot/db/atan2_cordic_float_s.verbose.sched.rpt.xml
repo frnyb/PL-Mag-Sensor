@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'atan2_cordic_float_s'" level="0">
-<item name = "Date">Sun May  8 11:37:12 2022
+<item name = "Date">Mon May  9 14:47:56 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">LLS_SineReconstructor</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 61, 10.000 ns, 0.610 us, 1, 61, none</column>
+<column name="">1, 102, 10.000 ns, 1.020 us, 1, 102, none</column>
 </table>
 </item>
 <item name = "Detail">

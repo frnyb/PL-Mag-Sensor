@@ -61,8 +61,13 @@
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>
-      <arg id="12" access_type="rw" src_name="buffer_out" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="25">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="buffer_out" hw_bitwidth="32" hw_size_or_depth="25">
+      <arg id="12" access_type="rw" src_name="sines_buffer_out" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="25">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="sines_buffer_out" hw_bitwidth="32" hw_size_or_depth="25">
+          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="13" access_type="rw" src_name="samples_buffer_out" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="961">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="samples_buffer_out" hw_bitwidth="32" hw_size_or_depth="961">
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>

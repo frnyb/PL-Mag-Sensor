@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'loadSlidingWindow'" level="0">
-<item name = "Date">Sun May  8 11:36:57 2022
+<item name = "Date">Mon May  9 14:47:41 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">LLS_SineReconstructor</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 4.563 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 4.149 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">32, 50, 0.320 us, 0.500 us, 32, 50, none</column>
+<column name="">79, 95, 0.790 us, 0.950 us, 79, 95, none</column>
 </table>
 </item>
 <item name = "Detail">

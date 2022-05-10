@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-  module LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_1(clk, rst, ce, a, b, p);
+  module LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_2(clk, rst, ce, a, b, p);
 input clk;
 input rst;
 input ce;
@@ -51,7 +51,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_1 LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_1_U(
+LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_2 LLSSineReconstruction_mul_mul_15ns_14ns_29_4_1_DSP48_2_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),
