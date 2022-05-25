@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Simple_SineReconstructor.cpp" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/Simple_SineReconstructor.cpp"/>
+    <originFiles name="Simple_SineReconstructor.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/Simple_SineReconstructor.h"/>
+    <originFiles name="cyclic_buffer.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h"/>
+    <originFiles name="sample.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h"/>
+    <originFiles name="sample_period.h" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

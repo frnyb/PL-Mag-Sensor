@@ -31,7 +31,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>3</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>8</bitwidth>
           </Value>
@@ -130,7 +130,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1006633088</coreId>
+              <coreId>2889284816</coreId>
             </Obj>
             <bitwidth>8</bitwidth>
           </Value>
@@ -161,7 +161,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
+                  <first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -181,7 +181,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1058223696</coreId>
+              <coreId>544434464</coreId>
             </Obj>
             <bitwidth>8</bitwidth>
           </Value>
@@ -215,7 +215,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
+                  <first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -269,7 +269,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
+                  <first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -289,7 +289,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -324,7 +324,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
+                  <first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -379,7 +379,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
+                  <first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -399,7 +399,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>2037588053</coreId>
+              <coreId>2889228328</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -444,7 +444,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>49</coreId>
+            <coreId>1869833586</coreId>
           </Obj>
           <node_objs>
             <count>5</count>

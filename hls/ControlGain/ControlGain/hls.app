@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="ControlGain" name="ControlGain">
+<project xmlns="com.autoesl.autopilot.project" name="ControlGain" top="ControlGain">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

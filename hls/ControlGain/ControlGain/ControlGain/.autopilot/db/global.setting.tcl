@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-i
 set SourceFiles {sc {} c ../../ControlGain.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/ControlGain.directive
+set DirectiveFile /vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/ControlGain.directive
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

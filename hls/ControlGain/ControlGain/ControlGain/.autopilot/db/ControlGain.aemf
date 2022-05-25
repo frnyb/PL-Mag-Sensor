@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1644929891309">
-  <ports id="1" name="gain_ref_in" type="PortType" originalName="gain_ref_in" coreId="3" bitwidth="8">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1653469880860">
+  <ports id="1" name="gain_ref_in" type="PortType" originalName="gain_ref_in" coreId="0" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="2" name="gain_ref_out" type="PortType" originalName="gain_ref_out" coreId="0" bitwidth="8" direction="DirOut">
@@ -9,7 +9,7 @@
   <ports id="3" name="gain_in" type="PortType" originalName="gain_in" coreId="0" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="gain_out" type="PortType" originalName="gain_out" coreId="1006633088" bitwidth="8" direction="DirOut">
+  <ports id="4" name="gain_out" type="PortType" originalName="gain_out" coreId="2889284816" bitwidth="8" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="24" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -19,28 +19,28 @@
   <edges id="34" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.3"/>
   <edges id="35" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
   <blocks id="21" name="ControlGain" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="gain_in_read" lineNumber="3" originalName="gain_in" fileName="ControlGain.cpp" fileDirectory=".." coreId="1058223696" contextFuncName="ControlGain" bitwidth="8" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ControlGain.cpp" linenumber="3" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="gain_in_read" lineNumber="3" originalName="gain_in" fileName="ControlGain.cpp" fileDirectory=".." coreId="544434464" contextFuncName="ControlGain" bitwidth="8" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="ControlGain.cpp" linenumber="3" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
       <dataInputObjs>gain_in</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="17" name="gain_ref_in_read" lineNumber="3" originalName="gain_ref_in" fileName="ControlGain.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="ControlGain" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ControlGain.cpp" linenumber="3" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
+      <inlineStackInfo fileName="ControlGain.cpp" linenumber="3" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
       <dataInputObjs>gain_ref_in</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="gain_ref_out_write_ln10" lineNumber="10" fileName="ControlGain.cpp" fileDirectory=".." coreId="49" contextFuncName="ControlGain" opcode="write" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ControlGain.cpp" linenumber="10" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="gain_ref_out_write_ln10" lineNumber="10" fileName="ControlGain.cpp" fileDirectory=".." coreId="132" contextFuncName="ControlGain" opcode="write" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="ControlGain.cpp" linenumber="10" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>gain_ref_out</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="19" name="gain_out_write_ln11" lineNumber="11" fileName="ControlGain.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="ControlGain" opcode="write" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ControlGain.cpp" linenumber="11" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
+      <inlineStackInfo fileName="ControlGain.cpp" linenumber="11" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>gain_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln12" lineNumber="12" fileName="ControlGain.cpp" fileDirectory=".." coreId="2037588053" contextFuncName="ControlGain" opcode="ret" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ControlGain.cpp" linenumber="12" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln12" lineNumber="12" fileName="ControlGain.cpp" fileDirectory=".." coreId="2889228328" contextFuncName="ControlGain" opcode="ret" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="ControlGain.cpp" linenumber="12" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain" functionName="ControlGain"/>
     </node_objs>
     <fileValidLineNumbers fileName="ControlGain.cpp">
       <validLinenumbers>3</validLinenumbers>

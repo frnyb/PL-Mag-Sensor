@@ -25,7 +25,7 @@
   </clockList>
   <config>
             
-    <config_export display_name="CPU_GainController" format="ip_catalog" library="PL-Mag-Sensor" output="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ControlGain.zip" rtl="vhdl" vendor="DIII"/>
+    <config_export display_name="CPU_GainController" format="ip_catalog" library="PL-Mag-Sensor" output="/home/ffn/Workspace/Projects/PL-Mag-Sensor/ip/ControlGain.zip" rtl="vhdl" vendor="DIII"/>
         
   </config>
   <UIConfigurations>
@@ -60,12 +60,13 @@
       </RTLs>
     </UIAutoSimConf>
   </UIConfigurations>
-  <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ControlGain.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
+  <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ffn/Workspace/Projects/PL-Mag-Sensor/ip/ControlGain.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
     <Format display_name="CPU_GainController" formatName="ip_catalog" library="PL-Mag-Sensor" vendor="DIII"/>
     <Format formatName="sysgen"/>
     <Format formatName="sysgen_ise"/>
     <Format formatName="syn_dcp"/>
     <Format formatName="pcore" use_netlist="none"/>
+    <Format formatName="xo"/>
   </ExportDesign>
   <Simulation>
     <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" enableDataflowProfiling="false" enableFifoSizing="false" name="cosim" optimizeCompile="false" random_stall="false" reduce_diskspace="false" setup="false" toolName="Auto" waveDebug="false">

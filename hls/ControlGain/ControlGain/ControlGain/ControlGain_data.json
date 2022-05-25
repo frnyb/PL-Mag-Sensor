@@ -83,7 +83,7 @@
       "config_export -display_name=CPU_GainController",
       "config_export -format=ip_catalog",
       "config_export -library=PL-Mag-Sensor",
-      "config_export -output=\/home\/ffn\/Nextcloud\/Workspace\/Projects\/PL-Mag-Sensor\/ip\/ControlGain.zip",
+      "config_export -output=\/home\/ffn\/Workspace\/Projects\/PL-Mag-Sensor\/ip\/ControlGain.zip",
       "config_export -rtl=vhdl",
       "config_export -vendor=DIII"
     ],
@@ -138,7 +138,7 @@
     "IpMisc": ["impl\/misc\/logo.png"],
     "DesignXml": ".autopilot\/db\/ControlGain.design.xml",
     "DebugDir": ".debug",
-    "ProtoInst": ["\/home\/ffn\/Nextcloud\/Workspace\/Projects\/PL-Mag-Sensor\/hls\/ControlGain\/ControlGain\/ControlGain\/.debug\/ControlGain.protoinst"]
+    "ProtoInst": ["\/vol\/Workspace\/Projects\/PL-Mag-Sensor\/hls\/ControlGain\/ControlGain\/ControlGain\/.debug\/ControlGain.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -613,7 +613,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-02-15 14:00:40 CET",
+    "Time": "2022-05-25 11:11:51 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }
