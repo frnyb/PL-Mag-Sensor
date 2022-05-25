@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: DIII:PL-Mag-Sensor:ADCControl:1.0
--- IP Revision: 2
+-- IP Revision: 3
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -57,7 +57,6 @@ ENTITY MagController_ADCControl_0_2 IS
   PORT (
     ch_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     clk : IN STD_LOGIC;
-    curr_gains : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     data_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     gpio_UnD : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     gpio_UnD_ref : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -65,6 +64,7 @@ ENTITY MagController_ADCControl_0_2 IS
     gpio_nCS_ref : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     irq_out : OUT STD_LOGIC;
     rst_n : IN STD_LOGIC;
+    sample_cnt_target : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
     spi_addr : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     spi_cs : OUT STD_LOGIC;
     spi_din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -81,7 +81,6 @@ ARCHITECTURE MagController_ADCControl_0_2_arch OF MagController_ADCControl_0_2 I
     PORT (
       ch_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       clk : IN STD_LOGIC;
-      curr_gains : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
       data_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       gpio_UnD : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       gpio_UnD_ref : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -89,6 +88,7 @@ ARCHITECTURE MagController_ADCControl_0_2_arch OF MagController_ADCControl_0_2 I
       gpio_nCS_ref : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       irq_out : OUT STD_LOGIC;
       rst_n : IN STD_LOGIC;
+      sample_cnt_target : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
       spi_addr : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       spi_cs : OUT STD_LOGIC;
       spi_din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -116,7 +116,6 @@ BEGIN
     PORT MAP (
       ch_out => ch_out,
       clk => clk,
-      curr_gains => curr_gains,
       data_out => data_out,
       gpio_UnD => gpio_UnD,
       gpio_UnD_ref => gpio_UnD_ref,
@@ -124,6 +123,7 @@ BEGIN
       gpio_nCS_ref => gpio_nCS_ref,
       irq_out => irq_out,
       rst_n => rst_n,
+      sample_cnt_target => sample_cnt_target,
       spi_addr => spi_addr,
       spi_cs => spi_cs,
       spi_din => spi_din,

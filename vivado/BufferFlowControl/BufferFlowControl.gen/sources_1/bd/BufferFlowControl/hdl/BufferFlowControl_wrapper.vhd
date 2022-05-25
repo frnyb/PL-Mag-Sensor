@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Tue Apr 19 09:02:12 2022
---Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
+--Date        : Wed May 25 12:31:09 2022
+--Host        : ffn-X299 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target BufferFlowControl_wrapper.bd
 --Design      : BufferFlowControl_wrapper
 --Purpose     : IP block netlist
@@ -43,8 +43,6 @@ entity BufferFlowControl_wrapper is
     bfr_rd_dout_8 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bfr_rd_dout_9 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
-    gain_curr : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    gain_ref : out STD_LOGIC_VECTOR ( 23 downto 0 );
     irq_out : out STD_LOGIC;
     n_samples_out : out STD_LOGIC_VECTOR ( 5 downto 0 );
     rst_n : in STD_LOGIC
@@ -59,8 +57,6 @@ architecture STRUCTURE of BufferFlowControl_wrapper is
     adc_irq : in STD_LOGIC;
     bfr_busy : out STD_LOGIC_VECTOR ( 11 downto 0 );
     clk : in STD_LOGIC;
-    gain_curr : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    gain_ref : out STD_LOGIC_VECTOR ( 23 downto 0 );
     bfr_hold : in STD_LOGIC_VECTOR ( 11 downto 0 );
     irq_out : out STD_LOGIC;
     n_samples_out : out STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -124,8 +120,6 @@ BufferFlowControl_i: component BufferFlowControl
       bfr_rd_dout_8(31 downto 0) => bfr_rd_dout_8(31 downto 0),
       bfr_rd_dout_9(31 downto 0) => bfr_rd_dout_9(31 downto 0),
       clk => clk,
-      gain_curr(23 downto 0) => gain_curr(23 downto 0),
-      gain_ref(23 downto 0) => gain_ref(23 downto 0),
       irq_out => irq_out,
       n_samples_out(5 downto 0) => n_samples_out(5 downto 0),
       rst_n => rst_n

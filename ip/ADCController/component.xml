@@ -85,15 +85,12 @@
         <spirit:language>VHDL</spirit:language>
         <spirit:modelName>ADCControl</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_xlconstant_1_1__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>17b5f899</spirit:value>
+            <spirit:value>745a0ed7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -104,15 +101,12 @@
         <spirit:language>VHDL</spirit:language>
         <spirit:modelName>ADCControl</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_xlconstant_1_1__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f4b71857</spirit:value>
+            <spirit:value>45a948b6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -156,23 +150,6 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>STD_LOGIC</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>curr_gains</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">23</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -291,6 +268,23 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>sample_cnt_target</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">19</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>spi_addr</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -386,11 +380,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/ADCControl_max_gain_0_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/ADCControl_counter_0_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
@@ -401,20 +390,9 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/max_gain.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/counter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ADCControl_xlconstant_0_0/ADCControl_xlconstant_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_xlconstant_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/ADC_controller.vhd</spirit:name>
@@ -431,27 +409,16 @@
       <spirit:file>
         <spirit:name>src/ADCControl.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_07be5f67</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_e53b4f76</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_xlconstant_1_1__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="xlconstant" xilinx:version="1.1">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>sim/ADCControl_max_gain_0_0.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>sim/ADCControl_counter_0_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
@@ -463,20 +430,9 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/max_gain.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/counter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ADCControl_xlconstant_0_0/ADCControl_xlconstant_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_xlconstant_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/ADC_controller.vhd</spirit:name>
@@ -487,17 +443,11 @@
         <spirit:name>sim/ADCControl.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_xlconstant_1_1__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="xlconstant" xilinx:version="1.1">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
@@ -526,24 +476,30 @@
       </xilinx:taxonomies>
       <xilinx:displayName>ADCControl_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-03-09T12:02:13Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-05-25T12:28:32Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dc5fa5c_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@739ea221_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a5ff564_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6232ce8d_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@35fa50ee_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@79fa17da_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d245545_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@39b76540_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74963c60_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@358249c0_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29213173_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cd6863f_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7972dd2d_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf404ba_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46678543_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a7f3ca3_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@280e5ecd_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@446103c1_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f0d2c7c_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21ab766f_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30de3260_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce7ef4b_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/ADCController</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f1914619"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="71085769"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="0b85bb9e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2af9c4b1"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="47387330"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="bee9a701"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

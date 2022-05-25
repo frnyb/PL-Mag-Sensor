@@ -11,9 +11,7 @@
       "variant": "true"
     },
     "design_tree": {
-      "max_gain": "",
       "counter_0": "",
-      "xlconstant_0": "",
       "ADC_controller": ""
     },
     "ports": {
@@ -125,36 +123,13 @@
       "irq_out": {
         "direction": "O"
       },
-      "curr_gains": {
+      "sample_cnt_target": {
         "direction": "I",
-        "left": "23",
+        "left": "19",
         "right": "0"
       }
     },
     "components": {
-      "max_gain": {
-        "vlnv": "xilinx.com:module_ref:max_gain:1.0",
-        "xci_name": "ADCControl_inst_0_max_gain_0",
-        "xci_path": "ip/ADCControl_inst_0_max_gain_0/ADCControl_inst_0_max_gain_0.xci",
-        "inst_hier_path": "max_gain",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "max_gain",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "gains": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "max_gain_out": {
-            "direction": "O",
-            "left": "5",
-            "right": "0"
-          }
-        }
-      },
       "counter_0": {
         "vlnv": "xilinx.com:module_ref:counter:1.0",
         "xci_name": "ADCControl_inst_0_counter_0_0",
@@ -216,20 +191,6 @@
                 "value_src": "constant"
               }
             }
-          }
-        }
-      },
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "ADCControl_inst_0_xlconstant_0_0",
-        "xci_path": "ip/ADCControl_inst_0_xlconstant_0_0/ADCControl_inst_0_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "33334"
-          },
-          "CONST_WIDTH": {
-            "value": "20"
           }
         }
       },
@@ -445,12 +406,6 @@
           "irq_out"
         ]
       },
-      "gains_0_1": {
-        "ports": [
-          "curr_gains",
-          "max_gain/gains"
-        ]
-      },
       "ADC_controller_t_sample_en": {
         "ports": [
           "ADC_controller/t_sample_en",
@@ -475,9 +430,9 @@
           "ADC_controller/t_sample_irq"
         ]
       },
-      "xlconstant_0_dout": {
+      "target_0_1": {
         "ports": [
-          "xlconstant_0/dout",
+          "sample_cnt_target",
           "counter_0/target"
         ]
       }

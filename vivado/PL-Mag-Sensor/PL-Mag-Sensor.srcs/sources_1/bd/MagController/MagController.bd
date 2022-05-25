@@ -1,20 +1,21 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7473F3B5D996AF36",
+      "boundary_crc": "0x3E17FF5D9DF84848",
       "device": "xczu3eg-sbva484-1-i",
       "gen_directory": "../../../../PL-Mag-Sensor.gen/sources_1/bd/MagController",
       "name": "MagController",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2"
+      "tool_version": "2020.2",
+      "validated": "true"
     },
     "design_tree": {
       "SPIMaster": "",
       "GainControl": "",
       "xlslice_0": "",
-      "ADCControl_0": "",
-      "BufferFlowControl_1": ""
+      "BufferFlowControl_1": "",
+      "ADCControl_0": ""
     },
     "ports": {
       "mag_nCS": {
@@ -27,15 +28,69 @@
       },
       "clk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "MagController_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       },
       "rst_n": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "mag_SCLK": {
         "type": "clk",
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "MagController_SPIMaster_0_0_spi_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "const_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "const_prop"
+          }
+        }
       },
       "mag_MOSI": {
         "direction": "O"
@@ -45,18 +100,24 @@
         "left": "11",
         "right": "0"
       },
-      "ch_out": {
+      "ADC_ch_out": {
         "direction": "O",
         "left": "3",
         "right": "0"
       },
-      "data_out": {
+      "ADC_data_out": {
         "direction": "O",
         "left": "11",
         "right": "0"
       },
       "irq_out": {
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default_prop"
+          }
+        }
       },
       "bfr_irq_out": {
         "direction": "O"
@@ -190,6 +251,21 @@
         "direction": "O",
         "left": "31",
         "right": "0"
+      },
+      "gain_ref": {
+        "direction": "I",
+        "left": "23",
+        "right": "0"
+      },
+      "gain": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
+      },
+      "sample_cnt_target": {
+        "direction": "I",
+        "left": "19",
+        "right": "0"
       }
     },
     "components": {
@@ -222,17 +298,17 @@
           }
         }
       },
-      "ADCControl_0": {
-        "vlnv": "DIII:PL-Mag-Sensor:ADCControl:1.0",
-        "xci_name": "MagController_ADCControl_0_2",
-        "xci_path": "ip/MagController_ADCControl_0_2/MagController_ADCControl_0_2.xci",
-        "inst_hier_path": "ADCControl_0"
-      },
       "BufferFlowControl_1": {
         "vlnv": "DIII:PL-Mag-Sensor:BufferFlowControl:1.0",
         "xci_name": "MagController_BufferFlowControl_1_0",
         "xci_path": "ip/MagController_BufferFlowControl_1_0/MagController_BufferFlowControl_1_0.xci",
         "inst_hier_path": "BufferFlowControl_1"
+      },
+      "ADCControl_0": {
+        "vlnv": "DIII:PL-Mag-Sensor:ADCControl:1.0",
+        "xci_name": "MagController_ADCControl_0_2",
+        "xci_path": "ip/MagController_ADCControl_0_2/MagController_ADCControl_0_2.xci",
+        "inst_hier_path": "ADCControl_0"
       }
     },
     "nets": {
@@ -247,8 +323,8 @@
           "rst_n",
           "SPIMaster/rst_n",
           "GainControl/rst_n",
-          "ADCControl_0/rst_n",
-          "BufferFlowControl_1/rst_n"
+          "BufferFlowControl_1/rst_n",
+          "ADCControl_0/rst_n"
         ]
       },
       "clk_0_1": {
@@ -256,15 +332,8 @@
           "clk",
           "SPIMaster/clk",
           "GainControl/clk",
-          "ADCControl_0/clk",
-          "BufferFlowControl_1/clk"
-        ]
-      },
-      "GainControl_gain": {
-        "ports": [
-          "GainControl/gain",
-          "ADCControl_0/curr_gains",
-          "BufferFlowControl_1/gain_curr"
+          "BufferFlowControl_1/clk",
+          "ADCControl_0/clk"
         ]
       },
       "SPIMaster_spi_clk": {
@@ -306,14 +375,14 @@
       "ADCControl_0_ch_out": {
         "ports": [
           "ADCControl_0/ch_out",
-          "ch_out",
+          "ADC_ch_out",
           "BufferFlowControl_1/adc_ch"
         ]
       },
       "ADCControl_0_data_out": {
         "ports": [
           "ADCControl_0/data_out",
-          "data_out",
+          "ADC_data_out",
           "BufferFlowControl_1/adc_din"
         ]
       },
@@ -462,12 +531,6 @@
           "bfr_n_samples_out"
         ]
       },
-      "BufferFlowControl_1_gain_ref": {
-        "ports": [
-          "BufferFlowControl_1/gain_ref",
-          "GainControl/gain_ref"
-        ]
-      },
       "bfr_hold_1": {
         "ports": [
           "bfr_hold",
@@ -544,6 +607,24 @@
         "ports": [
           "bfr_rd_addr_9",
           "BufferFlowControl_1/bfr_rd_addr_9"
+        ]
+      },
+      "gain_ref_0_1": {
+        "ports": [
+          "gain_ref",
+          "GainControl/gain_ref"
+        ]
+      },
+      "GainControl_gain": {
+        "ports": [
+          "GainControl/gain",
+          "gain"
+        ]
+      },
+      "sample_cnt_target_0_1": {
+        "ports": [
+          "sample_cnt_target",
+          "ADCControl_0/sample_cnt_target"
         ]
       }
     }

@@ -75,8 +75,6 @@ ENTITY BufferFlowControl_buffer_controller_0_2 IS
     bf_wr : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     bf_shift : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     bf_irq : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    gain_curr : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
-    gain_ref : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
     n_samples_out : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
     irq_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
   );
@@ -114,8 +112,6 @@ ARCHITECTURE BufferFlowControl_buffer_controller_0_2_arch OF BufferFlowControl_b
       bf_wr : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       bf_shift : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       bf_irq : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      gain_curr : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
-      gain_ref : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
       n_samples_out : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
       irq_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
     );
@@ -172,8 +168,6 @@ BEGIN
       bf_wr => bf_wr,
       bf_shift => bf_shift,
       bf_irq => bf_irq,
-      gain_curr => gain_curr,
-      gain_ref => gain_ref,
       n_samples_out => n_samples_out,
       irq_out => irq_out
     );

@@ -194,8 +194,6 @@ proc create_root_design { parentCell } {
   set bfr_rd_dout_10 [ create_bd_port -dir O -from 31 -to 0 bfr_rd_dout_10 ]
   set bfr_rd_dout_11 [ create_bd_port -dir O -from 31 -to 0 bfr_rd_dout_11 ]
   set clk [ create_bd_port -dir I -type clk clk ]
-  set gain_curr [ create_bd_port -dir I -from 23 -to 0 gain_curr ]
-  set gain_ref [ create_bd_port -dir O -from 23 -to 0 gain_ref ]
   set irq_out [ create_bd_port -dir O irq_out ]
   set n_samples_out [ create_bd_port -dir O -from 5 -to 0 n_samples_out ]
   set rst_n [ create_bd_port -dir I -type rst rst_n ]
@@ -261,7 +259,6 @@ proc create_root_design { parentCell } {
  ] $signal_period_counter
 
   # Create port connections
-  connect_bd_net -net BufferFlowControl_gain_ref [get_bd_ports gain_ref] [get_bd_pins buffer_controller_0/gain_ref]
   connect_bd_net -net BufferFlowControl_irq_out [get_bd_pins buffer_controller_0/irq_out] [get_bd_pins or_gate_0/inp]
   connect_bd_net -net BufferFlowControl_n_samples_out [get_bd_ports n_samples_out] [get_bd_pins buffer_controller_0/n_samples_out]
   connect_bd_net -net MagPingPongBuffers_0_busy [get_bd_ports bfr_busy] [get_bd_pins MagPingPongBuffers_0/busy]
@@ -292,7 +289,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net buffer_controller_0_t_sample_rest [get_bd_pins buffer_controller_0/t_sample_rest] [get_bd_pins sample_interval_counter/restart]
   connect_bd_net -net buffer_controller_0_t_sample_target [get_bd_pins buffer_controller_0/t_sample_target] [get_bd_pins sample_interval_counter/target]
   connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins MagPingPongBuffers_0/clk] [get_bd_pins buffer_controller_0/clk] [get_bd_pins sample_interval_counter/clk] [get_bd_pins signal_period_counter/clk]
-  connect_bd_net -net gain_curr_1 [get_bd_ports gain_curr] [get_bd_pins buffer_controller_0/gain_curr]
   connect_bd_net -net hold_1 [get_bd_ports bfr_hold] [get_bd_pins MagPingPongBuffers_0/hold]
   connect_bd_net -net or_gate_0_outp [get_bd_ports irq_out] [get_bd_pins or_gate_0/outp]
   connect_bd_net -net rd_addr_0_0_1 [get_bd_ports bfr_rd_addr_0] [get_bd_pins MagPingPongBuffers_0/rd_addr_0]

@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Tue Apr 19 09:02:12 2022
---Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
+--Date        : Wed May 25 12:31:09 2022
+--Host        : ffn-X299 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target BufferFlowControl.bd
 --Design      : BufferFlowControl
 --Purpose     : IP block netlist
@@ -43,8 +43,6 @@ entity BufferFlowControl is
     bfr_rd_dout_8 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bfr_rd_dout_9 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
-    gain_curr : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    gain_ref : out STD_LOGIC_VECTOR ( 23 downto 0 );
     irq_out : out STD_LOGIC;
     n_samples_out : out STD_LOGIC_VECTOR ( 5 downto 0 );
     rst_n : in STD_LOGIC
@@ -143,13 +141,10 @@ architecture STRUCTURE of BufferFlowControl is
     bf_wr : out STD_LOGIC_VECTOR ( 11 downto 0 );
     bf_shift : out STD_LOGIC_VECTOR ( 11 downto 0 );
     bf_irq : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    gain_curr : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    gain_ref : out STD_LOGIC_VECTOR ( 23 downto 0 );
     n_samples_out : out STD_LOGIC_VECTOR ( 5 downto 0 );
     irq_out : out STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   end component BufferFlowControl_buffer_controller_0_2;
-  signal BufferFlowControl_gain_ref : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal BufferFlowControl_irq_out : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal BufferFlowControl_n_samples_out : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal MagPingPongBuffers_0_busy : STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -180,7 +175,6 @@ architecture STRUCTURE of BufferFlowControl is
   signal buffer_controller_0_t_sample_rest : STD_LOGIC;
   signal buffer_controller_0_t_sample_target : STD_LOGIC_VECTOR ( 19 downto 0 );
   signal clk_0_1 : STD_LOGIC;
-  signal gain_curr_1 : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal hold_1 : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal or_gate_0_outp : STD_LOGIC;
   signal rd_addr_0_0_1 : STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -226,8 +220,6 @@ begin
   bfr_rd_dout_8(31 downto 0) <= MagPingPongBuffers_0_rd_dout_8(31 downto 0);
   bfr_rd_dout_9(31 downto 0) <= MagPingPongBuffers_0_rd_dout_9(31 downto 0);
   clk_0_1 <= clk;
-  gain_curr_1(23 downto 0) <= gain_curr(23 downto 0);
-  gain_ref(23 downto 0) <= BufferFlowControl_gain_ref(23 downto 0);
   hold_1(11 downto 0) <= bfr_hold(11 downto 0);
   irq_out <= or_gate_0_outp;
   n_samples_out(5 downto 0) <= BufferFlowControl_n_samples_out(5 downto 0);
@@ -291,8 +283,6 @@ buffer_controller_0: component BufferFlowControl_buffer_controller_0_2
       bf_wr_addr(4 downto 0) => buffer_controller_0_bf_wr_addr(4 downto 0),
       bf_wr_data(31 downto 0) => buffer_controller_0_bf_wr_data(31 downto 0),
       clk => clk_0_1,
-      gain_curr(23 downto 0) => gain_curr_1(23 downto 0),
-      gain_ref(23 downto 0) => BufferFlowControl_gain_ref(23 downto 0),
       irq_out(11 downto 0) => BufferFlowControl_irq_out(11 downto 0),
       n_samples_out(5 downto 0) => BufferFlowControl_n_samples_out(5 downto 0),
       rst_n => rst_n_0_1,

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 19 09:02:13 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 25 12:31:10 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="BufferFlowControl" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -30,16 +30,6 @@
         <CONNECTION INSTANCE="sample_interval_counter" PORT="clk"/>
         <CONNECTION INSTANCE="MagPingPongBuffers_0" PORT="clk"/>
         <CONNECTION INSTANCE="buffer_controller_0" PORT="clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="23" NAME="gain_curr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_curr">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="buffer_controller_0" PORT="gain_curr"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="23" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="buffer_controller_0_gain_ref">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="buffer_controller_0" PORT="gain_ref"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="11" NAME="bfr_hold" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_hold">
@@ -475,16 +465,6 @@
         <PORT DIR="I" LEFT="11" NAME="bf_irq" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="MagPingPongBuffers_0_irq">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MagPingPongBuffers_0" PORT="irq"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="23" NAME="gain_curr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_curr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_curr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="23" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="buffer_controller_0_gain_ref">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="5" NAME="n_samples_out" RIGHT="0" SIGIS="undef" SIGNAME="buffer_controller_0_n_samples_out">

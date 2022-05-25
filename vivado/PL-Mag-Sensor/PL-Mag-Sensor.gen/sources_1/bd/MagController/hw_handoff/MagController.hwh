@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 25 14:31:06 2022" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="MagController" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="3" NAME="mag_nCS" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mag_MISO" SIGIS="undef" SIGNAME="External_Ports_mag_MISO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SPIMaster" PORT="spi_miso"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SPIMaster" PORT="clk"/>
+        <CONNECTION INSTANCE="GainControl" PORT="clk"/>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="clk"/>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SPIMaster" PORT="rst_n"/>
+        <CONNECTION INSTANCE="GainControl" PORT="rst_n"/>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="rst_n"/>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="mag_SCLK" SIGIS="clk" SIGNAME="SPIMaster_spi_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SPIMaster" PORT="spi_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mag_MOSI" SIGIS="undef" SIGNAME="SPIMaster_spi_mosi">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SPIMaster" PORT="spi_mosi"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="bfr_busy" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_busy">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_busy"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="ADC_ch_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_ch_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="ch_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="ADC_data_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_data_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="data_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="ADCControl_0_irq_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="irq_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="bfr_irq_out" SIGIS="undef" SIGNAME="BufferFlowControl_1_irq_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="irq_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="5" NAME="bfr_n_samples_out" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_n_samples_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="n_samples_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="11" NAME="bfr_hold" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_hold">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_hold"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_10" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_10">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_10"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_10" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_10">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_10"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_11" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_11">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_11"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_1" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_2" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_4" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_6" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_3" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_11" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_11">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_11"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_4" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_6" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_5" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_8" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_8">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_8"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_5" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_3" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_8" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_8">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_8"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_7" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_7" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_0" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_9" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_9">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_addr_9"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_9" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_9">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BufferFlowControl_1" PORT="bfr_rd_dout_9"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="23" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GainControl" PORT="gain_ref"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="23" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_gain">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GainControl" PORT="gain"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="19" NAME="sample_cnt_target" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sample_cnt_target">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ADCControl_0" PORT="sample_cnt_target"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="3" FULLNAME="/ADCControl_0" HWVERSION="1.0" INSTANCE="ADCControl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADCControl" VLNV="DIII:PL-Mag-Sensor:ADCControl:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="MagController_ADCControl_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="3" NAME="ch_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_ch_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ADC_ch_out"/>
+            <CONNECTION INSTANCE="BufferFlowControl_1" PORT="adc_ch"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ADC_data_out"/>
+            <CONNECTION INSTANCE="BufferFlowControl_1" PORT="adc_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="gpio_UnD" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_gpio_UnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl" PORT="gpio_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_UnD_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl" PORT="UnD_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="gpio_nCS" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_gpio_nCS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl" PORT="gpio_nCS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_nCS_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GainControl" PORT="nCS_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="ADCControl_0_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="irq_out"/>
+            <CONNECTION INSTANCE="BufferFlowControl_1" PORT="adc_irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="19" NAME="sample_cnt_target" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sample_cnt_target">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sample_cnt_target"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="spi_addr" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_spi_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPIMaster" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_cs" SIGIS="undef" SIGNAME="ADCControl_0_spi_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPIMaster" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="spi_din" RIGHT="0" SIGIS="undef" SIGNAME="SPIMaster_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPIMaster" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="spi_dout" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_spi_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPIMaster" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="spi_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="SPIMaster_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPIMaster" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_rw" SIGIS="undef" SIGNAME="ADCControl_0_spi_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPIMaster" PORT="rw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/BufferFlowControl_1" HWVERSION="1.0" INSTANCE="BufferFlowControl_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BufferFlowControl" VLNV="DIII:PL-Mag-Sensor:BufferFlowControl:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="MagController_BufferFlowControl_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="adc_ch" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_ch_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="ch_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="adc_din" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="adc_irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="ADCControl_0_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="irq_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="bfr_busy" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="bfr_hold" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_hold">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_hold"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_10" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_10">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_10"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_11" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_11">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_11"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_3" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_4" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_5" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_6" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_7" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_8" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_8">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_8"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="bfr_rd_addr_9" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_bfr_rd_addr_9">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_addr_9"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_0" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_1" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_10" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_10">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_10"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_11" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_11">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_11"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_2" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_3" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_4" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_5" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_6" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_7" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_8" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_8">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_8"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bfr_rd_dout_9" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_bfr_rd_dout_9">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_rd_dout_9"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq_out" SIGIS="undef" SIGNAME="BufferFlowControl_1_irq_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_irq_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="n_samples_out" RIGHT="0" SIGIS="undef" SIGNAME="BufferFlowControl_1_n_samples_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="bfr_n_samples_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/GainControl" HWVERSION="1.0" INSTANCE="GainControl" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GainControl" VLNV="DIII:PL-Mag-Sensor:GainControl:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="MagController_GainControl_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="3" NAME="UnD_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_UnD_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="gpio_UnD_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="gain" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_gain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="gain_ref" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gain_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gain_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_UnD" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_gpio_UnD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="gpio_UnD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="gpio_nCS" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_gpio_nCS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="gpio_nCS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="nCS_ref" RIGHT="0" SIGIS="undef" SIGNAME="GainControl_nCS_ref">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="gpio_nCS_ref"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/SPIMaster" HWVERSION="1.0" INSTANCE="SPIMaster" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SPIMaster" VLNV="DIII:PL-Mag-Sensor:SPIMaster:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="MagController_SPIMaster_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_spi_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cs" SIGIS="undef" SIGNAME="ADCControl_0_spi_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="ADCControl_0_spi_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="SPIMaster_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="SPIMaster_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rw" SIGIS="undef" SIGNAME="ADCControl_0_spi_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADCControl_0" PORT="spi_rw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="spi_clk" SIGIS="clk" SIGNAME="SPIMaster_spi_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag_SCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="spi_cs_n" RIGHT="0" SIGIS="undef" SIGNAME="SPIMaster_spi_cs_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="spi_miso" SIGIS="undef" SIGNAME="External_Ports_mag_MISO">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag_MISO"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="spi_mosi" SIGIS="undef" SIGNAME="SPIMaster_spi_mosi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag_MOSI"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="MagController_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="SPIMaster_spi_cs_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPIMaster" PORT="spi_cs_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mag_nCS"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

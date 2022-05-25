@@ -361,8 +361,7 @@
       "GainControl_gain": {
         "ports": [
           "GainControl/gain",
-          "gain",
-          "ADCControl/curr_gains"
+          "gain"
         ]
       },
       "ADCControl_gpio_nCS": {

@@ -51,51 +51,22 @@ preplace portBus bfr_rd_dout_9_0 -pg 1 -lvl 4 -x 1350 -y 150 -defaultsOSRD
 preplace inst GainControl -pg 1 -lvl 3 -x 1000 -y 630 -defaultsOSRD
 preplace inst ADC_simulator_0 -pg 1 -lvl 2 -x 450 -y 650 -defaultsOSRD
 preplace inst ADCControl -pg 1 -lvl 2 -x 450 -y 340 -defaultsOSRD
-preplace inst BufferFlowControl_0 -pg 1 -lvl 3 -x 1000 -y 140 -defaultsOSRD
-preplace netloc clk_0_1 1 0 3 NJ 280 160 170 680
-preplace netloc rst_n_0_1 1 0 3 NJ 360 180 200 660
-preplace netloc ADC_simulator_0_spi_irq 1 1 3 230 500 NJ 500 1280J
-preplace netloc ADCControl_spi_dout 1 1 3 220 800 620 770 NJ
-preplace netloc GainControl_nCS_ref 1 1 3 220 510 NJ 510 1210
-preplace netloc ADCControl_irq_out 1 2 2 710 -120 1290J
-preplace netloc ADCControl_data_out 1 2 2 650 -130 1300J
-preplace netloc GainControl_UnD_ref 1 1 3 210 520 NJ 520 1310
-preplace netloc GainControl_gain 1 1 3 190 120 730 530 1170
-preplace netloc ADCControl_ch_out 1 2 1 600 -40n
-preplace netloc ADCControl_gpio_nCS 1 2 2 650 850 NJ
-preplace netloc ADCControl_spi_addr 1 1 3 230 780 630 730 NJ
-preplace netloc ADCControl_gpio_UnD 1 2 2 720 -100 1270J
-preplace netloc ADC_simulator_0_spi_dout 1 1 3 190 820 610 790 NJ
-preplace netloc ADCControl_spi_cs 1 1 3 210 790 600 750 NJ
-preplace netloc ADCControl_spi_rw 1 1 3 200 810 640 810 NJ
-preplace netloc BufferFlowControlStr_0_gain_ref 1 2 2 790 -110 1190
-preplace netloc BufferFlowControl_0_bfr_busy 1 3 1 1250J -10n
-preplace netloc BufferFlowControl_0_n_samples_out 1 3 1 1330J 190n
-preplace netloc bfr_hold_0_1 1 0 3 NJ -10 NJ -10 780
-preplace netloc BufferFlowControl_0_bfr_rd_dout_10 1 3 1 1220J -70n
-preplace netloc bfr_rd_addr_2_0_1 1 0 3 NJ 90 NJ 90 780J
-preplace netloc bfr_rd_addr_10_0_1 1 0 3 NJ 50 NJ 50 730J
-preplace netloc bfr_rd_addr_11_0_1 1 0 3 10J 100 NJ 100 NJ
-preplace netloc BufferFlowControl_0_bfr_rd_dout_1 1 3 1 1210J -90n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_2 1 3 1 1240J -30n
-preplace netloc bfr_rd_addr_4_0_1 1 0 3 NJ 130 NJ 130 760J
-preplace netloc bfr_rd_addr_1_0_1 1 0 3 NJ 30 NJ 30 760J
-preplace netloc BufferFlowControl_0_bfr_rd_dout_6 1 3 1 1180J 70n
-preplace netloc bfr_rd_addr_3_0_1 1 0 3 NJ 110 NJ 110 770J
-preplace netloc BufferFlowControl_0_bfr_rd_dout_11 1 3 1 1170J -50n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_4 1 3 1 1230J 30n
-preplace netloc bfr_rd_addr_6_0_1 1 0 3 20J 150 NJ 150 740J
-preplace netloc BufferFlowControl_0_bfr_rd_dout_5 1 3 1 1280J 50n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_8 1 3 1 1310J 110n
-preplace netloc bfr_rd_addr_5_0_1 1 0 3 10J 140 NJ 140 750J
-preplace netloc BufferFlowControl_0_bfr_rd_dout_3 1 3 1 1260J -10n
-preplace netloc bfr_rd_addr_8_0_1 1 0 3 30J 160 NJ 160 700J
-preplace netloc BufferFlowControl_0_bfr_rd_dout_7 1 3 1 1300J 90n
-preplace netloc bfr_rd_addr_7_0_1 1 0 3 NJ 190 150J 180 690J
-preplace netloc BufferFlowControl_0_bfr_rd_dout_0 1 3 1 1200J -110n
-preplace netloc bfr_rd_addr_0_0_1 1 0 3 NJ 10 NJ 10 770J
-preplace netloc bfr_rd_addr_9_0_1 1 0 3 NJ 230 170J 190 670J
-preplace netloc BufferFlowControl_0_bfr_rd_dout_9 1 3 1 1320J 150n
+preplace netloc clk_0_1 1 0 3 NJ 280 150 520 670
+preplace netloc rst_n_0_1 1 0 3 NJ 360 160 820 700
+preplace netloc ADC_simulator_0_spi_irq 1 1 3 210 490 NJ 490 1160J
+preplace netloc ADCControl_spi_dout 1 1 3 200 800 640 770 NJ
+preplace netloc GainControl_nCS_ref 1 1 3 200 510 NJ 510 1140
+preplace netloc ADCControl_irq_out 1 2 2 690 320 NJ
+preplace netloc ADCControl_data_out 1 2 2 700 10 NJ
+preplace netloc GainControl_UnD_ref 1 1 3 190 500 NJ 500 1130
+preplace netloc GainControl_gain 1 3 1 1150 540n
+preplace netloc ADCControl_gpio_nCS 1 2 2 680 850 NJ
+preplace netloc ADCControl_spi_addr 1 1 3 210 780 650 730 NJ
+preplace netloc ADCControl_gpio_UnD 1 2 2 700 300 NJ
+preplace netloc ADC_simulator_0_spi_dout 1 1 3 170 830 630 790 NJ
+preplace netloc ADCControl_spi_cs 1 1 3 190 790 620 750 NJ
+preplace netloc ADCControl_spi_rw 1 1 3 180 810 660 810 NJ
+preplace netloc BufferFlowControlStr_0_gain_ref 1 2 2 710 170 N
 levelinfo -pg 1 -10 130 450 1000 1350
 pagesize -pg 1 -db -bbox -sgen -220 -140 1570 870
 "

@@ -80,9 +80,9 @@ entity buffer_controller is
         --lut_idle        :   in  STD_LOGIC;
         --lut_start       :   out STD_LOGIC;
 
-        -- Gain ports:
-        gain_curr       :   in  STD_LOGIC_VECTOR(23 downto 0);
-        gain_ref        :   out STD_LOGIC_VECTOR(23 downto 0);
+        ---- Gain ports:
+        --gain_curr       :   in  STD_LOGIC_VECTOR(23 downto 0);
+        --gain_ref        :   out STD_LOGIC_VECTOR(23 downto 0);
 
         -- Output control:
         n_samples_out   :   out STD_LOGIC_VECTOR(bf_addr_n_bits downto 0);
@@ -121,10 +121,10 @@ architecture Behavioral of buffer_controller is
     signal  latch_adc_din:  STD_LOGIC_VECTOR(11 downto 0)       :=  (others => '0');
     signal  latch_adc_ch:   STD_LOGIC_VECTOR(3 downto 0)       :=  (others => '0');
 
-    type    GAIN_TYPE       is ARRAY(0 to 3) of STD_LOGIC_VECTOR(5 downto 0);
-    signal  gain_curr_int:  GAIN_TYPE;
-    signal  gain_ref_int:   GAIN_TYPE                           :=  (others => (others => '0'));
-    signal  gain_settled:   STD_LOGIC;
+    --type    GAIN_TYPE       is ARRAY(0 to 3) of STD_LOGIC_VECTOR(5 downto 0);
+    --signal  gain_curr_int:  GAIN_TYPE;
+    --signal  gain_ref_int:   GAIN_TYPE                           :=  (others => (others => '0'));
+    --signal  gain_settled:   STD_LOGIC;
 
     --signal  mon_mag :       UNSIGNED(1 downto 0) := "00";
     --signal  mon_axis:       UNSIGNED(1 downto 0) := "00";
@@ -206,24 +206,24 @@ begin
     --bf_wr_data(16 downto 12)    <=  std_logic_vector(wr_addr_cnt);
     --bf_wr_data(bf_wr_data'HIGH downto 17) <= (others => '0');
 
-    gain_curr_int(3)<=  gain_curr(23 downto 18);
-    gain_curr_int(2)<=  gain_curr(17 downto 12);
-    gain_curr_int(1)<=  gain_curr(11 downto 6);
-    gain_curr_int(0)<=  gain_curr(5 downto 0);
+    --gain_curr_int(3)<=  gain_curr(23 downto 18);
+    --gain_curr_int(2)<=  gain_curr(17 downto 12);
+    --gain_curr_int(1)<=  gain_curr(11 downto 6);
+    --gain_curr_int(0)<=  gain_curr(5 downto 0);
 
-    gain_ref(23 downto 18)  <=  gain_ref_int(3);
-    gain_ref(17 downto 12)  <=  gain_ref_int(2);
-    gain_ref(11 downto 6)   <=  gain_ref_int(1);
-    gain_ref(5 downto 0)    <=  gain_ref_int(0);
+    --gain_ref(23 downto 18)  <=  gain_ref_int(3);
+    --gain_ref(17 downto 12)  <=  gain_ref_int(2);
+    --gain_ref(11 downto 6)   <=  gain_ref_int(1);
+    --gain_ref(5 downto 0)    <=  gain_ref_int(0);
 
-    gain_settled    <=  '1' when gain_curr_int(3)=gain_ref_int(3) 
-                                    and gain_curr_int(2)=gain_ref_int(2)
-                                    and gain_curr_int(1)=gain_ref_int(1)
-                                    and gain_curr_int(0)=gain_ref_int(0) else
-                        '0';
+    --gain_settled    <=  '1' when gain_curr_int(3)=gain_ref_int(3) 
+    --                                and gain_curr_int(2)=gain_ref_int(2)
+    --                                and gain_curr_int(1)=gain_ref_int(1)
+    --                                and gain_curr_int(0)=gain_ref_int(0) else
+    --                    '0';
 
     -- Full gain for now:
-    gain_ref_int    <=  (others => (others => '1'));
+    --gain_ref_int    <=  (others => (others => '1'));
 
     bf_shift        <=  bf_shift_int;
 
@@ -434,6 +434,9 @@ begin
                     end case;
                 when s_sample_wait =>
                     case next_state is
+                        when s_period_done =>
+                            period_done             <=  '1';
+                            bf_shift_int            <=  X"FFF"; -- Max gain for now
                         when s_sample =>
                             case next_ch is
                                 when "0000" =>
@@ -547,7 +550,7 @@ begin
                                     --t_sample_irq, gain_mon_rdy, accept_mask, mag_cnt,
                                     --sample_start, gain_mon_rdy, accept_mask, mag_cnt,
                                     --lut_irq, lut_idle, shifted_hold, gain_settled)
-                                    shifted_hold, gain_settled)
+                                    shifted_hold)
     ------------------------------------------------------------------------------
 	-- Next state logic process for gain FSM. 
     ------------------------------------------------------------------------------
@@ -569,7 +572,9 @@ begin
                     next_state          <=  s_sample_wait;
                 end if;
             when s_sample_wait =>
-                if (prev_adc_irq='0' and adc_irq = '1' and UNSIGNED(adc_ch) = next_ch) then
+                if (next_ch = "000" and t_period_irq = '1') then
+                    next_state          <=  s_period_done;
+                elsif (prev_adc_irq='0' and adc_irq = '1' and UNSIGNED(adc_ch) = next_ch) then
                     next_state          <=  s_sample;
                 else
                     next_state          <=  s_sample_wait;
@@ -632,7 +637,7 @@ begin
             when s_irq =>
                 next_state              <=  s_gain_wait;
             when s_gain_wait =>
-                if (gain_settled = '1' and t_sample_irq = '1') then
+                if (t_sample_irq = '1') then
                     next_state          <=  s_sample_continue;
                 else
                     next_state          <=  s_gain_wait;

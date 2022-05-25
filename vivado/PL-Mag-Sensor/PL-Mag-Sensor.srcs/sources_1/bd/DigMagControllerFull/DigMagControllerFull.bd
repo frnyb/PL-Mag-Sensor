@@ -7,12 +7,11 @@
       "name": "DigMagControllerFull",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2020.2"
     },
     "design_tree": {
-      "BufferFlowControl_0": "",
-      "DigMagController_0": ""
+      "DigMagController_0": "",
+      "BufferFlowControl_0": ""
     },
     "ports": {
       "bfr_busy": {
@@ -160,29 +159,7 @@
       },
       "clk": {
         "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "DigMagControllerFull_clk",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "data_out": {
         "direction": "O",
@@ -190,27 +167,11 @@
         "right": "0"
       },
       "irq_out": {
-        "direction": "O",
-        "parameters": {
-          "PortWidth": {
-            "value": "1",
-            "value_src": "default_prop"
-          }
-        }
+        "direction": "O"
       },
       "rst_n": {
         "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "mag2_scl_t": {
         "direction": "O"
@@ -286,32 +247,32 @@
       }
     },
     "components": {
-      "BufferFlowControl_0": {
-        "vlnv": "DIII:PL-Mag-Sensor:BufferFlowControl:1.0",
-        "xci_name": "DigMagControllerFull_BufferFlowControl_0_1",
-        "xci_path": "ip/DigMagControllerFull_BufferFlowControl_0_1/DigMagControllerFull_BufferFlowControl_0_1.xci",
-        "inst_hier_path": "BufferFlowControl_0"
-      },
       "DigMagController_0": {
         "vlnv": "DIII:PL-Mag-Sensor:DigMagController:1.0",
         "xci_name": "DigMagControllerFull_DigMagController_0_2",
         "xci_path": "ip/DigMagControllerFull_DigMagController_0_2/DigMagControllerFull_DigMagController_0_2.xci",
         "inst_hier_path": "DigMagController_0"
+      },
+      "BufferFlowControl_0": {
+        "vlnv": "DIII:PL-Mag-Sensor:BufferFlowControl:1.0",
+        "xci_name": "DigMagControllerFull_BufferFlowControl_0_1",
+        "xci_path": "ip/DigMagControllerFull_BufferFlowControl_0_1/DigMagControllerFull_BufferFlowControl_0_1.xci",
+        "inst_hier_path": "BufferFlowControl_0"
       }
     },
     "nets": {
       "clk_1": {
         "ports": [
           "clk",
-          "BufferFlowControl_0/clk",
-          "DigMagController_0/clk"
+          "DigMagController_0/clk",
+          "BufferFlowControl_0/clk"
         ]
       },
       "rst_n_1": {
         "ports": [
           "rst_n",
-          "BufferFlowControl_0/rst_n",
-          "DigMagController_0/rst_n"
+          "DigMagController_0/rst_n",
+          "BufferFlowControl_0/rst_n"
         ]
       },
       "BufferFlowControl_0_bfr_busy": {
@@ -402,12 +363,6 @@
         "ports": [
           "BufferFlowControl_0/n_samples_out",
           "bfr_n_samples_out"
-        ]
-      },
-      "BufferFlowControl_0_gain_ref": {
-        "ports": [
-          "BufferFlowControl_0/gain_ref",
-          "BufferFlowControl_0/gain_curr"
         ]
       },
       "bfr_hold_1": {
@@ -635,22 +590,22 @@
       "DigMagController_0_ch_out": {
         "ports": [
           "DigMagController_0/ch_out",
-          "BufferFlowControl_0/adc_ch",
-          "ch_out"
+          "ch_out",
+          "BufferFlowControl_0/adc_ch"
         ]
       },
       "DigMagController_0_dout": {
         "ports": [
           "DigMagController_0/dout",
-          "BufferFlowControl_0/adc_din",
-          "data_out"
+          "data_out",
+          "BufferFlowControl_0/adc_din"
         ]
       },
       "DigMagController_0_irq_out": {
         "ports": [
           "DigMagController_0/irq_out",
-          "BufferFlowControl_0/adc_irq",
-          "irq_out"
+          "irq_out",
+          "BufferFlowControl_0/adc_irq"
         ]
       }
     }

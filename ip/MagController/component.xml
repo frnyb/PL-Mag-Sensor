@@ -29,10 +29,6 @@
           <spirit:name>PHASE</spirit:name>
           <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK.PHASE">0.000</spirit:value>
         </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>ASSOCIATED_RESET</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK.ASSOCIATED_RESET">rst_n</spirit:value>
-        </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
@@ -113,7 +109,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c816f7a8</spirit:value>
+            <spirit:value>e21fddb9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -144,7 +140,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f0517c2f</spirit:value>
+            <spirit:value>393090ed</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -164,6 +160,40 @@
       </spirit:view>
     </spirit:views>
     <spirit:ports>
+      <spirit:port>
+        <spirit:name>ADC_ch_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ADC_data_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
       <spirit:port>
         <spirit:name>bfr_busy</spirit:name>
         <spirit:wire>
@@ -637,23 +667,6 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ch_out</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>clk</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -667,11 +680,28 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>data_out</spirit:name>
+        <spirit:name>gain</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>gain_ref</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -765,6 +795,23 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>sample_cnt_target</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">19</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC_VECTOR</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
   </spirit:model>
   <spirit:fileSets>
@@ -810,7 +857,7 @@
       <spirit:file>
         <spirit:name>src/MagController.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f4aa9141</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_bb9389d8</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -980,17 +1027,17 @@
       <xilinx:displayName>MagController_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-03-29T13:03:59Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-05-25T12:31:26Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@633336a4_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@53d65c6c_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b256eba_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@53598abb_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@55096f67_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d7270e0_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@113d641b_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@44be8397_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@40f23b33_ARCHIVE_LOCATION">/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f7c29f0_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55a2500a_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71674218_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16405d50_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43bebadd_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2abc8f5e_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7681f1fa_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a174fe7_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ccdcce8_ARCHIVE_LOCATION">/vol/Workspace/Projects/PL-Mag-Sensor/ip/MagController</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.MAG_SCLK.FREQ_HZ" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd_and_user"/>
@@ -999,9 +1046,9 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f687eb44"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cbd3c095"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="daddbfa0"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c6538225"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a072d4a4"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="7b12f7ea"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="268fb0f3"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

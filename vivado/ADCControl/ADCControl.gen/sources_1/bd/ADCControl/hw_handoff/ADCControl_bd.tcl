@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ADC_controller, counter, max_gain
+# ADC_controller, counter
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -166,7 +166,6 @@ proc create_root_design { parentCell } {
   # Create ports
   set ch_out [ create_bd_port -dir O -from 3 -to 0 ch_out ]
   set clk [ create_bd_port -dir I -type clk clk ]
-  set curr_gains [ create_bd_port -dir I -from 23 -to 0 curr_gains ]
   set data_out [ create_bd_port -dir O -from 11 -to 0 data_out ]
   set gpio_UnD [ create_bd_port -dir O -from 3 -to 0 gpio_UnD ]
   set gpio_UnD_ref [ create_bd_port -dir I -from 3 -to 0 gpio_UnD_ref ]
@@ -174,6 +173,7 @@ proc create_root_design { parentCell } {
   set gpio_nCS_ref [ create_bd_port -dir I -from 3 -to 0 gpio_nCS_ref ]
   set irq_out [ create_bd_port -dir O irq_out ]
   set rst_n [ create_bd_port -dir I -type rst rst_n ]
+  set sample_cnt_target [ create_bd_port -dir I -from 19 -to 0 sample_cnt_target ]
   set spi_addr [ create_bd_port -dir O -from 1 -to 0 spi_addr ]
   set spi_cs [ create_bd_port -dir O spi_cs ]
   set spi_din [ create_bd_port -dir I -from 7 -to 0 spi_din ]
@@ -206,24 +206,6 @@ proc create_root_design { parentCell } {
    CONFIG.n_bits {20} \
  ] $counter_0
 
-  # Create instance: max_gain, and set properties
-  set block_name max_gain
-  set block_cell_name max_gain
-  if { [catch {set max_gain [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $max_gain eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {33334} \
-   CONFIG.CONST_WIDTH {20} \
- ] $xlconstant_0
-
   # Create port connections
   connect_bd_net -net ADC_controller_0_ch_out [get_bd_ports ch_out] [get_bd_pins ADC_controller/ch_out]
   connect_bd_net -net ADC_controller_0_data_out [get_bd_ports data_out] [get_bd_pins ADC_controller/data_out]
@@ -239,13 +221,12 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clka_0_1 [get_bd_ports clk] [get_bd_pins ADC_controller/clk] [get_bd_pins counter_0/clk]
   connect_bd_net -net counter_0_cnt [get_bd_pins ADC_controller/t_sample_cnt] [get_bd_pins counter_0/cnt]
   connect_bd_net -net counter_0_irq [get_bd_pins ADC_controller/t_sample_irq] [get_bd_pins counter_0/irq]
-  connect_bd_net -net gains_0_1 [get_bd_ports curr_gains] [get_bd_pins max_gain/gains]
   connect_bd_net -net gpio_UnD_ref_0_1 [get_bd_ports gpio_UnD_ref] [get_bd_pins ADC_controller/gpio_UnD_ref]
   connect_bd_net -net gpio_nCS_ref_0_1 [get_bd_ports gpio_nCS_ref] [get_bd_pins ADC_controller/gpio_nCS_ref]
   connect_bd_net -net rst_n_0_1 [get_bd_ports rst_n] [get_bd_pins ADC_controller/rst_n] [get_bd_pins counter_0/rst_n]
   connect_bd_net -net spi_din_0_1 [get_bd_ports spi_din] [get_bd_pins ADC_controller/spi_din]
   connect_bd_net -net spi_irq_0_1 [get_bd_ports spi_irq] [get_bd_pins ADC_controller/spi_irq]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins counter_0/target] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net target_0_1 [get_bd_ports sample_cnt_target] [get_bd_pins counter_0/target]
 
   # Create address segments
 

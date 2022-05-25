@@ -1,21 +1,19 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.839982",
-   "Default View_TopLeft":"-315,-43",
+   "Default View_TopLeft":"-370,-174",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port adc_irq -pg 1 -lvl 0 -x -130 -y 870 -defaultsOSRD
 preplace port clk -pg 1 -lvl 0 -x -130 -y 60 -defaultsOSRD
-preplace port irq_out -pg 1 -lvl 5 -x 1660 -y 460 -defaultsOSRD
+preplace port irq_out -pg 1 -lvl 5 -x 1680 -y 460 -defaultsOSRD
 preplace port rst_n -pg 1 -lvl 0 -x -130 -y 80 -defaultsOSRD
 preplace portBus adc_ch -pg 1 -lvl 0 -x -130 -y 830 -defaultsOSRD
 preplace portBus adc_din -pg 1 -lvl 0 -x -130 -y 440 -defaultsOSRD
-preplace portBus bfr_busy -pg 1 -lvl 5 -x 1660 -y 800 -defaultsOSRD
-preplace portBus gain_curr -pg 1 -lvl 0 -x -130 -y 850 -defaultsOSRD
-preplace portBus gain_ref -pg 1 -lvl 5 -x 1660 -y 490 -defaultsOSRD
+preplace portBus bfr_busy -pg 1 -lvl 5 -x 1680 -y 800 -defaultsOSRD
 preplace portBus bfr_hold -pg 1 -lvl 0 -x -130 -y 780 -defaultsOSRD
-preplace portBus n_samples_out -pg 1 -lvl 5 -x 1660 -y 750 -defaultsOSRD
+preplace portBus n_samples_out -pg 1 -lvl 5 -x 1680 -y 750 -defaultsOSRD
 preplace portBus bfr_rd_addr_7 -pg 1 -lvl 0 -x -130 -y 640 -defaultsOSRD
 preplace portBus bfr_rd_addr_6 -pg 1 -lvl 0 -x -130 -y 620 -defaultsOSRD
 preplace portBus bfr_rd_addr_5 -pg 1 -lvl 0 -x -130 -y 600 -defaultsOSRD
@@ -28,41 +26,39 @@ preplace portBus bfr_rd_addr_1 -pg 1 -lvl 0 -x -130 -y 480 -defaultsOSRD
 preplace portBus bfr_rd_addr_0 -pg 1 -lvl 0 -x -130 -y 460 -defaultsOSRD
 preplace portBus bfr_rd_addr_8 -pg 1 -lvl 0 -x -130 -y 660 -defaultsOSRD
 preplace portBus bfr_rd_addr_9 -pg 1 -lvl 0 -x -130 -y 680 -defaultsOSRD
-preplace portBus bfr_rd_dout_8 -pg 1 -lvl 5 -x 1660 -y 710 -defaultsOSRD
-preplace portBus bfr_rd_dout_7 -pg 1 -lvl 5 -x 1660 -y 690 -defaultsOSRD
-preplace portBus bfr_rd_dout_6 -pg 1 -lvl 5 -x 1660 -y 670 -defaultsOSRD
-preplace portBus bfr_rd_dout_5 -pg 1 -lvl 5 -x 1660 -y 650 -defaultsOSRD
-preplace portBus bfr_rd_dout_4 -pg 1 -lvl 5 -x 1660 -y 630 -defaultsOSRD
-preplace portBus bfr_rd_dout_3 -pg 1 -lvl 5 -x 1660 -y 610 -defaultsOSRD
-preplace portBus bfr_rd_dout_2 -pg 1 -lvl 5 -x 1660 -y 590 -defaultsOSRD
-preplace portBus bfr_rd_dout_11 -pg 1 -lvl 5 -x 1660 -y 570 -defaultsOSRD
-preplace portBus bfr_rd_dout_10 -pg 1 -lvl 5 -x 1660 -y 550 -defaultsOSRD
-preplace portBus bfr_rd_dout_1 -pg 1 -lvl 5 -x 1660 -y 530 -defaultsOSRD
-preplace portBus bfr_rd_dout_0 -pg 1 -lvl 5 -x 1660 -y 510 -defaultsOSRD
-preplace portBus bfr_rd_dout_9 -pg 1 -lvl 5 -x 1660 -y 730 -defaultsOSRD
-preplace inst or_gate_0 -pg 1 -lvl 4 -x 1450 -y 580 -defaultsOSRD
+preplace portBus bfr_rd_dout_8 -pg 1 -lvl 5 -x 1680 -y 710 -defaultsOSRD
+preplace portBus bfr_rd_dout_7 -pg 1 -lvl 5 -x 1680 -y 690 -defaultsOSRD
+preplace portBus bfr_rd_dout_6 -pg 1 -lvl 5 -x 1680 -y 670 -defaultsOSRD
+preplace portBus bfr_rd_dout_5 -pg 1 -lvl 5 -x 1680 -y 650 -defaultsOSRD
+preplace portBus bfr_rd_dout_4 -pg 1 -lvl 5 -x 1680 -y 630 -defaultsOSRD
+preplace portBus bfr_rd_dout_3 -pg 1 -lvl 5 -x 1680 -y 610 -defaultsOSRD
+preplace portBus bfr_rd_dout_2 -pg 1 -lvl 5 -x 1680 -y 590 -defaultsOSRD
+preplace portBus bfr_rd_dout_11 -pg 1 -lvl 5 -x 1680 -y 570 -defaultsOSRD
+preplace portBus bfr_rd_dout_10 -pg 1 -lvl 5 -x 1680 -y 550 -defaultsOSRD
+preplace portBus bfr_rd_dout_1 -pg 1 -lvl 5 -x 1680 -y 530 -defaultsOSRD
+preplace portBus bfr_rd_dout_0 -pg 1 -lvl 5 -x 1680 -y 510 -defaultsOSRD
+preplace portBus bfr_rd_dout_9 -pg 1 -lvl 5 -x 1680 -y 730 -defaultsOSRD
+preplace inst or_gate_0 -pg 1 -lvl 4 -x 1490 -y 580 -defaultsOSRD
 preplace inst sample_interval_counter -pg 1 -lvl 1 -x 180 -y 630 -defaultsOSRD
 preplace inst signal_period_counter -pg 1 -lvl 1 -x 180 -y 100 -defaultsOSRD
 preplace inst MagPingPongBuffers_0 -pg 1 -lvl 2 -x 610 -y 600 -defaultsOSRD
 preplace inst buffer_controller_0 -pg 1 -lvl 3 -x 1070 -y 420 -defaultsOSRD
-preplace netloc BufferFlowControl_gain_ref 1 3 2 1310J 490 NJ
-preplace netloc BufferFlowControl_irq_out 1 3 1 1310J 540n
-preplace netloc BufferFlowControl_n_samples_out 1 3 2 NJ 520 1570J
-preplace netloc adc_ch_1 1 0 3 NJ 830 340J 840 820
-preplace netloc adc_din_1 1 0 3 -110J 320 NJ 320 800
-preplace netloc adc_irq_1 1 0 3 NJ 870 NJ 870 840
-preplace netloc buffer_controller_0_t_period_en 1 0 4 20 210 NJ 210 N 210 1280
-preplace netloc buffer_controller_0_t_period_rest 1 0 4 0 -10 NJ -10 N -10 1340
-preplace netloc buffer_controller_0_t_period_target 1 0 4 10 0 NJ 0 N 0 1330
-preplace netloc buffer_controller_0_t_sample_en 1 0 4 10 230 NJ 230 N 230 1270
-preplace netloc buffer_controller_0_t_sample_rest 1 0 4 20 240 NJ 240 N 240 1260
-preplace netloc buffer_controller_0_t_sample_target 1 0 4 20 890 NJ 890 N 890 1290
-preplace netloc clk_0_1 1 0 3 -10 330 430 330 820
-preplace netloc gain_curr_1 1 0 3 NJ 850 NJ 850 850
-preplace netloc or_gate_0_outp 1 4 1 1560J 460n
-preplace netloc rst_n_0_1 1 0 3 -50 340 390 340 N
+preplace netloc BufferFlowControl_irq_out 1 3 1 1360J 530n
+preplace netloc BufferFlowControl_n_samples_out 1 3 2 NJ 510 1620J
+preplace netloc adc_ch_1 1 0 3 NJ 830 350J 840 830
+preplace netloc adc_din_1 1 0 3 -110J 320 NJ 320 770
+preplace netloc adc_irq_1 1 0 3 NJ 870 NJ 870 850
+preplace netloc buffer_controller_0_t_period_en 1 0 4 0 -20 NJ -20 N -20 1310
+preplace netloc buffer_controller_0_t_period_rest 1 0 4 10 -10 NJ -10 N -10 1300
+preplace netloc buffer_controller_0_t_period_target 1 0 4 20 0 NJ 0 N 0 1290
+preplace netloc buffer_controller_0_t_sample_en 1 0 4 10 240 NJ 240 N 240 1270
+preplace netloc buffer_controller_0_t_sample_rest 1 0 4 20 250 NJ 250 N 250 1260
+preplace netloc buffer_controller_0_t_sample_target 1 0 4 20 890 NJ 890 N 890 1320
+preplace netloc clk_0_1 1 0 3 -10 330 430 330 N
+preplace netloc or_gate_0_outp 1 4 1 1610J 460n
+preplace netloc rst_n_0_1 1 0 3 -50 340 390 340 850
 preplace netloc sample_interval_counter_cnt 1 1 2 320 350 820
-preplace netloc sample_interval_counter_irq 1 1 2 330 360 N
+preplace netloc sample_interval_counter_irq 1 1 2 330 360 810
 preplace netloc signal_period_timer_cnt 1 1 2 N 90 840
 preplace netloc signal_period_timer_irq 1 1 2 N 110 830
 preplace netloc hold_1 1 0 2 -80J 440 N
@@ -79,25 +75,25 @@ preplace netloc rd_addr_0_0_1 1 0 2 NJ 460 NJ
 preplace netloc rd_addr_8_0_1 1 0 2 -40J 480 360J
 preplace netloc rd_addr_9_0_1 1 0 2 0J 530 310J
 preplace netloc buffer_controller_0_bf_shift 1 1 3 430 880 NJ 880 1260
-preplace netloc buffer_controller_0_bf_wr 1 1 3 460 860 NJ 860 1270
-preplace netloc buffer_controller_0_bf_wr_addr 1 1 3 440 200 NJ 200 1320
-preplace netloc buffer_controller_0_bf_wr_data 1 1 3 450 220 NJ 220 1310
-preplace netloc MagPingPongBuffers_0_busy 1 2 3 800J 740 NJ 740 1560
-preplace netloc MagPingPongBuffers_0_irq 1 2 1 830 490n
+preplace netloc buffer_controller_0_bf_wr 1 1 3 450 860 NJ 860 1270
+preplace netloc buffer_controller_0_bf_wr_addr 1 1 3 440 230 NJ 230 1280
+preplace netloc buffer_controller_0_bf_wr_data 1 1 3 460 850 NJ 850 1280
+preplace netloc MagPingPongBuffers_0_busy 1 2 3 820J 590 1350J 520 1600
+preplace netloc MagPingPongBuffers_0_irq 1 2 1 840 490n
 preplace netloc MagPingPongBuffers_0_rd_dout_8 1 2 3 NJ 710 NJ 710 NJ
 preplace netloc MagPingPongBuffers_0_rd_dout_7 1 2 3 NJ 690 NJ 690 NJ
 preplace netloc MagPingPongBuffers_0_rd_dout_6 1 2 3 NJ 670 NJ 670 NJ
-preplace netloc MagPingPongBuffers_0_rd_dout_5 1 2 3 NJ 650 1320J 480 1590J
-preplace netloc MagPingPongBuffers_0_rd_dout_4 1 2 3 NJ 630 1340J 650 1560J
-preplace netloc MagPingPongBuffers_0_rd_dout_3 1 2 3 760J 660 NJ 660 1610J
-preplace netloc MagPingPongBuffers_0_rd_dout_2 1 2 3 780J 640 NJ 640 1580J
-preplace netloc MagPingPongBuffers_0_rd_dout_11 1 2 3 770J 680 NJ 680 1600J
-preplace netloc MagPingPongBuffers_0_rd_dout_10 1 2 3 790J 620 1340J 500 1580J
-preplace netloc MagPingPongBuffers_0_rd_dout_1 1 2 3 810J 610 1300J 470 1600J
-preplace netloc MagPingPongBuffers_0_rd_dout_0 1 2 3 830J 600 1330J 510 NJ
+preplace netloc MagPingPongBuffers_0_rd_dout_5 1 2 3 NJ 650 1370J 480 1640J
+preplace netloc MagPingPongBuffers_0_rd_dout_4 1 2 3 NJ 630 1380J 650 1610J
+preplace netloc MagPingPongBuffers_0_rd_dout_3 1 2 3 760J 660 NJ 660 1660J
+preplace netloc MagPingPongBuffers_0_rd_dout_2 1 2 3 780J 640 NJ 640 1630J
+preplace netloc MagPingPongBuffers_0_rd_dout_11 1 2 3 770J 680 NJ 680 1650J
+preplace netloc MagPingPongBuffers_0_rd_dout_10 1 2 3 790J 620 1380J 500 1630J
+preplace netloc MagPingPongBuffers_0_rd_dout_1 1 2 3 800J 610 1330J 470 1660J
+preplace netloc MagPingPongBuffers_0_rd_dout_0 1 2 3 810J 600 1340J 490 1650J
 preplace netloc MagPingPongBuffers_0_rd_dout_9 1 2 3 NJ 730 NJ 730 NJ
-levelinfo -pg 1 -130 180 610 1070 1450 1660
-pagesize -pg 1 -db -bbox -sgen -330 -60 1860 960
+levelinfo -pg 1 -130 180 610 1070 1490 1680
+pagesize -pg 1 -db -bbox -sgen -330 -60 1880 960
 "
 }
 {

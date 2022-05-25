@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE8E1E88DB3F991BE",
+      "boundary_crc": "0xC334CED889B51C97",
       "device": "xczu3eg-sbva484-1-i",
       "gen_directory": "../../../../BufferFlowControl.gen/sources_1/bd/BufferFlowControl",
       "name": "BufferFlowControl",
@@ -72,16 +72,6 @@
             "value_src": "default"
           }
         }
-      },
-      "gain_curr": {
-        "direction": "I",
-        "left": "23",
-        "right": "0"
-      },
-      "gain_ref": {
-        "direction": "O",
-        "left": "23",
-        "right": "0"
       },
       "bfr_hold": {
         "direction": "I",
@@ -543,16 +533,6 @@
               }
             }
           },
-          "gain_curr": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "gain_ref": {
-            "direction": "O",
-            "left": "23",
-            "right": "0"
-          },
           "n_samples_out": {
             "direction": "O",
             "left": "5",
@@ -567,12 +547,6 @@
       }
     },
     "nets": {
-      "BufferFlowControl_gain_ref": {
-        "ports": [
-          "buffer_controller_0/gain_ref",
-          "gain_ref"
-        ]
-      },
       "BufferFlowControl_irq_out": {
         "ports": [
           "buffer_controller_0/irq_out",
@@ -646,12 +620,6 @@
           "sample_interval_counter/clk",
           "MagPingPongBuffers_0/clk",
           "buffer_controller_0/clk"
-        ]
-      },
-      "gain_curr_1": {
-        "ports": [
-          "gain_curr",
-          "buffer_controller_0/gain_curr"
         ]
       },
       "or_gate_0_outp": {

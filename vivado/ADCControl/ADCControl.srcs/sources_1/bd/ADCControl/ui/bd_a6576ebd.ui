@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-388,-148",
+   "Default View_TopLeft":"-94,-173",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -20,17 +20,15 @@ preplace portBus gpio_UnD -pg 1 -lvl 4 -x 1100 -y 410 -defaultsOSRD
 preplace portBus ch_out -pg 1 -lvl 4 -x 1100 -y 510 -defaultsOSRD
 preplace portBus spi_addr -pg 1 -lvl 4 -x 1100 -y 370 -defaultsOSRD
 preplace portBus data_out -pg 1 -lvl 4 -x 1100 -y 490 -defaultsOSRD
-preplace portBus curr_gains -pg 1 -lvl 0 -x -20 -y 80 -defaultsOSRD
-preplace inst max_gain -pg 1 -lvl 2 -x 450 -y 80 -defaultsOSRD
+preplace portBus sample_cnt_target -pg 1 -lvl 0 -x -20 -y 280 -defaultsOSRD
 preplace inst counter_0 -pg 1 -lvl 2 -x 450 -y 240 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -x 110 -y 160 -defaultsOSRD
 preplace inst ADC_controller -pg 1 -lvl 3 -x 840 -y 450 -defaultsOSRD
-preplace netloc clka_0_1 1 0 3 0 220 200 140 630
-preplace netloc rst_n_0_1 1 0 3 N 260 210 20 640J
-preplace netloc gpio_UnD_ref_0_1 1 0 3 NJ 440 210 460 NJ
-preplace netloc gpio_nCS_ref_0_1 1 0 3 NJ 460 200 480 NJ
-preplace netloc spi_irq_0_1 1 0 3 NJ 420 230 440 NJ
-preplace netloc spi_din_0_1 1 0 3 NJ 400 240 420 NJ
+preplace netloc clka_0_1 1 0 3 N 170 140 130 610
+preplace netloc rst_n_0_1 1 0 3 N 260 130 140 600J
+preplace netloc gpio_UnD_ref_0_1 1 0 3 NJ 440 140 460 NJ
+preplace netloc gpio_nCS_ref_0_1 1 0 3 NJ 460 130 480 NJ
+preplace netloc spi_irq_0_1 1 0 3 NJ 420 150 440 NJ
+preplace netloc spi_din_0_1 1 0 3 NJ 400 160 420 NJ
 preplace netloc ADC_controller_0_gpio_nCS 1 3 1 1080J 430n
 preplace netloc ADC_controller_0_spi_dout 1 3 1 1060J 390n
 preplace netloc ADC_controller_0_spi_rw 1 3 1 1040J 350n
@@ -40,14 +38,13 @@ preplace netloc ADC_controller_0_spi_cs 1 3 1 1030J 330n
 preplace netloc ADC_controller_0_spi_addr 1 3 1 1050J 370n
 preplace netloc ADC_controller_0_data_out 1 3 1 1040J 490n
 preplace netloc ADC_controller_0_irq_out 1 3 1 1080J 530n
-preplace netloc gains_0_1 1 0 2 NJ 80 N
-preplace netloc ADC_controller_t_sample_en 1 1 3 230 0 NJ 0 1020
-preplace netloc ADC_controller_t_sample_rest 1 1 3 240 10 NJ 10 1010
-preplace netloc counter_0_cnt 1 2 1 620 230n
-preplace netloc counter_0_irq 1 2 1 610 250n
-preplace netloc xlconstant_0_dout 1 1 1 220 160n
+preplace netloc ADC_controller_t_sample_en 1 1 3 150 110 NJ 110 1020
+preplace netloc ADC_controller_t_sample_rest 1 1 3 160 120 NJ 120 1010
+preplace netloc counter_0_cnt 1 2 1 590 230n
+preplace netloc counter_0_irq 1 2 1 580 250n
+preplace netloc target_0_1 1 0 2 NJ 280 NJ
 levelinfo -pg 1 -20 110 450 840 1100
-pagesize -pg 1 -db -bbox -sgen -200 -130 1260 660
+pagesize -pg 1 -db -bbox -sgen -250 -130 1260 660
 "
 }
 0

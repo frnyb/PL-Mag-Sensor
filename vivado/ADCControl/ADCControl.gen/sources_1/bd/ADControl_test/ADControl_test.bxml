@@ -63,7 +63,6 @@
       <ModuleReference TargetName="ADCControl" Type="Block Design" SubInstancePath="ADControl_test_ADCControl_0">
         <TopFile Name="../../../../ADCControl.srcs/sources_1/bd/ADCControl/ADCControl.bd"/>
         <FileCollection>
-          <File Name="../../../../../../src/max_gain.vhd"/>
           <File Name="../../../../../../src/counter.vhd"/>
           <File Name="../../../../../../src/ADC_controller.vhd"/>
           <File Name="../../../../ADCControl.srcs/sources_1/bd/ADCControl/ADCControl.bd"/>

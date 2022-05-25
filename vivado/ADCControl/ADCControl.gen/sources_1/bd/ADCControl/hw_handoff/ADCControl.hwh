@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar  9 13:02:02 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 25 14:28:06 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="ADCControl" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -81,9 +81,9 @@
         <CONNECTION INSTANCE="ADC_controller" PORT="irq_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="23" NAME="curr_gains" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_curr_gains">
+    <PORT DIR="I" LEFT="19" NAME="sample_cnt_target" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sample_cnt_target">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="max_gain" PORT="gains"/>
+        <CONNECTION INSTANCE="counter_0" PORT="target"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -226,9 +226,9 @@
             <CONNECTION INSTANCE="ADC_controller" PORT="t_sample_rest"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="19" NAME="target" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+        <PORT DIR="I" LEFT="19" NAME="target" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sample_cnt_target">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="sample_cnt_target"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="19" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_cnt">
@@ -239,39 +239,6 @@
         <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="counter_0_irq">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_controller" PORT="t_sample_irq"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/max_gain" HWVERSION="1.0" INSTANCE="max_gain" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="max_gain" VLNV="xilinx.com:module_ref:max_gain:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="ADCControl_max_gain_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="23" NAME="gains" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_curr_gains">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="curr_gains"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="max_gain_out" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="20"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x08236"/>
-        <PARAMETER NAME="Component_Name" VALUE="ADCControl_xlconstant_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="19" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="counter_0" PORT="target"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
