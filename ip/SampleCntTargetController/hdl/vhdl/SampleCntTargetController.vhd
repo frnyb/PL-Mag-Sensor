@@ -11,50 +11,51 @@ use IEEE.numeric_std.all;
 
 entity SampleCntTargetController is
 generic (
-    C_S_AXI_CONTROL_ADDR_WIDTH : INTEGER := 5;
-    C_S_AXI_CONTROL_DATA_WIDTH : INTEGER := 32 );
+    C_S_AXI_CPU_ADDR_WIDTH : INTEGER := 5;
+    C_S_AXI_CPU_DATA_WIDTH : INTEGER := 32 );
 port (
-    ap_start : IN STD_LOGIC;
-    ap_done : OUT STD_LOGIC;
-    ap_idle : OUT STD_LOGIC;
-    ap_ready : OUT STD_LOGIC;
     sample_cnt_target_out : OUT STD_LOGIC_VECTOR (19 downto 0);
-    s_axi_control_AWVALID : IN STD_LOGIC;
-    s_axi_control_AWREADY : OUT STD_LOGIC;
-    s_axi_control_AWADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_ADDR_WIDTH-1 downto 0);
-    s_axi_control_WVALID : IN STD_LOGIC;
-    s_axi_control_WREADY : OUT STD_LOGIC;
-    s_axi_control_WDATA : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_DATA_WIDTH-1 downto 0);
-    s_axi_control_WSTRB : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_DATA_WIDTH/8-1 downto 0);
-    s_axi_control_ARVALID : IN STD_LOGIC;
-    s_axi_control_ARREADY : OUT STD_LOGIC;
-    s_axi_control_ARADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_ADDR_WIDTH-1 downto 0);
-    s_axi_control_RVALID : OUT STD_LOGIC;
-    s_axi_control_RREADY : IN STD_LOGIC;
-    s_axi_control_RDATA : OUT STD_LOGIC_VECTOR (C_S_AXI_CONTROL_DATA_WIDTH-1 downto 0);
-    s_axi_control_RRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
-    s_axi_control_BVALID : OUT STD_LOGIC;
-    s_axi_control_BREADY : IN STD_LOGIC;
-    s_axi_control_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
+    s_axi_CPU_AWVALID : IN STD_LOGIC;
+    s_axi_CPU_AWREADY : OUT STD_LOGIC;
+    s_axi_CPU_AWADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CPU_ADDR_WIDTH-1 downto 0);
+    s_axi_CPU_WVALID : IN STD_LOGIC;
+    s_axi_CPU_WREADY : OUT STD_LOGIC;
+    s_axi_CPU_WDATA : IN STD_LOGIC_VECTOR (C_S_AXI_CPU_DATA_WIDTH-1 downto 0);
+    s_axi_CPU_WSTRB : IN STD_LOGIC_VECTOR (C_S_AXI_CPU_DATA_WIDTH/8-1 downto 0);
+    s_axi_CPU_ARVALID : IN STD_LOGIC;
+    s_axi_CPU_ARREADY : OUT STD_LOGIC;
+    s_axi_CPU_ARADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CPU_ADDR_WIDTH-1 downto 0);
+    s_axi_CPU_RVALID : OUT STD_LOGIC;
+    s_axi_CPU_RREADY : IN STD_LOGIC;
+    s_axi_CPU_RDATA : OUT STD_LOGIC_VECTOR (C_S_AXI_CPU_DATA_WIDTH-1 downto 0);
+    s_axi_CPU_RRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
+    s_axi_CPU_BVALID : OUT STD_LOGIC;
+    s_axi_CPU_BREADY : IN STD_LOGIC;
+    s_axi_CPU_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
     ap_clk : IN STD_LOGIC;
-    ap_rst_n : IN STD_LOGIC );
+    ap_rst_n : IN STD_LOGIC;
+    interrupt : OUT STD_LOGIC );
 end;
 
 
 architecture behav of SampleCntTargetController is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "SampleCntTargetController_SampleCntTargetController,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=1.000000,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=56,HLS_SYN_LUT=80,HLS_VERSION=2020_2}";
+    "SampleCntTargetController_SampleCntTargetController,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=1.000000,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=62,HLS_SYN_LUT=80,HLS_VERSION=2020_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_boolean_1 : BOOLEAN := true;
 
+    signal ap_start : STD_LOGIC;
+    signal ap_done : STD_LOGIC;
+    signal ap_idle : STD_LOGIC;
+    signal ap_ready : STD_LOGIC;
     signal sample_cnt_target_in : STD_LOGIC_VECTOR (19 downto 0);
     signal ap_rst_n_inv : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
-    component SampleCntTargetController_control_s_axi IS
+    component SampleCntTargetController_CPU_s_axi IS
     generic (
         C_S_AXI_ADDR_WIDTH : INTEGER;
         C_S_AXI_DATA_WIDTH : INTEGER );
@@ -79,38 +80,48 @@ architecture behav of SampleCntTargetController is
         ACLK : IN STD_LOGIC;
         ARESET : IN STD_LOGIC;
         ACLK_EN : IN STD_LOGIC;
-        sample_cnt_target_in : OUT STD_LOGIC_VECTOR (19 downto 0) );
+        sample_cnt_target_in : OUT STD_LOGIC_VECTOR (19 downto 0);
+        ap_start : OUT STD_LOGIC;
+        interrupt : OUT STD_LOGIC;
+        ap_ready : IN STD_LOGIC;
+        ap_done : IN STD_LOGIC;
+        ap_idle : IN STD_LOGIC );
     end component;
 
 
 
 begin
-    control_s_axi_U : component SampleCntTargetController_control_s_axi
+    CPU_s_axi_U : component SampleCntTargetController_CPU_s_axi
     generic map (
-        C_S_AXI_ADDR_WIDTH => C_S_AXI_CONTROL_ADDR_WIDTH,
-        C_S_AXI_DATA_WIDTH => C_S_AXI_CONTROL_DATA_WIDTH)
+        C_S_AXI_ADDR_WIDTH => C_S_AXI_CPU_ADDR_WIDTH,
+        C_S_AXI_DATA_WIDTH => C_S_AXI_CPU_DATA_WIDTH)
     port map (
-        AWVALID => s_axi_control_AWVALID,
-        AWREADY => s_axi_control_AWREADY,
-        AWADDR => s_axi_control_AWADDR,
-        WVALID => s_axi_control_WVALID,
-        WREADY => s_axi_control_WREADY,
-        WDATA => s_axi_control_WDATA,
-        WSTRB => s_axi_control_WSTRB,
-        ARVALID => s_axi_control_ARVALID,
-        ARREADY => s_axi_control_ARREADY,
-        ARADDR => s_axi_control_ARADDR,
-        RVALID => s_axi_control_RVALID,
-        RREADY => s_axi_control_RREADY,
-        RDATA => s_axi_control_RDATA,
-        RRESP => s_axi_control_RRESP,
-        BVALID => s_axi_control_BVALID,
-        BREADY => s_axi_control_BREADY,
-        BRESP => s_axi_control_BRESP,
+        AWVALID => s_axi_CPU_AWVALID,
+        AWREADY => s_axi_CPU_AWREADY,
+        AWADDR => s_axi_CPU_AWADDR,
+        WVALID => s_axi_CPU_WVALID,
+        WREADY => s_axi_CPU_WREADY,
+        WDATA => s_axi_CPU_WDATA,
+        WSTRB => s_axi_CPU_WSTRB,
+        ARVALID => s_axi_CPU_ARVALID,
+        ARREADY => s_axi_CPU_ARREADY,
+        ARADDR => s_axi_CPU_ARADDR,
+        RVALID => s_axi_CPU_RVALID,
+        RREADY => s_axi_CPU_RREADY,
+        RDATA => s_axi_CPU_RDATA,
+        RRESP => s_axi_CPU_RRESP,
+        BVALID => s_axi_CPU_BVALID,
+        BREADY => s_axi_CPU_BREADY,
+        BRESP => s_axi_CPU_BRESP,
         ACLK => ap_clk,
         ARESET => ap_rst_n_inv,
         ACLK_EN => ap_const_logic_1,
-        sample_cnt_target_in => sample_cnt_target_in);
+        sample_cnt_target_in => sample_cnt_target_in,
+        ap_start => ap_start,
+        interrupt => interrupt,
+        ap_ready => ap_ready,
+        ap_done => ap_done,
+        ap_idle => ap_idle);
 
 
 

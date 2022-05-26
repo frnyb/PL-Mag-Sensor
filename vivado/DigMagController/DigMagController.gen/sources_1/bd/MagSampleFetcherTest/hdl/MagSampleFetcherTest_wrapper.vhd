@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Tue Apr 19 11:30:34 2022
+--Date        : Wed May 11 18:54:26 2022
 --Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target MagSampleFetcherTest_wrapper.bd
 --Design      : MagSampleFetcherTest_wrapper

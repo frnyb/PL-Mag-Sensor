@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367639.74 
+vim-8.1.1518-r0: do_populate_lic_setscene
+Elapsed time: 0.13 seconds
+utime: 25
+stime: 1
+cutime: 1
+cstime: 0
+IO rchar: 433617
+IO wchar: 112949
+IO syscr: 240
+IO syscw: 54
+IO read_bytes: 8192
+IO write_bytes: 77824
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.257469
+rusage ru_stime: 0.019805
+rusage ru_maxrss: 140432
+rusage ru_minflt: 6544
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 96
+rusage ru_nvcsw: 8
+rusage ru_nivcsw: 45
+Child rusage ru_utime: 0.0115
+Child rusage ru_stime: 0.008971999999999999
+Child rusage ru_maxrss: 137672
+Child rusage ru_minflt: 1634
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 16
+Child rusage ru_oublock: 56
+Child rusage ru_nvcsw: 30
+Child rusage ru_nivcsw: 4
+Status: PASSED 
+Ended: 1638367639.87 

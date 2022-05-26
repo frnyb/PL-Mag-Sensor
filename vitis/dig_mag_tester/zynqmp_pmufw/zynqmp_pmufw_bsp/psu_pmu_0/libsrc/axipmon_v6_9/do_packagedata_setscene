@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367630.86 
+findutils-4.6.0-r0: do_packagedata_setscene
+Elapsed time: 0.16 seconds
+utime: 24
+stime: 3
+cutime: 1
+cstime: 1
+IO rchar: 534015
+IO wchar: 461085
+IO syscr: 416
+IO syscw: 463
+IO read_bytes: 86016
+IO write_bytes: 311296
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.243495
+rusage ru_stime: 0.031932999999999996
+rusage ru_maxrss: 140128
+rusage ru_minflt: 6453
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 200
+rusage ru_nvcsw: 41
+rusage ru_nivcsw: 38
+Child rusage ru_utime: 0.016427999999999998
+Child rusage ru_stime: 0.019719999999999998
+Child rusage ru_maxrss: 137336
+Child rusage ru_minflt: 1660
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 168
+Child rusage ru_oublock: 408
+Child rusage ru_nvcsw: 34
+Child rusage ru_nivcsw: 20
+Status: PASSED 
+Ended: 1638367631.01 

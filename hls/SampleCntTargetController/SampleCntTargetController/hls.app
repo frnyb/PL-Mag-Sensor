@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="SampleCntTargetController" name="SampleCntTargetController">
+<project xmlns="com.autoesl.autopilot.project" name="SampleCntTargetController" top="SampleCntTargetController">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

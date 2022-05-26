@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367644.27 
+open-amp-rel-v2020.2+gitAUTOINC+29eb98c023-r0: do_packagedata_setscene
+Elapsed time: 0.14 seconds
+utime: 21
+stime: 2
+cutime: 0
+cstime: 1
+IO rchar: 352528
+IO wchar: 163189
+IO syscr: 259
+IO syscw: 133
+IO read_bytes: 4096
+IO write_bytes: 110592
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.21805
+rusage ru_stime: 0.020189
+rusage ru_maxrss: 139944
+rusage ru_minflt: 6442
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 112
+rusage ru_nvcsw: 17
+rusage ru_nivcsw: 32
+Child rusage ru_utime: 0.007679999999999999
+Child rusage ru_stime: 0.019202
+Child rusage ru_maxrss: 137128
+Child rusage ru_minflt: 1638
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 8
+Child rusage ru_oublock: 104
+Child rusage ru_nvcsw: 28
+Child rusage ru_nivcsw: 10
+Status: PASSED 
+Ended: 1638367644.42 

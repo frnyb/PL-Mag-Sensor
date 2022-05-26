@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367623.70 
+vim-8.1.1518-r0: do_populate_sysroot_setscene
+Elapsed time: 0.53 seconds
+utime: 29
+stime: 3
+cutime: 18
+cstime: 15
+IO rchar: 39652738
+IO wchar: 58782895
+IO syscr: 7610
+IO syscw: 8427
+IO read_bytes: 9371648
+IO write_bytes: 32993280
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.291962
+rusage ru_stime: 0.037009
+rusage ru_maxrss: 140620
+rusage ru_minflt: 6713
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 888
+rusage ru_nvcsw: 1119
+rusage ru_nivcsw: 65
+Child rusage ru_utime: 0.181727
+Child rusage ru_stime: 0.15523299999999998
+Child rusage ru_maxrss: 137596
+Child rusage ru_minflt: 1782
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 18304
+Child rusage ru_oublock: 63552
+Child rusage ru_nvcsw: 963
+Child rusage ru_nivcsw: 979
+Status: PASSED 
+Ended: 1638367624.23 

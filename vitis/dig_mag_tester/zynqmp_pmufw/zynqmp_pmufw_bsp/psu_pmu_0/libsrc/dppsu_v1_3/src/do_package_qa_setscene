@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367646.25 
+ultra96-misc-1.0-r0: do_package_qa_setscene
+Elapsed time: 0.28 seconds
+utime: 19
+stime: 0
+cutime: 0
+cstime: 0
+IO rchar: 308000
+IO wchar: 51454
+IO syscr: 102
+IO syscw: 28
+IO read_bytes: 4096
+IO write_bytes: 49152
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.199729
+rusage ru_stime: 0.003992
+rusage ru_maxrss: 139760
+rusage ru_minflt: 5198
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 96
+rusage ru_nvcsw: 4
+rusage ru_nivcsw: 19
+Child rusage ru_utime: 0.00262
+Child rusage ru_stime: 0.004144
+Child rusage ru_maxrss: 136984
+Child rusage ru_minflt: 797
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 8
+Child rusage ru_oublock: 0
+Child rusage ru_nvcsw: 8
+Child rusage ru_nivcsw: 1
+Status: PASSED 
+Ended: 1638367646.54 

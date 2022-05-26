@@ -42,25 +42,6 @@
  
  
 /******************************************************************/
-/* Definitions for driver SLIDINGWINDOWMAGSAMPLEFETCHER */
-#define XPAR_XSLIDINGWINDOWMAGSAMPLEFETCHER_NUM_INSTANCES 1
-
-/* Definitions for peripheral SLIDINGWINDOWMAGSAMP_0 */
-#define XPAR_SLIDINGWINDOWMAGSAMP_0_DEVICE_ID 0
-#define XPAR_SLIDINGWINDOWMAGSAMP_0_S_AXI_AXI_BASEADDR 0xA0020000
-#define XPAR_SLIDINGWINDOWMAGSAMP_0_S_AXI_AXI_HIGHADDR 0xA002FFFF
-
-
-/******************************************************************/
-
-/* Canonical definitions for peripheral SLIDINGWINDOWMAGSAMP_0 */
-#define XPAR_XSLIDINGWINDOWMAGSAMPLEFETCHER_0_DEVICE_ID XPAR_SLIDINGWINDOWMAGSAMP_0_DEVICE_ID
-#define XPAR_XSLIDINGWINDOWMAGSAMPLEFETCHER_0_S_AXI_AXI_BASEADDR 0xA0020000
-#define XPAR_XSLIDINGWINDOWMAGSAMPLEFETCHER_0_S_AXI_AXI_HIGHADDR 0xA002FFFF
-
-
-/******************************************************************/
-
 /* Definitions for driver AXIPMON */
 #define XPAR_XAXIPMON_NUM_INSTANCES 4U
 

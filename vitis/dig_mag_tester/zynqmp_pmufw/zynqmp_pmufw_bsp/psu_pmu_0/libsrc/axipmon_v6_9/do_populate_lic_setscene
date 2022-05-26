@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367630.52 
+findutils-4.6.0-r0: do_populate_lic_setscene
+Elapsed time: 0.14 seconds
+utime: 25
+stime: 1
+cutime: 1
+cstime: 1
+IO rchar: 431755
+IO wchar: 215620
+IO syscr: 241
+IO syscw: 63
+IO read_bytes: 24576
+IO write_bytes: 126976
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.25053
+rusage ru_stime: 0.015906
+rusage ru_maxrss: 140124
+rusage ru_minflt: 6517
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 96
+rusage ru_nvcsw: 11
+rusage ru_nivcsw: 37
+Child rusage ru_utime: 0.0116
+Child rusage ru_stime: 0.010553
+Child rusage ru_maxrss: 137336
+Child rusage ru_minflt: 1660
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 48
+Child rusage ru_oublock: 152
+Child rusage ru_nvcsw: 26
+Child rusage ru_nivcsw: 31
+Status: PASSED 
+Ended: 1638367630.66 

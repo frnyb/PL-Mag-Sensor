@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-i
 set SourceFiles {sc {} c ../../../../src/sample_cnt_target_controller.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /vol/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/solution1.directive
+set DirectiveFile /home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/solution1.directive
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

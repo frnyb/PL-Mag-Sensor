@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652100502756">
-  <ports id="1" name="y_in" type="PortType" originalName="y_in" coreId="1667851365" bitwidth="32">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652346084772">
+  <ports id="1" name="y_in" type="PortType" originalName="y_in" coreId="1869366831" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="x_in" type="PortType" originalName="x_in" coreId="2003316581" bitwidth="32">
+  <ports id="2" name="x_in" type="PortType" originalName="x_in" coreId="65" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="12" name="ap_return" direction="DirOut">
@@ -271,17 +271,17 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>.critedge384</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="x_in_read" lineNumber="754" originalName="x_in" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="33620225" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="x_in_read" lineNumber="754" originalName="x_in" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="33620225" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="754" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>x_in</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="y_in_read" lineNumber="754" originalName="y_in" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="113" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="y_in_read" lineNumber="754" originalName="y_in" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="167837953" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="754" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>y_in</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="data_V" lineNumber="312" originalName="data.V" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="data_V_fu_190_p1" coreId="49" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="data_V" lineNumber="312" originalName="data.V" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="data_V_fu_190_p1" coreId="0" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="312" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="fp_struct"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
@@ -291,7 +291,7 @@
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="p_Result_s" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_s_fu_194_p3" coreId="161" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="p_Result_s" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_s_fu_194_p3" coreId="791555624" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="803" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator="/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -299,7 +299,7 @@
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="tmp" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_fu_202_p4" coreId="795766633" contextFuncName="get" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="tmp" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_fu_202_p4" coreId="49" contextFuncName="get" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="get"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -308,12 +308,12 @@
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="tmp_162" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_162_fu_212_p1" coreId="49" contextFuncName="get" bitwidth="23" opcode="trunc" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="tmp_162" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_162_fu_212_p1" coreId="113" contextFuncName="get" bitwidth="23" opcode="trunc" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="get"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="data_V_6" lineNumber="312" originalName="data.V" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="data_V_6_fu_216_p1" coreId="49" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="data_V_6" lineNumber="312" originalName="data.V" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="data_V_6_fu_216_p1" coreId="49" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="312" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="fp_struct"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
@@ -321,7 +321,7 @@
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="p_Result_281" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_281_reg_546" coreId="129" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="p_Result_281" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_281_reg_546" coreId="49" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="803" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator="/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
@@ -334,7 +334,7 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="tmp_163" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_163_fu_228_p4" coreId="129" contextFuncName="get" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="tmp_163" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_163_fu_228_p4" coreId="49" contextFuncName="get" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="get"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -342,25 +342,25 @@
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="tmp_164" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_164_fu_238_p1" coreId="0" contextFuncName="get" bitwidth="23" opcode="trunc" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="tmp_164" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_164_fu_238_p1" coreId="49" contextFuncName="get" bitwidth="23" opcode="trunc" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="get"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln757" lineNumber="757" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln757_fu_242_p2" opType="icmp" coreId="177" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln757" lineNumber="757" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln757_fu_242_p2" opType="icmp" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="757" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="xor_ln18" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="xor_ln18_fu_248_p2" opType="xor" coreId="257" contextFuncName="generic_isnan_float_s" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="12" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="xor_ln18" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="xor_ln18_fu_248_p2" opType="xor" coreId="4160749696" contextFuncName="generic_isnan_float_s" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="12" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" linenumber="18" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="generic_isnan&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="icmp_ln828" lineNumber="828" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln828_fu_254_p2" opType="icmp" coreId="49" contextFuncName="operator_ne_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.97" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="icmp_ln828" lineNumber="828" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln828_fu_254_p2" opType="icmp" coreId="808595506" contextFuncName="operator_ne_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.97" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" linenumber="828" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator!=&amp;lt;32, true&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
@@ -370,13 +370,13 @@
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="or_ln757" lineNumber="757" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln757_fu_260_p2" opType="or" coreId="132" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="or" m_display="0" m_delay="0.33" m_topoIndex="14" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="or_ln757" lineNumber="757" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln757_fu_260_p2" opType="or" coreId="1936484399" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="or" m_display="0" m_delay="0.33" m_topoIndex="14" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="757" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln18" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="generic_isnan_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln18" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="generic_isnan_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" linenumber="18" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="generic_isnan&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
@@ -406,20 +406,20 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>.critedge385</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="icmp_ln757_1" lineNumber="757" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln757_1_fu_266_p2" opType="icmp" coreId="877419024" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="icmp_ln757_1" lineNumber="757" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln757_1_fu_266_p2" opType="icmp" coreId="49" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="757" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="xor_ln18_1" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="xor_ln18_1_fu_272_p2" opType="xor" coreId="49" contextFuncName="generic_isnan_float_s" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="17" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="xor_ln18_1" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="xor_ln18_1_fu_272_p2" opType="xor" coreId="49" contextFuncName="generic_isnan_float_s" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="17" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" linenumber="18" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="generic_isnan&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="icmp_ln828_1" lineNumber="828" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln828_1_fu_278_p2" opType="icmp" coreId="876828240" contextFuncName="operator_ne_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.97" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="icmp_ln828_1" lineNumber="828" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln828_1_fu_278_p2" opType="icmp" coreId="865" contextFuncName="operator_ne_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.97" m_topoIndex="18" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" linenumber="828" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator!=&amp;lt;32, true&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
@@ -427,13 +427,13 @@
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="or_ln757_1" lineNumber="757" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln757_1_fu_284_p2" opType="or" coreId="876323368" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="or" m_display="0" m_delay="0.33" m_topoIndex="19" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="or_ln757_1" lineNumber="757" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln757_1_fu_284_p2" opType="or" coreId="1041" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="or" m_display="0" m_delay="0.33" m_topoIndex="19" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="757" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln18" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="generic_isnan_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln18" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="generic_isnan_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h" linenumber="18" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="generic_isnan&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
@@ -454,14 +454,14 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_32</controlOutputObjs>
     <controlOutputObjs>.critedge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="icmp_ln824" lineNumber="824" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln824_fu_290_p2" opType="icmp" coreId="876377784" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="icmp_ln824" lineNumber="824" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln824_fu_290_p2" opType="icmp" coreId="1" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="21" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" linenumber="824" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator==&amp;lt;32, true&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln762" lineNumber="762" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln762" lineNumber="762" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="796421737" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="762" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>.critedge</controlInputObjs>
@@ -479,13 +479,13 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_143</controlOutputObjs>
     <controlOutputObjs>block_34</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="and_ln762" lineNumber="762" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln762_fu_296_p2" opType="and" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="and" m_display="0" m_delay="0.33" m_topoIndex="23" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="and_ln762" lineNumber="762" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln762_fu_296_p2" opType="and" coreId="4160749840" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="and" m_display="0" m_delay="0.33" m_topoIndex="23" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="762" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln762" lineNumber="762" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1201" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln762" lineNumber="762" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="762" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <controlInputObjs>block_34</controlInputObjs>
@@ -500,7 +500,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_139</controlOutputObjs>
     <controlOutputObjs>.critedge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="br_ln764" lineNumber="764" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="br_ln764" lineNumber="764" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="764" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>.critedge</controlInputObjs>
@@ -517,42 +517,42 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_135</controlOutputObjs>
     <controlOutputObjs>.critedge262</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="icmp_ln824_1" lineNumber="824" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln824_1_fu_302_p2" opType="icmp" coreId="49" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="icmp_ln824_1" lineNumber="824" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln824_1_fu_302_p2" opType="icmp" coreId="1713793936" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="26" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" linenumber="824" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator==&amp;lt;32, true&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="trunc_ln766" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="trunc_ln766_fu_308_p1" coreId="7" contextFuncName="atan2_cordic_float_s" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="27" m_clusterGroupNumber="3">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="trunc_ln766" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="trunc_ln766_fu_308_p1" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="27" m_clusterGroupNumber="3">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="766" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="or_ln766" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln766_fu_312_p2" opType="or" coreId="132" contextFuncName="atan2_cordic_float_s" bitwidth="8" opcode="or" m_display="0" m_topoIndex="28" m_clusterGroupNumber="3">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="or_ln766" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln766_fu_312_p2" opType="or" coreId="1715178192" contextFuncName="atan2_cordic_float_s" bitwidth="8" opcode="or" m_display="0" m_topoIndex="28" m_clusterGroupNumber="3">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="766" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="tmp_39" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_39_fu_318_p4" coreId="49" contextFuncName="atan2_cordic_float_s" bitwidth="15" opcode="partselect" m_display="0" m_topoIndex="29" m_clusterGroupNumber="3">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="tmp_39" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_39_fu_318_p4" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="15" opcode="partselect" m_display="0" m_topoIndex="29" m_clusterGroupNumber="3">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="766" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp_40" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_40_fu_328_p3" coreId="132" contextFuncName="atan2_cordic_float_s" bitwidth="23" opcode="bitconcatenate" m_display="0" m_topoIndex="30" m_clusterGroupNumber="3">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp_40" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_40_fu_328_p3" coreId="4160749696" contextFuncName="atan2_cordic_float_s" bitwidth="23" opcode="bitconcatenate" m_display="0" m_topoIndex="30" m_clusterGroupNumber="3">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="766" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>or</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="icmp_ln766" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln766_fu_336_p2" opType="icmp" coreId="49" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.97" m_topoIndex="31" m_clusterGroupNumber="3">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="icmp_ln766" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln766_fu_336_p2" opType="icmp" coreId="4160749696" contextFuncName="atan2_cordic_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.97" m_topoIndex="31" m_clusterGroupNumber="3">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="766" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="br_ln766" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="878894624" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="br_ln766" lineNumber="766" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="766" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>.critedge262</controlInputObjs>
@@ -570,7 +570,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_123</controlOutputObjs>
     <controlOutputObjs>.critedge264</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="br_ln771" lineNumber="771" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="br_ln771" lineNumber="771" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1711252544" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="771" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>.critedge264</controlInputObjs>
@@ -585,7 +585,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_121</controlOutputObjs>
     <controlOutputObjs>_Z13generic_isinfIfEiT_.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln776" lineNumber="776" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln776" lineNumber="776" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="4160749696" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="776" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>_Z13generic_isinfIfEiT_.exit</controlInputObjs>
@@ -600,7 +600,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>_Z13generic_isinfIfEiT_.exit334</controlOutputObjs>
     <controlOutputObjs>.critedge266</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_41" lineNumber="779" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_41_fu_342_p3" coreId="132" contextFuncName="atan2_cordic_float_s" bitwidth="2" opcode="bitconcatenate" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_41" lineNumber="779" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="tmp_41_fu_342_p3" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="2" opcode="bitconcatenate" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="779" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataInputObjs>bitselect</dataInputObjs>
@@ -608,20 +608,20 @@
       <dataOutputObjs>switch</dataOutputObjs>
       <dataOutputObjs>switch</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="and_ln18" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln18_fu_350_p2" opType="and" coreId="305" contextFuncName="generic_isinf_float_s" bitwidth="1" opcode="and" m_display="0" m_delay="0.33" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="and_ln18" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln18_fu_350_p2" opType="and" coreId="49" contextFuncName="generic_isinf_float_s" bitwidth="1" opcode="and" m_display="0" m_delay="0.33" m_topoIndex="36" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h" linenumber="18" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="generic_isinf&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="and_ln18_1" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln18_1_fu_356_p2" opType="and" coreId="3684145" contextFuncName="generic_isinf_float_s" bitwidth="1" opcode="and" m_display="0" m_delay="0.33" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="and_ln18_1" lineNumber="18" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln18_1_fu_356_p2" opType="and" coreId="49" contextFuncName="generic_isinf_float_s" bitwidth="1" opcode="and" m_display="0" m_delay="0.33" m_topoIndex="37" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h" linenumber="18" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="generic_isinf&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln794" lineNumber="794" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln794" lineNumber="794" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1710371928" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="794" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <controlInputObjs>.critedge266</controlInputObjs>
@@ -640,7 +640,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_99</controlOutputObjs>
     <controlOutputObjs>block_64</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="br_ln808" lineNumber="808" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="br_ln808" lineNumber="808" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="808" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <controlInputObjs>block_64</controlInputObjs>
@@ -656,61 +656,61 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>atan2_cordic_Q1&lt;float>.exit</controlOutputObjs>
     <controlOutputObjs>block_73</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="p_Result_288" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_288_fu_362_p1" coreId="2001" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="p_Result_288" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_288_fu_362_p1" coreId="1712762096" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="zext_ln368" lineNumber="368" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="zext_ln368_fu_366_p1" coreId="16" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="zext_ln368" lineNumber="368" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="zext_ln368_fu_366_p1" coreId="49" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="a" lineNumber="351" originalName="a" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="grp_fu_186_p0" coreId="12" contextFuncName="to_float" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="a" lineNumber="351" originalName="a" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="grp_fu_186_p0" coreId="49" contextFuncName="to_float" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="351" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>fcmp</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="p_Result_289" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_289_fu_375_p1" coreId="657" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="p_Result_289" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_289_fu_375_p1" coreId="1710278032" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="zext_ln368_1" lineNumber="368" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="zext_ln368_1_fu_379_p1" coreId="3556769920" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="zext_ln368_1" lineNumber="368" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="zext_ln368_1_fu_379_p1" coreId="0" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="b" lineNumber="351" originalName="b" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="grp_fu_186_p1" coreId="132" contextFuncName="to_float" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="b" lineNumber="351" originalName="b" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="grp_fu_186_p1" coreId="1710240296" contextFuncName="to_float" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="351" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>fcmp</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="p_Result_290" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_290_fu_388_p3" coreId="4294967295" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="p_Result_290" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_290_fu_388_p3" coreId="49" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="p_Result_291" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_291_fu_396_p3" coreId="49" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="p_Result_291" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_291_fu_396_p3" coreId="0" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="icmp_ln824_2" lineNumber="824" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln824_2_fu_404_p2" opType="icmp" coreId="0" contextFuncName="operator_eq_32_false" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.11" m_topoIndex="48" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="icmp_ln824_2" lineNumber="824" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln824_2_fu_404_p2" opType="icmp" coreId="0" contextFuncName="operator_eq_32_false" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.11" m_topoIndex="48" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_base.h" linenumber="824" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator==&amp;lt;32, false&amp;gt;"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln744" lineNumber="744" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="877621024" contextFuncName="atan2_cordic_Q1_float_s" opcode="br" m_display="0" m_delay="0.54" m_topoIndex="49" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln744" lineNumber="744" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="4160749696" contextFuncName="atan2_cordic_Q1_float_s" opcode="br" m_display="0" m_delay="0.54" m_topoIndex="49" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="744" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
@@ -736,56 +736,56 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_80</controlOutputObjs>
     <controlOutputObjs>block_76</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="icmp_ln746" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln746_fu_410_p2" opType="icmp" coreId="62" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="50" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="icmp_ln746" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln746_fu_410_p2" opType="icmp" coreId="1714047897" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="50" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="746" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="or_ln746" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln746_fu_422_p2" opType="or" coreId="49" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="or_ln746" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln746_fu_422_p2" opType="or" coreId="1953068832" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="746" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="icmp_ln746_1" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln746_1_fu_416_p2" opType="icmp" coreId="0" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="51" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="icmp_ln746_1" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="icmp_ln746_1_fu_416_p2" opType="icmp" coreId="808531253" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="51" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="746" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="or_ln746_1" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln746_1_fu_426_p2" opType="or" coreId="0" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="or_ln746_1" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="or_ln746_1_fu_426_p2" opType="or" coreId="49" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="746" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="and_ln746" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln746_fu_430_p2" opType="and" coreId="877595208" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="and_ln746" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln746_fu_430_p2" opType="and" coreId="0" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="746" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>or</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="tmp_42" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U362" opType="fcmp" coreId="132" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="fcmp" nodeLatency="1" m_display="0" m_delay="3.34" m_topoIndex="52" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="tmp_42" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U362" opType="fcmp" coreId="0" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="fcmp" nodeLatency="1" m_display="0" m_delay="3.34" m_topoIndex="52" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="746" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="and_ln746_1" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln746_1_fu_436_p2" opType="and" coreId="49" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.33" m_topoIndex="66" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="and_ln746_1" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="and_ln746_1_fu_436_p2" opType="and" coreId="0" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.33" m_topoIndex="66" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="746" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln746" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1914729321" contextFuncName="atan2_cordic_Q1_float_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln746" lineNumber="746" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1600417385" contextFuncName="atan2_cordic_Q1_float_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="746" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
@@ -802,7 +802,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>atan2_cordic_Q1&lt;float>.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="tmp_i_160" lineNumber="749" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="grp_atan2_generic_float_s_fu_171" coreId="877536864" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="7.19" m_topoIndex="68" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="tmp_i_160" lineNumber="749" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="grp_atan2_generic_float_s_fu_171" coreId="49" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="7.19" m_topoIndex="68" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="749" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
@@ -810,7 +810,7 @@
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>atan2_generic_float_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="br_ln749" lineNumber="749" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="0" contextFuncName="atan2_cordic_Q1_float_s" opcode="br" nodeLabel="4.0" m_display="0" m_delay="0.54" m_topoIndex="69" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="br_ln749" lineNumber="749" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_Q1_float_s" opcode="br" nodeLabel="4.0" m_display="0" m_delay="0.54" m_topoIndex="69" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="749" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <controlInputObjs>atan2_cordic_Q1&lt;float>.exit</controlInputObjs>
@@ -825,7 +825,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>atan2_cordic_Q1&lt;float>.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="tmp_i" lineNumber="747" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="grp_atan2_generic_float_s_fu_171" coreId="4294967295" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="32" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="7.19" m_topoIndex="70" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="tmp_i" lineNumber="747" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="grp_atan2_generic_float_s_fu_171" coreId="1710655104" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="32" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="7.19" m_topoIndex="70" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="747" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
@@ -833,14 +833,14 @@
       <dataOutputObjs>fsub</dataOutputObjs>
       <constName>atan2_generic_float_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sub_i" lineNumber="747" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="fsub_32ns_32ns_32_5_full_dsp_1_U361" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="auto" opType="fsub" coreId="18" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="32" opcode="fsub" nodeLabel="7.0" nodeLatency="4" m_display="0" m_delay="6.01" m_topoIndex="71" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sub_i" lineNumber="747" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="fsub_32ns_32ns_32_5_full_dsp_1_U361" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="auto" opType="fsub" coreId="18" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="32" opcode="fsub" nodeLabel="7.0" nodeLatency="4" m_display="0" m_delay="6.01" m_topoIndex="71" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="747" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln747" lineNumber="747" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_Q1_float_s" opcode="br" nodeLabel="11.0" m_display="0" m_delay="0.54" m_topoIndex="72" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln747" lineNumber="747" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="4160749696" contextFuncName="atan2_cordic_Q1_float_s" opcode="br" nodeLabel="11.0" m_display="0" m_delay="0.54" m_topoIndex="72" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="747" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <controlInputObjs>atan2_cordic_Q1&lt;float>.exit</controlInputObjs>
@@ -862,7 +862,7 @@
     <controlOutputObjs>block_96</controlOutputObjs>
     <controlOutputObjs>block_91</controlOutputObjs>
     <controlOutputObjs>block_86</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="c" lineNumber="747" originalName="c" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="32" opcode="phi" nodeLabel="12.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="c" lineNumber="747" originalName="c" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1" contextFuncName="atan2_cordic_Q1_float_s" bitwidth="32" opcode="phi" nodeLabel="12.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="816" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="747" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic_Q1&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fsub</dataInputObjs>
@@ -875,14 +875,14 @@
       <controlInputObjs>block_64</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="d" lineNumber="817" originalName="d" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="fsub_32ns_32ns_32_5_full_dsp_1_U361" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="auto" opType="fsub" coreId="18" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="fsub" nodeLabel="12.0" nodeLatency="4" m_display="0" m_delay="6.01" m_topoIndex="74" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="d" lineNumber="817" originalName="d" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="fsub_32ns_32ns_32_5_full_dsp_1_U361" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="auto" opType="fsub" coreId="18" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="fsub" nodeLabel="12.0" nodeLatency="4" m_display="0" m_delay="6.01" m_topoIndex="74" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="817" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="_ln818" lineNumber="818" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1521" contextFuncName="atan2_cordic_float_s" opcode="switch" nodeLabel="16.0" m_display="0" m_delay="0.88" m_topoIndex="75" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="_ln818" lineNumber="818" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1712900240" contextFuncName="atan2_cordic_float_s" opcode="switch" nodeLabel="16.0" m_display="0" m_delay="0.88" m_topoIndex="75" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="818" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
@@ -903,7 +903,7 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln824" lineNumber="824" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="16.0" m_display="0" m_delay="0.88" m_topoIndex="76" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln824" lineNumber="824" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="961" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="16.0" m_display="0" m_delay="0.88" m_topoIndex="76" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="824" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -916,23 +916,23 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="bitcast_ln822" lineNumber="822" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln822_fu_442_p1" coreId="49" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="bitcast" nodeLabel="16.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="bitcast_ln822" lineNumber="822" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln822_fu_442_p1" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="bitcast" nodeLabel="16.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="822" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="xor_ln822" lineNumber="822" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="xor_ln822_fu_446_p2" opType="xor" coreId="875520288" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="xor" nodeLabel="16.0" m_display="0" m_delay="0.4" m_topoIndex="78" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="xor_ln822" lineNumber="822" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="xor_ln822_fu_446_p2" opType="xor" coreId="28271" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="xor" nodeLabel="16.0" m_display="0" m_delay="0.4" m_topoIndex="78" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="822" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="bitcast_ln822_1" lineNumber="822" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln822_1_fu_452_p1" coreId="132" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="bitcast" nodeLabel="16.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="bitcast_ln822_1" lineNumber="822" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln822_1_fu_452_p1" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="bitcast" nodeLabel="16.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="822" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="br_ln822" lineNumber="822" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="16.0" m_display="0" m_delay="0.88" m_topoIndex="80" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="br_ln822" lineNumber="822" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="2049" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="16.0" m_display="0" m_delay="0.88" m_topoIndex="80" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="822" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -945,23 +945,23 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="bitcast_ln826" lineNumber="826" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln826_fu_456_p1" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="bitcast" nodeLabel="17.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="bitcast_ln826" lineNumber="826" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln826_fu_456_p1" coreId="0" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="bitcast" nodeLabel="17.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="826" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fsub</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="xor_ln826" lineNumber="826" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="xor_ln826_fu_459_p2" opType="xor" coreId="877423712" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="xor" nodeLabel="17.0" m_display="0" m_delay="0.4" m_topoIndex="82" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="xor_ln826" lineNumber="826" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="xor_ln826_fu_459_p2" opType="xor" coreId="1711923536" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="xor" nodeLabel="17.0" m_display="0" m_delay="0.4" m_topoIndex="82" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="826" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="bitcast_ln826_1" lineNumber="826" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln826_1_fu_465_p1" coreId="49" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="bitcast" nodeLabel="17.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="bitcast_ln826_1" lineNumber="826" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln826_1_fu_465_p1" coreId="2049" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="bitcast" nodeLabel="17.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="826" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln826" lineNumber="826" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="0" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="17.0" m_display="0" m_delay="0.88" m_topoIndex="84" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln826" lineNumber="826" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="0" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="17.0" m_display="0" m_delay="0.88" m_topoIndex="84" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="826" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -974,13 +974,13 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="select_ln809" lineNumber="809" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="select_ln809_fu_470_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="select" nodeLabel="18.0" m_display="0" m_delay="0.52" m_topoIndex="87" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="select_ln809" lineNumber="809" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="select_ln809_fu_470_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="atan2_cordic_float_s" bitwidth="32" opcode="select" nodeLabel="18.0" m_display="0" m_delay="0.52" m_topoIndex="87" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="809" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="br_ln830" lineNumber="830" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="18.0" m_display="0" m_delay="0.88" m_topoIndex="88" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="br_ln830" lineNumber="830" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="18.0" m_display="0" m_delay="0.88" m_topoIndex="88" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="830" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -994,7 +994,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_111</controlOutputObjs>
     <controlOutputObjs>block_103</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="br_ln794" lineNumber="794" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="br_ln794" lineNumber="794" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1711919280" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="794" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <controlInputObjs>block_103</controlInputObjs>
@@ -1012,7 +1012,7 @@
     <controlOutputObjs>block_109</controlOutputObjs>
     <controlOutputObjs>block_107</controlOutputObjs>
     <controlOutputObjs>block_105</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="_ln802" lineNumber="802" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1041" contextFuncName="atan2_cordic_float_s" opcode="switch" m_display="0" m_delay="0.88" m_topoIndex="54" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="_ln802" lineNumber="802" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1710186464" contextFuncName="atan2_cordic_float_s" opcode="switch" m_display="0" m_delay="0.88" m_topoIndex="54" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="802" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
@@ -1030,7 +1030,7 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="br_ln805" lineNumber="805" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="0" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="55" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="br_ln805" lineNumber="805" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1712810144" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="55" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="805" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1043,7 +1043,7 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln804" lineNumber="804" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="56" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln804" lineNumber="804" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1710470336" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="56" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="804" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1056,7 +1056,7 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="br_ln806" lineNumber="806" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="878280984" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="57" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="br_ln806" lineNumber="806" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="0" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="57" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="806" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1072,7 +1072,7 @@
     <controlOutputObjs>block_117</controlOutputObjs>
     <controlOutputObjs>block_115</controlOutputObjs>
     <controlOutputObjs>block_113</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln795" lineNumber="795" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="3556769920" contextFuncName="atan2_cordic_float_s" opcode="switch" m_display="0" m_delay="0.88" m_topoIndex="58" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln795" lineNumber="795" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="switch" m_display="0" m_delay="0.88" m_topoIndex="58" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="795" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
@@ -1090,7 +1090,7 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="br_ln798" lineNumber="798" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="874802272" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="59" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="br_ln798" lineNumber="798" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="59" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="798" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1103,7 +1103,7 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="br_ln797" lineNumber="797" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="877582528" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="60" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="br_ln797" lineNumber="797" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="60" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="797" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1116,7 +1116,7 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="br_ln799" lineNumber="799" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="2049" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="61" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="br_ln799" lineNumber="799" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_delay="0.88" m_topoIndex="61" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="799" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1129,18 +1129,18 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="p_Result_287" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_287_fu_477_p3" coreId="2049" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="19.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="p_Result_287" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_287_fu_477_p3" coreId="132" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="19.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="bitcast_ln351_6" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_6_fu_484_p1" coreId="132" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="19.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="bitcast_ln351_6" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_6_fu_484_p1" coreId="49" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="19.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="351" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="to_float"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="br_ln777" lineNumber="777" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="19.0" m_display="0" m_delay="0.88" m_topoIndex="91" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="br_ln777" lineNumber="777" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="19.0" m_display="0" m_delay="0.88" m_topoIndex="91" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="777" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1159,7 +1159,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_131</controlOutputObjs>
     <controlOutputObjs>.critedge263</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="br_ln772" lineNumber="772" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="877191584" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="br_ln772" lineNumber="772" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="2049" contextFuncName="atan2_cordic_float_s" opcode="br" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="772" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <controlInputObjs>.critedge263</controlInputObjs>
@@ -1174,18 +1174,18 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="p_Result_286" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_286_fu_488_p3" coreId="49" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="20.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="p_Result_286" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_286_fu_488_p3" coreId="132" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="20.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="bitcast_ln351_5" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_5_fu_495_p1" coreId="1569" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="20.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="bitcast_ln351_5" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_5_fu_495_p1" coreId="1712896328" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="20.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="351" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="to_float"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="br_ln775" lineNumber="775" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="20.0" m_display="0" m_delay="0.88" m_topoIndex="94" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="br_ln775" lineNumber="775" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="20.0" m_display="0" m_delay="0.88" m_topoIndex="94" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="775" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1204,18 +1204,18 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="p_Result_285" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_285_fu_499_p3" coreId="1919252076" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="21.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="p_Result_285" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_285_fu_499_p3" coreId="10" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="21.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="bitcast_ln351_4" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_4_fu_506_p1" coreId="0" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="21.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="bitcast_ln351_4" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_4_fu_506_p1" coreId="1601200444" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="21.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="351" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="to_float"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="br_ln773" lineNumber="773" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="876795112" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="21.0" m_display="0" m_delay="0.88" m_topoIndex="97" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="br_ln773" lineNumber="773" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1712892472" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="21.0" m_display="0" m_delay="0.88" m_topoIndex="97" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="773" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1234,18 +1234,18 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="p_Result_284" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_284_fu_510_p3" coreId="876392688" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="22.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="p_Result_284" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_284_fu_510_p3" coreId="1710587472" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="22.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="bitcast_ln351_3" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_3_fu_517_p1" coreId="3556798055" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="22.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="bitcast_ln351_3" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_3_fu_517_p1" coreId="4160749696" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="22.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="351" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="to_float"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="br_ln767" lineNumber="767" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="3556769920" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="22.0" m_display="0" m_delay="0.88" m_topoIndex="100" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="br_ln767" lineNumber="767" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1710711960" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="22.0" m_display="0" m_delay="0.88" m_topoIndex="100" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="767" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1264,18 +1264,18 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="p_Result_283" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_283_fu_521_p3" coreId="132" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="23.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="p_Result_283" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_283_fu_521_p3" coreId="1711978640" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="23.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="bitcast_ln351_2" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_2_fu_528_p1" coreId="132" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="23.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="bitcast_ln351_2" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_2_fu_528_p1" coreId="1600417385" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="23.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="351" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="to_float"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="br_ln765" lineNumber="765" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="0" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="23.0" m_display="0" m_delay="0.88" m_topoIndex="103" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="br_ln765" lineNumber="765" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="1709841801" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="23.0" m_display="0" m_delay="0.88" m_topoIndex="103" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="765" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1294,18 +1294,18 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>UnifiedReturnBlock</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="p_Result_282" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_282_fu_532_p3" coreId="0" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="24.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="p_Result_282" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="p_Result_282_fu_532_p3" coreId="0" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="24.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="bitcast_ln351" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_fu_539_p1" coreId="2049" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="24.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="bitcast_ln351" lineNumber="351" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" rtlName="bitcast_ln351_fu_539_p1" coreId="132" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="24.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="351" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="to_float"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="br_ln763" lineNumber="763" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="132" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="24.0" m_display="0" m_delay="0.88" m_topoIndex="106" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="br_ln763" lineNumber="763" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="49" contextFuncName="atan2_cordic_float_s" opcode="br" nodeLabel="24.0" m_display="0" m_delay="0.88" m_topoIndex="106" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="763" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <controlInputObjs>UnifiedReturnBlock</controlInputObjs>
     </node_objs>
@@ -1362,7 +1362,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="UnifiedRetVal" originalName="c" coreId="62" bitwidth="32" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="UnifiedRetVal" originalName="c" coreId="1712817929" bitwidth="32" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
@@ -1398,7 +1398,7 @@
       <controlInputObjs>block_103</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="_ln830" lineNumber="830" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="945" contextFuncName="atan2_cordic_float_s" opcode="ret" nodeLabel="17.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="_ln830" lineNumber="830" fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" fileDirectory="../../../../../../../../../wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" coreId="7" contextFuncName="atan2_cordic_float_s" opcode="ret" nodeLabel="17.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_cordic.h" linenumber="830" fileDirectory="/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared" functionName="atan2_cordic&amp;lt;float&amp;gt;"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>ap_return</dataOutputObjs>

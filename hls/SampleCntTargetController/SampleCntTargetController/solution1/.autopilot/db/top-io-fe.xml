@@ -2,7 +2,7 @@
   <kernel src_name="SampleCntTargetController" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
       <arg id="0" access_type="r" src_name="sample_cnt_target_in" src_type="ap_uint&lt;20&gt;" src_isptr="0" src_bitwidth="32" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="20" hw_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="CPU" hw_bitwidth="20" hw_size_or_depth="1">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
         </hw>
       </arg>

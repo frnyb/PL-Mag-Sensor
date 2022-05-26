@@ -6,7 +6,7 @@
         <DownStreamTool name="vivado"/>
     </downStreamTool>
     <config>
-        <config_export display_name="LLSSineReconstructor" format="ip_catalog" library="PL-Mag-Sensor" output="/home/ffn/Workspace/Projects/PL-Mag-Sensor/ip/LLSSineReconstruction.zip" rtl="vhdl" vendor="DIII"/>
+        <config_export display_name="LLSSineReconstructor" format="ip_catalog" library="PL-Mag-Sensor" output="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/LLSSineReconstruction.zip" rtl="vhdl" vendor="DIII"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -40,7 +40,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ffn/Workspace/Projects/PL-Mag-Sensor/ip/LLSSineReconstruction.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/ip/LLSSineReconstruction.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
         <Format display_name="LLSSineReconstructor" formatName="ip_catalog" library="PL-Mag-Sensor" vendor="DIII" description="" ipname="LLSSineReconstruction" version="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>

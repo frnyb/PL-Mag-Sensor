@@ -38,12 +38,12 @@ typedef uint64_t u64;
 #else
 typedef struct {
     u16 DeviceId;
-    u32 Control_BaseAddress;
+    u32 Cpu_BaseAddress;
 } XSamplecnttargetcontroller_Config;
 #endif
 
 typedef struct {
-    u64 Control_BaseAddress;
+    u64 Cpu_BaseAddress;
     u32 IsReady;
 } XSamplecnttargetcontroller;
 
@@ -80,9 +80,23 @@ int XSamplecnttargetcontroller_Initialize(XSamplecnttargetcontroller *InstancePt
 int XSamplecnttargetcontroller_Release(XSamplecnttargetcontroller *InstancePtr);
 #endif
 
+void XSamplecnttargetcontroller_Start(XSamplecnttargetcontroller *InstancePtr);
+u32 XSamplecnttargetcontroller_IsDone(XSamplecnttargetcontroller *InstancePtr);
+u32 XSamplecnttargetcontroller_IsIdle(XSamplecnttargetcontroller *InstancePtr);
+u32 XSamplecnttargetcontroller_IsReady(XSamplecnttargetcontroller *InstancePtr);
+void XSamplecnttargetcontroller_EnableAutoRestart(XSamplecnttargetcontroller *InstancePtr);
+void XSamplecnttargetcontroller_DisableAutoRestart(XSamplecnttargetcontroller *InstancePtr);
 
 void XSamplecnttargetcontroller_Set_sample_cnt_target_in(XSamplecnttargetcontroller *InstancePtr, u32 Data);
 u32 XSamplecnttargetcontroller_Get_sample_cnt_target_in(XSamplecnttargetcontroller *InstancePtr);
+
+void XSamplecnttargetcontroller_InterruptGlobalEnable(XSamplecnttargetcontroller *InstancePtr);
+void XSamplecnttargetcontroller_InterruptGlobalDisable(XSamplecnttargetcontroller *InstancePtr);
+void XSamplecnttargetcontroller_InterruptEnable(XSamplecnttargetcontroller *InstancePtr, u32 Mask);
+void XSamplecnttargetcontroller_InterruptDisable(XSamplecnttargetcontroller *InstancePtr, u32 Mask);
+void XSamplecnttargetcontroller_InterruptClear(XSamplecnttargetcontroller *InstancePtr, u32 Mask);
+u32 XSamplecnttargetcontroller_InterruptGetEnabled(XSamplecnttargetcontroller *InstancePtr);
+u32 XSamplecnttargetcontroller_InterruptGetStatus(XSamplecnttargetcontroller *InstancePtr);
 
 #ifdef __cplusplus
 }

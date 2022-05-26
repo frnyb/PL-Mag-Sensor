@@ -1,0 +1,416 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x897A343E6DBA9B76",
+      "device": "xczu3eg-sbva484-1-i",
+      "gen_directory": "../../../../DigMagController.gen/sources_1/bd/SingleDigMagController",
+      "name": "SingleDigMagController",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "i2c_master": "",
+      "dig_mag_controller": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "SingleDigMagController_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "idle": {
+        "direction": "O"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "scl_i": {
+        "direction": "I"
+      },
+      "scl_o": {
+        "direction": "O"
+      },
+      "scl_t": {
+        "direction": "O"
+      },
+      "sda_i": {
+        "direction": "I"
+      },
+      "sda_o": {
+        "direction": "O"
+      },
+      "sda_t": {
+        "direction": "O"
+      },
+      "start": {
+        "direction": "I"
+      },
+      "x": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "y": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "z": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "irq_out": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "done": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "i2c_master": {
+        "vlnv": "xilinx.com:module_ref:i2c_master:1.0",
+        "xci_name": "SingleDigMagController_i2c_master_0",
+        "xci_path": "ip/SingleDigMagController_i2c_master_0/SingleDigMagController_i2c_master_0.xci",
+        "inst_hier_path": "i2c_master",
+        "parameters": {
+          "bus_clk": {
+            "value": "100000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "i2c_master",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "interface_iic": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:iic_rtl:1.0",
+            "port_maps": {
+              "SCL_I": {
+                "physical_name": "scl_i",
+                "direction": "I"
+              },
+              "SCL_O": {
+                "physical_name": "scl_o",
+                "direction": "O"
+              },
+              "SCL_T": {
+                "physical_name": "scl_t",
+                "direction": "O"
+              },
+              "SDA_I": {
+                "physical_name": "sda_i",
+                "direction": "I"
+              },
+              "SDA_O": {
+                "physical_name": "sda_o",
+                "direction": "O"
+              },
+              "SDA_T": {
+                "physical_name": "sda_t",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "SingleDigMagController_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "ena": {
+            "direction": "I"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "rw": {
+            "direction": "I"
+          },
+          "data_wr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "data_rd": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ack_error": {
+            "direction": "O"
+          }
+        }
+      },
+      "dig_mag_controller": {
+        "vlnv": "xilinx.com:module_ref:dig_mag_controller:1.0",
+        "xci_name": "SingleDigMagController_dig_mag_controller_0",
+        "xci_path": "ip/SingleDigMagController_dig_mag_controller_0/SingleDigMagController_dig_mag_controller_0.xci",
+        "inst_hier_path": "dig_mag_controller",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dig_mag_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "SingleDigMagController_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "i2c_ena": {
+            "direction": "O"
+          },
+          "i2c_addr": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "i2c_rw": {
+            "direction": "O"
+          },
+          "i2c_data_wr": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "i2c_busy": {
+            "direction": "I"
+          },
+          "i2c_data_rd": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "irq_out": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "x_dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "y_dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "z_dout": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "idle": {
+            "direction": "O"
+          },
+          "done": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "dig_mag_controller_0_i2c_ena": {
+        "ports": [
+          "dig_mag_controller/i2c_ena",
+          "i2c_master/ena"
+        ]
+      },
+      "dig_mag_controller_0_i2c_addr": {
+        "ports": [
+          "dig_mag_controller/i2c_addr",
+          "i2c_master/addr"
+        ]
+      },
+      "dig_mag_controller_0_i2c_rw": {
+        "ports": [
+          "dig_mag_controller/i2c_rw",
+          "i2c_master/rw"
+        ]
+      },
+      "dig_mag_controller_0_i2c_data_wr": {
+        "ports": [
+          "dig_mag_controller/i2c_data_wr",
+          "i2c_master/data_wr"
+        ]
+      },
+      "i2c_master_0_busy": {
+        "ports": [
+          "i2c_master/busy",
+          "dig_mag_controller/i2c_busy"
+        ]
+      },
+      "i2c_master_0_data_rd": {
+        "ports": [
+          "i2c_master/data_rd",
+          "dig_mag_controller/i2c_data_rd"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "i2c_master/clk",
+          "dig_mag_controller/clk"
+        ]
+      },
+      "dig_mag_controller_idle": {
+        "ports": [
+          "dig_mag_controller/idle",
+          "idle"
+        ]
+      },
+      "dig_mag_controller_z_dout": {
+        "ports": [
+          "dig_mag_controller/z_dout",
+          "z"
+        ]
+      },
+      "dig_mag_controller_y_dout": {
+        "ports": [
+          "dig_mag_controller/y_dout",
+          "y"
+        ]
+      },
+      "dig_mag_controller_x_dout": {
+        "ports": [
+          "dig_mag_controller/x_dout",
+          "x"
+        ]
+      },
+      "start_1": {
+        "ports": [
+          "start",
+          "dig_mag_controller/start"
+        ]
+      },
+      "i2c_master_sda_t": {
+        "ports": [
+          "i2c_master/sda_t",
+          "sda_t"
+        ]
+      },
+      "i2c_master_sda_o": {
+        "ports": [
+          "i2c_master/sda_o",
+          "sda_o"
+        ]
+      },
+      "sda_i_1": {
+        "ports": [
+          "sda_i",
+          "i2c_master/sda_i"
+        ]
+      },
+      "i2c_master_scl_t": {
+        "ports": [
+          "i2c_master/scl_t",
+          "scl_t"
+        ]
+      },
+      "i2c_master_scl_o": {
+        "ports": [
+          "i2c_master/scl_o",
+          "scl_o"
+        ]
+      },
+      "scl_i_1": {
+        "ports": [
+          "scl_i",
+          "i2c_master/scl_i"
+        ]
+      },
+      "rst_n_1": {
+        "ports": [
+          "rst_n",
+          "i2c_master/reset_n",
+          "dig_mag_controller/rst_n"
+        ]
+      },
+      "dig_mag_controller_irq_out": {
+        "ports": [
+          "dig_mag_controller/irq_out",
+          "irq_out"
+        ]
+      },
+      "dig_mag_controller_done": {
+        "ports": [
+          "dig_mag_controller/done",
+          "done"
+        ]
+      }
+    }
+  }
+}

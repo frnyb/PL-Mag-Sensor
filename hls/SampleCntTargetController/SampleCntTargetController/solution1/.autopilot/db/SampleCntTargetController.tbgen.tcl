@@ -16,58 +16,52 @@ set C_modelArgList {
 	{ sample_cnt_target_out int 20 regular {pointer 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "sample_cnt_target_in", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 20, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "sample_cnt_target_in","cData": "int20","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":16}, "offset_end" : {"in":23}} , 
+	{ "Name" : "sample_cnt_target_in", "interface" : "axi_slave", "bundle":"CPU","type":"ap_none","bitwidth" : 20, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "sample_cnt_target_in","cData": "int20","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":16}, "offset_end" : {"in":23}} , 
  	{ "Name" : "sample_cnt_target_out", "interface" : "wire", "bitwidth" : 20, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "sample_cnt_target_out","cData": "int20","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 24
+set portNum 21
 set portList { 
-	{ ap_start sc_in sc_logic 1 start -1 } 
-	{ ap_done sc_out sc_logic 1 predone -1 } 
-	{ ap_idle sc_out sc_logic 1 done -1 } 
-	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ sample_cnt_target_out sc_out sc_lv 20 signal 1 } 
-	{ s_axi_control_AWVALID sc_in sc_logic 1 signal -1 } 
-	{ s_axi_control_AWREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_AWADDR sc_in sc_lv 5 signal -1 } 
-	{ s_axi_control_WVALID sc_in sc_logic 1 signal -1 } 
-	{ s_axi_control_WREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_WDATA sc_in sc_lv 32 signal -1 } 
-	{ s_axi_control_WSTRB sc_in sc_lv 4 signal -1 } 
-	{ s_axi_control_ARVALID sc_in sc_logic 1 signal -1 } 
-	{ s_axi_control_ARREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_ARADDR sc_in sc_lv 5 signal -1 } 
-	{ s_axi_control_RVALID sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_RREADY sc_in sc_logic 1 signal -1 } 
-	{ s_axi_control_RDATA sc_out sc_lv 32 signal -1 } 
-	{ s_axi_control_RRESP sc_out sc_lv 2 signal -1 } 
-	{ s_axi_control_BVALID sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_BREADY sc_in sc_logic 1 signal -1 } 
-	{ s_axi_control_BRESP sc_out sc_lv 2 signal -1 } 
+	{ s_axi_CPU_AWVALID sc_in sc_logic 1 signal -1 } 
+	{ s_axi_CPU_AWREADY sc_out sc_logic 1 signal -1 } 
+	{ s_axi_CPU_AWADDR sc_in sc_lv 5 signal -1 } 
+	{ s_axi_CPU_WVALID sc_in sc_logic 1 signal -1 } 
+	{ s_axi_CPU_WREADY sc_out sc_logic 1 signal -1 } 
+	{ s_axi_CPU_WDATA sc_in sc_lv 32 signal -1 } 
+	{ s_axi_CPU_WSTRB sc_in sc_lv 4 signal -1 } 
+	{ s_axi_CPU_ARVALID sc_in sc_logic 1 signal -1 } 
+	{ s_axi_CPU_ARREADY sc_out sc_logic 1 signal -1 } 
+	{ s_axi_CPU_ARADDR sc_in sc_lv 5 signal -1 } 
+	{ s_axi_CPU_RVALID sc_out sc_logic 1 signal -1 } 
+	{ s_axi_CPU_RREADY sc_in sc_logic 1 signal -1 } 
+	{ s_axi_CPU_RDATA sc_out sc_lv 32 signal -1 } 
+	{ s_axi_CPU_RRESP sc_out sc_lv 2 signal -1 } 
+	{ s_axi_CPU_BVALID sc_out sc_logic 1 signal -1 } 
+	{ s_axi_CPU_BREADY sc_in sc_logic 1 signal -1 } 
+	{ s_axi_CPU_BRESP sc_out sc_lv 2 signal -1 } 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
+	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"sample_cnt_target_in","role":"data","value":"16"}] },
-	{ "name": "s_axi_control_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWVALID" } },
-	{ "name": "s_axi_control_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWREADY" } },
-	{ "name": "s_axi_control_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WVALID" } },
-	{ "name": "s_axi_control_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WREADY" } },
-	{ "name": "s_axi_control_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control", "role": "WDATA" } },
-	{ "name": "s_axi_control_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control", "role": "WSTRB" } },
-	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[] },
-	{ "name": "s_axi_control_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARVALID" } },
-	{ "name": "s_axi_control_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARREADY" } },
-	{ "name": "s_axi_control_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "RVALID" } },
-	{ "name": "s_axi_control_RREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "RREADY" } },
-	{ "name": "s_axi_control_RDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control", "role": "RDATA" } },
-	{ "name": "s_axi_control_RRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "control", "role": "RRESP" } },
-	{ "name": "s_axi_control_BVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "BVALID" } },
-	{ "name": "s_axi_control_BREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "BREADY" } },
-	{ "name": "s_axi_control_BRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "control", "role": "BRESP" } }, 
- 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
- 	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
- 	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
- 	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+	{ "name": "s_axi_CPU_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "CPU", "role": "AWADDR" },"address":[{"name":"SampleCntTargetController","role":"start","value":"0","valid_bit":"0"},{"name":"SampleCntTargetController","role":"continue","value":"0","valid_bit":"4"},{"name":"SampleCntTargetController","role":"auto_start","value":"0","valid_bit":"7"},{"name":"sample_cnt_target_in","role":"data","value":"16"}] },
+	{ "name": "s_axi_CPU_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "AWVALID" } },
+	{ "name": "s_axi_CPU_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "AWREADY" } },
+	{ "name": "s_axi_CPU_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "WVALID" } },
+	{ "name": "s_axi_CPU_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "WREADY" } },
+	{ "name": "s_axi_CPU_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "CPU", "role": "WDATA" } },
+	{ "name": "s_axi_CPU_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "CPU", "role": "WSTRB" } },
+	{ "name": "s_axi_CPU_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "CPU", "role": "ARADDR" },"address":[{"name":"SampleCntTargetController","role":"start","value":"0","valid_bit":"0"},{"name":"SampleCntTargetController","role":"done","value":"0","valid_bit":"1"},{"name":"SampleCntTargetController","role":"idle","value":"0","valid_bit":"2"},{"name":"SampleCntTargetController","role":"ready","value":"0","valid_bit":"3"},{"name":"SampleCntTargetController","role":"auto_start","value":"0","valid_bit":"7"}] },
+	{ "name": "s_axi_CPU_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "ARVALID" } },
+	{ "name": "s_axi_CPU_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "ARREADY" } },
+	{ "name": "s_axi_CPU_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "RVALID" } },
+	{ "name": "s_axi_CPU_RREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "RREADY" } },
+	{ "name": "s_axi_CPU_RDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "CPU", "role": "RDATA" } },
+	{ "name": "s_axi_CPU_RRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "CPU", "role": "RRESP" } },
+	{ "name": "s_axi_CPU_BVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "BVALID" } },
+	{ "name": "s_axi_CPU_BREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "BREADY" } },
+	{ "name": "s_axi_CPU_BRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "CPU", "role": "BRESP" } },
+	{ "name": "interrupt", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CPU", "role": "interrupt" } }, 
  	{ "name": "sample_cnt_target_out", "direction": "out", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "sample_cnt_target_out", "role": "default" }} , 
  	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
  	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }}  ]}
@@ -89,7 +83,7 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "sample_cnt_target_in", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sample_cnt_target_out", "Type" : "None", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.CPU_s_axi_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

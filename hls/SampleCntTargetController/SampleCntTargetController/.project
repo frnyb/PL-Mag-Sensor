@@ -29,37 +29,37 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/.apc/.src</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/.apc/.tb</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/.tcls</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/sample_cnt_target_controller.cpp</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/src/sample_cnt_target_controller.cpp</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/src/sample_cnt_target_controller.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/solution1.directive</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/directives.tcl</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/script.tcl</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/SampleCntTargetController/SampleCntTargetController/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

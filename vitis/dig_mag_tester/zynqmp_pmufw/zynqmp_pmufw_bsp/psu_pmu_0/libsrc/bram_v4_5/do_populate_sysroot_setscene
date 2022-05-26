@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367623.70 
+open-amp-rel-v2020.2+gitAUTOINC+29eb98c023-r0: do_populate_sysroot_setscene
+Elapsed time: 0.13 seconds
+utime: 21
+stime: 3
+cutime: 1
+cstime: 0
+IO rchar: 1103755
+IO wchar: 1476368
+IO syscr: 282
+IO syscw: 170
+IO read_bytes: 204800
+IO write_bytes: 790528
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.215185
+rusage ru_stime: 0.035864
+rusage ru_maxrss: 139856
+rusage ru_minflt: 6334
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 104
+rusage ru_nvcsw: 10
+rusage ru_nivcsw: 29
+Child rusage ru_utime: 0.018484999999999998
+Child rusage ru_stime: 0.008539
+Child rusage ru_maxrss: 137060
+Child rusage ru_minflt: 1689
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 400
+Child rusage ru_oublock: 1440
+Child rusage ru_nvcsw: 55
+Child rusage ru_nivcsw: 14
+Status: PASSED 
+Ended: 1638367623.84 

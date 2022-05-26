@@ -24,9 +24,11 @@
     <clock name="default" period="10"/>
   </clockList>
   <config>
-            
+                
+    
     <config_export display_name="CPU_GainController" format="ip_catalog" library="PL-Mag-Sensor" output="/home/ffn/Workspace/Projects/PL-Mag-Sensor/ip/ControlGain.zip" rtl="vhdl" vendor="DIII"/>
-        
+            
+  
   </config>
   <UIConfigurations>
     <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">

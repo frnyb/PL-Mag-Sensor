@@ -31,7 +31,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2003316581</coreId>
+						<coreId>1869366831</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -64,7 +64,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>796354607</coreId>
+						<coreId>52</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -130,7 +130,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>52</coreId>
+						<coreId>1869366831</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -152,8 +152,8 @@
 						<type>0</type>
 						<id>9</id>
 						<name>r_V</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1115</lineNumber>
 						<contextFuncName>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_mul_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -161,13 +161,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>1115</second>
@@ -206,8 +206,8 @@
 						<type>0</type>
 						<id>10</id>
 						<name>beta_read</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1118</lineNumber>
 						<contextFuncName>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_mul_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -215,13 +215,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>1118</second>
@@ -235,7 +235,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1</coreId>
+						<coreId>113</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -260,8 +260,8 @@
 						<type>0</type>
 						<id>11</id>
 						<name>p_Val2_s</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>936</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -269,13 +269,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>936</second>
@@ -289,7 +289,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>791555624</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -314,8 +314,8 @@
 						<type>0</type>
 						<id>13</id>
 						<name>icmp_ln935</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>935</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -323,13 +323,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>935</second>
@@ -343,7 +343,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134330960</coreId>
+						<coreId>226</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -368,8 +368,8 @@
 						<type>0</type>
 						<id>14</id>
 						<name>p_Result_253</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>936</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -377,13 +377,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>936</second>
@@ -397,7 +397,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1701236832</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -423,8 +423,8 @@
 						<type>0</type>
 						<id>15</id>
 						<name>tmp_V</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>939</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -432,13 +432,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>939</second>
@@ -452,7 +452,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>795766633</coreId>
+						<coreId>97</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -477,8 +477,8 @@
 						<type>0</type>
 						<id>16</id>
 						<name>tmp_V_36</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>938</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -486,13 +486,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>938</second>
@@ -506,7 +506,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1819500388</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -532,8 +532,8 @@
 						<type>0</type>
 						<id>17</id>
 						<name>p_Result_s</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1054</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -541,13 +541,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1054</second>
@@ -561,7 +561,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1699204016</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -588,8 +588,8 @@
 						<type>0</type>
 						<id>18</id>
 						<name>p_Result_254</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1055</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -597,13 +597,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1055</second>
@@ -617,7 +617,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1135007648</coreId>
+						<coreId>1703012944</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -643,8 +643,8 @@
 						<type>0</type>
 						<id>19</id>
 						<name>tmp_i</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1056</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -652,13 +652,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1056</second>
@@ -672,7 +672,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1601399156</coreId>
+						<coreId>68</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -698,8 +698,8 @@
 						<type>0</type>
 						<id>20</id>
 						<name>l</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1056</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -707,13 +707,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1056</second>
@@ -727,7 +727,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>897</coreId>
+						<coreId>1701060723</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -751,8 +751,8 @@
 						<type>0</type>
 						<id>21</id>
 						<name>sub_ln944</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>944</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -760,13 +760,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>944</second>
@@ -780,7 +780,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1869375071</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -805,8 +805,8 @@
 						<type>0</type>
 						<id>22</id>
 						<name>lsb_index</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>944</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -814,13 +814,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>944</second>
@@ -834,7 +834,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1132584064</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -859,8 +859,8 @@
 						<type>0</type>
 						<id>23</id>
 						<name>tmp</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>946</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -868,13 +868,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>946</second>
@@ -888,7 +888,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>543517801</coreId>
 					</Obj>
 					<bitwidth>31</bitwidth>
 				</Value>
@@ -915,8 +915,8 @@
 						<type>0</type>
 						<id>24</id>
 						<name>icmp_ln946</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>946</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -924,13 +924,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>946</second>
@@ -944,7 +944,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1869575215</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -969,8 +969,8 @@
 						<type>0</type>
 						<id>25</id>
 						<name>trunc_ln947</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -978,13 +978,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -998,7 +998,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1135017232</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -1022,8 +1022,8 @@
 						<type>0</type>
 						<id>26</id>
 						<name>sub_ln947</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1031,13 +1031,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -1076,8 +1076,8 @@
 						<type>0</type>
 						<id>27</id>
 						<name>zext_ln947</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1085,13 +1085,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -1105,7 +1105,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -1129,8 +1129,8 @@
 						<type>0</type>
 						<id>28</id>
 						<name>lshr_ln947</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1138,13 +1138,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -1183,8 +1183,8 @@
 						<type>0</type>
 						<id>29</id>
 						<name>zext_ln949</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1192,13 +1192,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1212,7 +1212,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1132356544</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -1236,8 +1236,8 @@
 						<type>0</type>
 						<id>30</id>
 						<name>shl_ln949</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1245,13 +1245,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1265,7 +1265,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -1290,8 +1290,8 @@
 						<type>0</type>
 						<id>31</id>
 						<name>or_ln949_15</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1299,13 +1299,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1319,7 +1319,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -1344,8 +1344,8 @@
 						<type>0</type>
 						<id>32</id>
 						<name>and_ln949</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1353,13 +1353,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1373,7 +1373,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134175928</coreId>
+						<coreId>825046064</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -1398,8 +1398,8 @@
 						<type>0</type>
 						<id>33</id>
 						<name>icmp_ln949</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1407,13 +1407,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1427,7 +1427,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>99</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -1452,8 +1452,8 @@
 						<type>0</type>
 						<id>34</id>
 						<name>tmp_141</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1461,13 +1461,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1481,7 +1481,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1135009912</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -1507,8 +1507,8 @@
 						<type>0</type>
 						<id>35</id>
 						<name>xor_ln949</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1516,13 +1516,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1536,7 +1536,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1135009328</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -1561,8 +1561,8 @@
 						<type>0</type>
 						<id>36</id>
 						<name>p_Result_255</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1570,13 +1570,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1616,8 +1616,8 @@
 						<type>0</type>
 						<id>37</id>
 						<name>icmp_ln954</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1625,13 +1625,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -1645,7 +1645,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -1670,8 +1670,8 @@
 						<type>0</type>
 						<id>38</id>
 						<name>and_ln949_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1679,13 +1679,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -1724,8 +1724,8 @@
 						<type>0</type>
 						<id>39</id>
 						<name>sub_ln955</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>955</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1733,13 +1733,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>955</second>
@@ -1753,7 +1753,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1778,8 +1778,8 @@
 						<type>0</type>
 						<id>40</id>
 						<name>zext_ln955</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>955</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1787,13 +1787,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>955</second>
@@ -1807,7 +1807,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1819243365</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -1831,8 +1831,8 @@
 						<type>0</type>
 						<id>41</id>
 						<name>shl_ln955</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>955</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1840,13 +1840,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>955</second>
@@ -1860,7 +1860,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>807418469</coreId>
+						<coreId>757935394</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -1885,8 +1885,8 @@
 						<type>0</type>
 						<id>42</id>
 						<name>select_ln946</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>946</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1894,13 +1894,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>946</second>
@@ -1914,7 +1914,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>574451311</coreId>
+						<coreId>1986360096</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -1940,8 +1940,8 @@
 						<type>0</type>
 						<id>43</id>
 						<name>add_ln954</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -1949,13 +1949,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -1969,7 +1969,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1043276322</coreId>
+						<coreId>1030185332</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1994,8 +1994,8 @@
 						<type>0</type>
 						<id>44</id>
 						<name>zext_ln954</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2003,13 +2003,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -2023,7 +2023,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1952671092</coreId>
+						<coreId>1030185332</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -2047,8 +2047,8 @@
 						<type>0</type>
 						<id>45</id>
 						<name>lshr_ln954</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2056,13 +2056,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -2076,7 +2076,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>825045040</coreId>
+						<coreId>757935405</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -2101,8 +2101,8 @@
 						<type>0</type>
 						<id>46</id>
 						<name>select_ln954</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2110,13 +2110,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -2130,7 +2130,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>828326990</coreId>
+						<coreId>1868767266</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -2156,8 +2156,8 @@
 						<type>0</type>
 						<id>47</id>
 						<name>m</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2165,13 +2165,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -2185,7 +2185,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1852795252</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -2211,8 +2211,8 @@
 						<type>0</type>
 						<id>48</id>
 						<name>zext_ln951</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>951</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2220,13 +2220,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>951</second>
@@ -2240,7 +2240,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1700935488</coreId>
 					</Obj>
 					<bitwidth>61</bitwidth>
 				</Value>
@@ -2264,8 +2264,8 @@
 						<type>0</type>
 						<id>49</id>
 						<name>zext_ln961</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>961</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2273,13 +2273,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>961</second>
@@ -2293,7 +2293,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>61</bitwidth>
 				</Value>
@@ -2317,8 +2317,8 @@
 						<type>0</type>
 						<id>50</id>
 						<name>m_56</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>961</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2326,13 +2326,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>961</second>
@@ -2346,7 +2346,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1136234064</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>61</bitwidth>
 				</Value>
@@ -2371,8 +2371,8 @@
 						<type>0</type>
 						<id>51</id>
 						<name>m_s</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>962</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2380,13 +2380,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>962</second>
@@ -2400,7 +2400,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>62</coreId>
+						<coreId>1751326821</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -2427,8 +2427,8 @@
 						<type>0</type>
 						<id>52</id>
 						<name>zext_ln951_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>951</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2436,13 +2436,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>951</second>
@@ -2456,7 +2456,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1700897856</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -2480,8 +2480,8 @@
 						<type>0</type>
 						<id>53</id>
 						<name>p_Result_239</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>964</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2489,13 +2489,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>964</second>
@@ -2509,7 +2509,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>1819044215</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -2535,8 +2535,8 @@
 						<type>0</type>
 						<id>54</id>
 						<name>select_ln943</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>943</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2544,13 +2544,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>943</second>
@@ -2564,7 +2564,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -2590,8 +2590,8 @@
 						<type>0</type>
 						<id>55</id>
 						<name>trunc_ln943</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>943</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2599,13 +2599,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>943</second>
@@ -2619,7 +2619,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1700899336</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -2643,8 +2643,8 @@
 						<type>0</type>
 						<id>56</id>
 						<name>sub_ln964</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>964</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2652,13 +2652,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>964</second>
@@ -2672,7 +2672,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1136240840</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -2697,8 +2697,8 @@
 						<type>0</type>
 						<id>57</id>
 						<name>add_ln964</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>964</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2706,13 +2706,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>964</second>
@@ -2726,7 +2726,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>758591538</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -2751,8 +2751,8 @@
 						<type>0</type>
 						<id>58</id>
 						<name>tmp_22_i</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>969</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2760,13 +2760,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>969</second>
@@ -2780,7 +2780,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4160749696</coreId>
 					</Obj>
 					<bitwidth>9</bitwidth>
 				</Value>
@@ -2806,8 +2806,8 @@
 						<type>0</type>
 						<id>59</id>
 						<name>p_Result_256</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>969</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2815,13 +2815,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>969</second>
@@ -2835,7 +2835,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1948279909</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -2863,8 +2863,8 @@
 						<type>0</type>
 						<id>60</id>
 						<name>LD</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>743</lineNumber>
 						<contextFuncName>rawBitsToFloat</contextFuncName>
 						<contextNormFuncName>rawBitsToFloat</contextNormFuncName>
@@ -2872,13 +2872,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</first>
 											<second>rawBitsToFloat</second>
 										</first>
 										<second>743</second>
@@ -2892,7 +2892,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134925232</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>31</bitwidth>
 				</Value>
@@ -2916,8 +2916,8 @@
 						<type>0</type>
 						<id>61</id>
 						<name>data_V</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>935</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -2925,13 +2925,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>935</second>
@@ -2945,7 +2945,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1700849808</coreId>
 					</Obj>
 					<bitwidth>31</bitwidth>
 				</Value>
@@ -3053,7 +3053,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4160749696</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -3077,8 +3077,8 @@
 						<type>0</type>
 						<id>64</id>
 						<name>d</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3086,13 +3086,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3106,7 +3106,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701811272</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -3130,8 +3130,8 @@
 						<type>0</type>
 						<id>65</id>
 						<name>ireg</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -3139,13 +3139,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -3159,7 +3159,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>13</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -3183,8 +3183,8 @@
 						<type>0</type>
 						<id>66</id>
 						<name>trunc_ln555</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3192,13 +3192,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3236,8 +3236,8 @@
 						<type>0</type>
 						<id>67</id>
 						<name>p_Result_257</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3245,13 +3245,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3265,7 +3265,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>8945</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -3291,8 +3291,8 @@
 						<type>0</type>
 						<id>68</id>
 						<name>exp_tmp</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3300,13 +3300,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3320,7 +3320,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134937728</coreId>
+						<coreId>28271</coreId>
 					</Obj>
 					<bitwidth>11</bitwidth>
 				</Value>
@@ -3347,8 +3347,8 @@
 						<type>0</type>
 						<id>69</id>
 						<name>zext_ln455</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -3356,13 +3356,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -3376,7 +3376,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134940120</coreId>
+						<coreId>6577</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3400,8 +3400,8 @@
 						<type>0</type>
 						<id>70</id>
 						<name>trunc_ln565</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3409,13 +3409,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3429,7 +3429,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>230</coreId>
 					</Obj>
 					<bitwidth>52</bitwidth>
 				</Value>
@@ -3453,8 +3453,8 @@
 						<type>0</type>
 						<id>71</id>
 						<name>p_Result_258</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3462,13 +3462,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3508,8 +3508,8 @@
 						<type>0</type>
 						<id>72</id>
 						<name>zext_ln569</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3517,13 +3517,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3537,7 +3537,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -3561,8 +3561,8 @@
 						<type>0</type>
 						<id>73</id>
 						<name>man_V_31</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -3570,13 +3570,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -3590,7 +3590,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1701603686</coreId>
+						<coreId>1</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -3615,8 +3615,8 @@
 						<type>0</type>
 						<id>74</id>
 						<name>man_V_34</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3624,13 +3624,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3644,7 +3644,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1769236851</coreId>
+						<coreId>1701822152</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -3670,8 +3670,8 @@
 						<type>0</type>
 						<id>75</id>
 						<name>icmp_ln571</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3679,13 +3679,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3699,7 +3699,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134183104</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -3724,8 +3724,8 @@
 						<type>0</type>
 						<id>76</id>
 						<name>F2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3733,13 +3733,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3753,7 +3753,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>17809</coreId>
+						<coreId>18177</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3778,8 +3778,8 @@
 						<type>0</type>
 						<id>77</id>
 						<name>trunc_ln575</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3787,13 +3787,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3807,7 +3807,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1701711880</coreId>
 					</Obj>
 					<bitwidth>11</bitwidth>
 				</Value>
@@ -3831,8 +3831,8 @@
 						<type>0</type>
 						<id>78</id>
 						<name>icmp_ln581</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3840,13 +3840,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3860,7 +3860,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134186312</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -3885,8 +3885,8 @@
 						<type>0</type>
 						<id>79</id>
 						<name>add_ln581</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3894,13 +3894,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3939,8 +3939,8 @@
 						<type>0</type>
 						<id>80</id>
 						<name>sub_ln581</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -3948,13 +3948,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -3968,7 +3968,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1294956392</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -3993,8 +3993,8 @@
 						<type>0</type>
 						<id>81</id>
 						<name>sh_amt</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4002,13 +4002,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4022,7 +4022,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>10</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -4048,8 +4048,8 @@
 						<type>0</type>
 						<id>82</id>
 						<name>icmp_ln582</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4057,13 +4057,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4077,7 +4077,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701717808</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -4102,8 +4102,8 @@
 						<type>0</type>
 						<id>83</id>
 						<name>sext_ln583</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4111,13 +4111,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4131,7 +4131,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>6</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -4155,8 +4155,8 @@
 						<type>0</type>
 						<id>84</id>
 						<name>sext_ln585</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4164,13 +4164,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4184,7 +4184,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134192424</coreId>
+						<coreId>1701720457</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -4208,8 +4208,8 @@
 						<type>0</type>
 						<id>85</id>
 						<name>icmp_ln585</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4217,13 +4217,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4237,7 +4237,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>409</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -4262,8 +4262,8 @@
 						<type>0</type>
 						<id>86</id>
 						<name>icmp_ln603</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4271,13 +4271,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4291,7 +4291,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>4</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -4316,8 +4316,8 @@
 						<type>0</type>
 						<id>87</id>
 						<name>trunc_ln586</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4325,13 +4325,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4345,7 +4345,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>4160749696</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -4369,8 +4369,8 @@
 						<type>0</type>
 						<id>88</id>
 						<name>zext_ln586</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4378,13 +4378,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4398,7 +4398,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134197688</coreId>
+						<coreId>1701725320</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -4422,8 +4422,8 @@
 						<type>0</type>
 						<id>89</id>
 						<name>ashr_ln586</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4431,13 +4431,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4476,8 +4476,8 @@
 						<type>0</type>
 						<id>90</id>
 						<name>select_ln585</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4485,13 +4485,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4531,8 +4531,8 @@
 						<type>0</type>
 						<id>91</id>
 						<name>sext_ln591</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4540,13 +4540,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4560,7 +4560,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134201536</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -4584,8 +4584,8 @@
 						<type>0</type>
 						<id>92</id>
 						<name>icmp_ln591</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4593,13 +4593,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4638,8 +4638,8 @@
 						<type>0</type>
 						<id>93</id>
 						<name>zext_ln604</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4647,13 +4647,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4667,7 +4667,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701731128</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -4691,8 +4691,8 @@
 						<type>0</type>
 						<id>94</id>
 						<name>shl_ln604</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4700,13 +4700,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4720,7 +4720,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -4745,8 +4745,8 @@
 						<type>0</type>
 						<id>95</id>
 						<name>add_ln591</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4754,13 +4754,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4774,7 +4774,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134981192</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>11</bitwidth>
 				</Value>
@@ -4799,8 +4799,8 @@
 						<type>0</type>
 						<id>96</id>
 						<name>zext_ln591</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4808,13 +4808,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4828,7 +4828,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134980712</coreId>
+						<coreId>1701734928</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -4852,8 +4852,8 @@
 						<type>0</type>
 						<id>97</id>
 						<name>p_Result_244</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4861,13 +4861,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4881,7 +4881,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134983440</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -4907,8 +4907,8 @@
 						<type>0</type>
 						<id>98</id>
 						<name>qb</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -4916,13 +4916,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -4936,7 +4936,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701739200</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -4962,8 +4962,8 @@
 						<type>0</type>
 						<id>99</id>
 						<name>zext_ln415</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -4971,13 +4971,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -4991,7 +4991,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134986312</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -5015,8 +5015,8 @@
 						<type>0</type>
 						<id>100</id>
 						<name>add_ln415</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -5024,13 +5024,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -5044,7 +5044,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1701739641</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -5069,8 +5069,8 @@
 						<type>0</type>
 						<id>101</id>
 						<name>xor_ln571</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5078,13 +5078,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5123,8 +5123,8 @@
 						<type>0</type>
 						<id>102</id>
 						<name>and_ln582</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5132,13 +5132,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5152,7 +5152,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701743416</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5177,8 +5177,8 @@
 						<type>0</type>
 						<id>103</id>
 						<name>or_ln582</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5186,13 +5186,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5206,7 +5206,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>11153</coreId>
+						<coreId>250</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5231,8 +5231,8 @@
 						<type>0</type>
 						<id>104</id>
 						<name>xor_ln582</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5240,13 +5240,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5260,7 +5260,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134990848</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5285,8 +5285,8 @@
 						<type>0</type>
 						<id>105</id>
 						<name>and_ln581</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5294,13 +5294,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5314,7 +5314,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5339,8 +5339,8 @@
 						<type>0</type>
 						<id>106</id>
 						<name>or_ln581</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5348,13 +5348,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5368,7 +5368,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701747568</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5393,8 +5393,8 @@
 						<type>0</type>
 						<id>107</id>
 						<name>xor_ln581</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5402,13 +5402,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5422,7 +5422,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>13</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5447,8 +5447,8 @@
 						<type>0</type>
 						<id>108</id>
 						<name>and_ln603</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5456,13 +5456,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5476,7 +5476,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134996224</coreId>
+						<coreId>1701749840</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5501,8 +5501,8 @@
 						<type>0</type>
 						<id>109</id>
 						<name>or_ln571</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5510,13 +5510,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5530,7 +5530,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5555,8 +5555,8 @@
 						<type>0</type>
 						<id>110</id>
 						<name>select_ln571_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5564,13 +5564,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5584,7 +5584,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>8449</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -5610,8 +5610,8 @@
 						<type>0</type>
 						<id>111</id>
 						<name>sext_ln571</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5619,13 +5619,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5639,7 +5639,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>913</coreId>
+						<coreId>1701753488</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -5663,8 +5663,8 @@
 						<type>0</type>
 						<id>112</id>
 						<name>or_ln571_6</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5672,13 +5672,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5692,7 +5692,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5717,8 +5717,8 @@
 						<type>0</type>
 						<id>113</id>
 						<name>or_ln571_7</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -5726,13 +5726,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -5746,7 +5746,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>30929</coreId>
+						<coreId>4561</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5771,8 +5771,8 @@
 						<type>0</type>
 						<id>114</id>
 						<name>sext_ln1116</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1116</lineNumber>
 						<contextFuncName>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_mul_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -5780,13 +5780,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>1116</second>
@@ -5800,7 +5800,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134235392</coreId>
+						<coreId>1701757641</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -5824,8 +5824,8 @@
 						<type>0</type>
 						<id>115</id>
 						<name>sext_ln1118</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1118</lineNumber>
 						<contextFuncName>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_mul_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -5833,13 +5833,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>1118</second>
@@ -5853,7 +5853,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134237232</coreId>
+						<coreId>543517801</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -5877,8 +5877,8 @@
 						<type>0</type>
 						<id>116</id>
 						<name>r_V_60</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1118</lineNumber>
 						<contextFuncName>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_mul_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -5886,13 +5886,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>1118</second>
@@ -5906,7 +5906,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>808531253</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -5931,8 +5931,8 @@
 						<type>0</type>
 						<id>117</id>
 						<name>trunc_ln1115</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1115</lineNumber>
 						<contextFuncName>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_mul_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -5940,13 +5940,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>1115</second>
@@ -5960,7 +5960,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1935829356</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>119</bitwidth>
 				</Value>
@@ -5984,8 +5984,8 @@
 						<type>0</type>
 						<id>118</id>
 						<name>icmp_ln935_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>935</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -5993,13 +5993,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>935</second>
@@ -6013,7 +6013,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>790766141</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -6038,8 +6038,8 @@
 						<type>0</type>
 						<id>119</id>
 						<name>p_Result_259</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>936</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -6047,13 +6047,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>936</second>
@@ -6067,7 +6067,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1634759531</coreId>
+						<coreId>27089</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -6093,8 +6093,8 @@
 						<type>0</type>
 						<id>120</id>
 						<name>tmp_V_34</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>939</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -6102,13 +6102,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>939</second>
@@ -6122,7 +6122,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1700856216</coreId>
 					</Obj>
 					<bitwidth>119</bitwidth>
 				</Value>
@@ -6147,8 +6147,8 @@
 						<type>0</type>
 						<id>121</id>
 						<name>tmp_V_37</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>938</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -6156,13 +6156,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>938</second>
@@ -6176,7 +6176,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>10</coreId>
 					</Obj>
 					<bitwidth>119</bitwidth>
 				</Value>
@@ -6202,8 +6202,8 @@
 						<type>0</type>
 						<id>122</id>
 						<name>zext_ln937</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>937</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -6211,13 +6211,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>937</second>
@@ -6231,7 +6231,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134246400</coreId>
+						<coreId>1700858592</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -6255,8 +6255,8 @@
 						<type>0</type>
 						<id>123</id>
 						<name>t_9</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1064</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6264,13 +6264,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1064</second>
@@ -6284,7 +6284,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1634036837</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>63</bitwidth>
 				</Value>
@@ -6311,8 +6311,8 @@
 						<type>0</type>
 						<id>124</id>
 						<name>zext_ln1064</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1064</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6320,13 +6320,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1064</second>
@@ -6340,7 +6340,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134249392</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -6364,8 +6364,8 @@
 						<type>0</type>
 						<id>125</id>
 						<name>tmp_i_159</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1065</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6373,13 +6373,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1065</second>
@@ -6419,8 +6419,8 @@
 						<type>0</type>
 						<id>126</id>
 						<name>NZeros</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1065</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6428,13 +6428,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1065</second>
@@ -6448,7 +6448,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -6472,8 +6472,8 @@
 						<type>0</type>
 						<id>127</id>
 						<name>hitNonZero</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1066</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6481,13 +6481,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1066</second>
@@ -6501,7 +6501,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134251752</coreId>
+						<coreId>17521</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -6526,8 +6526,8 @@
 						<type>0</type>
 						<id>128</id>
 						<name>trunc_ln1072</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1072</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6535,13 +6535,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1072</second>
@@ -6555,7 +6555,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134254176</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>56</bitwidth>
 				</Value>
@@ -6579,8 +6579,8 @@
 						<type>0</type>
 						<id>129</id>
 						<name>p_Result_260</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1073</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6588,13 +6588,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1073</second>
@@ -6608,7 +6608,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -6634,8 +6634,8 @@
 						<type>0</type>
 						<id>130</id>
 						<name>tmp_3_i</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1074</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6643,13 +6643,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1074</second>
@@ -6663,7 +6663,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -6689,8 +6689,8 @@
 						<type>0</type>
 						<id>131</id>
 						<name>trunc_ln1074</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1074</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6698,13 +6698,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1074</second>
@@ -6718,7 +6718,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134257168</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -6742,8 +6742,8 @@
 						<type>0</type>
 						<id>132</id>
 						<name>NZeros_4</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1074</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6751,13 +6751,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1074</second>
@@ -6771,7 +6771,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1948279909</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -6796,8 +6796,8 @@
 						<type>0</type>
 						<id>133</id>
 						<name>NZeros_6</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1066</lineNumber>
 						<contextFuncName>countLeadingZeros</contextFuncName>
 						<contextNormFuncName>countLeadingZeros</contextNormFuncName>
@@ -6805,13 +6805,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h</first>
 											<second>countLeadingZeros</second>
 										</first>
 										<second>1066</second>
@@ -6825,7 +6825,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -6851,8 +6851,8 @@
 						<type>0</type>
 						<id>134</id>
 						<name>sub_ln944_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>944</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -6860,13 +6860,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>944</second>
@@ -6880,7 +6880,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134260768</coreId>
+						<coreId>10</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -6905,8 +6905,8 @@
 						<type>0</type>
 						<id>135</id>
 						<name>lsb_index_11</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>944</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -6914,13 +6914,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>944</second>
@@ -6934,7 +6934,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>32385</coreId>
+						<coreId>1700874336</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -6959,8 +6959,8 @@
 						<type>0</type>
 						<id>136</id>
 						<name>tmp_145</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>946</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -6968,13 +6968,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>946</second>
@@ -7015,8 +7015,8 @@
 						<type>0</type>
 						<id>137</id>
 						<name>icmp_ln946_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>946</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7024,13 +7024,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>946</second>
@@ -7044,7 +7044,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134142360</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -7069,8 +7069,8 @@
 						<type>0</type>
 						<id>138</id>
 						<name>trunc_ln947_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7078,13 +7078,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -7098,7 +7098,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1700877880</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -7122,8 +7122,8 @@
 						<type>0</type>
 						<id>139</id>
 						<name>sub_ln947_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7131,13 +7131,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -7151,7 +7151,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1886220131</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -7176,8 +7176,8 @@
 						<type>0</type>
 						<id>140</id>
 						<name>zext_ln947_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7185,13 +7185,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -7205,7 +7205,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -7229,8 +7229,8 @@
 						<type>0</type>
 						<id>141</id>
 						<name>lshr_ln947_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7238,13 +7238,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -7258,7 +7258,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>3684145</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -7283,8 +7283,8 @@
 						<type>0</type>
 						<id>142</id>
 						<name>p_Result_247</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>947</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7292,13 +7292,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>947</second>
@@ -7337,8 +7337,8 @@
 						<type>0</type>
 						<id>143</id>
 						<name>zext_ln949_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7346,13 +7346,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7390,8 +7390,8 @@
 						<type>0</type>
 						<id>144</id>
 						<name>shl_ln949_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7399,13 +7399,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7419,7 +7419,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1701766792</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -7444,8 +7444,8 @@
 						<type>0</type>
 						<id>145</id>
 						<name>trunc_ln949</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7453,13 +7453,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7473,7 +7473,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134153632</coreId>
+						<coreId>1701767833</coreId>
 					</Obj>
 					<bitwidth>119</bitwidth>
 				</Value>
@@ -7497,8 +7497,8 @@
 						<type>0</type>
 						<id>146</id>
 						<name>and_ln949_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7506,13 +7506,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7526,7 +7526,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>119</bitwidth>
 				</Value>
@@ -7551,8 +7551,8 @@
 						<type>0</type>
 						<id>147</id>
 						<name>trunc_ln949_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7560,13 +7560,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7580,7 +7580,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134155888</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>119</bitwidth>
 				</Value>
@@ -7604,8 +7604,8 @@
 						<type>0</type>
 						<id>148</id>
 						<name>or_ln949_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7613,13 +7613,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7633,7 +7633,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134157392</coreId>
+						<coreId>1701772112</coreId>
 					</Obj>
 					<bitwidth>119</bitwidth>
 				</Value>
@@ -7658,8 +7658,8 @@
 						<type>0</type>
 						<id>149</id>
 						<name>or_ln949_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7667,13 +7667,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7713,8 +7713,8 @@
 						<type>0</type>
 						<id>150</id>
 						<name>icmp_ln949_3</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7722,13 +7722,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7742,7 +7742,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134158072</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -7767,8 +7767,8 @@
 						<type>0</type>
 						<id>151</id>
 						<name>tmp_146</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7776,13 +7776,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7796,7 +7796,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134160688</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -7822,8 +7822,8 @@
 						<type>0</type>
 						<id>152</id>
 						<name>xor_ln949_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7831,13 +7831,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7851,7 +7851,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1294956392</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -7876,8 +7876,8 @@
 						<type>0</type>
 						<id>153</id>
 						<name>p_Result_261</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7885,13 +7885,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -7905,7 +7905,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1701778800</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -7931,8 +7931,8 @@
 						<type>0</type>
 						<id>154</id>
 						<name>icmp_ln954_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7940,13 +7940,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -7960,7 +7960,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1226845797</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -7985,8 +7985,8 @@
 						<type>0</type>
 						<id>155</id>
 						<name>and_ln949_3</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>949</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -7994,13 +7994,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>949</second>
@@ -8014,7 +8014,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1701781080</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -8039,8 +8039,8 @@
 						<type>0</type>
 						<id>156</id>
 						<name>sub_ln955_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>955</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8048,13 +8048,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>955</second>
@@ -8068,7 +8068,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>13</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -8093,8 +8093,8 @@
 						<type>0</type>
 						<id>157</id>
 						<name>zext_ln955_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>955</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8102,13 +8102,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>955</second>
@@ -8146,8 +8146,8 @@
 						<type>0</type>
 						<id>158</id>
 						<name>shl_ln955_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>955</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8155,13 +8155,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>955</second>
@@ -8175,7 +8175,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>61</coreId>
+						<coreId>151</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -8200,8 +8200,8 @@
 						<type>0</type>
 						<id>159</id>
 						<name>select_ln946_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>946</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8209,13 +8209,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>946</second>
@@ -8255,8 +8255,8 @@
 						<type>0</type>
 						<id>160</id>
 						<name>add_ln954_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8264,13 +8264,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -8284,7 +8284,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>62</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -8309,8 +8309,8 @@
 						<type>0</type>
 						<id>161</id>
 						<name>zext_ln954_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8318,13 +8318,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -8338,7 +8338,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4294967295</coreId>
+						<coreId>1701790656</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -8362,8 +8362,8 @@
 						<type>0</type>
 						<id>162</id>
 						<name>lshr_ln954_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8371,13 +8371,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -8391,7 +8391,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134948080</coreId>
+						<coreId>6</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -8416,8 +8416,8 @@
 						<type>0</type>
 						<id>163</id>
 						<name>select_ln954_3</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8425,13 +8425,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -8445,7 +8445,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134949264</coreId>
+						<coreId>1701792936</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -8471,8 +8471,8 @@
 						<type>0</type>
 						<id>164</id>
 						<name>trunc_ln954</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8480,13 +8480,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -8500,7 +8500,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>4</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -8524,8 +8524,8 @@
 						<type>0</type>
 						<id>165</id>
 						<name>trunc_ln954_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8533,13 +8533,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -8577,8 +8577,8 @@
 						<type>0</type>
 						<id>166</id>
 						<name>m_58</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>954</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8586,13 +8586,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>954</second>
@@ -8606,7 +8606,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>23297</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -8632,8 +8632,8 @@
 						<type>0</type>
 						<id>167</id>
 						<name>zext_ln961_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>961</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8641,13 +8641,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>961</second>
@@ -8661,7 +8661,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698689320</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -8685,8 +8685,8 @@
 						<type>0</type>
 						<id>168</id>
 						<name>m_59</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>961</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8694,13 +8694,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>961</second>
@@ -8714,7 +8714,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1701362010</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -8739,8 +8739,8 @@
 						<type>0</type>
 						<id>169</id>
 						<name>m_61</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>962</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8748,13 +8748,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>962</second>
@@ -8768,7 +8768,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698691912</coreId>
 					</Obj>
 					<bitwidth>63</bitwidth>
 				</Value>
@@ -8795,8 +8795,8 @@
 						<type>0</type>
 						<id>170</id>
 						<name>zext_ln962</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>962</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8804,13 +8804,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>962</second>
@@ -8824,7 +8824,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134958352</coreId>
+						<coreId>1698693208</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -8848,8 +8848,8 @@
 						<type>0</type>
 						<id>171</id>
 						<name>p_Result_248</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>964</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8857,13 +8857,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>964</second>
@@ -8877,7 +8877,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134959513</coreId>
+						<coreId>1698694504</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -8903,8 +8903,8 @@
 						<type>0</type>
 						<id>172</id>
 						<name>select_ln943_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>943</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8912,13 +8912,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>943</second>
@@ -8932,7 +8932,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134960592</coreId>
+						<coreId>1698695800</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -8958,8 +8958,8 @@
 						<type>0</type>
 						<id>173</id>
 						<name>trunc_ln943_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>943</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -8967,13 +8967,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>943</second>
@@ -8987,7 +8987,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698697096</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -9011,8 +9011,8 @@
 						<type>0</type>
 						<id>174</id>
 						<name>sub_ln964_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>964</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -9020,13 +9020,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>964</second>
@@ -9040,7 +9040,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701370354</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -9065,8 +9065,8 @@
 						<type>0</type>
 						<id>175</id>
 						<name>add_ln964_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>964</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -9074,13 +9074,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>964</second>
@@ -9094,7 +9094,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698699688</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -9119,8 +9119,8 @@
 						<type>0</type>
 						<id>176</id>
 						<name>tmp_25_i</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>969</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -9128,13 +9128,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>969</second>
@@ -9148,7 +9148,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698700984</coreId>
 					</Obj>
 					<bitwidth>9</bitwidth>
 				</Value>
@@ -9174,8 +9174,8 @@
 						<type>0</type>
 						<id>177</id>
 						<name>p_Result_262</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>969</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -9183,13 +9183,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>969</second>
@@ -9203,7 +9203,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698702280</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9231,8 +9231,8 @@
 						<type>0</type>
 						<id>178</id>
 						<name>LD_21</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>743</lineNumber>
 						<contextFuncName>rawBitsToFloat</contextFuncName>
 						<contextNormFuncName>rawBitsToFloat</contextNormFuncName>
@@ -9240,13 +9240,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</first>
 											<second>rawBitsToFloat</second>
 										</first>
 										<second>743</second>
@@ -9260,7 +9260,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698703576</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -9284,8 +9284,8 @@
 						<type>0</type>
 						<id>179</id>
 						<name>bitcast_ln744</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>744</lineNumber>
 						<contextFuncName>rawBitsToFloat</contextFuncName>
 						<contextNormFuncName>rawBitsToFloat</contextNormFuncName>
@@ -9293,13 +9293,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h</first>
 											<second>rawBitsToFloat</second>
 										</first>
 										<second>744</second>
@@ -9313,7 +9313,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134969968</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -9337,8 +9337,8 @@
 						<type>0</type>
 						<id>180</id>
 						<name>select_ln935</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>935</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<contextNormFuncName>to_float</contextNormFuncName>
@@ -9346,13 +9346,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>to_float</second>
 										</first>
 										<second>935</second>
@@ -9366,7 +9366,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1701378180</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -9421,7 +9421,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>6</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -9446,8 +9446,8 @@
 						<type>0</type>
 						<id>182</id>
 						<name>d_9</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -9455,13 +9455,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -9475,7 +9475,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134973240</coreId>
+						<coreId>4259494008</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9499,8 +9499,8 @@
 						<type>0</type>
 						<id>183</id>
 						<name>ireg_10</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -9508,13 +9508,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -9528,7 +9528,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134975088</coreId>
+						<coreId>1698709736</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9552,8 +9552,8 @@
 						<type>0</type>
 						<id>184</id>
 						<name>trunc_ln555_7</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -9561,13 +9561,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -9581,7 +9581,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>63</bitwidth>
 				</Value>
@@ -9605,8 +9605,8 @@
 						<type>0</type>
 						<id>185</id>
 						<name>p_Result_263</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -9614,13 +9614,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -9634,7 +9634,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131874888</coreId>
+						<coreId>1698712120</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -9660,8 +9660,8 @@
 						<type>0</type>
 						<id>186</id>
 						<name>exp_tmp_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -9669,13 +9669,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -9689,7 +9689,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>13</coreId>
+						<coreId>1698713416</coreId>
 					</Obj>
 					<bitwidth>11</bitwidth>
 				</Value>
@@ -9716,8 +9716,8 @@
 						<type>0</type>
 						<id>187</id>
 						<name>zext_ln455_2</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -9725,13 +9725,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -9745,7 +9745,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134590269</coreId>
+						<coreId>1698714712</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -9769,8 +9769,8 @@
 						<type>0</type>
 						<id>188</id>
 						<name>trunc_ln565_7</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -9778,13 +9778,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -9798,7 +9798,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131878680</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>52</bitwidth>
 				</Value>
@@ -9822,8 +9822,8 @@
 						<type>0</type>
 						<id>189</id>
 						<name>p_Result_264</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -9831,13 +9831,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -9851,7 +9851,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131880128</coreId>
+						<coreId>1698717456</coreId>
 					</Obj>
 					<bitwidth>53</bitwidth>
 				</Value>
@@ -9877,8 +9877,8 @@
 						<type>0</type>
 						<id>190</id>
 						<name>zext_ln569_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -9886,13 +9886,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -9906,7 +9906,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131881272</coreId>
+						<coreId>1698718752</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -9930,8 +9930,8 @@
 						<type>0</type>
 						<id>191</id>
 						<name>man_V_32</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -9939,13 +9939,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -9959,7 +9959,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131882136</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -9984,8 +9984,8 @@
 						<type>0</type>
 						<id>192</id>
 						<name>man_V</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -9993,13 +9993,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10013,7 +10013,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3</coreId>
+						<coreId>1701391944</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -10039,8 +10039,8 @@
 						<type>0</type>
 						<id>193</id>
 						<name>icmp_ln571_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10048,13 +10048,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10068,7 +10068,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134598362</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -10093,8 +10093,8 @@
 						<type>0</type>
 						<id>194</id>
 						<name>F2_7</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10102,13 +10102,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10122,7 +10122,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131886024</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -10147,8 +10147,8 @@
 						<type>0</type>
 						<id>195</id>
 						<name>trunc_ln575_7</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10156,13 +10156,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10176,7 +10176,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131887848</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>11</bitwidth>
 				</Value>
@@ -10200,8 +10200,8 @@
 						<type>0</type>
 						<id>196</id>
 						<name>icmp_ln581_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10209,13 +10209,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10254,8 +10254,8 @@
 						<type>0</type>
 						<id>197</id>
 						<name>add_ln581_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10263,13 +10263,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10283,7 +10283,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3690870904</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -10308,8 +10308,8 @@
 						<type>0</type>
 						<id>198</id>
 						<name>sub_ln581_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10317,13 +10317,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10337,7 +10337,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -10362,8 +10362,8 @@
 						<type>0</type>
 						<id>199</id>
 						<name>sh_amt_7</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10371,13 +10371,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10391,7 +10391,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134607537</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -10417,8 +10417,8 @@
 						<type>0</type>
 						<id>200</id>
 						<name>icmp_ln582_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10426,13 +10426,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10446,7 +10446,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131894120</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -10471,8 +10471,8 @@
 						<type>0</type>
 						<id>201</id>
 						<name>sext_ln583_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10480,13 +10480,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10524,8 +10524,8 @@
 						<type>0</type>
 						<id>202</id>
 						<name>sext_ln585_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10533,13 +10533,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10553,7 +10553,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131896392</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -10577,8 +10577,8 @@
 						<type>0</type>
 						<id>203</id>
 						<name>icmp_ln585_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10586,13 +10586,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10631,8 +10631,8 @@
 						<type>0</type>
 						<id>204</id>
 						<name>icmp_ln603_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10640,13 +10640,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10660,7 +10660,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131898984</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -10685,8 +10685,8 @@
 						<type>0</type>
 						<id>205</id>
 						<name>trunc_ln586_7</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10694,13 +10694,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10714,7 +10714,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -10738,8 +10738,8 @@
 						<type>0</type>
 						<id>206</id>
 						<name>zext_ln586_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10747,13 +10747,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10767,7 +10767,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -10791,8 +10791,8 @@
 						<type>0</type>
 						<id>207</id>
 						<name>ashr_ln586_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10800,13 +10800,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10820,7 +10820,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134616307</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -10845,8 +10845,8 @@
 						<type>0</type>
 						<id>208</id>
 						<name>bitcast_ln702</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -10854,13 +10854,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -10898,8 +10898,8 @@
 						<type>0</type>
 						<id>209</id>
 						<name>tmp_149</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10907,13 +10907,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10953,8 +10953,8 @@
 						<type>0</type>
 						<id>210</id>
 						<name>trunc_ln588_cast_i</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -10962,13 +10962,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -10982,7 +10982,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134619061</coreId>
+						<coreId>1701419733</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -11008,8 +11008,8 @@
 						<type>0</type>
 						<id>211</id>
 						<name>zext_ln604_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11017,13 +11017,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11037,7 +11037,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134621679</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -11061,8 +11061,8 @@
 						<type>0</type>
 						<id>212</id>
 						<name>shl_ln604_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11070,13 +11070,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11090,7 +11090,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134623818</coreId>
+						<coreId>1698747000</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -11115,8 +11115,8 @@
 						<type>0</type>
 						<id>213</id>
 						<name>select_ln585_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11124,13 +11124,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11144,7 +11144,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131910912</coreId>
+						<coreId>1698748296</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -11170,8 +11170,8 @@
 						<type>0</type>
 						<id>214</id>
 						<name>sext_ln591_1</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11179,13 +11179,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11199,7 +11199,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131911944</coreId>
+						<coreId>1698749592</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -11223,8 +11223,8 @@
 						<type>0</type>
 						<id>215</id>
 						<name>icmp_ln591_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11232,13 +11232,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11252,7 +11252,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131913336</coreId>
+						<coreId>1701425996</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -11277,8 +11277,8 @@
 						<type>0</type>
 						<id>216</id>
 						<name>add_ln591_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11286,13 +11286,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11306,7 +11306,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134628734</coreId>
+						<coreId>1698752184</coreId>
 					</Obj>
 					<bitwidth>11</bitwidth>
 				</Value>
@@ -11331,8 +11331,8 @@
 						<type>0</type>
 						<id>217</id>
 						<name>zext_ln591_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11340,13 +11340,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11360,7 +11360,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131915928</coreId>
+						<coreId>1698753480</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -11384,8 +11384,8 @@
 						<type>0</type>
 						<id>218</id>
 						<name>p_Result_252</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11393,13 +11393,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11413,7 +11413,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>15</coreId>
+						<coreId>1698754776</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -11439,8 +11439,8 @@
 						<type>0</type>
 						<id>219</id>
 						<name>qb_7</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11448,13 +11448,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11468,7 +11468,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134634029</coreId>
+						<coreId>1698756072</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -11494,8 +11494,8 @@
 						<type>0</type>
 						<id>220</id>
 						<name>zext_ln415_7</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -11503,13 +11503,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -11523,7 +11523,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131919872</coreId>
+						<coreId>1698757368</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -11547,8 +11547,8 @@
 						<type>0</type>
 						<id>221</id>
 						<name>add_ln415_6</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -11556,13 +11556,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -11576,7 +11576,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3</coreId>
+						<coreId>1698758024</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -11601,8 +11601,8 @@
 						<type>0</type>
 						<id>222</id>
 						<name>xor_ln571_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11610,13 +11610,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11630,7 +11630,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131922576</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -11655,8 +11655,8 @@
 						<type>0</type>
 						<id>223</id>
 						<name>and_ln582_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11664,13 +11664,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11684,7 +11684,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131923608</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -11709,8 +11709,8 @@
 						<type>0</type>
 						<id>224</id>
 						<name>or_ln582_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11718,13 +11718,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11763,8 +11763,8 @@
 						<type>0</type>
 						<id>225</id>
 						<name>xor_ln582_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11772,13 +11772,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11792,7 +11792,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134643837</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -11817,8 +11817,8 @@
 						<type>0</type>
 						<id>226</id>
 						<name>and_ln581_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11826,13 +11826,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11846,7 +11846,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131927064</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -11871,8 +11871,8 @@
 						<type>0</type>
 						<id>227</id>
 						<name>or_ln581_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11880,13 +11880,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11900,7 +11900,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131928888</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -11925,8 +11925,8 @@
 						<type>0</type>
 						<id>228</id>
 						<name>xor_ln581_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11934,13 +11934,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -11979,8 +11979,8 @@
 						<type>0</type>
 						<id>229</id>
 						<name>and_ln603_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -11988,13 +11988,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12008,7 +12008,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3690870904</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -12033,8 +12033,8 @@
 						<type>0</type>
 						<id>230</id>
 						<name>select_ln571_11</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12042,13 +12042,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12062,7 +12062,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -12088,8 +12088,8 @@
 						<type>0</type>
 						<id>231</id>
 						<name>or_ln571_8</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12097,13 +12097,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12117,7 +12117,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134652488</coreId>
+						<coreId>335610371</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -12142,8 +12142,8 @@
 						<type>0</type>
 						<id>232</id>
 						<name>select_ln571_12</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12151,13 +12151,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12171,7 +12171,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131935160</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>55</bitwidth>
 				</Value>
@@ -12197,8 +12197,8 @@
 						<type>0</type>
 						<id>233</id>
 						<name>sext_ln571_2</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12206,13 +12206,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12250,8 +12250,8 @@
 						<type>0</type>
 						<id>234</id>
 						<name>or_ln571_9</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12259,13 +12259,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12279,7 +12279,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131937432</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -12304,8 +12304,8 @@
 						<type>0</type>
 						<id>235</id>
 						<name>select_ln571_13</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12313,13 +12313,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12333,7 +12333,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131939104</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -12359,8 +12359,8 @@
 						<type>0</type>
 						<id>236</id>
 						<name>or_ln571_10</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12368,13 +12368,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12388,7 +12388,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131940136</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -12413,8 +12413,8 @@
 						<type>0</type>
 						<id>237</id>
 						<name>select_ln571</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12422,13 +12422,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12442,7 +12442,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -12468,8 +12468,8 @@
 						<type>0</type>
 						<id>238</id>
 						<name>select_ln571_14</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12477,13 +12477,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12497,7 +12497,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134662123</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -12523,8 +12523,8 @@
 						<type>0</type>
 						<id>239</id>
 						<name>select_ln571_15</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12532,13 +12532,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12552,7 +12552,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131944120</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -12578,8 +12578,8 @@
 						<type>0</type>
 						<id>240</id>
 						<name>select_ln571_16</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>672</lineNumber>
 						<contextFuncName>ap_fixed_base</contextFuncName>
 						<contextNormFuncName>ap_fixed_base</contextNormFuncName>
@@ -12587,13 +12587,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>ap_fixed_base</second>
 										</first>
 										<second>672</second>
@@ -12607,7 +12607,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>15</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -12633,8 +12633,8 @@
 						<type>0</type>
 						<id>241</id>
 						<name>t_18</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>728</lineNumber>
 						<contextFuncName>operator=&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_assign_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -12642,13 +12642,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator=&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>728</second>
@@ -12662,7 +12662,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134667418</coreId>
+						<coreId>8</coreId>
 					</Obj>
 					<bitwidth>99</bitwidth>
 				</Value>
@@ -12688,8 +12688,8 @@
 						<type>0</type>
 						<id>242</id>
 						<name>sext_ln1148</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1148</lineNumber>
 						<contextFuncName>operator/&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_div_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -12697,13 +12697,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator/&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>1148</second>
@@ -12717,7 +12717,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134674466</coreId>
+						<coreId>1698789128</coreId>
 					</Obj>
 					<bitwidth>99</bitwidth>
 				</Value>
@@ -12741,8 +12741,8 @@
 						<type>0</type>
 						<id>243</id>
 						<name>sdiv_ln1148</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>1148</lineNumber>
 						<contextFuncName>operator/&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_div_60_21_true_AP_RND_AP_WRAP_0</contextNormFuncName>
@@ -12750,13 +12750,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator/&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>1148</second>
@@ -12770,7 +12770,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701462135</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -12795,8 +12795,8 @@
 						<type>0</type>
 						<id>244</id>
 						<name>converge_V</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>703</lineNumber>
 						<contextFuncName>operator=&amp;lt;100, 61, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
 						<contextNormFuncName>operator_assign_100_61_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
@@ -12804,13 +12804,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h</first>
 											<second>operator=&amp;lt;100, 61, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
 										</first>
 										<second>703</second>
@@ -12824,7 +12824,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698791720</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -12848,8 +12848,8 @@
 						<type>0</type>
 						<id>245</id>
 						<name>sine_reconstructor_16_1378_write_ln174</name>
-						<fileName>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>174</lineNumber>
 						<contextFuncName>write</contextFuncName>
 						<contextNormFuncName>write</contextNormFuncName>
@@ -12857,13 +12857,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h</first>
+											<first>/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h</first>
 											<second>write</second>
 										</first>
 										<second>174</second>
@@ -12877,7 +12877,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698793016</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -12903,8 +12903,8 @@
 						<type>0</type>
 						<id>246</id>
 						<name>_ln482</name>
-						<fileName>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileName>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>482</lineNumber>
 						<contextFuncName>svd_and_conv</contextFuncName>
 						<contextNormFuncName>svd_and_conv</contextNormFuncName>
@@ -12912,13 +12912,13 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
+											<first>../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</first>
 											<second>svd_and_conv</second>
 										</first>
 										<second>482</second>
@@ -12932,7 +12932,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>524777</coreId>
+						<coreId>1698794312</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -12974,7 +12974,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2003316581</coreId>
+						<coreId>1698795176</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -13002,7 +13002,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2003316581</coreId>
+						<coreId>1698796136</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13030,7 +13030,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698796848</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13058,7 +13058,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698797224</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -13086,7 +13086,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698797768</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -13114,7 +13114,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1698798200</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13142,7 +13142,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1701470923</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13170,7 +13170,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131952784</coreId>
+						<coreId>1698799592</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13198,7 +13198,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131961944</coreId>
+						<coreId>1698800080</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13226,7 +13226,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131962488</coreId>
+						<coreId>1698800624</coreId>
 					</Obj>
 					<bitwidth>31</bitwidth>
 				</Value>
@@ -13254,7 +13254,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134688045</coreId>
+						<coreId>1698801168</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -13282,7 +13282,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131963464</coreId>
+						<coreId>1698801224</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -13310,7 +13310,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131964216</coreId>
+						<coreId>1698802352</coreId>
 					</Obj>
 					<bitwidth>60</bitwidth>
 				</Value>
@@ -13338,7 +13338,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>15</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13366,7 +13366,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131965624</coreId>
+						<coreId>1698803816</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13394,7 +13394,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131967296</coreId>
+						<coreId>1701474229</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -13422,7 +13422,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -13450,7 +13450,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131968216</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -13478,7 +13478,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134691287</coreId>
+						<coreId>1701475097</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13506,7 +13506,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134691747</coreId>
+						<coreId>1701475649</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13534,7 +13534,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>8</coreId>
+						<coreId>1701476035</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13562,7 +13562,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131970904</coreId>
+						<coreId>4259494008</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13590,7 +13590,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134692579</coreId>
+						<coreId>1701476571</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -13618,7 +13618,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131972104</coreId>
+						<coreId>1698809864</coreId>
 					</Obj>
 					<bitwidth>63</bitwidth>
 				</Value>
@@ -13646,7 +13646,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134693052</coreId>
+						<coreId>1701477218</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -13674,7 +13674,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131973496</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -13702,7 +13702,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>68</coreId>
+						<coreId>808595506</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -13730,7 +13730,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134327360</coreId>
+						<coreId>2304072864</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -13758,7 +13758,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>28263</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -13786,7 +13786,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1211065699</coreId>
+						<coreId>1701478754</coreId>
 					</Obj>
 					<bitwidth>11</bitwidth>
 				</Value>
@@ -13814,7 +13814,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134504464</coreId>
+						<coreId>1698815800</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -13842,7 +13842,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1132870576</coreId>
+						<coreId>1701480105</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13870,7 +13870,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1124101735</coreId>
+						<coreId>13</coreId>
 					</Obj>
 					<bitwidth>119</bitwidth>
 				</Value>
@@ -13898,7 +13898,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13926,7 +13926,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131976424</coreId>
+						<coreId>1701480982</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -13954,7 +13954,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3690870904</coreId>
+						<coreId>1701481423</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -13982,7 +13982,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131978096</coreId>
+						<coreId>7</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -14010,7 +14010,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131978792</coreId>
+						<coreId>1698820512</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -14038,7 +14038,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>8</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -14066,7 +14066,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134699650</coreId>
+						<coreId>1701482818</coreId>
 					</Obj>
 					<bitwidth>120</bitwidth>
 				</Value>
@@ -14094,7 +14094,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134700428</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -14122,7 +14122,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1131964880</coreId>
+						<coreId>1698802912</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -14150,7 +14150,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1132870624</coreId>
+						<coreId>1698814736</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -14178,7 +14178,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1134704154</coreId>
+						<coreId>1701485548</coreId>
 					</Obj>
 					<bitwidth>54</bitwidth>
 				</Value>
@@ -14206,7 +14206,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3690870904</coreId>
+						<coreId>941632561</coreId>
 					</Obj>
 					<bitwidth>39</bitwidth>
 				</Value>

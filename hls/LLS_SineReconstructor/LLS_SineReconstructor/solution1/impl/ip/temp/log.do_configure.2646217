@@ -1,0 +1,164 @@
+DEBUG: Executing shell function do_configure
+WARNING: --disable-bluez has been deprecated.
+Please remove it from your scripts
+Install prefix    /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr
+BIOS directory    /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/share/qemu-xilinx
+firmware path     /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/share/qemu-firmware
+binary directory  /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/bin
+library directory /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib
+module directory  /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/qemu-xilinx
+libexec directory /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/libexec
+include directory /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include
+config directory  /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/etc
+local state directory   /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/var
+Manual directory  /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/share/man
+ELF interp prefix /usr/gnemul/qemu-%M
+Build directory   /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/build
+Source path       /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/git
+GIT binary        /bin/false
+GIT submodules    ui/keycodemapdb tests/fp/berkeley-testfloat-3 tests/fp/berkeley-softfloat-3
+C compiler        gcc 
+Host C compiler   cc
+C++ compiler      g++ 
+Objective-C compiler gcc 
+ARFLAGS           rv
+CFLAGS            -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -g -isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include -O2 -pipe
+QEMU_CFLAGS         -I/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig/../../../usr/include -pthread -I/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig/../../../usr/include -I/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig/../../../usr/include/glib-2.0 -I/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig/../../../usr/lib/glib-2.0/include -I/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig/../../../usr/include -fPIE -DPIE -m64 -mcx16 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -fwrapv -std=gnu99  -isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include -O2 -pipe -Wexpansion-to-defined -Wendif-labels -Wno-shift-negative-value -Wno-missing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong -I/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig/../../../usr/include -I$(SRC_PATH)/capstone/include
+QEMU_LDFLAGS       -Wl,--warn-common -Wl,-z,relro -Wl,-z,now -pie -m64  -isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include -O2 -pipe -L/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -L/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,--enable-new-dtags                         -Wl,-rpath-link,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath-link,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,-rpath,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,-O1 -fuse-ld=bfd -fstack-protector-strong
+make              make
+install           install
+python            /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/hosttools/python3 -B (3.7.6)
+genisoimage       
+slirp support     no 
+module support    no
+alt path mod load no
+host CPU          x86_64
+host big endian   no
+target list       aarch64-linux-user arm-linux-user microblaze-linux-user microblazeel-linux-user x86_64-linux-user
+gprof enabled     no
+sparse enabled    no
+strip binaries    no
+profiler          no
+static build      no
+SDL support       no 
+SDL image support no
+GTK support       no 
+GTK GL support    no
+VTE support       no 
+TLS priority      NORMAL
+GNUTLS support    no
+libgcrypt         yes
+  hmac            yes
+  XTS             yes
+nettle            no 
+libtasn1          no
+PAM               no
+iconv support     yes
+curses support    no
+virgl support     no 
+curl support      no
+mingw32 support   no
+Audio drivers      oss
+Block whitelist (rw) 
+Block whitelist (ro) 
+VirtFS support    no
+Multipath support 
+VNC support       yes
+VNC SASL support  no
+VNC JPEG support  no
+VNC PNG support   no
+xen support       no
+brlapi support    no
+Documentation     no
+PIE               yes
+vde support       no
+netmap support    no
+Linux AIO support no
+Linux io_uring support no
+ATTR/XATTR support yes
+Install blobs     no
+KVM support       no
+HAX support       no
+HVF support       no
+WHPX support      no
+TCG support       yes
+TCG debug enabled no
+TCG interpreter   no
+malloc trim support yes
+RDMA support      no
+PVRDMA support    no
+fdt support       system
+membarrier        no
+preadv support    yes
+fdatasync         yes
+madvise           yes
+posix_madvise     yes
+posix_memalign    yes
+libcap-ng support no
+vhost-net support yes
+vhost-crypto support yes
+vhost-scsi support yes
+vhost-vsock support yes
+vhost-user support yes
+vhost-user-fs support yes
+Trace backends    log
+spice support     no 
+rbd support       no
+xfsctl support    no
+smartcard support no
+libusb            no
+usb net redir     no
+OpenGL support    no
+OpenGL dmabufs    no
+libiscsi support  no
+libnfs support    no
+build guest agent no
+QGA VSS support   no
+QGA w32 disk info no
+QGA MSI support   no
+seccomp support   no
+coroutine backend ucontext
+coroutine pool    yes
+debug stack usage no
+mutex debugging   no
+crypto afalg      no
+GlusterFS support no
+gcov              gcov
+gcov enabled      no
+TPM support       yes
+libssh support    no
+QOM debugging     yes
+Live block migration yes
+lzo support       no
+snappy support    no
+bzip2 support     no
+lzfse support     no
+zstd support      no
+NUMA host support no
+libxml2           no
+tcmalloc support  no
+jemalloc support  no
+avx2 optimization yes
+avx512f optimization no
+replication support yes
+VxHS block device no
+bochs support     yes
+cloop support     yes
+dmg support       yes
+qcow v1 support   yes
+vdi support       yes
+vvfat support     yes
+qed support       yes
+parallels support yes
+sheepdog support  yes
+capstone          internal
+libpmem support   no
+libudev           no
+default devices   yes
+plugin support    no
+fuzzing support   no
+gdb               
+cross containers  no
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+DEBUG: Python function do_qa_configure finished

@@ -1,2 +1,2 @@
-SampleCntTargetController_control_s_axi
+SampleCntTargetController_CPU_s_axi
 SampleCntTargetController

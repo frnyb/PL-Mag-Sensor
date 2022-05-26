@@ -1,0 +1,50 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-453,-466",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -30 -y 120 -defaultsOSRD
+preplace port idle -pg 1 -lvl 2 -x 890 -y 150 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
+preplace port scl_i -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace port scl_o -pg 1 -lvl 2 -x 890 -y 230 -defaultsOSRD
+preplace port scl_t -pg 1 -lvl 2 -x 890 -y 250 -defaultsOSRD
+preplace port sda_i -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace port sda_o -pg 1 -lvl 2 -x 890 -y 190 -defaultsOSRD
+preplace port sda_t -pg 1 -lvl 2 -x 890 -y 210 -defaultsOSRD
+preplace port start -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
+preplace port done -pg 1 -lvl 2 -x 890 -y 170 -defaultsOSRD
+preplace portBus x -pg 1 -lvl 2 -x 890 -y 90 -defaultsOSRD
+preplace portBus y -pg 1 -lvl 2 -x 890 -y 110 -defaultsOSRD
+preplace portBus z -pg 1 -lvl 2 -x 890 -y 130 -defaultsOSRD
+preplace portBus irq_out -pg 1 -lvl 2 -x 890 -y 70 -defaultsOSRD
+preplace inst i2c_master -pg 1 -lvl 1 -x 220 -y -230 -defaultsOSRD
+preplace inst dig_mag_controller -pg 1 -lvl 1 -x 220 -y 80 -defaultsOSRD
+preplace netloc dig_mag_controller_0_i2c_ena 1 0 2 20 230 390
+preplace netloc dig_mag_controller_0_i2c_addr 1 0 2 40 -80 410
+preplace netloc dig_mag_controller_0_i2c_rw 1 0 2 50 -70 400
+preplace netloc dig_mag_controller_0_i2c_data_wr 1 0 2 30 260 400
+preplace netloc i2c_master_0_busy 1 0 2 40 270 450J
+preplace netloc i2c_master_0_data_rd 1 0 2 50 280 440J
+preplace netloc clk_1 1 0 1 -10 -280n
+preplace netloc dig_mag_controller_idle 1 1 1 N 150
+preplace netloc dig_mag_controller_z_dout 1 1 1 N 130
+preplace netloc dig_mag_controller_y_dout 1 1 1 N 110
+preplace netloc dig_mag_controller_x_dout 1 1 1 N 90
+preplace netloc start_1 1 0 1 10 120n
+preplace netloc i2c_master_sda_t 1 1 1 460 -200n
+preplace netloc i2c_master_sda_o 1 1 1 480 -220n
+preplace netloc sda_i_1 1 0 2 0J 250 420J
+preplace netloc i2c_master_scl_t 1 1 1 470 -260n
+preplace netloc i2c_master_scl_o 1 1 1 490 -280n
+preplace netloc scl_i_1 1 0 2 -10J 240 430J
+preplace netloc rst_n_1 1 0 1 0 -260n
+preplace netloc dig_mag_controller_irq_out 1 1 1 NJ 70
+preplace netloc dig_mag_controller_done 1 1 1 NJ 170
+levelinfo -pg 1 -30 220 890
+pagesize -pg 1 -db -bbox -sgen -120 -380 1030 480
+"
+}
+

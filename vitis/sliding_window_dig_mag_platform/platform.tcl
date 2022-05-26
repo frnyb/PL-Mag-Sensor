@@ -30,3 +30,10 @@ platform generate
 platform config -updatehw {/home/ffn/Nextcloud/Workspace/Projects/dig-mag/hdl/projects/u96v2_sbc_mp4d_2020_2/u96v2_sbc_mp4d.xsa}
 platform config -updatehw {/home/ffn/Nextcloud/Workspace/Projects/dig-mag/hdl/projects/u96v2_sbc_mp4d_2020_2/u96v2_sbc_mp4d.xsa}
 platform config -updatehw {/home/ffn/Nextcloud/Workspace/Projects/dig-mag/hdl/projects/u96v2_sbc_mp4d_2020_2/u96v2_sbc_mp4d.xsa}
+platform active {sliding_window_dig_mag_platform}
+platform config -updatehw {/home/ffn/Nextcloud/Workspace/Projects/dig-mag/hdl/projects/u96v2_sbc_mp4d_2020_2/u96v2_sbc_mp4d.xsa}
+platform generate
+platform config -updatehw {/home/ffn/Nextcloud/Workspace/Projects/dig-mag/hdl/projects/u96v2_sbc_mp4d_2020_2/u96v2_sbc_mp4d.xsa}
+platform config -updatehw {/home/ffn/Nextcloud/Workspace/Projects/dig-mag/hdl/projects/u96v2_sbc_mp4d_2020_2/u96v2_sbc_mp4d.xsa}
+platform config -updatehw {/home/ffn/Nextcloud/Workspace/Projects/dig-mag/hdl/projects/u96v2_sbc_mp4d_2020_2/u96v2_sbc_mp4d.xsa}
+platform write

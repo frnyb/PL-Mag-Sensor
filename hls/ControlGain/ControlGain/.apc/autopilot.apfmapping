@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="ControlGain.cpp" path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain.cpp"/>
+    <originFiles name="ControlGain.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain.cpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

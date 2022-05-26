@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'SampleCntTargetController'" level="0">
-<item name = "Date">Wed May 25 14:43:58 2022
+<item name = "Date">Thu May 26 17:47:13 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">SampleCntTargetController</item>
@@ -49,7 +49,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, -, 56, 80, -</column>
+<column name="Instance">0, -, 62, 80, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, -, -</column>
 <column name="Register">-, -, -, -, -</column>
@@ -61,7 +61,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="control_s_axi_U">control_s_axi, 0, 0, 56, 80, 0</column>
+<column name="CPU_s_axi_U">CPU_s_axi, 0, 0, 62, 80, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -95,30 +95,27 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="s_axi_control_AWVALID">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_AWREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_AWADDR">in, 5, s_axi, control, scalar</column>
-<column name="s_axi_control_WVALID">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_WREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_WDATA">in, 32, s_axi, control, scalar</column>
-<column name="s_axi_control_WSTRB">in, 4, s_axi, control, scalar</column>
-<column name="s_axi_control_ARVALID">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_ARREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_ARADDR">in, 5, s_axi, control, scalar</column>
-<column name="s_axi_control_RVALID">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_RREADY">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_RDATA">out, 32, s_axi, control, scalar</column>
-<column name="s_axi_control_RRESP">out, 2, s_axi, control, scalar</column>
-<column name="s_axi_control_BVALID">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_BREADY">in, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_BRESP">out, 2, s_axi, control, scalar</column>
-<column name="ap_start">in, 1, ap_ctrl_hs, SampleCntTargetController, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, SampleCntTargetController, return value</column>
-<column name="ap_idle">out, 1, ap_ctrl_hs, SampleCntTargetController, return value</column>
-<column name="ap_ready">out, 1, ap_ctrl_hs, SampleCntTargetController, return value</column>
+<column name="s_axi_CPU_AWVALID">in, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_AWREADY">out, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_AWADDR">in, 5, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_WVALID">in, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_WREADY">out, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_WDATA">in, 32, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_WSTRB">in, 4, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_ARVALID">in, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_ARREADY">out, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_ARADDR">in, 5, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_RVALID">out, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_RREADY">in, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_RDATA">out, 32, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_RRESP">out, 2, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_BVALID">out, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_BREADY">in, 1, s_axi, CPU, scalar</column>
+<column name="s_axi_CPU_BRESP">out, 2, s_axi, CPU, scalar</column>
+<column name="sample_cnt_target_out">out, 20, ap_none, sample_cnt_target_out, pointer</column>
 <column name="ap_clk">in, 1, ap_ctrl_hs, SampleCntTargetController, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_hs, SampleCntTargetController, return value</column>
-<column name="sample_cnt_target_out">out, 20, ap_none, sample_cnt_target_out, pointer</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, SampleCntTargetController, return value</column>
 </table>
 </item>
 </section>

@@ -1,0 +1,112 @@
+#!/bin/sh
+
+# Emit a useful diagnostic if something fails:
+bb_exit_handler() {
+    ret=$?
+    case $ret in
+    0)  ;;
+    *)  case $BASH_VERSION in
+        "") echo "WARNING: exit code $ret from a shell command.";;
+        *)  echo "WARNING: ${BASH_SOURCE[0]}:${BASH_LINENO[0]} exit $ret from '$BASH_COMMAND'";;
+        esac
+        exit $ret
+    esac
+}
+trap 'bb_exit_handler' 0
+set -e
+export AR="ar"
+export AS="as "
+export BUILD_AR="ar"
+export BUILD_AS="as "
+export BUILD_CC="gcc "
+export BUILD_CCLD="gcc "
+export BUILD_CFLAGS="-isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include -O2 -pipe"
+export BUILD_CPP="gcc  -E"
+export BUILD_CPPFLAGS="-isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include"
+export BUILD_CXX="g++ "
+export BUILD_CXXFLAGS="-isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include -O2 -pipe"
+export BUILD_FC="gfortran "
+export BUILD_LD="ld "
+export BUILD_LDFLAGS="-L/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -L/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,--enable-new-dtags                         -Wl,-rpath-link,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath-link,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,-rpath,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,-O1"
+export BUILD_NM="nm"
+export BUILD_RANLIB="ranlib"
+export BUILD_STRIP="strip"
+export CC="gcc "
+export CCLD="gcc "
+export CFLAGS="-isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include -O2 -pipe"
+export CONFIG_SITE="/home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/core/meta/site/native"
+export CPP="gcc  -E"
+export CPPFLAGS="-isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include"
+export CXX="g++ "
+export CXXFLAGS="-isystem/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include -O2 -pipe"
+unset DISTRO
+export FC="gfortran "
+export HOME="/home/ffn"
+export LC_ALL="en_US.UTF-8"
+export LD="ld "
+export LDFLAGS="-L/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -L/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,--enable-new-dtags                         -Wl,-rpath-link,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath-link,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,-rpath,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath,/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib                         -Wl,-O1 -fuse-ld=bfd"
+export LIBTOOL="x86_64-linux-libtool"
+export LOGNAME="ffn"
+unset MACHINE
+export MAKE="make"
+export NM="nm"
+export OBJCOPY="objcopy"
+export OBJDUMP="objdump"
+export PATH="/home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/core/scripts/native-intercept:/home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/core/scripts:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/bin/x86_64-linux:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/bin:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/sbin:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/bin:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/sbin:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/bin:/home/ffn/Software/petalinux_2020_2/tools/xsct//bin:/home/ffn/Software/petalinux_2020_2/tools/xsct//gnu/microblaze/lin/bin:/home/ffn/Software/petalinux_2020_2/tools/xsct//gnu/aarch32/lin/gcc-arm-none-eabi/bin:/home/ffn/Software/petalinux_2020_2/tools/xsct//gnu/armr5/lin/gcc-arm-none-eabi/bin:/home/ffn/Software/petalinux_2020_2/tools/xsct//gnu/aarch64/lin/aarch64-none/bin:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/core/bitbake/bin:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/hosttools"
+export PKG_CONFIG_DIR="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig"
+export PKG_CONFIG_DISABLE_UNINSTALLED="yes"
+export PKG_CONFIG_LIBDIR="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig"
+export PKG_CONFIG_PATH="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/pkgconfig:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/share/pkgconfig"
+export PKG_CONFIG_SYSROOT_DIR=""
+unset PKG_CONFIG_SYSTEM_INCLUDE_PATH
+unset PKG_CONFIG_SYSTEM_LIBRARY_PATH
+export PSEUDO_DISABLED="1"
+export PSEUDO_UNLOAD="1"
+export RANLIB="ranlib"
+export READELF="readelf"
+unset SHELL
+export STRINGS="strings"
+export STRIP="strip"
+unset TARGET_ARCH
+export TERM="xterm-256color"
+export TZ="UTC"
+export USER="ffn"
+export base_bindir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/bin"
+export base_libdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib"
+export base_prefix="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native"
+export base_sbindir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/sbin"
+export bindir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/bin"
+export datadir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/share"
+export docdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/share/doc"
+export exec_prefix="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr"
+export includedir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include"
+export infodir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/share/info"
+export libdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib"
+export libexecdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/libexec"
+export localstatedir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/var"
+export lt_cv_sys_lib_dlsearch_path_spec="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib /lib /lib64 /usr/lib /usr/lib64"
+export mandir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/share/man"
+export nonarch_base_libdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib"
+export nonarch_libdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib"
+export oldincludedir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/include"
+export prefix="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr"
+export sbindir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/sbin"
+export servicedir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/srv"
+export sharedstatedir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/com"
+export sysconfdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/etc"
+export systemd_system_unitdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib/systemd/system"
+export systemd_unitdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/lib/systemd"
+export systemd_user_unitdir="/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/usr/lib/systemd/user"
+
+remove_libtool_la() {
+	if [ "1" != "0" ]; then
+		find "/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/image" -ignore_readdir_race -name "*.la" -delete
+	fi
+}
+
+remove_libtool_la
+
+# cleanup
+ret=$?
+trap '' 0
+exit $ret

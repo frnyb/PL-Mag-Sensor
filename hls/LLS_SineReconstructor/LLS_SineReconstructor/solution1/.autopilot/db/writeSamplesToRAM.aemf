@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652100491380">
-  <ports id="1" name="samples_buffer_out" type="PortType" coreName="RAM_1P" coreId="2003316581" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="961">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652346073148">
+  <ports id="1" name="samples_buffer_out" type="PortType" coreName="RAM_1P" coreId="1869366831" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="961">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="3" name="sliding_window_front_ptr_s" type="PortType" coreId="796354607" bitwidth="5">
+  <ports id="3" name="sliding_window_front_ptr_s" type="PortType" coreId="33" bitwidth="5">
     <dataOutputObjs>load</dataOutputObjs>
   </ports>
   <ports id="4" name="sliding_window_back_ptr_s" type="PortType" coreId="1869366831" bitwidth="5">
     <dataOutputObjs>load</dataOutputObjs>
   </ports>
-  <ports id="6" name="sliding_window_buffer_samples_timestamp_V_11" type="PortType" coreName="RAM" coreId="1107715520" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="6" name="sliding_window_buffer_samples_timestamp_V_11" type="PortType" coreName="RAM" coreId="1869366831" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="7" name="sliding_window_buffer_samples_timestamp_V_10" type="PortType" coreName="RAM" coreId="2003316581" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="7" name="sliding_window_buffer_samples_timestamp_V_10" type="PortType" coreName="RAM" coreId="2302102471" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="8" name="sliding_window_buffer_samples_timestamp_V_9" type="PortType" coreName="RAM" coreId="2003316581" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="8" name="sliding_window_buffer_samples_timestamp_V_9" type="PortType" coreName="RAM" coreId="4054449128" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="9" name="sliding_window_buffer_samples_timestamp_V_8" type="PortType" coreName="RAM" coreId="1103477320" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="9" name="sliding_window_buffer_samples_timestamp_V_8" type="PortType" coreName="RAM" coreId="3367254360" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="10" name="sliding_window_buffer_samples_timestamp_V_7" type="PortType" coreName="RAM" coreId="97" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="10" name="sliding_window_buffer_samples_timestamp_V_7" type="PortType" coreName="RAM" coreId="132" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="11" name="sliding_window_buffer_samples_timestamp_V_6" type="PortType" coreName="RAM" coreId="0" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="11" name="sliding_window_buffer_samples_timestamp_V_6" type="PortType" coreName="RAM" coreId="1869375071" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="12" name="sliding_window_buffer_samples_timestamp_V_5" type="PortType" coreName="RAM" coreId="4054449128" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="12" name="sliding_window_buffer_samples_timestamp_V_5" type="PortType" coreName="RAM" coreId="177" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="13" name="sliding_window_buffer_samples_timestamp_V_4" type="PortType" coreName="RAM" coreId="97" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="13" name="sliding_window_buffer_samples_timestamp_V_4" type="PortType" coreName="RAM" coreId="129" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="14" name="sliding_window_buffer_samples_timestamp_V_3" type="PortType" coreName="RAM" coreId="795766633" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="14" name="sliding_window_buffer_samples_timestamp_V_3" type="PortType" coreName="RAM" coreId="257" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <ports id="15" name="sliding_window_buffer_samples_timestamp_V_2" type="PortType" coreName="RAM" coreId="49" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="16" name="sliding_window_buffer_samples_timestamp_V_1" type="PortType" coreName="RAM" coreId="1986817907" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="16" name="sliding_window_buffer_samples_timestamp_V_1" type="PortType" coreName="RAM" coreId="132" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="17" name="sliding_window_buffer_samples_timestamp_V_0" type="PortType" coreName="RAM" coreId="225" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
+  <ports id="17" name="sliding_window_buffer_samples_timestamp_V_0" type="PortType" coreName="RAM" coreId="257" bitwidth="20" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="19" name="sliding_window_buffer_samples_sample_V" type="PortType" coreName="RAM" coreId="49" bitwidth="12" iftype="IfTypeRegister" arraysize="960">
+  <ports id="19" name="sliding_window_buffer_samples_sample_V" type="PortType" coreName="RAM" coreId="4160749696" bitwidth="12" iftype="IfTypeRegister" arraysize="960">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -329,7 +329,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_59</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="22" name="sample_sample_V" lineNumber="161" originalName="sample.sample.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sample_sample_V_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -346,7 +346,7 @@
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="23" name="sample_timestamp_V" lineNumber="161" originalName="sample.timestamp.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sample_timestamp_V_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -362,92 +362,92 @@
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="sample_sample_V_addr_1" coreId="1211065699" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="sample_sample_V_addr_1" coreId="2275663152" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sample_sample_V_addr_2" coreId="1211065699" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sample_sample_V_addr_2" coreId="2275693360" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="sample_sample_V_addr_3" coreId="1211065699" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="sample_sample_V_addr_3" coreId="1940903616" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="sample_sample_V_addr_4" coreId="1211065699" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="sample_sample_V_addr_4" coreId="1940692752" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="sample_sample_V_addr_5" coreId="1211065699" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="sample_sample_V_addr_5" coreId="2784135872" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="sample_sample_V_addr_6" coreId="49" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="sample_sample_V_addr_6" coreId="1702259823" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sample_sample_V_addr_7" coreId="132" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sample_sample_V_addr_7" coreId="808595506" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sample_sample_V_addr_8" coreId="1397508143" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sample_sample_V_addr_8" coreId="433" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sample_sample_V_addr_9" coreId="433" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sample_sample_V_addr_9" coreId="193" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="sample_sample_V_addr_10" coreId="305" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="sample_sample_V_addr_10" coreId="961" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sample_sample_V_addr_11" coreId="609" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sample_sample_V_addr_11" coreId="1680366240" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="sample_sample_V_addr_12" coreId="737" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="sample_sample_V_addr_12" coreId="132" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="sample_timestamp_V_addr_1" coreId="129" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="sample_timestamp_V_addr_1" coreId="132" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="sample_timestamp_V_addr_2" coreId="1121" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="sample_timestamp_V_addr_2" coreId="132" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="sample_timestamp_V_addr_3" coreId="1107731640" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="sample_timestamp_V_addr_3" coreId="68" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="sample_timestamp_V_addr_4" coreId="1114168416" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="sample_timestamp_V_addr_4" coreId="49" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="sample_timestamp_V_addr_5" coreId="1107737312" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="sample_timestamp_V_addr_5" coreId="1680326480" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="sample_timestamp_V_addr_6" coreId="132" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="sample_timestamp_V_addr_6" coreId="6" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
@@ -472,7 +472,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sample_timestamp_V_addr_11" coreId="0" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sample_timestamp_V_addr_11" coreId="1679563008" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
@@ -482,20 +482,20 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="sliding_window_front_ptr_load" coreId="0" bitwidth="5" opcode="load" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="sliding_window_front_ptr_load" coreId="132" bitwidth="5" opcode="load" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
       <dataInputObjs>sliding_window_front_ptr_s</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sliding_window_front_ptr_load_cast" rtlName="sliding_window_front_ptr_load_cast_fu_728_p1" coreId="1113424032" bitwidth="6" opcode="sext" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sliding_window_front_ptr_load_cast" rtlName="sliding_window_front_ptr_load_cast_fu_728_p1" coreId="49" bitwidth="6" opcode="sext" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="sliding_window_back_ptr_load" coreId="0" bitwidth="5" opcode="load" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="sliding_window_back_ptr_load" coreId="1679560112" bitwidth="5" opcode="load" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
       <dataInputObjs>sliding_window_back_ptr_s</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="51" name="br_ln154" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="30" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <controlInputObjs>block_59</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
@@ -510,8 +510,8 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_214</controlOutputObjs>
     <controlOutputObjs>.split3</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="idx" lineNumber="158" originalName="idx" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="idx" lineNumber="158" originalName="idx" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -519,7 +519,7 @@
       <controlInputObjs>block_52</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="i" originalName="i" coreId="49" bitwidth="5" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="i" originalName="i" coreId="1217" bitwidth="5" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
@@ -528,19 +528,19 @@
       <controlInputObjs>block_52</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="sext_ln154" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sext_ln154_fu_736_p1" coreId="1103613848" contextFuncName="writeSamplesToRAM" bitwidth="6" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="sext_ln154" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sext_ln154_fu_736_p1" coreId="1938768584" contextFuncName="writeSamplesToRAM" bitwidth="6" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="tmp" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="tmp_fu_740_p3" coreId="1103612936" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="tmp" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="tmp_fu_740_p3" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln154" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln154" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1680761616" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <controlInputObjs>.split3</controlInputObjs>
       <controlInputObjs>block_214</controlInputObjs>
@@ -557,69 +557,69 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>_ZN12CyclicBufferI12SamplePeriodILi8EELi10EEixEi.exit</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="61" name="sub_i" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sub_i_fu_748_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="6" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="36" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="empty" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="empty_fu_753_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="empty" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="empty_fu_753_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="cmp_i" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="cmp_i_fu_757_p2" opType="icmp" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="38" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="cmp_i" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="cmp_i_fu_757_p2" opType="icmp" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tmp_1" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="tmp_1_fu_763_p3" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="65" name="add_i" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_i_fu_771_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.86" m_topoIndex="40" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="trunc_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="trunc_ln161_fu_777_p1" coreId="12" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="trunc_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="trunc_ln161_fu_777_p1" coreId="913" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="67" name="empty_127" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="empty_127_fu_780_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="68" name="empty_128" lineNumber="154" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="empty_128_fu_788_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.45" m_topoIndex="43" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="tmp_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="tmp_2_fu_796_p3" coreId="132" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="tmp_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="tmp_2_fu_796_p3" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="zext_ln158" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln158_fu_804_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="zext_ln158" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln158_fu_804_p1" coreId="11" contextFuncName="writeSamplesToRAM" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="71" name="br_ln158" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.48" m_topoIndex="46" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi8EELi10EEixEi.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
@@ -635,7 +635,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_212</controlOutputObjs>
     <controlOutputObjs>_ZN12CyclicBufferI12SamplePeriodILi8EELi10EEixEi.exit.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="idx_1" originalName="idx" coreId="1107791737" bitwidth="10" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="idx_1" originalName="idx" coreId="1680675408" bitwidth="10" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
@@ -643,8 +643,8 @@
       <controlInputObjs>block_208</controlInputObjs>
       <controlInputObjs>.split3</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="j" lineNumber="158" originalName="j" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1107793232" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="j" lineNumber="158" originalName="j" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
@@ -654,26 +654,26 @@
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="75" name="add_ln158_1" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln158_1_fu_808_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.86" m_topoIndex="50" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="zext_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_fu_814_p1" coreId="1107711080" contextFuncName="writeSamplesToRAM" bitwidth="8" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="zext_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_fu_814_p1" coreId="1680758752" contextFuncName="writeSamplesToRAM" bitwidth="8" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_fu_818_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.89" m_topoIndex="52" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="zext_ln161_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_1_fu_823_p1" coreId="2993" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="zext_ln161_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_1_fu_823_p1" coreId="1680730784" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -688,25 +688,25 @@
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="trunc_ln161_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="trunc_ln161_1_fu_839_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="6" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="trunc_ln161_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="trunc_ln161_1_fu_839_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="6" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="p_shl_cast" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="p_shl_cast_fu_843_p3" coreId="3556769920" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="p_shl_cast" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="p_shl_cast_fu_843_p3" coreId="132" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="81" name="p_shl1_cast" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="p_shl1_cast_fu_851_p3" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="82" name="sub_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sub_ln161_fu_859_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="sub" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="57" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
@@ -723,307 +723,307 @@
       <dataOutputObjs>or</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="83" name="zext_ln161_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_2_fu_865_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="84" name="add_ln161_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_1_fu_870_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="59" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="zext_ln161_3" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_3_fu_876_p1" coreId="1953068832" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="zext_ln161_3" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_3_fu_876_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="sliding_window_buffer_samples_sample_V_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="sliding_window_buffer_samples_sample_V_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="31" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="87" name="add_ln161_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_2_fu_881_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="62" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="88" name="zext_ln161_4" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_4_fu_887_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="sliding_window_buffer_samples_sample_V_addr_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1114191576" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="sliding_window_buffer_samples_sample_V_addr_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="90" name="add_ln161_3" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_3_fu_892_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="65" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="zext_ln161_5" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_5_fu_898_p1" coreId="1112953176" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="zext_ln161_5" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_5_fu_898_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="sliding_window_buffer_samples_sample_V_addr_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="3556769920" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="sliding_window_buffer_samples_sample_V_addr_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="93" name="add_ln161_4" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_4_fu_903_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="68" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="zext_ln161_6" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_6_fu_909_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="zext_ln161_6" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_6_fu_909_p1" coreId="2257" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="sliding_window_buffer_samples_sample_V_addr_3" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="sliding_window_buffer_samples_sample_V_addr_3" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1680367216" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="96" name="add_ln161_5" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_5_fu_914_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="71" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="zext_ln161_7" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_7_fu_920_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="zext_ln161_7" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_7_fu_920_p1" coreId="796421737" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="sliding_window_buffer_samples_sample_V_addr_4" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="12" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="sliding_window_buffer_samples_sample_V_addr_4" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1680364576" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="99" name="add_ln161_6" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_6_fu_925_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="74" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="100" name="zext_ln161_8" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_8_fu_931_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="sliding_window_buffer_samples_sample_V_addr_5" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="sliding_window_buffer_samples_sample_V_addr_5" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1680969064" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="102" name="add_ln161_7" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_7_fu_936_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="77" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="103" name="zext_ln161_9" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_9_fu_942_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="sliding_window_buffer_samples_sample_V_addr_6" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="sliding_window_buffer_samples_sample_V_addr_6" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1680954064" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="105" name="add_ln161_8" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln161_8_fu_947_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="80" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="zext_ln161_10" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_10_fu_953_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="zext_ln161_10" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_10_fu_953_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="sliding_window_buffer_samples_sample_V_addr_7" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="sliding_window_buffer_samples_sample_V_addr_7" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="11" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="or_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="or_ln161_fu_958_p2" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="or_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="or_ln161_fu_958_p2" coreId="1680966352" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="zext_ln161_11" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_11_fu_964_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="zext_ln161_11" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_11_fu_964_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>or</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="sliding_window_buffer_samples_sample_V_addr_8" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="sliding_window_buffer_samples_sample_V_addr_8" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="or_ln161_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="or_ln161_1_fu_969_p2" coreId="1114183856" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="or_ln161_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="or_ln161_1_fu_969_p2" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="112" name="zext_ln161_12" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_12_fu_975_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>or</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="113" name="sliding_window_buffer_samples_sample_V_addr_9" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="or_ln161_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="or_ln161_2_fu_980_p2" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="or_ln161_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="or_ln161_2_fu_980_p2" coreId="6193" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="zext_ln161_13" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_13_fu_986_p1" coreId="1113951625" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="zext_ln161_13" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln161_13_fu_986_p1" coreId="1942859161" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>or</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="sliding_window_buffer_samples_sample_V_addr_10" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="sliding_window_buffer_samples_sample_V_addr_10" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1680330384" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="117" name="sliding_window_buffer_samples_sample_V_addr_11" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_sample_V</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="sliding_window_buffer_samples_timestamp_V_0_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="11" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="sliding_window_buffer_samples_timestamp_V_0_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_0</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="119" name="sliding_window_buffer_samples_timestamp_V_1_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_1</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="sliding_window_buffer_samples_timestamp_V_10_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="sliding_window_buffer_samples_timestamp_V_10_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1680944800" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_10</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="sliding_window_buffer_samples_timestamp_V_11_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="sliding_window_buffer_samples_timestamp_V_11_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_11</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="sliding_window_buffer_samples_timestamp_V_2_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1108726096" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="sliding_window_buffer_samples_timestamp_V_2_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_2</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="sliding_window_buffer_samples_timestamp_V_3_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="sliding_window_buffer_samples_timestamp_V_3_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="541155173" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_3</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="sliding_window_buffer_samples_timestamp_V_4_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="sliding_window_buffer_samples_timestamp_V_4_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1668183398" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_4</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="sliding_window_buffer_samples_timestamp_V_5_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="3556769920" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="sliding_window_buffer_samples_timestamp_V_5_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1635017019" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_5</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="sliding_window_buffer_samples_timestamp_V_6_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="sliding_window_buffer_samples_timestamp_V_6_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="824195685" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_6</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="sliding_window_buffer_samples_timestamp_V_7_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="10" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="sliding_window_buffer_samples_timestamp_V_7_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1953394531" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_7</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="sliding_window_buffer_samples_timestamp_V_8_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="sliding_window_buffer_samples_timestamp_V_8_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1852142702" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_8</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="sliding_window_buffer_samples_timestamp_V_9_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1113431032" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="sliding_window_buffer_samples_timestamp_V_9_addr" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>sliding_window_buffer_samples_timestamp_V_9</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="icmp_ln158" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln158_fu_991_p2" opType="icmp" coreId="1113432272" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.88" m_topoIndex="105" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="icmp_ln158" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln158_fu_991_p2" opType="icmp" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.88" m_topoIndex="105" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="br_ln158" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="3556769920" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="106" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="br_ln158" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1938772824" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="106" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi8EELi10EEixEi.exit.split</controlInputObjs>
       <controlInputObjs>block_212</controlInputObjs>
@@ -1040,247 +1040,247 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_193</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="135" name="sliding_window_buffer_samples_timestamp_V_11_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="146" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="136" name="sliding_window_buffer_samples_timestamp_V_10_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="147" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="137" name="sliding_window_buffer_samples_timestamp_V_9_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="138" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="138" name="sliding_window_buffer_samples_timestamp_V_8_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="139" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="139" name="sliding_window_buffer_samples_timestamp_V_7_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="130" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="140" name="sliding_window_buffer_samples_timestamp_V_6_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="131" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="141" name="sliding_window_buffer_samples_timestamp_V_5_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="122" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="142" name="sliding_window_buffer_samples_timestamp_V_4_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="123" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="143" name="sliding_window_buffer_samples_timestamp_V_3_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="114" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="144" name="sliding_window_buffer_samples_timestamp_V_2_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="115" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="145" name="sliding_window_buffer_samples_timestamp_V_1_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="107" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="146" name="sliding_window_buffer_samples_timestamp_V_0_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="108" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="147" name="sliding_window_buffer_samples_sample_V_load" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="109" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="148" name="sliding_window_buffer_samples_sample_V_load_1" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="110" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="149" name="sliding_window_buffer_samples_sample_V_load_2" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="116" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="150" name="sliding_window_buffer_samples_sample_V_load_3" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="117" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="151" name="sliding_window_buffer_samples_sample_V_load_4" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="124" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="152" name="sliding_window_buffer_samples_sample_V_load_5" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="125" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="153" name="sliding_window_buffer_samples_sample_V_load_6" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="132" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="154" name="sliding_window_buffer_samples_sample_V_load_7" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="133" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="155" name="sliding_window_buffer_samples_sample_V_load_8" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="140" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="156" name="sliding_window_buffer_samples_sample_V_load_9" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="141" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="157" name="sliding_window_buffer_samples_sample_V_load_10" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="148" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="158" name="sliding_window_buffer_samples_sample_V_load_11" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="149" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="159" name="sample_sample_V_addr_1_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="8.0" m_display="0" m_delay="0.79" m_topoIndex="154" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="160" name="sample_sample_V_addr_2_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="8.0" m_display="0" m_delay="0.79" m_topoIndex="155" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="161" name="sample_sample_V_addr_3_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="7.0" m_display="0" m_delay="0.79" m_topoIndex="150" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="162" name="sample_sample_V_addr_4_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="7.0" m_display="0" m_delay="0.79" m_topoIndex="151" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="163" name="sample_sample_V_addr_5_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="6.0" m_display="0" m_delay="0.79" m_topoIndex="142" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="164" name="sample_sample_V_addr_6_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="6.0" m_display="0" m_delay="0.79" m_topoIndex="143" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="165" name="sample_sample_V_addr_7_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="5.0" m_display="0" m_delay="0.79" m_topoIndex="134" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="166" name="sample_sample_V_addr_8_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="5.0" m_display="0" m_delay="0.79" m_topoIndex="135" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="167" name="sample_sample_V_addr_9_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.79" m_topoIndex="126" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="168" name="sample_sample_V_addr_10_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.79" m_topoIndex="127" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="169" name="sample_sample_V_addr_11_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.79" m_topoIndex="118" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="170" name="sample_sample_V_addr_12_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.79" m_topoIndex="119" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="171" name="sample_timestamp_V_addr_1_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.79" m_topoIndex="120" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="172" name="sample_timestamp_V_addr_2_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.79" m_topoIndex="121" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="173" name="sample_timestamp_V_addr_3_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.79" m_topoIndex="128" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="174" name="sample_timestamp_V_addr_4_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.79" m_topoIndex="129" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="175" name="sample_timestamp_V_addr_5_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="5.0" m_display="0" m_delay="0.79" m_topoIndex="136" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="176" name="sample_timestamp_V_addr_6_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="5.0" m_display="0" m_delay="0.79" m_topoIndex="137" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="177" name="sample_timestamp_V_addr_7_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="6.0" m_display="0" m_delay="0.79" m_topoIndex="144" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="178" name="sample_timestamp_V_addr_8_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="6.0" m_display="0" m_delay="0.79" m_topoIndex="145" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="179" name="sample_timestamp_V_addr_9_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="7.0" m_display="0" m_delay="0.79" m_topoIndex="152" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="180" name="sample_timestamp_V_addr_10_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="7.0" m_display="0" m_delay="0.79" m_topoIndex="153" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="181" name="sample_timestamp_V_addr_11_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="8.0" m_display="0" m_delay="0.79" m_topoIndex="156" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="182" name="sample_timestamp_V_addr_12_write_ln161" lineNumber="161" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="8.0" m_display="0" m_delay="0.79" m_topoIndex="157" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="161" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="183" name="br_ln164" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="8.0" m_display="0" m_delay="0.48" m_topoIndex="158" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="183" name="br_ln164" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1679545680" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="8.0" m_display="0" m_delay="0.48" m_topoIndex="158" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <controlInputObjs>block_193</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
@@ -1295,12 +1295,12 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>_ZN12CyclicBufferI12SamplePeriodILi8EELi10EEixEi.exit</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="206" name="add_ln158_2" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln158_2_fu_1047_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="11.0" m_display="0" m_delay="0.93" m_topoIndex="175" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="207" name="br_ln0" coreId="1113946032" opcode="br" nodeLabel="11.0" m_display="0" m_topoIndex="176" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="207" name="br_ln0" coreId="0" opcode="br" nodeLabel="11.0" m_display="0" m_topoIndex="176" m_clusterGroupNumber="-1">
       <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi8EELi10EEixEi.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
@@ -1314,18 +1314,18 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_59</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="209" name="add_ln158" lineNumber="158" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln158_fu_997_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.93" m_topoIndex="111" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="158" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="210" name="i_1" lineNumber="154" originalName="i" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_1_fu_1003_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="5" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.87" m_topoIndex="112" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="154" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="211" name="br_ln0" coreId="0" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="211" name="br_ln0" coreId="1680750217" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
       <controlInputObjs>block_59</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
@@ -1336,8 +1336,8 @@
   <blocks id="214" name="block_214" type="BlockType">
     <controlInputObjs>block_59</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="213" name="_ln177" lineNumber="177" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1113941200" contextFuncName="writeSamplesToRAM" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="177" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="213" name="_ln177" lineNumber="177" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="writeSamplesToRAM" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="177" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
       <validLinenumbers>177</validLinenumbers>
@@ -1351,7 +1351,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_208</controlOutputObjs>
       <controlOutputObjs>.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="185" name="idx_2" originalName="idx" coreId="49" bitwidth="10" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="159" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="185" name="idx_2" originalName="idx" coreId="132" bitwidth="10" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="159" m_clusterGroupNumber="-1">
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -1359,7 +1359,7 @@
         <controlInputObjs>_ZN12CyclicBufferI12SamplePeriodILi8EELi10EEixEi.exit.split</controlInputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="186" name="k" lineNumber="164" originalName="k" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="phi" nodeLabel="9.0" m_display="0" m_topoIndex="160" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
@@ -1369,25 +1369,25 @@
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="187" name="add_ln164" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln164_fu_1009_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="add" nodeLabel="9.0" m_display="0" m_delay="0.86" m_topoIndex="161" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="188" name="k_cast" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="k_cast_fu_1015_p1" coreId="1914729321" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="162" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="188" name="k_cast" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="k_cast_fu_1015_p1" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="162" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="190" name="icmp_ln164" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln164_fu_1021_p2" opType="icmp" coreId="1103600792" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="0.88" m_topoIndex="163" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="190" name="icmp_ln164" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln164_fu_1021_p2" opType="icmp" coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="0.88" m_topoIndex="163" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="192" name="br_ln164" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="164" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="192" name="br_ln164" lineNumber="164" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1679553080" contextFuncName="writeSamplesToRAM" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="164" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="164" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split</controlInputObjs>
         <controlInputObjs>block_208</controlInputObjs>
@@ -1403,60 +1403,60 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_193</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="195" name="sample_timestamp_V_addr" lineNumber="167" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="165" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="167" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="167" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="196" name="timestamp_V" lineNumber="167" originalName="timestamp.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="20" opcode="load" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="166" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="167" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="167" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="197" name="sample_sample_V_addr" lineNumber="168" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="3556769920" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="167" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="168" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="197" name="sample_sample_V_addr" lineNumber="168" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="407" contextFuncName="writeSamplesToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="167" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="168" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="198" name="data_V" lineNumber="168" originalName="data.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSamplesToRAM" bitwidth="12" opcode="load" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="168" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="168" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="168" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="199" name="item" lineNumber="170" originalName="item" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="samples_buffer_out_d0" coreId="1103609024" contextFuncName="writeSamplesToRAM" bitwidth="32" opcode="bitconcatenate" nodeLabel="10.0" m_display="0" m_topoIndex="169" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="170" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="199" name="item" lineNumber="170" originalName="item" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="samples_buffer_out_d0" coreId="1679559640" contextFuncName="writeSamplesToRAM" bitwidth="32" opcode="bitconcatenate" nodeLabel="10.0" m_display="0" m_topoIndex="169" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="170" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="200" name="add_ln172" lineNumber="172" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln172_fu_1036_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="add" nodeLabel="10.0" m_display="0" m_delay="0.93" m_topoIndex="170" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="172" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="172" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="201" name="zext_ln172" lineNumber="172" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln172_fu_1042_p1" coreId="132" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="171" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="172" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="201" name="zext_ln172" lineNumber="172" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln172_fu_1042_p1" coreId="49" contextFuncName="writeSamplesToRAM" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="171" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="172" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="202" name="samples_buffer_out_addr" lineNumber="172" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1113951624" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="172" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="172" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="202" name="samples_buffer_out_addr" lineNumber="172" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSamplesToRAM" bitwidth="10" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="172" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="172" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>samples_buffer_out</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="203" name="samples_buffer_out_addr_write_ln172" lineNumber="172" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="writeSamplesToRAM" opcode="store" nodeLabel="10.0" m_display="0" m_delay="1.35" m_topoIndex="173" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="172" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="172" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSamplesToRAM"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="204" name="br_ln0" coreId="62" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="174" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="204" name="br_ln0" coreId="0" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="174" m_clusterGroupNumber="-1">
         <controlInputObjs>block_193</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">

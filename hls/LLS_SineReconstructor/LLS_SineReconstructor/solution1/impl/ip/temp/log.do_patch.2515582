@@ -1,0 +1,30 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/core/meta/recipes-devtools/quilt/quilt-native_0.66.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native/:g' /home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/pkgdata/u96v2-sbc:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/ffn/Nextcloud/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/build/tmp/work/x86_64-linux/qemu-xilinx-native/v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a-r0/temp/fifo.2515582:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for 0010-configure-Add-pkg-config-handling-for-libgcrypt.patch in paths:
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/petalinux
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/qemu-xilinx-v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a/petalinux
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/qemu-xilinx/petalinux
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/petalinux
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/qemu-xilinx-v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a/
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/qemu-xilinx/
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/x86-64
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/qemu-xilinx-v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a/x86-64
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/qemu-xilinx/x86-64
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/x86-64
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/qemu-xilinx-v5.1.0-xilinx-v2020.2+gitAUTOINC+7e3e3ae09a/
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/qemu-xilinx/
+    /home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/
+NOTE: Applying patch '0010-configure-Add-pkg-config-handling-for-libgcrypt.patch' (/home/ffn/Workspace/Projects/U96_build_image/u96v2_sbc_base_2020_2/components/yocto/layers/meta-xilinx/meta-xilinx-bsp/recipes-devtools/qemu/files/0010-configure-Add-pkg-config-handling-for-libgcrypt.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

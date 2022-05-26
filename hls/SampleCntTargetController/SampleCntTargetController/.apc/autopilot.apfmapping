@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="sample_cnt_target_controller.cpp" path="/vol/Workspace/Projects/PL-Mag-Sensor/src/sample_cnt_target_controller.cpp"/>
+    <originFiles name="sample_cnt_target_controller.cpp" path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/src/sample_cnt_target_controller.cpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

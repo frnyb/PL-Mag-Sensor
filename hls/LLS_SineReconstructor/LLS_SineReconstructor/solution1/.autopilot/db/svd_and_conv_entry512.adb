@@ -31,7 +31,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>2003316581</coreId>
+              <coreId>1834971487</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -64,7 +64,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>796354607</coreId>
+              <coreId>1869366831</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -130,7 +130,7 @@
               <opType/>
               <implIndex/>
               <coreName>FIFO_SRL</coreName>
-              <coreId>2003316581</coreId>
+              <coreId>1869366831</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -163,7 +163,7 @@
               <opType/>
               <implIndex/>
               <coreName>FIFO_SRL</coreName>
-              <coreId>2003316581</coreId>
+              <coreId>1869366831</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -196,7 +196,7 @@
               <opType/>
               <implIndex/>
               <coreName>FIFO_SRL</coreName>
-              <coreId>2003316581</coreId>
+              <coreId>49</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -229,7 +229,7 @@
               <opType/>
               <implIndex/>
               <coreName>FIFO_SRL</coreName>
-              <coreId>49</coreId>
+              <coreId>81</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -262,7 +262,7 @@
               <opType/>
               <implIndex/>
               <coreName>FIFO_SRL</coreName>
-              <coreId>49</coreId>
+              <coreId>81</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -295,7 +295,7 @@
               <opType/>
               <implIndex/>
               <coreName>FIFO_SRL</coreName>
-              <coreId>49</coreId>
+              <coreId>97</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -332,7 +332,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1211065699</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -372,7 +372,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1692289680</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -412,7 +412,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>3556769920</coreId>
+              <coreId>20</coreId>
             </Obj>
             <bitwidth>60</bitwidth>
           </Value>
@@ -698,7 +698,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>129</coreId>
+              <coreId>49</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>

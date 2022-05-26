@@ -29,37 +29,37 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/.apc/.src</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/.apc/.tb</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/.apc/.tb</location>
 		</link>
 		<link>
 			<name>ControlGain/constraints</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/.tcls</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/.tcls</location>
 		</link>
 		<link>
 			<name>source/ControlGain.cpp</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain.cpp</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain.cpp</location>
 		</link>
 		<link>
 			<name>ControlGain/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/ControlGain.directive</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/ControlGain.directive</location>
 		</link>
 		<link>
 			<name>ControlGain/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/directives.tcl</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/directives.tcl</location>
 		</link>
 		<link>
 			<name>ControlGain/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/script.tcl</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/ControlGain/ControlGain/ControlGain/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

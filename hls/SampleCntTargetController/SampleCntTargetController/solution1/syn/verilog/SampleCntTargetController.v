@@ -7,96 +7,99 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="SampleCntTargetController_SampleCntTargetController,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=1.000000,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=56,HLS_SYN_LUT=80,HLS_VERSION=2020_2}" *)
+(* CORE_GENERATION_INFO="SampleCntTargetController_SampleCntTargetController,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=1.000000,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=62,HLS_SYN_LUT=80,HLS_VERSION=2020_2}" *)
 
 module SampleCntTargetController (
-        ap_start,
-        ap_done,
-        ap_idle,
-        ap_ready,
         sample_cnt_target_out,
-        s_axi_control_AWVALID,
-        s_axi_control_AWREADY,
-        s_axi_control_AWADDR,
-        s_axi_control_WVALID,
-        s_axi_control_WREADY,
-        s_axi_control_WDATA,
-        s_axi_control_WSTRB,
-        s_axi_control_ARVALID,
-        s_axi_control_ARREADY,
-        s_axi_control_ARADDR,
-        s_axi_control_RVALID,
-        s_axi_control_RREADY,
-        s_axi_control_RDATA,
-        s_axi_control_RRESP,
-        s_axi_control_BVALID,
-        s_axi_control_BREADY,
-        s_axi_control_BRESP,
+        s_axi_CPU_AWVALID,
+        s_axi_CPU_AWREADY,
+        s_axi_CPU_AWADDR,
+        s_axi_CPU_WVALID,
+        s_axi_CPU_WREADY,
+        s_axi_CPU_WDATA,
+        s_axi_CPU_WSTRB,
+        s_axi_CPU_ARVALID,
+        s_axi_CPU_ARREADY,
+        s_axi_CPU_ARADDR,
+        s_axi_CPU_RVALID,
+        s_axi_CPU_RREADY,
+        s_axi_CPU_RDATA,
+        s_axi_CPU_RRESP,
+        s_axi_CPU_BVALID,
+        s_axi_CPU_BREADY,
+        s_axi_CPU_BRESP,
         ap_clk,
-        ap_rst_n
+        ap_rst_n,
+        interrupt
 );
 
-parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
-parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 5;
+parameter    C_S_AXI_CPU_DATA_WIDTH = 32;
+parameter    C_S_AXI_CPU_ADDR_WIDTH = 5;
 parameter    C_S_AXI_DATA_WIDTH = 32;
 
-parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (32 / 8);
+parameter C_S_AXI_CPU_WSTRB_WIDTH = (32 / 8);
 parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
 
-input   ap_start;
-output   ap_done;
-output   ap_idle;
-output   ap_ready;
 output  [19:0] sample_cnt_target_out;
-input   s_axi_control_AWVALID;
-output   s_axi_control_AWREADY;
-input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_AWADDR;
-input   s_axi_control_WVALID;
-output   s_axi_control_WREADY;
-input  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_WDATA;
-input  [C_S_AXI_CONTROL_WSTRB_WIDTH - 1:0] s_axi_control_WSTRB;
-input   s_axi_control_ARVALID;
-output   s_axi_control_ARREADY;
-input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_ARADDR;
-output   s_axi_control_RVALID;
-input   s_axi_control_RREADY;
-output  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_RDATA;
-output  [1:0] s_axi_control_RRESP;
-output   s_axi_control_BVALID;
-input   s_axi_control_BREADY;
-output  [1:0] s_axi_control_BRESP;
+input   s_axi_CPU_AWVALID;
+output   s_axi_CPU_AWREADY;
+input  [C_S_AXI_CPU_ADDR_WIDTH - 1:0] s_axi_CPU_AWADDR;
+input   s_axi_CPU_WVALID;
+output   s_axi_CPU_WREADY;
+input  [C_S_AXI_CPU_DATA_WIDTH - 1:0] s_axi_CPU_WDATA;
+input  [C_S_AXI_CPU_WSTRB_WIDTH - 1:0] s_axi_CPU_WSTRB;
+input   s_axi_CPU_ARVALID;
+output   s_axi_CPU_ARREADY;
+input  [C_S_AXI_CPU_ADDR_WIDTH - 1:0] s_axi_CPU_ARADDR;
+output   s_axi_CPU_RVALID;
+input   s_axi_CPU_RREADY;
+output  [C_S_AXI_CPU_DATA_WIDTH - 1:0] s_axi_CPU_RDATA;
+output  [1:0] s_axi_CPU_RRESP;
+output   s_axi_CPU_BVALID;
+input   s_axi_CPU_BREADY;
+output  [1:0] s_axi_CPU_BRESP;
 input   ap_clk;
 input   ap_rst_n;
+output   interrupt;
 
+wire    ap_start;
+wire    ap_done;
+wire    ap_idle;
+wire    ap_ready;
 wire   [19:0] sample_cnt_target_in;
  reg    ap_rst_n_inv;
 wire    ap_ce_reg;
 
-SampleCntTargetController_control_s_axi #(
-    .C_S_AXI_ADDR_WIDTH( C_S_AXI_CONTROL_ADDR_WIDTH ),
-    .C_S_AXI_DATA_WIDTH( C_S_AXI_CONTROL_DATA_WIDTH ))
-control_s_axi_U(
-    .AWVALID(s_axi_control_AWVALID),
-    .AWREADY(s_axi_control_AWREADY),
-    .AWADDR(s_axi_control_AWADDR),
-    .WVALID(s_axi_control_WVALID),
-    .WREADY(s_axi_control_WREADY),
-    .WDATA(s_axi_control_WDATA),
-    .WSTRB(s_axi_control_WSTRB),
-    .ARVALID(s_axi_control_ARVALID),
-    .ARREADY(s_axi_control_ARREADY),
-    .ARADDR(s_axi_control_ARADDR),
-    .RVALID(s_axi_control_RVALID),
-    .RREADY(s_axi_control_RREADY),
-    .RDATA(s_axi_control_RDATA),
-    .RRESP(s_axi_control_RRESP),
-    .BVALID(s_axi_control_BVALID),
-    .BREADY(s_axi_control_BREADY),
-    .BRESP(s_axi_control_BRESP),
+SampleCntTargetController_CPU_s_axi #(
+    .C_S_AXI_ADDR_WIDTH( C_S_AXI_CPU_ADDR_WIDTH ),
+    .C_S_AXI_DATA_WIDTH( C_S_AXI_CPU_DATA_WIDTH ))
+CPU_s_axi_U(
+    .AWVALID(s_axi_CPU_AWVALID),
+    .AWREADY(s_axi_CPU_AWREADY),
+    .AWADDR(s_axi_CPU_AWADDR),
+    .WVALID(s_axi_CPU_WVALID),
+    .WREADY(s_axi_CPU_WREADY),
+    .WDATA(s_axi_CPU_WDATA),
+    .WSTRB(s_axi_CPU_WSTRB),
+    .ARVALID(s_axi_CPU_ARVALID),
+    .ARREADY(s_axi_CPU_ARREADY),
+    .ARADDR(s_axi_CPU_ARADDR),
+    .RVALID(s_axi_CPU_RVALID),
+    .RREADY(s_axi_CPU_RREADY),
+    .RDATA(s_axi_CPU_RDATA),
+    .RRESP(s_axi_CPU_RRESP),
+    .BVALID(s_axi_CPU_BVALID),
+    .BREADY(s_axi_CPU_BREADY),
+    .BRESP(s_axi_CPU_BRESP),
     .ACLK(ap_clk),
     .ARESET(ap_rst_n_inv),
     .ACLK_EN(1'b1),
-    .sample_cnt_target_in(sample_cnt_target_in)
+    .sample_cnt_target_in(sample_cnt_target_in),
+    .ap_start(ap_start),
+    .interrupt(interrupt),
+    .ap_ready(ap_ready),
+    .ap_done(ap_done),
+    .ap_idle(ap_idle)
 );
 
 assign ap_done = ap_start;

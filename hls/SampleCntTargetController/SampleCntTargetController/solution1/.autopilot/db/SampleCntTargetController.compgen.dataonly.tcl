@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set axilite_register_dict [dict create]
-set port_control {
+set port_CPU {
 sample_cnt_target_in { 
 	dir I
 	width 20
@@ -10,7 +10,11 @@ sample_cnt_target_in {
 	offset 16
 	offset_end 23
 }
+ap_start { }
+ap_done { }
+ap_ready { }
+ap_idle { }
 }
-dict set axilite_register_dict control $port_control
+dict set axilite_register_dict CPU $port_CPU
 
 

@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367639.71 
+vim-8.1.1518-r0: do_package_write_rpm_setscene
+Elapsed time: 0.24 seconds
+utime: 25
+stime: 2
+cutime: 5
+cstime: 4
+IO rchar: 23856834
+IO wchar: 23761001
+IO syscr: 1710
+IO syscw: 1593
+IO read_bytes: 11603968
+IO write_bytes: 11907072
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.25362599999999996
+rusage ru_stime: 0.024154
+rusage ru_maxrss: 140460
+rusage ru_minflt: 6582
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 96
+rusage ru_nvcsw: 14
+rusage ru_nivcsw: 28
+Child rusage ru_utime: 0.058991999999999996
+Child rusage ru_stime: 0.041269
+Child rusage ru_maxrss: 137672
+Child rusage ru_minflt: 1654
+Child rusage ru_majflt: 3
+Child rusage ru_inblock: 22664
+Child rusage ru_oublock: 23160
+Child rusage ru_nvcsw: 421
+Child rusage ru_nivcsw: 205
+Status: PASSED 
+Ended: 1638367639.95 

@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652100513084">
-  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM_1P" coreId="2003316581" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652346095376">
+  <ports id="1" name="buffer_in_0" type="PortType" coreName="RAM_1P" coreId="1869366831" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM_1P" coreId="796354607" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="2" name="buffer_in_1" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="3" name="buffer_in_2" type="PortType" coreName="RAM_1P" coreId="1869366831" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="4" name="buffer_in_3" type="PortType" coreName="RAM_1P" coreId="1869366831" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM_1P" coreId="2003316581" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="5" name="buffer_in_4" type="PortType" coreName="RAM_1P" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="6" name="buffer_in_5" type="PortType" coreName="RAM_1P" coreId="2003316581" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="6" name="buffer_in_5" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="7" name="buffer_in_6" type="PortType" coreName="RAM_1P" coreId="49" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="7" name="buffer_in_6" type="PortType" coreName="RAM_1P" coreId="3229815407" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="8" name="buffer_in_7" type="PortType" coreName="RAM_1P" coreId="882521088" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="8" name="buffer_in_7" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="9" name="buffer_in_8" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="9" name="buffer_in_8" type="PortType" coreName="RAM_1P" coreId="1717537024" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="10" name="buffer_in_9" type="PortType" coreName="RAM_1P" coreId="1211065699" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="10" name="buffer_in_9" type="PortType" coreName="RAM_1P" coreId="14" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM_1P" coreId="887021696" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="11" name="buffer_in_10" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="12" name="buffer_in_11" type="PortType" coreName="RAM_1P" coreId="14" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="12" name="buffer_in_11" type="PortType" coreName="RAM_1P" coreId="226" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="13" name="sines_buffer_out" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="25">
@@ -44,7 +44,7 @@
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="14" name="samples_buffer_out" type="PortType" coreName="RAM_1P" coreId="49" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="961">
+  <ports id="14" name="samples_buffer_out" type="PortType" coreName="RAM_1P" coreId="132" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="961">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -347,42 +347,42 @@
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="103" name="sine_reconstructor_gesvj_alpha_strm" lineNumber="65" originalName="sine_reconstructor.gesvj.alpha_strm" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_gesvj_alpha_strm_fifo_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="LLSSineReconstruction" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="106" name="sine_reconstructor_gesvj_beta_strm" lineNumber="65" originalName="sine_reconstructor.gesvj.beta_strm" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_gesvj_beta_strm_fifo_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="LLSSineReconstruction" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="109" name="sine_reconstructor_gesvj_gamma_strm" lineNumber="65" originalName="sine_reconstructor.gesvj.gamma_strm" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_gesvj_gamma_strm_fifo_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="LLSSineReconstruction" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="112" name="sine_reconstructor_gesvj_s_strm" lineNumber="65" originalName="sine_reconstructor.gesvj.s_strm" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_gesvj_s_strm_fifo_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="LLSSineReconstruction" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="115" name="sine_reconstructor_gesvj_c_strm" lineNumber="65" originalName="sine_reconstructor.gesvj.c_strm" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_gesvj_c_strm_fifo_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="LLSSineReconstruction" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="118" name="sine_reconstructor_gesvj_conv_strm" lineNumber="65" originalName="sine_reconstructor.gesvj.conv_strm" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_gesvj_conv_strm_fifo_U" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="LLSSineReconstruction" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="sine_reconstructor_times_V" lineNumber="65" originalName="sine_reconstructor.times.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_times_V_U" coreId="49" contextFuncName="LLSSineReconstruction" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="sine_reconstructor_times_V" lineNumber="65" originalName="sine_reconstructor.times.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="sine_reconstructor_times_V_U" coreId="4160749696" contextFuncName="LLSSineReconstruction" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="65" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="sine_reconstructor_5" rtlName="sine_reconstructor_5_U" coreId="1684826485" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="sine_reconstructor_5" rtlName="sine_reconstructor_5_U" coreId="1702259823" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
@@ -391,47 +391,47 @@
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="sine_reconstructor_8" rtlName="sine_reconstructor_8_U" coreId="0" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="sine_reconstructor_8" rtlName="sine_reconstructor_8_U" coreId="49" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="sine_reconstructor_9" rtlName="sine_reconstructor_9_U" coreId="9" bitwidth="51" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="sine_reconstructor_9" rtlName="sine_reconstructor_9_U" coreId="808595506" bitwidth="51" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="sine_reconstructor_x_V" rtlName="sine_reconstructor_x_V_U" coreId="385" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="sine_reconstructor_x_V" rtlName="sine_reconstructor_x_V_U" coreId="49" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="sine_reconstructor_11" rtlName="sine_reconstructor_11_U" coreId="513" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="sine_reconstructor_11" rtlName="sine_reconstructor_11_U" coreId="49" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="sine_reconstructor_12" rtlName="sine_reconstructor_12_U" coreId="481" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="sine_reconstructor_12" rtlName="sine_reconstructor_12_U" coreId="1393" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="sine_reconstructor_S_V" rtlName="sine_reconstructor_S_V_U" coreId="132" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="sine_reconstructor_S_V" rtlName="sine_reconstructor_S_V_U" coreId="785" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="sine_reconstructor_14" rtlName="sine_reconstructor_14_U" coreId="132" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="sine_reconstructor_14" rtlName="sine_reconstructor_14_U" coreId="177" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="sine_reconstructor_15" rtlName="sine_reconstructor_15_U" coreId="84" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="sine_reconstructor_15" rtlName="sine_reconstructor_15_U" coreId="49" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="sine_reconstructor_16_0_0" rtlName="sine_reconstructor_16_0_0_U" coreId="886804832" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="sine_reconstructor_16_0_0" rtlName="sine_reconstructor_16_0_0_U" coreId="49" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="sine_reconstructor_16_1" rtlName="sine_reconstructor_16_1_U" coreId="887833928" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="sine_reconstructor_16_1" rtlName="sine_reconstructor_16_1_U" coreId="3684145" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="sine_reconstructor_16_2_0" rtlName="sine_reconstructor_16_2_0_U" coreId="887834128" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="sine_reconstructor_16_2_0" rtlName="sine_reconstructor_16_2_0_U" coreId="0" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
@@ -439,7 +439,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="sine_reconstructor_16_4_0" rtlName="sine_reconstructor_16_4_0_U" coreId="0" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="sine_reconstructor_16_4_0" rtlName="sine_reconstructor_16_4_0_U" coreId="62" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
@@ -447,40 +447,40 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="sine_reconstructor_gesvj_V_j_V_0" rtlName="sine_reconstructor_gesvj_V_j_V_0_U" coreId="49" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="sine_reconstructor_gesvj_V_j_V_0" rtlName="sine_reconstructor_gesvj_V_j_V_0_U" coreId="305" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="sine_reconstructor_gesvj_sigma_V" rtlName="sine_reconstructor_gesvj_sigma_V_U" coreId="887791784" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="sine_reconstructor_gesvj_sigma_V" rtlName="sine_reconstructor_gesvj_sigma_V_U" coreId="49" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="sine_reconstructor_16_14_0" rtlName="sine_reconstructor_16_14_0_U" coreId="0" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="sine_reconstructor_16_14_0" rtlName="sine_reconstructor_16_14_0_U" coreId="1712691688" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="sine_reconstructor_16_15_0" rtlName="sine_reconstructor_16_15_0_U" coreId="1393" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="sine_reconstructor_16_15_0" rtlName="sine_reconstructor_16_15_0_U" coreId="3684145" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="sine_reconstructor_16_16_0" rtlName="sine_reconstructor_16_16_0_U" coreId="887079112" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="sine_reconstructor_16_16_0" rtlName="sine_reconstructor_16_16_0_U" coreId="0" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="sine_reconstructor_16_17" rtlName="sine_reconstructor_16_17_U" coreId="1" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="sine_reconstructor_16_17" rtlName="sine_reconstructor_16_17_U" coreId="132" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="sine_reconstructor_16_18" rtlName="sine_reconstructor_16_18_U" coreId="0" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="sine_reconstructor_16_18" rtlName="sine_reconstructor_16_18_U" coreId="4160749696" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="sine_reconstructor_16_19" rtlName="sine_reconstructor_16_19_U" coreId="0" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="sine_reconstructor_16_19" rtlName="sine_reconstructor_16_19_U" coreId="945" bitwidth="60" opcode="alloca" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="_ln48" lineNumber="48" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_533" coreId="0" contextFuncName="LLSSineReconstruction" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="48" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="_ln48" lineNumber="48" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_loadSlidingWindow_fu_533" coreId="1717551104" contextFuncName="LLSSineReconstruction" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="48" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>buffer_in_0</dataInputObjs>
       <dataInputObjs>buffer_in_1</dataInputObjs>
       <dataInputObjs>buffer_in_2</dataInputObjs>
@@ -495,8 +495,8 @@
       <dataInputObjs>buffer_in_11</dataInputObjs>
       <constName>loadSlidingWindow</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="147" name="samples_buffer_out_addr" lineNumber="55" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="LLSSineReconstruction" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="147" name="samples_buffer_out_addr" lineNumber="55" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="LLSSineReconstruction" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>samples_buffer_out</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -504,18 +504,18 @@
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="148" name="samples_buffer_out_load" lineNumber="55" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="LLSSineReconstruction" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="36" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="icmp_ln55" lineNumber="55" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln55_fu_664_p2" opType="icmp" coreId="0" contextFuncName="LLSSineReconstruction" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.11" m_topoIndex="37" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="icmp_ln55" lineNumber="55" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln55_fu_664_p2" opType="icmp" coreId="132" contextFuncName="LLSSineReconstruction" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.11" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="br_ln55" lineNumber="55" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="br_ln55" lineNumber="55" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1723058728" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="55" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>._crit_edge</controlInputObjs>
       <controlInputObjs>block_155</controlInputObjs>
@@ -530,19 +530,19 @@
     <controlInputObjs>block_151</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>._crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="_ln57" lineNumber="57" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_writeSamplesToRAM_fu_628" coreId="49" contextFuncName="LLSSineReconstruction" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="57" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="_ln57" lineNumber="57" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_writeSamplesToRAM_fu_628" coreId="132" contextFuncName="LLSSineReconstruction" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="57" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>samples_buffer_out</dataInputObjs>
       <dataOutputObjs>samples_buffer_out</dataOutputObjs>
       <constName>writeSamplesToRAM</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="153" name="samples_buffer_out_addr_write_ln59" lineNumber="59" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="LLSSineReconstruction" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.35" m_topoIndex="40" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="59" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="59" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="br_ln61" lineNumber="61" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="61" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="br_ln61" lineNumber="61" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1718760185" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="61" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <controlInputObjs>._crit_edge</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
@@ -558,8 +558,8 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>_ifconv</controlOutputObjs>
     <controlOutputObjs>._crit_edge1</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="sines_buffer_out_addr" lineNumber="63" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="886822472" contextFuncName="LLSSineReconstruction" bitwidth="5" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="63" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="sines_buffer_out_addr" lineNumber="63" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1717544816" contextFuncName="LLSSineReconstruction" bitwidth="5" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="63" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>sines_buffer_out</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -567,18 +567,18 @@
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="157" name="sines_buffer_out_load" lineNumber="63" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="LLSSineReconstruction" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="43" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="63" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="63" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="icmp_ln63" lineNumber="63" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln63_fu_670_p2" opType="icmp" coreId="0" contextFuncName="LLSSineReconstruction" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.11" m_topoIndex="44" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="63" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="icmp_ln63" lineNumber="63" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln63_fu_670_p2" opType="icmp" coreId="132" contextFuncName="LLSSineReconstruction" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.11" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="63" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="br_ln63" lineNumber="63" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1226845797" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="63" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="br_ln63" lineNumber="63" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1719902448" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="63" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>._crit_edge1</controlInputObjs>
       <controlInputObjs>_ifconv</controlInputObjs>
@@ -593,40 +593,40 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_225</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="161" name="call_ret" lineNumber="183" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_loadData_fu_593" coreId="0" contextFuncName="SineReconstructor" bitwidth="96" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <constName>loadData</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="162" name="sine_reconstructor_phase_ref_idx_s" lineNumber="183" originalName="sine_reconstructor.phase_ref_idx_" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="3556769920" contextFuncName="SineReconstructor" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="162" name="sine_reconstructor_phase_ref_idx_s" lineNumber="183" originalName="sine_reconstructor.phase_ref_idx_" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1719904073" contextFuncName="SineReconstructor" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="163" name="sine_reconstructor_max_period_index_s" lineNumber="183" originalName="sine_reconstructor.max_period_index_" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="SineReconstructor" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
-      <dataInputObjs>call</dataInputObjs>
-      <dataOutputObjs>trunc</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="trunc_ln183" lineNumber="183" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="trunc_ln183_fu_684_p1" coreId="0" contextFuncName="SineReconstructor" bitwidth="4" opcode="trunc" nodeLabel="6.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
-      <dataInputObjs>extractvalue</dataInputObjs>
-      <dataOutputObjs>call</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="165" name="sine_reconstructor_max_sample_index_s" lineNumber="183" originalName="sine_reconstructor.max_sample_index_" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="886843040" contextFuncName="SineReconstructor" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="163" name="sine_reconstructor_max_period_index_s" lineNumber="183" originalName="sine_reconstructor.max_period_index_" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="2561" contextFuncName="SineReconstructor" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="166" name="trunc_ln183_1" lineNumber="183" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="trunc_ln183_1_fu_692_p1" coreId="3556769920" contextFuncName="SineReconstructor" bitwidth="7" opcode="trunc" nodeLabel="6.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="trunc_ln183" lineNumber="183" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="trunc_ln183_fu_684_p1" coreId="8" contextFuncName="SineReconstructor" bitwidth="4" opcode="trunc" nodeLabel="6.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="167" name="sine_reconstructor_fixed_phase_V" lineNumber="185" originalName="sine_reconstructor.fixed_phase_.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_computeRemainingChannels_fu_467" coreId="49" contextFuncName="SineReconstructor" bitwidth="60" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="52" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="185" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="165" name="sine_reconstructor_max_sample_index_s" lineNumber="183" originalName="sine_reconstructor.max_sample_index_" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1719908000" contextFuncName="SineReconstructor" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="166" name="trunc_ln183_1" lineNumber="183" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="trunc_ln183_1_fu_692_p1" coreId="1330007625" contextFuncName="SineReconstructor" bitwidth="7" opcode="trunc" nodeLabel="6.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="183" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="167" name="sine_reconstructor_fixed_phase_V" lineNumber="185" originalName="sine_reconstructor.fixed_phase_.V" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="grp_computeRemainingChannels_fu_467" coreId="543516513" contextFuncName="SineReconstructor" bitwidth="60" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="185" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="SineReconstructor"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
@@ -667,27 +667,27 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>computeRemainingChannels</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="168" name="icmp_ln935" lineNumber="935" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="icmp_ln935_fu_696_p2" opType="icmp" coreId="887636192" contextFuncName="to_float" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.43" m_topoIndex="53" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="935" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="168" name="icmp_ln935" lineNumber="935" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="icmp_ln935_fu_696_p2" opType="icmp" coreId="1852403305" contextFuncName="to_float" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.43" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="935" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="169" name="p_Result_296" lineNumber="936" originalName="__Result__" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="p_Result_296_reg_1130" coreId="132" contextFuncName="to_float" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="936" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="169" name="p_Result_296" lineNumber="936" originalName="__Result__" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="p_Result_296_reg_1130" coreId="573978169" contextFuncName="to_float" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="936" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="170" name="tmp_V" lineNumber="939" originalName="tmp.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_V_fu_710_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="to_float" bitwidth="60" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="1.41" m_topoIndex="55" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="939" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="170" name="tmp_V" lineNumber="939" originalName="tmp.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_V_fu_710_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="to_float" bitwidth="60" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="1.41" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="939" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="171" name="tmp_V_41" lineNumber="938" originalName="tmp.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_V_41_fu_716_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="60" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.45" m_topoIndex="56" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="938" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="171" name="tmp_V_41" lineNumber="938" originalName="tmp.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_V_41_fu_716_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="60" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.45" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="938" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataInputObjs>sub</dataInputObjs>
       <dataInputObjs>call</dataInputObjs>
@@ -697,32 +697,32 @@
       <dataOutputObjs>shl</dataOutputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="172" name="p_Result_s" lineNumber="1054" originalName="__Result__" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_Result_s_fu_724_p4" coreId="0" contextFuncName="countLeadingZeros" bitwidth="60" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="1054" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="countLeadingZeros"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="172" name="p_Result_s" lineNumber="1054" originalName="__Result__" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_Result_s_fu_724_p4" coreId="1735289196" contextFuncName="countLeadingZeros" bitwidth="60" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="1054" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="countLeadingZeros"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="173" name="p_Result_297" lineNumber="1055" originalName="__Result__" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_Result_297_fu_734_p3" coreId="0" contextFuncName="countLeadingZeros" bitwidth="64" opcode="bitconcatenate" nodeLabel="8.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="1055" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="countLeadingZeros"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="173" name="p_Result_297" lineNumber="1055" originalName="__Result__" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="p_Result_297_fu_734_p3" coreId="49" contextFuncName="countLeadingZeros" bitwidth="64" opcode="bitconcatenate" nodeLabel="8.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="1055" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="countLeadingZeros"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>cttz</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="174" name="tmp" lineNumber="1056" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="tmp_fu_742_p3" coreId="887608784" contextFuncName="countLeadingZeros" bitwidth="64" opcode="cttz" nodeLabel="8.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="1056" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="countLeadingZeros"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="174" name="tmp" lineNumber="1056" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="tmp_fu_742_p3" coreId="1720076992" contextFuncName="countLeadingZeros" bitwidth="64" opcode="cttz" nodeLabel="8.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="1056" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="countLeadingZeros"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="175" name="l" lineNumber="1056" originalName="l" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="l_fu_750_p1" coreId="49" contextFuncName="countLeadingZeros" bitwidth="32" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="1056" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="countLeadingZeros"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="175" name="l" lineNumber="1056" originalName="l" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="l_fu_750_p1" coreId="0" contextFuncName="countLeadingZeros" bitwidth="32" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="1056" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="countLeadingZeros"/>
       <dataInputObjs>cttz</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="176" name="sub_ln944" lineNumber="944" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sub_ln944_fu_754_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="to_float" bitwidth="32" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="1.2" m_topoIndex="61" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="944" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="176" name="sub_ln944" lineNumber="944" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sub_ln944_fu_754_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="to_float" bitwidth="32" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="1.2" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="944" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
@@ -730,8 +730,8 @@
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="177" name="lsb_index" lineNumber="944" originalName="lsb_index" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="lsb_index_fu_760_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="to_float" bitwidth="32" opcode="add" nodeLabel="8.0" m_display="0" m_delay="1.2" m_topoIndex="62" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="944" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="177" name="lsb_index" lineNumber="944" originalName="lsb_index" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="lsb_index_fu_760_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="to_float" bitwidth="32" opcode="add" nodeLabel="8.0" m_display="0" m_delay="1.2" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="944" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
@@ -740,251 +740,251 @@
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="178" name="tmp_166" lineNumber="946" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_166_fu_766_p4" coreId="887518160" contextFuncName="to_float" bitwidth="31" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="946" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="178" name="tmp_166" lineNumber="946" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_166_fu_766_p4" coreId="4160749696" contextFuncName="to_float" bitwidth="31" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="946" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="179" name="icmp_ln946" lineNumber="946" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_127ns_177_2_1_U417" opType="icmp" coreId="49" contextFuncName="to_float" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.09" m_topoIndex="64" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="946" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="179" name="icmp_ln946" lineNumber="946" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_127ns_177_2_1_U417" opType="icmp" coreId="24" contextFuncName="to_float" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.09" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="946" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="180" name="trunc_ln947" lineNumber="947" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln947_fu_782_p1" coreId="49" contextFuncName="to_float" bitwidth="6" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="947" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="180" name="trunc_ln947" lineNumber="947" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln947_fu_782_p1" coreId="1720082720" contextFuncName="to_float" bitwidth="6" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="947" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="181" name="sub_ln947" lineNumber="947" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sub_ln947_fu_786_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="to_float" bitwidth="6" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="0.88" m_topoIndex="66" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="947" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="181" name="sub_ln947" lineNumber="947" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sub_ln947_fu_786_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="to_float" bitwidth="6" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="0.88" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="947" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="182" name="zext_ln947" lineNumber="947" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln947_fu_792_p1" coreId="3556769920" contextFuncName="to_float" bitwidth="60" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="947" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="182" name="zext_ln947" lineNumber="947" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln947_fu_792_p1" coreId="0" contextFuncName="to_float" bitwidth="60" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="947" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="183" name="lshr_ln947" lineNumber="947" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="lshr_ln947_fu_796_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="lshr" coreId="75" contextFuncName="to_float" bitwidth="60" opcode="lshr" nodeLabel="8.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="947" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="183" name="lshr_ln947" lineNumber="947" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="lshr_ln947_fu_796_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="lshr" coreId="75" contextFuncName="to_float" bitwidth="60" opcode="lshr" nodeLabel="8.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="947" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="184" name="zext_ln949" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln949_fu_802_p1" coreId="0" contextFuncName="to_float" bitwidth="60" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="184" name="zext_ln949" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln949_fu_802_p1" coreId="0" contextFuncName="to_float" bitwidth="60" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>shl</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="185" name="shl_ln949" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="shl_ln949_fu_806_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="shl" coreId="75" contextFuncName="to_float" bitwidth="60" opcode="shl" nodeLabel="8.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="185" name="shl_ln949" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="shl_ln949_fu_806_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="shl" coreId="75" contextFuncName="to_float" bitwidth="60" opcode="shl" nodeLabel="8.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="186" name="or_ln949_16" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="or_ln949_16_fu_812_p2" opType="or" coreId="0" contextFuncName="to_float" bitwidth="60" opcode="or" nodeLabel="8.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="186" name="or_ln949_16" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="or_ln949_16_fu_812_p2" opType="or" coreId="0" contextFuncName="to_float" bitwidth="60" opcode="or" nodeLabel="8.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>lshr</dataInputObjs>
       <dataInputObjs>shl</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="187" name="and_ln949" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="and_ln949_fu_818_p2" opType="and" coreId="0" contextFuncName="to_float" bitwidth="60" opcode="and" nodeLabel="8.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="187" name="and_ln949" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="and_ln949_fu_818_p2" opType="and" coreId="0" contextFuncName="to_float" bitwidth="60" opcode="and" nodeLabel="8.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>or</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="188" name="icmp_ln949" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="icmp_ln949_fu_824_p2" opType="icmp" coreId="0" contextFuncName="to_float" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.45" m_topoIndex="73" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="188" name="icmp_ln949" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="icmp_ln949_fu_824_p2" opType="icmp" coreId="1722215328" contextFuncName="to_float" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.45" m_topoIndex="73" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="189" name="tmp_167" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_167_fu_830_p3" coreId="0" contextFuncName="to_float" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="2">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="189" name="tmp_167" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_167_fu_830_p3" coreId="4160749696" contextFuncName="to_float" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="190" name="xor_ln949" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="xor_ln949_fu_838_p2" opType="xor" coreId="0" contextFuncName="to_float" bitwidth="1" opcode="xor" nodeLabel="8.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="2">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="190" name="xor_ln949" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="xor_ln949_fu_838_p2" opType="xor" coreId="1722217608" contextFuncName="to_float" bitwidth="1" opcode="xor" nodeLabel="8.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="191" name="p_Result_298" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="p_Result_298_fu_844_p3" coreId="0" contextFuncName="to_float" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="191" name="p_Result_298" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="p_Result_298_fu_844_p3" coreId="13" contextFuncName="to_float" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="192" name="icmp_ln954" lineNumber="954" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="icmp_ln954_fu_852_p2" opType="icmp" coreId="0" contextFuncName="to_float" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.11" m_topoIndex="77" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="192" name="icmp_ln954" lineNumber="954" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="icmp_ln954_fu_852_p2" opType="icmp" coreId="49" contextFuncName="to_float" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.11" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="193" name="and_ln949_17" lineNumber="949" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="and_ln949_17_fu_858_p2" opType="and" coreId="0" contextFuncName="to_float" bitwidth="1" opcode="and" nodeLabel="8.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="2">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="193" name="and_ln949_17" lineNumber="949" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="and_ln949_17_fu_858_p2" opType="and" coreId="0" contextFuncName="to_float" bitwidth="1" opcode="and" nodeLabel="8.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="949" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="194" name="sub_ln955" lineNumber="955" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sub_ln955_fu_884_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="to_float" bitwidth="32" opcode="sub" nodeLabel="9.0" m_display="0" m_delay="1.2" m_topoIndex="82" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="955" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="194" name="sub_ln955" lineNumber="955" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sub_ln955_fu_884_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="to_float" bitwidth="32" opcode="sub" nodeLabel="9.0" m_display="0" m_delay="1.2" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="955" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="195" name="zext_ln955" lineNumber="955" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln955_fu_889_p1" coreId="0" contextFuncName="to_float" bitwidth="60" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="955" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="195" name="zext_ln955" lineNumber="955" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln955_fu_889_p1" coreId="1722227320" contextFuncName="to_float" bitwidth="60" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="955" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>shl</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="196" name="shl_ln955" lineNumber="955" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="shl_ln955_fu_893_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="shl" coreId="75" contextFuncName="to_float" bitwidth="60" opcode="shl" nodeLabel="9.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="955" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="196" name="shl_ln955" lineNumber="955" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="shl_ln955_fu_893_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="shl" coreId="75" contextFuncName="to_float" bitwidth="60" opcode="shl" nodeLabel="9.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="955" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="197" name="select_ln946" lineNumber="946" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="select_ln946_fu_864_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="1" opcode="select" nodeLabel="8.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="2">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="946" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="197" name="select_ln946" lineNumber="946" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="select_ln946_fu_864_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="1" opcode="select" nodeLabel="8.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="946" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="198" name="add_ln954" lineNumber="954" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln954_fu_898_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="to_float" bitwidth="32" opcode="add" nodeLabel="9.0" m_display="0" m_delay="1.2" m_topoIndex="85" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="198" name="add_ln954" lineNumber="954" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln954_fu_898_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="to_float" bitwidth="32" opcode="add" nodeLabel="9.0" m_display="0" m_delay="1.2" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="199" name="zext_ln954" lineNumber="954" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln954_fu_903_p1" coreId="49" contextFuncName="to_float" bitwidth="60" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="199" name="zext_ln954" lineNumber="954" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln954_fu_903_p1" coreId="1752460921" contextFuncName="to_float" bitwidth="60" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="200" name="lshr_ln954" lineNumber="954" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="lshr_ln954_fu_907_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="lshr" coreId="75" contextFuncName="to_float" bitwidth="60" opcode="lshr" nodeLabel="9.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="200" name="lshr_ln954" lineNumber="954" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="lshr_ln954_fu_907_p2" coreName="Shifter" implIndex="auto_pipe" control="auto" opType="lshr" coreId="75" contextFuncName="to_float" bitwidth="60" opcode="lshr" nodeLabel="9.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="201" name="select_ln954" lineNumber="954" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="select_ln954_fu_872_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="1" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.33" m_topoIndex="80" m_clusterGroupNumber="2">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="201" name="select_ln954" lineNumber="954" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="select_ln954_fu_872_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="1" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.33" m_topoIndex="80" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="202" name="m" lineNumber="954" originalName="m" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="m_fu_912_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="60" opcode="select" nodeLabel="9.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="202" name="m" lineNumber="954" originalName="m" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="m_fu_912_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="60" opcode="select" nodeLabel="9.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="954" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>lshr</dataInputObjs>
       <dataInputObjs>shl</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="203" name="zext_ln951" lineNumber="951" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln951_fu_919_p1" coreId="5169" contextFuncName="to_float" bitwidth="61" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="951" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="203" name="zext_ln951" lineNumber="951" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln951_fu_919_p1" coreId="0" contextFuncName="to_float" bitwidth="61" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="951" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="204" name="zext_ln961" lineNumber="961" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln961_fu_923_p1" coreId="884421096" contextFuncName="to_float" bitwidth="61" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="961" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="204" name="zext_ln961" lineNumber="961" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln961_fu_923_p1" coreId="3649" contextFuncName="to_float" bitwidth="61" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="961" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="205" name="m_64" lineNumber="961" originalName="m" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="m_64_fu_926_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="to_float" bitwidth="61" opcode="add" nodeLabel="9.0" m_display="0" m_delay="1.71" m_topoIndex="91" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="961" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="205" name="m_64" lineNumber="961" originalName="m" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="m_64_fu_926_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="to_float" bitwidth="61" opcode="add" nodeLabel="9.0" m_display="0" m_delay="1.71" m_topoIndex="91" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="961" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="206" name="m_s" lineNumber="962" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="m_s_fu_932_p4" coreId="884423529" contextFuncName="to_float" bitwidth="60" opcode="partselect" nodeLabel="9.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="962" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="206" name="m_s" lineNumber="962" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="m_s_fu_932_p4" coreId="4160749696" contextFuncName="to_float" bitwidth="60" opcode="partselect" nodeLabel="9.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="962" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="207" name="zext_ln951_15" lineNumber="951" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln951_15_fu_942_p1" coreId="884424176" contextFuncName="to_float" bitwidth="64" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="951" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="207" name="zext_ln951_15" lineNumber="951" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln951_15_fu_942_p1" coreId="132" contextFuncName="to_float" bitwidth="64" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="951" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>partset</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="208" name="p_Result_294" lineNumber="964" originalName="__Result__" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="p_Result_294_fu_946_p3" coreId="4033" contextFuncName="to_float" bitwidth="1" opcode="bitselect" nodeLabel="9.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="964" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="208" name="p_Result_294" lineNumber="964" originalName="__Result__" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="p_Result_294_fu_946_p3" coreId="1722360632" contextFuncName="to_float" bitwidth="1" opcode="bitselect" nodeLabel="9.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="964" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="209" name="select_ln943" lineNumber="943" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="select_ln943_fu_954_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="8" opcode="select" nodeLabel="9.0" m_display="0" m_delay="0.44" m_topoIndex="95" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="943" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="209" name="select_ln943" lineNumber="943" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="select_ln943_fu_954_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="8" opcode="select" nodeLabel="9.0" m_display="0" m_delay="0.44" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="943" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="210" name="trunc_ln943" lineNumber="943" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln943_fu_880_p1" coreId="12" contextFuncName="to_float" bitwidth="8" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="943" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="210" name="trunc_ln943" lineNumber="943" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln943_fu_880_p1" coreId="16801" contextFuncName="to_float" bitwidth="8" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="943" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>cttz</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="211" name="sub_ln964" lineNumber="964" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sub_ln964_fu_962_p2" coreName="TAddSub" implIndex="tadder" control="auto" opType="add" coreId="10" contextFuncName="to_float" bitwidth="8" opcode="sub" nodeLabel="9.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="964" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="211" name="sub_ln964" lineNumber="964" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sub_ln964_fu_962_p2" coreName="TAddSub" implIndex="tadder" control="auto" opType="add" coreId="10" contextFuncName="to_float" bitwidth="8" opcode="sub" nodeLabel="9.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="964" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="212" name="add_ln964" lineNumber="964" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln964_fu_967_p2" coreName="TAddSub" implIndex="tadder" control="auto" opType="add" coreId="10" contextFuncName="to_float" bitwidth="8" opcode="add" nodeLabel="9.0" m_display="0" m_delay="1.22" m_topoIndex="97" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="964" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="212" name="add_ln964" lineNumber="964" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln964_fu_967_p2" coreName="TAddSub" implIndex="tadder" control="auto" opType="add" coreId="10" contextFuncName="to_float" bitwidth="8" opcode="add" nodeLabel="9.0" m_display="0" m_delay="1.22" m_topoIndex="97" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="964" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="213" name="tmp_s" lineNumber="969" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_s_fu_973_p3" coreId="887269728" contextFuncName="to_float" bitwidth="9" opcode="bitconcatenate" nodeLabel="9.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="969" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="213" name="tmp_s" lineNumber="969" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_s_fu_973_p3" coreId="132" contextFuncName="to_float" bitwidth="9" opcode="bitconcatenate" nodeLabel="9.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="969" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>partset</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="214" name="p_Result_299" lineNumber="969" originalName="__Result__" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="p_Result_299_fu_980_p5" coreId="0" contextFuncName="to_float" bitwidth="64" opcode="partset" nodeLabel="9.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="969" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="214" name="p_Result_299" lineNumber="969" originalName="__Result__" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="p_Result_299_fu_980_p5" coreId="0" contextFuncName="to_float" bitwidth="64" opcode="partset" nodeLabel="9.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="969" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="215" name="LD" lineNumber="743" originalName="LD" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h" fileDirectory=".." rtlName="LD_fu_992_p1" coreId="0" contextFuncName="rawBitsToFloat" bitwidth="32" opcode="trunc" nodeLabel="9.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h" linenumber="743" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="rawBitsToFloat"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="215" name="LD" lineNumber="743" originalName="LD" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h" fileDirectory=".." rtlName="LD_fu_992_p1" coreId="62" contextFuncName="rawBitsToFloat" bitwidth="32" opcode="trunc" nodeLabel="9.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h" linenumber="743" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="rawBitsToFloat"/>
       <dataInputObjs>partset</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="216" name="select_ln935" lineNumber="935" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="select_ln935_fu_996_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="32" opcode="select" nodeLabel="9.0" m_display="0" m_delay="0.52" m_topoIndex="101" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="935" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="216" name="select_ln935" lineNumber="935" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="select_ln935_fu_996_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="to_float" bitwidth="32" opcode="select" nodeLabel="9.0" m_display="0" m_delay="0.52" m_topoIndex="101" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="935" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="to_float"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="217" name="br_ln194" lineNumber="194" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="GetReconstructedSines" opcode="br" nodeLabel="9.0" m_display="0" m_delay="0.48" m_topoIndex="102" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="217" name="br_ln194" lineNumber="194" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="GetReconstructedSines" opcode="br" nodeLabel="9.0" m_display="0" m_delay="0.48" m_topoIndex="102" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
       <controlInputObjs>block_225</controlInputObjs>
     </node_objs>
-    <fileValidLineNumbers fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h">
-      <validLinenumbers>743</validLinenumbers>
-    </fileValidLineNumbers>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
       <validLinenumbers>183</validLinenumbers>
       <validLinenumbers>185</validLinenumbers>
       <validLinenumbers>194</validLinenumbers>
     </fileValidLineNumbers>
-    <fileValidLineNumbers fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h">
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_common.h">
+      <validLinenumbers>743</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h">
       <validLinenumbers>935</validLinenumbers>
       <validLinenumbers>936</validLinenumbers>
       <validLinenumbers>939</validLinenumbers>
@@ -1002,7 +1002,7 @@
       <validLinenumbers>943</validLinenumbers>
       <validLinenumbers>969</validLinenumbers>
     </fileValidLineNumbers>
-    <fileValidLineNumbers fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
       <validLinenumbers>1054</validLinenumbers>
       <validLinenumbers>1055</validLinenumbers>
       <validLinenumbers>1056</validLinenumbers>
@@ -1013,7 +1013,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="237" name="br_ln0" coreId="1129521725" opcode="br" nodeLabel="12.0" m_display="0" m_delay="0.48" m_topoIndex="116" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="237" name="br_ln0" coreId="132" opcode="br" nodeLabel="12.0" m_display="0" m_delay="0.48" m_topoIndex="116" m_clusterGroupNumber="-1">
       <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlInputObjs>
     </node_objs>
   </blocks>
@@ -1022,12 +1022,12 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>._crit_edge1</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="262" name="sines_buffer_out_addr_write_ln69" lineNumber="69" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="LLSSineReconstruction" opcode="store" nodeLabel="16.0" m_display="0" m_delay="0.79" m_topoIndex="135" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="69" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="69" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="263" name="br_ln71" lineNumber="71" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="884468201" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="16.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="71" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="263" name="br_ln71" lineNumber="71" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1717635464" contextFuncName="LLSSineReconstruction" opcode="br" nodeLabel="16.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="71" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
       <controlInputObjs>._crit_edge1</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
@@ -1040,8 +1040,8 @@
     <controlInputObjs>_Z15writeSinesToRAMPVjP17SineReconstructor.exit</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="265" name="_ln72" lineNumber="72" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="884469616" contextFuncName="LLSSineReconstruction" opcode="ret" nodeLabel="16.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="72" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="265" name="_ln72" lineNumber="72" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1717637208" contextFuncName="LLSSineReconstruction" opcode="ret" nodeLabel="16.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="72" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="LLSSineReconstruction"/>
     </node_objs>
     <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
       <validLinenumbers>72</validLinenumbers>
@@ -1055,8 +1055,8 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i.preheader</controlOutputObjs>
       <controlOutputObjs>.split10</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="219" name="i" lineNumber="194" originalName="i" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="219" name="i" lineNumber="194" originalName="i" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1722375816" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -1066,19 +1066,19 @@
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="220" name="add_ln194" lineNumber="194" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln194_fu_1003_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="add" nodeLabel="10.0" m_display="0" m_delay="0.86" m_topoIndex="104" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="222" name="icmp_ln194" lineNumber="194" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln194_fu_1009_p2" opType="icmp" coreId="49" contextFuncName="GetReconstructedSines" bitwidth="1" opcode="icmp" nodeLabel="10.0" m_display="0" m_delay="0.88" m_topoIndex="105" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="222" name="icmp_ln194" lineNumber="194" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln194_fu_1009_p2" opType="icmp" coreId="4160749696" contextFuncName="GetReconstructedSines" bitwidth="1" opcode="icmp" nodeLabel="10.0" m_display="0" m_delay="0.88" m_topoIndex="105" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="224" name="br_ln194" lineNumber="194" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="GetReconstructedSines" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="106" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split10</controlInputObjs>
         <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i.preheader</controlInputObjs>
@@ -1092,55 +1092,55 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_225</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="226" name="i_cast" lineNumber="194" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_cast_fu_1015_p1" coreId="886852016" contextFuncName="GetReconstructedSines" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="226" name="i_cast" lineNumber="194" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_cast_fu_1015_p1" coreId="24289" contextFuncName="GetReconstructedSines" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="194" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="228" name="phases_i_addr" lineNumber="196" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="49" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="196" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="228" name="phases_i_addr" lineNumber="196" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1722379744" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="196" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="229" name="phases_i_addr_write_ln196" lineNumber="196" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="GetReconstructedSines" opcode="store" nodeLabel="10.0" m_display="0" m_delay="0.79" m_topoIndex="109" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="196" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="196" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="230" name="sine_reconstructor_6_addr" lineNumber="197" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="4561" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="230" name="sine_reconstructor_6_addr" lineNumber="197" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="4160749696" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="231" name="sine_reconstructor_6_load" lineNumber="197" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="GetReconstructedSines" bitwidth="32" opcode="load" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="111" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>bitcast</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="232" name="bitcast_ln197" lineNumber="197" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="amplitudes_i_d0" coreId="0" contextFuncName="GetReconstructedSines" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="233" name="amplitudes_i_addr" lineNumber="197" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="233" name="amplitudes_i_addr" lineNumber="197" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1717660480" contextFuncName="GetReconstructedSines" bitwidth="4" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="234" name="amplitudes_i_addr_write_ln197" lineNumber="197" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="GetReconstructedSines" opcode="store" nodeLabel="11.0" m_display="0" m_delay="0.79" m_topoIndex="114" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="197" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="GetReconstructedSines"/>
         <dataInputObjs>bitcast</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="235" name="br_ln0" coreId="1936942413" opcode="br" nodeLabel="11.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="235" name="br_ln0" coreId="14081" opcode="br" nodeLabel="11.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
         <controlInputObjs>block_225</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">
@@ -1158,8 +1158,8 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z15writeSinesToRAMPVjP17SineReconstructor.exit</controlOutputObjs>
       <controlOutputObjs>.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="239" name="i_20" lineNumber="141" originalName="i" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="791624304" contextFuncName="writeSinesToRAM" bitwidth="4" opcode="phi" nodeLabel="13.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="239" name="i_20" lineNumber="141" originalName="i" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1717665040" contextFuncName="writeSinesToRAM" bitwidth="4" opcode="phi" nodeLabel="13.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -1170,20 +1170,20 @@
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="240" name="add_ln141" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln141_fu_1026_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSinesToRAM" bitwidth="4" opcode="add" nodeLabel="13.0" m_display="0" m_delay="0.86" m_topoIndex="118" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="242" name="icmp_ln139" lineNumber="139" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln139_fu_1032_p2" opType="icmp" coreId="1852793632" contextFuncName="writeSinesToRAM" bitwidth="1" opcode="icmp" nodeLabel="13.0" m_display="0" m_delay="0.88" m_topoIndex="119" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="139" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="242" name="icmp_ln139" lineNumber="139" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="icmp_ln139_fu_1032_p2" opType="icmp" coreId="1919252069" contextFuncName="writeSinesToRAM" bitwidth="1" opcode="icmp" nodeLabel="13.0" m_display="0" m_delay="0.88" m_topoIndex="119" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="139" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="244" name="br_ln139" lineNumber="139" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1869182069" contextFuncName="writeSinesToRAM" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="139" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="244" name="br_ln139" lineNumber="139" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSinesToRAM" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="139" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split</controlInputObjs>
         <controlInputObjs>_Z15writeSinesToRAMPVjP17SineReconstructor.exit</controlInputObjs>
@@ -1198,36 +1198,36 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="246" name="i_24_cast9" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_24_cast9_fu_1038_p1" coreId="132" contextFuncName="writeSinesToRAM" bitwidth="64" opcode="zext" nodeLabel="13.0" m_display="0" m_topoIndex="121" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="246" name="i_24_cast9" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_24_cast9_fu_1038_p1" coreId="0" contextFuncName="writeSinesToRAM" bitwidth="64" opcode="zext" nodeLabel="13.0" m_display="0" m_topoIndex="121" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="247" name="i_24_cast" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_24_cast_fu_1044_p1" coreId="887091144" contextFuncName="writeSinesToRAM" bitwidth="5" opcode="zext" nodeLabel="13.0" m_display="0" m_topoIndex="122" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="247" name="i_24_cast" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="i_24_cast_fu_1044_p1" coreId="4294967295" contextFuncName="writeSinesToRAM" bitwidth="5" opcode="zext" nodeLabel="13.0" m_display="0" m_topoIndex="122" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="249" name="amplitudes_i_addr_1" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="132" contextFuncName="writeSinesToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="13.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="249" name="amplitudes_i_addr_1" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="825570605" contextFuncName="writeSinesToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="13.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="250" name="amplitudes_i_load" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSinesToRAM" bitwidth="32" opcode="load" nodeLabel="13.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="124" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="251" name="zext_ln141" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln141_fu_1054_p1" coreId="0" contextFuncName="writeSinesToRAM" bitwidth="64" opcode="zext" nodeLabel="14.0" m_display="0" m_topoIndex="128" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="252" name="sines_buffer_out_addr_1" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="887095912" contextFuncName="writeSinesToRAM" bitwidth="5" opcode="getelementptr" nodeLabel="14.0" m_display="0" m_topoIndex="129" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="252" name="sines_buffer_out_addr_1" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSinesToRAM" bitwidth="5" opcode="getelementptr" nodeLabel="14.0" m_display="0" m_topoIndex="129" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>sines_buffer_out</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
@@ -1235,35 +1235,35 @@
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="253" name="sines_buffer_out_addr_1_write_ln141" lineNumber="141" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="writeSinesToRAM" opcode="store" nodeLabel="14.0" m_display="0" m_delay="0.79" m_topoIndex="130" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="141" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="254" name="phases_i_addr_1" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="3556769920" contextFuncName="writeSinesToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="13.0" m_display="0" m_topoIndex="125" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="254" name="phases_i_addr_1" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="1717623392" contextFuncName="writeSinesToRAM" bitwidth="4" opcode="getelementptr" nodeLabel="13.0" m_display="0" m_topoIndex="125" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="255" name="phases_i_load" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="writeSinesToRAM" bitwidth="32" opcode="load" nodeLabel="13.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="126" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="256" name="add_ln142" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="add_ln142_fu_1048_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="writeSinesToRAM" bitwidth="5" opcode="add" nodeLabel="13.0" m_display="0" m_delay="0.87" m_topoIndex="127" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="257" name="zext_ln142" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln142_fu_1058_p1" coreId="49" contextFuncName="writeSinesToRAM" bitwidth="64" opcode="zext" nodeLabel="15.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="257" name="zext_ln142" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." rtlName="zext_ln142_fu_1058_p1" coreId="1717720600" contextFuncName="writeSinesToRAM" bitwidth="64" opcode="zext" nodeLabel="15.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="258" name="sines_buffer_out_addr_2" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="0" contextFuncName="writeSinesToRAM" bitwidth="5" opcode="getelementptr" nodeLabel="15.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="258" name="sines_buffer_out_addr_2" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreId="808531253" contextFuncName="writeSinesToRAM" bitwidth="5" opcode="getelementptr" nodeLabel="15.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>sines_buffer_out</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
@@ -1271,11 +1271,11 @@
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="259" name="sines_buffer_out_addr_2_write_ln142" lineNumber="142" fileName="../src/LLS_SineReconstructor.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="88" contextFuncName="writeSinesToRAM" opcode="store" nodeLabel="15.0" m_display="0" m_delay="0.79" m_topoIndex="133" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
+        <inlineStackInfo fileName="../src/LLS_SineReconstructor.cpp" linenumber="142" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="writeSinesToRAM"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="260" name="br_ln0" coreId="11825" opcode="br" nodeLabel="15.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="260" name="br_ln0" coreId="0" opcode="br" nodeLabel="15.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
         <controlInputObjs>_ZN17SineReconstructor21GetReconstructedSinesEPfS0_.exit.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../src/LLS_SineReconstructor.cpp">

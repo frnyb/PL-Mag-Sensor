@@ -779,29 +779,29 @@ set RtlHierarchyInfo {[
 					{"ID" : "8", "SubInstance" : "grp_svd_and_conv_fu_984", "Port" : "sine_reconstructor_16_1378"}]},
 			{"Name" : "this_matA_0", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "matA_0"},
-					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "matA_0"}]},
+					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "matA_0"},
+					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "matA_0"}]},
 			{"Name" : "this_matU", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "this_matV_0", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "matV_0"},
-					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "matV_0"}]},
+					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "matV_0"},
+					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "matV_0"}]},
 			{"Name" : "this_A_i_0", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "A_i_0"},
-					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "A_i_0"}]},
+					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "A_i_0"},
+					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "A_i_0"}]},
 			{"Name" : "this_A_j_0", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "A_j_0"},
-					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "A_j_0"}]},
+					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "A_j_0"},
+					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "A_j_0"}]},
 			{"Name" : "this_V_i_0", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "V_i_0"},
-					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "V_i_0"}]},
+					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "V_i_0"},
+					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "V_i_0"}]},
 			{"Name" : "this_V_j_0", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "V_j_0"},
-					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "V_j_0"}]},
+					{"ID" : "34", "SubInstance" : "grp_read_to_2cols_fu_1000", "Port" : "V_j_0"},
+					{"ID" : "55", "SubInstance" : "grp_update_AV_fu_1039", "Port" : "V_j_0"}]},
 			{"Name" : "this_sigma", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "this_alpha_acc_0", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [

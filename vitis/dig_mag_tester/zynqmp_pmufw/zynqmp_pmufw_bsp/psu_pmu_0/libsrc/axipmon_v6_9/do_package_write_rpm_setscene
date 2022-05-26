@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367630.51 
+findutils-4.6.0-r0: do_package_write_rpm_setscene
+Elapsed time: 0.15 seconds
+utime: 25
+stime: 1
+cutime: 1
+cstime: 1
+IO rchar: 3854274
+IO wchar: 3909985
+IO syscr: 513
+IO syscw: 406
+IO read_bytes: 1593344
+IO write_bytes: 2052096
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.254968
+rusage ru_stime: 0.016188
+rusage ru_maxrss: 140180
+rusage ru_minflt: 6481
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 112
+rusage ru_nvcsw: 35
+rusage ru_nivcsw: 31
+Child rusage ru_utime: 0.018019
+Child rusage ru_stime: 0.01795
+Child rusage ru_maxrss: 137340
+Child rusage ru_minflt: 1666
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 3112
+Child rusage ru_oublock: 3896
+Child rusage ru_nvcsw: 89
+Child rusage ru_nivcsw: 84
+Status: PASSED 
+Ended: 1638367630.66 

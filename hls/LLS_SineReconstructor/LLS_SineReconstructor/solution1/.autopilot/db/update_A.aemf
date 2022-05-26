@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652100497792">
-  <ports id="1" name="matA_0" type="PortType" coreName="RAM" coreId="2003316581" bitwidth="60" direction="DirOut" iftype="IfTypeRegister" arraysize="240">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652346079692">
+  <ports id="1" name="matA_0" type="PortType" coreName="RAM" coreId="1869366831" bitwidth="60" direction="DirOut" iftype="IfTypeRegister" arraysize="240">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="2" name="A_i_0" type="PortType" coreName="RAM" coreId="796354607" bitwidth="60" iftype="IfTypeRegister" arraysize="80">
+  <ports id="2" name="A_i_0" type="PortType" coreName="RAM" coreId="1700613248" bitwidth="60" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <ports id="3" name="A_j_0" type="PortType" coreName="RAM" coreId="1869366831" bitwidth="60" iftype="IfTypeRegister" arraysize="80">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="4" name="col_i" type="PortType" coreName="FIFO_SRL" coreId="2003316581" bitwidth="2" iftype="IfTypeRom">
+  <ports id="4" name="col_i" type="PortType" coreName="FIFO_SRL" coreId="1869366831" bitwidth="2" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="col_j" type="PortType" coreName="FIFO_SRL" coreId="2003316581" bitwidth="2" iftype="IfTypeRom">
+  <ports id="5" name="col_j" type="PortType" coreName="FIFO_SRL" coreId="1696681160" bitwidth="2" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="s" type="PortType" coreName="FIFO_SRL" coreId="2003316581" bitwidth="60" iftype="IfTypeRom">
+  <ports id="6" name="s" type="PortType" coreName="FIFO_SRL" coreId="791555624" bitwidth="60" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="c" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="60" iftype="IfTypeRom">
+  <ports id="7" name="c" type="PortType" coreName="FIFO_SRL" coreId="113" bitwidth="60" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="71" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -110,49 +110,49 @@
       <dataInputObjs>col_j</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="r_V_9" lineNumber="1115" originalName="r.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="60" opcode="read" m_display="0" m_delay="2.16" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1115" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="r_V_9" lineNumber="1115" originalName="r.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="60" opcode="read" m_display="0" m_delay="2.16" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1115" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>s</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="r_V" lineNumber="1115" originalName="r.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="60" opcode="read" m_display="0" m_delay="2.16" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1115" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="r_V" lineNumber="1115" originalName="r.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="60" opcode="read" m_display="0" m_delay="2.16" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1115" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>c</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="c_cast_i" lineNumber="1115" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="c_cast_i_fu_144_p1" coreId="177" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="sext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1115" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="c_cast_i" lineNumber="1115" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="c_cast_i_fu_144_p1" coreId="49" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="sext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1115" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="s_cast_i" lineNumber="1115" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="s_cast_i_fu_148_p1" coreId="1819500388" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="sext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1115" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="s_cast_i" lineNumber="1115" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="s_cast_i_fu_148_p1" coreId="49" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="sext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1115" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="col_i_load_cast" rtlName="col_i_load_cast_fu_152_p1" coreId="1136261064" bitwidth="8" opcode="zext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>add</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="zext_ln491_1" lineNumber="491" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln491_1_fu_156_p1" coreId="2" contextFuncName="update_A" bitwidth="8" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="col_i_load_cast" rtlName="col_i_load_cast_fu_152_p1" coreId="808595506" bitwidth="8" opcode="zext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln491" lineNumber="491" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="1129121424" contextFuncName="update_A" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="zext_ln491_1" lineNumber="491" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln491_1_fu_156_p1" coreId="1948721253" contextFuncName="update_A" bitwidth="8" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln491" lineNumber="491" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="4160749696" contextFuncName="update_A" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <controlInputObjs>_ZN13ap_fixed_baseILi121ELi43ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi120ELi42ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i62.i</controlInputObjs>
     </node_objs>
-    <fileValidLineNumbers fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp">
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h">
+      <validLinenumbers>1115</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp">
       <validLinenumbers>491</validLinenumbers>
       <validLinenumbers>544</validLinenumbers>
-    </fileValidLineNumbers>
-    <fileValidLineNumbers fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h">
-      <validLinenumbers>1115</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="37" name="_ZN13ap_fixed_baseILi121ELi43ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi120ELi42ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i62.i" type="BlockType">
@@ -162,9 +162,9 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>.exit</controlOutputObjs>
     <controlOutputObjs>_ZN13ap_fixed_baseILi121ELi43ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi120ELi42ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i62.split.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="k" lineNumber="491" originalName="k" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="14" contextFuncName="update_A" bitwidth="7" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="k" lineNumber="491" originalName="k" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="22" contextFuncName="update_A" bitwidth="7" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
@@ -175,104 +175,104 @@
       <controlInputObjs>entry</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="add_ln491" lineNumber="491" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="add_ln491_fu_160_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="update_A" bitwidth="7" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.89" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="add_ln491" lineNumber="491" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="add_ln491_fu_160_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="update_A" bitwidth="7" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.89" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="zext_ln491" lineNumber="491" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln491_fu_166_p1" coreId="1129706120" contextFuncName="update_A" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="zext_ln491" lineNumber="491" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln491_fu_166_p1" coreId="226" contextFuncName="update_A" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln500" lineNumber="500" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln500_fu_172_p1" coreId="1953068832" contextFuncName="update_A" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln500" lineNumber="500" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln500_fu_172_p1" coreId="4294967295" contextFuncName="update_A" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="trunc_ln500" lineNumber="500" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="trunc_ln500_fu_176_p1" coreId="0" contextFuncName="update_A" bitwidth="6" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="trunc_ln500" lineNumber="500" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="trunc_ln500_fu_176_p1" coreId="1699770288" contextFuncName="update_A" bitwidth="6" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_cast" lineNumber="500" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="tmp_cast_fu_180_p3" coreId="1132205248" contextFuncName="update_A" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_cast" lineNumber="500" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="tmp_cast_fu_180_p3" coreId="49" contextFuncName="update_A" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="sub_ln500" lineNumber="500" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="sub_ln500_fu_188_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="update_A" bitwidth="8" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.9" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="sub_ln500" lineNumber="500" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="sub_ln500_fu_188_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="update_A" bitwidth="8" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.9" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="add_ln500" lineNumber="500" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="add_ln500_fu_194_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="update_A" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.9" m_topoIndex="17" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="add_ln500" lineNumber="500" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="add_ln500_fu_194_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="update_A" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.9" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="zext_ln500_1" lineNumber="500" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln500_1_fu_199_p1" coreId="132" contextFuncName="update_A" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="zext_ln500_1" lineNumber="500" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln500_1_fu_199_p1" coreId="132" contextFuncName="update_A" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="matA_0_addr" lineNumber="500" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="481" contextFuncName="update_A" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="matA_0_addr" lineNumber="500" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="609" contextFuncName="update_A" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>matA_0</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="add_ln501" lineNumber="501" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="add_ln501_fu_204_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="update_A" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.9" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="501" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="add_ln501" lineNumber="501" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="add_ln501_fu_204_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="update_A" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.9" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="501" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln501" lineNumber="501" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln501_fu_209_p1" coreId="481" contextFuncName="update_A" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="501" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln501" lineNumber="501" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="zext_ln501_fu_209_p1" coreId="641" contextFuncName="update_A" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="501" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="matA_0_addr_1" lineNumber="501" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="1129706088" contextFuncName="update_A" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="501" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="matA_0_addr_1" lineNumber="501" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="1703737448" contextFuncName="update_A" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="501" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>matA_0</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="icmp_ln491" lineNumber="491" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="icmp_ln491_fu_214_p2" opType="icmp" coreId="497" contextFuncName="update_A" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.86" m_topoIndex="23" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="icmp_ln491" lineNumber="491" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." rtlName="icmp_ln491_fu_214_p2" opType="icmp" coreId="49" contextFuncName="update_A" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.86" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln491" lineNumber="491" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="1211065699" contextFuncName="update_A" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln491" lineNumber="491" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="4294967295" contextFuncName="update_A" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="491" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>_ZN13ap_fixed_baseILi121ELi43ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi120ELi42ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i62.split.i</controlInputObjs>
       <controlInputObjs>.exit</controlInputObjs>
     </node_objs>
-    <fileValidLineNumbers fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp">
+    <fileValidLineNumbers fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp">
       <validLinenumbers>491</validLinenumbers>
       <validLinenumbers>500</validLinenumbers>
       <validLinenumbers>501</validLinenumbers>
@@ -284,170 +284,170 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>_ZN13ap_fixed_baseILi121ELi43ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi120ELi42ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i62.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="A_i_0_addr" lineNumber="498" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="1132977504" contextFuncName="update_A" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="498" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="A_i_0_addr" lineNumber="498" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="132" contextFuncName="update_A" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="498" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>A_i_0</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="tki_V" lineNumber="498" originalName="tki.V" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="update_A" bitwidth="60" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="26" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="498" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="tki_V" lineNumber="498" originalName="tki.V" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="update_A" bitwidth="60" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="498" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="A_j_0_addr" lineNumber="499" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="1135741168" contextFuncName="update_A" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="499" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="A_j_0_addr" lineNumber="499" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="132" contextFuncName="update_A" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="499" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>A_j_0</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="tkj_V" lineNumber="499" originalName="tkj.V" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="update_A" bitwidth="60" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="28" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="499" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="tkj_V" lineNumber="499" originalName="tkj.V" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="update_A" bitwidth="60" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="499" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="sext_ln1118" lineNumber="1118" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1118_fu_220_p1" coreId="0" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="sext_ln1118" lineNumber="1118" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1118_fu_220_p1" coreId="0" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="r_V_13" lineNumber="1118" originalName="r.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_60s_99_1_1_U250" opType="mul" coreId="0" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="4.87" m_topoIndex="31" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="r_V_13" lineNumber="1118" originalName="r.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_60s_99_1_1_U250" opType="mul" coreId="132" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="4.87" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sext_ln1118_2" lineNumber="1118" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1118_2_fu_229_p1" coreId="1130082504" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sext_ln1118_2" lineNumber="1118" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1118_2_fu_229_p1" coreId="0" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="r_V_14" lineNumber="1118" originalName="r.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_60s_99_1_1_U251" opType="mul" coreId="561" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="4.87" m_topoIndex="33" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="r_V_14" lineNumber="1118" originalName="r.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_60s_99_1_1_U251" opType="mul" coreId="1701171464" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="4.87" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="ret_V" lineNumber="1193" originalName="ret.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="ret_V_fu_256_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="operator_sub_120_42_true_AP_TRN_AP_WRAP_0" bitwidth="99" opcode="sub" nodeLabel="3.0" m_display="0" m_delay="1.6" m_topoIndex="38" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1193" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator-&amp;lt;120, 42, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="ret_V" lineNumber="1193" originalName="ret.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="ret_V_fu_256_p2" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="operator_sub_120_42_true_AP_TRN_AP_WRAP_0" bitwidth="99" opcode="sub" nodeLabel="3.0" m_display="0" m_delay="1.6" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1193" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator-&amp;lt;120, 42, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>mul</dataInputObjs>
       <dataInputObjs>mul</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="trunc_ln" lineNumber="708" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln_fu_260_p4" coreId="1128115168" contextFuncName="operator_assign_121_43_true_AP_TRN_AP_WRAP_0" bitwidth="60" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="708" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator=&amp;lt;121, 43, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="trunc_ln" lineNumber="708" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln_fu_260_p4" coreId="7" contextFuncName="operator_assign_121_43_true_AP_TRN_AP_WRAP_0" bitwidth="60" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="708" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator=&amp;lt;121, 43, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp" lineNumber="415" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_fu_270_p3" coreId="49" contextFuncName="quantization_adjust" bitwidth="1" opcode="bitselect" nodeLabel="3.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp" lineNumber="415" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_fu_270_p3" coreId="4160749696" contextFuncName="quantization_adjust" bitwidth="1" opcode="bitselect" nodeLabel="3.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="zext_ln415" lineNumber="415" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln415_fu_278_p1" coreId="49" contextFuncName="quantization_adjust" bitwidth="60" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="zext_ln415" lineNumber="415" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln415_fu_278_p1" coreId="4160749696" contextFuncName="quantization_adjust" bitwidth="60" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="add_ln415" lineNumber="415" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln415_fu_282_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="quantization_adjust" bitwidth="60" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.41" m_topoIndex="42" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="add_ln415" lineNumber="415" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln415_fu_282_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="quantization_adjust" bitwidth="60" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.41" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="matA_0_addr_write_ln500" lineNumber="500" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="update_A" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.35" m_topoIndex="43" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="matA_0_addr_write_ln500" lineNumber="500" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="update_A" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.35" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="500" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="r_V_11" lineNumber="1118" originalName="r.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_60s_99_1_1_U252" opType="mul" coreId="132" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="4.87" m_topoIndex="34" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="r_V_11" lineNumber="1118" originalName="r.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_60s_99_1_1_U252" opType="mul" coreId="689" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="4.87" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="r_V_12" lineNumber="1118" originalName="r.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_60s_99_1_1_U253" opType="mul" coreId="529" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="4.87" m_topoIndex="35" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="r_V_12" lineNumber="1118" originalName="r.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_60s_60s_99_1_1_U253" opType="mul" coreId="1703012176" contextFuncName="operator_mul_60_21_true_AP_RND_AP_WRAP_0" bitwidth="99" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="4.87" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1118" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator*&amp;lt;60, 21, true, AP_RND, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="trunc_ln1192" lineNumber="1192" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln1192_fu_248_p1" coreId="1135529520" contextFuncName="operator_add_120_42_true_AP_TRN_AP_WRAP_0" bitwidth="39" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1192" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator+&amp;lt;120, 42, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="trunc_ln1192" lineNumber="1192" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln1192_fu_248_p1" coreId="4160749696" contextFuncName="operator_add_120_42_true_AP_TRN_AP_WRAP_0" bitwidth="39" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1192" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator+&amp;lt;120, 42, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>mul</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="trunc_ln1192_2" lineNumber="1192" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln1192_2_fu_252_p1" coreId="1819044215" contextFuncName="operator_add_120_42_true_AP_TRN_AP_WRAP_0" bitwidth="39" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1192" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator+&amp;lt;120, 42, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="trunc_ln1192_2" lineNumber="1192" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln1192_2_fu_252_p1" coreId="49" contextFuncName="operator_add_120_42_true_AP_TRN_AP_WRAP_0" bitwidth="39" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1192" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator+&amp;lt;120, 42, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>mul</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="ret_V_2" lineNumber="1192" originalName="ret.V" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="ret_V_2_fu_289_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_120_42_true_AP_TRN_AP_WRAP_0" bitwidth="99" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.6" m_topoIndex="44" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1192" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator+&amp;lt;120, 42, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="ret_V_2" lineNumber="1192" originalName="ret.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="ret_V_2_fu_289_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_120_42_true_AP_TRN_AP_WRAP_0" bitwidth="99" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.6" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1192" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator+&amp;lt;120, 42, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>mul</dataInputObjs>
       <dataInputObjs>mul</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="trunc_ln708_2" lineNumber="708" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln708_2_fu_293_p4" coreId="529" contextFuncName="operator_assign_121_43_true_AP_TRN_AP_WRAP_0" bitwidth="60" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="708" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator=&amp;lt;121, 43, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="trunc_ln708_2" lineNumber="708" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln708_2_fu_293_p4" coreId="817" contextFuncName="operator_assign_121_43_true_AP_TRN_AP_WRAP_0" bitwidth="60" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="708" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator=&amp;lt;121, 43, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="add_ln713" lineNumber="713" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln713_fu_303_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_assign_121_43_true_AP_TRN_AP_WRAP_0" bitwidth="39" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.23" m_topoIndex="46" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="713" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator=&amp;lt;121, 43, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="add_ln713" lineNumber="713" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln713_fu_303_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_assign_121_43_true_AP_TRN_AP_WRAP_0" bitwidth="39" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.23" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="713" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="operator=&amp;lt;121, 43, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="tmp_4" lineNumber="415" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_4_fu_307_p3" coreId="1819044215" contextFuncName="quantization_adjust" bitwidth="1" opcode="bitselect" nodeLabel="3.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="tmp_4" lineNumber="415" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="tmp_4_fu_307_p3" coreId="4160749696" contextFuncName="quantization_adjust" bitwidth="1" opcode="bitselect" nodeLabel="3.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="zext_ln415_2" lineNumber="415" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln415_2_fu_315_p1" coreId="132" contextFuncName="quantization_adjust" bitwidth="60" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="zext_ln415_2" lineNumber="415" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="zext_ln415_2_fu_315_p1" coreId="4160749696" contextFuncName="quantization_adjust" bitwidth="60" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="add_ln415_2" lineNumber="415" fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln415_2_fu_319_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="quantization_adjust" bitwidth="60" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.41" m_topoIndex="49" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="add_ln415_2" lineNumber="415" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="add_ln415_2_fu_319_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="quantization_adjust" bitwidth="60" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.41" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="415" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="quantization_adjust"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="matA_0_addr_1_write_ln501" lineNumber="501" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="update_A" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.35" m_topoIndex="50" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="501" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="matA_0_addr_1_write_ln501" lineNumber="501" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="update_A" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.35" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="501" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_A"/>
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="br_ln0" coreId="132" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="br_ln0" coreId="0" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
       <controlInputObjs>_ZN13ap_fixed_baseILi121ELi43ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi120ELi42ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i62.i</controlInputObjs>
     </node_objs>
-    <fileValidLineNumbers fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp">
+    <fileValidLineNumbers fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp">
       <validLinenumbers>498</validLinenumbers>
       <validLinenumbers>499</validLinenumbers>
       <validLinenumbers>500</validLinenumbers>
       <validLinenumbers>501</validLinenumbers>
       <validLinenumbers>544</validLinenumbers>
     </fileValidLineNumbers>
-    <fileValidLineNumbers fileName="/vol/Software/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h">
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h">
       <validLinenumbers>1118</validLinenumbers>
       <validLinenumbers>1193</validLinenumbers>
       <validLinenumbers>708</validLinenumbers>
@@ -459,10 +459,10 @@
   <blocks id="68" name=".exit" type="BlockType">
     <controlInputObjs>_ZN13ap_fixed_baseILi121ELi43ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi120ELi42ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i62.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln544" lineNumber="544" fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="1130798416" contextFuncName="update_AV" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln544" lineNumber="544" fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" fileDirectory=".." coreId="737" contextFuncName="update_AV" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp" linenumber="544" fileDirectory="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor" functionName="update_AV"/>
     </node_objs>
-    <fileValidLineNumbers fileName="/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp">
+    <fileValidLineNumbers fileName="../include/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp">
       <validLinenumbers>544</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>

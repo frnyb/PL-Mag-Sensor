@@ -1,0 +1,10 @@
+do_populate_lic_setscene (1687345): log.do_populate_lic_setscene.1687345
+do_fetch (1694716): log.do_fetch.1694716
+do_unpack (2509983): log.do_unpack.2509983
+do_patch (2515582): log.do_patch.2515582
+do_prepare_recipe_sysroot (2644842): log.do_prepare_recipe_sysroot.2644842
+do_configure (2646217): log.do_configure.2646217
+do_compile (2654779): log.do_compile.2654779
+do_install (2706437): log.do_install.2706437
+do_populate_sysroot (2708102): log.do_populate_sysroot.2708102
+do_rm_work (2710122): log.do_rm_work.2710122

@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Sun May  1 13:33:54 2022
---Host        : adm-59955 running 64-bit Ubuntu 20.04.3 LTS
+--Date        : Thu May 26 14:20:19 2022
+--Host        : adm-59955 running 64-bit Ubuntu 20.04.4 LTS
 --Command     : generate_target DigMagControllerFull.bd
 --Design      : DigMagControllerFull
 --Purpose     : IP block netlist
@@ -110,8 +110,6 @@ architecture STRUCTURE of DigMagControllerFull is
     bfr_rd_dout_8 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bfr_rd_dout_9 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
-    gain_curr : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    gain_ref : out STD_LOGIC_VECTOR ( 23 downto 0 );
     irq_out : out STD_LOGIC;
     n_samples_out : out STD_LOGIC_VECTOR ( 5 downto 0 );
     rst_n : in STD_LOGIC
@@ -163,7 +161,6 @@ architecture STRUCTURE of DigMagControllerFull is
   signal BufferFlowControl_0_bfr_rd_dout_7 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal BufferFlowControl_0_bfr_rd_dout_8 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal BufferFlowControl_0_bfr_rd_dout_9 : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal BufferFlowControl_0_gain_ref : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal BufferFlowControl_0_irq_out : STD_LOGIC;
   signal BufferFlowControl_0_n_samples_out : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal DigMagController_0_ch_out : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -304,8 +301,6 @@ BufferFlowControl_0: component DigMagControllerFull_BufferFlowControl_0_1
       bfr_rd_dout_8(31 downto 0) => BufferFlowControl_0_bfr_rd_dout_8(31 downto 0),
       bfr_rd_dout_9(31 downto 0) => BufferFlowControl_0_bfr_rd_dout_9(31 downto 0),
       clk => clk_1,
-      gain_curr(23 downto 0) => BufferFlowControl_0_gain_ref(23 downto 0),
-      gain_ref(23 downto 0) => BufferFlowControl_0_gain_ref(23 downto 0),
       irq_out => BufferFlowControl_0_irq_out,
       n_samples_out(5 downto 0) => BufferFlowControl_0_n_samples_out(5 downto 0),
       rst_n => rst_n_1

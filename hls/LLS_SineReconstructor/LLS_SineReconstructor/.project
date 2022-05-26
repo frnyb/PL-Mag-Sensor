@@ -27,89 +27,69 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>gematrixinverse.hpp</name>
-			<type>1</type>
-			<location>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/LinearSolver/gematrixinverse.hpp</location>
-		</link>
-		<link>
-			<name>getrf.hpp</name>
-			<type>1</type>
-			<location>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/getrf.hpp</location>
-		</link>
-		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/.apc/.src</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/.apc/.tb</location>
-		</link>
-		<link>
-			<name>.reference/gesvj.hpp</name>
-			<type>1</type>
-			<location>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/hw/MatrixDecomposition/gesvj.hpp</location>
-		</link>
-		<link>
-			<name>.reference/xf_solver_L2.hpp</name>
-			<type>1</type>
-			<location>/vol/Workspace/HLS/libs/Vitis_Libraries/solver/L2/include/xf_solver_L2.hpp</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/.tcls</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/LLS_SineReconstructor.cpp</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.cpp</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.cpp</location>
 		</link>
 		<link>
 			<name>source/LLS_SineReconstructor.h</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.h</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor.h</location>
 		</link>
 		<link>
 			<name>source/cyclic_buffer.h</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/cyclic_buffer.h</location>
 		</link>
 		<link>
 			<name>source/matrix_ops.h</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/matrix_ops.h</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/matrix_ops.h</location>
 		</link>
 		<link>
 			<name>source/sample.h</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample.h</location>
 		</link>
 		<link>
 			<name>source/sample_period.h</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/sample_period.h</location>
 		</link>
 		<link>
 			<name>testbench/LLS_SineReconstructor_testbench.cpp</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor_testbench.cpp</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/src/LLS_SineReconstructor_testbench.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/solution1.directive</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/directives.tcl</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/script.tcl</location>
+			<location>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

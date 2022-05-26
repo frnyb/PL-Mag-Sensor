@@ -1,128 +1,128 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-348,-189",
+   "Default View_ScaleFactor":"0.822115",
+   "Default View_TopLeft":"-668,1",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port bfr_irq_out -pg 1 -lvl 3 -x 710 -y 430 -defaultsOSRD
-preplace port clk -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
-preplace port irq_out -pg 1 -lvl 3 -x 710 -y 60 -defaultsOSRD
-preplace port rst_n -pg 1 -lvl 0 -x 0 -y 770 -defaultsOSRD
-preplace port mag2_scl_t -pg 1 -lvl 3 -x 710 -y 740 -defaultsOSRD
-preplace port mag2_sda_o -pg 1 -lvl 3 -x 710 -y 760 -defaultsOSRD
-preplace port mag2_scl_o -pg 1 -lvl 3 -x 710 -y 720 -defaultsOSRD
-preplace port mag0_scl_t -pg 1 -lvl 3 -x 710 -y 580 -defaultsOSRD
-preplace port mag2_sda_t -pg 1 -lvl 3 -x 710 -y 780 -defaultsOSRD
-preplace port mag0_sda_i -pg 1 -lvl 0 -x 0 -y 630 -defaultsOSRD
-preplace port mag2_scl_i -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
-preplace port mag3_sda_t -pg 1 -lvl 3 -x 710 -y 860 -defaultsOSRD
-preplace port mag3_sda_i -pg 1 -lvl 0 -x 0 -y 750 -defaultsOSRD
-preplace port mag0_sda_o -pg 1 -lvl 3 -x 710 -y 600 -defaultsOSRD
-preplace port mag3_sda_o -pg 1 -lvl 3 -x 710 -y 840 -defaultsOSRD
-preplace port mag3_scl_t -pg 1 -lvl 3 -x 710 -y 820 -defaultsOSRD
-preplace port mag0_scl_o -pg 1 -lvl 3 -x 710 -y 560 -defaultsOSRD
-preplace port mag3_scl_o -pg 1 -lvl 3 -x 710 -y 800 -defaultsOSRD
-preplace port mag0_sda_t -pg 1 -lvl 3 -x 710 -y 620 -defaultsOSRD
-preplace port mag1_sda_o -pg 1 -lvl 3 -x 710 -y 680 -defaultsOSRD
-preplace port mag1_scl_t -pg 1 -lvl 3 -x 710 -y 660 -defaultsOSRD
-preplace port mag0_scl_i -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
-preplace port mag1_sda_t -pg 1 -lvl 3 -x 710 -y 700 -defaultsOSRD
-preplace port mag1_sda_i -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
-preplace port mag1_scl_i -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
-preplace port mag2_sda_i -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
-preplace port mag1_scl_o -pg 1 -lvl 3 -x 710 -y 640 -defaultsOSRD
-preplace port mag3_scl_i -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
-preplace portBus bfr_busy -pg 1 -lvl 3 -x 710 -y 150 -defaultsOSRD
-preplace portBus bfr_hold -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
-preplace portBus bfr_n_samples_out -pg 1 -lvl 3 -x 710 -y 450 -defaultsOSRD
-preplace portBus bfr_rd_addr_0 -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
-preplace portBus bfr_rd_addr_1 -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
-preplace portBus bfr_rd_addr_10 -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
-preplace portBus bfr_rd_addr_11 -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
-preplace portBus bfr_rd_addr_2 -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
-preplace portBus bfr_rd_addr_3 -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
-preplace portBus bfr_rd_addr_4 -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
-preplace portBus bfr_rd_addr_5 -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
-preplace portBus bfr_rd_addr_6 -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
-preplace portBus bfr_rd_addr_7 -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
-preplace portBus bfr_rd_addr_8 -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
-preplace portBus bfr_rd_addr_9 -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD
-preplace portBus bfr_rd_dout_0 -pg 1 -lvl 3 -x 710 -y 170 -defaultsOSRD
-preplace portBus bfr_rd_dout_1 -pg 1 -lvl 3 -x 710 -y 190 -defaultsOSRD
-preplace portBus bfr_rd_dout_10 -pg 1 -lvl 3 -x 710 -y 210 -defaultsOSRD
-preplace portBus bfr_rd_dout_11 -pg 1 -lvl 3 -x 710 -y 230 -defaultsOSRD
-preplace portBus bfr_rd_dout_2 -pg 1 -lvl 3 -x 710 -y 250 -defaultsOSRD
-preplace portBus bfr_rd_dout_3 -pg 1 -lvl 3 -x 710 -y 270 -defaultsOSRD
-preplace portBus bfr_rd_dout_4 -pg 1 -lvl 3 -x 710 -y 290 -defaultsOSRD
-preplace portBus bfr_rd_dout_5 -pg 1 -lvl 3 -x 710 -y 310 -defaultsOSRD
-preplace portBus bfr_rd_dout_6 -pg 1 -lvl 3 -x 710 -y 330 -defaultsOSRD
-preplace portBus bfr_rd_dout_7 -pg 1 -lvl 3 -x 710 -y 350 -defaultsOSRD
-preplace portBus bfr_rd_dout_8 -pg 1 -lvl 3 -x 710 -y 370 -defaultsOSRD
-preplace portBus bfr_rd_dout_9 -pg 1 -lvl 3 -x 710 -y 390 -defaultsOSRD
-preplace portBus ch_out -pg 1 -lvl 3 -x 710 -y 20 -defaultsOSRD
-preplace portBus data_out -pg 1 -lvl 3 -x 710 -y 40 -defaultsOSRD
+preplace port bfr_irq_out -pg 1 -lvl 3 -x 1050 -y 430 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -200 -y 440 -defaultsOSRD
+preplace port irq_out -pg 1 -lvl 3 -x 1050 -y 60 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -200 -y 770 -defaultsOSRD
+preplace port mag2_scl_t -pg 1 -lvl 3 -x 1050 -y 740 -defaultsOSRD
+preplace port mag2_sda_o -pg 1 -lvl 3 -x 1050 -y 760 -defaultsOSRD
+preplace port mag2_scl_o -pg 1 -lvl 3 -x 1050 -y 720 -defaultsOSRD
+preplace port mag0_scl_t -pg 1 -lvl 3 -x 1050 -y 580 -defaultsOSRD
+preplace port mag2_sda_t -pg 1 -lvl 3 -x 1050 -y 780 -defaultsOSRD
+preplace port mag0_sda_i -pg 1 -lvl 0 -x -200 -y 630 -defaultsOSRD
+preplace port mag2_scl_i -pg 1 -lvl 0 -x -200 -y 690 -defaultsOSRD
+preplace port mag3_sda_t -pg 1 -lvl 3 -x 1050 -y 860 -defaultsOSRD
+preplace port mag3_sda_i -pg 1 -lvl 0 -x -200 -y 750 -defaultsOSRD
+preplace port mag0_sda_o -pg 1 -lvl 3 -x 1050 -y 600 -defaultsOSRD
+preplace port mag3_sda_o -pg 1 -lvl 3 -x 1050 -y 840 -defaultsOSRD
+preplace port mag3_scl_t -pg 1 -lvl 3 -x 1050 -y 820 -defaultsOSRD
+preplace port mag0_scl_o -pg 1 -lvl 3 -x 1050 -y 560 -defaultsOSRD
+preplace port mag3_scl_o -pg 1 -lvl 3 -x 1050 -y 800 -defaultsOSRD
+preplace port mag0_sda_t -pg 1 -lvl 3 -x 1050 -y 620 -defaultsOSRD
+preplace port mag1_sda_o -pg 1 -lvl 3 -x 1050 -y 680 -defaultsOSRD
+preplace port mag1_scl_t -pg 1 -lvl 3 -x 1050 -y 660 -defaultsOSRD
+preplace port mag0_scl_i -pg 1 -lvl 0 -x -200 -y 610 -defaultsOSRD
+preplace port mag1_sda_t -pg 1 -lvl 3 -x 1050 -y 700 -defaultsOSRD
+preplace port mag1_sda_i -pg 1 -lvl 0 -x -200 -y 670 -defaultsOSRD
+preplace port mag1_scl_i -pg 1 -lvl 0 -x -200 -y 650 -defaultsOSRD
+preplace port mag2_sda_i -pg 1 -lvl 0 -x -200 -y 710 -defaultsOSRD
+preplace port mag1_scl_o -pg 1 -lvl 3 -x 1050 -y 640 -defaultsOSRD
+preplace port mag3_scl_i -pg 1 -lvl 0 -x -200 -y 730 -defaultsOSRD
+preplace portBus bfr_busy -pg 1 -lvl 3 -x 1050 -y 150 -defaultsOSRD
+preplace portBus bfr_hold -pg 1 -lvl 0 -x -200 -y 180 -defaultsOSRD
+preplace portBus bfr_n_samples_out -pg 1 -lvl 3 -x 1050 -y 450 -defaultsOSRD
+preplace portBus bfr_rd_addr_0 -pg 1 -lvl 0 -x -200 -y 200 -defaultsOSRD
+preplace portBus bfr_rd_addr_1 -pg 1 -lvl 0 -x -200 -y 220 -defaultsOSRD
+preplace portBus bfr_rd_addr_10 -pg 1 -lvl 0 -x -200 -y 240 -defaultsOSRD
+preplace portBus bfr_rd_addr_11 -pg 1 -lvl 0 -x -200 -y 260 -defaultsOSRD
+preplace portBus bfr_rd_addr_2 -pg 1 -lvl 0 -x -200 -y 280 -defaultsOSRD
+preplace portBus bfr_rd_addr_3 -pg 1 -lvl 0 -x -200 -y 300 -defaultsOSRD
+preplace portBus bfr_rd_addr_4 -pg 1 -lvl 0 -x -200 -y 320 -defaultsOSRD
+preplace portBus bfr_rd_addr_5 -pg 1 -lvl 0 -x -200 -y 340 -defaultsOSRD
+preplace portBus bfr_rd_addr_6 -pg 1 -lvl 0 -x -200 -y 360 -defaultsOSRD
+preplace portBus bfr_rd_addr_7 -pg 1 -lvl 0 -x -200 -y 380 -defaultsOSRD
+preplace portBus bfr_rd_addr_8 -pg 1 -lvl 0 -x -200 -y 400 -defaultsOSRD
+preplace portBus bfr_rd_addr_9 -pg 1 -lvl 0 -x -200 -y 420 -defaultsOSRD
+preplace portBus bfr_rd_dout_0 -pg 1 -lvl 3 -x 1050 -y 170 -defaultsOSRD
+preplace portBus bfr_rd_dout_1 -pg 1 -lvl 3 -x 1050 -y 190 -defaultsOSRD
+preplace portBus bfr_rd_dout_10 -pg 1 -lvl 3 -x 1050 -y 210 -defaultsOSRD
+preplace portBus bfr_rd_dout_11 -pg 1 -lvl 3 -x 1050 -y 230 -defaultsOSRD
+preplace portBus bfr_rd_dout_2 -pg 1 -lvl 3 -x 1050 -y 250 -defaultsOSRD
+preplace portBus bfr_rd_dout_3 -pg 1 -lvl 3 -x 1050 -y 270 -defaultsOSRD
+preplace portBus bfr_rd_dout_4 -pg 1 -lvl 3 -x 1050 -y 290 -defaultsOSRD
+preplace portBus bfr_rd_dout_5 -pg 1 -lvl 3 -x 1050 -y 310 -defaultsOSRD
+preplace portBus bfr_rd_dout_6 -pg 1 -lvl 3 -x 1050 -y 330 -defaultsOSRD
+preplace portBus bfr_rd_dout_7 -pg 1 -lvl 3 -x 1050 -y 350 -defaultsOSRD
+preplace portBus bfr_rd_dout_8 -pg 1 -lvl 3 -x 1050 -y 370 -defaultsOSRD
+preplace portBus bfr_rd_dout_9 -pg 1 -lvl 3 -x 1050 -y 390 -defaultsOSRD
+preplace portBus ch_out -pg 1 -lvl 3 -x 1050 -y 20 -defaultsOSRD
+preplace portBus data_out -pg 1 -lvl 3 -x 1050 -y 40 -defaultsOSRD
+preplace inst BufferFlowControl_0 -pg 1 -lvl 2 -x 710 -y 300 -defaultsOSRD
 preplace inst DigMagController_0 -pg 1 -lvl 1 -x 150 -y 680 -defaultsOSRD
-preplace inst BufferFlowControl_0 -pg 1 -lvl 2 -x 520 -y 300 -defaultsOSRD
-preplace netloc clk_1 1 0 2 20 430 280
-preplace netloc rst_n_1 1 0 2 30 440 270
-preplace netloc BufferFlowControl_0_bfr_busy 1 2 1 690J 150n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_0 1 2 1 690J 170n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_1 1 2 1 690J 190n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_10 1 2 1 690J 210n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_11 1 2 1 690J 230n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_2 1 2 1 690J 250n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_3 1 2 1 690J 270n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_4 1 2 1 690J 290n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_5 1 2 1 690J 310n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_6 1 2 1 690J 330n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_7 1 2 1 690J 350n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_8 1 2 1 690J 370n
-preplace netloc BufferFlowControl_0_bfr_rd_dout_9 1 2 1 690J 390n
-preplace netloc BufferFlowControl_0_irq_out 1 2 1 690J 420n
-preplace netloc BufferFlowControl_0_n_samples_out 1 2 1 690J 440n
-preplace netloc bfr_hold_1 1 0 2 NJ 180 350J
-preplace netloc bfr_rd_addr_0_1 1 0 2 NJ 200 350J
-preplace netloc bfr_rd_addr_1_1 1 0 2 NJ 220 350J
-preplace netloc bfr_rd_addr_10_1 1 0 2 NJ 240 350J
-preplace netloc bfr_rd_addr_11_1 1 0 2 NJ 260 350J
-preplace netloc bfr_rd_addr_2_1 1 0 2 NJ 280 350J
-preplace netloc bfr_rd_addr_3_1 1 0 2 NJ 300 330J
-preplace netloc bfr_rd_addr_4_1 1 0 2 NJ 320 310J
-preplace netloc bfr_rd_addr_5_1 1 0 2 NJ 340 280J
-preplace netloc bfr_rd_addr_6_1 1 0 2 NJ 360 280J
-preplace netloc bfr_rd_addr_7_1 1 0 2 NJ 380 280J
-preplace netloc bfr_rd_addr_8_1 1 0 2 NJ 400 280J
-preplace netloc bfr_rd_addr_9_1 1 0 2 NJ 420 290J
-preplace netloc DigMagController_0_mag0_scl_o 1 1 2 NJ 560 NJ
-preplace netloc DigMagController_0_mag0_scl_t 1 1 2 NJ 580 NJ
-preplace netloc DigMagController_0_mag0_sda_o 1 1 2 NJ 600 NJ
-preplace netloc DigMagController_0_mag0_sda_t 1 1 2 NJ 620 NJ
-preplace netloc DigMagController_0_mag1_scl_o 1 1 2 NJ 640 NJ
-preplace netloc DigMagController_0_mag1_scl_t 1 1 2 NJ 660 NJ
-preplace netloc DigMagController_0_mag1_sda_o 1 1 2 NJ 680 NJ
-preplace netloc DigMagController_0_mag1_sda_t 1 1 2 NJ 700 NJ
-preplace netloc DigMagController_0_mag2_scl_o 1 1 2 NJ 720 NJ
-preplace netloc DigMagController_0_mag2_scl_t 1 1 2 NJ 740 NJ
-preplace netloc DigMagController_0_mag2_sda_o 1 1 2 NJ 760 NJ
-preplace netloc DigMagController_0_mag2_sda_t 1 1 2 NJ 780 NJ
-preplace netloc DigMagController_0_mag3_scl_o 1 1 2 NJ 800 NJ
+preplace netloc clk_1 1 0 2 -10 200 390
+preplace netloc rst_n_1 1 0 2 40 250 370
+preplace netloc BufferFlowControl_0_bfr_busy 1 2 1 930J 150n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_0 1 2 1 930J 170n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_1 1 2 1 930J 190n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_10 1 2 1 930J 210n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_11 1 2 1 930J 230n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_2 1 2 1 930J 250n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_3 1 2 1 930J 270n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_4 1 2 1 960J 290n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_5 1 2 1 990J 310n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_6 1 2 1 990J 330n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_7 1 2 1 1030J 350n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_8 1 2 1 1030J 370n
+preplace netloc BufferFlowControl_0_bfr_rd_dout_9 1 2 1 1030J 390n
+preplace netloc BufferFlowControl_0_irq_out 1 2 1 990J 420n
+preplace netloc BufferFlowControl_0_n_samples_out 1 2 1 960J 440n
+preplace netloc bfr_hold_1 1 0 2 -180J 140 540J
+preplace netloc bfr_rd_addr_0_1 1 0 2 -170J 150 290J
+preplace netloc bfr_rd_addr_1_1 1 0 2 -160J 160 530J
+preplace netloc bfr_rd_addr_10_1 1 0 2 -150J 180 520J
+preplace netloc bfr_rd_addr_11_1 1 0 2 -140J 190 510J
+preplace netloc bfr_rd_addr_2_1 1 0 2 -80J 260 490J
+preplace netloc bfr_rd_addr_3_1 1 0 2 -70J 270 460J
+preplace netloc bfr_rd_addr_4_1 1 0 2 -50J 280 410J
+preplace netloc bfr_rd_addr_5_1 1 0 2 -40J 290 380J
+preplace netloc bfr_rd_addr_6_1 1 0 2 -30J 300 360J
+preplace netloc bfr_rd_addr_7_1 1 0 2 20J 320 340J
+preplace netloc bfr_rd_addr_8_1 1 0 2 10J 310 350J
+preplace netloc bfr_rd_addr_9_1 1 0 2 -100J 170 470J
+preplace netloc DigMagController_0_mag0_scl_o 1 1 2 420J 40 1000J
+preplace netloc DigMagController_0_mag0_scl_t 1 1 2 430J 70 970J
+preplace netloc DigMagController_0_mag0_sda_o 1 1 2 400J 50 980J
+preplace netloc DigMagController_0_mag0_sda_t 1 1 2 450J 60 950J
+preplace netloc DigMagController_0_mag1_scl_o 1 1 2 NJ 620 920J
+preplace netloc DigMagController_0_mag1_scl_t 1 1 2 NJ 540 940J
+preplace netloc DigMagController_0_mag1_sda_o 1 1 2 NJ 560 930J
+preplace netloc DigMagController_0_mag1_sda_t 1 1 2 NJ 600 910J
+preplace netloc DigMagController_0_mag2_scl_o 1 1 2 540J 720 NJ
+preplace netloc DigMagController_0_mag2_scl_t 1 1 2 NJ 680 900J
+preplace netloc DigMagController_0_mag2_sda_o 1 1 2 NJ 700 890J
+preplace netloc DigMagController_0_mag2_sda_t 1 1 2 NJ 740 880J
+preplace netloc DigMagController_0_mag3_scl_o 1 1 2 530J 800 NJ
 preplace netloc DigMagController_0_mag3_scl_t 1 1 2 NJ 820 NJ
 preplace netloc DigMagController_0_mag3_sda_o 1 1 2 NJ 840 NJ
-preplace netloc DigMagController_0_mag3_sda_t 1 1 2 NJ 860 NJ
-preplace netloc mag0_scl_i_1 1 0 1 NJ 610
-preplace netloc mag2_sda_i_1 1 0 1 NJ 710
-preplace netloc mag2_scl_i_1 1 0 1 NJ 690
-preplace netloc mag3_sda_i_1 1 0 1 NJ 750
-preplace netloc mag3_scl_i_1 1 0 1 NJ 730
-preplace netloc mag0_sda_i_1 1 0 1 NJ 630
-preplace netloc mag1_scl_i_1 1 0 1 NJ 650
-preplace netloc mag1_sda_i_1 1 0 1 NJ 670
-preplace netloc DigMagController_0_ch_out 1 1 2 300 20 NJ
-preplace netloc DigMagController_0_dout 1 1 2 320 40 NJ
-preplace netloc DigMagController_0_irq_out 1 1 2 340 60 NJ
-levelinfo -pg 1 0 150 520 710
-pagesize -pg 1 -db -bbox -sgen -200 0 930 920
+preplace netloc DigMagController_0_mag3_sda_t 1 1 2 540J 860 NJ
+preplace netloc mag0_scl_i_1 1 0 2 -60J 210 260
+preplace netloc mag2_sda_i_1 1 0 2 -20J 220 290
+preplace netloc mag2_scl_i_1 1 0 2 -90J 130 320
+preplace netloc mag3_sda_i_1 1 0 2 30J 240 280
+preplace netloc mag3_scl_i_1 1 0 2 0J 230 300
+preplace netloc mag0_sda_i_1 1 0 2 -120J 120 270
+preplace netloc mag1_scl_i_1 1 0 2 -130J 100 330
+preplace netloc mag1_sda_i_1 1 0 2 -110J 110 310
+preplace netloc DigMagController_0_ch_out 1 1 2 440 10 1030J
+preplace netloc DigMagController_0_dout 1 1 2 480 20 1020J
+preplace netloc DigMagController_0_irq_out 1 1 2 500 30 1010J
+levelinfo -pg 1 -200 150 710 1050
+pagesize -pg 1 -db -bbox -sgen -400 0 1270 1040
 "
 }
 0

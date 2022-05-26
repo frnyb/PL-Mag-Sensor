@@ -101,33 +101,33 @@
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
-<core>s_axilite</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="9" bw="20" op_0_bw="20" op_1_bw="20">
-<![CDATA[
-:6 %sample_cnt_target_in_read = read i20 @_ssdm_op_Read.s_axilite.i20, i20 %sample_cnt_target_in
-
-]]></Node>
-<StgValue><ssdm name="sample_cnt_target_in_read"/></StgValue>
-</operation>
-
-<operation id="9" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="10" bw="0" op_0_bw="0" op_1_bw="20" op_2_bw="20">
+<Node id="9" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:7 %write_ln9 = write void @_ssdm_op_Write.ap_none.i20P0A, i20 %sample_cnt_target_out, i20 %sample_cnt_target_in_read
+:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0
 
 ]]></Node>
-<StgValue><ssdm name="write_ln9"/></StgValue>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>s_axilite</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="20" op_0_bw="20" op_1_bw="20">
+<![CDATA[
+:7 %sample_cnt_target_in_read = read i20 @_ssdm_op_Read.s_axilite.i20, i20 %sample_cnt_target_in
+
+]]></Node>
+<StgValue><ssdm name="sample_cnt_target_in_read"/></StgValue>
 </operation>
 
 <operation id="10" st_id="1" stage="1" lat="1">
@@ -137,9 +137,24 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="0">
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="20" op_2_bw="20">
 <![CDATA[
-:8 %ret_ln10 = ret
+:8 %write_ln9 = write void @_ssdm_op_Write.ap_none.i20P0A, i20 %sample_cnt_target_out, i20 %sample_cnt_target_in_read
+
+]]></Node>
+<StgValue><ssdm name="write_ln9"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="0">
+<![CDATA[
+:9 %ret_ln10 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln10"/></StgValue>

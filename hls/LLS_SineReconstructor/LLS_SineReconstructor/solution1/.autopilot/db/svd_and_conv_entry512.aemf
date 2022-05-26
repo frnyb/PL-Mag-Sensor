@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652100494744">
-  <ports id="1" name="alpha" type="PortType" coreId="2003316581" bitwidth="60">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652346076548">
+  <ports id="1" name="alpha" type="PortType" coreId="1834971487" bitwidth="60">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="beta" type="PortType" coreId="796354607" bitwidth="60">
+  <ports id="2" name="beta" type="PortType" coreId="1869366831" bitwidth="60">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="3" name="gamma" type="PortType" coreId="1869366831" bitwidth="60">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="alpha_out" type="PortType" coreName="FIFO_SRL" coreId="2003316581" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="4" name="alpha_out" type="PortType" coreName="FIFO_SRL" coreId="1869366831" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="5" name="alpha_out1" type="PortType" coreName="FIFO_SRL" coreId="2003316581" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="5" name="alpha_out1" type="PortType" coreName="FIFO_SRL" coreId="1869366831" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="beta_out" type="PortType" coreName="FIFO_SRL" coreId="2003316581" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="6" name="beta_out" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="7" name="beta_out2" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="7" name="beta_out2" type="PortType" coreName="FIFO_SRL" coreId="81" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="8" name="gamma_out" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="8" name="gamma_out" type="PortType" coreName="FIFO_SRL" coreId="81" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="9" name="gamma_out3" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="9" name="gamma_out3" type="PortType" coreName="FIFO_SRL" coreId="97" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="29" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -43,17 +43,17 @@
   <edges id="51" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@ports.8"/>
   <edges id="52" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.8"/>
   <blocks id="26" name="svd_and_conv.entry512" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="gamma_read" coreId="1211065699" bitwidth="60" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="gamma_read" coreId="0" bitwidth="60" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataInputObjs>gamma</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="beta_read" coreId="0" bitwidth="60" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="beta_read" coreId="1692289680" bitwidth="60" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>beta</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="alpha_read" coreId="3556769920" bitwidth="60" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="alpha_read" coreId="20" bitwidth="60" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>alpha</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
@@ -82,7 +82,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>gamma_out3</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln0" coreId="129" opcode="ret" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln0" coreId="49" opcode="ret" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1"/>
   </blocks>
   <ScheduleInfo time="0"/>
   <ioNodes realName="write_ln0_write_fu_86">

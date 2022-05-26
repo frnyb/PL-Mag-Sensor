@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367644.86 
+vim-8.1.1518-r0: do_packagedata_setscene
+Elapsed time: 0.16 seconds
+utime: 26
+stime: 1
+cutime: 0
+cstime: 1
+IO rchar: 481613
+IO wchar: 331269
+IO syscr: 254
+IO syscw: 122
+IO read_bytes: 24576
+IO write_bytes: 204800
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.26231099999999996
+rusage ru_stime: 0.011745
+rusage ru_maxrss: 140408
+rusage ru_minflt: 6526
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 104
+rusage ru_nvcsw: 10
+rusage ru_nivcsw: 32
+Child rusage ru_utime: 0.009991
+Child rusage ru_stime: 0.016149
+Child rusage ru_maxrss: 137672
+Child rusage ru_minflt: 1642
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 48
+Child rusage ru_oublock: 296
+Child rusage ru_nvcsw: 33
+Child rusage ru_nivcsw: 30
+Status: PASSED 
+Ended: 1638367645.02 

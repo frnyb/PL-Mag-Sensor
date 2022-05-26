@@ -22,7 +22,7 @@
       "srcSize": "32",
       "hwRefs": [{
           "type": "register",
-          "interface": "s_axi_control",
+          "interface": "s_axi_CPU",
           "name": "sample_cnt_target_in",
           "usage": "data",
           "direction": "in"
@@ -47,10 +47,11 @@
     "ConfigTcl": [
       "config_export -format=ip_catalog",
       "config_export -library=PL-Mag-Sensor",
-      "config_export -output=\/vol\/Workspace\/Projects\/PL-Mag-Sensor\/ip\/SampleCntTargetController.zip",
+      "config_export -output=\/home\/ffn\/Nextcloud\/Workspace\/Projects\/PL-Mag-Sensor\/ip\/SampleCntTargetController.zip",
       "config_export -rtl=vhdl",
       "config_export -vendor=DIII"
     ],
+    "DirectiveTcl": ["set_directive_top SampleCntTargetController -name SampleCntTargetController"],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "SampleCntTargetController"
@@ -81,11 +82,11 @@
   "Files": {
     "CSource": ["..\/..\/..\/..\/src\/sample_cnt_target_controller.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/SampleCntTargetController_control_s_axi.vhd",
+      "impl\/vhdl\/SampleCntTargetController_CPU_s_axi.vhd",
       "impl\/vhdl\/SampleCntTargetController.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/SampleCntTargetController_control_s_axi.v",
+      "impl\/verilog\/SampleCntTargetController_CPU_s_axi.v",
       "impl\/verilog\/SampleCntTargetController.v"
     ],
     "SwDriver": [
@@ -101,7 +102,7 @@
     "IpMisc": ["impl\/misc\/logo.png"],
     "DesignXml": ".autopilot\/db\/SampleCntTargetController.design.xml",
     "DebugDir": ".debug",
-    "ProtoInst": ["\/vol\/Workspace\/Projects\/PL-Mag-Sensor\/hls\/SampleCntTargetController\/SampleCntTargetController\/solution1\/.debug\/SampleCntTargetController.protoinst"]
+    "ProtoInst": ["\/home\/ffn\/Nextcloud\/Workspace\/Projects\/PL-Mag-Sensor\/hls\/SampleCntTargetController\/SampleCntTargetController\/solution1\/.debug\/SampleCntTargetController.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -114,28 +115,11 @@
       "busTypeName": "clock",
       "mode": "slave",
       "busParams": {
-        "ASSOCIATED_BUSIF": "s_axi_control",
+        "ASSOCIATED_BUSIF": "s_axi_CPU",
         "ASSOCIATED_RESET": "ap_rst_n"
       },
       "portMap": {"ap_clk": "CLK"},
       "ports": ["ap_clk"]
-    },
-    "ap_ctrl": {
-      "type": "ap_ctrl",
-      "busTypeName": "acc_handshake",
-      "mode": "slave",
-      "portMap": {
-        "ap_start": "start",
-        "ap_done": "done",
-        "ap_idle": "idle",
-        "ap_ready": "ready"
-      },
-      "ports": [
-        "ap_done",
-        "ap_idle",
-        "ap_ready",
-        "ap_start"
-      ]
     },
     "ap_rst_n": {
       "type": "reset",
@@ -145,34 +129,204 @@
       "portMap": {"ap_rst_n": "RST"},
       "ports": ["ap_rst_n"]
     },
-    "s_axi_control": {
+    "interrupt": {
+      "type": "interrupt",
+      "busTypeName": "interrupt",
+      "mode": "master",
+      "dataWidth": "1",
+      "busParams": {"SENSITIVITY": "LEVEL_HIGH"},
+      "portMap": {"interrupt": "INTERRUPT"},
+      "ports": ["interrupt"]
+    },
+    "s_axi_CPU": {
       "type": "axi4lite",
       "busTypeName": "aximm",
       "mode": "slave",
       "dataWidth": "32",
       "addrWidth": "5",
-      "portPrefix": "s_axi_control_",
-      "paramPrefix": "C_S_AXI_CONTROL_",
+      "portPrefix": "s_axi_CPU_",
+      "paramPrefix": "C_S_AXI_CPU_",
       "ports": [
-        "s_axi_control_ARADDR",
-        "s_axi_control_ARREADY",
-        "s_axi_control_ARVALID",
-        "s_axi_control_AWADDR",
-        "s_axi_control_AWREADY",
-        "s_axi_control_AWVALID",
-        "s_axi_control_BREADY",
-        "s_axi_control_BRESP",
-        "s_axi_control_BVALID",
-        "s_axi_control_RDATA",
-        "s_axi_control_RREADY",
-        "s_axi_control_RRESP",
-        "s_axi_control_RVALID",
-        "s_axi_control_WDATA",
-        "s_axi_control_WREADY",
-        "s_axi_control_WSTRB",
-        "s_axi_control_WVALID"
+        "s_axi_CPU_ARADDR",
+        "s_axi_CPU_ARREADY",
+        "s_axi_CPU_ARVALID",
+        "s_axi_CPU_AWADDR",
+        "s_axi_CPU_AWREADY",
+        "s_axi_CPU_AWVALID",
+        "s_axi_CPU_BREADY",
+        "s_axi_CPU_BRESP",
+        "s_axi_CPU_BVALID",
+        "s_axi_CPU_RDATA",
+        "s_axi_CPU_RREADY",
+        "s_axi_CPU_RRESP",
+        "s_axi_CPU_RVALID",
+        "s_axi_CPU_WDATA",
+        "s_axi_CPU_WREADY",
+        "s_axi_CPU_WSTRB",
+        "s_axi_CPU_WVALID"
       ],
-      "registers": [{
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "resetValue": "0x0",
+          "description": "Control signals",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "resetValue": "0",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "resetValue": "0",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "24",
+              "name": "RESERVED_2",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "resetValue": "0x0",
+          "description": "Global Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "resetValue": "0",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "resetValue": "0x0",
+          "description": "IP Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "resetValue": "0",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "resetValue": "0",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "resetValue": "0x0",
+          "description": "IP Interrupt Status Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "resetValue": "0",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "resetValue": "0",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "resetValue": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
           "offset": "0x10",
           "name": "sample_cnt_target_in",
           "access": "W",
@@ -197,7 +351,8 @@
               "description": "Reserved.  0s on read."
             }
           ]
-        }],
+        }
+      ],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "s_axilite",
@@ -222,89 +377,77 @@
     }
   },
   "RtlPorts": {
-    "s_axi_control_AWVALID": {
+    "s_axi_CPU_AWVALID": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_control_AWREADY": {
+    "s_axi_CPU_AWREADY": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_control_AWADDR": {
+    "s_axi_CPU_AWADDR": {
       "dir": "in",
       "width": "5"
     },
-    "s_axi_control_WVALID": {
+    "s_axi_CPU_WVALID": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_control_WREADY": {
+    "s_axi_CPU_WREADY": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_control_WDATA": {
+    "s_axi_CPU_WDATA": {
       "dir": "in",
       "width": "32"
     },
-    "s_axi_control_WSTRB": {
+    "s_axi_CPU_WSTRB": {
       "dir": "in",
       "width": "4"
     },
-    "s_axi_control_ARVALID": {
+    "s_axi_CPU_ARVALID": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_control_ARREADY": {
+    "s_axi_CPU_ARREADY": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_control_ARADDR": {
+    "s_axi_CPU_ARADDR": {
       "dir": "in",
       "width": "5"
     },
-    "s_axi_control_RVALID": {
+    "s_axi_CPU_RVALID": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_control_RREADY": {
+    "s_axi_CPU_RREADY": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_control_RDATA": {
+    "s_axi_CPU_RDATA": {
       "dir": "out",
       "width": "32"
     },
-    "s_axi_control_RRESP": {
+    "s_axi_CPU_RRESP": {
       "dir": "out",
       "width": "2"
     },
-    "s_axi_control_BVALID": {
+    "s_axi_CPU_BVALID": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_control_BREADY": {
+    "s_axi_CPU_BREADY": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_control_BRESP": {
+    "s_axi_CPU_BRESP": {
       "dir": "out",
       "width": "2"
     },
-    "ap_start": {
-      "dir": "in",
-      "width": "1"
-    },
-    "ap_done": {
+    "sample_cnt_target_out": {
       "dir": "out",
-      "width": "1"
-    },
-    "ap_idle": {
-      "dir": "out",
-      "width": "1"
-    },
-    "ap_ready": {
-      "dir": "out",
-      "width": "1"
+      "width": "20"
     },
     "ap_clk": {
       "dir": "in",
@@ -314,9 +457,9 @@
       "dir": "in",
       "width": "1"
     },
-    "sample_cnt_target_out": {
+    "interrupt": {
       "dir": "out",
-      "width": "20"
+      "width": "1"
     }
   },
   "ModuleInfo": {
@@ -346,7 +489,7 @@
           "BRAM_18K": "0",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "0",
-          "FF": "56",
+          "FF": "62",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
           "LUT": "80",
@@ -364,7 +507,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-05-25 14:45:25 CEST",
+    "Time": "2022-05-26 17:47:48 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

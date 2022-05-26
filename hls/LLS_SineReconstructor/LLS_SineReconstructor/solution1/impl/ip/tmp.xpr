@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/impl/ip/tmp.xpr">
+<Project Version="7" Minor="54" Path="/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor/LLS_SineReconstructor/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ea75f330ef0e401195a0c49e4491fc12"/>
+    <Option Name="Id" Val="2a2185467ddf4bfd91b0b7c942a354f8"/>
     <Option Name="Part" Val="xczu3eg-sbva484-1-i"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

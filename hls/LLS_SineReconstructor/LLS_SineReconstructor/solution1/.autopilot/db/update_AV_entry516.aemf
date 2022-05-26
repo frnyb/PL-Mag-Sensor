@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652100497640">
-  <ports id="1" name="col_i" type="PortType" coreId="2003316581" bitwidth="2">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652346079540">
+  <ports id="1" name="col_i" type="PortType" coreId="1869366831" bitwidth="2">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="col_j" type="PortType" coreId="796354607" bitwidth="2">
+  <ports id="2" name="col_j" type="PortType" coreId="0" bitwidth="2">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="3" name="s" type="PortType" coreId="1869366831" bitwidth="60">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="c" type="PortType" coreId="0" bitwidth="60">
+  <ports id="4" name="c" type="PortType" coreId="1869366831" bitwidth="60">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="col_i_out" type="PortType" coreName="FIFO_SRL" coreId="2003316581" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
+  <ports id="5" name="col_i_out" type="PortType" coreName="FIFO_SRL" coreId="3345375844" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="col_i_out1" type="PortType" coreName="FIFO_SRL" coreId="2003316581" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
+  <ports id="6" name="col_i_out1" type="PortType" coreName="FIFO_SRL" coreId="1694864512" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="7" name="col_j_out" type="PortType" coreName="FIFO_SRL" coreId="113" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
+  <ports id="7" name="col_j_out" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="8" name="col_j_out2" type="PortType" coreName="FIFO_SRL" coreId="113" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
+  <ports id="8" name="col_j_out2" type="PortType" coreName="FIFO_SRL" coreId="177" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="9" name="s_out" type="PortType" coreName="FIFO_SRL" coreId="113" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="9" name="s_out" type="PortType" coreName="FIFO_SRL" coreId="81" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="10" name="s_out3" type="PortType" coreName="FIFO_SRL" coreId="129" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="10" name="s_out3" type="PortType" coreName="FIFO_SRL" coreId="81" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="11" name="c_out" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="11" name="c_out" type="PortType" coreName="FIFO_SRL" coreId="129" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="12" name="c_out4" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
+  <ports id="12" name="c_out4" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="60" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="37" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -62,17 +62,17 @@
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="s_read" coreId="116" bitwidth="60" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="s_read" coreId="0" bitwidth="60" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>s</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="col_j_read" coreId="14" bitwidth="2" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="col_j_read" coreId="113" bitwidth="2" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>col_j</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="col_i_read" coreId="113" bitwidth="2" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="col_i_read" coreId="1694354720" bitwidth="2" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>col_i</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
@@ -109,7 +109,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>c_out4</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="_ln0" coreId="129" opcode="ret" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="_ln0" coreId="145" opcode="ret" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
   </blocks>
   <ScheduleInfo time="0"/>
   <ioNodes realName="c_read_read_fu_46">

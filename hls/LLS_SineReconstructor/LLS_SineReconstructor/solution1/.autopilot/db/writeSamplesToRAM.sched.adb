@@ -31,7 +31,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2003316581</coreId>
+						<coreId>1869366831</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -64,7 +64,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>796354607</coreId>
+						<coreId>33</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -130,7 +130,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107715520</coreId>
+						<coreId>1869366831</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -163,7 +163,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2003316581</coreId>
+						<coreId>2302102471</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -196,7 +196,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2003316581</coreId>
+						<coreId>4054449128</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -229,7 +229,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103477320</coreId>
+						<coreId>3367254360</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -262,7 +262,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>97</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -295,7 +295,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1869375071</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -328,7 +328,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4054449128</coreId>
+						<coreId>177</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -361,7 +361,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>97</coreId>
+						<coreId>129</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -394,7 +394,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>795766633</coreId>
+						<coreId>257</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -460,7 +460,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1986817907</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -493,7 +493,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>225</coreId>
+						<coreId>257</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -526,7 +526,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>4160749696</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -549,7 +549,7 @@
 						<id>22</id>
 						<name>sample_sample_V</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -557,7 +557,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -602,7 +602,7 @@
 						<id>23</id>
 						<name>sample_timestamp_V</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -610,7 +610,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -630,7 +630,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1941959744</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -669,7 +669,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1211065699</coreId>
+						<coreId>2275663152</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -710,7 +710,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1211065699</coreId>
+						<coreId>2275693360</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -751,7 +751,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1211065699</coreId>
+						<coreId>1940903616</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -792,7 +792,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1211065699</coreId>
+						<coreId>1940692752</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -833,7 +833,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1211065699</coreId>
+						<coreId>2784135872</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -874,7 +874,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1702259823</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -915,7 +915,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>808595506</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -956,7 +956,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1397508143</coreId>
+						<coreId>433</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -997,7 +997,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>433</coreId>
+						<coreId>193</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1038,7 +1038,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>305</coreId>
+						<coreId>961</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1079,7 +1079,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>609</coreId>
+						<coreId>1680366240</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1120,7 +1120,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>737</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1161,7 +1161,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>129</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1202,7 +1202,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1121</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1243,7 +1243,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107731640</coreId>
+						<coreId>68</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1284,7 +1284,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1114168416</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1325,7 +1325,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107737312</coreId>
+						<coreId>1680326480</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1366,7 +1366,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>6</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1571,7 +1571,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1679563008</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -1653,7 +1653,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -1692,7 +1692,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113424032</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -1731,7 +1731,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1679560112</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -1756,7 +1756,7 @@
 						<id>51</id>
 						<name>br_ln154</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -1764,7 +1764,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1809,7 +1809,7 @@
 						<id>53</id>
 						<name>idx</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -1817,7 +1817,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1837,7 +1837,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -1879,7 +1879,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1217</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -1907,7 +1907,7 @@
 						<id>55</id>
 						<name>sext_ln154</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -1915,7 +1915,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1935,7 +1935,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103613848</coreId>
+						<coreId>1938768584</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -1960,7 +1960,7 @@
 						<id>56</id>
 						<name>tmp</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -1968,7 +1968,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1988,7 +1988,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103612936</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -2015,7 +2015,7 @@
 						<id>58</id>
 						<name>br_ln154</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2023,7 +2023,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2043,7 +2043,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1680761616</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -2070,7 +2070,7 @@
 						<id>61</id>
 						<name>sub_i</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2078,7 +2078,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2098,7 +2098,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103623353</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -2124,7 +2124,7 @@
 						<id>62</id>
 						<name>empty</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2132,7 +2132,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2152,7 +2152,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -2177,7 +2177,7 @@
 						<id>63</id>
 						<name>cmp_i</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2185,7 +2185,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2205,7 +2205,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -2231,7 +2231,7 @@
 						<id>64</id>
 						<name>tmp_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2239,7 +2239,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2286,7 +2286,7 @@
 						<id>65</id>
 						<name>add_i</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2294,7 +2294,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2340,7 +2340,7 @@
 						<id>66</id>
 						<name>trunc_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2348,7 +2348,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2368,7 +2368,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>12</coreId>
+						<coreId>913</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -2393,7 +2393,7 @@
 						<id>67</id>
 						<name>empty_127</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2401,7 +2401,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2448,7 +2448,7 @@
 						<id>68</id>
 						<name>empty_128</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2456,7 +2456,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2476,7 +2476,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103611296</coreId>
+						<coreId>1680763865</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -2503,7 +2503,7 @@
 						<id>69</id>
 						<name>tmp_2</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2511,7 +2511,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2531,7 +2531,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -2558,7 +2558,7 @@
 						<id>70</id>
 						<name>zext_ln158</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2566,7 +2566,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2586,7 +2586,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>11</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -2611,7 +2611,7 @@
 						<id>71</id>
 						<name>br_ln158</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2619,7 +2619,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2678,7 +2678,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107791737</coreId>
+						<coreId>1680675408</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -2706,7 +2706,7 @@
 						<id>74</id>
 						<name>j</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2714,7 +2714,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2734,7 +2734,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107793232</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -2762,7 +2762,7 @@
 						<id>75</id>
 						<name>add_ln158_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2770,7 +2770,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2790,7 +2790,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -2816,7 +2816,7 @@
 						<id>76</id>
 						<name>zext_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2824,7 +2824,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2844,7 +2844,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107711080</coreId>
+						<coreId>1680758752</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -2869,7 +2869,7 @@
 						<id>77</id>
 						<name>add_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2877,7 +2877,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2897,7 +2897,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107711720</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -2923,7 +2923,7 @@
 						<id>78</id>
 						<name>zext_ln161_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2931,7 +2931,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2951,7 +2951,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>2993</coreId>
+						<coreId>1680730784</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -2976,7 +2976,7 @@
 						<id>79</id>
 						<name>trunc_ln161_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -2984,7 +2984,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3004,7 +3004,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -3029,7 +3029,7 @@
 						<id>80</id>
 						<name>p_shl_cast</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3037,7 +3037,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3057,7 +3057,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3084,7 +3084,7 @@
 						<id>81</id>
 						<name>p_shl1_cast</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3092,7 +3092,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3139,7 +3139,7 @@
 						<id>82</id>
 						<name>sub_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3147,7 +3147,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3167,7 +3167,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107734040</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3193,7 +3193,7 @@
 						<id>83</id>
 						<name>zext_ln161_2</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3201,7 +3201,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3246,7 +3246,7 @@
 						<id>84</id>
 						<name>add_ln161_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3254,7 +3254,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3274,7 +3274,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1919950882</coreId>
+						<coreId>1680769648</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3300,7 +3300,7 @@
 						<id>85</id>
 						<name>zext_ln161_3</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3308,7 +3308,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3328,7 +3328,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1953068832</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -3353,7 +3353,7 @@
 						<id>86</id>
 						<name>sliding_window_buffer_samples_sample_V_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3361,7 +3361,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3381,7 +3381,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>31</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3408,7 +3408,7 @@
 						<id>87</id>
 						<name>add_ln161_2</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3416,7 +3416,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3462,7 +3462,7 @@
 						<id>88</id>
 						<name>zext_ln161_4</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3470,7 +3470,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3515,7 +3515,7 @@
 						<id>89</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3523,7 +3523,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3543,7 +3543,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1114191576</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3570,7 +3570,7 @@
 						<id>90</id>
 						<name>add_ln161_3</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3578,7 +3578,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3598,7 +3598,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3624,7 +3624,7 @@
 						<id>91</id>
 						<name>zext_ln161_5</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3632,7 +3632,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3652,7 +3652,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1112953176</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -3677,7 +3677,7 @@
 						<id>92</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_2</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3685,7 +3685,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3705,7 +3705,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3732,7 +3732,7 @@
 						<id>93</id>
 						<name>add_ln161_4</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3740,7 +3740,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3760,7 +3760,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3786,7 +3786,7 @@
 						<id>94</id>
 						<name>zext_ln161_6</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3794,7 +3794,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3814,7 +3814,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>2257</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -3839,7 +3839,7 @@
 						<id>95</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_3</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3847,7 +3847,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3867,7 +3867,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>1680367216</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3894,7 +3894,7 @@
 						<id>96</id>
 						<name>add_ln161_5</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3902,7 +3902,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3922,7 +3922,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113428160</coreId>
+						<coreId>825570605</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -3948,7 +3948,7 @@
 						<id>97</id>
 						<name>zext_ln161_7</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -3956,7 +3956,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3976,7 +3976,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>796421737</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -4001,7 +4001,7 @@
 						<id>98</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_4</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4009,7 +4009,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4029,7 +4029,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>12</coreId>
+						<coreId>1680364576</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4056,7 +4056,7 @@
 						<id>99</id>
 						<name>add_ln161_6</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4064,7 +4064,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4084,7 +4084,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4110,7 +4110,7 @@
 						<id>100</id>
 						<name>zext_ln161_8</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4118,7 +4118,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4163,7 +4163,7 @@
 						<id>101</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_5</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4171,7 +4171,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4191,7 +4191,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1680969064</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4218,7 +4218,7 @@
 						<id>102</id>
 						<name>add_ln161_7</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4226,7 +4226,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4246,7 +4246,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4272,7 +4272,7 @@
 						<id>103</id>
 						<name>zext_ln161_9</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4280,7 +4280,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4325,7 +4325,7 @@
 						<id>104</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_6</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4333,7 +4333,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4353,7 +4353,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1680954064</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4380,7 +4380,7 @@
 						<id>105</id>
 						<name>add_ln161_8</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4388,7 +4388,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4408,7 +4408,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1680955584</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4434,7 +4434,7 @@
 						<id>106</id>
 						<name>zext_ln161_10</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4442,169 +4442,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>0</coreId>
-					</Obj>
-					<bitwidth>64</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>433</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>81</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_97">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>107</id>
-						<name>sliding_window_buffer_samples_sample_V_addr_7</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>0</coreId>
-					</Obj>
-					<bitwidth>10</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>434</item>
-					<item>435</item>
-					<item>436</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>82</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_98">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>108</id>
-						<name>or_ln161</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>0</coreId>
-					</Obj>
-					<bitwidth>10</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>437</item>
-					<item>439</item>
-				</oprand_edges>
-				<opcode>or</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>83</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_99">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>109</id>
-						<name>zext_ln161_11</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4631,7 +4469,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>440</item>
+					<item>433</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -4639,17 +4477,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>84</m_topoIndex>
+				<m_topoIndex>81</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_100">
+			<item class_id_reference="9" object_id="_97">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>110</id>
-						<name>sliding_window_buffer_samples_sample_V_addr_8</name>
+						<id>107</id>
+						<name>sliding_window_buffer_samples_sample_V_addr_7</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4657,7 +4495,116 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>11</coreId>
+					</Obj>
+					<bitwidth>10</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>434</item>
+					<item>435</item>
+					<item>436</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>82</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_98">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>108</id>
+						<name>or_ln161</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>1680966352</coreId>
+					</Obj>
+					<bitwidth>10</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>437</item>
+					<item>439</item>
+				</oprand_edges>
+				<opcode>or</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>83</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_99">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>109</id>
+						<name>zext_ln161_11</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4678,6 +4625,59 @@
 						<implIndex></implIndex>
 						<coreName></coreName>
 						<coreId>0</coreId>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>440</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>84</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_100">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>110</id>
+						<name>sliding_window_buffer_samples_sample_V_addr_8</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4704,7 +4704,7 @@
 						<id>111</id>
 						<name>or_ln161_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4712,7 +4712,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4732,7 +4732,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1114183856</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4758,7 +4758,7 @@
 						<id>112</id>
 						<name>zext_ln161_12</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4766,7 +4766,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4811,7 +4811,7 @@
 						<id>113</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_9</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4819,7 +4819,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4866,7 +4866,7 @@
 						<id>114</id>
 						<name>or_ln161_2</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4874,7 +4874,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4894,7 +4894,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>6193</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -4920,7 +4920,7 @@
 						<id>115</id>
 						<name>zext_ln161_13</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4928,7 +4928,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4948,7 +4948,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113951625</coreId>
+						<coreId>1942859161</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -4973,7 +4973,7 @@
 						<id>116</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_10</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -4981,7 +4981,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5001,7 +5001,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1680330384</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -5028,7 +5028,7 @@
 						<id>117</id>
 						<name>sliding_window_buffer_samples_sample_V_addr_11</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5036,7 +5036,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5083,7 +5083,7 @@
 						<id>118</id>
 						<name>sliding_window_buffer_samples_timestamp_V_0_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5091,7 +5091,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5111,7 +5111,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>11</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5138,7 +5138,7 @@
 						<id>119</id>
 						<name>sliding_window_buffer_samples_timestamp_V_1_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5146,7 +5146,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5193,7 +5193,7 @@
 						<id>120</id>
 						<name>sliding_window_buffer_samples_timestamp_V_10_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5201,7 +5201,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5221,7 +5221,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>1680944800</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5248,7 +5248,7 @@
 						<id>121</id>
 						<name>sliding_window_buffer_samples_timestamp_V_11_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5256,7 +5256,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5276,7 +5276,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5303,7 +5303,7 @@
 						<id>122</id>
 						<name>sliding_window_buffer_samples_timestamp_V_2_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5311,7 +5311,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5331,7 +5331,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108726096</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5358,7 +5358,7 @@
 						<id>123</id>
 						<name>sliding_window_buffer_samples_timestamp_V_3_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5366,7 +5366,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5386,7 +5386,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>541155173</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5413,7 +5413,7 @@
 						<id>124</id>
 						<name>sliding_window_buffer_samples_timestamp_V_4_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5421,7 +5421,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5441,7 +5441,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1668183398</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5468,7 +5468,7 @@
 						<id>125</id>
 						<name>sliding_window_buffer_samples_timestamp_V_5_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5476,7 +5476,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5496,7 +5496,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1635017019</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5523,7 +5523,7 @@
 						<id>126</id>
 						<name>sliding_window_buffer_samples_timestamp_V_6_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5531,7 +5531,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5551,7 +5551,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>824195685</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5578,7 +5578,7 @@
 						<id>127</id>
 						<name>sliding_window_buffer_samples_timestamp_V_7_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5586,7 +5586,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5606,7 +5606,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>10</coreId>
+						<coreId>1953394531</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5633,7 +5633,7 @@
 						<id>128</id>
 						<name>sliding_window_buffer_samples_timestamp_V_8_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5641,7 +5641,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5661,7 +5661,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1852142702</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5688,7 +5688,7 @@
 						<id>129</id>
 						<name>sliding_window_buffer_samples_timestamp_V_9_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5696,7 +5696,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5716,7 +5716,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113431032</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>7</bitwidth>
 				</Value>
@@ -5743,7 +5743,7 @@
 						<id>130</id>
 						<name>icmp_ln158</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5751,7 +5751,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5771,7 +5771,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113432272</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -5797,7 +5797,7 @@
 						<id>132</id>
 						<name>br_ln158</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5805,7 +5805,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5825,7 +5825,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>1938772824</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -5852,7 +5852,7 @@
 						<id>135</id>
 						<name>sliding_window_buffer_samples_timestamp_V_11_load</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5860,60 +5860,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>49</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>503</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>146</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_123">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>136</id>
-						<name>sliding_window_buffer_samples_timestamp_V_10_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5940,6 +5887,59 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
+					<item>503</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>146</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_123">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>136</id>
+						<name>sliding_window_buffer_samples_timestamp_V_10_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>8</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
 					<item>504</item>
 				</oprand_edges>
 				<opcode>load</opcode>
@@ -5958,7 +5958,7 @@
 						<id>137</id>
 						<name>sliding_window_buffer_samples_timestamp_V_9_load</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -5966,431 +5966,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>3605</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>505</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>138</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_125">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>138</id>
-						<name>sliding_window_buffer_samples_timestamp_V_8_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>1113871193</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>506</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>139</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_126">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>139</id>
-						<name>sliding_window_buffer_samples_timestamp_V_7_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>4285</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>507</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>130</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_127">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>140</id>
-						<name>sliding_window_buffer_samples_timestamp_V_6_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>4625</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>508</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>131</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_128">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>141</id>
-						<name>sliding_window_buffer_samples_timestamp_V_5_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>49</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>509</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>122</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_129">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>142</id>
-						<name>sliding_window_buffer_samples_timestamp_V_4_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>1108643144</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>510</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>123</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_130">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>143</id>
-						<name>sliding_window_buffer_samples_timestamp_V_3_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>6</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>511</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>114</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_131">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>144</id>
-						<name>sliding_window_buffer_samples_timestamp_V_2_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>2993</coreId>
-					</Obj>
-					<bitwidth>20</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>512</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>115</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_132">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>145</id>
-						<name>sliding_window_buffer_samples_timestamp_V_1_load</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6417,7 +5993,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>513</item>
+					<item>505</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -6425,17 +6001,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.35</m_delay>
-				<m_topoIndex>107</m_topoIndex>
+				<m_topoIndex>138</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_133">
+			<item class_id_reference="9" object_id="_125">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>146</id>
-						<name>sliding_window_buffer_samples_timestamp_V_0_load</name>
+						<id>138</id>
+						<name>sliding_window_buffer_samples_timestamp_V_8_load</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6443,7 +6019,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6463,7 +6039,431 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108648304</coreId>
+						<coreId>0</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>506</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>139</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_126">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>139</id>
+						<name>sliding_window_buffer_samples_timestamp_V_7_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>4160749696</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>507</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>130</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_127">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>140</id>
+						<name>sliding_window_buffer_samples_timestamp_V_6_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>11</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>508</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>131</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_128">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>141</id>
+						<name>sliding_window_buffer_samples_timestamp_V_5_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>1938782688</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>509</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>122</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_129">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>142</id>
+						<name>sliding_window_buffer_samples_timestamp_V_4_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>1938782856</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>510</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>123</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_130">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>143</id>
+						<name>sliding_window_buffer_samples_timestamp_V_3_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>49</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>511</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>114</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_131">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>144</id>
+						<name>sliding_window_buffer_samples_timestamp_V_2_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>0</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>512</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>115</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_132">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>145</id>
+						<name>sliding_window_buffer_samples_timestamp_V_1_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>1679525056</coreId>
+					</Obj>
+					<bitwidth>20</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>513</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>107</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_133">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>146</id>
+						<name>sliding_window_buffer_samples_timestamp_V_0_load</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>1679528808</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -6488,7 +6488,7 @@
 						<id>147</id>
 						<name>sliding_window_buffer_samples_sample_V_load</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6496,7 +6496,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6516,7 +6516,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1885692960</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6541,7 +6541,7 @@
 						<id>148</id>
 						<name>sliding_window_buffer_samples_sample_V_load_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6549,7 +6549,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6594,7 +6594,7 @@
 						<id>149</id>
 						<name>sliding_window_buffer_samples_sample_V_load_2</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6602,7 +6602,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6647,7 +6647,7 @@
 						<id>150</id>
 						<name>sliding_window_buffer_samples_sample_V_load_3</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6655,7 +6655,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6675,7 +6675,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>1679533568</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6700,7 +6700,7 @@
 						<id>151</id>
 						<name>sliding_window_buffer_samples_sample_V_load_4</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6708,7 +6708,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6728,7 +6728,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1679536584</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6753,7 +6753,7 @@
 						<id>152</id>
 						<name>sliding_window_buffer_samples_sample_V_load_5</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6761,60 +6761,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>0</coreId>
-					</Obj>
-					<bitwidth>12</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>520</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.35</m_delay>
-				<m_topoIndex>125</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_140">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>153</id>
-						<name>sliding_window_buffer_samples_sample_V_load_6</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6841,6 +6788,59 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
+					<item>520</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.35</m_delay>
+				<m_topoIndex>125</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_140">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>153</id>
+						<name>sliding_window_buffer_samples_sample_V_load_6</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>0</coreId>
+					</Obj>
+					<bitwidth>12</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
 					<item>521</item>
 				</oprand_edges>
 				<opcode>load</opcode>
@@ -6859,7 +6859,7 @@
 						<id>154</id>
 						<name>sliding_window_buffer_samples_sample_V_load_7</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6867,7 +6867,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6912,7 +6912,7 @@
 						<id>155</id>
 						<name>sliding_window_buffer_samples_sample_V_load_8</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6920,7 +6920,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6940,7 +6940,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>808531253</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -6965,7 +6965,7 @@
 						<id>156</id>
 						<name>sliding_window_buffer_samples_sample_V_load_9</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -6973,7 +6973,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6993,7 +6993,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7018,7 +7018,7 @@
 						<id>157</id>
 						<name>sliding_window_buffer_samples_sample_V_load_10</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7026,7 +7026,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7046,7 +7046,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103618096</coreId>
+						<coreId>1679509456</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7071,7 +7071,7 @@
 						<id>158</id>
 						<name>sliding_window_buffer_samples_sample_V_load_11</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7079,7 +7079,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7099,7 +7099,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1679512640</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -7124,7 +7124,7 @@
 						<id>159</id>
 						<name>sample_sample_V_addr_1_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7132,7 +7132,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7152,7 +7152,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1702043700</coreId>
+						<coreId>1226845797</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7178,7 +7178,7 @@
 						<id>160</id>
 						<name>sample_sample_V_addr_2_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7186,7 +7186,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7206,7 +7206,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1030185332</coreId>
+						<coreId>1679515513</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7232,7 +7232,7 @@
 						<id>161</id>
 						<name>sample_sample_V_addr_3_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7240,7 +7240,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7260,7 +7260,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1868767266</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7286,7 +7286,7 @@
 						<id>162</id>
 						<name>sample_sample_V_addr_4_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7294,7 +7294,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7314,7 +7314,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1914708526</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7340,7 +7340,7 @@
 						<id>163</id>
 						<name>sample_sample_V_addr_5_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7348,7 +7348,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7368,7 +7368,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1229529196</coreId>
+						<coreId>1679519704</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7394,7 +7394,7 @@
 						<id>164</id>
 						<name>sample_sample_V_addr_6_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7402,7 +7402,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7422,7 +7422,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1679521376</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7448,7 +7448,7 @@
 						<id>165</id>
 						<name>sample_sample_V_addr_7_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7456,7 +7456,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7476,7 +7476,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>913</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7502,7 +7502,7 @@
 						<id>166</id>
 						<name>sample_sample_V_addr_8_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7510,7 +7510,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7530,7 +7530,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108651872</coreId>
+						<coreId>1679523480</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7556,7 +7556,7 @@
 						<id>167</id>
 						<name>sample_sample_V_addr_9_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7564,7 +7564,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7584,7 +7584,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108653520</coreId>
+						<coreId>17745</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7610,7 +7610,7 @@
 						<id>168</id>
 						<name>sample_sample_V_addr_10_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7618,7 +7618,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7638,7 +7638,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108654560</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7664,7 +7664,7 @@
 						<id>169</id>
 						<name>sample_sample_V_addr_11_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7672,7 +7672,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7692,7 +7692,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108655752</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7718,7 +7718,7 @@
 						<id>170</id>
 						<name>sample_sample_V_addr_12_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7726,7 +7726,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7746,7 +7746,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108656528</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7772,7 +7772,7 @@
 						<id>171</id>
 						<name>sample_timestamp_V_addr_1_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7780,7 +7780,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7800,7 +7800,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108658440</coreId>
+						<coreId>12449</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7826,7 +7826,7 @@
 						<id>172</id>
 						<name>sample_timestamp_V_addr_2_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7834,7 +7834,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7854,7 +7854,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108659216</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7880,7 +7880,7 @@
 						<id>173</id>
 						<name>sample_timestamp_V_addr_3_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7888,7 +7888,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7908,7 +7908,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108661128</coreId>
+						<coreId>1819044215</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7934,7 +7934,7 @@
 						<id>174</id>
 						<name>sample_timestamp_V_addr_4_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7942,7 +7942,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7962,7 +7962,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -7988,7 +7988,7 @@
 						<id>175</id>
 						<name>sample_timestamp_V_addr_5_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -7996,7 +7996,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8016,7 +8016,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1948279909</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -8042,7 +8042,7 @@
 						<id>176</id>
 						<name>sample_timestamp_V_addr_6_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8050,7 +8050,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8070,7 +8070,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>5649</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -8096,7 +8096,7 @@
 						<id>177</id>
 						<name>sample_timestamp_V_addr_7_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8104,7 +8104,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8124,7 +8124,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>774332781</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -8150,7 +8150,7 @@
 						<id>178</id>
 						<name>sample_timestamp_V_addr_8_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8158,7 +8158,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8178,7 +8178,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>14</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -8204,7 +8204,7 @@
 						<id>179</id>
 						<name>sample_timestamp_V_addr_9_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8212,7 +8212,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8232,7 +8232,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1869377390</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -8258,7 +8258,7 @@
 						<id>180</id>
 						<name>sample_timestamp_V_addr_10_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8266,7 +8266,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8286,7 +8286,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1680352216</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -8312,7 +8312,7 @@
 						<id>181</id>
 						<name>sample_timestamp_V_addr_11_write_ln161</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>161</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8320,61 +8320,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/LLS_SineReconstructor.cpp</first>
-											<second>writeSamplesToRAM</second>
-										</first>
-										<second>161</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<coreId>0</coreId>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>571</item>
-					<item>572</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.79</m_delay>
-				<m_topoIndex>156</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_169">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>182</id>
-						<name>sample_timestamp_V_addr_12_write_ln161</name>
-						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
-						<lineNumber>161</lineNumber>
-						<contextFuncName>writeSamplesToRAM</contextFuncName>
-						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8401,6 +8347,60 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
+					<item>571</item>
+					<item>572</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.79</m_delay>
+				<m_topoIndex>156</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_169">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>182</id>
+						<name>sample_timestamp_V_addr_12_write_ln161</name>
+						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<lineNumber>161</lineNumber>
+						<contextFuncName>writeSamplesToRAM</contextFuncName>
+						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/LLS_SineReconstructor.cpp</first>
+											<second>writeSamplesToRAM</second>
+										</first>
+										<second>161</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<coreId>1679544440</coreId>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
 					<item>573</item>
 					<item>574</item>
 				</oprand_edges>
@@ -8420,7 +8420,7 @@
 						<id>183</id>
 						<name>br_ln164</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>164</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8428,7 +8428,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8448,7 +8448,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1679545680</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -8487,7 +8487,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -8515,7 +8515,7 @@
 						<id>186</id>
 						<name>k</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>164</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8523,7 +8523,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8571,7 +8571,7 @@
 						<id>187</id>
 						<name>add_ln164</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>164</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8579,7 +8579,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8599,7 +8599,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>13073</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -8625,7 +8625,7 @@
 						<id>188</id>
 						<name>k_cast</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>164</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8633,7 +8633,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8653,7 +8653,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1914729321</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -8678,7 +8678,7 @@
 						<id>190</id>
 						<name>icmp_ln164</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>164</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8686,7 +8686,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8706,7 +8706,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103600792</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -8732,7 +8732,7 @@
 						<id>192</id>
 						<name>br_ln164</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>164</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8740,7 +8740,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8760,7 +8760,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1679553080</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -8787,7 +8787,7 @@
 						<id>195</id>
 						<name>sample_timestamp_V_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>167</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8795,7 +8795,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8842,7 +8842,7 @@
 						<id>196</id>
 						<name>timestamp_V</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>167</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8850,7 +8850,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8870,7 +8870,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103604672</coreId>
+						<coreId>1679556120</coreId>
 					</Obj>
 					<bitwidth>20</bitwidth>
 				</Value>
@@ -8895,7 +8895,7 @@
 						<id>197</id>
 						<name>sample_sample_V_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>168</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8903,7 +8903,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8923,7 +8923,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3556769920</coreId>
+						<coreId>407</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -8950,7 +8950,7 @@
 						<id>198</id>
 						<name>data_V</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>168</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -8958,7 +8958,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8978,7 +8978,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>62</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>12</bitwidth>
 				</Value>
@@ -9003,7 +9003,7 @@
 						<id>199</id>
 						<name>item</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>170</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9011,7 +9011,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9031,7 +9031,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1103609024</coreId>
+						<coreId>1679559640</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -9058,7 +9058,7 @@
 						<id>200</id>
 						<name>add_ln172</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>172</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9066,7 +9066,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9112,7 +9112,7 @@
 						<id>201</id>
 						<name>zext_ln172</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>172</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9120,7 +9120,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9140,7 +9140,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9165,7 +9165,7 @@
 						<id>202</id>
 						<name>samples_buffer_out_addr</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>172</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9173,7 +9173,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9193,7 +9193,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113951624</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -9220,7 +9220,7 @@
 						<id>203</id>
 						<name>samples_buffer_out_addr_write_ln172</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>172</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9228,7 +9228,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9288,7 +9288,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>62</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -9313,7 +9313,7 @@
 						<id>206</id>
 						<name>add_ln158_2</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9321,7 +9321,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9341,7 +9341,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113944952</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -9381,7 +9381,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113946032</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -9406,7 +9406,7 @@
 						<id>209</id>
 						<name>add_ln158</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>158</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9414,7 +9414,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9460,7 +9460,7 @@
 						<id>210</id>
 						<name>i_1</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9468,7 +9468,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9488,7 +9488,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113948464</coreId>
+						<coreId>1680744208</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -9528,7 +9528,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1680750217</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -9553,7 +9553,7 @@
 						<id>213</id>
 						<name>_ln177</name>
 						<fileName>../src/LLS_SineReconstructor.cpp</fileName>
-						<fileDirectory>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
+						<fileDirectory>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</fileDirectory>
 						<lineNumber>177</lineNumber>
 						<contextFuncName>writeSamplesToRAM</contextFuncName>
 						<contextNormFuncName>writeSamplesToRAM</contextNormFuncName>
@@ -9561,7 +9561,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/vol/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
+								<first>/home/ffn/Nextcloud/Workspace/Projects/PL-Mag-Sensor/hls/LLS_SineReconstructor</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9581,7 +9581,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113941200</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -9623,7 +9623,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108731776</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9651,7 +9651,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1680749304</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9679,7 +9679,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1113953344</coreId>
+						<coreId>3290932</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9735,7 +9735,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>915</coreId>
+						<coreId>1680752672</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9763,7 +9763,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1680751129</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9791,7 +9791,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108729760</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9819,7 +9819,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1680752368</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9847,7 +9847,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9875,7 +9875,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1680750256</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9903,7 +9903,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108735896</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9931,7 +9931,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108736072</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -9959,7 +9959,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>7</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -9987,7 +9987,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1679565904</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -10015,7 +10015,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108738976</coreId>
+						<coreId>4160749696</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -10043,7 +10043,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>808019300</coreId>
 					</Obj>
 					<bitwidth>6</bitwidth>
 				</Value>
@@ -10071,7 +10071,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4160749696</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -10099,7 +10099,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108740944</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10127,7 +10127,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1679572569</coreId>
 					</Obj>
 					<bitwidth>3</bitwidth>
 				</Value>
@@ -10155,7 +10155,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108743336</coreId>
+						<coreId>1679573680</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10183,7 +10183,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108743512</coreId>
+						<coreId>1679574320</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10211,7 +10211,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>12</coreId>
+						<coreId>1</coreId>
 					</Obj>
 					<bitwidth>2</bitwidth>
 				</Value>
@@ -10239,7 +10239,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>1679577776</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10267,7 +10267,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107691664</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10295,7 +10295,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107692672</coreId>
+						<coreId>792081975</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10323,7 +10323,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>62</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10351,7 +10351,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>825911342</coreId>
+						<coreId>1679580320</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10379,7 +10379,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1397508191</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10407,7 +10407,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>62</coreId>
+						<coreId>49</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10435,7 +10435,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107695664</coreId>
+						<coreId>3</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10463,7 +10463,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>11</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10491,7 +10491,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107695520</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10519,7 +10519,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1953719655</coreId>
+						<coreId>1679582256</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10547,7 +10547,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107698208</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10575,7 +10575,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1108736624</coreId>
+						<coreId>1680357408</coreId>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -10603,7 +10603,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1107698816</coreId>
+						<coreId>1679585632</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10631,7 +10631,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1948279909</coreId>
+						<coreId>1679591712</coreId>
 					</Obj>
 					<bitwidth>10</bitwidth>
 				</Value>
@@ -10659,7 +10659,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>49</coreId>
+						<coreId>132</coreId>
 					</Obj>
 					<bitwidth>5</bitwidth>
 				</Value>
@@ -10779,7 +10779,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>1868784964</coreId>
+					<coreId>1834971487</coreId>
 				</Obj>
 				<node_objs>
 					<count>11</count>
@@ -10979,7 +10979,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>1952672100</coreId>
+					<coreId>1834971487</coreId>
 				</Obj>
 				<node_objs>
 					<count>6</count>
@@ -11012,7 +11012,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>1952672100</coreId>
+					<coreId>1834971487</coreId>
 				</Obj>
 				<node_objs>
 					<count>10</count>
@@ -11049,7 +11049,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>1107654448</coreId>
+					<coreId>15105</coreId>
 				</Obj>
 				<node_objs>
 					<count>2</count>
@@ -11078,7 +11078,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>1113946777</coreId>
+					<coreId>0</coreId>
 				</Obj>
 				<node_objs>
 					<count>3</count>
@@ -11108,7 +11108,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>0</coreId>
+					<coreId>8</coreId>
 				</Obj>
 				<node_objs>
 					<count>1</count>

@@ -1,12 +1,14 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_sliding_window_test-Default
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_LLS_sine_test-Default
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_ADCGainTester-Default/activeLaunchMode=embrun
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_ADCGainTester-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_ADC_gain_settle_test-Default/activeLaunchMode=embrun
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_ADC_gain_settle_test-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_LLS_sine_test-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_LLS_sine_test-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_dig_mag-Default/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_dig_mag-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_dig_mag_test-Default/activeLaunchMode=embrun
@@ -15,3 +17,4 @@ org.eclipse.launchbar.core.descriptorType.default\:Debugger_mag_controller_teste
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_mag_controller_tester-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_sliding_window_test-Default/activeLaunchMode=embrun
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_sliding_window_test-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_sliding_window_test_system/activeLaunchMode=systemrun

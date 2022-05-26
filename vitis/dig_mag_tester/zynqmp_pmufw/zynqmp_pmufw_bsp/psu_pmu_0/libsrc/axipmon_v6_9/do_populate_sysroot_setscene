@@ -1,0 +1,35 @@
+Event: TaskStarted 
+Started: 1638367622.71 
+findutils-4.6.0-r0: do_populate_sysroot_setscene
+Elapsed time: 0.14 seconds
+utime: 24
+stime: 1
+cutime: 0
+cstime: 1
+IO rchar: 244983
+IO wchar: 75125
+IO syscr: 216
+IO syscw: 49
+IO read_bytes: 4096
+IO write_bytes: 61440
+IO cancelled_write_bytes: 0
+rusage ru_utime: 0.247214
+rusage ru_stime: 0.019936
+rusage ru_maxrss: 140064
+rusage ru_minflt: 6351
+rusage ru_majflt: 0
+rusage ru_inblock: 0
+rusage ru_oublock: 112
+rusage ru_nvcsw: 6
+rusage ru_nivcsw: 35
+Child rusage ru_utime: 0.00756
+Child rusage ru_stime: 0.013734999999999999
+Child rusage ru_maxrss: 137268
+Child rusage ru_minflt: 1645
+Child rusage ru_majflt: 0
+Child rusage ru_inblock: 8
+Child rusage ru_oublock: 8
+Child rusage ru_nvcsw: 30
+Child rusage ru_nivcsw: 8
+Status: PASSED 
+Ended: 1638367622.86 

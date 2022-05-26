@@ -2,87 +2,87 @@
 <AdditionalInfo>
   <CTypeInfo>
       <RtlPort>
-        <name>s_axi_control_ARADDR</name>
+        <name>s_axi_CPU_ARADDR</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_ARREADY</name>
+        <name>s_axi_CPU_ARREADY</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_ARVALID</name>
+        <name>s_axi_CPU_ARVALID</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_AWADDR</name>
+        <name>s_axi_CPU_AWADDR</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_AWREADY</name>
+        <name>s_axi_CPU_AWREADY</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_AWVALID</name>
+        <name>s_axi_CPU_AWVALID</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_BREADY</name>
+        <name>s_axi_CPU_BREADY</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_BRESP</name>
+        <name>s_axi_CPU_BRESP</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_BVALID</name>
+        <name>s_axi_CPU_BVALID</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_RDATA</name>
+        <name>s_axi_CPU_RDATA</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_RREADY</name>
+        <name>s_axi_CPU_RREADY</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_RRESP</name>
+        <name>s_axi_CPU_RRESP</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_RVALID</name>
+        <name>s_axi_CPU_RVALID</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_WDATA</name>
+        <name>s_axi_CPU_WDATA</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_WREADY</name>
+        <name>s_axi_CPU_WREADY</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_WSTRB</name>
+        <name>s_axi_CPU_WSTRB</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_WVALID</name>
+        <name>s_axi_CPU_WVALID</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
